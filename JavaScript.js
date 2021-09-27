@@ -1,4 +1,4 @@
-setTimeout("location.reload(true);", 4000);
+// setTimeout("location.reload(true);", 4000);
 
 // Imprimir En Web:         document.write("");
 document.write("<h1>Hello World!</h1> <hr>");
