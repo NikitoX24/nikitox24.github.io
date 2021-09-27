@@ -1,0 +1,1113 @@
+h1{color: naranja;}
+/*
+  Sintaxis CSS:
+
+  h1: selector.
+  color: property.
+  oranje: value.
+*/
+
+
+.borders{
+  padding: 10px;
+  border: 1px solid grey;
+  background-color: rgba(128, 128, 128, 0.227);
+} 
+.titles{
+  text-shadow: 5px 2px 4px grey;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+p.numbers{
+  height: 5px;
+  font-size: 25px;
+  font-weight: 1000;
+}
+
+/* -------------------------------------------*/
+/* -------------------------------------------*/
+
+
+/* Basics */
+
+  /* 1) Type Selectors */
+  h1.selector {
+    color:red;    /* red, #F00, rgb(255,0,0), rgba? */
+    font-size: 130%; /* 16px, 100%, 1em(em=px/16), small, medium, large, x-large */
+    background-color:rgba(128, 128, 128, 0.356);
+  } 
+
+  /* 2) Id */
+  #intro {
+    color: rgb(118, 118, 118);
+    background-color: rgba(128, 128, 128, 0.356);
+  }
+
+  /* 3) Descendant Selectors */
+  #intro .first em{
+    color:pink;
+    background-color: gray;
+  }
+  /* -------------------------------------------*/
+
+
+/* Text */
+
+  /* 4) Font Family */
+  p.serif {
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  /* 5) Font Style */
+  p.italic{
+    font-style: italic; /* normal, italic, oblique */
+  }
+
+  /* 6) Font Weight (Grosor) */
+  p.weight{
+    font-weight: 900; /* lighter(100), normal(400), bold(700), bolder(900) */
+  }
+
+  /* 7) Font Variant */
+  p.variant{
+    font-variant: small-caps; /* normal, small-caps, inherit */
+  }
+
+  /* 8) Font Color */
+  p.colored{
+    color: red; /* red, #F00, rgb(255,0,0) */
+  }
+
+  /* 9) Text Align (Horizontal)*/
+  p.center {
+    text-align: center; /* left, right, center, justify */
+  }
+
+  /* 10) Text Align (Vertical) */
+  td.top {
+    vertical-align: top;
+  }
+  td.middle {
+    vertical-align: middle;
+  }
+  td.bottom {
+    vertical-align: bottom;
+  }
+
+  /* 11) Text-Align Property (Vertical) */
+  span.baseline {
+    vertical-align: baseline;
+  }
+  span.sub {
+    vertical-align: sub;
+  }
+  span.super {
+    vertical-align: super;
+  }
+  span.pixel {
+    vertical-align: -10px; /* px(pixels), pt(points), cm(centimeters), %(percentage) */
+  }
+
+  /* 12) Text-Align Property Div (Vertical) */
+  .main {
+    height: 150px; width: 400px;
+    background-color: LightSkyBlue;
+    display: inline-table;
+  }
+  .paragraph {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  /* 13) Text-decoration */
+  p.none {
+    text-decoration: none;
+  }
+  p.inherit {
+    text-decoration: inherit;
+  }
+  p.overline {
+    text-decoration: overline;
+  }
+  p.underline {
+    text-decoration: underline;
+  }
+  p.line-through {
+    text-decoration: line-through;
+  }
+  p.blink{
+    text-decoration: blink; /* parpadear (algunos no funciona) */
+  }
+
+  /* 14) text-indent (sangria) */
+  p.indent{
+    text-indent: 60px; /* -60px */
+  }
+
+  /* 15) Text-Sadow */
+  h1.shadow{
+    text-shadow: 5px 2px 4px grey; /* (x, y, blur radius, color) Se puede poner mas de una sombra separandola con coma */
+  }
+  h1.blur{
+    text-shadow: rgba(0, 0, 255, 1) -1px -2px 0.5em; /* Internet Explorer 9 and earlier do not support the text-shadow property. */
+  }
+
+  /* 16)Text-Transform */
+  p.capitalize{
+    text-transform: capitalize; /* capitalize, uppercase, lowercase */
+  }
+
+
+  /* 17) Text Spacing */
+  p.lspacing{
+    letter-spacing: 4px; /* px, pt, cm, mm, ( + , - ) */
+  }
+
+  p.wspacing{
+    word-spacing: 30px;
+  }
+
+  /* 18) Wite.Spacing */
+  p.witespacing{
+    white-space: nowrap; /* pre, pre-line, pre-wrap */
+  }
+/* -------------------------------------------*/
+
+
+/* Properties */
+
+  /* 19) Box-Border */
+  p.border{
+    padding: 10px;  /* relleno*/
+    border: 5px solid green; /* tamaño, estilo, color */
+  }
+
+  /* border-style */
+  p.none {border-style: none;}
+  p.dotted {border-style: dotted;} /* punteado. ( . . . . .) */
+  p.dashed {border-style: dashed;} /* discontinua. ( - - - ) */
+  p.double {border-style: double;} /* doble borde */
+  p.groove {border-style: groove;} /* entrante */
+  p.ridge {border-style: ridge;}   /* saliente */
+  p.inset {border-style: inset;}   /* adentro */
+  p.outset {border-style: outset;} /* afuera */
+  p.hidden {border-style: hidden;} /* oculto */
+
+  /* 20) Width & Height */
+  div.wh{
+    border: 5px solid green;
+    width: 100px; /* px, % */
+    height: 90px;
+    /*
+      min-width:
+      min-height:
+      max-width:
+      max-height:
+    */
+  }
+
+  /* Background-Body */
+  body{
+    background-color: beige;
+    background-image: url("imgs/tileW.jpg");
+    background-repeat: repeat; /* repeat-x, repeat-y, no-repeat, inherit */
+    background-attachment: fixed; /* fixel, scroll, inherit */
+  }
+  
+
+  /* 21) Background-Image */
+  p.background-image{
+    padding: 15px;
+    background-image: url("imgs/banner_orange.png");
+    background-repeat: no-repeat;/* repeat-x, repeat-y, no-repeat, inherit */
+    width: 200px;
+  }
+
+  /* 22) List-Style-Type */
+  ul{
+    list-style: square outside none;/* list-style-type, list-style-image, list-style-position */ 
+  }
+  ol.lower-alpha {
+    list-style-type: lower-alpha;
+  }
+  ul.circle {
+    list-style-type: circle;
+  }
+  ul.square {
+    list-style-type: square;
+  }
+  ul.uimage{
+    list-style-image: url("imgs/loguito.png");
+    list-style-position: outside; /* insede, outside */
+  }
+
+  /* 23) Table-Style */
+  table.styled{
+    caption-side: top; /* top, bottom */
+    border-collapse: separate;
+    border-spacing: 20px 20px;
+  }
+  /* 24) Table Cells Hide */
+  table.styled2{
+    border-collapse: separate;
+    empty-cells: hide;
+  }
+
+  /* 25) Cells Size */
+  #tablee {
+    border-collapse: separate;
+    width: 100%;
+    border: 1px solid gray;
+  } 
+  td {
+    border: 1px solid gray;
+  }
+  table.auto {
+    table-layout: auto;
+  }
+  table.fixed {
+    table-layout: fixed;
+  }
+
+  /* 26) Links */
+  /* en este orgen:
+    a:link : define el estilo de los enlaces normales no visitados
+    a:visited : define el estilo de los enlaces visitados
+    a:active : a el enlace se activa una vez que hace clic en él
+    a:hover : un enlace se desplaza cuando el mouse está sobre él 
+
+
+      border:none - removes border from images with links
+      outline:none - removes the dotted border on clicked lines in IE
+  */
+  a:link{
+    text-decoration: none; /* Quitar UnderLine */
+  }
+  a:hover{
+    color: red; /* Mouse encima */
+  }
+
+  /* 27) Mouse-Cursor */
+  span.mousee{
+    cursor: help;
+    /*
+      auto, crosshair, default, move, help, text, wait,
+      n-resize, s-resize, ne-resize, sw-resize, nw-resize, se-resize, e-resize, w-resize,
+      pointer, progress, not-allowed, no-drop, vertical-text, all-scroll, col-resize, row-resize.
+    */
+  }
+  /* -------------------------------------------*/
+
+
+/*  Positioning And Layout  */
+
+  /* 28) Display Block */
+  span.block{
+    display: block;
+  }
+  p.inline{
+    display: inline;
+  }
+
+  /* 29) Visibility */
+  h1.none{
+    display: none;
+  }
+  div.hidden{
+    visibility: hidden;
+  }
+
+  /* 30) posicionamiento */
+    /* estatico */
+    p.position_static {
+      position:static;
+      top: 30px;
+      right: 5px;
+      color: red;
+    }
+    /* fijo */
+    p.position_fixed {
+      position: fixed;
+      top: 30px;
+      right: 15px;
+      font-size: 30px;
+    }
+    /* relativo */
+    span.spann{
+      background: green;
+      color: white;
+      position: relative;
+      top: -21px;
+      left: 50px;
+    }
+
+  /* 31) Floating */
+  img.imgfloatr{
+    height: 40px;
+    float: left; /* right, left */
+  }
+
+  /* 32) Floating */
+  .floating{
+    float: right;
+  }
+  .clearing{
+    clear: both; /* both, right, left */
+  }
+
+  /* 33) Z-Index */
+  .bluee { 
+    z-index: 3;
+    position: relative;
+    background-color: blue;
+    margin-bottom: 15px;
+    width: 120px;
+    height: 120px;
+    color: #FFF;
+  }
+  .redd {
+    z-index: 2;
+    position: relative;
+    background-color: red;
+    width: 120px;
+    height: 120px;
+    color: #FFF;
+    margin-top: -50px;
+    margin-left: 50px;
+  }
+
+  /* 34) Overflow */
+  div.overflow{
+    width: 150px;
+    height: 150px;
+    background-color: lightblue;
+    overflow: scroll; /* visible, scroll, hidden, auto */ 
+  }
+  /* -------------------------------------------*/
+
+
+
+
+/* Basics CSS3 */
+
+  /* 35) Prefijos de provedores css */
+    /* soportes para las nuevas caracteristicas de CSS */
+    /* Prefijos de navegadores 
+        FireFox = -moz-
+        Safari =  -webkit-
+        Chrome =  -webkit-
+        Opera =   -o-
+        Explorer = -ms
+    */
+    .round{
+      -webkit-border-radius: 24px;
+      border-radius: 24px;
+      border: 1px solid green;
+      width: 200px;
+      padding: 25px;
+    } 
+
+  /* Border-Radius */
+  .divBorderRadius{
+    /* border-radius: 20px; */
+    border-radius: 0 0 20px 20px;
+    background-color: green;
+    color: white;
+    padding: 50px;
+    width: 200px;
+  }
+
+  /* Circulo */
+  .divCirculo{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background-color: green;
+    color: white;
+  }
+
+  /* Box-Shadow */
+  .boxShadow{
+    width: 300px;
+    height: 100px;
+    background-color: #9ACD32;
+    /* box-shadow: 10px 10px #888888; */
+    /* box-shadow: -10px -10px #888888; */
+    box-shadow: 10px 10px 5px 5px #888888;
+    /*         Hriz, Vert, blur, spread, color */
+  }
+
+  /* Box- Inside Shadow */
+  .boxInsideShadow{
+    width: 300px;
+    height: 100px;
+    background-color: #9ACD32;
+    box-shadow: inset 10px 10px 5px 5px green ;
+  }
+
+  /* Box-Double Inside Shadow */
+  .boxDoubleInsideShadow{
+    width: 300px;
+    height: 100px;
+    background-color: #9ACD32;
+    box-shadow: inset 10px 10px 5px green, inset -10px -10px 5px green ;
+  }
+
+  /* Box Trible Shadow */
+  .BoxTrilpeShadow {
+    width: 300px;
+    height: 100px;
+    background-color: #9ACD32;
+    box-shadow: 0 0 10px 4px #FF6347, 0 0 10px 30px #FFDAB9, 30px 0 20px 30px #B0E0E6;
+
+    margin-left:30px;
+    margin-top:30px;
+  }
+
+  /* Box Transparencia */
+  .BoxTransparencia{
+    width: 300px;
+    height: 100px;
+    background-color: #9ACD32;
+    background: linear-gradient(90deg, 
+    rgba(38, 23, 179, 0.515) 0%, 
+    rgba(16, 129, 133, 0.549) 25%, 
+    rgba(167, 201, 17, 0.433) 75%, 
+    rgba(72, 0, 56, 0.419) 100%);
+    box-shadow: 0 0 25px rgba(19, 8, 80, 0.486),
+    inset 0 0 1px rgba(0, 189, 85, 0.829);
+    
+  }
+
+  /* 36) Transparencia */
+  nav {
+      padding: 50px 0;
+      min-width: 500px; 
+  }
+  nav ul {
+      background: linear-gradient(90deg, 
+      rgba(255, 255, 255, 0) 0%, 
+      rgba(255, 255, 255, 0.2) 25%, 
+      rgba(255, 255, 255, 0.2) 75%, 
+      rgba(255, 255, 255, 0) 100%);
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
+      inset 0 0 1px rgba(255, 255, 255, 0.6);
+  }
+  nav ul li {
+      display: inline-block;
+  }
+  nav ul li a {
+      padding: 10px; 
+      color: #000000;
+      font-size: 18px;
+      font-family: Arial;
+      text-decoration: none;
+      display: block;
+  }
+  
+  /* 37) Text Shadow */
+  .TextShadow{
+    text-shadow: 1px 1px 5px blue, -3px -3px 5px grey;
+  }
+  
+  /* 38) Pseudo-Clase */
+  #parent p:first-child { /* first-last */
+    color: green;
+    text-decoration: underline;
+  }
+
+  /* 39) Pseudo-Elemento */
+  /* 
+    ::first-line
+    ::first-letter
+    ::selection
+    ::before
+    ::after
+  */
+  .textfirstline::first-line {
+    color: #589432;
+  }
+  .seleccioname::first-letter{
+    background-color: #589432;
+  }
+  .seleccioname::selection{ /* h5::-moz-selection{ (para mozillaFirefox)*/
+    background-color: #589432;
+    color: #FF6347;
+  }
+  .insertImageBeforeText::before{
+    content: url("imgs/loguito.png");
+  }
+
+  /* 42 Word-Wrap */
+  .wordwrapnormal{
+    border: 1px solid black;
+    width: 120px;
+    height: 100px;
+    word-wrap: normal;
+  }
+  .wordwrapbreak{
+    border: 1px solid black;
+    width: 120px;
+    height: 100px;
+    word-wrap: break-word;
+  }
+
+  /* 43 Font-Face */
+  @font-face {
+    font-family: Delicious; 
+    src: url('imgs/Delicious-Roman.otf'); 
+  } 
+  @font-face { 
+    font-family: Delicious; 
+    font-weight: bold; 
+    src: url('imgs/Delicious-Bold.otf'); 
+  }
+  h1.custfont{
+     font-family: Delicious, sans-serif; 
+  }
+
+
+/* 44 Degradados y fondos */
+
+  /* Degradados Lineales */
+  div.degradados{
+    /* float: left; */
+    width: 300px;
+    height: 100px;
+    margin: 4px;
+    color: #FFF;
+    background: linear-gradient(DeepSkyBlue, black);
+  }
+  div.degradadosmulticolor{
+    /* float: left; */
+    width: 300px;
+    height: 100px;
+    margin: 4px;
+    background: linear-gradient(blue 20%, yellow 30%, green 85%);
+  }
+
+  div.first {
+    /* float: left; */
+    width: 300px; 
+    height: 100px;
+    margin: 4px;
+    color: #FFF;  
+    background:-webkit-linear-gradient(left, blue, green, white);
+    background:-moz-linear-gradient(left, blue, green, white);
+    background:-ms-linear-gradient(left, blue, green, white);
+  } 
+  div.second { 
+    /* float: left; */
+    width: 300px; 
+    height: 100px;
+    margin: 4px;
+    background:-webkit-linear-gradient(bottom, blue, green, white);
+    background:-moz-linear-gradient(bottom, blue, green, white);
+    background:-ms-linear-gradient(bottom, blue, green, white);
+  }
+
+  div.first2 {
+    /* float: left; */
+    width: 300px; 
+    height: 100px;
+    margin: 4px;
+    color: #FFF;
+    background: -webkit-linear-gradient(bottom left, blue, green, white);
+    background: -moz-linear-gradient(bottom left, blue, green, white);
+    background: -ms-linear-gradient(bottom left, blue, green, white);
+  }
+  div.second2 {
+    /* float: right; */
+    width: 300px; 
+    height: 100px;
+    margin: 4px;
+    background: -webkit-linear-gradient(100deg, blue, green, white);
+    background: -moz-linear-gradient(100deg, blue, green, white);
+    background: -ms-linear-gradient(100deg, blue, green, white);
+  }
+
+  div.repeating {
+    float: left;
+    width: 300px; 
+    height: 100px;
+    margin: 4px;
+    color: #FFF;
+    background: repeating-linear-gradient(blue, green 20px);
+  }
+
+  /* Degradados Radiales */
+  /* background: radial-gradient(position, shape or size, color-stops); 
+      position: top, left.. 0% 0%(sup izq), 50% 50%(medio)
+  */
+  div.first48 {
+    height: 150px;
+    width: 200px;
+    color: #FFF;
+    background: -moz-radial-gradient(green, yellow, blue);   
+    background: -webkit-radial-gradient(green, yellow, blue);
+    background: -ms-radial-gradient(green, yellow, blue);
+  }
+  div.second48 {
+      height: 150px;
+      width: 200px;
+      color: #FFF;
+      background: -moz-radial-gradient(circle, green, yellow, blue); 
+      background: -webkit-radial-gradient(circle, green, yellow, blue); 
+      background: -ms-radial-gradient(circle, green, yellow, blue); 
+  }
+
+  div.first49 {
+    height: 150px;
+    width: 200px;
+    color: #FFF;
+    background: -moz-radial-gradient(top left, green, yellow, blue);   
+    background: -webkit-radial-gradient(top left, green, yellow, blue);
+    background: -ms-radial-gradient(top left, green, yellow, blue);
+  }
+  div.second49 {
+    height: 150px;
+    width: 200px;
+    color: #FFF;
+    background: -moz-radial-gradient(green 5%, yellow 15%, blue 60%); 
+    background: -webkit-radial-gradient(green 5%, yellow 15%, blue 60%); 
+    background: -ms-radial-gradient(green 5%, yellow 15%, blue 60%); 
+  }
+
+  div.colorstop{
+    height: 150px;
+    width: 200px;
+    color: #FFF;
+    background: -moz-radial-gradient(circle, green 40%, yellow 50%, blue 70%); 
+    background: -webkit-radial-gradient(circle, green 40%, yellow 50%, blue 70%); 
+    background: -ms-radial-gradient(circle, green 40%, yellow 50%, blue 70%); 
+  }
+
+  /* background size */
+  div.backsiz50 {
+    height: 150px;
+    width: 200px;
+    border: 1px solid #000;
+    background: url("http://www.sololearn.com/uploads/css_logo.png") no-repeat 50% 50%;
+    background-size: 50px 50px;
+  }div.backsiz100 {
+    height: 150px;
+    width: 200px;
+    border: 1px solid #000;
+    background: url("http://www.sololearn.com/uploads/css_logo.png") no-repeat 50% 50%;
+    background-size: 100px 100px;
+  }
+
+  div.bscont {
+    height: 150px;
+    width: 200px;
+    border: 1px solid #000;
+    background: url("http://www.sololearn.com/uploads/css_logo.png") no-repeat 50% 50%;
+    background-size: contain;
+  }
+  div.bscover {
+    height: 150px;
+    width: 200px;
+    border: 1px solid #000;
+    background: url("http://www.sololearn.com/uploads/css_logo.png") no-repeat 50% 50%;
+    background-size: cover;
+  }
+
+  /* Background Clip */
+  div.bcpad {
+    border: 2px dotted black;
+    padding: 20px;
+    background: LightBlue;
+    background-clip: padding-box;
+  }
+  div.bccont {
+      border: 2px dotted black;
+      padding: 20px;
+      background: LightBlue;
+      background-clip: content-box;
+  }
+  div.bcimg {
+    background-image: url("http://www.sololearn.com/uploads/css_logo.png");
+    background-clip: content-box;
+    border: 2px dotted black;
+    padding: 20px;
+  }
+
+  /* Transparent borders */
+  div.tbord {
+    border: 20px solid rgba(0, 0, 0, 0.3);
+    width:200px;
+    /* position:absolute; */
+    top:50px;
+    left:50px;
+    background-color:white;
+  }
+  div.tbord2 {
+    border: 20px solid rgba(109, 61, 61, 0.3);
+    -moz-background-clip: padding-box; 
+    -webkit-background-clip: padding-box; 
+    background-clip: padding-box; 
+    width:200px;
+    /* position:absolute; */
+    top:50px;
+    left:50px;
+    background-color:white;
+  }
+
+  /* multiple-background */
+  div.multbg {
+    width: 400px;
+    height: 300px;
+    background-image: url("http://www.sololearn.com/uploads/css_logo.png"), url("http://www.sololearn.com/uploads/better-code.jpg");
+    background-position: right bottom, left top;
+    background-repeat: no-repeat;
+  } 
+
+  /* Opacity */
+  #img1 {
+    opacity: 1;
+  }
+  #img2 {
+      opacity: 0.5;
+  }
+  #img3 {
+      opacity: 0.25;
+  }
+  #img4 {  
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+
+/* transiciones y Transparencia */
+  /* transition: transform 5s ease-in;
+    transition-property - specifies the property to be transitioned
+    transition-duration - specifies the duration over which transitions should occur
+    transition-timing-function - specifies how the pace of the transition changes over its duration
+    transition-delay - specifies a delay (in seconds) for the transition effect
+
+    ease: la animación comienza lentamente y luego se acelera rápidamente.
+    ease-in: comienza lentamente, luego acelera y se detiene abruptamente.
+    ease-out: comienza rápidamente, pero se desacelera hasta detenerse.
+    ease-in-out - similar a la facilidad, pero con una aceleración y desaceleración más sutiles.
+    lineal: velocidad constante a lo largo de la animación; a menudo es mejor para los cambios de color u opacidad.
+    cubic-bezier(): que le permite definir sus propios valores en la función cubic-bezier.
+  */
+  div.transit {
+    width: 50px;
+    height: 50px;
+    background: #32CD32;
+    transition: width 3s;
+    -webkit-transition: width 3s;
+  }
+  div.transit:hover {
+      width: 250px;
+  }
+
+  /* Transform Rotate */
+  div.rotate {
+    width: 200px;
+    height: 100px;
+    margin-top: 30px;
+    background-color: #32CD32;
+    transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+  }
+  div.rotatenegative {
+    width: 200px;
+    height: 100px;
+    margin-top: 30px;
+    background-color: #32CD32;
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+  }
+
+  /* Transform Origin */
+  div.empty-div {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    margin: 30px;
+    padding: 10px;
+    border: 1px solid black;
+  }
+  div.green-div {
+    padding: 50px;
+    position: absolute;
+    background-color: #8bc34a;
+    border: 1px solid white;
+    transform: rotate(15deg);
+    transform-origin: 25% 75%;
+    -webkit-transform: rotate(15deg);
+    -webkit-transform-origin: 25% 75%;
+  }
+
+  /* translate */
+  div.torig {
+    padding: 50px;
+    position: absolute;
+    background-color: #32CD32;
+    transform:translate(100px, 50px);
+    -webkit-transform:translate(100px, 50px);
+  }
+
+  /* skew */
+  div.skew {
+    padding: 50px;
+    position: absolute;
+    background-color: #32CD32;
+    transform: skew(30deg);
+    -webkit-transform: skew(30deg);
+  }
+
+  /* Scale */
+  div.scale0-7{
+    width: 200px;
+    height: 100px;
+    background-color: #8BC34A;
+    transform: scale(0.7, 0.7);
+    -webkit-transform: scale(0.7, 0.7);
+    color:white;
+  }
+  div.scale1-5{
+    margin: 60px;
+    width: 200px;
+    height: 100px;
+    background-color: #8bc34a;
+    transform: scale(1.5,1.5);
+    -webkit-transform: scale(1.5,1.5);
+    color:white;
+  }
+  div.scaleandrotate{
+    width: 300px;
+    height: 100px;
+    background-color: #8BC34A;
+    transform: rotate(45deg) translate(100px);
+    -webkit-transform: rotate(45deg) translate(100px);
+    color:white;
+  }
+
+  @keyframes examplecc {
+    0%  {background-color: red;}
+    50%  {background-color: yellow;}
+    70%  {background-color: blue;}
+    100% {background-color: green;}
+  }
+
+  @keyframes ColorChangeExample {
+    from {background-color: red;}
+    /* 0% {background-color: red;} */
+
+    to {background-color: green;}
+    /* 100% {background-color: green;} */
+  }
+
+  /* The @keyframes Rule */
+  div.colorforcc {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: colorchange;
+    animation-duration: 1s;
+    -webkit-animation-name: colorchange;
+    -webkit-animation-duration: 1s;
+  }
+  @keyframes colorchange {
+    0% {background-color: red; }
+    50% {background-color: green; }
+    100% {background-color: blue; }
+  }
+  @-webkit-keyframes colorchange {
+    0% {background-color: red; }
+    50% {background-color: green; }
+    100% {background-color: blue; }
+  }
+
+  /* The animation-name Property */
+
+  div.animdurat {
+    animation-name: colorchange2;   
+    animation-duration: 2s;
+    height:100px;
+    background-color:red;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-name: colorchange2;
+    /* -webkit-animation-timing-function: linear; */
+    /* -webkit-animation-delay: 2s; */
+    /* -webkit-animation-iteration-count: 5; */
+    /* -webkit-animation-iteration-count: infinite; */
+    /* -webkit-animation-direction: reverse; */
+  }
+  @keyframes colorchange2 {
+    from { width: 0px; }
+    to { width: 100px; }
+  }
+  @-webkit-keyframes colorchange2 {
+    from { width: 0px; }
+    to { width: 100px; }
+  }
+  /* 
+    Animation Properties
+  ease - specifies an animation with a slow start, then fast, then end slowly (this is default)
+  linear - specifies an animation with the same speed from start to end
+  ease-in - specifies an animation with a slow start
+  ease-out - specifies an animation with a slow end
+  ease-in-out - specifies an animation with a slow start and end
+  cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier function
+  */
+  /* 
+    The animation-direction
+  normal - the default value, which means it plays forward from 0 % to 100%.
+  reverse - plays the keyframe in an opposite direction from 100 % to 0%
+  alternate - the animation first runs forward, then backward, then forward.
+  alternate-reverse - the animation first runs backward, then forward, then backward.
+  */
+
+  div.ExampleColCha
+  {
+    animation: colorchange 3s ease-in 1s infinite reverse;
+    /*   eso sería esto
+    animation-name: colorchange;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse; 
+    */
+  }
+
+  /* 3D rotation */ 
+  div.X {
+    width:250px;
+    height:100px;
+    color:white;
+    background-color:green;
+    transform: rotateX(150deg);
+    -webkit-transform: rotateX(150deg);
+    /* transform: none; (Desactivar) */
+  }
+  div.Y {
+    width:250px;
+    height:100px;
+    color:white;
+    background-color:green;
+    transform: rotateY(150deg);
+    -webkit-transform: rotateY(150deg);
+  }
+  div.Z {
+    width:250px;
+    height:100px;
+    color:white;
+    background-color:green;
+    transform: rotateZ(150deg);
+    -webkit-transform: rotateZ(150deg);
+  }
+  
+  div.empty-div2 {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    margin: 30px;
+    padding: 10px;
+    border: 1px solid black;
+    perspective: 100px;
+    -webkit-perspective: 100px;
+  }
+
+  /* 3D Translate */
+  #translate3d {
+    transform: translateX(40px) translateY(5em) translateZ(-13px);
+    -webkit-transform: translateX(40px) translateY(5em) translateZ(-13px);
+    width:250px;
+    height:100px;
+    color:white;
+    background-color:green;
+  }
+
+  /* 3D Perspective */
+  div.green-div {
+    padding: 60px;
+    position: absolute;
+    background-color: #8bc34a;
+    border: 1px solid white;
+    transform: rotateX(45deg);
+    -webkit-transform: rotateX(45deg);
+  }
+
+
+/* Filtros de CSS */
+
+/* 66) Filter Functions */
+  /* DropShadow */
+  .dropshadow {
+    height: 200px;
+    filter: drop-shadow(5px 9px 2px blue);
+    -webkit-filter: drop-shadow(5px 9px 2px blue);
+  }
+
+  /* grayscale */
+  .grayscale{
+    height: 200px;
+    filter: grayscale(100%);
+  }
+
+  /* Sepia */
+  .sepia{
+    height: 200px;
+    filter: sepia(100%);
+  }
+
+  /* Saturate */
+  .saturate{
+    height: 200px;
+    filter: saturate(300%); /* 0: gris, 100: original */
+  }
+  
+  /* Hue-Rotate */
+  .huerotate{
+    height: 200px;
+    filter: hue-rotate(180deg); /* de 0 a 360 (segun imagen e colores */
+  }
+  
+  /* The invert Function */
+  .invertimg{
+    height: 200px;
+    filter: invert(70%);
+  }
+  
+  /* opacity */
+  .opacity{
+    height: 200px;
+    filter: opacity(70%);
+  }
+
+  /* 67) Opacity & Brightness */
+
+  /* Brightness */
+  .brightness{
+    height: 200px;
+    filter: Brightness(70%);
+  }
+  
+  /* Brightness2 */
+  .brightness2{
+    height: 200px;
+    filter: brightness(1.9);
+  }
+
+  /* Contrans */
+  .contrast{
+    height: 200px;
+    filter: contrast(140%);
+  }
+  
+  /* Blur */
+  .blur{
+    height: 200px;
+    filter: blur(5px);
+  }
+
+  /* MultiFilters */
+  .multifilters{
+    height: 200px;
+    filter: blur(5px) hue-rotate(180deg);  
+  }
