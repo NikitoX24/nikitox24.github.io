@@ -210,7 +210,7 @@ p.numbers{
   /* Background-Body */
   body{
     background-color: beige;
-    background-image: url("imgs/tileW.jpg");
+    background-image: url("Imgs/tileW.jpg");
     background-repeat: repeat; /* repeat-x, repeat-y, no-repeat, inherit */
     background-attachment: fixed; /* fixel, scroll, inherit */
   }
@@ -219,7 +219,7 @@ p.numbers{
   /* 21) Background-Image */
   p.background-image{
     padding: 15px;
-    background-image: url("imgs/banner_orange.png");
+    background-image: url("Imgs/banner_orange.png");
     background-repeat: no-repeat;/* repeat-x, repeat-y, no-repeat, inherit */
     width: 200px;
   }
@@ -238,7 +238,7 @@ p.numbers{
     list-style-type: square;
   }
   ul.uimage{
-    list-style-image: url("imgs/loguito.png");
+    list-style-image: url("Imgs/loguito.png");
     list-style-position: outside; /* insede, outside */
   }
 
@@ -536,7 +536,7 @@ p.numbers{
     color: #FF6347;
   }
   .insertImageBeforeText::before{
-    content: url("imgs/loguito.png");
+    content: url("Imgs/loguito.png");
   }
 
   /* 42 Word-Wrap */
@@ -556,12 +556,12 @@ p.numbers{
   /* 43 Font-Face */
   @font-face {
     font-family: Delicious; 
-    src: url('imgs/Delicious-Roman.otf'); 
+    src: url('Imgs/Delicious-Roman.otf'); 
   } 
   @font-face { 
     font-family: Delicious; 
     font-weight: bold; 
-    src: url('imgs/Delicious-Bold.otf'); 
+    src: url('Imgs/Delicious-Bold.otf'); 
   }
   h1.custfont{
      font-family: Delicious, sans-serif; 
