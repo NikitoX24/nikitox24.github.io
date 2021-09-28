@@ -1,3 +1,18 @@
-p {
+body{
+  background-color: beige;
+  background-image: url("imgs/tileW.jpg");
+  background-repeat: repeat; /*repeat-x, repeat-y, no-repeat, inherit */
+  background-attachment: fixed; /* fixel, scroll, inherit */
+}
+
+.centred {
   text-align: center; /* left, right, center, justify */
+}
+
+
+.titles{
+  text-shadow: 5px 2px 4px grey;
+  text-align: center;
+  text-decoration: underline;
+  /* text-transform: uppercase; */
 }
