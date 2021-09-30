@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> FreeCodeCamp </title>
+</head>
+<body bgcolor="#EEF">
+  <main>
+    <!-- Titulo h1-h6 -->
+    <h1>Titulo de la pagina</h1>
+    <h2>
+      <font color="#"> Encabezado Blanco</font>
+    </h2>
+
+    <!-- Imagen desde Link -->
+    <a href="#">
+      <img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat." width=100px>
+    </a>
+
+    <!-- Imagen desde Folder -->
+    <img src="imgs/cat1.png" width=150px border="1px" alt="cat1">
+
+    <!-- Link Interno -->
+    <p>
+      Link Interno a
+      <a href="htmlTest.html">htmlTest.html </a>
+    </p>
+
+    <!-- Link Externo -->
+    <p>
+      Link Externo a
+      <a target="_blank" href="https://www.google.com">Google</a>
+    </p>
+
+    <!-- ID -->
+    <h1 id="cat-photo-element">CatPhotoApp</h1>
+
+    <!-- Separar Palabras -->
+    <h2>Algun mensaje <span style="color:red">importante</span></h2>
+
+    <!-- Separador -->
+    <hr width=90%>
+
+    <!-- Nueva linea de texto en parrajo -->
+    <p>
+      esta es una linea de texto,
+      esta es la misma linea de texto
+      <br>
+      esta es otra linea de texto
+    </p>
+    <!-- Nueva linea de texto en div -->
+    <div>
+      <p>esta es una linea de texto</p>
+      <p>esta es otra linea de texto</p>
+    </div>
+
+    <!-- Tipos de textos -->
+    <p>
+      Texto regular <br> Texto
+      <b> en negrita </b> <br> Texto
+      <strong> reforzado </strong> <br>Texto
+      <big> grande </big> <br> Texto
+      <small> pequeño </small> <br> Texto
+      <i> en cursiva </i> <br> Texto
+      <sub> subIndice </sub> <br> Texto
+      <sup> superIndice </sup> <br> Texto
+      <ins> insertado </ins> <br> Texto
+      <del> borrado </del>
+    </p>
+
+    <!-- Lista desordenada -->
+    <p>Lista Desordenada</p>
+    <ul>
+      <li>Rojo</li>
+      <li>Azul</li>
+      <li>Verde</li>
+    </ul>
+    <!-- Lista ordenada -->
+    <p>Lista Ordenada</p>
+    <ol>
+      <li>Rojo</li>
+      <li>Azul</li>
+      <li>Verde</li>
+    </ol>
+    <!-- Tabla -->
+    <table border="2">
+      <tr>
+        <td bgcolor="red">Rojo</td>
+        <td>Azul</td>
+        <td>Verde</td>
+      </tr>
+      <tr>
+        <td><br></td>
+        <td colspan="2"></td>
+      </tr>
+    </table>
+
+    <!-- Calendario -->
+    <div>
+      <table border="2">
+        <tr>
+          <th>Day</th>
+          <th>Mon</th>
+          <th>Tue</th>
+          <th>Wed</th>
+          <th>Thu</th>
+          <th>Fri</th>
+        </tr>
+        <tr>
+          <td>8-8:30</td>
+          <td>Learn</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>9-10</td>
+          <td></td>
+          <td>Practice</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>1-1:30</td>
+          <td></td>
+          <td></td>
+          <td>Play</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3:45-5</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Code</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>6-6:15</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Discuss</td>
+        </tr>
+      </table>
+    </div>
+    <hr>
+
+    <!-- Formularios -->
+    <div> 
+
+    <!--
+      formulario (recolecta info del user).
+
+      "Action" para apuntar a una página web que cargará despues de que el user envie el formulario.
+      Usualmente, el formulario es enciado a una pagina web en un servidor web.
+    -->
+    <form action="URL" method="GET">
+      <!-- formularios visibles en la direccion de la pag-->
+    <form action="URL" method="POST">
+        <!-- formulatio esta actualizando datos, o contraseñas (ofrece mejor seguridad) -->
+        <!-- Entrada de Usuario -->
+    <form action="URL">
+      <input type="text" name="usuario"> <br>
+      <input type="password" name="contraseña">
+    </form>
+    <!--
+    Entrada de User 
+    (Type) text, password, radio, checkbox, URL, submit, etc. 
+    -->
+    <input type="radio" name="gender" value="male"> Masculino <br>
+    <input type="radio" name="gender" value="female"> Femenino <br>
+    <input type="submit" value="Enviar">
+
+    <!-- Enviar Datos -->
+    <h2><span>Contact Me</span></h3>
+    <form>
+      <input type="text" name="name"> <br>
+      <input type="email" name="email"> <br>
+      <textarea name="message"></textarea> <br>
+      <input type="submit" value="SEND" class="submit">
+    </form>
+
+    <hr>
+
+    <!-- 
+    Formulario  (FreeCodeCamp)
+    (recolecta info del user) 
+    Al terminar se envian para ser procesados en un servidor usando el lenguaje de programacion PHP -->
+    <form action="https://freecatphotoapp.com/submit-cat-photo" id="cat-photo-form">
+      <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+      <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
+      <label><input type="checkbox" name="personality" checked> Loving</label>
+      <label><input type="checkbox" name="personality"> Lazy</label>
+      <label><input type="checkbox" name="personality"> Energetic</label><br>
+
+      <input type="text" placeholder="cat photo URL" required>
+      <button type="submit">Submit</button>
+    </form>
+    <hr>
+    </div>
+
+
+    <!-- frame (marco) -->
+    <div>
+    <frameset cols="100, 25%, *"></frameset>
+    <frameset rows="100, 25%, *"></frameset>
+
+    <!--
+      Una página puede dividirse en marcos usando un documento especial de marco.
+
+      La etiqueta <frame> define una ventana específica (marco) dentro de un <frameset>. Cada <frame> en un <frameset> puede tener diferentes atributos, como borde, desplazamiento, la habilidad de redimensionar, etc.
+      El elemento <frameset> especifica el número de columnas o filas en el conjunto de marcos o frameset, y también el porcentaje o número de píxeles de espacio que cada uno ocupa.
+    -->
+
+    <frame noresize="noresize"></frame> 
+
+    <frameset cols="25%,50%,25%">
+      <frame src="a.htm" />
+      <frame src="b.htm" />
+      <frame src="c.htm" />
+      <noframes>¡Los marcos no son soportados!</noframes>
+    </frameset>
+    </div>
+
+
+
+  </main>
+
+  <script>
+    /*
+    setTimeout("location.reload(true);", 3000);
+    */
+  </script>
+
+</body>
+
+</html>
