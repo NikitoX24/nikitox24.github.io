@@ -28,9 +28,10 @@ body{
 
 .bar{
   background-color: rgba(0, 0, 0, 0.563);
-  height: 75px;
+  height: 40px;
   width: 100%;
-  position: fixed;
-  top: 1px;
+  /* position: fixed; */
+  position: relative;
+  top: -20px;
   /* left: 50px; */
 }
