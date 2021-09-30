@@ -1,12 +1,6 @@
-h1{color: naranja;}
-/*
-  Sintaxis CSS:
-
-  h1: selector.
-  color: property.
-  oranje: value.
-*/
-
+h1{ /* selector */
+  color: naranja; /* prop : val; */
+}
 
 .borders{
   padding: 10px;

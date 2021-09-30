@@ -1,9 +1,14 @@
 <!DOCTYPE HTML>
 <html lang="en">
   <head>
-    <title>HTML5</title>
+    <title>HTML</title>
   </head>
   <body>
+
+
+
+
+    <h1> HTML5 </h1>
     <!-- Elementos nuevos de HTML5
       <article>   </article>
       <aside>     </aside>
@@ -43,8 +48,8 @@
     -->
     
 
-
     <!-- Audio y Video -->
+    <h2> Audio y Video </h2>
     <div>
       <audio src="audio.mp3" controls>
         Texto por si el navegador no soporta audio.
@@ -52,73 +57,83 @@
       <audio controls autoplay loop>
         <source src="audio.mp3" type="audio/mp3"> <!-- type: mp3, ogg, wav -->
       </audio>
-
+      <br>
+      
       <video controls autoplay loop>
         <source src="video.mp4" type="video/mp4"> <!-- type: mp4, webM, ogg -->
-        <source src="video.ogg" type="video/ogg">
+        <!-- <source src="video.ogg" type="video/ogg"> -->
         Este navegador no soporta audio.
       </video>
     </div>
+    <hr>
 
     <!-- Barra de Progreso <progress> -->
+    <h2> Barra de Progreso </h2>
     <progress min="0" max="100" value="35"></progress>
+    <hr>
 
     <!-- Almacenamiento (API) -->
+    <h2> Almacenamiento </h2>
     <div>
-    <!--
-      html5:<Script>, html4(cookies) 
-      sessionStorage(): (se borra al cerrar el navegador del usuario)
-      localStorage():   (permanece en el disco del usuario sin expirar)
-    -->
+      <!--
+        html5:<Script>, html4(cookies) 
+        sessionStorage(): (se borra al cerrar el navegador del usuario)
+        localStorage():   (permanece en el disco del usuario sin expirar)
+      -->
 
-    <script>
-      Guardar=  localStorage.SetItem("Clave1", "Valor1");
-      Cargar=   alert(localStorage.GetItem("Clave1"));
-      Borrar=   localStorage.removeItem("Clave1");
-      Limpiar=  localStorage.clear();
-    </script>
+      <script>
+        Guardar=  localStorage.SetItem("Clave1", "Valor1");
+        Cargar=   alert(localStorage.GetItem("Clave1"));
+        Borrar=   localStorage.removeItem("Clave1");
+        Limpiar=  localStorage.clear();
+      </script>
     </div>
+    <hr>
     
     <!-- Geo-Localizacion (API) -->
+    <h2> Geo-Localizacion </h2>
     <script>
       navigator.geolocation.getCurrentPosition();
       /* parametros= ShowLocation, ErrorHandler, Options */
     </script>
+    <hr>
 
     <!-- Dragg & Drop (API) -->
+    <h2> Dragg & Drop </h2>
     <div>
-    <img draggable="true" alt=""/>
+      <img draggable="true" alt=""/>
 
-    <!-- Example Drag and Drop
-    
-      <script>
-        function allowDrop(ev) {
-          ev.preventDefault();
-        }
+      <!-- Example Drag and Drop
+      
+        <script>
+          function allowDrop(ev) {
+            ev.preventDefault();
+          }
 
-        function drag(ev) {
-          ev.dataTransfer.setData("text", ev.target.id);
-        }
+          function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+          }
 
-        function drop(ev) {
-          ev.preventDefault();
-          var data = ev.dataTransfer.getData("text");
-          ev.target.appendChild(document.getElementById(data));
-        }
-      </script>
-      </head>
-      <body>
-        <div id="box" ondrop="drop(event)"
-        ondragover="allowDrop(event)"
-        style="border:1px solid black; 
-        width:200px; height:200px"></div>
+          function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+          }
+        </script>
+        </head>
+        <body>
+          <div id="box" ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+          style="border:1px solid black; 
+          width:200px; height:200px"></div>
 
-        <img id="image" src="sample.jpg" draggable="true"
-        ondragstart="drag(event)" width="150" height="50" alt="" />
-      </body>
+          <img id="image" src="sample.jpg" draggable="true"
+          ondragstart="drag(event)" width="150" height="50" alt="" />
+        </body>
 
-    -->
+      -->
     </div>
+    <hr>
 
     <!-- Canvas Vs SVG (diferencias) -->
   <!--
@@ -144,6 +159,7 @@
   -->
 
     <!-- SVG (Graficos Vectorales Escaleables) -->
+    <h2> SVG (Graficos Vectorales Escaleables) </h2>
     <div>
       <!-- Imagen -->
       <img src="image.svg" alt="" height="1"> <!-- SVG define imgs basadas en vectores en formato XML -->
@@ -155,12 +171,14 @@
       <svg width="200" height="200">
         <circle cx="80" cy="80" r="50" fill="green" /><!-- stoke= marco -->
       </svg>
+      <hr>
       
       <!-- Rectangulo -->
       <svg width="200" height="200">
         <rect width="300" height="100"
         x="80" y="80" fill="green"/>
       </svg>
+      <hr>
         
       <!-- Linea -->
       <svg width="300" height="300">
@@ -168,6 +186,7 @@
           style="stroke:#000000; stroke-linecap:round;
             stroke-width:20">
       </svg>
+      <hr>
       
       <!-- PolyLine -->
       <svg width="2000" height="300">
@@ -177,17 +196,20 @@
           points="100 100, 150 150, 200 100" >
         </polyline>
       </svg>
+      <hr>
 
       <!-- Elipse -->
       <svg width="1000" height="500">
         <ellipse cx="150" cy="150" rx="150" ry="50" style="fill:green" />
       </svg>
+      <hr>
 
       <!-- PolyGon -->
       <svg width="1000" height="300">
         <polygon points="100 100, 200 200, 300 0" 
               style="fill: green; stroke:black;" />
       </svg>
+      <hr>
     
       <!-- Animaciones  <animate> -->
       <svg width="1000" height="250">
@@ -204,9 +226,9 @@
           repeatCount: repeticiones, undefined: infinito.
         -->
       </svg>
+      <hr>
       
       <!-- Trazos <path> -->
-      <div>
         <svg width="500" height="500">
           <!-- triangulo hipot -->
           <path d="M 0 0 L200 200 L200 0 Z" style="stroke:#000;  fill:none;" />
@@ -228,169 +250,171 @@
         <svg width="500" height="500">
           <path d="M0 0 L0 100 L100 100 L100 0 Z" style="stroke:#000;  fill:none;" />
         </svg>
-      </div>
     
-    </div>
+    </div> <hr>
     
     <!-- Canvas (JS)-->
+    <h2> Canvas JS </h2>
     <div>
-    <!-- 
-      Canvas es solo contenedor grafico, para mostrar requiere JavaScript.
-      el Id es necesario para identificarlo en JS.
-      x0 y0: comienza arriba izq.
-    -->
-    <canvas id="canvas1" width="200" height="100"></canvas>
-    <script>
-      var can = document.getElementById("canvas1");
-      var ctx = can.getcontext("2d");
-    </script>
+      <!-- 
+        Canvas es solo contenedor grafico, para mostrar requiere JavaScript.
+        el Id es necesario para identificarlo en JS.
+        x0 y0: comienza arriba izq.
+      -->
+      <canvas id="canvas1" width="200" height="100"></canvas>
+      <script>
+        var can = document.getElementById("canvas1");
+        var ctx = can.getcontext("2d");
+      </script>
+      
 
-    <!-- fillRect(x, y, w, h) -->
-    <script>
-      var c=document.getElementById("canvas1");
-      var ctx=c.getContext("2d");
-      ctx.fillRect(20,20,100,100);/* w: ancho, h: alto */
-    </script>
+      <!-- fillRect(x, y, w, h) -->
+      <script>
+        var c=document.getElementById("canvas1");
+        var ctx=c.getContext("2d");
+        ctx.fillRect(20,20,100,100);/* w: ancho, h: alto */
+      </script>
 
-    <!-- fillStyle(rbga) Gradiante -->
-    <script>
-      var canvas=document.getElementById("canvas1");
-      var ctx=canvas.getContext("2d");
-      ctx.fillStyle ="rgba(0, 200, 0, 1)";
-      ctx.fillRect (36, 10, 22, 22);
-    </script>
+      <!-- fillStyle(rbga) Gradiante -->
+      <script>
+        var canvas=document.getElementById("canvas1");
+        var ctx=canvas.getContext("2d");
+        ctx.fillStyle ="rgba(0, 200, 0, 1)";
+        ctx.fillRect (36, 10, 22, 22);
+      </script>
 
-    <!-- 
-    Draw a Line
-      moveTo(x,y): Defines the starting point of the line.
-      lineTo(x,y): Defines the ending point of the line.
+      <!-- 
+      Draw a Line
+        moveTo(x,y): Defines the starting point of the line.
+        lineTo(x,y): Defines the ending point of the line.
 
-    Draw a Circle
-      beginPath(): Starts the drawing.
-      arc(x,y,r,start,stop): Sets the parameters of the circle.
-      stroke(): Ends the drawing.
+      Draw a Circle
+        beginPath(): Starts the drawing.
+        arc(x,y,r,start,stop): Sets the parameters of the circle.
+        stroke(): Ends the drawing.
 
-    Gradients
-      createLinearGradient(x,y,x1,y1): Creates a linear gradient.
-      createRadialGradient(x,y,r,x1,y1,r1): Creates a radial/circular gradient.
+      Gradients
+        createLinearGradient(x,y,x1,y1): Creates a linear gradient.
+        createRadialGradient(x,y,r,x1,y1,r1): Creates a radial/circular gradient.
 
-    Drawing Text on the Canvas
-      Font: Defines the font properties for the text.
-      fillText(text,x,y): Draws "filled" text on the canvas.
-      strokeText(text,x,y): Draws text on the canvas (no fill).
-    -->
-
-    </div>
+      Drawing Text on the Canvas
+        Font: Defines the font properties for the text.
+        fillText(text,x,y): Draws "filled" text on the canvas.
+        strokeText(text,x,y): Draws text on the canvas (no fill).
+      -->
+    </div><hr>
   
+
     <!-- Canvas Transform (JS) -->
+    <h2> Canvas Transform JS </h2>
     <div>
+      <canvas id="canvas1" width="400" height="300"> </canvas>
 
-    <canvas id="canvas1" width="400" height="300"> </canvas>
+      <!-- Texto script -->
+      <script>
+        var c=document.getElementById("canvas1");
+        var ctx=c.getContext("2d");
+        ctx.font="bold 22px Tahoma";
+        ctx.textAlign="start";
+        ctx.fillText("start", 10, 30);
+      </script>
 
-    <!-- Texto -->
-    <script>
-      var c=document.getElementById("canvas1");
-      var ctx=c.getContext("2d");
-      ctx.font="bold 22px Tahoma";
-      ctx.textAlign="start";
-      ctx.fillText("start", 10, 30);
-    </script>
+      <!-- Translate script -->
+      <script>
+        var c=document.getElementById("canvas1");
+        var ctx=c.getContext("2d");
+        ctx.font="bold 22px Tahoma";
+        ctx.textAlign="start";
+        ctx.fillText("start", 10, 30);
+          ctx.translate(100, 150);
+        ctx.fillText("after translate", 10, 30);
+      </script>
 
-    <!-- Translate -->
-    <script>
-      var c=document.getElementById("canvas1");
-      var ctx=c.getContext("2d");
-      ctx.font="bold 22px Tahoma";
-      ctx.textAlign="start";
-      ctx.fillText("start", 10, 30);
-        ctx.translate(100, 150);
-      ctx.fillText("after translate", 10, 30);
-    </script>
-
-    
-    <!-- Rotate --> 
-    <script>
-      var c=document.getElementById("canvas1");
-      var ctx=c.getContext("2d");
-      ctx.fillStyle = "#FF0000";
-      ctx.fillRect(10,10, 100, 100);
-        ctx.rotate( (Math.PI / 180) * 25);  //rotate 25 degrees. (usa radianes, no grados)
-      ctx.fillStyle = "#0000FF";
-      ctx.fillRect(10,10, 100, 100);
-    </script>
-    
-    <!-- Scale -->
-    <script>
-      var c=document.getElementById("canvas1");
-      var ctx=c.getContext("2d");
-      ctx.font="bold 22px Tahoma";
-        ctx.scale(1.5, 4);
-        ctx.fillText("after scale", 0,20);
-    </script>
+      
+      <!-- Rotate script --> 
+      <h2> Rotate script </h2>
+      <script>
+        var c=document.getElementById("canvas1");
+        var ctx=c.getContext("2d");
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(10,10, 100, 100);
+          ctx.rotate( (Math.PI / 180) * 25);  //rotate 25 degrees. (usa radianes, no grados)
+        ctx.fillStyle = "#0000FF";
+        ctx.fillRect(10,10, 100, 100);
+      </script>
+      
+      <!-- Scale script -->
+      <h2> Scale script </h2>
+      <script>
+        var c=document.getElementById("canvas1");
+        var ctx=c.getContext("2d");
+        ctx.font="bold 22px Tahoma";
+          ctx.scale(1.5, 4);
+          ctx.fillText("after scale", 0,20);
+      </script>
     </div>
-  
+    <hr>
   
     <!-- Forms -->
+    <h2> Forms </h2>
     <div>
-    <form autocomplete="off">
-      <label for="name">Su nombre</label>
-      <input id="user" name="username" type="text"> <!-- autofocus, required  -->
-      <input type="submit" value="Submit">
-    </form>
-    <!-- 
-    HTML5 added several new input types:
-      - color
-      - date
-      - datetime
-      - datetime-local
-      - email
-      - month
-      - number
-      - range
-      - search
-      - tel
-      - time
-      - url
-      - week
+      <form autocomplete="off">
+        <label for="name">Su nombre</label>
+        <input id="user" name="username" type="text"> <!-- autofocus, required  -->
+        <input type="submit" value="Submit">
+      </form>
+      <!-- 
+      HTML5 added several new input types:
+        - color
+        - date
+        - datetime
+        - datetime-local
+        - email
+        - month
+        - number
+        - range
+        - search
+        - tel
+        - time
+        - url
+        - week
 
-    New input attributes in HTML5:
-      - autofocus
-      - form
-      - formaction
-      - formenctype
-      - formmethod
-      - formnovalidate
-      - formtarget
-      - height and width
-      - list
-      - min and max
-      - multiple
-      - pattern (regexp)
-      - placeholder
-      - required
-      - step
-    -->
-    
-    <!-- Buscar -->
-    <input id="mysearch" name="searchitem" type="search">
+      New input attributes in HTML5:
+        - autofocus
+        - form
+        - formaction
+        - formenctype
+        - formmethod
+        - formnovalidate
+        - formtarget
+        - height and width
+        - list
+        - min and max
+        - multiple
+        - pattern (regexp)
+        - placeholder
+        - required
+        - step
+      -->
+      
+      <!-- Buscar -->
+      <input id="mysearch" name="searchitem" type="search">
 
-    <!-- Opciones para seleccionar -->
-    <input id="car" type="text" list="colores">
-    <datalist id="colores">
-      <option value="Rojo">
-      <option value="Verde">
-      <option value="Amarillo">
-    </datalist>
+      <!-- Opciones para seleccionar -->
+      <input id="car" type="text" list="colores">
+      <datalist id="colores">
+        <option value="Rojo">
+        <option value="Verde">
+        <option value="Amarillo">
+      </datalist>
 
-    <!-- Otros tipos de entradas -->
-    <input id="email" name="email" type="email" placeholder="example@example.com"><br>
-    <input id="url" name="url" type="url" placeholder="example.com"><br>
-    <input id="tel" name="tel" type="tel" placeholder="555.555.1211">
+      <!-- Otros tipos de entradas -->
+      <input id="email" name="email" type="email" placeholder="example@example.com"><br>
+      <input id="url" name="url" type="url" placeholder="example.com"><br>
+      <input id="tel" name="tel" type="tel" placeholder="555.555.1211">
 
     </div>
     
-
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
   </body>
 </html>
