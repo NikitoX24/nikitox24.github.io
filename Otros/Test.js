@@ -37,13 +37,13 @@ a.innerHTML = "asd";
 
       // EJEMPLOS
 
-        // id
+        // id 
         var elem = document.getElementById("demo"); // <div id="demo">...
         elem.innerHTML = "Hello World!";
 
-        // Class
+        // Class (encuentra todos los elementos por nombre clase y retorna en array)
         var arr = document.getElementsByClassName("demo"); // <div class="demo">...
-        arr[1].innerHTML = "Hi";
+        arr[0].innerHTML = "Hi";
 
         // Tag
         var arr2 = document.getElementsByTagName("p"); // <p> hi </p>, <p> hello </p>, <p> hi </p>.

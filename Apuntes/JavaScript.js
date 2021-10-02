@@ -513,7 +513,7 @@ console.log("Hello from console!");
 
       // Class
       var arr =  document.getElementsByClassName("demo"); // <div class="demo">...
-      arr[1].innerHTML = "Hi";
+      arr[0].innerHTML = "Hi";
 
       // Tag
       var arr = document.getElementsByTagName("p"); // <p> hi </p>, <p> hello </p>, <p> hi </p>.
@@ -538,18 +538,19 @@ console.log("Hello from console!");
 
       // EJEMPLO
         /*
-          <div id ="demo">
+          <div id ="demo2">
             <p> some text </p>
             <p> some other text </p>
           </div>
         */
         function setText() {
-          var a = document.getElementById("demo");
+          var a = document.getElementById("demo2");
           var arr = a.childNodes;
           for(var x=0;x<arr.length;x++) {
             arr[x].innerHTML = "new text";
           }
         }
+        setTimeout(setText, 1000);
       // 
     //
   // 
@@ -568,7 +569,7 @@ console.log("Hello from console!");
       </body>
     */
     var el = document.getElementById("myimg");
-    el.src = "apple.png";
+    el.src = "Apple.png";
 
 
 
@@ -596,12 +597,12 @@ console.log("Hello from console!");
 
     /*
       <body>
-        <div id="demo" style="width:200px">some text</div>
+        <div id="demo3" style="width:200px">some text</div>
       </body>
     */
     // ( window.onload: to make sure the HTML is loaded)
     window.onload = function() {
-      var x = document.getElementById("demo");
+      var x = document.getElementById("demo3");
       x.style.color = '#6600FF';
       x.style.width = '100px';
     };
@@ -617,19 +618,20 @@ console.log("Hello from console!");
     // document.createElement(element) creates a new element node.
     // document.createTextNode(text) creates a new text node.
 
-    // Crear texto pero no está asignado
-    var node = document.createTextNode("Some new text");
+    // Systax
+      // Crear texto (pero no está asignado)
+      var node = document.createTextNode("Some new text");
 
-    // Asignar con
-    element.appendChild(newNode) // adds a new child node to an element as the last child node.
-    element.insertBefore(node1, node2) // inserts node1 as a child before node2.
-
+      // Asignar con
+      elemento.appendChild(newNode) // adds a new child node to an element as the last child node.
+      elemento.insertBefore(node1, node2) // inserts node1 as a child before node2.
+    // 
 
     // Ej:.
     // Esto crea un nuevo párrafo y lo agrega al elemento div existente en la página.
     /*
       <body>
-        <div id="demo">some content</div>
+        <div id="demo4">some content</div>
       </body>
     */
     window.onload = function() {
@@ -639,7 +641,7 @@ console.log("Hello from console!");
       //adding the text to the paragraph
       p.appendChild(node);
 
-      var div = document.getElementById("demo");
+      var div = document.getElementById("demo4");
       //adding the paragraph to the div
       div.appendChild(p);
     };
@@ -647,20 +649,18 @@ console.log("Hello from console!");
 
 
 
-
-
   // Borrando Elementos
 
     /*
       <body>
-        <div id="demo">
+        <div id="demo5">
           <p id="p1">This is a paragraph.</p>
           <p id="p2">This is another paragraph.</p>
         </div>
       </body>
     */
     window.onload = function() {
-        var parent = document.getElementById("demo");
+        var parent = document.getElementById("demo5");
         var child = document.getElementById("p1");
         parent.removeChild(child);
     };
@@ -679,7 +679,7 @@ console.log("Hello from console!");
     // Reemplazando Elementos
     /*
       <body>
-        <div id="demo">
+        <div id="demo6">
           <p id="p1">This is a paragraph.</p>
           <p id="p2">This is another paragraph.</p>
         </div>
@@ -690,7 +690,7 @@ console.log("Hello from console!");
       var node = document.createTextNode("This is new");
       p.appendChild(node);
 
-      var parent = document.getElementById("demo");
+      var parent = document.getElementById("demo6");
       var child = document.getElementById("p1");
       parent.replaceChild(p, child);
     };
@@ -1484,3 +1484,5 @@ console.log("Hello from console!");
         .reduce((i, d) => i + d); /* comment this line while you are changing the value of the line above */
 
       console.log(all);
+
+
