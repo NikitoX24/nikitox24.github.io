@@ -1,4 +1,5 @@
-// setTimeout("location.reload(true);", 4000);
+document.write("Inicio de JavaScript.js");
+
 
 // Imprimir En Web:         document.write("");
 document.write("<h1>Hello World!</h1> <hr>");
@@ -6,15 +7,18 @@ document.write("<h1>Hello World!</h1> <hr>");
 // Imprimir En Consola:     console.log("");
 console.log("Hello from console!");
 
+// Recargar pag x milisegundos
+// setTimeout("location.reload(true);", 4000);
 
 
 // Variables (Respetar Mayusc, Empezar por: "a-z" , "_" , "$" )
 
   // Tipos de Variables
-  var int = 5;
-  var price = 5.5;
-  var string = "texto con espacio";
-  var boolean = true;
+
+  // var int = 5;
+  // var price = 5.5;
+  // var string = "texto con espacio";
+  // var boolean = true;
 
   // String con Comillas dentro
   var sayHello = 'Hello world! <br> I\'m a JavaScript programmer.\' <br><hr>';
@@ -1007,7 +1011,7 @@ console.log("Hello from console!");
 
 
 
-
+/*
 
 
 ////////////////////
@@ -1410,16 +1414,14 @@ console.log("Hello from console!");
       console.log(map.size); // 2
     
       // Metodos
-      /*
-        set(key, value)
-        get(key)
-        has(key)
-        delete(key)
-        clear()
-        keys()    : Arr de k
-        value()   : Arr de v
-        entries() : Arr de [k, v]
-      */
+        // set(key, value)
+        // get(key)
+        // has(key)
+        // delete(key)
+        // clear()
+        // keys()    : Arr de k
+        // value()   : Arr de v
+        // entries() : Arr de [k, v]
       
       let map2 = new Map();
       map2.set("k1", "v1").set("k2", "v2");
@@ -1487,12 +1489,14 @@ console.log("Hello from console!");
         }
       };
 
-      const all = [...my_obj] /* Here you can replace the '[...my_obj]' with 'arr'. */
+      const all = [...my_obj] // Here you can replace the '[...my_obj]' with 'arr'.
         .map(i => parseInt(i, 10))
         .map(Math.sqrt)
-        .filter((i) => i < 5) /* try changing the value of 5 to 4 see what happens.*/
-        .reduce((i, d) => i + d); /* comment this line while you are changing the value of the line above */
+        .filter((i) => i < 5) // try changing the value of 5 to 4 see what happens.
+        .reduce((i, d) => i + d); // comment this line while you are changing the value of the line above
 
       console.log(all);
 
 
+*/
+document.write("Final de JavaScript.js");
