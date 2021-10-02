@@ -686,13 +686,13 @@ console.log("Hello from console!");
       </body>
     */
     window.onload = function() {
-      var p = document.createElement("p");
-      var node = document.createTextNode("This is new");
-      p.appendChild(node);
+      var p001 = document.createElement("p");
+      var node001 = document.createTextNode("This is new");
+      p001.appendChild(node001);
 
-      var parent = document.getElementById("demo6");
-      var child = document.getElementById("p1");
-      parent.replaceChild(p, child);
+      var parent001 = document.getElementById("demo6");
+      var child001 = document.getElementById("p01");
+      parent001.replaceChild(p001, child001);
     };
 
   // 
@@ -731,16 +731,15 @@ console.log("Hello from console!");
         position: absolute;
       }
     */
-    
-    // var pos = 0;
-    // var box = document.getElementById("box");
+    // Syntax
+      // var pos = 0;
+      // var box = document.getElementById("box");
 
-    // function move() {
-    //   pos += 1;
-    //   box.style.left = pos+"px"; //px = pixels
-    // }
-    // setInterval(move, 500);
-
+      // function move() {
+      //   pos += 1;
+      //   box.style.left = pos+"px"; //px = pixels
+      // }
+      // setInterval(move, 500);
 
     // Animacion
 
@@ -751,11 +750,11 @@ console.log("Hello from console!");
 
       function move() {
         if(pos >= 150) {
-            clearInterval(t);
+          clearInterval(t);
         }
         else {
-            pos += 1;
-            box.style.left = pos+'px';
+          pos += 1;
+          box.style.left = pos+'px';
         }
       }
     };
@@ -807,16 +806,11 @@ console.log("Hello from console!");
 
       // Mostrar hora al apretar boton
 
-        /*
-          <body>
-            <button id="demo">Click Me</button>
-          </body>
-        */
-
+        // <button id="demo7">Click Me</button>
         window.onload = function() {
-          var x = document.getElementById('demo');
+          var x = document.getElementById('demo7');
           x.onclick = function () {
-              document.body.innerHTML = Date();
+            document.body.innerHTML = Date();
           }
         };
       // 
@@ -829,11 +823,10 @@ console.log("Hello from console!");
 
 
       // OnLoad desde html
-      /*
-        <body onload="doSomething()"></body>
-      */
-
-
+      // <body onload="doSomething()"></body>
+      function doSomething(){
+      }
+      
       // Onload desde js
       window.onload ​= function() {
         ​//esto se apricará luego de q la pag se cargue por completo.
@@ -841,61 +834,63 @@ console.log("Hello from console!");
 
 
       // OnChange
-      /*
-        <body>
-          <input type="text" id="name" onchange="change()">
-        </body>
-      */
-
+      // <input type="text" id="name" onchange="change()">
       function change() {
-        var x = document.getElementById('name');
-        x.value = x.value.toUpperCase();
+        var x001 = document.getElementById('name001');
+        x001.value = x001.value.toUpperCase();
       }
     // 
 
 
 
+
+
+
+
+
+
     // Event Listeners
 
-      // elemento.addEventListener(evento, funcion, useCapture(opcional));
+      // Syntax
+        // elemento.addEventListener(evento, funcion, useCapture(opcional));
       
-      // El primer parámetro es el tipo de evento (como "clic" o "mousedown").
-      // El segundo parámetro es la función a la que queremos llamar cuando se produce el evento.
-      // El tercer parámetro es un valor booleano que especifica si se va a utilizar el burbujeo de eventos o la captura de eventos. Este parámetro es opcional y se describirá en la siguiente lección.
-
-
+        // El primer parámetro es el tipo de evento (como "clic" o "mousedown").
+        // El segundo parámetro es la función a la que queremos llamar cuando se produce el evento.
+        // El tercer parámetro es un valor booleano que especifica si se va a utilizar el burbujeo de eventos o la captura de eventos. Este parámetro es opcional y se describirá en la siguiente lección.
+      // 
 
       // Ejemplo
-      element.addEventListener("click", myFunction);
-      element.addEventListener("mouseover", myFunction);
+        element.addEventListener("click0", myFunction0);
+        element.addEventListener("mouseover0", myFunction0);
 
-      function myFunction() {
-        alert("Hello World!");
-      }
+        function myFunction0() {
+          alert("Hello World!");
+        }
 
-      // remover un evento
-      element.removeEventListener("mouseover", myFunction);
-
+        // remover un evento
+        element.removeEventListener("mouseover0", myFunction0);
+      // 
 
 
       // crear un evento Manipulador q se remueve luego de ejecutarse
 
-      // After clicking the button, an alert with a random number displays and the event listener is removed.
+        // After clicking the button, an alert with a random number displays and the event listener is removed.
 
-      /*
-        <body>
-          <button id="demo">Start</button>
-        </body>
-      */
-      window.onload = function() {
-        var btn = document.getElementById("demo");
-        btn.addEventListener("click", myFunction);
+        /*
+          <body>
+            <button id="demo8">Start</button>
+          </body>
+        */
+        window.onload = function() {
+          var btn = document.getElementById("demo8");
+          btn.addEventListener("click01", myFunction01);
 
-        function myFunction() {
+          function myFunction01() {
             alert(Math.random());
-            btn.removeEventListener("click", myFunction);
-        }
-      };
+            btn.removeEventListener("click01", myFunction01);
+          }
+        };
+      // 
     //
 
 
@@ -908,10 +903,13 @@ console.log("Hello from console!");
 
       
       // BUBBLING = desde adentro hacia afuera. (Por defecto = FALSE). - Baja por DOM.
-      elem1.addEventListener("click", myFunction, true); 
+      elem1.addEventListener("click02", myFunction02, true); 
 
       // CAPTURING = desde afuera hacia adentro. (TRUE). - Sube por DOM
-      elem2.addEventListener("click", myFunction, false);
+      elem2.addEventListener("click02", myFunction02, false);
+
+      function myFunction02(){
+      }
 
     // 
   // 

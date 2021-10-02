@@ -1,4 +1,4 @@
-document.write("JavaScript <br>");
+document.write("Inicio de JavaScript. <br>");
 
 
 
@@ -87,4 +87,4 @@ a.innerHTML = "asd";
 
 
 
-  document.write("holaaa");
+  document.write("Final de JavaScript.");
