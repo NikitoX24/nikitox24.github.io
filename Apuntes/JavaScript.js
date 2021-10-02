@@ -8,17 +8,17 @@ document.write("<h1>Hello World!</h1> <hr>");
 console.log("Hello from console!");
 
 // Recargar pag x milisegundos
-// setTimeout("location.reload(true);", 4000);
-
+  // setTimeout("location.reload(true);", 4000);
+// 
 
 // Variables (Respetar Mayusc, Empezar por: "a-z" , "_" , "$" )
 
   // Tipos de Variables
-
-  // var int = 5;
-  // var price = 5.5;
-  // var string = "texto con espacio";
-  // var boolean = true;
+    // var int = 5;
+    // var price = 5.5;
+    // var string = "texto con espacio";
+    // var boolean = true;
+  // 
 
   // String con Comillas dentro
   var sayHello = 'Hello world! <br> I\'m a JavaScript programmer.\' <br><hr>';
@@ -38,7 +38,8 @@ console.log("Hello from console!");
 
 
 // Condicional
-  // variable = (condition) ? True: False; // Syntax
+  // Syntax
+    // variable = (condition) ? True: False; 
   var age = 42;
   var isAdult = (age < 18) ? "Joven": "Viejo";
   document.write(isAdult + "<br><hr>");
@@ -103,30 +104,30 @@ console.log("Hello from console!");
     // For In
     let objsV = {a:1, b:2, c:3};
     for (let v in objsV) {
-      // document.write(v);
+      document.write(v);
     }
 
     // For On
     let objsV2 = ["xL", "y", "z"];
     for (let v in objsV2) {
-      // document.write(v);
+      document.write(v);
     }
   // 
 
   // While
-    var w=0;
+    var w =0;
     while (w<=10) {
-        document.write(w + ", ");
-        w++;
+      document.write(w + ", ");
+      w++;
     }
     document.write("<hr>");
   // 
 
   // Do-While
-    var d=20;
+    var d =20;
     do {  
-        document.write(d + ", ");
-        d++;  
+      document.write(d + ", ");
+      d++;  
     }
     while (d<=25);
     document.write("<hr>");
@@ -164,19 +165,17 @@ console.log("Hello from console!");
   // Funcion
     function NombreDeLaFuncion() {
       // ...
-      document.write("Func <br>");
+      document.write("Func <br><hr>");
     }
     NombreDeLaFuncion();
-    document.write("<hr>");
   // 
 
   // Func con parametros
     function NameFunc(param1, param2, param3) {
       // ...
-      document.write(param1 + param2 + param3 + "<br>");
+      document.write(param1 + param2 + param3 + "<br> <hr>");
     }
     NameFunc(1, true, "xd");
-    document.write("<hr>");
   // 
 
   // Return
@@ -187,8 +186,8 @@ console.log("Hello from console!");
     document.write(ret);
     // 
     function addNumbers(a, b) {
-      var c = a+b;
-      return c;
+      var resC = a+b;
+      return resC;
     }
     document.write( addNumbers(40, 2) );
     document.write("<hr>");
@@ -273,10 +272,10 @@ console.log("Hello from console!");
       }
     }
 
-    var p = new person1("David", 21);
-    p.changeName("John");
+    var per1 = new person1("David", 21);
+    per1.changeName("John");
 
-    document.write(p.name + "<hr>");
+    document.write(per1.name + "<hr>");
   // 
 
   // otro ejemplo
@@ -289,11 +288,22 @@ console.log("Hello from console!");
       return 2016 - this.age;
     }
 
-    var p = new person2("A", 22);
+    var per2 = new person2("A", 22);
 
-    document.write(p.yearOfBirth() + "<hr>");
+    document.write(per2.yearOfBirth() + "<hr>");
   //
 //
+
+
+
+
+
+
+
+
+
+
+
 
 
 //////////////////
@@ -327,9 +337,9 @@ console.log("Hello from console!");
     // Combinar Arrays "concat()"
     var c1 = ["HTML", "CSS"];
     var c2 = ["JS", "C++"];
-    var courses = c1.concat(c2);
+    var courses4 = c1.concat(c2);
     
-    document.write( "courses[2]: " + courses[2] + "<hr>");
+    document.write( "courses[2]: " + courses4[2] + "<hr>");
 
 
     // Arrays asociativas
@@ -414,9 +424,10 @@ console.log("Hello from console!");
       JS cuenta los meses de 0(Enero) a 11(dic).
       -Un día contiene 86.400.000 milisegundos.
     */
-    new Date(milliseconds)
-    new Date(dateString)
-    new Date(year, month, day, hours, minutes, seconds, milliseconds)
+
+    // new Date(milliseconds);
+    // new Date(dateString);
+    // new Date(year, month, day, hours, minutes, seconds, milliseconds);
 
     
     //Fri Jan 02 1970 00:00:00
@@ -484,6 +495,13 @@ console.log("Hello from console!");
 
 
 
+
+
+
+
+
+
+
 /////////////////////
 //  DOM y Eventos  //
 /////////////////////
@@ -503,11 +521,11 @@ console.log("Hello from console!");
     document.getElementsByTagName("tagDelElemento")
 
     
-    // Modificanto elementos
+  // Modificanto elementos
 
-    //element innerHTML (modificar el contenido)
-    document.body.innerHTML = "Some text";
-
+    // element innerHTML
+      // document.body.innerHTML = "Borrar todo lo del Body y poner este texto";
+    
 
     // EJEMPLOS
 
@@ -525,37 +543,37 @@ console.log("Hello from console!");
         arr[x].innerHTML = "Hi there"; // <p> Hi there </p>, <p> Hi there </p>, <p> Hi there </p>.
       }
     // 
+  // 
+
+  // Propiedades y metodos de los elementos del DOM
+
+    /*
+      element.childNodes:     returns an array of an element's child nodes.
+      element.firstChild:     returns the first child node of an element.
+      element.lastChild:      returns the last child node of an element.
+      element.hasChildNodes:   returns true if an element has any child nodes, otherwise false.
+      element.nextSibling:     returns the next node at the same tree level.
+      element.previousSibling: returns the previous node at the same tree level.
+      element.parentNode:      returns the parent node of an element.
+    */
 
 
-    // Propiedades y metodos de los elementos del DOM
-
+    // EJEMPLO
       /*
-        element.childNodes:     returns an array of an element's child nodes.
-        element.firstChild:     returns the first child node of an element.
-        element.lastChild:      returns the last child node of an element.
-        element.hasChildNodes:   returns true if an element has any child nodes, otherwise false.
-        element.nextSibling:     returns the next node at the same tree level.
-        element.previousSibling: returns the previous node at the same tree level.
-        element.parentNode:      returns the parent node of an element.
+        <div id ="demo2">
+          <p> some text </p>
+          <p> some other text </p>
+        </div>
       */
-
-
-      // EJEMPLO
-        /*
-          <div id ="demo2">
-            <p> some text </p>
-            <p> some other text </p>
-          </div>
-        */
-        function setText() {
-          var a = document.getElementById("demo2");
-          var arr = a.childNodes;
-          for(var x=0;x<arr.length;x++) {
-            arr[x].innerHTML = "new text";
-          }
+      function setText() {
+        var a = document.getElementById("demo2");
+        var arr = a.childNodes;
+        for(var x=0;x<arr.length;x++) {
+          arr[x].innerHTML = "new text";
         }
-        setTimeout(setText, 1000);
-      // 
+      }
+      setTimeout(setText, 1000);
+      
     //
   // 
 

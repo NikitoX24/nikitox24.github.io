@@ -22,13 +22,18 @@ for (var x = 0; x < arr2.length; x++) {
   arr2[x].innerHTML = "Hi there"; // <p> Hi there </p>, <p> Hi there </p>, <p> Hi there </p>.
 }
 
+// document.body.innerHTML = "Some text";
+
+// var millisec = new Date(milliseconds);
+// var datestr = new Date(dateString);
+// var dattte = new Date(year, month, day, hours, minutes, seconds, milliseconds);
 
 
 // EJEMPLO
   /*
-    <div id ="demo">
-      <p> some text </p>
-      <p> some other text </p>
+    <div id ="demo1">
+      <h6> some text </h6>
+      <h6> some other text </h6>
     </div>
   */
   function setText() {
@@ -38,6 +43,7 @@ for (var x = 0; x < arr2.length; x++) {
       arr3[x].innerHTML = "new text";
     }
   }
+  setText();
 // 
 
 
