@@ -998,6 +998,18 @@ console.log("Hello from console!");
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 ////////////////////
 //  ECMAScript 6  //  (ES, ES5, ES6(add POO)) 
 ////////////////////  (no soporta en navs muy viejos)
