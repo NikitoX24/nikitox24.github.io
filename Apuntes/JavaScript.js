@@ -5,7 +5,7 @@ document.write("Inicio de JavaScript.js");
 document.write("<h1>Hello World!</h1> <hr>");
 
 // Imprimir En Consola:     console.log("");
-console.log("Hello from console!");
+// console.log("Hello from console!");
 
 // Recargar pag x milisegundos
   // setTimeout("location.reload(true);", 4000);
@@ -491,15 +491,22 @@ console.log("Hello from console!");
 // 
 // 
 // 
-
-
-
-
-
-
-
-
-
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
 
 
 /////////////////////
@@ -582,7 +589,6 @@ console.log("Hello from console!");
 
 
 
-
   // Modificando Atributos
 
     /*
@@ -591,7 +597,7 @@ console.log("Hello from console!");
       </body>
     */
     var el = document.getElementById("myimg");
-    el.src = "Apple.png";
+    el.src = "/Imgs/Apple.png";
 
 
 
@@ -602,13 +608,11 @@ console.log("Hello from console!");
       </body>
     */
     // ( window.onload: to make sure the HTML is loaded)
-    window.onload = function() {
+    window.onload = function(){
       var el = document.getElementsByTagName('a');
       el[0].href= 'http://www.sololearn.com';
     };
   //
-
-
 
 
 
@@ -642,11 +646,11 @@ console.log("Hello from console!");
 
     // Systax
       // Crear texto (pero no está asignado)
-      var node = document.createTextNode("Some new text");
+        // var node = document.createTextNode("Some new text");
 
       // Asignar con
-      elemento.appendChild(newNode) // adds a new child node to an element as the last child node.
-      elemento.insertBefore(node1, node2) // inserts node1 as a child before node2.
+        // elemento.appendChild(newNode) // adds a new child node to an element as the last child node.
+        // elemento.insertBefore(node1, node2) // inserts node1 as a child before node2.
     // 
 
     // Ej:.
@@ -692,8 +696,6 @@ console.log("Hello from console!");
       child.parentNode.removeChild(child);
     */
   // 
-
-
 
 
 
@@ -785,9 +787,6 @@ console.log("Hello from console!");
 
 
 
-
-
-
   // Eventos  
 
     // Cuando un "evento" ocurre en un elemento, una funcion "handler" se ejecuta.
@@ -850,10 +849,9 @@ console.log("Hello from console!");
       }
       
       // Onload desde js
-      window.onload ​= function() {
-        ​//esto se apricará luego de q la pag se cargue por completo.
+      window.onload = function(){
+      //esto se apricará luego de q la pag se cargue por completo.
       }
-
 
       // OnChange
       // <input type="text" id="name" onchange="change()">
@@ -869,12 +867,10 @@ console.log("Hello from console!");
 
 
 
-
-
     // Event Listeners
 
       // Syntax
-        // elemento.addEventListener(evento, funcion, useCapture(opcional));
+        // element.addEventListener(evento, funcion, useCapture(opcional));
       
         // El primer parámetro es el tipo de evento (como "clic" o "mousedown").
         // El segundo parámetro es la función a la que queremos llamar cuando se produce el evento.
@@ -882,16 +878,17 @@ console.log("Hello from console!");
       // 
 
       // Ejemplo
-        element.addEventListener("click0", myFunction0);
-        element.addEventListener("mouseover0", myFunction0);
+        // element.addEventListener("click0", myFunction0);
+        // element.addEventListener("mouseover0", myFunction0);
 
-        function myFunction0() {
-          alert("Hello World!");
-        }
+        // function myFunction0() {
+        //   alert("Hello World!");
+        // }
 
         // remover un evento
-        element.removeEventListener("mouseover0", myFunction0);
+        // element.removeEventListener("mouseover0", myFunction0);
       // 
+
 
 
       // crear un evento Manipulador q se remueve luego de ejecutarse
@@ -925,18 +922,15 @@ console.log("Hello from console!");
 
       
       // BUBBLING = desde adentro hacia afuera. (Por defecto = FALSE). - Baja por DOM.
-      elem1.addEventListener("click02", myFunction02, true); 
+        // elem1.addEventListener("click02", myFunction02, true); 
 
       // CAPTURING = desde afuera hacia adentro. (TRUE). - Sube por DOM
-      elem2.addEventListener("click02", myFunction02, false);
+        // elem2.addEventListener("click02", myFunction02, false);
 
-      function myFunction02(){
-      }
+      // function myFunction02(){      }
 
     // 
   // 
-
-
 
 
 
@@ -1016,8 +1010,6 @@ console.log("Hello from console!");
 
   // 
 // 
-
-
 
 
 
@@ -1516,5 +1508,13 @@ console.log("Hello from console!");
       console.log(all);
 
 
+
+
 */
+
+
+
+
+
+
 document.write("Final de JavaScript.js");
