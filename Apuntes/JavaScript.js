@@ -1079,12 +1079,12 @@ console.log("Hello from console!");
 
     // Funcion simple con 1 argumento
     const saludar = x => "Bienvenido " + x;
-
-    document.write(saludar("Nico") + "<hr>");  // Bienvenido Nico
+    document.write(saludar("Nico") + " (ej func con 1 arg)<hr>");  // Bienvenido Nico
 
     // Funcion simple sin argumento
-    const x0 = () => document.write("Hola");
-  // 
+    const funcSinParam = () => document.write("Hola! (ej Func sin arg) <hr>");
+    funcSinParam();
+    // 
 
 
 
@@ -1114,14 +1114,13 @@ console.log("Hello from console!");
     function testES6(a, b=3, c=42){
       return a + b + c;
     }
-    document.write(testES6(5)); // 50
-    document.write("<hr>");
+    document.write(testES6(5) + "<hr>"); // 50
 
     // Ahora
-    const test = (a, b = 3, c = 42) => {
+    const test0 = (a, b = 3, c = 42) => {
       return a + b + c;
     }
-    console.log(test(5)); //50 
+    document.write(test0(5) + "<hr>"); //50 
     // 
 
   // Objetos
@@ -1135,7 +1134,7 @@ console.log("Hello from console!");
     };
 
     tree.grow();
-    console.log(tree.height); // 12
+    document.write(tree.height + "<hr>"); // 12
 
     // Ej 2
     let height = 5;
@@ -1146,11 +1145,11 @@ console.log("Hello from console!");
         health // health: health
     };
 
-    console.log(athlete.height); // 5
+    document.write(athlete.height + "<hr>"); // 5
 
     // Ej 3
     var a = {x: 1, x: 2, x: 3, x: 4};
-    console.log(a.x); // 4
+    document.write(a.x + "<hr>"); // 4
   // 
 
   // Nombre de propiedad calculados
@@ -1236,7 +1235,6 @@ console.log("Hello from console!");
 
 
 
-
   // >>> Destructurar Arrays <<< //
     // Ej 1
       let arrDes = ['1', '2', '3'];
@@ -1315,11 +1313,11 @@ console.log("Hello from console!");
     }
 
     let x0_ = [2, 4, 6, 7];
-    console.log(containsAll(x, 2, 4, 7));
-    console.log(containsAll(x, 6, 4, 9));
+    console.log(containsAll(x0_, 2, 4, 7));
+    console.log(containsAll(x0_, 6, 4, 9));
 
     // 
-    function containsAll(arr, ...nums) {
+    function containsAll2(arr, ...nums) {
       for (let num of nums) {
         if (arr.indexOf(num) === -1) {
             return false;
@@ -1329,9 +1327,10 @@ console.log("Hello from console!");
     }
     
     let x1_ = [2, 4, 6, 7];
-    console.log(containsAll(x, 2, 4, 7));
-    console.log(containsAll(x, 6, 4, 9));
+    console.log(containsAll2(x1_, 2, 4, 7));
+    console.log(containsAll2(x1_, 6, 4, 9));
   // 
+
 
   // The Spread Operator
     // https://www.sololearn.com/learning/1024/2978/6475/1
@@ -1395,6 +1394,7 @@ console.log("Hello from console!");
       const square01 = new Rectangle1(5, 5);
       console.log(square01.area); // 25
       
+
       // Herencia 
       // 
       class Animal0 {
@@ -1521,12 +1521,9 @@ console.log("Hello from console!");
         .reduce((i, d) => i + d); // comment this line while you are changing the value of the line above
 
       console.log(all);
+    // 
+  // 
 
 
 
-
-
-
-
-
-document.write("Final de JavaScript.js");
+document.write("Final de JavaScript.js");  
