@@ -169,11 +169,9 @@ console.log("Hello from console!");
       document.write("Func <br><hr>");
     }
     NombreDeLaFuncion();
-  // 
 
   // Func con parametros
     function NameFunc(param1, param2, param3) {
-      // ...
       document.write(param1 + param2 + param3 + "<br> <hr>");
     }
     NameFunc(1, true, "xd");
@@ -198,7 +196,10 @@ console.log("Hello from console!");
   // Alert, Promnt(Input), Confirm.
 
     // Alerta de pagina
-    // alert("alerta\n Ok");
+    function alertaDePag()
+    {
+      alert("alerta\n Ok");
+    }
 
     // Entrada del Usuario
     // var user = prompt("Please enter your name");
@@ -207,10 +208,10 @@ console.log("Hello from console!");
     // Confirm  
     // var result = confirm("Do you really want to leave this page?");
     // if (result == true) {
-    //     alert("Thanks for visiting");
+    //   alert("Thanks for visiting");
     // }
     // else {
-    //     alert("Thanks for staying with us");
+    //   alert("Thanks for staying with us");
     // }
   //
 //
@@ -233,8 +234,6 @@ console.log("Hello from console!");
 
     document.write("edad: " + edad + "<hr>");
   // 
-
-
 
   // Tipo de Objeto - contructor de objeto
     function persona(name, age, color) {
@@ -736,11 +735,9 @@ console.log("Hello from console!");
     */
 
     /*  
-      <body>
-        <div id="container">
-          <div id="box"> </div>
-        </div>
-      </body>
+      <div id="container">
+        <div id="box"> </div>
+      </div>
     */
     /*
       #container {
@@ -756,18 +753,7 @@ console.log("Hello from console!");
         position: absolute;
       }
     */
-    // Syntax
-      // var pos = 0;
-      // var box = document.getElementById("box");
-
-      // function move() {
-      //   pos += 1;
-      //   box.style.left = pos+"px"; //px = pixels
-      // }
-      // setInterval(move, 500);
-
     // Animacion
-
     window.onload = function() {
       var pos = 0; 
       var box = document.getElementById('box');
@@ -804,45 +790,28 @@ console.log("Hello from console!");
         onblur: al perder focus
         onfocus:
     */
-
     // Ejemplo.
-    // <p onclick= "nombreDeUnaFuncion()"> some text </p>
-
-
+      // <p onclick= "nombreDeUnaFuncion()"> some text </p>
 
 
     // Manejando Eventos (Handling Events)
 
       // Mostrar alerta al presinar un boton
-      /*
-        <body>
-          <button onclick="show();">Click Me</button>
-        </body>
-      */
-      function show() {
-        alert("Hi there");
-      }
+        // <button onclick="show();">Click Me</button>
+        function show() {
+          alert("Hi there");
+        }
       
-
-
-
       // Mostrar hora al apretar boton
-
         // <button id="demo7">Click Me</button>
-        window.onload = function() {
-          var x = document.getElementById('demo7');
-          x.onclick = function () {
-            document.body.innerHTML = Date();
-          }
-        };
-      // 
-
-
-
-
+        var x = document.getElementById('demo7');
+        x.onclick = function () {
+          alert(Date());
+        }
+      //
+    // 
 
     // Eventos  OnLoad & OnUnload
-
 
       // OnLoad desde html
       // <body onload="doSomething()"></body>
@@ -861,10 +830,6 @@ console.log("Hello from console!");
         x001.value = x001.value.toUpperCase();
       }
     // 
-
-
-
-
 
 
 
@@ -894,20 +859,16 @@ console.log("Hello from console!");
 
       // crear un evento Manipulador q se remueve luego de ejecutarse
 
-        // After clicking the button, an alert with a random number displays and the event listener is removed.
+        // click da random num and the event listener is removed.
 
-        /*
-          <body>
-            <button id="demo8">Start</button>
-          </body>
-        */
+        // <button id="demo8">Start</button>
         window.onload = function() {
           var btn = document.getElementById("demo8");
-          btn.addEventListener("click01", myFunction01);
+          btn.addEventListener("click", myFunction01);
 
           function myFunction01() {
             alert(Math.random());
-            btn.removeEventListener("click01", myFunction01);
+            btn.removeEventListener("click", myFunction01);
           }
         };
       // 
@@ -959,29 +920,33 @@ console.log("Hello from console!");
     */
 
     var images = [
-      "http://www.sololearn.com/uploads/slider/1.jpg", 
-      "http://www.sololearn.com/uploads/slider/2.jpg", 
-      "http://www.sololearn.com/uploads/slider/3.jpg"
+      "https://www.sololearn.com/uploads/slider/1.jpg", 
+      "https://www.sololearn.com/uploads/slider/2.jpg", 
+      "https://www.sololearn.com/uploads/slider/3.jpg",
+      "https://www.sololearn.com/uploads/slider/1.jpg", 
+      "https://www.sololearn.com/uploads/slider/2.jpg", 
+      "https://www.sololearn.com/uploads/slider/3.jpg"
     ];
-
+    var numImgs = 0;
     function next()
     {
       var slider = document.getElementById("slider");
-      num++;
-      if(num >= images.legth)
+      numImgs++;
+      if(numImgs >= images.legth)
       {
-        num = 0;
+        numImgs = 0;
       }
-      slider.src = images[num];
+      slider.src = images[numImgs];
     }
 
     function prev()
     {
       var slider = document.getElementById("slider");
-      num--;
-      if (num < 0) {
-        num = images[num];
+      numImgs--;
+      if (numImgs < 0) {
+        numImgs = images.length-1;
       }
+      slider.src = images[numImgs];
     }
   // 
 
@@ -1085,7 +1050,7 @@ console.log("Hello from console!");
     const funcSinParam = () => document.write("Hola! (ej Func sin arg) <hr>");
     funcSinParam();
     // 
-
+  // 
 
 
 
@@ -1236,35 +1201,35 @@ console.log("Hello from console!");
 
 
   // >>> Destructurar Arrays <<< //
-    // Ej 1
-      let arrDes = ['1', '2', '3'];
+  // Ej 1
+    let arrDes = ['1', '2', '3'];
 
-      let [one, two, three] = arrDes;
-      
-      // console.log(one); // 1
-      // console.log(two); // 2
-      // console.log(three); // 3
+    let [one, two, three] = arrDes;
     
-    // Ej 2
-      let aDes = () => {
-        return [1, 3, 2];
-      };
-      
-      [one, ,two] = aDes();
-      
-      // console.log(one); // 1
-      // console.log(two); // 2
+    // console.log(one); // 1
+    // console.log(two); // 2
+    // console.log(three); // 3
+  
+  // Ej 2
+    let aDes = () => {
+      return [1, 3, 2];
+    };
+    
+    [one, ,two] = aDes();
+    
+    // console.log(one); // 1
+    // console.log(two); // 2
 
-    // Ej 3
-      let _a, _b, _c = 4, _d = 8;
+  // Ej 3
+    let _a, _b, _c = 4, _d = 8;
 
-      [_a, _b = 6] = [2]; // a=2, b=6.
-      // console.log(a); // 2
-      // console.log(b); // 6
+    [_a, _b = 6] = [2]; // a=2, b=6.
+    // console.log(a); // 2
+    // console.log(b); // 6
 
-      [_c, _d] = [_d, _c]; // c=8, d=4.
-      // console.log(c); // 8
-      // console.log(d); // 4
+    [_c, _d] = [_d, _c]; // c=8, d=4.
+    // console.log(c); // 8
+    // console.log(d); // 4
   // 
 
 
@@ -1363,167 +1328,167 @@ console.log("Hello from console!");
       const poster00 = new Square0(2, 3); 
       console.log(square00.height);
     
-      // Clase no nombrada
-      var Square1 = class 
-      {
-        constructor(height, width) {
-          this.height = height;
-          this.width = width;
-        }
-      };
-
-      const square1 = new Square1(5, 5);
-      const poster1 = new Square1(2, 3); 
-      console.log(square1.height);
-
-      // Metodo/Func
-      class Rectangle1 {
-        constructor(height, width) {
-          this.height = height;
-          this.width = width;
-        }
-        
-        get area() {
-          return this.calcArea();
-        }
-      
-        calcArea() {
-          return this.height * this.width;
-        }
+    // Clase no nombrada
+    var Square1 = class 
+    {
+      constructor(height, width) {
+        this.height = height;
+        this.width = width;
       }
-      const square01 = new Rectangle1(5, 5);
-      console.log(square01.area); // 25
-      
+    };
 
-      // Herencia 
-      // 
-      class Animal0 {
-        constructor(name) {
-          this.name = name;
-        }
-        speak() {
-          console.log(this.name + ' makes a noise.');
-        }
+    const square1 = new Square1(5, 5);
+    const poster1 = new Square1(2, 3); 
+    console.log(square1.height);
+
+    // Metodo/Func
+    class Rectangle1 {
+      constructor(height, width) {
+        this.height = height;
+        this.width = width;
       }
       
-      class Dog0 extends Animal0 {
-        speak() {
-          console.log(this.name + ' barks.');
-        }
+      get area() {
+        return this.calcArea();
       }
-      let dog0 = new Dog0('Rex');
-      dog0.speak(); // Rex barks.
-
-      // 
-      class Animal1 {
-        constructor(name) {
-          this.name = name;
-        }
-        speak() {
-          console.log(this.name + ' makes a noise.');
-        }
-      }
-      
-      class Dog1 extends Animal1 {
-        speak() {
-          super.speak(); // Rex barks.
-          console.log(this.name + ' barks.');
-        }
-      }
-      let dog1 = new Dog1('Rex');
-      dog1.speak(); // Rex makes a noise.
-    // 
-  
-    // MAP (obj)
-      let map00 = new Map([["k1","v1"], ["k2", "v2"]]);
-      console.log(map00.size); // 2
     
-      // Metodos
-        // set(key, value)
-        // get(key)
-        // has(key)
-        // delete(key)
-        // clear()
-        // keys()    : Arr de k
-        // value()   : Arr de v
-        // entries() : Arr de [k, v]
-      
-      let map2 = new Map();
-      map2.set("k1", "v1").set("k2", "v2");
-      console.log(map2.get("k1")); // v1
-      console.log(map2.has("k2")); // true
-      for (let kv of map2.entries())
-        console.log(kv[0] + " : " + kv[1]); // k1:v1  // k2:v2
-    // 
-    
-    // SET (obj)
-      let set = new Set([1, 2, 4, 2, 59, 9, 4, 9, 1]);
-      console.log(set.size); // 5 (size devuelve la cant de valores diferentes)
-      // Metodos= Add, delete, has, clear, values.
-    // 
-
-    // PROMISES (por tiempo)
-      // Antes js
-      setTimeout(function() {
-        console.log("Work 1");
-        setTimeout(function() {
-            console.log("Work 2");
-        }, 1000);
-      }, 1000);
-      console.log("End");
-
-      // Ahora ES6
-      new Promise(function(resolve, reject) {
-        // Work
-        if (success)
-            resolve(result);
-        else
-            reject(Error("failure"));
-      }); 
-
-    // Iteradores y Generadores
-      let myIterableObj = { 
-        [Symbol.iterator] : function* () {
-          yield 1; yield 2; yield 3;
-        }
-      };
-      console.log([...myIterableObj]); // [ 1, 2, 3 ]
-    
-      // 
-      function* idMaker() {
-      let index = 0;
-      while (index < 5)
-        yield index++;
+      calcArea() {
+        return this.height * this.width;
       }
-      var gen = idMaker();
+    }
+    const square01 = new Rectangle1(5, 5);
+    console.log(square01.area); // 25
+    
 
-      console.log(gen.next().value);
-      console.log(gen.next().value);
-      console.log(gen.next().value);
-      console.log(gen.next().value);
-      console.log(gen.next().value);
-      // Try to add one more console.log, just like the above see what happens.
+    // Herencia 
+    class Animal0 {
+      constructor(name) {
+        this.name = name;
+      }
+      speak() {
+        console.log(this.name + ' makes a noise.');
+      }
+    }
+    
+    class Dog0 extends Animal0 {
+      speak() {
+        console.log(this.name + ' barks.');
+      }
+    }
+    let dog0 = new Dog0('Rex');
+    dog0.speak(); // Rex barks.
 
-      // 
-      const arr_ = ['0', '1', '4', 'a', '9', 'c', '16'];
-      const my_obj = {
-        [Symbol.iterator]: function*() {
-          for(let index of arr_) {
-            yield `${index}`;
-          }
-        }
-      };
-
-      const all = [...my_obj] // Here you can replace the '[...my_obj]' with 'arr'.
-        .map(i => parseInt(i, 10))
-        .map(Math.sqrt)
-        .filter((i) => i < 5) // try changing the value of 5 to 4 see what happens.
-        .reduce((i, d) => i + d); // comment this line while you are changing the value of the line above
-
-      console.log(all);
     // 
+    class Animal1 {
+      constructor(name) {
+        this.name = name;
+      }
+      speak() {
+        console.log(this.name + ' makes a noise.');
+      }
+    }
+    
+    class Dog1 extends Animal1 {
+      speak() {
+        super.speak(); // Rex barks.
+        console.log(this.name + ' barks.');
+      }
+    }
+    let dog1 = new Dog1('Rex');
+    dog1.speak(); // Rex makes a noise.
   // 
 
+  // MAP (obj)
+    let map00 = new Map([["k1","v1"], ["k2", "v2"]]);
+    console.log(map00.size); // 2
+  
+    // Metodos
+      // set(key, value)
+      // get(key)
+      // has(key)
+      // delete(key)
+      // clear()
+      // keys()    : Arr de k
+      // value()   : Arr de v
+      // entries() : Arr de [k, v]
+    
+    let map2 = new Map();
+    map2.set("k1", "v1").set("k2", "v2");
+    console.log(map2.get("k1")); // v1
+    console.log(map2.has("k2")); // true
+    for (let kv of map2.entries())
+      console.log(kv[0] + " : " + kv[1]); // k1:v1  // k2:v2
+  // 
+  
+  // SET (obj)
+  let set = new Set([1, 2, 4, 2, 59, 9, 4, 9, 1]);
+  console.log(set.size); // 5 (size devuelve la cant de valores diferentes)
+  // Metodos= Add, delete, has, clear, values.
+  //
+// 
+
+// PROMISES (por tiempo)
+  // Antes js
+  setTimeout(function() {
+    console.log("Work 1");
+    setTimeout(function() {
+        console.log("Work 2");
+    }, 1000);
+  }, 1000);
+  console.log("End");
+
+  // Ahora ES6
+  new Promise(function(resolve, reject) {
+    // Work
+    if (success)
+        resolve(result);
+    else
+        reject(Error("failure"));
+  }); 
+
+// Iteradores y Generadores
+  let myIterableObj = { 
+    [Symbol.iterator] : function* () {
+      yield 1; yield 2; yield 3;
+    }
+  };
+  console.log([...myIterableObj]); // [ 1, 2, 3 ]
+
+  // 
+  function* idMaker() {
+  let index = 0;
+  while (index < 5)
+    yield index++;
+  }
+  var gen = idMaker();
+
+  console.log(gen.next().value);
+  console.log(gen.next().value);
+  console.log(gen.next().value);
+  console.log(gen.next().value);
+  console.log(gen.next().value);
+  // Try to add one more console.log, just like the above see what happens.
+
+  // 
+  const arr_ = ['0', '1', '4', 'a', '9', 'c', '16'];
+  const my_obj = {
+    [Symbol.iterator]: function*() {
+      for(let index of arr_) {
+        yield `${index}`;
+      }
+    }
+  };
+
+  const all = [...my_obj] // Here you can replace the '[...my_obj]' with 'arr'.
+    .map(i => parseInt(i, 10))
+    .map(Math.sqrt)
+    .filter((i) => i < 5) // try changing the value of 5 to 4 see what happens.
+    .reduce((i, d) => i + d); // comment this line while you are changing the value of the line above
+
+  console.log(all);
+// 
 
 
-document.write("Final de JavaScript.js");  
+
+
+document.write("Final de JavaScript.js");
