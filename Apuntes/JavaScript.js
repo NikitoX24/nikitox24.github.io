@@ -1,15 +1,16 @@
 document.write("Inicio de JavaScript.js");
 
 
+
 // Imprimir En Web:         document.write("");
-document.write("<h1>Hello World!</h1> <hr>");
+document.write("<h4>Hello World!</h4> <hr>");
 
 // Imprimir En Consola:     console.log("");
-// console.log("Hello from console!");
+console.log("Hello from console!");
 
 // Recargar pag x milisegundos
-  // setTimeout("location.reload(true);", 4000);
-// 
+// setTimeout("location.reload(true);", 4000);
+
 
 // Variables (Respetar Mayusc, Empezar por: "a-z" , "_" , "$" )
 
@@ -21,7 +22,7 @@ document.write("<h1>Hello World!</h1> <hr>");
   // 
 
   // String con Comillas dentro
-  var sayHello = 'Hello world! <br> I\'m a JavaScript programmer.\' <br><hr>';
+  var sayHello = 'Hello world! <br> I\'m a JavaScript programmer. <br><hr>';
   document.write(sayHello);
   /* otros:
     \'  = 1 comilla.
@@ -1021,7 +1022,8 @@ document.write("<h1>Hello World!</h1> <hr>");
 
 
 
-/*
+
+
 
 
 ////////////////////
@@ -1048,17 +1050,19 @@ document.write("<h1>Hello World!</h1> <hr>");
 
   // For
     // For In
-    let objsV = {a:1, b:2, c:3};
-    for (let v in objsV) {
+    let objsV01 = {a:1, b:2, c:3};
+    for (let v in objsV01) {
       // document.write(v);
     }
 
     // For On
-    let objsV2 = ["xL", "y", "z"];
-    for (let v of objsV2) {
+    let objsV02 = ["xL", "y", "z"];
+    for (let v of objsV02) {
       // document.write(v);
     }
   // 
+
+
 
   // Funciones
     // Antes
@@ -1068,7 +1072,7 @@ document.write("<h1>Hello World!</h1> <hr>");
     }
     
     // Ahora
-    const add = (x, y) => {
+    const add0 = (x, y) => {
       let sum = x+y;
       document.write(sum);
     }
@@ -1076,11 +1080,14 @@ document.write("<h1>Hello World!</h1> <hr>");
     // Funcion simple con 1 argumento
     const saludar = x => "Bienvenido " + x;
 
-    document.write(saludar("Nico"));  // Bienvenido Nico
+    document.write(saludar("Nico") + "<hr>");  // Bienvenido Nico
 
     // Funcion simple sin argumento
-    const x = () => document.write("Hola");
+    const x0 = () => document.write("Hola");
   // 
+
+
+
 
   // Bucles
     // ForEach (recorrer Arrays)
@@ -1091,6 +1098,7 @@ document.write("<h1>Hello World!</h1> <hr>");
     arrFE.forEach(function(el) {
       document.write(el * 2);
     });
+    document.write("<hr>");
     
     // Ahora
     const arrFE2 = [2,3,7,8];
@@ -1098,6 +1106,7 @@ document.write("<h1>Hello World!</h1> <hr>");
     arrFE2.forEach(v => {
       document.write(v * 2);
     });
+    document.write("<hr>");
   // 
 
   // Parametros predeterminados
@@ -1106,13 +1115,14 @@ document.write("<h1>Hello World!</h1> <hr>");
       return a + b + c;
     }
     document.write(testES6(5)); // 50
+    document.write("<hr>");
 
     // Ahora
     const test = (a, b = 3, c = 42) => {
       return a + b + c;
     }
     console.log(test(5)); //50 
-  // 
+    // 
 
   // Objetos
     //Ej 1 
@@ -1171,18 +1181,18 @@ document.write("<h1>Hello World!</h1> <hr>");
   // 
 
   // Object.assign()
-    let person = {
+    let person00 = {
       name: 'Jack',
       age: 18,
       sex: 'male'
     };
-    let student = {
+    let student00 = {
         name: 'Bob',
         age: 20,
         xp: '2'
     };
 
-    let newStudent = Object.assign({}, person, student);
+    let newStudent = Object.assign({}, person00, student00);
 
     // console.log(newStudent.name); // Bob
     // console.log(newStudent.age); // 20
@@ -1190,71 +1200,76 @@ document.write("<h1>Hello World!</h1> <hr>");
     // console.log(newStudent.xp); // 2
 
     // 
-    let person = {
+    let person01 = {
       name: 'Jack',
       age: 18
     };
 
-    let newPerson = person;
-    newPerson.name = 'Bob';
+    let newPerson01 = person01;
+    newPerson01.name = 'Bob';
 
     // console.log(person.name); // Bob
     // console.log(newPerson.name); // Bob
 
     // 
-    let person = {
+    let person02 = {
       name: 'Jack',
       age: 18
     };
 
-    let newPerson = Object.assign({}, person);
-    newPerson.name = 'Bob';
+    let newPerson02 = Object.assign({}, person02);
+    newPerson02.name = 'Bob';
 
     // console.log(person.name); // Jack
     // console.log(newPerson.name); // Bob
 
     // 
-    let person = {
+    let person03 = {
       name: 'Jack',
       age: 18
     };
 
-    let newPerson = Object.assign({}, person, {name: 'Bob'});
+    let newPerson03 = Object.assign({}, person03, {name: 'Bob'});
 
     // console.log(newPerson.name); // Bob
   // 
 
+
+
+
   // >>> Destructurar Arrays <<< //
     // Ej 1
-      let arr = ['1', '2', '3'];
+      let arrDes = ['1', '2', '3'];
 
-      let [one, two, three] = arr;
+      let [one, two, three] = arrDes;
       
       // console.log(one); // 1
       // console.log(two); // 2
       // console.log(three); // 3
     
     // Ej 2
-      let a = () => {
+      let aDes = () => {
         return [1, 3, 2];
       };
       
-      let [one, , two] = a();
+      [one, ,two] = aDes();
       
       // console.log(one); // 1
       // console.log(two); // 2
 
     // Ej 3
-      let a, b, c = 4, d = 8;
+      let _a, _b, _c = 4, _d = 8;
 
-      [a, b = 6] = [2];
+      [_a, _b = 6] = [2]; // a=2, b=6.
       // console.log(a); // 2
       // console.log(b); // 6
 
-      [c, d] = [d, c];
+      [_c, _d] = [_d, _c]; // c=8, d=4.
       // console.log(c); // 8
       // console.log(d); // 4
   // 
+
+
 
   // Destructurar Objetos
     // Ej 1
@@ -1264,24 +1279,24 @@ document.write("<h1>Hello World!</h1> <hr>");
       // console.log(s);
     
     // Ej 2
-      let a, b;
-      ({a, b} = {a: 'Hello ', b: 'Jack'});
+      let j0, k0;
+      ({j0, k0} = {j0: 'Hello ', k0: 'Jack'});
       // console.log(a + b);
 
     // Ej 3
-      let {a, b} = {a: 'Hello ', b: 'Jack'};
+      let {u0, i0} = {u0: 'Hello ', i0: 'Jack'};
       // console.log(a + b);
 
     // Ej 4
-      var o = {h: 42, s: true};
-      var {h: foo, s: bar} = o;
+      var o0 = {_h: 42, _s: true};
+      var {_h: foo, _s: bar} = o0;
       //console.log(h); // Error
       // console.log(foo); // 42
 
     // Ej 5
-      var obj = {id: 42, name: "Jack"};
+      var obj_0 = {_id: 42, name: "Jack"};
 
-      let {id = 10, age = 20} = obj;
+      let {_id = 10, _age = 20} = obj_0;
       // console.log(id); // 42
       // console.log(age); // 20
 
@@ -1299,7 +1314,7 @@ document.write("<h1>Hello World!</h1> <hr>");
       return true;
     }
 
-    let x = [2, 4, 6, 7];
+    let x0_ = [2, 4, 6, 7];
     console.log(containsAll(x, 2, 4, 7));
     console.log(containsAll(x, 6, 4, 9));
 
@@ -1313,7 +1328,7 @@ document.write("<h1>Hello World!</h1> <hr>");
       return true;
     }
     
-    let x = [2, 4, 6, 7];
+    let x1_ = [2, 4, 6, 7];
     console.log(containsAll(x, 2, 4, 7));
     console.log(containsAll(x, 6, 4, 9));
   // 
@@ -1324,7 +1339,7 @@ document.write("<h1>Hello World!</h1> <hr>");
 
   // Clases en ES6
     // constructor - (al iniciar)
-      class Rectangle {
+      class Rectangle0 {
         constructor(height, width) 
         {
           this.height = height;
@@ -1332,12 +1347,12 @@ document.write("<h1>Hello World!</h1> <hr>");
         }
       }
 
-      const square = new Rectangle(5, 5);
-      const poster = new Rectangle(2, 3);
-      console.log(square.height);
+      const square0 = new Rectangle0(5, 5);
+      const poster0 = new Rectangle0(2, 3);
+      console.log(square0.height);
 
       // Clase nombrada
-      var Square = class Rectangle 
+      var Square0 = class Rectangle0
       {
         constructor(height, width) {
           this.height = height;
@@ -1345,12 +1360,12 @@ document.write("<h1>Hello World!</h1> <hr>");
         }
       };
       
-      const square = new Square(5, 5);
-      const poster = new Square(2, 3); 
-      console.log(square.height);
+      const square00 = new Square0(5, 5);
+      const poster00 = new Square0(2, 3); 
+      console.log(square00.height);
     
       // Clase no nombrada
-      var Square = class 
+      var Square1 = class 
       {
         constructor(height, width) {
           this.height = height;
@@ -1358,12 +1373,12 @@ document.write("<h1>Hello World!</h1> <hr>");
         }
       };
 
-      const square = new Square(5, 5);
-      const poster = new Square(2, 3); 
-      console.log(square.height);
+      const square1 = new Square1(5, 5);
+      const poster1 = new Square1(2, 3); 
+      console.log(square1.height);
 
       // Metodo/Func
-      class Rectangle {
+      class Rectangle1 {
         constructor(height, width) {
           this.height = height;
           this.width = width;
@@ -1377,12 +1392,12 @@ document.write("<h1>Hello World!</h1> <hr>");
           return this.height * this.width;
         }
       }
-      const square = new Rectangle(5, 5);
-      console.log(square.area); // 25
+      const square01 = new Rectangle1(5, 5);
+      console.log(square01.area); // 25
       
       // Herencia 
       // 
-      class Animal {
+      class Animal0 {
         constructor(name) {
           this.name = name;
         }
@@ -1391,16 +1406,16 @@ document.write("<h1>Hello World!</h1> <hr>");
         }
       }
       
-      class Dog extends Animal {
+      class Dog0 extends Animal0 {
         speak() {
           console.log(this.name + ' barks.');
         }
       }
-      let dog = new Dog('Rex');
-      dog.speak(); // Rex barks.
+      let dog0 = new Dog0('Rex');
+      dog0.speak(); // Rex barks.
 
       // 
-      class Animal {
+      class Animal1 {
         constructor(name) {
           this.name = name;
         }
@@ -1409,19 +1424,19 @@ document.write("<h1>Hello World!</h1> <hr>");
         }
       }
       
-      class Dog extends Animal {
+      class Dog1 extends Animal1 {
         speak() {
           super.speak(); // Rex barks.
           console.log(this.name + ' barks.');
         }
       }
-      let dog = new Dog('Rex');
-      dog.speak(); // Rex makes a noise.
+      let dog1 = new Dog1('Rex');
+      dog1.speak(); // Rex makes a noise.
     // 
   
     // MAP (obj)
-      let map = new Map([["k1","v1"], ["k2", "v2"]]);
-      console.log(map.size); // 2
+      let map00 = new Map([["k1","v1"], ["k2", "v2"]]);
+      console.log(map00.size); // 2
     
       // Metodos
         // set(key, value)
@@ -1490,10 +1505,10 @@ document.write("<h1>Hello World!</h1> <hr>");
       // Try to add one more console.log, just like the above see what happens.
 
       // 
-      const arr = ['0', '1', '4', 'a', '9', 'c', '16'];
+      const arr_ = ['0', '1', '4', 'a', '9', 'c', '16'];
       const my_obj = {
         [Symbol.iterator]: function*() {
-          for(let index of arr) {
+          for(let index of arr_) {
             yield `${index}`;
           }
         }
@@ -1508,9 +1523,6 @@ document.write("<h1>Hello World!</h1> <hr>");
       console.log(all);
 
 
-
-
-*/
 
 
 
