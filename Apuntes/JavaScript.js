@@ -918,38 +918,28 @@ console.log("Hello from console!");
         }
       <CSS>
     */
-
     var images = [
-      "https://www.sololearn.com/uploads/slider/1.jpg", 
-      "https://www.sololearn.com/uploads/slider/2.jpg", 
-      "https://www.sololearn.com/uploads/slider/3.jpg",
-      "https://www.sololearn.com/uploads/slider/1.jpg", 
-      "https://www.sololearn.com/uploads/slider/2.jpg", 
-      "https://www.sololearn.com/uploads/slider/3.jpg"
+      'http://www.sololearn.com/uploads/slider/1.jpg', 
+      'http://www.sololearn.com/uploads/slider/2.jpg', 
+      'http://www.sololearn.com/uploads/slider/3.jpg'
     ];
-    var numImgs = 0;
-    function next()
-    {
-      var slider = document.getElementById("slider");
-      numImgs++;
-      if(numImgs >= images.legth)
-      {
-        numImgs = 0;
+    var num = 0;
+    function next() {
+      var slider = document.getElementById('slider');
+      num++;
+      if(num >= images.length) {
+          num = 0;
       }
-      slider.src = images[numImgs];
+      slider.src = images[num];
     }
-
-    function prev()
-    {
-      var slider = document.getElementById("slider");
-      numImgs--;
-      if (numImgs < 0) {
-        numImgs = images.length-1;
+    function prev() {
+      var slider = document.getElementById('slider');
+      num--;
+      if(num < 0) {
+          num = images.length-1;
       }
-      slider.src = images[numImgs];
+      slider.src = images[num];
     }
-  // 
-
 
   // Validación de formularios
     /*

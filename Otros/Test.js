@@ -1,24 +1,22 @@
-
-
-
-
-
-
-
-
-
-window.onload = function() {
-  var pos = 0; 
-  var box = document.getElementById('box');
-  var t = setInterval(move, 10);
-
-  function move() {
-    if(pos >= 150) {
-      clearInterval(t);
-    }
-    else {
-      pos += 1;
-      box.style.left = pos+'px';
-    }
+var images = [
+  'http://www.sololearn.com/uploads/slider/1.jpg', 
+  'http://www.sololearn.com/uploads/slider/2.jpg', 
+  'http://www.sololearn.com/uploads/slider/3.jpg'
+];
+var num = 0;
+function next() {
+  var slider = document.getElementById('slider');
+  num++;
+  if(num >= images.length) {
+      num = 0;
   }
-};
+  slider.src = images[num];
+}
+function prev() {
+  var slider = document.getElementById('slider');
+  num--;
+  if(num < 0) {
+      num = images.length-1;
+  }
+  slider.src = images[num];
+}
