@@ -476,28 +476,28 @@ p.numbers{
 
   /* 36) Transparencia */
   nav {
-      padding: 50px 0;
-      min-width: 500px; 
+    padding: 50px 0;
+    min-width: 500px; 
   }
   nav ul {
-      background: linear-gradient(90deg, 
-      rgba(255, 255, 255, 0) 0%, 
-      rgba(255, 255, 255, 0.2) 25%, 
-      rgba(255, 255, 255, 0.2) 75%, 
-      rgba(255, 255, 255, 0) 100%);
-      box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
-      inset 0 0 1px rgba(255, 255, 255, 0.6);
+    background: linear-gradient(90deg, 
+    rgba(255, 255, 255, 0) 0%, 
+    rgba(255, 255, 255, 0.2) 25%, 
+    rgba(255, 255, 255, 0.2) 75%, 
+    rgba(255, 255, 255, 0) 100%);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
+    inset 0 0 1px rgba(255, 255, 255, 0.6);
   }
   nav ul li {
-      display: inline-block;
+    display: inline-block;
   }
   nav ul li a {
-      padding: 10px; 
-      color: #000000;
-      font-size: 18px;
-      font-family: Arial;
-      text-decoration: none;
-      display: block;
+    padding: 10px; 
+    color: #000000;
+    font-size: 18px;
+    font-family: Arial;
+    text-decoration: none;
+    display: block;
   }
   
   /* 37) Text Shadow */
@@ -794,7 +794,7 @@ p.numbers{
     -webkit-transition: width 3s;
   }
   div.transit:hover {
-      width: 250px;
+    width: 250px;
   }
 
   /* Transform Rotate */

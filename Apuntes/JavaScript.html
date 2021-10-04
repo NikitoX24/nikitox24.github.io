@@ -7,135 +7,133 @@
   <title> JavaScript </title>
 </head>
 <body>
+  <style>
+    .borders{
+      padding: 10px;
+      border: 1px solid grey;
+      background-color: rgba(128, 128, 128, 0.227);
+    } 
+    .titles{
+      text-shadow: 5px 2px 4px grey;
+      text-align: center;
+      text-decoration: underline;
+      text-transform: uppercase;
+    }
+    p.numbers{
+      height: 5px;
+      font-size: 25px;
+      font-weight: 1000;
+    }
+  </style>
 
-  <h2>JavaScript</h2>
-  <h3> Inicio de HTML </h3>
+  <h1 class="titles">JavaScript</h1>
+  <div class="borders">
+    <h3 class="titles"> Inicio de HTML </h3>
 
-  <!-- DOM -->
-    <!-- cambiar valor a un elemento -->
-    <div id="demo"> 
-      id demo
-    </div> <hr>
+    <!-- DOM -->
+      <!-- cambiar valor a un elemento -->
+      <div id="demo"> 
+        id demo
+      </div> <hr>
 
-    <!-- cambiar valor a alguna clase -->
-    <div class="demo">
-      class demo
-    </div> <hr>
+      <!-- cambiar valor a alguna clase -->
+      <div class="demo">
+        class demo
+      </div> <hr>
 
-    <!-- cambiar valor a varios elementos -->
-    <p> hi </p>
-    <p> hello </p>
-    <p> hi x3 </p> <hr>
+      <!-- cambiar valor a varios elementos -->
+      <p> hi </p>
+      <p> hello </p>
+      <p> hi x3 </p> <hr>
 
-    <!-- propiedades y metodos -->
-    <div id = "demo2">
-      <p>some text</p>
-      <p>some other text</p>
-    </div> <hr>
+      <!-- propiedades y metodos -->
+      <div id = "demo2">
+        <p>some text</p>
+        <p>some other text</p>
+      </div> <hr>
 
-    <!-- modificar Atributos -->
-    <img id="myimg" src="/Imgs/Orange.png" alt="orange"  height="100"/> <br>
-    <a href="http://www.example.com">Some link</a> <hr>
+      <!-- modificar Atributos -->
+      <img id="myimg" src="/Imgs/Orange.png" alt="orange"  height="100"/> <br>
+      <a href="http://www.example.com">Some link</a> <hr>
 
-    <!-- modificar Estilos -->
-    <div id="demo3" style="width:200px">some text</div> <hr>
+      <!-- modificar Estilos -->
+      <div id="demo3" style="width:200px">some text</div> <hr>
 
-    <!-- crear elementos -->
-    <div id="demo4">some content</div> <hr>
+      <!-- crear elementos -->
+      <div id="demo4">some content</div> <hr>
 
-    <!-- borrando elementos -->
-    <div id="demo5">
-      <p id="p1">This is a paragraph.</p>
-      <p id="p2">This is another paragraph.</p>
-    </div> <hr>
+      <!-- borrando elementos -->
+      <div id="demo5">
+        <p id="p1">This is a paragraph.</p>
+        <p id="p2">This is another paragraph.</p>
+      </div> <hr>
 
-    <!-- reemplazando elementos -->
-    <div id="demo6">
-      <p id="p01">This is a paragraph.</p>
-      <p id="p02">This is another paragraph.</p>
-    </div> <hr>
-
-
-
-    <!-- creando animaciones -->
-    <div id="container">
-      <div id="box"> </div>
-    </div>
-    <style>
-      #container {
-        width: 200px;
-        height: 200px;
-        background: green;
-        position: relative;
-      }
-      #box {
-        width: 50px;
-        height: 50px;
-        background: red;
-        position: absolute;
-      }
-    </style> <hr>
-
-    <!-- eventos -->
-    <!-- alerta en boton -->
-    <button onclick="show();"> Alert Button</button> <br> <br>
-
-    <!-- hora en boton -->
-    <button id="demo7"> Hour Button</button> <hr>
-
-    <!-- OnLoad desde aqui -->
-    <body onload="doSomething()"></body> <hr>
-
-    <!-- OnLoad desde js -->
-    <div id="onloadjs"> desde html </div> <hr>
-
-    <!-- OnChange -->
-    <input type="text" id="name001" onchange="change()"> <hr>
+      <!-- reemplazando elementos -->
+      <div id="demo6">
+        <p id="p01">This is a paragraph.</p>
+        <p id="p02">This is another paragraph.</p>
+      </div> <hr>
 
 
 
+      <!-- creando animaciones -->
+      <div id="container">
+        <div id="box"> </div>
+      </div>
+      <style>
+        #container {
+          width: 200px;
+          height: 200px;
+          background: green;
+          position: relative;
+        }
+        #box {
+          width: 50px;
+          height: 50px;
+          background: red;
+          position: absolute;
+        }
+      </style> <hr>
 
-    <!-- crear un evento manipulador -->
-    <button id="demo8"> Evento de un solo uso </button> <hr>
+      <!-- eventos -->
+      <!-- alerta en boton -->
+      <button onclick="show();"> Alert Button</button> <br> <br>
 
-    <!-- Image slider -->
-    <div>
-      <button onclick="prev()"> Prev </button>
-      <img id="slider" src="https://www.sololearn.com/uploads/slider/1.jpg" width="200px" height="100px"/>
-      <button onclick="next()"> Next </button>
-    </div> <hr>
+      <!-- hora en boton -->
+      <button id="demo7"> Hour Button</button> <hr>
 
-    <!-- validacion de formularios -->
-    <form onsubmit="return validate()" method="post">
-      Number: <input type="text" name="num1" id="num1" />
-      <br />
-      Repeat: <input type="text" name="num2" id="num2" />
-      <br />
-      <input type="submit" value="Submit" />
-    </form> <hr>
-    
-    
+      <!-- OnLoad desde aqui -->
+      <body onload="doSomething()"></body> <hr>
+
+      <!-- OnLoad desde js -->
+      <div id="onloadjs"> desde html </div> <hr>
+
+      <!-- OnChange -->
+      <input type="text" id="name001" onchange="change()"> <hr>
 
 
 
 
+      <!-- crear un evento manipulador -->
+      <button id="demo8"> Evento de un solo uso </button> <hr>
 
+      <!-- Image slider -->
+      <div>
+        <button onclick="prev()"> Prev </button>
+        <img id="slider" src="https://www.sololearn.com/uploads/slider/1.jpg" width="200px" height="100px"/>
+        <button onclick="next()"> Next </button>
+      </div> <hr>
 
-
-
-
-
-
-
-  <!--ECMAScript  -->
-
-
-
-
-
-
-
-
+      <!-- validacion de formularios -->
+      <form onsubmit="return validate()" method="post">
+        Number: <input type="text" name="num1" id="num1" />
+        <br />
+        Repeat: <input type="text" name="num2" id="num2" />
+        <br />
+        <input type="submit" value="Submit" />
+      </form> <hr>
+      
+      
 
 
 
@@ -145,8 +143,28 @@
 
 
 
-  <hr>
-  <h3> Final de HTML </h3> <hr>
+
+
+
+    <!--ECMAScript  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <hr>
+    <h3 class="titles"> Final de HTML </h3>
+  </div><br>
+
   <script type="text/javascript" src="JavaScript.js"></script>
 
 </body>

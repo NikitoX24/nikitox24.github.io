@@ -1,25 +1,44 @@
 <!DOCTYPE HTML>
 <html lang="en">
-  <head>
-    <title>HTML</title>
-  </head>
-  <body>
-    <style>
-      h1, h2, h3{
-        text-decoration: underline;
-      }
-    </style>
+<head>
+  <title>HTML</title>
+</head>
+<body>
+  <style>
+    .borders{
+      padding: 10px;
+      border: 1px solid grey;
+      background-color: rgba(128, 128, 128, 0.227);
+    } 
+    .titles{
+      text-shadow: 5px 2px 4px grey;
+      text-align: center;
+      text-decoration: underline;
+      text-transform: uppercase;
+    }
+    .subtitles{        
+      text-decoration: underline;
+    }
+    p.numbers{
+      height: 5px;
+      font-size: 25px;
+      font-weight: 1000;
+    }
+  </style>
     
+  <h1 class="titles"> HTML </h1>
+  <div class="borders">
 
-    <h1> HTML </h1>
-    <hr>
-
-    <h4> Encabezado h4</h4>
+    <h1> Encabezado h1 </h1>
+    <h2> Encabezado h2 </h2>
+    <h3> Encabezado h3 </h3>
+    <h4> Encabezado h4 </h4>
+    <h5> Encabezado h5 </h5>
     <h6> Encabezado h6 </h6>
     <hr>
 
     <!-- Tipos de textos -->
-    <h3> Tipos de textos </h3>
+    <h3 class="subtitles"> Tipos de textos </h3>
     <p>
       <p>       Parrafo     </p>
       <b>       negrita     </b>      <br>
@@ -35,21 +54,21 @@
 
     <hr>
     <!-- Lista desordenada -->
-    <h3>Lista Desordenada</h3>
+    <h3 class="subtitles">Lista Desordenada</h3>
     <ul>
       <li>Rojo</li>
       <li>Azul</li>
       <li>Verde</li>
     </ul>
     <!-- Lista ordenada -->
-    <h3>Lista Ordenada</h3>
+    <h3 class="subtitles">Lista Ordenada</h3>
     <ol>
       <li>Rojo</li>
       <li>Azul</li>
       <li>Verde</li>
     </ol>
     <!-- Tabla -->
-    <h3> Tabla </h3>
+    <h3 class="subtitles"> Tabla </h3>
     <table border="2">
       <tr>
         <td bgcolor="red">Rojo</td>
@@ -62,6 +81,7 @@
       </tr>
     </table>
 
+  </div><br>
 
 
 
@@ -84,9 +104,9 @@
 
 
 
-
+  <div class="borders">
     <hr>
-    <h1> HTML5 </h1>
+    <h1 class="titles"> HTML5 </h1>
     <!-- Elementos nuevos de HTML5
       <article>   </article>
       <aside>     </aside>
@@ -127,7 +147,7 @@
     
 
     <!-- Audio y Video -->
-    <h2> Audio y Video </h2>
+    <h3 class="subtitles"> Audio y Video </h3>
     <div>
       <audio src="audio.mp3" controls>
         Texto por si el navegador no soporta audio.
@@ -146,12 +166,12 @@
     <hr>
 
     <!-- Barra de Progreso <progress> -->
-    <h2> Barra de Progreso </h2>
+    <h3 class="subtitles"> Barra de Progreso </h3>
     <progress min="0" max="100" value="35"></progress>
     <hr>
 
     <!-- Almacenamiento (API) -->
-    <h2> Almacenamiento </h2>
+    <h3 class="subtitles"> Almacenamiento </h3>
     <div>
       <!--
         html5:<Script>, html4(cookies) 
@@ -169,7 +189,7 @@
     <hr>
     
     <!-- Geo-Localizacion (API) -->
-    <h2> Geo-Localizacion </h2>
+    <h3 class="subtitles"> Geo-Localizacion </h3>
     <script>
       navigator.geolocation.getCurrentPosition();
       /* parametros= ShowLocation, ErrorHandler, Options */
@@ -177,7 +197,7 @@
     <hr>
 
     <!-- Dragg & Drop (API) -->
-    <h2> Dragg & Drop </h2>
+    <h3 class="subtitles"> Dragg & Drop </h3>
     <div>
       <img draggable="true" alt=""/>
 
@@ -237,7 +257,7 @@
   -->
 
     <!-- SVG (Graficos Vectorales Escaleables) -->
-    <h2> SVG (Graficos Vectorales Escaleables) </h2>
+    <h3 class="subtitles"> SVG (Graficos Vectorales Escaleables) </h3>
     <div>
       <!-- Imagen -->
       <img src="image.svg" alt="" height="1"> <!-- SVG define imgs basadas en vectores en formato XML -->
@@ -333,7 +353,7 @@
     </div> <hr>
     
     <!-- Canvas (JS)-->
-    <h2> Canvas JS </h2>
+    <h3 class="subtitles"> Canvas JS </h3>
     <div>
       <!-- 
         Canvas es solo contenedor grafico, para mostrar requiere JavaScript.
@@ -384,7 +404,7 @@
   
 
     <!-- Canvas Transform (JS) -->
-    <h2> Canvas Transform JS </h2>
+    <h3 class="subtitles"> Canvas Transform JS </h3>
     <div>
       <canvas id="canvas1" width="400" height="300"> </canvas>
 
@@ -410,7 +430,7 @@
 
       
       <!-- Rotate script --> 
-      <h2> Rotate script </h2>
+      <h3 class="subtitles"> Rotate script </h3>
       <script>
         var c=document.getElementById("canvas1");
         var ctx=c.getContext("2d");
@@ -422,7 +442,7 @@
       </script>
       
       <!-- Scale script -->
-      <h2> Scale script </h2>
+      <h3 class="subtitles"> Scale script </h3>
       <script>
         var c=document.getElementById("canvas1");
         var ctx=c.getContext("2d");
@@ -434,7 +454,7 @@
     <hr>
   
     <!-- Forms -->
-    <h2> Forms </h2>
+    <h3 class="subtitles"> Forms </h3>
     <div>
       <form autocomplete="off">
         <label for="name">Su nombre</label>
@@ -492,7 +512,7 @@
       <input id="tel" name="tel" type="tel" placeholder="555.555.1211">
 
     </div>
-    
+  </div><br>
 
   </body>
 </html>
