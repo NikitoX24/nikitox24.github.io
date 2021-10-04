@@ -204,7 +204,7 @@ p.numbers{
   /* Background-Body */
   body{
     background-color: beige;
-    background-image: url("/Imgs/tileW.jpg");
+    background-image: url("/Imgs/TileW.jpg");
     background-repeat: repeat; /* repeat-x, repeat-y, no-repeat, inherit */
     background-attachment: fixed; /* fixel, scroll, inherit */
   }
