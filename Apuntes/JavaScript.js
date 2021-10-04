@@ -597,7 +597,7 @@ console.log("Hello from console!");
       </body>
     */
     var el = document.getElementById("myimg");
-    el.src = "/Imgs/Apple.png";
+    el.src = "../Imgs/Apple.png";
 
 
 
