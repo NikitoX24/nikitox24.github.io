@@ -550,15 +550,15 @@ p.numbers{
   /* 43 Font-Face */
   @font-face {
     font-family: Delicious; 
-    src: url('/Imgs/Delicious-Roman.otf'); 
+    src: url('../Imgs/Delicious-Roman.otf'); 
   } 
   @font-face { 
     font-family: Delicious; 
     font-weight: bold; 
-    src: url('/Imgs/Delicious-Bold.otf'); 
+    src: url('../Imgs/Delicious-Bold.otf'); 
   }
   h1.custfont{
-     font-family: Delicious, sans-serif; 
+    font-family: Delicious, sans-serif; 
   }
 
 
