@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="es-AR">
 <head>
   <title>HTML</title>
 </head>
@@ -53,9 +53,10 @@
     </p><hr>
 
     <h3 class="subtitles"> Atributos </h3>
-    <p align="center"> attribute: align="center" </p>
-    <hr width="30%" /> <hr>
-  
+    <p style="color: red;"> Attribute: style="color: red" </p>
+    <font color="red"> Attribute: color="red"</font>
+    <hr width="10%" align="Left"/> <br> <hr>
+
     <h3 class="subtitles" > Imagen </h3>
     <img src="Imagen.png" alt="Texto por si no carga imagen" > <br>
 
@@ -64,6 +65,12 @@
         height=""
         width=""
         border=""
+        style="" (color, font, size, etc)
+        href="" (hipervinculo, link para redirigirse)
+        src=""  (ruta de acceso de un link para poner una imagen)
+        alt=""
+        <font color="">
+
     -->
 
     <hr>
@@ -73,7 +80,7 @@
       <li>Rojo</li>
       <li>Azul</li>
       <li>Verde</li>
-    </ul>
+    </ul> <hr width="15%" align="left"/>
     <!-- Lista ordenada -->
     <h3 class="subtitles">Lista Ordenada</h3>
     <ol>
@@ -94,21 +101,91 @@
         <td>Amarillo</td>
         <td colspan="2">Naranja</td>
       </tr>
-    </table>
+    </table> <hr>
 
     <h3 class="subtitles"> Links </h3>
     <a href="https://nikitox24.github.io/Main/" target="_blank">
       Mi Pag Web
-    </a>
+    </a> <hr>
 
-    <h3 class="subtitles"> Tipos de elementos </h3>
+    <h3 class="subtitles"> Tipos de elementos en Niveles (Bloque-Line) </h3>
     <!-- 
       Nivel de Bloque en documento:
         <h1>, <form>, <li>, <ol>, <ul>, <p>, <pre>, <table>, <div>, etc.
       Nivel en Line en documento:
         <b>, <a>, <strong>, <img>, <input>, <em>, <span>, etc.
+      Elementos:
+        DIV - container for other HTML elements.
+        SPAN - use to style parts of the text:
+        APPLET - embedded Java applet
+        IFRAME - Inline frame
+        INS - inserted text
+        MAP - image map
+        OBJECT - embedded object
+        SCRIPT - script within an HTML document
      -->
-     
+    Nivel Bloque
+    <div style="background-color: rgba(128, 128, 128, 0.405); padding: 20px;">
+      <p> Esto es un DIV </p>
+    </div><br><br>
+
+    Nivel Line
+    <p> 
+      Esto es un 
+        <span style="color: red;"> SPAN </span> 
+      dentro de h4
+    </p>
+
+    <hr>
+
+    <h3 class="subtitles"> Forms </h3>
+    <!-- Recolectar info del usuario -->
+    <form action="url" method="GET"> </form> <!-- GET: visibles  -->
+    <form action="url" method="POST"> </form> <!-- POST: ocultos (para contraseñas) -->
+
+    <form>
+      <input type="text" name="username" /><br />
+      <input type="password" name="password" /> <br>
+      <input type="submit" value="Enviar"> 
+      <!-- esto se envia a un server q lo procesa con PHP -->
+    </form> <hr width="10%" align="Left"/>
+
+    <form>
+      <input type="radio" name="gender" value="male" />Male <br />
+      <input type="radio" name="gender" value="female" />Female <br />
+    </form> <hr width="10%" align="Left"/>
+
+    <form>
+      <input type="checkbox" name="gender" value="1" />Male <br />
+      <input type="checkbox" name="gender" value="2" />Female <br />
+    </form>
+
+    <hr>
+
+    <h3 class="subtitles"> Frames (Marcos)</h3> <!-- No soportadas en HTML5 -->
+    <frameset cols="100, 25%, *"></frameset> 
+    <frameset rows="100, 25%, *"></frameset>
+    <!-- <frame noresize="noresize"> -->
+
+    <frameset cols="25%,50%,25%">
+      <frame src="a.htm" />
+      <frame src="b.htm" />
+      <frame src="c.htm" />
+      <noframes>Frames not supported!</noframes>
+    </frameset>
+
+
+
+
+
+
+    <h3 class="subtitles"> </h3>
+    <h3 class="subtitles"> </h3>
+
+
+
+
+
 
 
 
