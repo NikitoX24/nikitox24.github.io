@@ -180,7 +180,7 @@
     -->
 
     <!-- SVG (Graficos Vectorales Escaleables) -->
-    <h3 class="subtitles"> SVG (Graficos Vectorales Escaleables) </h3>
+    <h2 class="subtitles"> SVG (Graficos Vectorales Escaleables) </h2>
     <!-- https://www.sololearn.com/learning/1014/2200/4369/1 -->
     <div>
       <!-- Imagen -->
@@ -279,7 +279,7 @@
 
 
     <!-- Canvas (JS)-->
-    <h3 class="subtitles"> < Canvas > (JS) </h3>
+    <h2 class="subtitles"> < Canvas > (JS) </h2>
     <div>
       Canvas es solo contenedor grafico (para mostrar requiere JavaScript) <br>
       x0 y0: comienza arriba izq. <br><br>
@@ -291,25 +291,27 @@
         < _script_ > <br>
           var can = document.getElementById("canvas1"); <br>
           var ctx = can.getcontext("2d"); <br>
-        < _script_ > <hr>
+        < _script_ > <hr width="15%" align="Left">
       </b>
 
       <!-- fillRect(x, y, w, h) -->
+      <h4 class="subtitles"> fillRect(x, y, w, h) </h4>
       <canvas id="canvas2" width="400" height="300"> </canvas> 
       <script>
         var c = document.getElementById("canvas2");
-        var ctx = c.getContext("2d");
-        ctx.fillRect(20,20,100,100); /* w: ancho, h: alto */
-      </script> <hr>
+        var ctx2 = c.getContext("2d");
+        ctx2.fillRect(20,20,100,100); /* w: ancho, h: alto */
+      </script> <hr width="15%" align="Left">
 
       <!-- fillStyle(rbga) Gradiante -->
+      <h4 class="subtitles"> fillStyle(rbga) Gradiante </h4>
       <canvas id="canvas3" width="400" height="300"> </canvas> 
       <script>
         var canvas = document.getElementById("canvas3");
-        var ctx = canvas.getContext("2d");
-        ctx.fillStyle = "rgba(0, 200, 0, 1)";
-        ctx.fillRect (36, 10, 22, 22);
-      </script> <hr>
+        var ctx3 = canvas.getContext("2d");
+        ctx3.fillStyle = "rgba(0, 200, 0, 1)";
+        ctx3.fillRect (36, 10, 22, 22);
+      </script>
 
       <!-- 
       Draw a Line
@@ -334,10 +336,11 @@
   
 
     <!-- Canvas Transform (JS) -->
-    <h3 class="subtitles"> Canvas Transform JS </h3>
+    <h2 class="subtitles"> Canvas Transform JS </h2>
     <div>
       
       <!-- Texto script -->
+      <h4 class="subtitles"> Texto script </h4>
       <canvas id="canvas4" width="400" height="300"> </canvas>
       <script>
         var c=document.getElementById("canvas4");
@@ -345,23 +348,24 @@
         ctx.font="bold 22px Tahoma";
         ctx.textAlign="start";
         ctx.fillText("start", 10, 30);
-      </script> <hr>
+      </script> <hr width="15%" align="Left">
 
       <!-- Translate script -->
+      <h4 class="subtitles"> Translate script </h4>
       <canvas id="canvas5" width="400" height="300"> </canvas>
       <script>
         var c=document.getElementById("canvas5");
         var ctx=c.getContext("2d");
         ctx.font="bold 22px Tahoma";
-        ctx.textAlign="start";
-        ctx.fillText("start", 10, 30);
+        ctx.textAlign="start2";
+        ctx.fillText("start2", 10, 30);
           ctx.translate(100, 150);
         ctx.fillText("after translate", 10, 30);
-      </script> <hr>
+      </script> <hr width="15%" align="Left">
 
       
       <!-- Rotate script --> 
-      <h3 class="subtitles"> Rotate script </h3>
+      <h4 class="subtitles"> Rotate script </h4>
       <canvas id="canvas6" width="400" height="300"> </canvas>
       <script>
         var c=document.getElementById("canvas6");
@@ -371,10 +375,10 @@
           ctx.rotate( (Math.PI / 180) * 25);  //rotate 25 degrees. (usa radianes, no grados)
         ctx.fillStyle = "#0000FF";
         ctx.fillRect(10,10, 100, 100);
-      </script> <hr>
+      </script> <hr width="15%" align="Left">
       
       <!-- Scale script -->
-      <h3 class="subtitles"> Scale script </h3>
+      <h4 class="subtitles"> Scale script </h4>
       <canvas id="canvas7" width="400" height="300"> </canvas>
       <script>
         var c=document.getElementById("canvas7");
@@ -386,9 +390,9 @@
     </div> <hr>
   
 
-    
+
     <!-- Forms -->
-    <h3 class="subtitles"> Forms </h3>
+    <h2 class="subtitles"> Forms </h2>
     <!-- https://www.sololearn.com/learning/1014/2216/4408/1 -->
     <div>
       <form autocomplete="off">
