@@ -50,6 +50,7 @@
       <li> < Section >  </li>
     </ul>
 
+    <!-- Modelos de contenido -->
     <h3 class="subtitles"> Modelos de contenido HTML5 </h3>
     <ul>
       <li> Metadata    </li> <!-- presentacion o comportamiento, en <head>
@@ -68,44 +69,30 @@
     <img src="https://api.sololearn.com/DownloadFile?id=2546" alt="" height="200px">
     
     <h3 class="subtitles"> Estructura de Pag </h3>
-    <img src="https://api.sololearn.com/DownloadFile?id=2471" alt="" height="200px">
-
-    <h3 class="subtitles"> < Header > </h3>
-    Definir un Encabezado <br>
-    En html4: <br>
-    < div id="header" > <br><br>
-
-    En html5: <br>
-    < header >
-
-    <h3 class="subtitles"> < Footer > </h3>
-    < footer > < /footer >
+    <img src="https://api.sololearn.com/DownloadFile?id=2471" alt="" height="300px">
 
 
-
-
-
-
-
-    <!-- Audio y Video -->
+    <!-- Audio -->
     <h3 class="subtitles"> Audio </h3>
-    <div>
-      <audio src="audio.mp3" controls>
-        Texto por si el navegador no soporta audio.
-      </audio>
-      <audio controls autoplay loop>
-        <source src="audio.mp3" type="audio/mp3"> <!-- type: mp3, ogg, wav -->
-      </audio>
-      <br>
+    <!-- type: mp3, ogg, wav -->
+    <audio src="audio.mp3" controls>
+      Texto por si el navegador no soporta audio.
+    </audio>
+    
+    <audio controls autoplay loop>
+      <source src="audio.mp3" type="audio/mp3"> 
+    </audio>
+    <br>
 
+    <!-- Video -->
     <h3 class="subtitles"> Video </h3>
+    <!-- type: mp4, webM, ogg -->
     <video controls autoplay loop>
-        <source src="video.mp4" type="video/mp4"> <!-- type: mp4, webM, ogg -->
-        <!-- <source src="video.ogg" type="video/ogg"> -->
-        Este navegador no soporta audio.
-      </video>
-    </div>
-    <hr>
+      <source src="video.mp4" type="video/mp4"> 
+      <!-- <source src="video.ogg" type="video/ogg"> -->
+      Este navegador no soporta audio.
+    </video> <hr>
+
 
     <!-- Barra de Progreso <progress> -->
     <h3 class="subtitles"> Barra de Progreso </h3>
@@ -113,93 +100,88 @@
     <hr>
 
     <!-- Almacenamiento (API) -->
-    <h3 class="subtitles"> Almacenamiento </h3>
+    <h3 class="subtitles"> Almacenamiento (API) </h3>
     <div>
-      <!--
-        html5:<Script>, html4(cookies) 
-        sessionStorage(): (se borra al cerrar el navegador del usuario)
-        localStorage():   (permanece en el disco del usuario sin expirar)
-      -->
+      <p>
+        sessionStorage(): se borra al cerrar el navegador del usuario <br>
+        localStorage(): permanece en el disco del usuario sin expirar <br> <br>
 
-      <script>
-        Guardar=  localStorage.SetItem("Clave1", "Valor1");
-        Cargar=   alert(localStorage.GetItem("Clave1"));
-        Borrar=   localStorage.removeItem("Clave1");
-        Limpiar=  localStorage.clear();
-      </script>
-    </div>
-    <hr>
+      <!-- < script> -->
+        Guardar=  localStorage.SetItem("Clave1", "Valor1"); <br>
+        Cargar=   localStorage.GetItem("Clave1")); <br>
+        Borrar=   localStorage.removeItem("Clave1"); <br>
+        Limpiar=  localStorage.clear(); <br>
+      <!-- < /script> -->
+      </p>
+    </div> <hr>
     
     <!-- Geo-Localizacion (API) -->
-    <h3 class="subtitles"> Geo-Localizacion </h3>
-    <script>
+    <h3 class="subtitles"> Geo-Localizacion (API) </h3>
+    <!-- <script> -->
       navigator.geolocation.getCurrentPosition();
-      /* parametros= ShowLocation, ErrorHandler, Options */
-    </script>
+      <!-- parametros: ShowLocation(obl), ErrorHandler(opc), Options(ops) -->
+    <!-- </script> -->
     <hr>
+
+
+
 
     <!-- Dragg & Drop (API) -->
-    <h3 class="subtitles"> Dragg & Drop </h3>
+    <h3 class="subtitles"> Dragg & Drop (API) </h3>
     <div>
-      <img draggable="true" alt=""/>
+    <!-- <img draggable="true" src="../Imgs/cat1.png" alt="" height="100px"/> -->
+    <!-- https://www.sololearn.com/learning/1014/2214/4405/1 -->
 
-      <!-- Example Drag and Drop
-      
-        <script>
-          function allowDrop(ev) {
-            ev.preventDefault();
-          }
+    <script>
+      function allowDrop(ev) {
+        ev.preventDefault();
+      }
 
-          function drag(ev) {
-            ev.dataTransfer.setData("text", ev.target.id);
-          }
+      function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+      }
 
-          function drop(ev) {
-            ev.preventDefault();
-            var data = ev.dataTransfer.getData("text");
-            ev.target.appendChild(document.getElementById(data));
-          }
-        </script>
-        </head>
-        <body>
-          <div id="box" ondrop="drop(event)"
-          ondragover="allowDrop(event)"
-          style="border:1px solid black; 
-          width:200px; height:200px"></div>
+      function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+      }
+    </script>
+    <div id="box" ondrop="drop(event)"
+      ondragover="allowDrop(event)"
+      style="border:1px solid black; 
+      width:200px; height:200px"></div>
 
-          <img id="image" src="sample.jpg" draggable="true"
-          ondragstart="drag(event)" width="150" height="50" alt="" />
-        </body>
-
-      -->
-    </div>
-    <hr>
+      <img id="image" src="../Imgs/cat1.png" draggable="true"
+      ondragstart="drag(event)" width="200" height="200" alt="" />
+    </div><hr>
 
     <!-- Canvas Vs SVG (diferencias) -->
-  <!--
-    Canvas:
-    - Los elementos se dibujan programáticamente
-    - Los dibujos se realizan con píxeles
-    - Las animaciones no están incorporadas
-    - Alto rendimiento para operaciones de dibujo basadas en píxeles
-    - Dependiente de la Resolución
-    - No hay soporte para controladores de eventos
-    - Puede guardar la imagen resultante como .png o .jpg
-    - Muy adecuado para los juegos de gráficos intensivos
+    <!--
+      Canvas:
+      - Los elementos se dibujan programáticamente
+      - Los dibujos se realizan con píxeles
+      - Las animaciones no están incorporadas
+      - Alto rendimiento para operaciones de dibujo basadas en píxeles
+      - Dependiente de la Resolución
+      - No hay soporte para controladores de eventos
+      - Puede guardar la imagen resultante como .png o .jpg
+      - Muy adecuado para los juegos de gráficos intensivos
 
-    SVG:
-    - Los elementos son parte del DOM de la página (Modelo de Objetos del Documento)
-    - El dibujo se hace con vectores
-    - Efectos, como animaciones son incorporadas
-    - Basado en sintaxis XML estándar, que provee mejor accesibilidad.
-    - Independiente de la Resolución
-    - Soporte para manejadores de eventos
-    - No apto para aplicaciones de juegos
-    - Es mejor para aplicaciones con áreas grandes de renderización (por ejemplo, Google Maps)
-  -->
+      SVG:
+      - Los elementos son parte del DOM de la página (Modelo de Objetos del Documento)
+      - El dibujo se hace con vectores
+      - Efectos, como animaciones son incorporadas
+      - Basado en sintaxis XML estándar, que provee mejor accesibilidad.
+      - Independiente de la Resolución
+      - Soporte para manejadores de eventos
+      - No apto para aplicaciones de juegos
+      - Es mejor para aplicaciones con áreas grandes de renderización (por ejemplo, Google Maps)
+    -->
 
     <!-- SVG (Graficos Vectorales Escaleables) -->
     <h3 class="subtitles"> SVG (Graficos Vectorales Escaleables) </h3>
+    <!-- https://www.sololearn.com/learning/1014/2200/4369/1 -->
     <div>
       <!-- Imagen -->
       <img src="image.svg" alt="" height="1"> <!-- SVG define imgs basadas en vectores en formato XML -->
@@ -294,34 +276,40 @@
     
     </div> <hr>
     
+
+
     <!-- Canvas (JS)-->
-    <h3 class="subtitles"> Canvas JS </h3>
+    <h3 class="subtitles"> < Canvas > (JS) </h3>
     <div>
-      <!-- 
-        Canvas es solo contenedor grafico, para mostrar requiere JavaScript.
-        el Id es necesario para identificarlo en JS.
-        x0 y0: comienza arriba izq.
-      -->
-      <canvas id="canvas1" width="200" height="100"></canvas>
-      <script>
-        var can = document.getElementById("canvas1");
-        var ctx = can.getcontext("2d");
-      </script>
+      Canvas es solo contenedor grafico (para mostrar requiere JavaScript) <br>
+      x0 y0: comienza arriba izq. <br><br>
+
+      <b>< canvas id="canvas1" width="200" height="100"> </ canvas> </b><br>
+      El Id es necesario para identificarlo en JS. <br><br>
+
+      <b>
+        < _script_ > <br>
+          var can = document.getElementById("canvas1"); <br>
+          var ctx = can.getcontext("2d"); <br>
+        < _script_ > <hr>
+      </b>
 
       <!-- fillRect(x, y, w, h) -->
+      <canvas id="canvas2" width="400" height="300"> </canvas> 
       <script>
-        var c=document.getElementById("canvas1");
-        var ctx=c.getContext("2d");
-        ctx.fillRect(20,20,100,100);/* w: ancho, h: alto */
-      </script>
+        var c = document.getElementById("canvas2");
+        var ctx = c.getContext("2d");
+        ctx.fillRect(20,20,100,100); /* w: ancho, h: alto */
+      </script> <hr>
 
       <!-- fillStyle(rbga) Gradiante -->
+      <canvas id="canvas3" width="400" height="300"> </canvas> 
       <script>
-        var canvas=document.getElementById("canvas1");
-        var ctx=canvas.getContext("2d");
-        ctx.fillStyle ="rgba(0, 200, 0, 1)";
+        var canvas = document.getElementById("canvas3");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "rgba(0, 200, 0, 1)";
         ctx.fillRect (36, 10, 22, 22);
-      </script>
+      </script> <hr>
 
       <!-- 
       Draw a Line
@@ -342,61 +330,66 @@
         fillText(text,x,y): Draws "filled" text on the canvas.
         strokeText(text,x,y): Draws text on the canvas (no fill).
       -->
-    </div><hr>
+    </div> <hr>
   
 
     <!-- Canvas Transform (JS) -->
     <h3 class="subtitles"> Canvas Transform JS </h3>
     <div>
-      <canvas id="canvas1" width="400" height="300"> </canvas>
-
+      
       <!-- Texto script -->
+      <canvas id="canvas4" width="400" height="300"> </canvas>
       <script>
-        var c=document.getElementById("canvas1");
+        var c=document.getElementById("canvas4");
         var ctx=c.getContext("2d");
         ctx.font="bold 22px Tahoma";
         ctx.textAlign="start";
         ctx.fillText("start", 10, 30);
-      </script>
+      </script> <hr>
 
       <!-- Translate script -->
+      <canvas id="canvas5" width="400" height="300"> </canvas>
       <script>
-        var c=document.getElementById("canvas1");
+        var c=document.getElementById("canvas5");
         var ctx=c.getContext("2d");
         ctx.font="bold 22px Tahoma";
         ctx.textAlign="start";
         ctx.fillText("start", 10, 30);
           ctx.translate(100, 150);
         ctx.fillText("after translate", 10, 30);
-      </script>
+      </script> <hr>
 
       
       <!-- Rotate script --> 
       <h3 class="subtitles"> Rotate script </h3>
+      <canvas id="canvas6" width="400" height="300"> </canvas>
       <script>
-        var c=document.getElementById("canvas1");
+        var c=document.getElementById("canvas6");
         var ctx=c.getContext("2d");
         ctx.fillStyle = "#FF0000";
         ctx.fillRect(10,10, 100, 100);
           ctx.rotate( (Math.PI / 180) * 25);  //rotate 25 degrees. (usa radianes, no grados)
         ctx.fillStyle = "#0000FF";
         ctx.fillRect(10,10, 100, 100);
-      </script>
+      </script> <hr>
       
       <!-- Scale script -->
       <h3 class="subtitles"> Scale script </h3>
+      <canvas id="canvas7" width="400" height="300"> </canvas>
       <script>
-        var c=document.getElementById("canvas1");
+        var c=document.getElementById("canvas7");
         var ctx=c.getContext("2d");
         ctx.font="bold 22px Tahoma";
           ctx.scale(1.5, 4);
           ctx.fillText("after scale", 0,20);
       </script>
-    </div>
-    <hr>
+    </div> <hr>
   
+
+    
     <!-- Forms -->
     <h3 class="subtitles"> Forms </h3>
+    <!-- https://www.sololearn.com/learning/1014/2216/4408/1 -->
     <div>
       <form autocomplete="off">
         <label for="name">Su nombre</label>
