@@ -14,213 +14,260 @@
       <h2 class="titles"> Basics </h2>
 
       <!-- Type selectors -->
-      <p class="numbers">1)</p>
-      <h1 class="selector">
-         <p>This is my first paragraph. 
-         </p>
-      </h1><hr>
-      
+      <div class="borders">
+         <p class="numbers"> 1) Type selectors</p>
+         <h1 class="selector"> <p>This is my first paragraph.</p> </h1>
+      </div>
 
       <!-- Id -->
-      <p class="numbers">2)</p>
-      <div id="intro">
-         <p>This paragraph is in the intro section.</p>
+      <div class="borders">
+         <p class="numbers"> 2) Id </p>
+         <div id="intro">
+            <p>This paragraph is in the intro section.</p>
+         </div>
+         <p> This paragraph is not in the intro section.</p> <hr>
       </div>
-      <p> This paragraph is not in the intro section.</p> <hr>
 
-      <!-- Descendant Selectors -->
-      <p class="numbers">3)</p>
-      <div id="intro">
-         <p class="first">This is a <em> paragraph</em>.</p>
-         <p> This is the second paragraph. </p>
+      <!-- Descendent Selectors -->
+      <div class="borders">
+         <p class="numbers"> 3) Descendent Selectors </p>
+         <div id="intro">
+            <p class="first">This is a <em> paragraph</em>.</p>
+            <p> This is the second paragraph. </p>
+         </div>
+         <p class="first"> This is not in the intro section.</p>
+         <p> The second paragraph is not in the intro section. </p>
       </div>
-      <p class="first"> This is not in the intro section.</p>
-      <p> The second paragraph is not in the intro section. </p>
-   </div><hr>
+   </div>
 
    <!-- (Text) -->
    <div class="borders">
       <h2 class="titles"> Text </h2>
+      
       <!-- Font-Family -->
-      <p class="numbers">4)</p>
-      <p class="serif">
-         This is a paragraph shown in serif font.
-      </p><hr>
+      <div class="borders">
+         <p class="numbers">4)</p>
+         <p class="serif">
+            This is a paragraph shown in serif font.
+         </p>
+      </div>
       
       <!-- Font-Style -->
-      <p class="numbers">5)</p>
-      <p class="italic">
-         This is a paragraph in italic style.
-      </p><hr>
+      <div class="borders">
+         <p class="numbers">5)</p>
+         <p class="italic">
+            This is a paragraph in italic style.
+         </p>
+      </div>
       
       <!-- Font-Weight -->
-      <p class="numbers">6)</p>
-      <p class="weight">
-         This is a paragraph in bolder.
-      </p><hr>
+      <div class="borders">
+         <p class="numbers">6)</p>
+         <p class="weight">
+            This is a paragraph in bolder.
+         </p>
+      </div>
 
       <!-- Font-Variant -->
-      <p class="numbers">7)</p>
-      <p class="variant">
-         This is a paragraph in small-caps.
-      </p><hr>
+      <div class="borders">
+         <p class="numbers">7)</p>
+         <p class="variant">
+            This is a paragraph in small-caps.
+         </p>
+      </div>
 
       <!-- Font-Color -->
-      <p class="numbers">8)</p>
-      <p class="colored">
-         This is a paragraph in red.
-      </p><hr>
+      <div class="borders">
+         <p class="numbers">8)</p>
+         <p class="colored">
+            This is a paragraph in red.
+         </p>
+      </div>
 
       <!-- Text-Align (Horizontal)-->
-      <p class="numbers">9)</p>
-      <p class="center">This paragraph is aligned to <strong>center.</strong></p><hr>
+      <div class="borders">
+         <p class="numbers">9)</p>
+         <p class="center">This paragraph is aligned to <strong>center.</strong></p>
+      </div>
 
       <!-- Text-Align (Vertical) -->
-      <p class="numbers">10)</p>
-      <table border="1" cellpadding="2" cellspacing="0" style="height: 150px;" ">
-         <tr>
-            <td class="top">Top</td>
-            <td class="middle">Middle</td>
-            <td class="bottom">Bottom</td>
-         </tr>
-      </table><hr>
+      <div class="borders">
+         <p class="numbers">10)</p>
+         <table border="1" cellpadding="2" cellspacing="0" style="height: 150px;" ">
+            <tr>
+               <td class="top">Top</td>
+               <td class="middle">Middle</td>
+               <td class="bottom">Bottom</td>
+            </tr>
+         </table>
+      </div>
 
       <!-- Text-Align Property (Vertical) -->
-      <p class="numbers">11)</p>
-      <p>This is an <span class="baseline">inline text</span> example.</p>
-      <p>This is a <span class="sub">sub line text</span> example.</p>
-      <p> This is a <span class="super">super line text</span> example.</p>
-      <p> This is a <span class="pixel">pixel</span> example.</p><hr>
+      <div class="borders">
+         <p class="numbers">11)</p>
+         <p>This is an <span class="baseline">inline text</span> example.</p>
+         <p>This is a <span class="sub">sub line text</span> example.</p>
+         <p> This is a <span class="super">super line text</span> example.</p>
+         <p> This is a <span class="pixel">pixel</span> example.</p>
+      </div>
 
       <!-- Text-Align Property Div (Vertical) -->
-      <p class="numbers">12)</p>
-      <div class="main">
-         <div class="paragraph">
-         This text is aligned to the middle
+      <div class="borders">
+         <p class="numbers">12)</p>
+         <div class="main">
+            <div class="paragraph">
+            This text is aligned to the middle
+            </div>
          </div>
-      </div><hr>
+      </div>
 
       <!-- Text-decoration -->
-      <p class="numbers">13)</p>
-      <p class="none">This is default style of the text (none).</p>
-      <p class="inherit">This text inherits the decoration of the parent.</p>
-      <p class="overline">This is overlined text.</p>
-      <p class="underline">This is underlined text.</p>
-      <p class="line-through">This is lined-through text.</p>
-      <p class="blink">This is blink text.</p> <hr>
+      <div class="borders">
+         <p class="numbers">13)</p>
+         <p class="none">This is default style of the text (none).</p>
+         <p class="inherit">This text inherits the decoration of the parent.</p>
+         <p class="overline">This is overlined text.</p>
+         <p class="underline">This is underlined text.</p>
+         <p class="line-through">This is lined-through text.</p>
+         <p class="blink">This is blink text.</p>
+      </div>
 
       <!-- text-indent (sangria) -->
-      <p class="numbers">14)</p>
-      <p class="indent">
-         This is an example of 
-         <strong>text-indent </strong> property. 
-         First line of our text is indented to the right in 60px. 
-         Besides pixels you can also use other measurement units, 
-         like pt, cm, em, etc. 
-      </p><hr>
+      <div class="borders">
+         <p class="numbers">14)</p>
+         <p class="indent">
+            This is an example of 
+            <strong>text-indent </strong> property. 
+            First line of our text is indented to the right in 60px. 
+            Besides pixels you can also use other measurement units, 
+            like pt, cm, em, etc. 
+         </p>
+      </div>
 
       <!-- Text-Sadow -->
-      <p class="numbers">15)</p>
-      <h1 class="shadow">Text-shadow example</h1>
-      <h1 class="blur">Text-shadow with blur effect</h1><hr>
-      
+      <div class="borders">
+         <p class="numbers">15)</p>
+         <h1 class="shadow">Text-shadow example</h1>
+         <h1 class="blur">Text-shadow with blur effect</h1>
+      </div>
+         
       <!-- Text-Transform -->
-      <p class="numbers">16)</p>
-      <p class="capitalize">
-         The value capitalize transforms the first 
-         character in each word to uppercase; 
-         all other characters remain unaffected.
-      </p> <hr>
+      <div class="borders">
+         <p class="numbers">16)</p>
+         <p class="capitalize">
+            The value capitalize transforms the first 
+            character in each word to uppercase; 
+            all other characters remain unaffected.
+         </p> 
+      </div>
       
       <!-- Text-Spacing -->
-      <p class="numbers">17)</p>
-      <div>
-         <p>This paragraph has no additional letter-spacing applied.</p>
-         
-         <!-- Letter-Spacing -->
-         <p class="lspacing">This paragraph is letter-spaced at 4px.</p>
-         
-         <!-- Word-Spacing -->
-         <p class="wspacing">This paragraph is word-spaced at 30px.</p>
+      <div class="borders">
+         <p class="numbers">17)</p>
+         <div>
+            <p>This paragraph has no additional letter-spacing applied.</p>
+            
+            <!-- Letter-Spacing -->
+            <p class="lspacing">This paragraph is letter-spaced at 4px.</p>
+            
+            <!-- Word-Spacing -->
+            <p class="wspacing">This paragraph is word-spaced at 30px.</p>
+         </div>
       </div>
 
       <!-- Wite-Spacing -->
-      <p class="numbers">18)</p>
-      <p class="witespacing">
-         This paragraph has         multiple spaces      and
-         a line break, but it will be ignored, as we used the nowrap value. 
-      </p><hr>
-   </div><hr>
+      <div class="borders">
+         <p class="numbers">18)</p>
+         <p class="witespacing">
+            This paragraph has         multiple spaces      and
+            a line break, but it will be ignored, as we used the nowrap value. 
+         </p><hr>
+      </div>
+   </div>
       
    <!-- (Properties) -->
    <div class="borders">
    <h2 class="titles"> Properties </h2>
-      <p class="numbers">19)</p>
-      <!-- Box-Model -->
-      <div>
-         <!-- Box-Border -->
-         <p class="border">This is an example of a solid border.</p> <hr>
 
-         <!-- Border-Style -->
-         <p class="none">This paragraph has no border.</p>
-         <p class="dotted">This is a dotted border.</p>
-         <p class="dashed">This is a dashed border.</p>
-         <p class="double">This is a double border.</p>
-         <p class="groove">This is a grooved border.</p>
-         <p class="ridge">This is a ridged border.</p>
-         <p class="inset">This is an inset border.</p>
-         <p class="outset">This is an outset border.</p>
-         <p class="hidden">This is a hidden border.</p><hr>
+      <div class="borders">
+         <p class="numbers"> 19) Box-Model </p>
+         <!-- Box-Model -->
+         <div>
+            <!-- Box-Border -->
+            <p class="border">This is an example of a solid border.</p> <hr>
 
-         <!-- Width & Height -->
-         <p class="numbers">20)</p>
-         <div class="wh">
-            The total width and height of this element is 100px.
-         </div><hr>
+            <!-- Border-Style -->
+            <p class="none">This paragraph has no border.</p>
+            <p class="dotted">This is a dotted border.</p>
+            <p class="dashed">This is a dashed border.</p>
+            <p class="double">This is a double border.</p>
+            <p class="groove">This is a grooved border.</p>
+            <p class="ridge">This is a ridged border.</p>
+            <p class="inset">This is an inset border.</p>
+            <p class="outset">This is an outset border.</p>
+            <p class="hidden">This is a hidden border.</p><hr>
+
+            <!-- Width & Height -->
+            <p class="numbers">20) Width & Height</p>
+            <div class="wh">
+               The total width and height of this element is 100px.
+            </div>
+         </div>
       </div>
-   
+      
+
       <!-- Background (BODY) -->
       <!-- 
-         Color
-         Image
-         Attachment 
+         /* Background-Body */
+         body{
+            background-color: beige;
+            background-image: url("../Imgs/TileW.jpg");
+            background-repeat: repeat; /* repeat-x, repeat-y, no-repeat, inherit */
+            background-attachment: fixed; /* fixel, scroll, inherit */
+         }
       -->
 
+
       <!-- Background-Image -->
-      <p class="numbers">21)</p>
-      <p class="background-image">background-image</p><hr>
+      <div class="borders">
+         <p class="numbers">21)  Background-Image </p>
+         <p class="background-image">background-image</p>
+      </div>
       
       <!-- List-Style-Type -->
-      <p class="numbers">22)</p>
-      <div>
-         <ol class="lower-alpha">
-            <li>Red</li>
-            <li>Green</li>
-            <li>Blue</li>
-         </ol>
-         <ul class="circle">
-            <li>Red</li>
-            <li>Green</li>
-            <li>Blue</li>
-         </ul>
-         <ul class="square">
-            <li>Red</li>
-            <li>Green</li>
-            <li>Blue</li>
-         </ul>
-         <ul class="uimage">
-            <li>Red</li>
-            <li>Green</li>
-            <li>Blue</li>
-         </ul>
-      </div><hr>
+      <div class="borders">
+         <p class="numbers">22) List-Style-Type </p>
+         <div>
+            <ol class="lower-alpha">
+               <li>Red</li>
+               <li>Green</li>
+               <li>Blue</li>
+            </ol>
+            <ul class="circle">
+               <li>Red</li>
+               <li>Green</li>
+               <li>Blue</li>
+            </ul>
+            <ul class="square">
+               <li>Red</li>
+               <li>Green</li>
+               <li>Blue</li>
+            </ul>
+            <ul class="uimage">
+               <li>Red</li>
+               <li>Green</li>
+               <li>Blue</li>
+            </ul>
+         </div>
+      </div>
+      
       
       <!-- Table -->
-      <div>
+      <div class="borders">
          <!-- Table-Style -->
-         <p class="numbers">23)</p>
+         <p class="numbers">23) Table</p>
          <table class="styled" border="1">
-            <caption>Caption-Side Text</caption>
+            <caption>"Caption-Side Text"</caption>
             <tr>
                <td>Red</td>
                <td>Green</td>
@@ -229,10 +276,10 @@
                <td>Blue</td>
                <td>Yellow</td>
             </tr>
-         </table><br><hr>
+         </table><br>
 
          <!-- Empty-Cells -->
-      <p class="numbers">24)</p>
+         <p class="numbers">24)</p>
          <table class="styled2" border="1">
             <tr>
                <td>HTML</td>
@@ -242,10 +289,10 @@
                <td>JavaScript</td>
                <td></td>
             </tr>
-         </table><hr>
+         </table>
 
          <!-- Table-Style -->
-      <p class="numbers">25)</p>
+         <p class="numbers">25)</p>
          <p>Table-layout is set to <strong>auto</strong></p>
          <table id="tablee" class="auto">
             <tr>
@@ -254,6 +301,7 @@
             </tr>
          </table>
 
+         <!-- Table-layout -->
          <p>Table-layout is set to <strong>fixed</strong></p>
          <table id="tablee" class="fixed">
             <tr>
@@ -261,22 +309,27 @@
                <td width="90%">20.000</td>
             </tr>
          </table>
-      </div><hr>
+      </div>
 
       <!-- Links -->
-      <p class="numbers">26)</p>
-      <p>
-         <a href="http://www.sololearn.com" target="_blank">
-         This link is hovered when we mouse over it
-         </a>
-      </p><hr>
+      <div class="borders"> 
+         <p class="numbers"> 26) Links </p>
+         <p>
+            <a href="http://www.sololearn.com" target="_blank">
+            This link is hovered when we mouse over it
+            </a>
+         </p>
+      </div>
 
       <!-- Mouse-Cursor -->
-      <p class="numbers">27)</p>
-      <span class="mousee">
-         Do you need help?......?
-      </span>
-   </div><hr>
+      <div class="borders"> 
+         <p class="numbers"> 27) Mouse-Cursor</p>
+         <span class="mousee">
+            Do you need help?<br>
+            The mouse-cursor here will be "?"
+         </span>
+      </div>
+   </div>
 
 
    <!-- Positioning And Layout -->
@@ -498,7 +551,7 @@
       <!-- Dergadados Lineales -->
       <p class="numbers">44) Dergadados Lineales</p>
       <table>
-         <td><div class="degradados"><p>lineal gradient</p></div></td>
+         <td><div class="degradados">lineal gradient</div></td>
          <td><div class="degradadosmulticolor"></div></td>
       </table>
       

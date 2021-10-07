@@ -3,7 +3,9 @@ h1{ /* selector */
 }
 
 .borders{
+  border-radius: 15px;
   padding: 10px;
+  margin: 10px;
   border: 1px solid grey;
   background-color: rgba(128, 128, 128, 0.227);
 } 
@@ -14,11 +16,20 @@ h1{ /* selector */
   text-transform: uppercase;
 }
 p.numbers{
-  height: 5px;
-  font-size: 25px;
+  /* height: 5px; */
+  font-size: 20px;
   font-weight: 1000;
+  text-decoration: underline;
 }
 
+
+/* Background-Body */
+body{
+  background-color: beige;
+  background-image: url("../Imgs/TileW.jpg");
+  background-repeat: repeat; /* repeat-x, repeat-y, no-repeat, inherit */
+  background-attachment: fixed; /* fixel, scroll, inherit */
+}
 /* -------------------------------------------*/
 /* -------------------------------------------*/
 
@@ -38,7 +49,7 @@ p.numbers{
     background-color: rgba(128, 128, 128, 0.356);
   }
 
-  /* 3) Descendant Selectors */
+  /* 3) Descendent Selectors */
   #intro .first em{
     color:pink;
     background-color: gray;
@@ -202,12 +213,12 @@ p.numbers{
   }
 
   /* Background-Body */
-  body{
-    background-color: beige;
-    background-image: url("../Imgs/TileW.jpg");
-    background-repeat: repeat; /* repeat-x, repeat-y, no-repeat, inherit */
-    background-attachment: fixed; /* fixel, scroll, inherit */
-  }
+  /* body{ */
+    /* background-color: beige; */
+    /* background-image: url("../Imgs/TileW.jpg"); */
+    /* background-repeat: repeat; repeat-x, repeat-y, no-repeat, inherit */
+    /* background-attachment: fixed; fixel, scroll, inherit */
+  /* } */
   
 
   /* 21) Background-Image */
