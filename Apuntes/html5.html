@@ -108,7 +108,7 @@
 
       <!-- < script> -->
         Guardar=  localStorage.SetItem("Clave1", "Valor1"); <br>
-        Cargar=   localStorage.GetItem("Clave1")); <br>
+        Cargar=   localStorage.GetItem("Clave1"); <br>
         Borrar=   localStorage.removeItem("Clave1"); <br>
         Limpiar=  localStorage.clear(); <br>
       <!-- < /script> -->
@@ -150,34 +150,36 @@
     <div id="box" ondrop="drop(event)"
       ondragover="allowDrop(event)"
       style="border:1px solid black; 
-      width:200px; height:200px"></div>
+      width:200px; height:200px">
+    </div>
 
-      <img id="image" src="../Imgs/cat1.png" draggable="true"
+    <img id="image" src="../Imgs/cat1.png" draggable="true"
       ondragstart="drag(event)" width="200" height="200" alt="" />
     </div><hr>
 
     <!-- Canvas Vs SVG (diferencias) -->
-    <!--
-      Canvas:
-      - Los elementos se dibujan programáticamente
-      - Los dibujos se realizan con píxeles
-      - Las animaciones no están incorporadas
-      - Alto rendimiento para operaciones de dibujo basadas en píxeles
-      - Dependiente de la Resolución
-      - No hay soporte para controladores de eventos
-      - Puede guardar la imagen resultante como .png o .jpg
-      - Muy adecuado para los juegos de gráficos intensivos
+    <h2 class="subtitles"> Canvas vs SVG </h2>
+    <p>
+      Canvas: <br>
+      - Los elementos se dibujan programáticamente  <br>
+      - Los dibujos se realizan con píxeles <br>
+      - Las animaciones no están incorporadas <br>
+      - Alto rendimiento para operaciones de dibujo basadas en píxeles <br>
+      - Dependiente de la Resolución <br>
+      - No hay soporte para controladores de eventos <br>
+      - Puede guardar la imagen resultante como .png o .jpg <br>
+      - Muy adecuado para los juegos de gráficos intensivos <br> <br>
 
-      SVG:
-      - Los elementos son parte del DOM de la página (Modelo de Objetos del Documento)
-      - El dibujo se hace con vectores
-      - Efectos, como animaciones son incorporadas
-      - Basado en sintaxis XML estándar, que provee mejor accesibilidad.
-      - Independiente de la Resolución
-      - Soporte para manejadores de eventos
-      - No apto para aplicaciones de juegos
-      - Es mejor para aplicaciones con áreas grandes de renderización (por ejemplo, Google Maps)
-    -->
+      SVG: <br>
+      - Los elementos son parte del DOM de la página (Modelo de Objetos del Documento) <br>
+      - El dibujo se hace con vectores <br>
+      - Efectos, como animaciones son incorporadas <br>
+      - Basado en sintaxis XML estándar, que provee mejor accesibilidad. <br>
+      - Independiente de la Resolución <br>
+      - Soporte para manejadores de eventos <br>
+      - No apto para aplicaciones de juegos <br>
+      - Es mejor para aplicaciones con áreas grandes de renderización (por ejemplo, Google Maps) <br>
+    </p>
 
     <!-- SVG (Graficos Vectorales Escaleables) -->
     <h2 class="subtitles"> SVG (Graficos Vectorales Escaleables) </h2>
