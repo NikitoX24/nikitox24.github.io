@@ -19,6 +19,9 @@
       text-decoration: underline;
       text-transform: uppercase;
     }
+    .subtitles{        
+      text-decoration: underline;
+    }
     p.numbers{
       height: 5px;
       font-size: 25px;
@@ -26,49 +29,64 @@
     }
   </style>
 
-  <h1 class="titles">JavaScript</h1>
-  <div class="borders">
-    <h3 class="titles"> Inicio de HTML </h3>
 
+
+
+
+
+<!-- <h6 class="subtitles"> Inicio de HTML </h6> -->
+  <h1 class="titles">JavaScript</h1>
+
+  <div class="borders">
+    <h2 class="titles"> DOM </h4>
     <!-- DOM -->
       <!-- cambiar valor a un elemento -->
+      <h4 class="subtitles"> cambiar valor a un elemento </h3>
       <div id="demo"> 
         id demo
       </div> <hr>
 
       <!-- cambiar valor a alguna clase -->
+      <h3 class="subtitles"> cambiar valor a una clase </h3>
       <div class="demo">
         class demo
       </div> <hr>
 
       <!-- cambiar valor a varios elementos -->
+      <h4 class="subtitles"> cambiar valor a varios elementos </h4>
       <p> hi </p>
       <p> hello </p>
       <p> hi x3 </p> <hr>
 
       <!-- propiedades y metodos -->
+      <h4 class="subtitles"> propiedades y metodos </h4>
       <div id = "demo2">
         <p>some text</p>
         <p>some other text</p>
       </div> <hr>
 
       <!-- modificar Atributos -->
+      <h4 class="subtitles"> modificar atributos </h4>
       <img id="myimg" src="../Imgs/Orange.png" alt="orange"  height="100"/> <br>
       <a href="http://www.example.com">Some link</a> <hr>
 
       <!-- modificar Estilos -->
+      <h4 class="subtitles"> modificar Estilos </h4>
       <div id="demo3" style="width:200px">some text</div> <hr>
 
       <!-- crear elementos -->
+      <h4 class="subtitles"> crear elementos </h4>
       <div id="demo4">some content</div> <hr>
 
       <!-- borrando elementos -->
+      <h4 class="subtitles"> borrando elementos </h4>
       <div id="demo5">
         <p id="p1">This is a paragraph.</p>
         <p id="p2">This is another paragraph.</p>
       </div> <hr>
 
       <!-- reemplazando elementos -->
+      <h4 class="subtitles"> reemplazando elementos </h4>
       <div id="demo6">
         <p id="p01">This is a paragraph.</p>
         <p id="p02">This is another paragraph.</p>
@@ -77,6 +95,7 @@
 
 
       <!-- creando animaciones -->
+      <h4 class="subtitles">  </h4>
       <div id="container">
         <div id="box"> </div>
       </div>
@@ -95,29 +114,39 @@
         }
       </style> <hr>
 
+
+
+
       <!-- eventos -->
       <!-- alerta en boton -->
+      <h4 class="subtitles"> alerta en boton </h4>
       <button onclick="show();"> Alert Button</button> <br> <br>
 
       <!-- hora en boton -->
+      <h4 class="subtitles"> hora en boton </h4>
       <button id="demo7"> Hour Button</button> <hr>
 
       <!-- OnLoad desde aqui -->
+      <h4 class="subtitles"> OnLoad desde aqui </h4>
       <body onload="doSomething()"></body> <hr>
 
       <!-- OnLoad desde js -->
+      <h4 class="subtitles"> OnLoad desde js </h4>
       <div id="onloadjs"> desde html </div> <hr>
 
       <!-- OnChange -->
+      <h4 class="subtitles"> OnChange </h4>
       <input type="text" id="name001" onchange="change()"> <hr>
 
 
 
 
       <!-- crear un evento manipulador -->
+      <h4 class="subtitles"> crear un evento manipulador </h4>
       <button id="demo8"> Evento de un solo uso </button> <hr>
 
       <!-- Image slider -->
+      <h4 class="subtitles"> Image slider </h4>
       <div>
         <button onclick="prev()"> Prev </button>
         <img id="slider" src="https://www.sololearn.com/uploads/slider/1.jpg" width="200px" height="100px"/>
@@ -125,6 +154,7 @@
       </div> <hr>
 
       <!-- validacion de formularios -->
+      <h4 class="subtitles"> validacion de formularios </h4>
       <form onsubmit="return validate()" method="post">
         Number: <input type="text" name="num1" id="num1" />
         <br />
@@ -133,38 +163,64 @@
         <input type="submit" value="Submit" />
       </form> <hr>
       
-      <!-- Hora por segundos -->
-      <div id="HoraPS">Hora:</div>
-
-
-
-
-
-
-
-
-
-
-
-    <!--ECMAScript  -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <h3 class="titles"> Final de HTML </h3>
+    
   </div><br>
 
-  <script type="text/javascript" src="JavaScript.js"></script>
+  <div class="borders">
+
+    <!--ECMAScript  -->
+    <h2 class="titles"> ECMAScript </h2>
+
+    <h4 class="subtitles"> Var & Let </h4>
+    <pre>
+    var a = 10;        // publica fuera del {}
+    let b = true;      // privada dentro del {}
+    const c = 'hello'; // privado y no se puede modificar 
+    </pre>
+
+    <h4 class="subtitles"> Literales de plantilla en ES6 </h4>
+    <pre> 
+    let nameLet2 = 'David';
+    let msgLet2 = `Welcome ${nameLet2}!`;
+    </pre>
+    
+    <h4 class="subtitles"> bucles For </h4>
+    <pre>
+    // For In
+    let objsV01 = {a:1, b:2, c:3};
+    for (let v in objsV01) {
+      document.write(v);
+    }
+
+    // For Of
+    let objsV02 = ["xL", "y", "z"];
+    for (let v of objsV02) {
+      document.write(v);
+    }
+    </pre>
+
+
+    <h4 class="subtitles"> Funciones/Metodos </h4>
+    <pre>
+    
+    </pre>
+
+
+
+
+
+
+
+  
+    <!-- Hora por segundos -->
+    <h4 class="subtitles"> Hora por segundos </h4>
+    <div id="HoraPS">Hora:</div>
+
+    <h4 class="subtitles">  </h4>
+
+
+    <script type="text/javascript" src="JavaScript.js"></script>
+  </div>
 
 </body>
 </html>

@@ -985,7 +985,7 @@ console.log("Hello from console!");
 
   // var & let
     var aa = 10; // publica fuera del {}
-    let bb = true;  //privada dentro del {}
+    let bb = true;  // privada dentro del {}
     const cc = 'hello'; // privado y no se puede modificar
   // 
 
@@ -993,12 +993,12 @@ console.log("Hello from console!");
     // antes 
     let nameLet = 'David';
     let msgLet = 'Welcome ' + nameLet + '!';
-    console.log(msgLet);
+    // console.log(msgLet);
 
     // Ahora
     let nameLet2 = 'David';
     let msgLet2 = `Welcome ${nameLet2}!`;
-    console.log(msgLet2);
+    // console.log(msgLet2);
   // 
 
   // For
@@ -1008,7 +1008,7 @@ console.log("Hello from console!");
       // document.write(v);
     }
 
-    // For On
+    // For Of
     let objsV02 = ["xL", "y", "z"];
     for (let v of objsV02) {
       // document.write(v);

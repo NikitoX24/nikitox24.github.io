@@ -7,3 +7,4 @@ function printTime() {
   horaPS.innerHTML = "Hora: " + hours+":"+mins+":"+secs;
 }
 setInterval(printTime, 1000);
+
