@@ -87,6 +87,8 @@ body{
   /* 9) Text Align (Horizontal)*/
   p.center {
     text-align: center; /* left, right, center, justify */
+    background-color: rgba(128, 128, 128, 0.398);
+
   }
 
   /* 10) Text Align (Vertical) */
@@ -117,7 +119,7 @@ body{
   /* 12) Text-Align Property Div (Vertical) */
   .main {
     height: 150px; width: 400px;
-    background-color: LightSkyBlue;
+    background-color: rgba(128, 128, 128, 0.398);
     display: inline-table;
   }
   .paragraph {
@@ -151,11 +153,11 @@ body{
   }
 
   /* 15) Text-Sadow */
-  h1.shadow{
+  h1.shadowT{
     text-shadow: 5px 2px 4px grey; /* (x, y, blur radius, color) Se puede poner mas de una sombra separandola con coma */
   }
-  h1.blur{
-    text-shadow: rgba(0, 0, 255, 1) -1px -2px 0.5em; /* Internet Explorer 9 and earlier do not support the text-shadow property. */
+  h1.blurT{
+    text-shadow: rgba(0, 0, 255, 1) -1px -1px 0.3em; /* Internet Explorer 9 and earlier do not support the text-shadow property. */
   }
 
   /* 16)Text-Transform */
