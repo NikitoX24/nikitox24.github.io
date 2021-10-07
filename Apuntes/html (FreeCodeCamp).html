@@ -1,35 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-AR">
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> FreeCodeCamp </title>
 </head>
+
 <body bgcolor="#EEF">
+
+  <style>
+    h2 {
+      color: red;
+    }
+  </style>
+
   <main>
+
     <!-- Titulo h1-h6 -->
-    <h1>Titulo de la pagina</h1>
-    <h2>
-      <font color="#"> Encabezado Blanco</font>
-    </h2>
+    <h1> CatPhotoApp </h1>
+    <h2 style="color: blue;"> CatPhotoApp (Inline)</h2>
+    <h2> CatPhotoApp (bloque)</h2>
+    <!-- <h2><font color="#"> Encabezado Blanco </font></h2> -->
 
-    <!-- Imagen desde Link -->
-    <a href="#">
-      <img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat." width=100px>
-    </a>
-
-    <!-- Imagen desde Folder -->
-    <img src="imgs/cat1.png" width=150px border="1px" alt="cat1">
+    <!-- Imagen con Link -->
+    <a href="https://bit.ly/fcc-relaxing-cat">
+      <img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat." border="1px" width=200px>
+    </a> <br>
 
     <!-- Link Interno -->
     <p>
       Link Interno a
-      <a href="htmlTest.html">htmlTest.html </a>
+      <a href="../Otros/Test.html"> Test.html </a>
     </p>
 
     <!-- Link Externo -->
     <p>
       Link Externo a
-      <a target="_blank" href="https://www.google.com">Google</a>
+      <a target="_blank" href="https://www.google.com"> Google </a>
     </p>
+
+    <!-- Lista desordenada -->
+    <p>Lista Desordenada</p>
+    <ul>
+      <li>Rojo</li>
+      <li>Azul</li>
+      <li>Verde</li>
+    </ul>
+    <!-- Lista ordenada -->
+    <p>Lista Ordenada</p>
+    <ol>
+      <li>Rojo</li>
+      <li>Azul</li>
+      <li>Verde</li>
+    </ol>
+
+    <!-- Formulario  (recolecta info del user) Al enviar es procesados en un servidor usando PHP -->
+    <form action="https://freecatphotoapp.com/submit-cat-photo" id="cat-photo-form">
+      <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+      <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
+      <label><input type="checkbox" name="personality" checked> Loving</label>
+      <label><input type="checkbox" name="personality"> Lazy</label>
+      <label><input type="checkbox" name="personality"> Energetic</label><br>
+
+      <input type="text" placeholder="cat photo URL" required>
+      <button type="submit">Submit</button>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- ID -->
     <h1 id="cat-photo-element">CatPhotoApp</h1>
@@ -67,20 +114,6 @@
       <del> borrado </del>
     </p>
 
-    <!-- Lista desordenada -->
-    <p>Lista Desordenada</p>
-    <ul>
-      <li>Rojo</li>
-      <li>Azul</li>
-      <li>Verde</li>
-    </ul>
-    <!-- Lista ordenada -->
-    <p>Lista Ordenada</p>
-    <ol>
-      <li>Rojo</li>
-      <li>Azul</li>
-      <li>Verde</li>
-    </ol>
     <!-- Tabla -->
     <table border="2">
       <tr>
@@ -152,54 +185,41 @@
     <!-- Formularios -->
     <div> 
 
-    <!--
-      formulario (recolecta info del user).
+      <!--
+        formulario (recolecta info del user).
 
-      "Action" para apuntar a una página web que cargará despues de que el user envie el formulario.
-      Usualmente, el formulario es enciado a una pagina web en un servidor web.
-    -->
-    <form action="URL" method="GET">
-      <!-- formularios visibles en la direccion de la pag-->
-    <form action="URL" method="POST">
-        <!-- formulatio esta actualizando datos, o contraseñas (ofrece mejor seguridad) -->
-        <!-- Entrada de Usuario -->
-    <form action="URL">
-      <input type="text" name="usuario"> <br>
-      <input type="password" name="contraseña">
-    </form>
-    <!--
-    Entrada de User 
-    (Type) text, password, radio, checkbox, URL, submit, etc. 
-    -->
-    <input type="radio" name="gender" value="male"> Masculino <br>
-    <input type="radio" name="gender" value="female"> Femenino <br>
-    <input type="submit" value="Enviar">
+        "Action" para apuntar a una página web que cargará despues de que el user envie el formulario.
+        Usualmente, el formulario es enciado a una pagina web en un servidor web.
+      -->
+      <form action="URL" method="GET">
+        <!-- formularios visibles en la direccion de la pag-->
+      <form action="URL" method="POST">
+          <!-- formulatio esta actualizando datos, o contraseñas (ofrece mejor seguridad) -->
+          <!-- Entrada de Usuario -->
+      <form action="URL">
+        <input type="text" name="usuario"> <br>
+        <input type="password" name="contraseña">
+      </form>
+      <!--
+      Entrada de User 
+      (Type) text, password, radio, checkbox, URL, submit, etc. 
+      -->
+      <input type="radio" name="gender" value="male"> Masculino <br>
+      <input type="radio" name="gender" value="female"> Femenino <br>
+      <input type="submit" value="Enviar">
 
-    <!-- Enviar Datos -->
-    <h2><span>Contact Me</span></h3>
-    <form>
-      <input type="text" name="name"> <br>
-      <input type="email" name="email"> <br>
-      <textarea name="message"></textarea> <br>
-      <input type="submit" value="SEND" class="submit">
-    </form>
+      <!-- Enviar Datos -->
+      <h2><span>Contact Me</span></h3>
+      <form>
+        <input type="text" name="name"> <br>
+        <input type="email" name="email"> <br>
+        <textarea name="message"></textarea> <br>
+        <input type="submit" value="SEND" class="submit">
+      </form>
 
-    <hr>
+      <hr>
 
-    <!-- 
-    Formulario  (FreeCodeCamp)
-    (recolecta info del user) 
-    Al terminar se envian para ser procesados en un servidor usando el lenguaje de programacion PHP -->
-    <form action="https://freecatphotoapp.com/submit-cat-photo" id="cat-photo-form">
-      <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
-      <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
-      <label><input type="checkbox" name="personality" checked> Loving</label>
-      <label><input type="checkbox" name="personality"> Lazy</label>
-      <label><input type="checkbox" name="personality"> Energetic</label><br>
-
-      <input type="text" placeholder="cat photo URL" required>
-      <button type="submit">Submit</button>
-    </form>
+      
     <hr>
     </div>
 
@@ -230,12 +250,9 @@
 
   </main>
 
-  <script>
-    /*
-    setTimeout("location.reload(true);", 3000);
-    */
-  </script>
 
 </body>
-
 </html>
+
+
+  

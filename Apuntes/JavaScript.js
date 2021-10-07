@@ -463,17 +463,15 @@ console.log("Hello from console!");
   // 
 
   // Imprimir Hora actual cada segundo
-    /*
     function printTime() {
       var d = new Date();
       var hours = d.getHours();
       var mins = d.getMinutes();
       var secs = d.getSeconds();
-      document.body.innerHTML = hours+":"+mins+":"+secs;
-      // La propiedad "innerHTML" establece o devuelve el contenido HTML de un elemento, en este caso "body".
+      var horaPS = document.getElementById("HoraPS");
+      horaPS.innerHTML = "Hora: " + hours+":"+mins+":"+secs;
     }
     setInterval(printTime, 1000);
-    */
   // 
 // 
 
