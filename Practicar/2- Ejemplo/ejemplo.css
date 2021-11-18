@@ -12,7 +12,7 @@ h1{
 }
 
 h2{
-  /* clear: both; */
+  clear: both;
   padding: 0.2rem 0.5rem;
   background-color: gray;
   color: white;
@@ -23,77 +23,26 @@ img{
   float: left;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-@import url("mclibre-pie.css");
-
-body {
-  margin: 10px 10%;
-  background-color: lightgray;
-  font-family: sans-serif;
-  text-align: justify;
-}
-
-h1 {
-  font-size: 300%;
-  letter-spacing: 10px;
-  text-align: center;
-}
-
-h2 {
-  clear: both;
-  padding: 0.2rem 0.5rem;
-  background-color: gray;
-  color: white;
-  font-size: 200%;
-}
-
-p {
+p{
   margin-right: 10%;
   margin-left: 10%;
   text-indent: 2rem;
 }
 
-img {
+
+img{
   float: left;
   margin: 0 10px 10px 0;
 }
 
-strong {
+em{
+  color: red;
+}
+strong{
   background-color: white;
 }
 
-em {
-  color: red;
-}
-*/
+
+
+
+
