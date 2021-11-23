@@ -6,14 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> HTML5 </title>
 </head>
+
 <body>
   
   <style>
-    .borders{
-      padding: 10px;
-      border: 1px solid grey;
-      background-color: rgba(128, 128, 128, 0.227);
-    } 
     .titles{
       text-shadow: 5px 2px 4px grey;
       text-align: center;
@@ -28,111 +24,198 @@
       font-size: 25px;
       font-weight: 1000;
     }
+    ul{
+      margin-top:3px;margin-bottom:6px;padding-left:1.5em;
+    }
+    li{
+      clear:both;margin-top:5px;
+      /* width:120px; display:inline; float:left; */
+    }
+    li.h{
+      width:120px; display:inline; float:left;
+    }
+    section{
+      border-radius: 15px;
+      padding: 10px;
+      margin: 10px;
+      border: 1px solid grey;
+      background-color: rgba(128, 128, 128, 0.227);
+    }
+    @media screen and (max-width: 768px){
+      html{margin-left:40px;margin-right:5px;}
+      nav{position:fixed;top:0;left:0;width:50px;padding-left:0.2em;font-size:80%;text-align:left;}
+      nav p{margin:5px 0 0;font-size:350%;}
+      nav a{color:black;text-decoration:none;}
+      nav div.toc{display:none;}
+    }
+    @media screen and (min-width: 768px){
+      html{
+        margin-left:12em;margin-right:1em;
+      }
+      nav{
+        position:fixed;top:0;left:0;width:14.5em;padding-left:0.2em;font-size:80%;text-align:left;
+      }
+      nav h2{
+        margin:0;padding:1em 0 0;font-size:110%;text-align:left;
+      }
+      nav p{
+        margin:5px 0 0;font-size:350%;
+      }
+      nav a{
+        color:black;text-decoration:none;
+      }
+      nav ul{
+        margin-top:0;padding-left:1em;
+      }
+      nav ul li{
+        margin:0 0 0.1em 0.1em;
+      }
+    }
+    @media print{
+      html{
+        margin-left:5px;margin-right:0;margin-top:0;
+      }
+      nav{
+        display:none;
+      }
+    }
   </style>
 
+  <nav>
+    <p>
+      <a href="../index.html"><img src="../imgs/n.png" alt="Home" title="Ir a página de inicio" width="50" height="50"></a>
+      <a href="#"><img src="../imgs/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36"></a>
+    </p>
+
+    <div class="toc">
+      <h2>Guia</h2>
+
+      <ul>
+        <li><a href="#Elementos nuevos de HTML5">Elementos nuevos de HTML5</a></li>
+        <li><a href="#Modelos de contenido HTML5">Modelos de contenido HTML5</a></li>
+        <li><a href="#Estructura de Pag">Estructura de Pag</a></li>
+        <li><a href="#Audio">Audio</a></li>
+        <li><a href="#Video">Video</a></li>
+        <li><a href="#Almacenamiento (API)">Almacenamiento (API)</a></li>
+        <li><a href="#Geo-Localizacion (API)">Geo-Localizacion (API)</a></li>
+        <li><a href="#Dragg & Drop (API)">Dragg & Drop (API)</a></li>
+        <li><a href="#Canvas Vs SVG">Canvas & SVG (diferencias)</a></li>
+        <li><a href="#SVG (Graficos Vectorales Escaleables)">SVG (Graficos Vectorales Escaleables)</a></li>
+        <li><a href="#Canvas (JS)">Canvas (JS)</a></li>
+        <li><a href="#Canvas Transform (JS)">Canvas Transform (JS)</a></li>
+        <li><a href="#Forms">Forms</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  
   <h1 class="titles"> HTML5 </h1>
-  <div class="borders">
-    <h3 class="subtitles"> Elementos nuevos de HTML5 </h3>
-    <ul>
-      <li> < Article > </li>
-      <li> < Aside >    </li>
-      <li> < Audio >    </li>
-      <li> < Video >    </li>
-      <li> < Canvas >   </li>
-      <li> < Datalist > </li>
-      <li> < Detailst > </li>
-      <li> < Embed >    </li>
-      <li> < Footer >   </li>
-      <li> < Header >   </li>
-      <li> < Nav >      </li>
-      <li> < Output >   </li>
-      <li> < Progress > </li>
-      <li> < Section >  </li>
-    </ul>
 
-    <!-- Modelos de contenido -->
-    <h3 class="subtitles"> Modelos de contenido HTML5 </h3>
-    <ul>
-      <li> Metadata    </li> <!-- presentacion o comportamiento, en <head>
-      <base>, <link>, <meta>, <noscript>, <script>, <style>, <title>. -->
-      <li> Embledded   </li> <!-- import resource
-      <audio>, <video>, <canvas>, <iframe>, <img>, <math>, <object>, <svg>. -->
-      <li> Interactive </li> <!-- 
-      <a>, <audio>, <video>, <button>, <detalist>, <embed>, <iframe>, <img>, <input>, <label>, <object>, <select>, <textarea>. -->
-      <li> Eading      </li> <!-- encabezado:  
-      <h1>...<h6>, <hgroup>. -->
-      <li> Phrasing    </li> <!-- Expresion, lo mismo de html4
-      <img>, <span>, <strong>, <label>, <br>, <small>, <sub>. -->
-      <li> Flow        </li> <!-- contirne la mayoria de elementos html5. -->
-      <li> Sectioning  </li> <!-- <article>, <aside>, <nav>, <section>. -->
-    </ul>
-    <img src="https://api.sololearn.com/DownloadFile?id=2546" alt="" height="200px">
-    
-    <h3 class="subtitles"> Estructura de Pag </h3>
-    <img src="https://api.sololearn.com/DownloadFile?id=2471" alt="" height="300px">
+    <section id="Elementos nuevos de HTML5">
+      <h3 class="subtitles"> Elementos nuevos de HTML5 </h3>
+      <ul>
+        <li> < Article > </li>
+        <li> < Aside >    </li>
+        <li> < Audio >    </li>
+        <li> < Video >    </li>
+        <li> < Canvas >   </li>
+        <li> < Datalist > </li>
+        <li> < Detailst > </li>
+        <li> < Embed >    </li>
+        <li> < Footer >   </li>
+        <li> < Header >   </li>
+        <li> < Nav >      </li>
+        <li> < Output >   </li>
+        <li> < Progress > </li>
+        <li> < Section >  </li>
+      </ul>
+    </section>
 
+    <section id="Modelos de contenido HTML5">
+      <h3 class="subtitles"> Modelos de contenido HTML5 </h3>
+      <ul>
+        <li> Metadata    </li> <!-- presentacion o comportamiento, en <head>
+        <base>, <link>, <meta>, <noscript>, <script>, <style>, <title>. -->
+        <li> Embledded   </li> <!-- import resource
+        <audio>, <video>, <canvas>, <iframe>, <img>, <math>, <object>, <svg>. -->
+        <li> Interactive </li> <!-- 
+        <a>, <audio>, <video>, <button>, <detalist>, <embed>, <iframe>, <img>, <input>, <label>, <object>, <select>, <textarea>. -->
+        <li> Eading      </li> <!-- encabezado:  
+        <h1>...<h6>, <hgroup>. -->
+        <li> Phrasing    </li> <!-- Expresion, lo mismo de html4
+        <img>, <span>, <strong>, <label>, <br>, <small>, <sub>. -->
+        <li> Flow        </li> <!-- contirne la mayoria de elementos html5. -->
+        <li> Sectioning  </li> <!-- <article>, <aside>, <nav>, <section>. -->
+      </ul>
+      <img src="https://api.sololearn.com/DownloadFile?id=2546" alt="" height="200px">
+    </section>
+      
+    <section id="Estructura de Pag">
+      <h3 class="subtitles"> Estructura de Pag </h3>
+      <img src="https://api.sololearn.com/DownloadFile?id=2471" alt="" height="300px">
+    </section>
+      
+    <section id="Audio">
+      <h3 class="subtitles"> Audio </h3>
+      <!-- type: mp3, ogg, wav -->
+      <audio src="audio.mp3" controls>
+        Texto por si el navegador no soporta audio.
+      </audio>
+      
+      <audio controls autoplay loop>
+        <source src="audio.mp3" type="audio/mp3"> 
+      </audio>
+      <br>
+    </section>
 
-    <!-- Audio -->
-    <h3 class="subtitles"> Audio </h3>
-    <!-- type: mp3, ogg, wav -->
-    <audio src="audio.mp3" controls>
-      Texto por si el navegador no soporta audio.
-    </audio>
-    
-    <audio controls autoplay loop>
-      <source src="audio.mp3" type="audio/mp3"> 
-    </audio>
-    <br>
+    <section id="Video">
+      <h3 class="subtitles"> Video </h3>
+      <!-- type: mp4, webM, ogg -->
+      <video controls autoplay loop>
+        <source src="video.mp4" type="video/mp4"> 
+        <!-- <source src="video.ogg" type="video/ogg"> -->
+        Este navegador no soporta audio.
+      </video>
+    </section>
 
-    <!-- Video -->
-    <h3 class="subtitles"> Video </h3>
-    <!-- type: mp4, webM, ogg -->
-    <video controls autoplay loop>
-      <source src="video.mp4" type="video/mp4"> 
-      <!-- <source src="video.ogg" type="video/ogg"> -->
-      Este navegador no soporta audio.
-    </video> <hr>
-
-
-    <!-- Barra de Progreso <progress> -->
-    <h3 class="subtitles"> Barra de Progreso </h3>
-    <progress min="0" max="100" value="35"></progress>
-    <hr>
-
-    <!-- Almacenamiento (API) -->
-    <h3 class="subtitles"> Almacenamiento (API) </h3>
-    <div>
-      <p>
+    <section id="Barra de Progreso">
+      <h3 class="subtitles"> Barra de Progreso </h3>
+      <progress min="0" max="100" value="35"></progress>
+    </section>
+      
+    <section id="Almacenamiento (API)">
+      <!-- Almacenamiento (API) -->
+      <h3 class="subtitles"> Almacenamiento (API) </h3>
+      <div>
+        <p>
         sessionStorage(): se borra al cerrar el navegador del usuario <br>
         localStorage(): permanece en el disco del usuario sin expirar <br> <br>
-
-      <!-- < script> -->
+        
+        <!-- < script> -->
         Guardar=  localStorage.SetItem("Clave1", "Valor1"); <br>
         Cargar=   localStorage.GetItem("Clave1"); <br>
         Borrar=   localStorage.removeItem("Clave1"); <br>
         Limpiar=  localStorage.clear(); <br>
-      <!-- < /script> -->
+        <!-- < /script> -->
       </p>
-    </div> <hr>
+    </div>
+    </section>
     
-    <!-- Geo-Localizacion (API) -->
-    <h3 class="subtitles"> Geo-Localizacion (API) </h3>
-    <!-- <script> -->
-      navigator.geolocation.getCurrentPosition();
-      <!-- parametros: ShowLocation(obl), ErrorHandler(opc), Options(ops) -->
-    <!-- </script> -->
-    <hr>
+    <section id="Geo-Localizacion (API)">
+      <h3 class="subtitles"> Geo-Localizacion (API) </h3>
+      <!-- <script> -->
+        navigator.geolocation.getCurrentPosition();
+        <!-- parametros: ShowLocation(obl), ErrorHandler(opc), Options(ops) -->
+        <!-- </script> -->
+    </section>
 
-
-
-
-    <!-- Dragg & Drop (API) -->
-    <h3 class="subtitles"> Dragg & Drop (API) </h3>
-    <div>
-    <!-- <img draggable="true" src="../Imgs/cat1.png" alt="" height="100px"/> -->
-    <!-- https://www.sololearn.com/learning/1014/2214/4405/1 -->
-
-    <script>
+    <section id="Dragg & Drop (API)">
+      <h3 class="subtitles"> Dragg & Drop (API) </h3>
+      <div>
+        <!-- <img draggable="true" src="../Imgs/cat1.png" alt="" height="100px"/> -->
+        <!-- https://www.sololearn.com/learning/1014/2214/4405/1 -->
+        
+        <script>
       function allowDrop(ev) {
         ev.preventDefault();
       }
@@ -148,43 +231,45 @@
       }
     </script>
     <div id="box" ondrop="drop(event)"
-      ondragover="allowDrop(event)"
-      style="border:1px solid black; 
+    ondragover="allowDrop(event)"
+    style="border:1px solid black; 
       width:200px; height:200px">
     </div>
 
     <img id="image" src="../Imgs/cat1.png" draggable="true"
       ondragstart="drag(event)" width="200" height="200" alt="" />
-    </div><hr>
+    </div>
+    </section>
 
-    <!-- Canvas Vs SVG (diferencias) -->
-    <h2 class="subtitles"> Canvas vs SVG </h2>
-    <p>
-      Canvas: <br>
-      - Los elementos se dibujan programáticamente  <br>
-      - Los dibujos se realizan con píxeles <br>
-      - Las animaciones no están incorporadas <br>
-      - Alto rendimiento para operaciones de dibujo basadas en píxeles <br>
-      - Dependiente de la Resolución <br>
-      - No hay soporte para controladores de eventos <br>
-      - Puede guardar la imagen resultante como .png o .jpg <br>
-      - Muy adecuado para los juegos de gráficos intensivos <br> <br>
-
-      SVG: <br>
-      - Los elementos son parte del DOM de la página (Modelo de Objetos del Documento) <br>
-      - El dibujo se hace con vectores <br>
-      - Efectos, como animaciones son incorporadas <br>
-      - Basado en sintaxis XML estándar, que provee mejor accesibilidad. <br>
-      - Independiente de la Resolución <br>
-      - Soporte para manejadores de eventos <br>
-      - No apto para aplicaciones de juegos <br>
-      - Es mejor para aplicaciones con áreas grandes de renderización (por ejemplo, Google Maps) <br>
-    </p>
-
-    <!-- SVG (Graficos Vectorales Escaleables) -->
-    <h2 class="subtitles"> SVG (Graficos Vectorales Escaleables) </h2>
-    <!-- https://www.sololearn.com/learning/1014/2200/4369/1 -->
-    <div>
+    <section id="Canvas Vs SVG">
+      <h2 class="subtitles"> Canvas vs SVG </h2>
+      <p>
+        Canvas: <br>
+        - Los elementos se dibujan programáticamente  <br>
+        - Los dibujos se realizan con píxeles <br>
+        - Las animaciones no están incorporadas <br>
+        - Alto rendimiento para operaciones de dibujo basadas en píxeles <br>
+        - Dependiente de la Resolución <br>
+        - No hay soporte para controladores de eventos <br>
+        - Puede guardar la imagen resultante como .png o .jpg <br>
+        - Muy adecuado para los juegos de gráficos intensivos <br> <br>
+        
+        SVG: <br>
+        - Los elementos son parte del DOM de la página (Modelo de Objetos del Documento) <br>
+        - El dibujo se hace con vectores <br>
+        - Efectos, como animaciones son incorporadas <br>
+        - Basado en sintaxis XML estándar, que provee mejor accesibilidad. <br>
+        - Independiente de la Resolución <br>
+        - Soporte para manejadores de eventos <br>
+        - No apto para aplicaciones de juegos <br>
+        - Es mejor para aplicaciones con áreas grandes de renderización (por ejemplo, Google Maps) <br>
+      </p>
+    </section>
+    
+    <section id="SVG (Graficos Vectorales Escaleables)">
+      <h2 class="subtitles"> SVG (Graficos Vectorales Escaleables) </h2>
+      <!-- https://www.sololearn.com/learning/1014/2200/4369/1 -->
+      <div>
       <!-- Imagen -->
       <img src="image.svg" alt="" height="1"> <!-- SVG define imgs basadas en vectores en formato XML -->
       
@@ -209,13 +294,13 @@
         <line x1="10" y1="10" x2="200" y2="100"
           style="stroke:#000000; stroke-linecap:round;
             stroke-width:20">
-      </svg>
+          </svg>
       <hr>
       
       <!-- PolyLine -->
       <svg width="500" height="200">
         <polyline style="stroke-linejoin:miter;
-          stroke:black;
+        stroke:black;
           stroke-width:12; fill: none;"
           points="100 100, 150 150, 200 100" >
         </polyline>
@@ -227,16 +312,16 @@
         <ellipse cx="150" cy="150" rx="150" ry="50" style="fill:green" />
       </svg>
       <hr>
-
+      
       <!-- PolyGon -->
       <svg width="1000" height="200">
         <polygon points="100 100, 200 200, 300 0" 
               style="fill: green; stroke:black;" />
-      </svg>
+            </svg>
       <hr>
     
       <!-- Animaciones  <animate> -->
-      <svg width="500" height="150">
+        <svg width="500" height="150">
         <rect width="150" height="150" fill="orange">
           <animate attributeName="x" from="0" to="300"
           dur="3s" fill="freeze" repeatCount="100"/> 
@@ -275,20 +360,19 @@
         <svg width="500" height="100">
           <path d="M0 0 L0 100 L100 100 L100 0 Z" style="stroke:#000;  fill:none;" />
         </svg>
+        
+      </div>
+    </section>
     
-    </div> <hr>
-    
-
-
-    <!-- Canvas (JS)-->
-    <h2 class="subtitles"> < Canvas > (JS) </h2>
-    <div>
-      Canvas es solo contenedor grafico (para mostrar requiere JavaScript) <br>
+    <section id="Canvas (JS)">
+      <h2 class="subtitles"> < Canvas > (JS) </h2>
+      <div>
+        Canvas es solo contenedor grafico (para mostrar requiere JavaScript) <br>
       x0 y0: comienza arriba izq. <br><br>
-
+      
       <b>< canvas id="canvas1" width="200" height="100"> </ canvas> </b><br>
       El Id es necesario para identificarlo en JS. <br><br>
-
+      
       <b>
         < _script_ > <br>
           var can = document.getElementById("canvas1"); <br>
@@ -303,7 +387,7 @@
         var c = document.getElementById("canvas2");
         var ctx2 = c.getContext("2d");
         ctx2.fillRect(20,20,100,100); /* w: ancho, h: alto */
-      </script> <hr width="15%" align="Left">
+        </script> <hr width="15%" align="Left">
 
       <!-- fillStyle(rbga) Gradiante -->
       <h4 class="subtitles"> fillStyle(rbga) Gradiante </h4>
@@ -317,147 +401,141 @@
 
       <!-- 
       Draw a Line
-        moveTo(x,y): Defines the starting point of the line.
+      moveTo(x,y): Defines the starting point of the line.
         lineTo(x,y): Defines the ending point of the line.
 
-      Draw a Circle
+        Draw a Circle
         beginPath(): Starts the drawing.
         arc(x,y,r,start,stop): Sets the parameters of the circle.
         stroke(): Ends the drawing.
 
-      Gradients
+        Gradients
         createLinearGradient(x,y,x1,y1): Creates a linear gradient.
         createRadialGradient(x,y,r,x1,y1,r1): Creates a radial/circular gradient.
-
+        
       Drawing Text on the Canvas
         Font: Defines the font properties for the text.
         fillText(text,x,y): Draws "filled" text on the canvas.
         strokeText(text,x,y): Draws text on the canvas (no fill).
       -->
-    </div> <hr>
-  
-
-    <!-- Canvas Transform (JS) -->
-    <h2 class="subtitles"> Canvas Transform JS </h2>
-    <div>
-      
+    </div>
+    </section>
+    
+    <section id="Canvas Transform (JS)">
+      <h2 class="subtitles"> Canvas Transform JS </h2>
+      <div>
+        
       <!-- Texto script -->
-      <h4 class="subtitles"> Texto script </h4>
-      <canvas id="canvas4" width="400" height="300"> </canvas>
-      <script>
-        var c=document.getElementById("canvas4");
-        var ctx=c.getContext("2d");
-        ctx.font="bold 22px Tahoma";
-        ctx.textAlign="start";
-        ctx.fillText("start", 10, 30);
-      </script> <hr width="15%" align="Left">
+        <h4 class="subtitles"> Texto script </h4>
+        <canvas id="canvas4" width="400" height="300"> </canvas>
+        <script>
+          var c=document.getElementById("canvas4");
+          var ctx=c.getContext("2d");
+          ctx.font="bold 22px Tahoma";
+          ctx.textAlign="start";
+          ctx.fillText("start", 10, 30);
+        </script> <hr width="15%" align="Left">
 
       <!-- Translate script -->
-      <h4 class="subtitles"> Translate script </h4>
-      <canvas id="canvas5" width="400" height="300"> </canvas>
-      <script>
-        var c=document.getElementById("canvas5");
-        var ctx=c.getContext("2d");
-        ctx.font="bold 22px Tahoma";
-        ctx.textAlign="start2";
-        ctx.fillText("start2", 10, 30);
+        <h4 class="subtitles"> Translate script </h4>
+        <canvas id="canvas5" width="400" height="300"> </canvas>
+        <script>
+          var c=document.getElementById("canvas5");
+          var ctx=c.getContext("2d");
+          ctx.font="bold 22px Tahoma";
+          ctx.textAlign="start2";
+          ctx.fillText("start2", 10, 30);
           ctx.translate(100, 150);
-        ctx.fillText("after translate", 10, 30);
-      </script> <hr width="15%" align="Left">
+          ctx.fillText("after translate", 10, 30);
+        </script> <hr width="15%" align="Left">
 
-      
+
       <!-- Rotate script --> 
-      <h4 class="subtitles"> Rotate script </h4>
-      <canvas id="canvas6" width="400" height="300"> </canvas>
-      <script>
-        var c=document.getElementById("canvas6");
-        var ctx=c.getContext("2d");
-        ctx.fillStyle = "#FF0000";
-        ctx.fillRect(10,10, 100, 100);
-          ctx.rotate( (Math.PI / 180) * 25);  //rotate 25 degrees. (usa radianes, no grados)
-        ctx.fillStyle = "#0000FF";
-        ctx.fillRect(10,10, 100, 100);
-      </script> <hr width="15%" align="Left">
-      
+        <h4 class="subtitles"> Rotate script </h4>
+        <canvas id="canvas6" width="400" height="300"> </canvas>
+        <script>
+          var c=document.getElementById("canvas6");
+          var ctx=c.getContext("2d");
+          ctx.fillStyle = "#FF0000";
+          ctx.fillRect(10,10, 100, 100);
+            ctx.rotate( (Math.PI / 180) * 25);  //rotate 25 degrees. (usa radianes, no grados)
+          ctx.fillStyle = "#0000FF";
+          ctx.fillRect(10,10, 100, 100);
+        </script> <hr width="15%" align="Left">
+        
       <!-- Scale script -->
-      <h4 class="subtitles"> Scale script </h4>
-      <canvas id="canvas7" width="400" height="300"> </canvas>
-      <script>
-        var c=document.getElementById("canvas7");
-        var ctx=c.getContext("2d");
-        ctx.font="bold 22px Tahoma";
+        <h4 class="subtitles"> Scale script </h4>
+        <canvas id="canvas7" width="400" height="300"> </canvas>
+        <script>
+          var c=document.getElementById("canvas7");
+          var ctx=c.getContext("2d");
+          ctx.font="bold 22px Tahoma";
           ctx.scale(1.5, 4);
-          ctx.fillText("after scale", 0,20);
-      </script>
-    </div> <hr>
+            ctx.fillText("after scale", 0,20);
+        </script>
+      </div>
+    </section>
   
-
-
-    <!-- Forms -->
-    <h2 class="subtitles"> Forms </h2>
-    <!-- https://www.sololearn.com/learning/1014/2216/4408/1 -->
-    <div>
-      <form autocomplete="off">
-        <label for="name">Su nombre</label>
-        <input id="user" name="username" type="text"> <!-- autofocus, required  -->
+    <section id="Forms">
+      <h2 class="subtitles"> Forms </h2>
+      <div>
+        <form autocomplete="off">
+          <label for="name">Su nombre</label>
+          <input id="user" name="username" type="text"> <!-- autofocus, required  -->
         <input type="submit" value="Submit">
-      </form>
-      <!-- 
-      HTML5 added several new input types:
+        </form>
+        <!-- 
+        HTML5 added several new input types:
         - color
-        - date
-        - datetime
-        - datetime-local
-        - email
-        - month
-        - number
-        - range
-        - search
-        - tel
-        - time
-        - url
-        - week
+          - date
+          - datetime
+          - datetime-local
+          - email
+          - month
+          - number
+          - range
+          - search
+          - tel
+          - time
+          - url
+          - week
 
-      New input attributes in HTML5:
-        - autofocus
-        - form
-        - formaction
-        - formenctype
-        - formmethod
-        - formnovalidate
-        - formtarget
-        - height and width
-        - list
-        - min and max
-        - multiple
-        - pattern (regexp)
-        - placeholder
-        - required
-        - step
-      -->
-      
-      <!-- Buscar -->
-      <input id="mysearch" name="searchitem" type="search">
+          New input attributes in HTML5:
+          - autofocus
+          - form
+          - formaction
+          - formenctype
+          - formmethod
+          - formnovalidate
+          - formtarget
+          - height and width
+          - list
+          - min and max
+          - multiple
+          - pattern (regexp)
+          - placeholder
+          - required
+          - step
+        -->
+        
+        <!-- Buscar -->
+        <input id="mysearch" name="searchitem" type="search">
 
-      <!-- Opciones para seleccionar -->
-      <input id="car" type="text" list="colores">
-      <datalist id="colores">
-        <option value="Rojo">
-        <option value="Verde">
-        <option value="Amarillo">
-      </datalist>
+        <!-- Opciones para seleccionar -->
+        <input id="car" type="text" list="colores">
+        <datalist id="colores">
+          <option value="Rojo">
+          <option value="Verde">
+          <option value="Amarillo">
+        </datalist>
 
-      <!-- Otros tipos de entradas -->
-      <input id="email" name="email" type="email" placeholder="example@example.com"><br>
-      <input id="url" name="url" type="url" placeholder="example.com"><br>
-      <input id="tel" name="tel" type="tel" placeholder="555.555.1211">
-
-    </div>
-  </div><br>
-
-
-
-
-
+        <!-- Otros tipos de entradas -->
+        <input id="email" name="email" type="email" placeholder="example@example.com"><br>
+        <input id="url" name="url" type="url" placeholder="example.com"><br>
+        <input id="tel" name="tel" type="tel" placeholder="555.555.1211">
+        
+      </div>
+    </section>
+  
 </body>
 </html>
