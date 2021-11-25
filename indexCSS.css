@@ -5,7 +5,11 @@ body{
   background-attachment: scroll; /* fixel, scroll, inherit */
 }
 
-.centred {
+form{
+  text-align: center; /* left, right, center, justify */
+}
+
+.centred{
   text-align: center; /* left, right, center, justify */
 }
 
@@ -25,21 +29,20 @@ body{
   box-shadow: 10px 10px 5px 5px rgba(136, 136, 136, 0.207);
   background-color: rgba(0, 0, 0, 0.281);
   margin: auto;
-  
 }
 
 .bar{
   background-color: rgba(0, 0, 0, 0.563);
   height: 40px;
   width: 100%;
-  /* position: fixed; */
   position: relative;
   top: -20px;
-  /* left: 50px; */
 }
-
-
 
 .blur{
   filter: blur(5px);
+}
+
+summary{
+  text-align: center;
 }
