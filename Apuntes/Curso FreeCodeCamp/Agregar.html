@@ -1,0 +1,90 @@
+<style>
+p {
+    font-size: 16px;
+    line-height: 25px;
+}
+</style>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+</p>
+
+
+
+
+
+<!-- hsl() -->
+la 's' y 'l' del hsl() representan saturación y ligereza,
+
+
+
+
+<!--  -->
+linear-gradient() de la propiedad background
+background: linear-gradient(gradient_direction, color 1, color 2, color 3, ...);
+
+background: linear-gradient(90deg, red, yellow, rgb(204, 204, 255));
+90deg hace un gradiente horizontal (de izquierda a derecha) y 45deg hace un gradiente diagonal (de abajo a izquierda hacia arriba a la derecha)
+
+background: linear-gradient(35deg, #CCFFFF, #FFCCCC);
+
+<!--  -->
+div{
+    border-radius: 20px;
+    width: 70%;
+    height: 400px;
+    margin:  50 auto;
+    background: repeating-linear-gradient(
+      45deg,
+      yellow 0px,
+      yellow 40px,
+      black 40px,
+      black 80px
+    );
+  }
+
+
+<!--  transform: scale(tamaño) -->
+
+<style>
+  div {
+    width: 70%;
+    height: 100px;
+    margin:  50px auto;
+    background: linear-gradient(
+      53deg,
+      #ccfffc,
+      #ffcccf
+    );
+  }
+  div:hover{
+    transform: scale(1.1);
+  }
+
+
+</style>
+
+<div></div>
+
+
+
+<!--  -->
+<style>
+  div {
+    width: 70%;
+    height: 100px;
+    margin: 50px auto;
+  }
+  #top {
+    background-color: red;
+    transform: skewY(-10deg);
+  }
+  #bottom {
+    background-color: blue;
+    transform: skewX(24deg);
+  }
+</style>
+
+<div id="top"></div>
+<div id="bottom"></div>
+
+<!--  -->
