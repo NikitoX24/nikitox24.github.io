@@ -7,284 +7,273 @@
     <title>HTML CheatSheet</title>
 </head>
 <style>
+    body{
+        font-family: 'Brush Script MT', cursive;
+    }
     span{
         color: orangered;
     }
-    h2{
+    h1{
         text-align: center;
+        text-decoration: underline;
     }
 
     .round{
-      /* -webkit-border-radius: 24px; */
-      border-radius: 5%;
-      border: 1px solid grey;
-      padding: 2%;
-      width: 90%;
-      /* height: 700px; */
-      box-shadow: 10px 10px 5px 5px rgba(220, 220, 220, 0.522);
-      background-color: rgba(200, 211, 211, 0.336);
-      margin: auto;
-      /* flex-direction: row; */
-      /* justify-content: space-around; */
+        width: 50%;
+        /* height: 1050px; */
+        padding: 10px;
+        border: 1px solid grey;
+        /* margin: auto; */
+        /* position: relative; */
+        background-color: rgba(200, 211, 211, 0.336);
+        border-radius: 20px;
+        box-shadow: 10px 10px 5px 5px rgba(220, 220, 220, 0.522);
+        
     }
     .box{
-      color: black;
-      padding: 0.2rem 0.5rem;
-      width: 45%;
-      height: 20px;
-      background-color: rgba(255, 255, 255, 0.53);
-      /* float: left; */
-      border: 1px solid grey;
-      /* border-radius: 10px; */
-      margin: 2px;
+        color: black;
+        width: 300px;
+        height: 25px;
+        padding: 5px;
+        border: 1px solid grey;
+        margin: 5px;
+        background-color: rgba(255, 255, 255, 0.53);
+        box-shadow: 5px 5px 4px 1px rgba(155, 155, 155, 0.322);
+        /* position: absolute; */
     }
-    .box .boxizq{
-      /* color: black; */
-      /* padding: 0.2rem 0.5rem; */
-      /* width: 45%; */
-      /* height: 20px; */
-      /* background-color: rgba(255, 255, 255, 0.53); */
-      float: left;
-      /* border: 1px solid grey; */
-      /* border-radius: 10px; */
-      margin: 2px;
+    .boxizq{
+        float: left;
+        border-radius: 10px;
     }
-    .box .boxder{
-      /* color: black; */
-      /* padding: 0.2rem 0.5rem; */
-      /* width: 45%; */
-      /* height: 20px; */
-      /* background-color: rgba(255, 255, 255, 0.53); */
-      float: right;
-      /* border: 1px solid grey; */
-      /* border-radius: 3px; */
-      margin: 2px;
+    .boxder{
+        float: right; 
+        border-radius: 3px;
     }
 
 </style>
 <body>
 
-    <h2 > Input Types in <span> HTML </span> </h2>
+    <h1 > Input Types in <span> HTML </span> </h1>
     <br>
 
 
 
     <div class="round">
 
-    <div>
-        <div class="boxizq">
-            < input type="<span>text</span>" >
+        <div>
+            <div class="box boxizq">
+                < input type="<span>text</span>" >
+            </div>
+            <div class="box boxder">
+                <input type="text" placeholder="Texto">
+            </div>
         </div>
-        <div class="boxder">
-            <input type="text" placeholder="Texto">
-        </div>
-    </div>
 
-    <div>
-        <div class="boxizq">
-            < input type="<span>password</span>" >
-        </div>
-        <div class="boxder">
-            <input type="password" placeholder="********" >
-        </div>
-    </div><br>
+        <div>
+            <div class="box boxizq">
+                < input type="<span>password</span>" >
+            </div>
+            <div class="box boxder">
+                <input type="password" placeholder="********" >
+            </div>
+        </div><br>
 
-    <div>
-        <div class="boxizq">
-            < input type="<span>radio</span>" >
-        </div>
-        <div class="boxder">
-            <input type="radio" name="siono" value="no" />NO
-            <input type="radio" name="siono" value="yes" checked/>YES
-        </div>
-    </div><br>
+        <div>
+            <div class="box boxizq">
+                < input type="<span>radio</span>" >
+            </div>
+            <div class="box boxder">
+                <input type="radio" name="siono" value="no" />NO
+                <input type="radio" name="siono" value="yes" checked/>YES
+            </div>
+        </div><br>
 
-    <div>
-        <div class="boxizq">
-            < input type="<span>checkbox</span>" >
-        </div>
-        <div class="boxder">
-            <input type="checkbox" />
-            <input type="checkbox" checked/>
-            <input type="checkbox" />
-        </div>
-    </div><br>
+        <div>
+            <div class="box boxizq">
+                < input type="<span>checkbox</span>" >
+            </div>
+            <div class="box boxder">
+                <input type="checkbox" />
+                <input type="checkbox" checked/>
+                <input type="checkbox" />
+            </div>
+        </div><br>
 
-    <div>
-        <div class="boxizq">
-            < input type="<span>button</span>" >
-        </div>
-        <div class="boxder">
-            <input type="button" value="  Botón  ">
-        </div>
-    </div><br>
+        <div>
+            <div class="box boxizq">
+                < input type="<span>button</span>" >
+            </div>
+            <div class="box boxder">
+                <input type="button" value="  Botón  ">
+            </div>
+        </div><br>
 
-    <div>
-        <div class="boxizq">
-            < input type="<span>color</span>" >
-        </div>
-        <div class="boxder">
-            <input type="color" name="" id="" value="#00fff0" >
-        </div>
-    </div><br>
+        <div>
+            <div class="box boxizq">
+                < input type="<span>color</span>" >
+            </div>
+            <div class="box boxder">
+                <input type="color" name="" id="" value="#00fff0" >
+            </div>
+        </div><br>
 
-    <div>
-        <div class="boxizq">
-            < input type="<span>email</span>" >
-        </div>
-        <div class="boxder">
-            <input type="email" name="" id="" placeholder="ejemplo@hotmail.com">
-        </div>
-    </div><br>
+        <div>
+            <div class="box boxizq">
+                < input type="<span>email</span>" >
+            </div>
+            <div class="box boxder">
+                <input type="email" name="" id="" placeholder="ejemplo@hotmail.com">
+            </div>
+        </div><br>
 
-    <div>
-        <div class="boxizq">
-            < input type="<span>file</span>" >
-        </div>
-        <div class="boxder">
-            <input type="file" name="" id="">
-        </div>
-    </div><br>
+        <div>
+            <div class="box boxizq">
+                < input type="<span>file</span>" >
+            </div>
+            <div class="box boxder">
+                <input type="file" name="" id="">
+            </div>
+        </div><br>
 
-    <div>
-        <div class="boxizq">
-            < input type="<span>hidden</span>" >
-        </div>
-        <div class="boxder">
-            <input type="hidden" name="">
-        </div>
-    </div><br>
-
-
-    <div>
-        <div class="boxizq">
-            < input type="<span>image</span>" >
-        </div>
-        <div class="boxder">
-            <input type="image" src="../imgs/login-button.png" alt="Login" width="50px">
-        </div>
-    </div><br>
+        <div>
+            <div class="box boxizq">
+                < input type="<span>hidden</span>" >
+            </div>
+            <div class="box boxder">
+                <input type="hidden" name="">
+            </div>
+        </div><br>
 
 
-    <div>
-        <div class="boxizq">
-            < input type="<span>number</span>" >
-        </div>
-        <div class="boxder">
-            <input type="number" name="" id="" placeholder="123">
-        </div>
-    </div><br>
-
-    
-
-    <div>
-        <div class="boxizq">
-            < input type="<span>range</span>" >
-        </div>
-        <div class="boxder">
-            <input type="range" name="" id="">
-        </div>
-    </div><br>
+        <div>
+            <div class="box boxizq">
+                < input type="<span>image</span>" >
+            </div>
+            <div class="box boxder">
+                <input type="image" src="../imgs/login-button.png" alt="Login" width="50px">
+            </div>
+        </div><br>
 
 
-    <div>
-        <div class="boxizq">
-            < input type="<span>search</span>" >
-        </div>
-        <div class="boxder">
-            <input type="search" name="" id="" placeholder="Buscar">
-        </div>
-    </div><br>
+        <div>
+            <div class="box boxizq">
+                < input type="<span>number</span>" >
+            </div>
+            <div class="box boxder">
+                <input type="number" name="" id="" placeholder="123">
+            </div>
+        </div><br>
 
-    
-    <div>
-        <div class="boxizq">
-            < input type="<span>tel</span>" >
-        </div>
-        <div class="boxder">
-            <input type="tel" name="" id="" placeholder="123-456-789">
-        </div>
-    </div><br>
+        
 
-    
-    <div>
-        <div class="boxizq">
-            < input type="<span>time</span>" >
-        </div>
-        <div class="boxder">
-            <input type="time" name="" id="">
-        </div>
-    </div><br>
+        <div>
+            <div class="box boxizq">
+                < input type="<span>range</span>" >
+            </div>
+            <div class="box boxder">
+                <input type="range" name="" id="">
+            </div>
+        </div><br>
 
 
-    <div>
-        <div class="boxizq">
-            < input type="<span>date</span>" >
-        </div>
-        <div class="boxder">
-            <input type="date" name="" id="">
-        </div>
-    </div><br>
-    
+        <div>
+            <div class="box boxizq">
+                < input type="<span>search</span>" >
+            </div>
+            <div class="box boxder">
+                <input type="search" name="" id="" placeholder="Buscar">
+            </div>
+        </div><br>
 
-    <div>
-        <div class="boxizq">
-            < input type="<span>datetime-local</span>" >
-        </div>
-        <div class="boxder">
-            <input type="datetime-local" name="" id="">
-        </div>
-    </div><br>
+        
+        <div>
+            <div class="box boxizq">
+                < input type="<span>tel</span>" >
+            </div>
+            <div class="box boxder">
+                <input type="tel" name="" id="" placeholder="123-456-789">
+            </div>
+        </div><br>
 
-
-    <div>
-        <div class="boxizq">
-            < input type="<span>week</span>" >
-        </div>
-        <div class="boxder">
-            <input type="week" name="" id="">
-        </div>
-    </div><br>
-
-
-    <div>
-        <div class="boxizq">
-            < input type="<span>month</span>" >
-        </div>
-        <div class="boxder">
-            <input type="month" name="" id="">
-        </div>
-    </div><br>
+        
+        <div>
+            <div class="box boxizq">
+                < input type="<span>time</span>" >
+            </div>
+            <div class="box boxder">
+                <input type="time" name="" id="">
+            </div>
+        </div><br>
 
 
-    <div>
-        <div class="boxizq">
-            < input type="<span>url</span>" >
-        </div>
-        <div class="boxder">
-            <input type="url" name="" id="" placeholder="https://www.google.com">
-        </div>
-    </div><br>
+        <div>
+            <div class="box boxizq">
+                < input type="<span>date</span>" >
+            </div>
+            <div class="box boxder">
+                <input type="date" name="" id="">
+            </div>
+        </div><br>
+        
+
+        <div>
+            <div class="box boxizq">
+                < input type="<span>datetime-local</span>" >
+            </div>
+            <div class="box boxder">
+                <input type="datetime-local" name="" id="">
+            </div>
+        </div><br>
 
 
-    <div>
-        <div class="boxizq">
-            < input type="<span>submit</span>" >
-        </div>
-        <div class="boxder">
-            <input type="submit" name="" id="">
-        </div>
-    </div><br>
+        <div>
+            <div class="box boxizq">
+                < input type="<span>week</span>" >
+            </div>
+            <div class="box boxder">
+                <input type="week" name="" id="">
+            </div>
+        </div><br>
 
 
-    <div>
-        <div class="boxizq">
-            < input type="<span>reset</span>" >
-        </div>
-        <div class="boxder">
-            <input type="reset" name="" id="">
-        </div>
-    </div><br>
+        <div>
+            <div class="box boxizq">
+                < input type="<span>month</span>" >
+            </div>
+            <div class="box boxder">
+                <input type="month" name="" id="">
+            </div>
+        </div><br>
+
+
+        <div>
+            <div class="box boxizq">
+                < input type="<span>url</span>" >
+            </div>
+            <div class="box boxder">
+                <input type="url" name="" id="" placeholder="https://www.google.com">
+            </div>
+        </div><br>
+
+
+        <div>
+            <div class="box boxizq">
+                < input type="<span>submit</span>" >
+            </div>
+            <div class="box boxder">
+                <input type="submit" name="" id="">
+            </div>
+        </div><br>
+
+
+        <div>
+            <div class="box boxizq">
+                < input type="<span>reset</span>" >
+            </div>
+            <div class="box boxder">
+                <input type="reset" name="" id="">
+            </div>
+        </div><br>
 
 
     </div> <br>
@@ -296,7 +285,7 @@
 
 
 
-
+<h1>asdasdasd</h1>
 
 
 
