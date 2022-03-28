@@ -403,9 +403,9 @@ body{
   .divCirculo{
     width: 200px;
     height: 200px;
-    border-radius: 100px;
+    border-radius: 50%;
     background-color: green;
-    color: white;
+    text-align: center;
   }
 
   /* Box-Shadow */
