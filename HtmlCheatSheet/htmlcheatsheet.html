@@ -56,18 +56,22 @@
     .div{        
         min-height: 50px;
     }
+    summary{
+        color: lightslategray;
+    }
 
 </style>
 <body>
    
     <h1 class="titulo">HTML CheatSheet</h1>
-    
 
-    <details open>
+
+    <!-- HTML -->
+
+    <details >
         <summary style="font-size: 50px;"> HTML </summary>
             
-        <div class="round">
-                
+        <div class="round">  <!-- Encabezados -->
             <h2 style="text-decoration: underline;"> Encabezados < h1-h6 > </h2>
 
             <div style="border: 1px solid;">    
@@ -81,41 +85,42 @@
 
         </div>
 
-        <div class="round">
+        <div class="round"> <!-- Tipos de textos -->
             <h2 class="subtitulo"> tipos de textos </h2>
 
-            <p><span>< p ></span>       Parrafo     <span>< /p ></span> </p>
-            <pre><span>< pre ></span> texto  con      mucho        espacio <span>< /pre ></span></pre> <!-- preformatted -->
-            <b><span>< b ></span>       negrita     <span>< /b ></span></b><br>
-            <strong><span>< strong ></span> reforzado <span>< /strong > </span></strong> <br>
-            <big> <span>< big ></span>  grande <span>< /big ></span></big> <br> 
-            <small> <span>< small ></span> pequeño  <span>< /small ></span></small> <br> 
-            <i> <span>< i ></span>      cursiva     <span>< /i ></span></i> <br> 
-            <sub><span>< sub ></span>   subIndice   <span>< /sub ></span> </sub>    <br> 
-            <sup> <span>< sup ></span>  superIndice <span>< /sup ></span> </sup>    <br> 
-            <ins> <span>< ins ></span>  subrayado   <span>< /ins ></span> </ins>    <br>
-            <del> <span>< del ></span>  borrado     <span>< /del ></span></del>
+            <p><span>&lt;p></span>       Parrafo     <span>&lt;/p></span> </p>
+            <pre><span>&lt;pre></span> texto  con      mucho        espacio <span>&lt;/pre></span></pre> <!-- preformatted -->
+            <b><span>&lt;b></span>       negrita     <span>&lt;/b></span></b><br>
+            <strong><span>&lt;strong></span> reforzado <span>&lt;/strong> </span></strong> <br>
+            <big> <span>&lt;big></span>  grande <span>&lt;/big></span></big> <br> 
+            <small> <span>&lt;small></span> pequeño  <span>&lt;/small></span></small> <br> 
+            <i> <span>&lt;i></span>      cursiva     <span>&lt;/i></span></i> <br> 
+            <sub><span>&lt;sub></span>   subIndice   <span>&lt;/sub></span> </sub>    <br> 
+            <sup> <span>&lt;sup></span>  superIndice <span>&lt;/sup></span> </sup>    <br> 
+            <ins> <span>&lt;ins></span>  subrayado   <span>&lt;/ins></span> </ins>    <br>
+            <del> <span>&lt;del></span>  borrado     <span>&lt;/del></span></del>
         </div>
 
-
-        <div class="round">
+        <div class="round"> <!-- Atributos -->
 
             <h2 class="subtitulo"> Atributos </h2>
 
-            <!-- <p style="color: red;"> Attribute: style="color: red" </p> -->
-            < <span>p</span> <font color="purple"">style</font> ="<font color="green">color: red;</font>"> Texto de Color Rojo <span>< /p></span> <br><br>
-
-            <!-- <font color="red"> Attribute: color="red"</font> <br> -->
-            < <span>font</span> <font color="purple"">color="red"></font> Texto de Color Rojo <span>< /p></span> <br>
+            <span>&lt;p</span> <font color="purple"">style</font> ="<font color="green">color: red;</font>"> Texto de Color Rojo <span>&lt;/p></span> <br><br>
+            <hr>
+            <!-- Código -->
+            <span>&lt;font</span> <font color="purple"">color="red"></font> Texto de Color Rojo <span>&lt;/p></span> <br>
+            <!-- Código -->
         </div>
 
+        <div class="round">  <!-- Imagen -->
 
-        <div class="round">
-
-            <h2 class="subtitulo"> Imagen </h2>
-
+            <h2 class="subtitulo"> Imagen </h2> 
+            
             <img src="Imagen.png" alt="Texto por si no carga imagen" > <br>
-            <span>< img</span> <font color="purple">src=</font> "Imagen.png" <font color="purple">alt=</font>"Texto por si no carga imagen" <span>></span>
+            <hr>
+            <!-- Código -->
+            <span>&lt;img</span> <font color="purple">src=</font> "Imagen.png" <font color="purple">alt=</font>"Texto por si no carga imagen"<span>></span>
+            <!-- Código -->
                 
             <!-- 
             Atributos:
@@ -131,9 +136,7 @@
             -->
         </div>
 
-
-
-        <div class="round">
+        <div class="round">  <!-- Listas -->
             <h2 class="subtitulo"> Listas </h2>
 
                 <!-- Lista desordenada -->
@@ -142,7 +145,21 @@
                 <li>Rojo</li>
                 <li>Azul</li>
                 <li>Verde</li>
-            </ul> <hr width="15%" align="left"/>
+            </ul> 
+
+            <details>
+                <summary>Mostrar Código</summary>
+                
+            <!-- Código -->
+                &lt;ul> <br>
+                &nbsp;    &lt;li> Rojo &lt;/li> <br>
+                &nbsp;    &lt;li> Azul &lt;/li> <br>
+                &nbsp;    &lt;li> Verde &lt;/li> <br>
+                &lt;/ul> 
+            <!-- Código -->
+            </details>
+
+            <hr width="15%" align="left"/>
 
             <!-- Lista ordenada -->
             <h3 class="subtitles">Lista Ordenada &lt;ol&gt;</h3>
@@ -152,11 +169,21 @@
                 <li>Verde</li>
             </ol>
 
+            <details>
+                <summary>Mostrar Código</summary>
+                
+            <!-- Código -->
+                &lt;ol> <br>
+                &nbsp;    &lt;li> Rojo &lt;/li> <br>
+                &nbsp;    &lt;li> Azul &lt;/li> <br>
+                &nbsp;    &lt;li> Verde &lt;/li> <br>
+                &lt;/ol> 
+            <!-- Código -->
+            </details>
+
         </div>
 
-
-
-        <div class="round">
+        <div class="round">  <!-- Tabla -->
             <h2 class="subtitulo"> Tabla</h2>
             <table border="2">
                 <tr>
@@ -169,20 +196,38 @@
                     <td colspan="2">Naranja</td>
                 </tr>
             </table>
+
+            <details>
+                <summary>Mostrar Código</summary>
+                &lt;table border="2"> <br>
+                    &lt;tr> <br>
+                        &nbsp;    &lt;td bgcolor="red">Rojo</td> <br>
+                        &nbsp;    &lt;td>Azul</td> <br>
+                        &nbsp;    &lt;td>Verde</td> <br>
+                    &lt;/tr> <br>
+                    &lt;tr> <br>
+                        &nbsp;    &lt;td>Amarillo</td> <br>
+                        &nbsp;    &lt;td colspan="2">Naranja</td> <br>
+                    &lt;/tr> <br>
+                &lt;/table> <br>
+            </details>
         </div>
 
-
-        
-        <div class="round">
+        <div class="round"> <!-- Links -->
             <h2 class="subtitulo"> Links </h2>
             <a href="https://nikitox24.github.io/Main/" target="_blank">
                 Mi Pag Web
-            </a>
+            </a> <br><hr>
+
+            <!-- Código -->
+                <span>&lt;a</span> <font color="purple">href=</font>"https://nikitox24.github.io/Main/" 
+                    <font color="purple">target=</font>"_blank">
+                    Mi Pag Web
+                <span>&lt;/a></span>
+            <!-- Código -->
         </div>
 
-
-        
-        <div class="round">
+        <div class="round"> <!-- Tipos de elementos en Niveles -->
             <h2 class="subtitulo"> Tipos de elementos en Niveles </h2>
             <!-- 
             Nivel de Bloque en documento:
@@ -212,9 +257,7 @@
             </p>
         </div>
 
-        
-        <section id="Input Types">
-        <div class="round">
+        <div class="round"> <!-- Input Types -->
             <h2 class="titulo"> Input Types in <span> HTML </span> </h2>
             
             <div class="div">
@@ -439,21 +482,19 @@
 
 
 
+    
+    
+    <!-- HTML5 -->
 
-
-
-
-    <details open>
+    <details open> 
         <summary style="font-size: 50px;"> HTML5 </summary>
 
-        <div class="round">
+        <div class="round"> <!-- Estructura de Pag -->
             <h2 class="subtitulo"> Estructura de Pag </h2>
             <img src="https://api.sololearn.com/DownloadFile?id=2471" alt="" height="300px">
         </div>
 
-
-        <div class="round">
-                    
+        <div class="round"> <!-- Audio & Video -->
             <section id="Audio">
                 <h3 class="subtitles"> Audio </h3>
                 
@@ -485,7 +526,7 @@
             </section>
         </div>
 
-        <div class="round">
+        <div class="round"> <!-- Barra de Progreso -->
 
             <section id="Barra de Progreso">
                 <h3 class="subtitles"> Barra de Progreso </h3>
@@ -495,9 +536,7 @@
             </section>
         </div>
         
-        <div class="round">
-
-            
+        <div class="round">  <!-- Almacenamiento -->
             <section id="Almacenamiento (API)">
                 <h3 class="subtitles"> Almacenamiento (API) </h3>
                 <div>
@@ -506,12 +545,12 @@
                         <span>localStorage():</span> permanece en el disco del usuario sin expirar <br> <br>
                         
                         <<span>script</span>> <br>
-                        &nbsp; localStorage.SetItem("Clave1", "Valor1");  Guardar<br>
-                        &nbsp; localStorage.GetItem("Clave1"); Cargar  <br>
-                        &nbsp; localStorage.removeItem("Clave1"); Borrar   <br>
-                        &nbsp; localStorage.clear(); Limpiar  <br>
+                        <font style="color: blue;">Guardar=</font>&nbsp;localStorage.SetItem("Clave1", "Valor1");<br>
+                        <font style="color: blue;">Cargar=</font>&nbsp;localStorage.GetItem("Clave1");<br>
+                        <font style="color: blue;">Borrar=</font>&nbsp;localStorage.removeItem("Clave1");<br>
+                        <font style="color: blue;">Limpiar=</font>&nbsp;localStorage.clear();<br>
                         <<span>/script</span>>
-
+                        
                         <script>
                             localStorage.setItem("Clave1", "Valor1");
                         </script>
@@ -521,38 +560,299 @@
             </section>
         </div>
         
-
-        <div class="round">
-
+        <div class="round">  <!-- Geo-Localizacion -->
             <section id="Geo-Localizacion (API)">
                 <h3 class="subtitles"> Geo-Localizacion (API) </h3>
-                <!-- <script> -->
-                    navigator.geolocation.getCurrentPosition();
-                    <!-- parametros: ShowLocation(obl), ErrorHandler(opc), Options(ops) -->
-                    <!-- </script> -->
+                <<span>script</span>> <br>
+                &nbsp; navigator.geolocation.getCurrentPosition();
+                <!-- parametros: ShowLocation(obl), ErrorHandler(opc), Options(ops) -->
+                <br><<span>/script</span>>
             </section>
-                
         </div>
+        
+        <div class="round">  <!-- Dragg & Drop -->
+            <section id="Dragg & Drop (API)">
+                <h3 class="subtitles"> Dragg & Drop (API) </h3>
+                <div>
+                  <!-- <img draggable="true" src="../Imgs/cat1.png" alt="" height="100px"/> -->
+                  <!-- https://www.sololearn.com/learning/1014/2214/4405/1 -->
+                  
+                  <script>
+                function allowDrop(ev) {
+                  ev.preventDefault();
+                }
+          
+                function drag(ev) {
+                  ev.dataTransfer.setData("text", ev.target.id);
+                }
+          
+                function drop(ev) {
+                  ev.preventDefault();
+                  var data = ev.dataTransfer.getData("text");
+                  ev.target.appendChild(document.getElementById(data));
+                }
+              </script>
+              <div id="box" ondrop="drop(event)"
+              ondragover="allowDrop(event)"
+              style="border:1px solid black; 
+                width:200px; height:200px">
+              </div>
+          
+              <img id="image" src="../Imgs/cat1.png" draggable="true"
+                ondragstart="drag(event)" width="200" height="200" alt="" />
+              </div>
+              </section>
+        </div>
+
+
+        <div class="round">  <!-- Canvas & SVG -->
+        <section id="Canvas Vs SVG">
+            <details>
+            <summary>Info...</summary>
+                <h2 class="subtitles"> Canvas vs SVG </h2>
+                <p>
+                Canvas: <br>
+                - Los elementos se dibujan programáticamente  <br>
+                - Los dibujos se realizan con píxeles <br>
+                - Las animaciones no están incorporadas <br>
+                - Alto rendimiento para operaciones de dibujo basadas en píxeles <br>
+                - Dependiente de la Resolución <br>
+                - No hay soporte para controladores de eventos <br>
+                - Puede guardar la imagen resultante como .png o .jpg <br>
+                - Muy adecuado para los juegos de gráficos intensivos <br> <br>
+                
+                SVG: <br>
+                - Los elementos son parte del DOM de la página (Modelo de Objetos del Documento) <br>
+                - El dibujo se hace con vectores <br>
+                - Efectos, como animaciones son incorporadas <br>
+                - Basado en sintaxis XML estándar, que provee mejor accesibilidad. <br>
+                - Independiente de la Resolución <br>
+                - Soporte para manejadores de eventos <br>
+                - No apto para aplicaciones de juegos <br>
+                - Es mejor para aplicaciones con áreas grandes de renderización (por ejemplo, Google Maps) <br>
+                </p>
+            </details>
+        </section>
+        
+        <section id="SVG (Graficos Vectorales Escaleables)">
+            <h2 class="subtitles"> SVG (Graficos Vectorales Escaleables) </h2>
+            <!-- https://www.sololearn.com/learning/1014/2200/4369/1 -->
+            <div>
+            <!-- Imagen -->
+            <img src="image.svg" alt="" height="1"> <!-- SVG define imgs basadas en vectores en formato XML -->
             
+            <!-- Objeto -->
+            <svg width="1" height="1"></svg>
             
+            <!-- Circulo -->
+            <svg width="500" height="150">
+            <circle cx="80" cy="80" r="50" fill="green" /><!-- stoke= marco -->
+            </svg>
+            <hr>
             
+            <!-- Rectangulo -->
+            <svg width="300" height="250">
+            <rect width="300" height="100"
+            x="80" y="80" fill="green"/>
+            </svg>
+            <hr>
             
+            <!-- Linea -->
+            <svg width="300" height="125">
+            <line x1="10" y1="10" x2="200" y2="100"
+                style="stroke:#000000; stroke-linecap:round;
+                stroke-width:20">
+                </svg>
+            <hr>
             
+            <!-- PolyLine -->
+            <svg width="500" height="200">
+            <polyline style="stroke-linejoin:miter;
+            stroke:black;
+                stroke-width:12; fill: none;"
+                points="100 100, 150 150, 200 100" >
+            </polyline>
+            </svg>
+            <hr>
+    
+            <!-- Elipse -->
+            <svg width="500" height="300">
+            <ellipse cx="150" cy="150" rx="150" ry="50" style="fill:green" />
+            </svg>
+            <hr>
             
+            <!-- PolyGon -->
+            <svg width="1000" height="200">
+            <polygon points="100 100, 200 200, 300 0" 
+                    style="fill: green; stroke:black;" />
+                </svg>
+            <hr>
+        
+            <!-- Animaciones  <animate> -->
+            <svg width="500" height="150">
+            <rect width="150" height="150" fill="orange">
+                <animate attributeName="x" from="0" to="300"
+                dur="3s" fill="freeze" repeatCount="100"/> 
+            </rect>
+            <!-- 
+                attributeName: el atributo q se va animar.
+                from: valor al comenzar.
+                to: valor al terminar.
+                dur: duracion.
+                fill: valor del atributo al finalzar (remove: resetea valor, freeze: conserva el valor "to").
+                repeatCount: repeticiones, undefined: infinito.
+            -->
+            </svg>
+            <hr>
             
+            <!-- Trazos <path> -->
+            <svg width="500" height="200">
+                <!-- triangulo hipot -->
+                <path d="M 0 0 L200 200 L200 0 Z" style="stroke:#000;  fill:none;" />
+            </svg>
+            <br>
+            <!--
+                Usar letras Mayusculas para valores absolutos, y minusculas para pos relativa.
+                M: mover hacia.
+                L: linea hacia.
+                H: linea horiz. hacia.
+                V: linea vert. hacia.
+                C: curva hacia.
+                S: curva suave hacia.
+                Q: curva Bézier cuadrática.
+                T: curva Bézier cuadrática suave.
+                A: arco elíptico.
+                Z: closepath, cerrar trazado.
+            -->
+            <!-- cuadradp -->
+            <svg width="500" height="100">
+                <path d="M0 0 L0 100 L100 100 L100 0 Z" style="stroke:#000;  fill:none;" />
+            </svg>
             
+            </div>
+        </section>
+        
+        <section id="Canvas (JS)">
+            <h2 class="subtitles"> < Canvas > (JS) </h2>
+            <div>
+            Canvas es solo contenedor grafico (para mostrar requiere JavaScript) <br>
+            x0 y0: comienza arriba izq. <br><br>
             
+            <b>< canvas id="canvas1" width="200" height="100"> </ canvas> </b><br>
+            El Id es necesario para identificarlo en JS. <br><br>
             
+            <b>
+            < _script_ > <br>
+                var can = document.getElementById("canvas1"); <br>
+                var ctx = can.getcontext("2d"); <br>
+            < _script_ > <hr width="15%" align="Left">
+            </b>
+    
+            <!-- fillRect(x, y, w, h) -->
+            <h4 class="subtitles"> fillRect(x, y, w, h) </h4>
+            <canvas id="canvas2" width="400" height="300"> </canvas> 
+            <script>
+            var c = document.getElementById("canvas2");
+            var ctx2 = c.getContext("2d");
+            ctx2.fillRect(20,20,100,100); /* w: ancho, h: alto */
+            </script> <hr width="15%" align="Left">
+    
+            <!-- fillStyle(rbga) Gradiante -->
+            <h4 class="subtitles"> fillStyle(rbga) Gradiante </h4>
+            <canvas id="canvas3" width="400" height="300"> </canvas> 
+            <script>
+            var canvas = document.getElementById("canvas3");
+            var ctx3 = canvas.getContext("2d");
+            ctx3.fillStyle = "rgba(0, 200, 0, 1)";
+            ctx3.fillRect (36, 10, 22, 22);
+            </script>
+    
+            <!-- 
+            Draw a Line
+            moveTo(x,y): Defines the starting point of the line.
+            lineTo(x,y): Defines the ending point of the line.
+    
+            Draw a Circle
+            beginPath(): Starts the drawing.
+            arc(x,y,r,start,stop): Sets the parameters of the circle.
+            stroke(): Ends the drawing.
+    
+            Gradients
+            createLinearGradient(x,y,x1,y1): Creates a linear gradient.
+            createRadialGradient(x,y,r,x1,y1,r1): Creates a radial/circular gradient.
             
+            Drawing Text on the Canvas
+            Font: Defines the font properties for the text.
+            fillText(text,x,y): Draws "filled" text on the canvas.
+            strokeText(text,x,y): Draws text on the canvas (no fill).
+            -->
+        </div>
+        </section>
+        
+        <section id="Canvas Transform (JS)">
+            <h2 class="subtitles"> Canvas Transform JS </h2>
+            <div>
             
+            <!-- Texto script -->
+            <h4 class="subtitles"> Texto script </h4>
+            <canvas id="canvas4" width="400" height="300"> </canvas>
+            <script>
+                var c=document.getElementById("canvas4");
+                var ctx=c.getContext("2d");
+                ctx.font="bold 22px Tahoma";
+                ctx.textAlign="start";
+                ctx.fillText("start", 10, 30);
+            </script> <hr width="15%" align="Left">
+    
+            <!-- Translate script -->
+            <h4 class="subtitles"> Translate script </h4>
+            <canvas id="canvas5" width="400" height="300"> </canvas>
+            <script>
+                var c=document.getElementById("canvas5");
+                var ctx=c.getContext("2d");
+                ctx.font="bold 22px Tahoma";
+                ctx.textAlign="start2";
+                ctx.fillText("start2", 10, 30);
+                ctx.translate(100, 150);
+                ctx.fillText("after translate", 10, 30);
+            </script> <hr width="15%" align="Left">
+    
+    
+            <!-- Rotate script --> 
+            <h4 class="subtitles"> Rotate script </h4>
+            <canvas id="canvas6" width="400" height="300"> </canvas>
+            <script>
+                var c=document.getElementById("canvas6");
+                var ctx=c.getContext("2d");
+                ctx.fillStyle = "#FF0000";
+                ctx.fillRect(10,10, 100, 100);
+                ctx.rotate( (Math.PI / 180) * 25);  //rotate 25 degrees. (usa radianes, no grados)
+                ctx.fillStyle = "#0000FF";
+                ctx.fillRect(10,10, 100, 100);
+            </script> <hr width="15%" align="Left">
+            
+            <!-- Scale script -->
+            <h4 class="subtitles"> Scale script </h4>
+            <canvas id="canvas7" width="400" height="300"> </canvas>
+            <script>
+                var c=document.getElementById("canvas7");
+                var ctx=c.getContext("2d");
+                ctx.font="bold 22px Tahoma";
+                ctx.scale(1.5, 4);
+                ctx.fillText("after scale", 0,20);
+            </script>
+            </div>
+        </section>
+    </div>
+
+
+
     </details>
 
 
 
 
 
-
-    <!-- <div style="height: 2000px;"></div> -->
 
 </body>
 </html>
