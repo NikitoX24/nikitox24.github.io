@@ -486,7 +486,7 @@
     
     <!-- HTML5 -->
 
-    <details open> 
+    <details > 
         <summary style="font-size: 50px;"> HTML5 </summary>
 
         <div class="round"> <!-- Estructura de Pag -->
@@ -843,15 +843,819 @@
             </script>
             </div>
         </section>
-    </div>
+        </div>
+    </details>
 
 
+
+
+
+    <!-- CSS -->
+
+    <details open> 
+        <summary style="font-size: 50px;"> CSS </summary>
+
+        <style>
+            /* 
+                selector{
+                    propiedad : valor
+                } 
+            */
+            .borders{
+            border-radius: 15px;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid grey;
+            background-color: rgba(128, 128, 128, 0.227);
+            } 
+            .titles{
+            text-shadow: 5px 2px 4px grey;
+            text-align: center;
+            text-decoration: underline;
+            text-transform: uppercase;
+            }
+            p.numbers{
+            font-size: 20px;
+            font-weight: 1000;
+            text-decoration: underline;
+            }
+            
+        </style>
+
+        <div class="round">
+                         
+            <h1 class="titles"> CSS </h1> 
+            <h3 class="titles"> Cascading Style Sheets </h3>
+            
+            <!-- (Basics) -->
+            <div class="borders">
+                <h2 class="titles"> Basics </h2>
+            
+                <!-- Type selectors -->
+                <div class="borders">
+                    <p class="numbers"> 1) Type selectors</p>
+                    <h1 class="selector"> This is my first paragraph. </h1>
+                </div>
+            
+                <!-- Id -->
+                <div class="borders">
+                    <p class="numbers"> 2) Id </p>
+                    <div id="intro">
+                        <p>This paragraph is in the intro section.</p>
+                    </div>
+                    <p> This paragraph is not in the intro section.</p> <hr>
+                </div>
+            
+                <!-- Descendent Selectors -->
+                <div class="borders">
+                    <p class="numbers"> 3) Descendent Selectors </p>
+                    <div id="intro">
+                        <p class="first">This is a <em> paragraph</em>.</p>
+                        <p> This is the second paragraph. </p>
+                    </div>
+                    <p class="first"> This is not in the intro section.</p>
+                    <p> The second paragraph is not in the intro section. </p>
+                </div>
+            </div>
+            
+            <!-- (Text) -->
+            <div class="borders">
+                <h2 class="titles"> Text </h2>
+                
+                <!-- Font-Family -->
+                <div class="borders">
+                    <p class="numbers">4) Font-Family</p>
+                    <p class="serif">
+                        This is a paragraph shown in serif font.
+                    </p>
+                
+                <!-- Font-Style -->
+                    <p class="numbers">5) Font-Style</p>
+                    <p class="italic">
+                        This is a paragraph in italic style.
+                    </p>
+                
+                <!-- Font-Weight -->
+                    <p class="numbers">6) Font-Weight</p>
+                    <p class="weight">
+                        This is a paragraph in bolder.
+                    </p>
+            
+                <!-- Font-Variant -->
+                    <p class="numbers">7) Font-Variant</p>
+                    <p class="variant">
+                        This is a paragraph in small-caps.
+                    </p>
+            
+                <!-- Font-Color -->
+                    <p class="numbers">8) Font-Color</p>
+                    <p class="colored">
+                        This is a paragraph in red.
+                    </p>
+                </div>
+            
+                <!-- Text-Align (Horizontal)-->
+                <div class="borders">
+                    <p class="numbers">9) Text-Align (Horizontal)</p>
+                    <div style="width: 500px;">
+                        <p class="center">This paragraph is aligned to center</p>
+                    </div>
+                
+            
+                <!-- Text-Align (Vertical) -->
+                    <p class="numbers">10) Text-Align (Vertical)</p>
+                    <table border="1" cellpadding="2" cellspacing="0" style="height: 150px;" ">
+                        <tr>
+                        <td class="top">Top</td>
+                        <td class="middle">Middle</td>
+                        <td class="bottom">Bottom</td>
+                        </tr>
+                    </table>
+                </div>
+            
+                <!-- Text-Align Property (Vertical) -->
+                <div class="borders">
+                    <p class="numbers">11) Text-Align Property (Vertical)</p>
+                    <p>This is an <span class="baseline"> <b> inline text </b></span> example.</p>
+                    <p>This is a <span class="sub"><b>sub line text</b></span> example.</p>
+                    <p> This is a <span class="super"><b>super line text</b></span> example.</p>
+                    <p> This is a <span class="pixel"><b>pixel</b></span> example.</p>
+                </div>
+            
+                <!-- Text-Align Property Div (Vertical) -->
+                <div class="borders">
+                    <p class="numbers">12) Text-Align Property Div (Vertical)</p>
+                    <div class="main">
+                        <div class="paragraph">
+                        This text is aligned to the middle
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Text-decoration -->
+                <div class="borders">
+                    <p class="numbers">13) Text-decoration</p>
+                    <p class="none">This is <b> default</b> style of the text (none).</p>
+                    <p class="inherit">This text <b> inherits</b>  the decoration of the parent.</p>
+                    <p class="overline">This is <b> overlined </b> text</p>
+                    <p class="underline">This is <b> underlined</b> text.</p>
+                    <p class="line-through">This is <b> lined-through</b> text.</p>
+                    <p class="blink">This is <b> blink</b> text.</p>
+                </div>
+            
+                <!-- text-indent (sangria) -->
+                <div class="borders">
+                    <p class="numbers">14) text-indent (sangria)</p>
+                    <p class="indent">
+                        This is an example of 
+                        <strong>text-indent </strong> property. <br>
+                        First line of our text is indented to the right in 60px. <br>
+                        Besides pixels you can also use other measurement units, 
+                        like pt, cm, em, etc. 
+                    </p>
+                </div>
+            
+                <!-- Text-Sadow -->
+                <div class="borders">
+                    <p class="numbers">15) Text-Sadow</p>
+                    <h1 class="shadowT"> Text-shadow example</h1>
+                    <h1 class="blurT"> Text-shadow with blur effect</h1>
+                </div>
+                    
+                <!-- Text-Transform -->
+                <div class="borders">
+                    <p class="numbers">16) Text-Transform</p>
+                    <p class="capitalize">
+                        el valor "capitalize" transforma el primer carácter de cada palabra en mayúsculas; 
+                        Todos los demás caracteres no se ven afectados.
+                    </p> 
+                </div>
+                
+                <!-- Text-Spacing -->
+                <div class="borders">
+                    <p class="numbers">17) Text-Spacing </p>
+                    <div>
+                        <p>This paragraph has no additional letter-spacing applied.</p>
+                        
+                        <!-- Letter-Spacing -->
+                        <p class="lspacing">This paragraph is letter-spaced at 4px.</p>
+                        
+                        <!-- Word-Spacing -->
+                        <p class="wspacing">This paragraph is word-spaced at 30px.</p>
+                    </div>
+                </div>
+            
+                <!-- Wite-Spacing -->
+                <div class="borders">
+                    <p class="numbers">18) Wite-Spacing</p>
+                    <p class="witespacing">
+                        Este párrafo           tiene varios 
+                        espacios y un salto        de línea,
+                        pero   será ignorado, ya    que usamos el     valor
+                        nowrap.
+                    </p><hr>
+                </div>
+            </div>
+                
+            <!-- (Properties) -->
+            <div class="borders">
+            <h2 class="titles"> Properties </h2>
+            
+                <div class="borders">
+                    <p class="numbers"> 19) Box-Model </p>
+                    <!-- Box-Model -->
+                    <div>
+                        <!-- Box-Border -->
+                        <p class="border">This is an example of a solid border.</p> <hr>
+            
+                        <!-- Border-Style -->
+                        <p class="none">This paragraph has no border.</p>
+                        <p class="dotted">This is a dotted border.</p>
+                        <p class="dashed">This is a dashed border.</p>
+                        <p class="double">This is a double border.</p>
+                        <p class="groove">This is a grooved border.</p>
+                        <p class="ridge">This is a ridged border.</p>
+                        <p class="inset">This is an inset border.</p>
+                        <p class="outset">This is an outset border.</p>
+                        <p class="hidden">This is a hidden border.</p><hr>
+            
+                        <!-- Width & Height -->
+                        <p class="numbers">20) Width & Height</p>
+                        <div class="wh">
+                        The total width and height of this element is 100px.
+                        </div>
+                    </div>
+                </div>
+                
+            
+                <!-- Background (BODY) -->
+                <!-- 
+                    /* Background-Body */
+                    body{
+                        background-color: beige;
+                        background-image: url("../Imgs/TileW.jpg");
+                        background-repeat: repeat; /* repeat-x, repeat-y, no-repeat, inherit */
+                        background-attachment: fixed; /* fixel, scroll, inherit */
+                    }
+                -->
+            
+            
+                <!-- Background-Image -->
+                <div class="borders">
+                    <p class="numbers">21)  Background-Image </p>
+                    <p class="background-image">background-image</p>
+                </div>
+                
+                <!-- List-Style-Type -->
+                <div class="borders">
+                    <p class="numbers">22) List-Style-Type </p>
+                    <div>
+                        <ol class="lower-alpha">
+                        <li>Red</li>
+                        <li>Green</li>
+                        <li>Blue</li>
+                        </ol>
+                        <ul class="circle">
+                        <li>Red</li>
+                        <li>Green</li>
+                        <li>Blue</li>
+                        </ul>
+                        <ul class="square">
+                        <li>Red</li>
+                        <li>Green</li>
+                        <li>Blue</li>
+                        </ul>
+                        <ul class="uimage">
+                        <li>Red</li>
+                        <li>Green</li>
+                        <li>Blue</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                
+                <!-- Table -->
+                <div class="borders">
+                    <!-- Table-Style -->
+                    <p class="numbers">23) Table</p>
+                    <table class="styled" border="1">
+                        <caption>"Caption-Side Text"</caption>
+                        <tr>
+                        <td>Red</td>
+                        <td>Green</td>
+                        </tr>
+                        <tr>
+                        <td>Blue</td>
+                        <td>Yellow</td>
+                        </tr>
+                    </table><br>
+            
+                    <!-- Empty-Cells -->
+                    <p class="numbers">24)</p>
+                    <table class="styled2" border="1">
+                        <tr>
+                        <td>HTML</td>
+                        <td>CSS</td>
+                        </tr>
+                        <tr>
+                        <td>JavaScript</td>
+                        <td></td>
+                        </tr>
+                    </table>
+            
+                    <!-- Table-Style -->
+                    <p class="numbers">25)</p>
+                    <p>Table-layout is set to <strong>auto</strong></p>
+                    <table id="tablee" class="auto">
+                        <tr>
+                        <td width=“10%">500.000.000.000.000</td>
+                        <td width="90%">20.000</td>
+                        </tr>
+                    </table>
+            
+                    <!-- Table-layout -->
+                    <p>Table-layout is set to <strong>fixed</strong></p>
+                    <table id="tablee" class="fixed">
+                        <tr>
+                        <td width="10%">500.000.000.000.000</td>
+                        <td width="90%">20.000</td>
+                        </tr>
+                    </table>
+                </div>
+            
+                <!-- Links -->
+                <div class="borders"> 
+                    <p class="numbers"> 26) Links </p>
+                    <p>
+                        <a href="http://www.sololearn.com" target="_blank">
+                        This link is hovered when we mouse over it
+                        </a>
+                    </p>
+                </div>
+            
+                <!-- Mouse-Cursor -->
+                <div class="borders"> 
+                    <p class="numbers"> 27) Mouse-Cursor</p>
+                    <span class="mousee">
+                        Do you need help?<br>
+                        The mouse-cursor here will be "?"
+                    </span>
+                </div>
+            
+            </div>
+            
+            
+            <!-- Positioning And Layout -->
+            
+            <div class="borders">
+                <h2 class="titles"> Positioning And Layout </h2>
+                <!-- Display -->
+                <p class="numbers">28)</p>
+                <p>
+                    <u>Sin display block</u><br>
+                    <span>First paragraph.</span>
+                    <span>Second paragraph.</span>
+                    <span>Third paragraph.</span>
+                    <span>Fourth paragraph.</span>
+                    <span>Fifth paragraph.</span>
+                </p>
+                
+                <p>
+                    <u>Con display block</u><br>
+                    <span class="block">First paragraph.</span>
+                    <span class="block">Second paragraph.</span>
+                    <span class="block">Third paragraph.</span>
+                    <span class="block">Fourth paragraph.</span>
+                    <span class="block">Fifth paragraph.</span>
+                </p>
+                
+                <p><u>InLine</u>
+                    <p class="inline">First paragraph.</p>
+                    <p class="inline">Second paragraph.</p>
+                    <p class="inline">Third paragraph.</p>
+                    <p class="inline">Fourth paragraph.</p>
+                    <p class="inline">Fifth paragraph.</p>
+                </p>
+                <hr>
+            
+                <!-- Visibility -->
+                <p class="numbers">29)</p>
+                <h1 class="none"> Este texto no se mostrará, ya que establecemos el valor en ninguno. </h1>
+                <p> El título de este párrafo no se muestra, ya que establecemos el valor en ninguno.</p>
+            
+                <h4> Este es un texto </h4>
+                <div class = "hidden">
+                Este texto no se mostrará en el navegador.
+                </div>
+                <p>
+                    El espacio sobre este párrafo está vacío porque 
+                    la visibilidad del elemento div está configurada como oculta.
+                </p>
+                <hr>
+            
+                <!-- posicionamiento -->
+                    <p class="numbers">30)</p>
+                    <p>Paragraph with no position.</p>
+                    <p>Paragraph with no position.</p>
+                    
+                    <!-- estatico -->
+                    <p class="position_static">This paragraph has a static position.</p>
+            
+                    <!-- fijo -->
+                    <p class="position_fixed">30) Fixed position.</p>
+                    
+                    <!-- relativo -->
+                    <span class="spann"> relative text </span>
+            
+                <!-- Floating -->
+                <p class="numbers">31)</p>
+                <p style="font-size: large; width: 50%; text-align: justify; "><img src="../Imgs/css_logo.png" class="imgfloatr" />
+                    This paragraph has an image that is floated to the <strong>right.</strong> 
+                    It is highly recommended to add a margin to images so that the text does 
+                    not get too close to the image. If you want your text to be easily read, you 
+                    should always add a few pixels between words and borders, images, 
+                    and other content.
+                </p><hr>
+            
+                <!-- Clearing the Float -->
+                <p class="numbers">32)</p>
+                <div>
+                    This paragraph is above the div element 
+                    and is not affected by the float right property. 
+                    <br /><br />
+                <div class="floating">
+                    <img src="../Imgs/css_logo.png" height="40px"/>
+                </div>
+                    This paragraph comes after the div element 
+                    and is affected by the float right property. 
+                    <br><br class="clearing"/>
+                    This paragraph also comes after the div element
+                    and is affected by the float right property.
+                    <br><br>
+                </div><hr>
+            
+                <!-- Z-Index -->
+                <p class="numbers">33)</p>
+                <div class="bluee">Blue</div>
+                <div class="redd">Red</div>
+                <hr>
+            
+                <!-- OverFlow -->
+                <p class="numbers">34)</p>
+                <div class="overflow">
+                    This text is inside the div element, which has a blue 
+                    background color and is floated to the left. We set a specific 
+                    height and width for the div element, and as you can see, 
+                    the content cannot fit.
+                </div>
+                <!-- <br><br><br><br><br><br><br><br><br> -->
+            </div><hr>
+            
+            
+            <!-- Bacics CSS3 --> 
+            
+            <div class="borders">
+                <h2 class="titles"> Bacics CSS3 </h2>
+                <p class="numbers">35)</p><br>
+                <!-- news CSS3:   
+                    border radius/images
+                    multiple-background
+                    anims & effects
+                    box-shadow
+                    degradados
+                    transforms
+                    transiciones
+                    anims
+                -->
+            
+                <!-- Prefijos de provedores css --><!-- soportes para las nuevas caracteristicas de CSS -->
+                <div class = "round">
+                    border-radius: 24px;
+                </div><br>
+            
+                <!-- Border-Radius -->
+                <div class = "divBorderRadius">
+                    border-radius: 0 0 20px 20px;
+                </div><br>
+            
+                <!-- Circulo -->
+                <div class = "divCirculo">
+                    border-radius: 50%;
+                </div><br>
+            
+                <!-- Box-Shadow -->
+                <div class = "boxShadow">
+                    box-shadow: 10px 10px 5px 5px #888888;
+                </div><br>
+            
+                <!-- Box-Inside Shadow -->
+                <div class = "boxInsideShadow">
+                    box-shadow: inset 10px 10px 5px 5px green ;
+                </div><br>
+            
+                <!-- Box-Double Inside Shadow -->
+                <div class = "boxDoubleInsideShadow">
+                    box-shadow: inset 10px 10px 5px green, inset -10px -10px 5px green ;
+                </div><br>
+            
+                <!-- Box-Triple Shadow -->
+                <div class = "BoxTrilpeShadow">
+                    box-shadow: 0 0 10px 4px #FF6347, 0 0 10px 30px #FFDAB9, 30px 0 20px 30px #B0E0E6;
+                </div><br><br><br>
+                
+                <!-- BoxTransparencia -->
+                <div class = "BoxTransparencia">
+                </div><br><br><hr>
+            
+                <!-- Transparencia -->
+                <p class="numbers">36)</p>
+                <nav>
+                    <ul>
+                        <li><a href="#">COURSES</a></li>
+                        <li><a href="#">DISCUSS</a></li>
+                        <li><a href="#">TOP LEARNERS</a></li>
+                        <li><a href="#">BLOG</a></li>
+                    </ul>
+                </nav><hr>
+                
+                <!-- Text Shadow -->
+                <p class="numbers">37)</p>
+                <h2 class = "TextShadow">
+                    Text Shadow.
+                </h2><br><hr>
+            
+                <!-- Pseudo-Clases -->
+                <p class="numbers">38)</p>
+                <div id="parent">
+                    <p>First paragraph</p>
+                    <p>Second paragraph</p>
+                    <p>Third paragraph</p>
+                    <p>Fourth paragraph</p>
+                </div><hr>
+            
+                <!-- Pseudo-Elemento -->
+                <p class="numbers">39)</p>
+                <h1 class="textfirstline">The following example demonstrates how to use the ::first-line element to add special effect to the first line of elements in the document.</h6>
+            
+                <p class="numbers">40)</p>
+                <h2 class="seleccioname">Selecciona una parte de este texto para marcarlo de otro color</h2>
+            
+                <p class="numbers">41)</p>
+                <p class="insertImageBeforeText">insert Image Before Text</p><hr>
+            
+                <!-- Word-Wrap -->
+                <p class="numbers">42)</p>
+                <p class="wordwrapnormal">
+                    normal.
+                    asfphagfuiyh0198uhasjfy18h8asfhjasfhasiufhasifhagsjsdgjsdhg
+                </p>
+                <p class="wordwrapbreak">
+                    break-word.
+                    asfphagfuiyh0198uhasjfy18h8asfhjasfhasiufhasifhagsjsdgjsdhg
+                </p><hr>
+                
+                <!-- Font-Face -->
+                <p class="numbers">43)</p>
+                <h1 class="custfont">This is Delicious Font</h1>
+            
+            </div><hr>
+            
+            
+            <!-- Degradados y Fondos -->
+            
+            <div class="borders">
+                <h2 class="titles"> Degradados y Fondos </h2>
+            
+                <!-- Dergadados Lineales -->
+                <p class="numbers">44) Dergadados Lineales</p>
+                <table>
+                    <td><div class="degradados">lineal gradient</div></td>
+                    <td><div class="degradadosmulticolor"></div></td>
+                </table>
+                
+                <p class="numbers">45)</p>
+                <table>
+                    <td><div class="first">Left to Right</div></td>
+                    <td><div class="second">Bottom to Top</div></td>
+                </table>
+                
+                <p class="numbers">46)</p>
+                <table>
+                    <td><div class="first2">Bottom Left</div></td>
+                    <td><div class="second2">100 deg</div></td>
+                </table>
+                
+                <p class="numbers">47)</p>
+                <table>
+                    <td><div class="repeating">Repeating Gradient</div></td>
+                </table>
+                
+                <!-- Degradados Radiales -->
+                <p class="numbers">48) Degradados Radiales</p>
+                <table>
+                    <td><div class="first48">Ellipse (Default)</div></td>
+                    <td><div class="second48">Circle</div></td>
+                </table>
+            
+                <p class="numbers">49)</p>
+                <table>
+                    <td><div class="first49">Top Left</div></td>
+                    <td><div class="second49">In Percentages</div></td>
+                </table>
+            
+                <p class="numbers">50)</p>
+                <div class="colorstop">Color Stops</div>
+                
+                <!-- Background size -->
+                <p class="numbers">51) Background size</p>
+                <table>
+                    <td><div class="backsiz100">background-size: 100px</div></td>
+                    <td><div class="backsiz50">background-size: 50px</div></td>
+                </table>
+            
+                <p class="numbers">52)</p>
+                <table>
+                    <td><div class="bscont">bs: contain</div> </td>
+                    <td><div class="bscover">bs: cover</div> </td>
+                </table>
+                
+                <!-- Background Clip -->
+                <p class="numbers">53)</p>
+                <table>
+                    <td><div class="bcpad">background-clip: padding-box</div> </td>
+                    <td><div class="bccont">background-clip: content-box</div> </td>
+                    <td><div class="bcimg">background-clip: content-box</div> </td>
+                </table>
+            
+                <!-- Transparent borders -->
+                <p class="numbers">54) Transparent borders</p>
+                <div class="tbord2"> Transparent borders</div>
+            
+                <p class="numbers">55) Multiple-background</p>
+                <div class="multbg"></div>
+            
+                <!-- Opacity -->
+                <p class="numbers">56) Opacity</p>
+                <table>
+                    <td><img id="img1" src="http://www.sololearn.com/uploads/css_logo.png" />1</td>
+                    <td><img id="img2" src="http://www.sololearn.com/uploads/css_logo.png" />0.5</td>
+                    <td><img id="img3" src="http://www.sololearn.com/uploads/css_logo.png" />0.25</td>
+                    <td><img id="img4" src="http://www.sololearn.com/uploads/css_logo.png" />0.5 + alpha</td>
+                </table>
+            </div><hr>
+            
+            
+            <!-- transiciones y Transparencia -->
+            
+            <div class="borders">
+            <h2 class="titles"> Transiciones y Transparencia </h2>
+            
+                <p class="numbers">57) Transition</p>
+                <div class="transit"> Apuntame</div>
+            
+                <p class="numbers">58) Rotate</p><br>
+                <table>
+                    <td><div class="rotate"></div></td>
+                    <td><div class="rotatenegative"></div></td>
+                </table>
+            
+                <p class="numbers">59) Transform Origin</p>
+                <div class="empty-div">
+                    <div class="green-div"></div>
+                </div>
+            
+                <p class="numbers">60) Translate() Method</p>
+                <div class="empty-div">
+                    <div class="torig"></div>
+                </div><br>
+            
+                <p class="numbers">60) Skew() Method</p>
+                <div class="empty-div">
+                <div class="skew"></div>
+                </div>
+            
+                <p class="numbers">60) Scale y rotate</p>
+                <table>
+                    <td><div class="scale0-7">the factor 0.7 both horizontally and vertically</div></td>
+                    <td><div class="scale1-5">div by a factor of 1.5 horizontally and vertically</div></td>
+                    <td><div class="scaleandrotate">div rotated at 45deg</div></td>
+                </table>
+            
+                <!-- The @keyframes Rule -->
+                <p class="numbers">61) The @keyframes Rule</p>
+                <div class="colorforcc"></div>
+            
+                <!-- The animation-name Property -->
+                <p class="numbers">62) The animation-name Property</p>
+                <div class="animdurat"></div>
+            
+                <!-- 3D rotation -->
+                <p class="numbers">63) 3D Rotation </p>
+                <table>
+                    <td><div class="X">rotateX(150deg)</div></td>
+                    <td><div class="Y">rotateY(150deg)</div></td>
+                    <td><div class="Z">rotateZ(150deg)</div></td>
+                </table>
+                
+                <p class="numbers">64) 3D Translate </p>
+                <div class="empty-div2">
+                    <div id="translate3d">3D translate methods</div>
+                </div><br><br>
+            
+                <p class="numbers">65) 3D Perspective </p>
+                <div class="empty-div2">
+                    <div class="green-div">Example</div>
+                </div>
+            </div><hr>
+            
+            <!-- Filtros de CSS -->
+            <div class="borders">
+            <h2 class="titles"> Filtros de CSS </h2>
+                <!-- 
+                Filter functions include:
+                    blur(),
+                    brightness(), 
+                    contrast(), 
+                    drop-shadow(), 
+                    grayscale(), 
+                    hue-rotate(), 
+                    invert(), 
+                    opacity(), 
+                    saturate(),
+                    sepia().
+                -->
+                
+                <p class="numbers"> 66) Filter Functions</p><br>
+                <table>
+                    <td>
+                        Drop-Shadow(w h b c) <br>
+                        <img class="dropshadow" src="http://www.sololearn.com/images/tree.jpg"/>
+                    </td>
+                    <td>
+                        Gray Scale <br>
+                        <img class="grayscale" src="http://www.sololearn.com/images/tree.jpg"/>
+                    </td>
+                    <td>
+                        Sepia <br>
+                        <img class="sepia" src="http://www.sololearn.com/images/tree.jpg"/>
+                    </td>
+                    <td>
+                        Saturate <br>
+                        <img class="saturate" src="http://www.sololearn.com/images/tree.jpg"/>
+                    </td>
+                    <td>
+                        Hue-Rotate <br>
+                        <img class="huerotate" src="http://www.sololearn.com/images/tree.jpg"/>
+                    </td>
+                    <td>
+                        Invert <br>
+                        <img class="invertimg" src="http://www.sololearn.com/images/tree.jpg"/>
+                    </td>
+                </table>
+            
+                <p class="numbers"> 67) Opacity & Brightness</p><br>
+                <table>
+                    <td>
+                        Opacity 70%<br>
+                        <img class="opacity" src="http://www.sololearn.com/images/tree.jpg"/>
+                    </td>
+                    <td>
+                        Brightness 70% <br>
+                        <img class="brightness" src="http://www.sololearn.com/images/tree.jpg"/>
+                    </td>
+                    <td>
+                        Brightness 1.9 <br>
+                        <img class="brightness2" src="http://www.sololearn.com/images/tree.jpg"/>
+                    </td>
+                    </td>
+                    <td>
+                        Contrast 140% <br>
+                        <img class="contrast" src="http://www.sololearn.com/images/tree.jpg"/>
+                    </td>
+                    <td>
+                        blur 5px <br>
+                        <img class="blur" src="http://www.sololearn.com/images/tree.jpg"/>
+                    </td>
+                    <td>
+                        Multi-filters (blur+hue-rot)<br>
+                        <img class="multifilters" src="http://www.sololearn.com/images/tree.jpg"/>
+                    </td>
+                </table>
+            
+            </div>
+
+
+
+        </div>
 
     </details>
 
 
 
 
+
+
+    <!-- </details> -->
 
 
 </body>
