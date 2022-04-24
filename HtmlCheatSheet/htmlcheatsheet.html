@@ -59,7 +59,11 @@
     summary{
         color: lightslategray;
     }
-
+    code{
+        background-color: rgba(128, 128, 128, 0.135);
+        padding: 5px;
+        
+    }
 </style>
 <body>
    
@@ -68,7 +72,7 @@
 
     <!-- HTML -->
 
-    <details >
+    <details open>
         <summary style="font-size: 50px;"> HTML </summary>
             
         <div class="round">  <!-- Encabezados -->
@@ -106,9 +110,11 @@
             <h2 class="subtitulo"> Atributos </h2>
 
             <span>&lt;p</span> <font color="purple"">style</font> ="<font color="green">color: red;</font>"> Texto de Color Rojo <span>&lt;/p></span> <br><br>
-            <hr>
+            
             <!-- Código -->
-            <span>&lt;font</span> <font color="purple"">color="red"></font> Texto de Color Rojo <span>&lt;/p></span> <br>
+            <code>
+                <span>&lt;font</span> <font color="purple"">color="red"></font> Texto de Color Rojo <span>&lt;/p></span> <br>
+            </code>
             <!-- Código -->
         </div>
 
@@ -117,9 +123,11 @@
             <h2 class="subtitulo"> Imagen </h2> 
             
             <img src="Imagen.png" alt="Texto por si no carga imagen" > <br>
-            <hr>
+            <br>
             <!-- Código -->
-            <span>&lt;img</span> <font color="purple">src=</font> "Imagen.png" <font color="purple">alt=</font>"Texto por si no carga imagen"<span>></span>
+            <code>
+                <span>&lt;img</span> <font color="purple">src=</font> "Imagen.png" <font color="purple">alt=</font>"Texto por si no carga imagen"<span>></span>
+            </code>
             <!-- Código -->
                 
             <!-- 
@@ -140,56 +148,85 @@
             <h2 class="subtitulo"> Listas </h2>
 
                 <!-- Lista desordenada -->
-            <h3 class="subtitles">Lista Desordenada &lt;ul&gt;</h3>
+            <h3 class="subtitles">Tipos de Listas Desordenadas &lt;ul&gt;</h3>
             <ul>
-                <li>Rojo</li>
-                <li>Azul</li>
-                <li>Verde</li>
+                <li type="disc">Disc</li>
+                <li type="circle">Circle</li>
+                <li type="square">Square</li>
             </ul> 
 
-            <details>
+            <details> <!-- Código -->
                 <summary>Mostrar Código</summary>
                 
             <!-- Código -->
                 &lt;ul> <br>
-                &nbsp;    &lt;li> Rojo &lt;/li> <br>
-                &nbsp;    &lt;li> Azul &lt;/li> <br>
-                &nbsp;    &lt;li> Verde &lt;/li> <br>
+                &nbsp;    &lt;li type="disc"> Disc &lt;/li> <br>
+                &nbsp;    &lt;li type="circle"> Circle &lt;/li> <br>
+                &nbsp;    &lt;li type="square"> Square &lt;/li> <br>
                 &lt;/ul> 
             <!-- Código -->
             </details>
 
-            <hr width="15%" align="left"/>
+            <hr width="300px" align="left"/>
 
             <!-- Lista ordenada -->
             <h3 class="subtitles">Lista Ordenada &lt;ol&gt;</h3>
             <ol>
-                <li>Rojo</li>
-                <li>Azul</li>
-                <li>Verde</li>
+                <li type="1">Numeros (1).</li>
+                <li type="a">Letras (a-A).</li>
+                <li type="I">Num romanos (i-I).</li>
             </ol>
 
-            <details>
+            <details> <!-- Código -->
                 <summary>Mostrar Código</summary>
                 
             <!-- Código -->
                 &lt;ol> <br>
-                &nbsp;    &lt;li> Rojo &lt;/li> <br>
-                &nbsp;    &lt;li> Azul &lt;/li> <br>
-                &nbsp;    &lt;li> Verde &lt;/li> <br>
+                &nbsp;    &lt;li type="1"> Numeros (1). &lt;/li> <br>
+                &nbsp;    &lt;li type="a"> Letras (a-A). &lt;/li> <br>
+                &nbsp;    &lt;li type="I">Num romanos (i-I). &lt;/li> <br>
                 &lt;/ol> 
             <!-- Código -->
             </details>
 
+            <hr width="300px" align="left"/>
+
+            <h3 class="subtitles">Listas descriptivas</h3>
+
+            <dl>
+                <dt> &#60;dt> Texto a detallar.
+                    <dd> &#60;dd> Texto descriptivo... &#60;/dd></dd>
+                &#60;/dt>
+            </dl>
+
+            <!-- 
+                <DL>
+                <DT><B>CAR&Oacute;N</B> o <B>CARONTE,</B>
+                <DD>personaje de la mitolog&iacute;a griega, etrusca y romana que ayudaba a los
+                muertos a cruzar los r&iacute;os infernales a cambio de un &oacute;bolo. De
+                ah&iacute; la costumbre, extendida entre griegos y romanos, de colocar una moneda
+                en la boca de los difuntos.
+                <DT><B>CARONA,</B>
+                <DD>n.f. Manta, tela o almohadilla que se pone entre la silla o albarda y el
+                sudadero para que no se lastimen las caballer&iacute;as.
+                <DT><B>CARON&Iacute;,</B>
+                <DD>r. de Venezuela (Bol&iacute;var), el mayor afluente del Orinoco; 925 km.
+                Destaca por las diferencias de amplitud y por los saltos (Saltos del Caron&iacute;,
+                de 2.750 m de long.). Su gran potencia hidr&aacute;ulica es aprovechada en parte
+                por las centrales de Macagua y Guri.
+                </DL>
+            -->
         </div>
 
         <div class="round">  <!-- Tabla -->
             <h2 class="subtitulo"> Tabla</h2>
             <table border="2">
+                <caption>Colores</caption>
                 <tr>
                     <td bgcolor="red">Rojo</td>
                     <td>Azul</td>
                     <td>Verde</td>
+                    <td rowspan="2">Violeta</td>
                 </tr>
                 <tr>
                     <td>Amarillo</td>
@@ -201,30 +238,53 @@
                 <summary>Mostrar Código</summary>
                 &lt;table border="2"> <br>
                     &lt;tr> <br>
+                    &lt;caption> Colores &lt;/caption> <br>
                         &nbsp;    &lt;td bgcolor="red">Rojo</td> <br>
                         &nbsp;    &lt;td>Azul</td> <br>
                         &nbsp;    &lt;td>Verde</td> <br>
-                    &lt;/tr> <br>
+                        &nbsp;    &lt;td rowspan="2">Violeta</td> <br>
+                        &lt;/tr> <br>
                     &lt;tr> <br>
                         &nbsp;    &lt;td>Amarillo</td> <br>
                         &nbsp;    &lt;td colspan="2">Naranja</td> <br>
                     &lt;/tr> <br>
                 &lt;/table> <br>
             </details>
+
+
+            <!-- 
+                Atributos: BORDER, CELLPADDING, CELLSPACING.
+                    VALING = alinear verticalmente. (top, bottom, middle)
+                    ALING = alinear horizontalmente. (right, left, center)
+
+             -->
+
+
         </div>
 
         <div class="round"> <!-- Links -->
             <h2 class="subtitulo"> Links </h2>
+
+            <b><u>Link Externo: </u></b> <br>
             <a href="https://nikitox24.github.io/Main/" target="_blank">
                 Mi Pag Web
-            </a> <br><hr>
-
+            </a> <br>
             <!-- Código -->
-                <span>&lt;a</span> <font color="purple">href=</font>"https://nikitox24.github.io/Main/" 
-                    <font color="purple">target=</font>"_blank">
-                    Mi Pag Web
+            <code>
+                <span>&lt;a</span> <font color="purple">href=</font>"<u>https://nikitox24.github.io/Main/#section</u>"
+                <font color="purple">target=</font>"_blank">
+                Mi Pag Web
                 <span>&lt;/a></span>
+            </code>
             <!-- Código -->
+            <br> <br>
+            <b><u> Link Interno:</u> </b> <br>
+            <a name="inicio"> ("Este es el principio del documento") </a> <br>
+            Crear: <code> &lt;a name="principio"> Este es el principio del documento &lt;/a> </code> <br><br>
+
+            <a href="#principio"> Ir al Principio </a><br>
+            Acceder: <code> &lt;a href="#principio" &lt;/a></code>
+
         </div>
 
         <div class="round"> <!-- Tipos de elementos en Niveles -->
@@ -603,7 +663,6 @@
               </div>
               </section>
         </div>
-
 
         <div class="round">  <!-- Canvas & SVG -->
         <section id="Canvas Vs SVG">
