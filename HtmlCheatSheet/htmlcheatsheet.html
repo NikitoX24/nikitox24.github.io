@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../Apuntes/css.css"> -->
     <title>HTML CheatSheet</title>
 </head>
 <style>
@@ -62,7 +63,6 @@
     code{
         background-color: rgba(128, 128, 128, 0.135);
         padding: 5px;
-        
     }
 </style>
 <body>
@@ -72,7 +72,7 @@
 
     <!-- HTML -->
 
-    <details open>
+    <details >
         <summary style="font-size: 50px;"> HTML </summary>
             
         <div class="round">  <!-- Encabezados -->
@@ -264,28 +264,60 @@
 
         <div class="round"> <!-- Links -->
             <h2 class="subtitulo"> Links </h2>
+            <dt><b> Colores en &#60body>:</b></dt>
+            <dd>
+                <u>link:</u> no visitados. <br>
+                <u>vlink:</u> visitados. <br>
+                <u>alink:</u> al activarlos. <br>
+            </dd> <br>
 
-            <b><u>Link Externo: </u></b> <br>
-            <a href="https://nikitox24.github.io/Main/" target="_blank">
-                Mi Pag Web
-            </a> <br>
-            <!-- Código -->
-            <code>
-                <span>&lt;a</span> <font color="purple">href=</font>"<u>https://nikitox24.github.io/Main/#section</u>"
-                <font color="purple">target=</font>"_blank">
-                Mi Pag Web
-                <span>&lt;/a></span>
-            </code>
-            <!-- Código -->
-            <br> <br>
-            <b><u> Link Interno:</u> </b> <br>
-            <a name="inicio"> ("Este es el principio del documento") </a> <br>
-            Crear: <code> &lt;a name="principio"> Este es el principio del documento &lt;/a> </code> <br><br>
+            <dt>
+                <b><u>Link Externo: </u></b> <br>
+            </dt>
+            <dd>
+                <a href="https://nikitox24.github.io/Main/" target="_blank">
+                    Mi Pag Web
+                </a> <br>
+                <!-- Código -->
+                <code>
+                    <span>&lt;a</span> <font color="purple">href=</font>"<u>https://nikitox24.github.io/Main/#section</u>"
+                    <font color="purple">target=</font>"_blank"<span>></span>
+                    Mi Pag Web
+                    <span>&lt;/a></span>
+                </code>
+                <!-- Código -->
+            </dd> <br> <br>
+            <dt>
+                <b><u> Link Interno:</u> </b> <br>
+            </dt>
+            <dd>
+                <a href="../index.html">ir a index</a> <br>
+                <!-- Código -->
+                <code>
+                    <span>&lt;a</span> <font color="purple">href=</font>"<u>../index.html</u>"<span>></span> ir a index<span>&lt;/a></span>
+                </code>
+                <!-- Código -->
 
-            <a href="#principio"> Ir al Principio </a><br>
-            Acceder: <code> &lt;a href="#principio" &lt;/a></code>
-
+                <br><br>
+                <a name="inicio"> ("Este es el principio del documento") </a> <br>
+                Crear: <code> &lt;a name="principio"> Este es el principio del documento &lt;/a> </code> <br><br>
+                
+                <a href="#principio"> Ir al Principio </a><br>
+                Acceder: <code> &lt;a href="#principio" &lt;/a></code>
+            </dd>
+                
         </div>
+
+    <!-- 
+        <div class="round">
+            <h2 class="subtitulo"> Frame </h2>
+
+            <frameset cols="25%,50%,25%">
+                <iframe src="https://github.com/NikitoX24" />
+                <noframes>Frames not supported!</noframes>
+            </frameset>
+        </div> 
+    -->
 
         <div class="round"> <!-- Tipos de elementos en Niveles -->
             <h2 class="subtitulo"> Tipos de elementos en Niveles </h2>
@@ -941,7 +973,7 @@
             
         </style>
 
-        <div class="round">
+        <div class="borders">
                          
             <h1 class="titles"> CSS </h1> 
             <h3 class="titles"> Cascading Style Sheets </h3>
@@ -949,31 +981,76 @@
             <!-- (Basics) -->
             <div class="borders">
                 <h2 class="titles"> Basics </h2>
-            
-                <!-- Type selectors -->
+                
+                <pre>
+                    <<span>style</span>>
+                        .<font color="green">selector</font>{
+                            <font color="blue">prepiedad</font>: <font color="orange">valor</font>;
+                        }
+                    <<span>/style</span>>
+                </pre>
+
+                <!-- Selector -->
                 <div class="borders">
-                    <p class="numbers"> 1) Type selectors</p>
-                    <h1 class="selector"> This is my first paragraph. </h1>
+                    <p class="numbers"> 1) Selector</p>
+                    <p class="selector"> Este es un parrafo con un selector. </p>
+                                        
+                    <code>
+                        < p class="selector"> Este es un parrafo con un selector. < /p> <br>
+                                                
+                        .selector{
+                            color: darkred;
+                        }                        
+                    </code>
+                    <!-- Code -->
+                    <style>
+                        .selector{
+                            color:darkred;
+                        }
+                    </style>
+                    <!-- Code -->
+
                 </div>
             
                 <!-- Id -->
                 <div class="borders">
                     <p class="numbers"> 2) Id </p>
-                    <div id="intro">
-                        <p>This paragraph is in the intro section.</p>
-                    </div>
-                    <p> This paragraph is not in the intro section.</p> <hr>
+                        <p id="idpurple">Este es un parrafo con un id.</p>
+                        
+                        <code>
+                            < p id="idpurple">Este es un parrafo con un id.< /p> <br>
+                            #idpurple{
+                                color:purple;
+                            }
+                        </code>
+                        <!-- Code -->
+                        <style>
+                            #idpurple{
+                                color:purple;
+                            }
+                        </style>
+                        <!-- Code -->
                 </div>
             
                 <!-- Descendent Selectors -->
                 <div class="borders">
                     <p class="numbers"> 3) Descendent Selectors </p>
-                    <div id="intro">
+
+                    <div id="desendentselector">
                         <p class="first">This is a <em> paragraph</em>.</p>
                         <p> This is the second paragraph. </p>
                     </div>
                     <p class="first"> This is not in the intro section.</p>
                     <p> The second paragraph is not in the intro section. </p>
+
+                    <!-- Code -->
+                    <style>
+                        #desendentselector .first em{
+                          color:pink;
+                          background-color: rgb(100, 95, 95);
+                        }
+                    </style>
+                    <!-- Code -->
                 </div>
             </div>
             
