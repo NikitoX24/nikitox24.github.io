@@ -57,11 +57,11 @@ body{
     color: red; /* red, #F00, rgb(255,0,0) */
   }
 
+
   /* 9) Text Align (Horizontal)*/
   p.center {
     text-align: center; /* left, right, center, justify */
     background-color: rgba(128, 128, 128, 0.398);
-
   }
 
   /* 10) Text Align (Vertical) */
@@ -93,7 +93,7 @@ body{
   .main {
     height: 150px; width: 400px;
     background-color: rgba(128, 128, 128, 0.398);
-    display: inline-table;
+    display: inline-table; 
   }
   .paragraph {
     display: table-cell;

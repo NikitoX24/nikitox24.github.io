@@ -121,27 +121,59 @@
         <div class="round">  <!-- Imagen -->
 
             <h2 class="subtitulo"> Imagen </h2> 
-            
-            <img src="Imagen.png" alt="Texto por si no carga imagen" > <br>
-            <br>
+            <u> Imagen con texto alternativo: </u> <br><br>
+            <img src="Imagen.png" alt="Texto por si no carga imagen"> <br>
             <!-- Código -->
             <code>
                 <span>&lt;img</span> <font color="purple">src=</font> "Imagen.png" <font color="purple">alt=</font>"Texto por si no carga imagen"<span>></span>
             </code>
             <!-- Código -->
-                
-            <!-- 
-            Atributos:
-                height=""
-                width=""
-                border=""
-                style="" (color, font, size, etc)
-                href="" (hipervinculo, link para redirigirse)
-                src=""  (ruta de acceso de un link para poner una imagen)
-                alt=""
-                <font color="">
 
+            <!-- Atributos de img...
+                height, width, border.
+                align=""    (posicion del texto)
+                style=""    (color, font, size, etc)
+                href=""     (hipervinculo, link para redirigirse)
+                src=""      (ruta de acceso de un link para poner una imagen)
+                alt=""      (texto por si la imagen no carga)
+                <font color="">
             -->
+
+            <br><br> <hr>
+            Imagen con link: <br>
+            <a href="/Imgs/Apple.png"><img src="/Imgs/Apple.png" alt="apple" width="100px"></a> <br>
+            <!-- Codigo -->
+            <code>
+                < a href="/Imgs/Apple.png">< img src="/Imgs/Apple.png" alt="apple" width="100px"></a>
+            </code>
+            <!-- Codigo -->
+
+            <br><br> <hr>
+            Igamen con Mapa: <br>
+            <img src="/Imgs/imgMap.png" usemap="htmlcheatsheet.html#ejemplo_mapa" height="163px">
+            <map name="ejemplo_mapa">
+                <area shape="rect" coords="18,16,171,73" href="/Imgs/Apple.png" alt="rectangulo">
+                <area shape="circle" coords="263,55,36" href="/Imgs/css_logo.png" alt="circulo">
+                <area shape="poly" coords="163,91,213,141,127,141" href="/Imgs/Orange.png" alt="poligono">
+            </map>
+            <!-- Atributos de AREA...
+                shape=""    (RECT, CIRCLE, POLY)
+                coords=""   (RECT(izq, sup, der, inf), CIRCLE(centro-x, centro-y, redia), POLY(x1, y1, x2, y2, ..., xN, yN))
+                href=""     (URL al apuntar)
+                nohref=""   (indica q este area no tiene enlace)
+             -->
+             <br>
+             <!-- codigo -->
+                <code>
+                    < img src="/Imgs/imgMap.png" usemap="htmlcheatsheet.html#ejemplo_mapa" height="163px"> <br>
+                    < map name="ejemplo_mapa"> <br>
+                        < area shape="rect" coords="18,16,171,73" href="/Imgs/Apple.png" alt="rectangulo"> <br>
+                        < area shape="circle" coords="263,55,36" href="/Imgs/css_logo.png" alt="circulo"> <br>
+                        < area shape="poly" coords="163,91,213,141,127,141" href="/Imgs/Orange.png" alt="poligono"> <br>
+                    < /map> <br>
+                </code> 
+             <!-- codigo -->
+             
         </div>
 
         <div class="round">  <!-- Listas -->
@@ -994,21 +1026,22 @@
                 <div class="borders">
                     <p class="numbers"> 1) Selector</p>
                     <p class="selector"> Este es un parrafo con un selector. </p>
-                                        
+                    <!-- Code -->
                     <code>
                         < p class="selector"> Este es un parrafo con un selector. < /p> <br>
-                                                
+                        
                         .selector{
                             color: darkred;
                         }                        
                     </code>
                     <!-- Code -->
+                    <!-- Style -->
                     <style>
                         .selector{
                             color:darkred;
                         }
                     </style>
-                    <!-- Code -->
+                    <!-- style -->
 
                 </div>
             
@@ -1016,7 +1049,7 @@
                 <div class="borders">
                     <p class="numbers"> 2) Id </p>
                         <p id="idpurple">Este es un parrafo con un id.</p>
-                        
+                        <!-- Code -->
                         <code>
                             < p id="idpurple">Este es un parrafo con un id.< /p> <br>
                             #idpurple{
@@ -1024,33 +1057,51 @@
                             }
                         </code>
                         <!-- Code -->
+                        <!-- style -->
                         <style>
                             #idpurple{
                                 color:purple;
                             }
                         </style>
-                        <!-- Code -->
+                        <!-- style -->
                 </div>
             
                 <!-- Descendent Selectors -->
                 <div class="borders">
-                    <p class="numbers"> 3) Descendent Selectors </p>
+                    <p class="numbers"> 3) Selector descendiente </p>
 
-                    <div id="desendentselector">
-                        <p class="first">This is a <em> paragraph</em>.</p>
-                        <p> This is the second paragraph. </p>
+                    <div id="idpurple2">
+                        Esto está dentro de un div con id "idpurple2".
+                        <p class="first">Esto es un parrafo con selector "first" y con un <em> "em"</em>.</p>
+                        <p> Esto es otro parrafo dentro del mismo div. </p>
                     </div>
-                    <p class="first"> This is not in the intro section.</p>
-                    <p> The second paragraph is not in the intro section. </p>
+                    <p class="first"> Esto es un parrafo fuera del div, pero con selector"first" y un <em>"em"</em>.</p>
+                    <p> Este es otro parrafo fuera del div y sin selector. </p>
 
                     <!-- Code -->
-                    <style>
-                        #desendentselector .first em{
+                    <code>
+                        #idpurple2{
+                            color:purple;
+                            background-color: rgba(128, 128, 128, 0.356);
+                        }<br>
+                        #idpurple2 .first em{
                           color:pink;
-                          background-color: rgb(100, 95, 95);
+                          background-color: rgba(100, 95, 95, 0.551);
+                        }
+                    </code>
+                    <!-- Code -->
+                    <!-- Style -->
+                    <style>
+                        #idpurple2{
+                            color:purple;
+                            background-color: rgba(128, 128, 128, 0.356);
+                        }
+                        #idpurple2 .first em{
+                          color:pink;
+                          background-color: rgba(100, 95, 95, 0.551);
                         }
                     </style>
-                    <!-- Code -->
+                    <!-- Style -->
                 </div>
             </div>
             
@@ -1058,74 +1109,190 @@
             <div class="borders">
                 <h2 class="titles"> Text </h2>
                 
-                <!-- Font-Family -->
                 <div class="borders">
+                    <!-- Font-Family -->
                     <p class="numbers">4) Font-Family</p>
                     <p class="serif">
                         This is a paragraph shown in serif font.
                     </p>
+                    <code>
+                        p.serif {
+                            font-family: "Times New Roman", Times, serif;
+                        }
+                    </code>
                 
-                <!-- Font-Style -->
+                    <!-- Font-Style -->
                     <p class="numbers">5) Font-Style</p>
                     <p class="italic">
                         This is a paragraph in italic style.
                     </p>
+                    <code>
+                        p.italic{
+                            font-style: italic; /* normal, italic, oblique */
+                        }
+                    </code>
                 
-                <!-- Font-Weight -->
+                    <!-- Font-Weight -->
                     <p class="numbers">6) Font-Weight</p>
                     <p class="weight">
                         This is a paragraph in bolder.
                     </p>
+                    <code>
+                        p.weight{
+                            font-weight: 900; /* lighter(100), normal(400), bold(700), bolder(900) */
+                        }
+                    </code>
             
-                <!-- Font-Variant -->
+                    <!-- Font-Variant -->
                     <p class="numbers">7) Font-Variant</p>
                     <p class="variant">
                         This is a paragraph in small-caps.
                     </p>
+                    <code>
+                        p.variant{
+                            font-variant: small-caps; /* normal, small-caps, inherit */
+                        }
+                    </code>
             
-                <!-- Font-Color -->
+                    <!-- Font-Color -->
                     <p class="numbers">8) Font-Color</p>
                     <p class="colored">
                         This is a paragraph in red.
                     </p>
-                </div>
+                    <code>
+                        p.colored{
+                            color: red; /* red, #F00, rgb(255,0,0) */
+                        }
+                    </code>
+
+                    <!-- style -->
+                    <style>
+                        /* 4) Font Family */
+                        p.serif {
+                            font-family: "Times New Roman", Times, serif;
+                        }
+                        /* 5) Font Style */
+                        p.italic{
+                            font-style: italic; /* normal, italic, oblique */
+                        }
+                        /* 6) Font Weight (Grosor) */
+                        p.weight{
+                            font-weight: 900; /* lighter(100), normal(400), bold(700), bolder(900) */
+                        }
+                        /* 7) Font Variant */
+                        p.variant{
+                            font-variant: small-caps; /* normal, small-caps, inherit */
+                        }
+                        /* 8) Font Color */
+                        p.colored{
+                            color: red; /* red, #F00, rgb(255,0,0) */
+                        }
+                    </style>
+                    <!-- style -->
+                    </div>
             
-                <!-- Text-Align (Horizontal)-->
                 <div class="borders">
+                    <!-- Text-Align (Horizontal)-->
                     <p class="numbers">9) Text-Align (Horizontal)</p>
                     <div style="width: 500px;">
                         <p class="center">This paragraph is aligned to center</p>
                     </div>
-                
+                    <!-- style -->
+                    <style>
+                        p.center {
+                            text-align: center; /* left, right, center, justify */
+                            background-color: rgba(128, 128, 128, 0.216);
+                        }
+                    </style>
+                    <!-- style -->
             
-                <!-- Text-Align (Vertical) -->
+                    <!-- Text-Align (Vertical) -->
                     <p class="numbers">10) Text-Align (Vertical)</p>
-                    <table border="1" cellpadding="2" cellspacing="0" style="height: 150px;" ">
+                    <table border="1" cellpadding="2" cellspacing="0" style="height: 150px;" >
                         <tr>
                         <td class="top">Top</td>
                         <td class="middle">Middle</td>
                         <td class="bottom">Bottom</td>
                         </tr>
                     </table>
+                    <!-- style -->
+                    <style>
+                        td.top {
+                            vertical-align: top;
+                        }
+                        td.middle {
+                            vertical-align: middle;
+                        }
+                        td.bottom {
+                            vertical-align: bottom;
+                        }
+                        </style>
+                    <!-- style -->
                 </div>
             
                 <!-- Text-Align Property (Vertical) -->
                 <div class="borders">
                     <p class="numbers">11) Text-Align Property (Vertical)</p>
-                    <p>This is an <span class="baseline"> <b> inline text </b></span> example.</p>
-                    <p>This is a <span class="sub"><b>sub line text</b></span> example.</p>
+
+                    <p> This is an <span class="baseline"> <b> inline text </b></span> example.</p>
+                    <code> span.baseline { vertical-align: baseline; } </code> <hr>
+
+                    <p> This is a <span class="sub"><b>sub line text</b></span> example.</p>
+                    <code> span.sub { vertical-align: sub;} </code> <hr>
+
                     <p> This is a <span class="super"><b>super line text</b></span> example.</p>
+                    <code> span.super { vertical-align: super; } </code> <hr>
+
                     <p> This is a <span class="pixel"><b>pixel</b></span> example.</p>
+                    <code> span.pixel { vertical-align: -10px; /* px(pixels), pt(points), cm(centimeters), %(percentage) */ } </code>
                 </div>
+                <style>
+                    span.baseline {
+                        vertical-align: baseline;
+                    }
+                    span.sub {
+                        vertical-align: sub;
+                    }
+                    span.super {
+                        vertical-align: super;
+                    }
+                    span.pixel {
+                        vertical-align: -10px; /* px(pixels), pt(points), cm(centimeters), %(percentage) */
+                    }
+                </style>
             
                 <!-- Text-Align Property Div (Vertical) -->
                 <div class="borders">
                     <p class="numbers">12) Text-Align Property Div (Vertical)</p>
                     <div class="main">
                         <div class="paragraph">
-                        This text is aligned to the middle
+                        Aligned to the middle of div.
                         </div>
-                    </div>
+                    </div> <br>
+                    <style>
+                        .main {
+                            height: 150px; width: 450px;
+                            background-color: rgba(128, 128, 128, 0.398);
+                            display: inline-table;
+                        }
+                        .paragraph {
+                            display: table-cell;
+                            vertical-align: middle;
+                        }
+                    </style>
+                <!-- code -->
+                    <code>
+                        .main {
+                            height: 150px; width: 450px;
+                            background-color: rgba(128, 128, 128, 0.398);
+                            display: inline-table;
+                        } <br>
+                        .paragraph {
+                            display: table-cell;
+                            vertical-align: middle;
+                        }
+                    </code>
+                <!-- code -->
                 </div>
             
                 <!-- Text-decoration -->
@@ -1789,9 +1956,15 @@
 
 
 
+    <!-- JavaScript -->
+    
+    <details >
+        <summary style="font-size: 50px;"> JavaScript </summary>
+
+        
 
 
-    <!-- </details> -->
+    </details>
 
 
 </body>
