@@ -63,6 +63,7 @@
     code{
         background-color: rgba(128, 128, 128, 0.135);
         padding: 5px;
+        text-decoration: none;
     }
 </style>
 <body>
@@ -1245,7 +1246,6 @@
 
                     <p> This is a <span class="pixel"><b>pixel</b></span> example.</p>
                     <code> span.pixel { vertical-align: -10px; /* px(pixels), pt(points), cm(centimeters), %(percentage) */ } </code>
-                </div>
                 <style>
                     span.baseline {
                         vertical-align: baseline;
@@ -1260,6 +1260,7 @@
                         vertical-align: -10px; /* px(pixels), pt(points), cm(centimeters), %(percentage) */
                     }
                 </style>
+                </div>
             
                 <!-- Text-Align Property Div (Vertical) -->
                 <div class="borders">
@@ -1298,14 +1299,37 @@
                 <!-- Text-decoration -->
                 <div class="borders">
                     <p class="numbers">13) Text-decoration</p>
-                    <p class="none">This is <b> default</b> style of the text (none).</p>
-                    <p class="inherit">This text <b> inherits</b>  the decoration of the parent.</p>
-                    <p class="overline">This is <b> overlined </b> text</p>
-                    <p class="underline">This is <b> underlined</b> text.</p>
-                    <p class="line-through">This is <b> lined-through</b> text.</p>
-                    <p class="blink">This is <b> blink</b> text.</p>
+
+                    <p class="none">This is <b> default</b> style of the text (none). <br>
+                    <code> text-decoration: none; </code></p>
+
+                    <p class="inherit">This text <b> inherits</b>  the decoration of the parent. <br>
+                    <code> text-decoration: inherit; </code> </p>
+
+                    <p class="overline">This is <b> overlined </b> text. <br>
+                    <code> text-decoration: overline; </code></p>
+                    
+                    <p class="underline">This is <b> underlined</b> text. <br>
+                    <code> text-decoration: underline; </code></p>
+
+                    <p class="line-through">This is <b> lined-through</b> text. <br>
+                    <code> text-decoration: line-through; </code></p>
+
+                    <p class="blink">This is <b> blink</b> text. <br>
+                    <code> text-decoration: blink; </code></p>
+
+                    <!-- style -->
+                    <style>
+                        p.none b{text-decoration: none;}
+                        p.inherit b{text-decoration: inherit;}
+                        p.overline b{text-decoration: overline;}
+                        p.underline b{text-decoration: underline;}
+                        p.line-through b{text-decoration: line-through;}
+                        p.blink b{text-decoration: blink;} /* parpadear (algunos no funciona) */
+                    </style>
+                    <!-- style -->
                 </div>
-            
+
                 <!-- text-indent (sangria) -->
                 <div class="borders">
                     <p class="numbers">14) text-indent (sangria)</p>
@@ -1314,15 +1338,32 @@
                         <strong>text-indent </strong> property. <br>
                         First line of our text is indented to the right in 60px. <br>
                         Besides pixels you can also use other measurement units, 
-                        like pt, cm, em, etc. 
+                        like pt, cm, em, etc. <br>
+                        <code> text-indent: 60px; </code>
                     </p>
+                    <style>
+                         p.indent{
+                            text-indent: 60px; /* -60px */
+                        }
+                    </style>
                 </div>
             
                 <!-- Text-Sadow -->
                 <div class="borders">
                     <p class="numbers">15) Text-Sadow</p>
                     <h1 class="shadowT"> Text-shadow example</h1>
+                    <code> text-shadow: 5px 2px 6px grey; <br> (x, y, blur radius, color) Se puede poner mas de una sombra separandola con coma.</code>
+                        <hr>
                     <h1 class="blurT"> Text-shadow with blur effect</h1>
+                    <code> text-shadow: rgba(0, 0, 255, 1) -1px -1px 0.3em; </code>
+                    <style>
+                        h1.shadowT{
+                            text-shadow: 5px 2px 2px grey; /* (x, y, blur radius, color) Se puede poner mas de una sombra separandola con coma */
+                        }
+                        h1.blurT{
+                            text-shadow: rgba(0, 0, 255, 1) -1px -1px 0.3em; /* Internet Explorer 9 and earlier do not support the text-shadow property. */
+                        }
+                    </style>
                 </div>
                     
                 <!-- Text-Transform -->
@@ -1330,8 +1371,14 @@
                     <p class="numbers">16) Text-Transform</p>
                     <p class="capitalize">
                         el valor "capitalize" transforma el primer carácter de cada palabra en mayúsculas; 
-                        Todos los demás caracteres no se ven afectados.
-                    </p> 
+                        Todos los demás caracteres no se ven afectados. <br>
+                    </p>
+                    <code> text-transform: capitalize; <br><u>Valores</u>: capitalize, uppercase, lowercase.</code>
+                    <style>
+                         p.capitalize{
+                            text-transform: capitalize; /* capitalize, uppercase, lowercase */
+                        }
+                    </style>
                 </div>
                 
                 <!-- Text-Spacing -->
@@ -1339,13 +1386,23 @@
                     <p class="numbers">17) Text-Spacing </p>
                     <div>
                         <p>This paragraph has no additional letter-spacing applied.</p>
-                        
+                            <hr>
                         <!-- Letter-Spacing -->
                         <p class="lspacing">This paragraph is letter-spaced at 4px.</p>
-                        
+                        <code> letter-spacing: 4px; </code>
+                            <hr>
                         <!-- Word-Spacing -->
                         <p class="wspacing">This paragraph is word-spaced at 30px.</p>
+                        <code> word-spacing: 30px; </code>
                     </div>
+                    <style>
+                        p.lspacing{
+                            letter-spacing: 4px; /* px, pt, cm, mm, ( + , - ) */
+                        }                        
+                        p.wspacing{
+                            word-spacing: 30px;
+                        }
+                    </style>
                 </div>
             
                 <!-- Wite-Spacing -->
@@ -1355,11 +1412,22 @@
                         Este párrafo           tiene varios 
                         espacios y un salto        de línea,
                         pero   será ignorado, ya    que usamos el     valor
-                        nowrap.
-                    </p><hr>
+                        nowrap. <br>
+                    <code>
+                        white-space: nowrap; <br>
+                        <u>Valores</u>: pre, pre-line, pre-wrap.
+                    </code>
+                    </p>
+                    <style>
+                        p.witespacing{
+                            white-space: nowrap; /* pre, pre-line, pre-wrap */
+                        }
+                    </style>
                 </div>
             </div>
-                
+            
+
+
             <!-- (Properties) -->
             <div class="borders">
             <h2 class="titles"> Properties </h2>
@@ -1370,6 +1438,12 @@
                     <div>
                         <!-- Box-Border -->
                         <p class="border">This is an example of a solid border.</p> <hr>
+                        <style>
+                        p.border{
+                            padding: 10px;  /* relleno*/
+                            border: 5px solid green; /* tamaño, estilo, color */
+                        }
+                        </style>
             
                         <!-- Border-Style -->
                         <p class="none">This paragraph has no border.</p>
