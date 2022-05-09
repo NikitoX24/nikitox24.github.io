@@ -1437,30 +1437,65 @@
                     <!-- Box-Model -->
                     <div>
                         <!-- Box-Border -->
-                        <p class="border">This is an example of a solid border.</p> <hr>
+                        <p class="border">This is an example of a solid border.</p>
                         <style>
                         p.border{
                             padding: 10px;  /* relleno*/
                             border: 5px solid green; /* tamaño, estilo, color */
                         }
                         </style>
-            
+                        <code>
+                            p.border{ <br>
+                                <u>border</u>: 5px solid green; <br>
+                            }
+                        </code>
+                        <hr> 
+
+                        <h2>Border-Style</h2>
+
                         <!-- Border-Style -->
-                        <p class="none">This paragraph has no border.</p>
-                        <p class="dotted">This is a dotted border.</p>
-                        <p class="dashed">This is a dashed border.</p>
-                        <p class="double">This is a double border.</p>
-                        <p class="groove">This is a grooved border.</p>
-                        <p class="ridge">This is a ridged border.</p>
-                        <p class="inset">This is an inset border.</p>
-                        <p class="outset">This is an outset border.</p>
-                        <p class="hidden">This is a hidden border.</p><hr>
-            
+                        <p class="none">none.</p>
+                        <p class="dotted">dotted.</p>
+                        <p class="dashed">dashed.</p>
+                        <p class="double">double.</p>
+                        <p class="groove">grooved.</p>
+                        <p class="ridge">ridged.</p>
+                        <p class="inset">inset.</p>
+                        <p class="outset">outset.</p>
+                        <p class="hidden">hidden.</p><hr>
+
+                        <style>
+                            p.none {border-style: none;}
+                            p.dotted {border-style: dotted;} /* punteado. ( . . . . .) */
+                            p.dashed {border-style: dashed;} /* discontinua. ( - - - ) */
+                            p.double {border-style: double;} /* doble borde */
+                            p.groove {border-style: groove;} /* entrante */
+                            p.ridge {border-style: ridge;}   /* saliente */
+                            p.inset {border-style: inset;}   /* adentro */
+                            p.outset {border-style: outset;} /* afuera */
+                            p.hidden {border-style: hidden;} /* oculto */
+                        </style>
+
+
                         <!-- Width & Height -->
                         <p class="numbers">20) Width & Height</p>
                         <div class="wh">
                         The total width and height of this element is 100px.
-                        </div>
+                        <style>
+                            div.wh{
+                                border: 5px solid green;
+                                width: 100px;
+                                height: 90px;
+                            }
+                        </style>
+                        </div><br>
+                        <code>
+                            div.wh{
+                                border: 5px solid green;
+                                width: 100px;
+                                height: 90px;
+                            }
+                        </code>
                     </div>
                 </div>
                 
@@ -1480,7 +1515,22 @@
                 <!-- Background-Image -->
                 <div class="borders">
                     <p class="numbers">21)  Background-Image </p>
-                    <p class="background-image">background-image</p>
+                    <p class="background-image">Imagen de fondo</p>
+                    <style>
+                         p.background-image{
+                            padding: 15px;
+                            background-image: url("../Imgs/banner_orange.png");
+                            background-repeat: no-repeat;/* repeat-x, repeat-y, no-repeat, inherit */
+                            width: 300px;
+                        }
+                    </style>
+                    <code>
+                        p.background-image{ <br>
+                            background-image: url("../Imgs/banner_orange.png"); <br>
+                            background-repeat: no-repeat; <br>
+                        } <br>
+                        <u>valores</u>: repeat-x, repeat-y, no-repeat, inherit.
+                    </code>
                 </div>
                 
                 <!-- List-Style-Type -->
@@ -1492,22 +1542,47 @@
                         <li>Green</li>
                         <li>Blue</li>
                         </ol>
+                        <code>list-style-type: lower-alpha;</code> <hr>
+
                         <ul class="circle">
                         <li>Red</li>
                         <li>Green</li>
                         <li>Blue</li>
                         </ul>
+                        <code>list-style-type: circle;</code> <hr>
+
                         <ul class="square">
                         <li>Red</li>
                         <li>Green</li>
                         <li>Blue</li>
                         </ul>
+                        <code>list-style-type: square;</code> <hr>
+
                         <ul class="uimage">
                         <li>Red</li>
                         <li>Green</li>
                         <li>Blue</li>
                         </ul>
+                        <code>list-style-image: url("../Imgs/loguito.png"); <br></code> <hr>
                     </div>
+                    <style>
+                        ul{
+                            list-style: square outside none;/* list-style-type, list-style-image, list-style-position */ 
+                        }
+                        ol.lower-alpha {
+                            list-style-type: lower-alpha;
+                        }
+                        ul.circle {
+                            list-style-type: circle;
+                        }
+                        ul.square {
+                            list-style-type: square;
+                        }
+                        ul.uimage{
+                            list-style-image: url("../Imgs/loguito.png");
+                            /* list-style-position: outside; insede, outside */
+                        }
+                    </style>
                 </div>
                 
                 
@@ -1518,27 +1593,40 @@
                     <table class="styled" border="1">
                         <caption>"Caption-Side Text"</caption>
                         <tr>
-                        <td>Red</td>
-                        <td>Green</td>
+                            <td>Red</td>
+                            <td>Green</td>
                         </tr>
                         <tr>
-                        <td>Blue</td>
-                        <td>Yellow</td>
+                            <td>Blue</td>
+                            <td>Yellow</td>
                         </tr>
                     </table><br>
+                    <style>
+                        table.styled{
+                            caption-side: top; /* top, bottom */
+                            border-collapse: separate;
+                            border-spacing: 20px 20px;
+                        }
+                    </style>
             
                     <!-- Empty-Cells -->
                     <p class="numbers">24)</p>
                     <table class="styled2" border="1">
                         <tr>
-                        <td>HTML</td>
-                        <td>CSS</td>
+                            <td>HTML</td>
+                            <td>CSS</td>
                         </tr>
                         <tr>
-                        <td>JavaScript</td>
-                        <td></td>
+                            <td>JavaScript</td>
+                            <td></td>
                         </tr>
                     </table>
+                    <style>
+                        table.styled2{
+                            border-collapse: separate;
+                            empty-cells: hide;
+                        }
+                    </style>
             
                     <!-- Table-Style -->
                     <p class="numbers">25)</p>
@@ -1548,7 +1636,7 @@
                         <td width=“10%">500.000.000.000.000</td>
                         <td width="90%">20.000</td>
                         </tr>
-                    </table>
+                    </table> <hr>
             
                     <!-- Table-layout -->
                     <p>Table-layout is set to <strong>fixed</strong></p>
@@ -1558,6 +1646,23 @@
                         <td width="90%">20.000</td>
                         </tr>
                     </table>
+
+                    <style>
+                        #tablee {
+                            border-collapse: separate;
+                            width: 100%;
+                            border: 1px solid gray;
+                        } 
+                        td {
+                            border: 1px solid gray;
+                        }
+                        table.auto {
+                            table-layout: auto;
+                        }
+                        table.fixed {
+                            table-layout: fixed;
+                        }
+                    </style>
                 </div>
             
                 <!-- Links -->
@@ -1568,6 +1673,30 @@
                         This link is hovered when we mouse over it
                         </a>
                     </p>
+                    <code>
+                        a:hover{
+                            color: red;
+                        }
+                    </code>
+                    <details>
+                        <summary>Selectors & Propiedades...</summary>
+                        a:link : define el estilo de los enlaces normales no visitados <br>
+                        a:visited : define el estilo de los enlaces visitados <br>
+                        a:active : a el enlace se activa una vez que hace clic en él <br>
+                        a:hover : un enlace se desplaza cuando el mouse está sobre él <br>
+                            
+                        border:none - removes border from images with links <br>
+                        outline:none - removes the dotted border on clicked lines in IE <br>
+                    </details>
+                    
+                    <style>
+                    a:link{
+                        text-decoration: none; /* Quitar UnderLine */
+                    }
+                    a:hover{
+                        color: red; /* Mouse encima */
+                    }
+                    </style>
                 </div>
             
                 <!-- Mouse-Cursor -->
@@ -1577,6 +1706,24 @@
                         Do you need help?<br>
                         The mouse-cursor here will be "?"
                     </span>
+                    <style>
+                        span.mousee{
+                            cursor: help;
+                        }
+                    </style> <br>
+                    <code>
+                        span.mousee{
+                           cursor: help;
+                    }
+                    </code> <br><br>
+                    
+                    <details>
+                        <summary>Valores...</summary>
+                        auto, crosshair, default, move, help, text, wait,
+                        n-resize, s-resize, ne-resize, sw-resize, nw-resize, se-resize, e-resize, w-resize,
+                        pointer, progress, not-allowed, no-drop, vertical-text, all-scroll, col-resize, row-resize.
+                    </details>
+                    
                 </div>
             
             </div>
