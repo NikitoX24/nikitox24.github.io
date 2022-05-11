@@ -62,7 +62,6 @@
     }
     code{
         background-color: rgba(128, 128, 128, 0.135);
-        padding: 5px;
         text-decoration: none;
     }
 </style>
@@ -2986,60 +2985,142 @@
     <details open>
         <summary style="font-size: 50px;"> JavaScript </summary>
 
-                
-        <!-- <h6 class="subtitles"> Inicio de HTML </h6> -->
-        <h1 class="titles">JavaScript</h1>
-
+        <!-- DOM -->
         <div class="borders">
+
+            <h1 class="titulo">Fundamentos</h1>
+
+            <h2 class="subtitulo">Colocar un Script en Html:</h2>
+            <code>
+                &#60script>
+                &#60/script>
+            </code><br><br><hr>
+
+            <h2 class="subtitulo">Salida por Html:</h2>
+            <code>
+                document.write("&#60h1> Hello World! &#60/h1>"); <br>
+            </code><br>
+
+            <h2 class="subtitulo">Salida por Consola:</h2>
+            <code>
+                console.log("Hello from Console!");
+            </code><br>
+
+
+            <h2 class="subtitulo">Variables</h2>
+            <code>
+                <u>Crear</u>: var x = 10; <br>
+                <u>Editar</u>: x = 45; <br>
+                <u>Usar</u>: document.write(x);
+            </code>
+            <details>
+                <summary>+Info</summary>
+                <pre>
+                    Nombres de Variables; Respetar Mayusc, Empezar por: "a-z" , "_" , "$".
+                    
+                    Tipos de Variables
+                    var int = 5;
+                    var price = 5.5;
+                    var string = "texto con espacio";
+                    var boolean = true;
+                </pre>
+            </details>
+
+            <h2 class="subtitulo"></h2>
+            
+
+
+
+            <h2 class="subtitulo"></h2>
+
+
+
+
+
+
+
+            <br><hr>
+
             <h1 class="titulo"> DOM </h1>
-            <!-- DOM -->
+
             <!-- cambiar valor a un elemento -->
-            <h2 class="subtitulo"> cambiar valor a un elemento </h2>
-            <div id="demo"> 
+            <h2 class="subtitulo"> Cambiar valor a un ID</h2>
+            <div id="demo">
                 id demo
-            </div> <hr>
+            </div> <br>
+            <code>
+                var elem = document.getElementById("demo"); <br>
+                elem.innerHTML = "Hello World!";
+            </code>
+            <hr>
 
             <!-- cambiar valor a alguna clase -->
-            <h2 class="subtitulo"> cambiar valor a una clase </h2>
+            <h2 class="subtitulo"> Cambiar valor a una CLASS </h2>
             <div class="demo">
                 class demo
-            </div> <hr>
+            </div> <br>
+            <code>
+                var arr =  document.getElementsByClassName("demo"); <br>
+                arr[0].innerHTML = "Hi";
+            </code><hr>
 
             <!-- cambiar valor a varios elementos -->
-            <h2 class="subtitulo"> cambiar valor a varios elementos </h2>
+            <h2 class="subtitulo"> Cambiar valor a los TAGS </h2>
             <p> hi </p>
             <p> hello </p>
-            <p> hi x3 </p> <hr>
+            <p> hola </p>
+            <code>
+                var arr = document.getElementsByTagName("p"); <br>
+                for (var x = 0; x < arr.length; x++) { <br>
+                   arr[x].innerHTML = "Hi there"; <br>
+                }
+            </code> <hr>
 
             <!-- propiedades y metodos -->
-            <h2 class="subtitulo"> propiedades y metodos </h2>
+            <h2 class="subtitulo"> Propiedades y metodos </h2>
             <div id = "demo2">
                 <p>some text</p>
                 <p>some other text</p>
-            </div> <hr>
+            </div>
+            <code>
+                        <!--  -->
+            </code>
+            <details>
+                <summary>Propiedades y metoros</summary>
+                    <pre>
+                        element.childNodes:      returns an array of an element's child nodes.
+                        element.firstChild:      returns the first child node of an element.
+                        element.lastChild:       returns the last child node of an element.
+                        element.hasChildNodes:   returns true if an element has any child nodes, otherwise false.
+                        element.nextSibling:     returns the next node at the same tree level.
+                        element.previousSibling: returns the previous node at the same tree level.
+                        element.parentNode:      returns the parent node of an element.
+                    </pre>
+            </details>
+            <hr>
 
             <!-- modificar Atributos -->
-            <h2 class="subtitulo"> modificar atributos </h2>
+            <h2 class="subtitulo"> Modificar atributos </h2>
             <img id="myimg" src="../Imgs/Orange.png" alt="orange"  height="100"/> <br>
             <a href="http://www.example.com">Some link</a> <hr>
 
             <!-- modificar Estilos -->
-            <h2 class="subtitulo"> modificar Estilos </h2>
+            <h2 class="subtitulo"> Modificar Estilos </h2>
             <div id="demo3" style="width:200px">some text</div> <hr>
 
             <!-- crear elementos -->
-            <h2 class="subtitulo"> crear elementos </h2>
+            <h2 class="subtitulo"> Crear elementos </h2>
             <div id="demo4">some content</div> <hr>
 
             <!-- borrando elementos -->
-            <h2 class="subtitulo"> borrando elementos </h2>
+            <h2 class="subtitulo"> Borrando elementos </h2>
             <div id="demo5">
                 <p id="p1">This is a paragraph.</p>
                 <p id="p2">This is another paragraph.</p>
             </div> <hr>
 
             <!-- reemplazando elementos -->
-            <h2 class="subtitulo"> reemplazando elementos </h2>
+            <h2 class="subtitulo"> Reemplazando elementos </h2>
             <div id="demo6">
                 <p id="p01">This is a paragraph.</p>
                 <p id="p02">This is another paragraph.</p>
@@ -3121,9 +3202,8 @@
             
         </div><br>
 
+        <!--ECMAScript  -->
         <div class="borders">
-
-            <!--ECMAScript  -->
             <h2 class="titles"> ECMAScript </h2>
 
             <h2 class="subtitulo"> Var & Let </h2>
@@ -3177,13 +3257,19 @@
 
 
 
+        </div>
+
+        <div class="borders">
+
+            <h1 class="titulo">Archivo JavaScript.js</h1>
+
             
             <!-- Archivo JavaScript -->
             <script type="text/javascript" src="htmlcheatsheet.js"></script>
             <!-- Archivo JavaScript -->
-
+            
+            
         </div>
-
 
 
     </details>

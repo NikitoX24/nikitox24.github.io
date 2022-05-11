@@ -535,17 +535,17 @@ console.log("Hello from console!");
     // EJEMPLOS
 
       // id
-      var elem = document.getElementById("demo"); // <div id="demo">...
+      var elem = document.getElementById("demo");
       elem.innerHTML = "Hello World!";
 
       // Class
-      var arr =  document.getElementsByClassName("demo"); // <div class="demo">...
+      var arr = document.getElementsByClassName("demo");
       arr[0].innerHTML = "Hi";
 
       // Tag
-      var arr = document.getElementsByTagName("p"); // <p> hi </p>, <p> hello </p>, <p> hi </p>.
+      var arr = document.getElementsByTagName("tagName");
       for (var x = 0; x < arr.length; x++) {
-        arr[x].innerHTML = "Hi there"; // <p> Hi there </p>, <p> Hi there </p>, <p> Hi there </p>.
+        arr[x].innerHTML = "Hi there";
       }
     // 
   // 
@@ -577,7 +577,7 @@ console.log("Hello from console!");
           arr[x].innerHTML = "new text";
         }
       }
-      setTimeout(setText, 1000);
+      setTimeout(setText, 2000);
       
     //
   // 

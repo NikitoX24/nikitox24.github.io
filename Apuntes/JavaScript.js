@@ -3,7 +3,7 @@ document.write("Inicio de JavaScript.js");
 
 
 // Imprimir En Web:         document.write("");
-document.write("<h4>Hello World!</h4> <hr>");
+document.write("<h4>Hello World!!!!!</h4> <hr>");
 
 // Imprimir En Consola:     console.log("");
 console.log("Hello from console!");
