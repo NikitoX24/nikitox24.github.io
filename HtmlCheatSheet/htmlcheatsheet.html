@@ -3102,7 +3102,7 @@
 
             <h2 class="subtitulo">Objetos</h2>
             <u>Crear Objeto:</u>
-            <code>
+            <code> <br>
                 var person = { <br>
                     name: "john", age: 31, <br>
                     favColor: "green", height: 183 <br>
@@ -3110,8 +3110,29 @@
             </code> <br><br>
 
             <u>Acceder a las propiedades de los objetos:</u>
-            
+            <code> <br>
+                person.name; <br>
+                ó <br>
+                person["name"]; <br>
+            </code> <br><br>
 
+            <u>Constructor de Objetos</u>
+            <code> <br>
+                function person(name, age, color) { <br>
+                    this.name = name; <br>
+                    this.age = age; <br>
+                    this.color = color <br>
+                }                
+            </code><br><br>
+
+            <u>Crear Objeto del constructor</u>
+            <code> <br>
+                var p1 = new person("John", 42, "green") <br>
+                var p2 = new person("Amy", 21, "red") <br><br>
+
+                document.write(p1.age) //42 <br>
+                document.write(p2.name) //Amy <br>
+            </code>
             <hr>
 
 
