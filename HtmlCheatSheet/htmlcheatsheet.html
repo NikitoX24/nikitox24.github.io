@@ -3029,9 +3029,9 @@
                 </pre>
             </details><hr>
 
-            <h2 class="subtitulo">Condicionales y Bucles</h2>
+            <h1 class="titulo">Condicionales y Bucles</h1>
 
-            Declaracion If: <br>
+            <h2 class="subtitulo">Declaracion If:</h2>
             <code><pre>
                 if(condicion) {
                     // Declaraciones si es Verdadero
@@ -3040,8 +3040,8 @@
                     // Declaraciones si es Falso
                 }
             </pre></code>
-
-            Declaracion Switch:
+            
+            <h2 class="subtitulo">Declaracion Switch:</h2>
             <code><pre>
                 switch( Expresion ) {
                     Case n1:
@@ -3055,21 +3055,23 @@
                 }
             </pre></code>
 
-            Bucle For: <br>
+            <h2 class="subtitulo">Bucle For:</h2>
+            
             <code><pre>
                 for ( Condicion1; Condicion2; Condicion3 ) {
                     // Bloque de Codigo
                 }
             </pre></code>
 
-            Bucle While: <br>
+            <h2 class="subtitulo">Bucle While:</h2>
+            
             <code><pre>
                 while( condicion ) {
                     // Bloque de Codigo
                 }
             </pre></code>
             
-            Bucle Do-While: <br>
+            <h2 class="subtitulo">Bucle Do-While:</h2>
             <code><pre>
                 do {
                     // Bloque de Codigo
@@ -3100,7 +3102,7 @@
 
 
 
-            <h2 class="subtitulo">Objetos</h2>
+            <h1 class="titulo">Objetos</h1>
             <u>Crear Objeto:</u>
             <code> <br>
                 var person = { <br>
@@ -3132,18 +3134,68 @@
 
                 document.write(p1.age) //42 <br>
                 document.write(p2.name) //Amy <br>
+            </code> <br><br>
+            
+            <u>Metodos en los objetos</u>
+            <code> <br>
+                function person(name, age) { <br>
+                    this.name = name; <br>
+                    this.age = age; <br>
+                    this.changeName = funcion (name) { <br>
+                        this.name = name; <br>
+                    } <br>
+                } <br><br>
+                var p = new person("David", 21); <br>
+                p.changeName("Jhon"); <br>
+                // Ahora p.name es Jhon.
+            </code> <br><br>
+            
+            
+            _________________________ <br> <br>
+
+            Fuera del constructor 
+            <code> <br>
+                function person(name, age) { <br>
+                    this.name = name; <br>
+                    this.age = age; <br>
+                    this.yearOfBirth = bornYear; <br>
+                } <br>
+                function bornYear() { <br>
+                    return 2022 - this.age; <br>
+                } <br>
+                <br>
+                var p = new person("A", 22); <br>
+                document.write(p.yearOfBirth());
+
             </code>
-            <hr>
+            
+
+            <h1 class="titulo">Objetos Esenciales</h1>
+
+            <h2 class="subtitulo">Arrays:</h2>
+            <code>
+                <u>Crear:</u> <br>
+                var courses = new Array("HTML", "CSS", "JS"); <br><br>
+
+                <u>Usar:</u> <br>
+                vr couse = courses[0] //HTML <br><br>
+
+                <u>Editar:</u> <br>
+                couses[1] = "C++"; <br><br>
+            </code>
 
 
 
 
+
+            
             <h2 class="subtitulo"></h2>
-
-
-
-
-
+            
+            
+            
+            
+            
+            <hr>
 
 
             <br><hr>
