@@ -44,7 +44,6 @@
         background-color: rgba(255, 255, 255, 0.53);
         box-shadow: 5px 5px 4px 1px rgba(155, 155, 155, 0.322);
         overflow: hidden;
-        
     }
     .boxizq{
         float: left;
@@ -54,8 +53,8 @@
         float: right; 
         border-radius: 3px;
     }
-    .div{        
-        min-height: 50px;
+    .div{ 
+        min-height: 50px; 
     }
     summary{
         color: lightslategray;
@@ -64,6 +63,28 @@
         background-color: rgba(128, 128, 128, 0.135);
         text-decoration: none;
     }
+
+    /* CSS */
+    .borders{
+        border-radius: 15px;
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid grey;
+        background-color: rgba(128, 128, 128, 0.227);
+    } 
+    .titles{
+        text-shadow: 5px 2px 4px grey;
+        text-align: center;
+        text-decoration: underline;
+        text-transform: uppercase;
+    }
+    p.numbers{
+        font-size: 20px;
+        font-weight: 1000;
+        text-decoration: underline;
+    }
+    /* CSS */
+
 </style>
 <body>
    
@@ -74,7 +95,9 @@
 
     <details >
         <summary style="font-size: 50px;"> HTML </summary>
-            
+        <div class="borders">
+        
+
         <div class="round">  <!-- Encabezados -->
             <h2 style="text-decoration: underline;"> Encabezados < h1-h6 > </h2>
 
@@ -340,7 +363,7 @@
                 
         </div>
 
-    <!-- 
+        <!-- 
         <div class="round">
             <h2 class="subtitulo"> Frame </h2>
 
@@ -602,6 +625,9 @@
 
 
         </div> <br>
+        
+        </div> <!-- Borders -->
+
     </details>
 
 
@@ -977,33 +1003,6 @@
 
     <details > 
         <summary style="font-size: 50px;"> CSS </summary>
-
-        <style>
-            /* 
-                selector{
-                    propiedad : valor
-                } 
-            */
-            .borders{
-            border-radius: 15px;
-            padding: 10px;
-            margin: 10px;
-            border: 1px solid grey;
-            background-color: rgba(128, 128, 128, 0.227);
-            } 
-            .titles{
-            text-shadow: 5px 2px 4px grey;
-            text-align: center;
-            text-decoration: underline;
-            text-transform: uppercase;
-            }
-            p.numbers{
-            font-size: 20px;
-            font-weight: 1000;
-            text-decoration: underline;
-            }
-            
-        </style>
 
         <div class="borders">
                          
@@ -2988,6 +2987,8 @@
         <!-- DOM -->
         <div class="borders">
 
+            <div class="round">
+            </div>
             <h1 class="titulo">Fundamentos</h1>
 
             <!-- Script -->
@@ -3303,7 +3304,8 @@
                 var hours = date1.getHours(); <br>
                 // Muestra solo la hora actual, sin min-seg.
             </code>
-            <br><hr>
+            <br><br>
+            <hr><br><hr>
 
 
 
@@ -3325,49 +3327,58 @@
 
             <h2 class="subtitulo">Seleccionar Elementos</h2>
             <code>
-                //finds element by id <br>
+                <u>Buscar Id:</u> <br>
                 document.getElementById("idDelElemento") <br><br>
 
-                //finds elements by class name <br>
+                <u>Buscar Class:</u> <br>
                 document.getElementsByClassName("nombreDeLaClase") <br><br>
 
-                //finds elements by tag name <br>
+                <u>Buscar Tag:</u> <br>
                 document.getElementsByTagName("tagDelElemento") <br>
-            </code>
-
+            </code><br>
+            <hr>
 
             <!-- cambiar valor a un elemento -->
             <h2 class="subtitulo"> Cambiar valor a un ID</h2>
-            <div id="demo">
-                id demo
-            </div> <br>
+            <u>Antes:</u>
+            <div id="idDemo"> Esto es un div con id "idDemo". </div> <br>
             <code>
-                var elem = document.getElementById("demo"); <br>
+                var elem = document.getElementById("idDemo"); <br>
                 elem.innerHTML = "Hello World!";
-            </code>
+            </code> <br><br>
+            <u>Despues:</u> <br>
+            Hello World!
             <hr>
 
             <!-- cambiar valor a alguna clase -->
             <h2 class="subtitulo"> Cambiar valor a una CLASS </h2>
-            <div class="demo">
-                class demo
-            </div> <br>
+            <u>Antes:</u>
+            <div class="classDemo"> Esto es un div com class "classDemo" </div> <br>
             <code>
-                var arr =  document.getElementsByClassName("demo"); <br>
-                arr[0].innerHTML = "Hi";
-            </code><hr>
+                var arr =  document.getElementsByClassName("classDemo"); <br>
+                arr[0].innerHTML = "Hiii";
+            </code> <br><br>
+            <u>Despues:</u>
+            Hiii
+            <hr>
 
             <!-- cambiar valor a varios elementos -->
             <h2 class="subtitulo"> Cambiar valor a los TAGS </h2>
+            <u>Antes:</u>
             <p> hi </p>
             <p> hello </p>
             <p> hola </p>
             <code>
                 var arr = document.getElementsByTagName("p"); <br>
                 for (var x = 0; x < arr.length; x++) { <br>
-                   arr[x].innerHTML = "Hi there"; <br>
+                   arr[x].innerHTML = "Hi there!"; <br>
                 }
-            </code> <hr>
+            </code> <br><br>
+            <u>Despues:</u> <br>
+            <p> Hi there! </p>
+            <p> Hi there! </p>
+            <p> Hi there! </p>
+            <hr>
 
             <!-- propiedades y metodos -->
             <h2 class="subtitulo"> Propiedades y metodos </h2>
@@ -3558,7 +3569,7 @@
 
             
             <!-- Archivo JavaScript -->
-            <script type="text/javascript" src="htmlcheatsheet.js"></script>
+            <!-- <script type="text/javascript" src="htmlcheatsheet.js"></script> -->
             <!-- Archivo JavaScript -->
             
             
