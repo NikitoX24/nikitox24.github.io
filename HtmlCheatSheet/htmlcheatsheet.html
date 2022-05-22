@@ -28,7 +28,7 @@
         width: 60%;
         padding: 10px;
         border: 1px solid grey;
-        background-color: rgba(200, 211, 211, 0.336);
+        background-color: rgba(128, 128, 128, 0.227);
         border-radius: 20px;
         box-shadow: 10px 10px 5px 5px rgba(220, 220, 220, 0.522);
         margin: 20px;
@@ -84,6 +84,11 @@
         text-decoration: underline;
     }
     /* CSS */
+
+    .ejemplo{
+        background-color: white;
+        width: 400px;
+    }
 
 </style>
 <body>
@@ -1942,7 +1947,7 @@
                 -->
             
                 <!-- Prefijos de provedores css --><!-- soportes para las nuevas caracteristicas de CSS -->
-                <div class = "round">
+                <div class = "roundd">
                     border-radius: 24px;
                 </div><br>
             
@@ -1990,7 +1995,7 @@
                         Opera =   -o-
                         Explorer = -ms
                     */
-                    .round{
+                    .roundd{
                     -webkit-border-radius: 24px;
                     border-radius: 24px;
                     border: 1px solid green;
@@ -2987,8 +2992,7 @@
         <!-- DOM -->
         <div class="borders">
 
-            <div class="round">
-            </div>
+            <div class="borders">
             <h1 class="titulo">Fundamentos</h1>
 
             <!-- Script -->
@@ -3028,8 +3032,11 @@
                     var string = "texto con espacio";
                     var boolean = true;
                 </pre>
-            </details><hr>
-
+            </details>
+            </div> <!-- Borders -->
+            
+            <!-- Condicionales y Bucles -->
+            <div class="borders">
             <h1 class="titulo">Condicionales y Bucles</h1>
 
             <h2 class="subtitulo">Declaracion If:</h2>
@@ -3040,7 +3047,7 @@
                 else {
                     // Declaraciones si es Falso
                 }
-            </pre></code>
+            </pre></code> <hr>
             
             <h2 class="subtitulo">Declaracion Switch:</h2>
             <code><pre>
@@ -3054,7 +3061,7 @@
                     default:
                         // Bloque de Codigo
                 }
-            </pre></code>
+            </pre></code> <hr>
 
             <h2 class="subtitulo">Bucle For:</h2>
             
@@ -3062,7 +3069,7 @@
                 for ( Condicion1; Condicion2; Condicion3 ) {
                     // Bloque de Codigo
                 }
-            </pre></code>
+            </pre></code> <hr>
 
             <h2 class="subtitulo">Bucle While:</h2>
             
@@ -3078,9 +3085,8 @@
                     // Bloque de Codigo
                 }
                 while (condicion)
-            </pre></code>
+            </pre></code> <hr>
             
-            <hr>
             <h2 class="subtitulo"> Funciones </h2>
             <code><pre>
                 function name( parametro1, parametro2, parametro3 ) {
@@ -3099,10 +3105,13 @@
 
             <u>Confirm:</u> <br>
                 <code> Confirm("Esto es una Confirmacion")</code>
-            <hr>
+            
+            </div> <!-- Borders -->
 
-
-
+            
+            
+            <!-- Objetos -->
+            <div class="borders">
             <h1 class="titulo">Objetos</h1>
             <h2 class="subtitulo">Crear Objeto</h2>
             <code> <br>
@@ -3110,14 +3119,14 @@
                     name: "john", age: 31, <br>
                     favColor: "green", height: 183 <br>
                 }; <br>
-            </code> <br><br>
+            </code> <hr>
 
             <h2 class="subtitulo">Acceder a las propiedades de los objetos:</h2>
             <code> <br>
                 person.name; <br>
                 ó <br>
                 person["name"]; <br>
-            </code> <br><br>
+            </code> <hr>
 
             <h2 class="subtitulo">Constructor de Objetos</h2>
             <code> <br>
@@ -3126,7 +3135,7 @@
                     this.age = age; <br>
                     this.color = color <br>
                 }                
-            </code><br><br>
+            </code> <hr>
 
             <h2 class="subtitulo">Crear Objeto del constructor</h2>
             <code> <br>
@@ -3135,7 +3144,7 @@
 
                 document.write(p1.age) //42 <br>
                 document.write(p2.name) //Amy <br>
-            </code> <br><br>
+            </code> <hr>
             
             <h2 class="subtitulo">Metodos en los objetos</h2>
             <code> <br>
@@ -3149,7 +3158,7 @@
                 var p = new person("David", 21); <br>
                 p.changeName("Jhon"); <br>
                 // Ahora p.name es Jhon.
-            </code> <br><br>
+            </code> <br>
             
             
             _________________________ <br> <br>
@@ -3169,8 +3178,10 @@
                 document.write(p.yearOfBirth());
 
             </code>
+            </div> <!-- Borders -->
             
 
+            <div class="borders">
             <h1 class="titulo">Objetos Esenciales</h1>
 
             <h2 class="subtitulo">Arrays:</h2>
@@ -3214,7 +3225,7 @@
                 person["name"] = "Jhon"; <br>
                 person["age"] = 46; <br>
                 document.write(person["age"]) // 46 <br>
-            </code>
+            </code> <hr>
 
             <h2 class="subtitulo">Math</h2>
             <code>
@@ -3249,7 +3260,7 @@
                 tan(x)  	Returns the tangent of an angle <br>
                 tanh(x)	  Returns the hyperbolic tangent of a number <br>
                 trunc(x)	Returns the integer part of a number (x) <br>
-            </details>
+            </details> <hr>
 
             <h2 class="subtitulo">Date</h2>
             <u>Setinterval:</u> <br><br>
@@ -3304,14 +3315,15 @@
                 var hours = date1.getHours(); <br>
                 // Muestra solo la hora actual, sin min-seg.
             </code>
-            <br><br>
-            <hr><br><hr>
+            <br><br><br>
+            </div> <!-- Borders -->
 
 
 
 
 
 
+            <div class="borders">
 
             <h1 class="titulo"> DOM </h1>
             <h2><u>DOM</u>: Document Object Model.</h2>
@@ -3341,99 +3353,226 @@
             <!-- cambiar valor a un elemento -->
             <h2 class="subtitulo"> Cambiar valor a un ID</h2>
             <u>Antes:</u>
-            <div id="idDemo"> Esto es un div con id "idDemo". </div> <br>
+            <div class="ejemplo">
+                Esto es un div con id "idDemo".
+            </div> <br>
             <code>
                 var elem = document.getElementById("idDemo"); <br>
                 elem.innerHTML = "Hello World!";
             </code> <br><br>
             <u>Despues:</u> <br>
-            Hello World!
+            <div class="ejemplo"> 
+                Hello World!
+            </div> <br>
             <hr>
 
             <!-- cambiar valor a alguna clase -->
             <h2 class="subtitulo"> Cambiar valor a una CLASS </h2>
             <u>Antes:</u>
-            <div class="classDemo"> Esto es un div com class "classDemo" </div> <br>
+            <div class="ejemplo"> Esto es un div com class "classDemo" </div> <br>
             <code>
                 var arr =  document.getElementsByClassName("classDemo"); <br>
                 arr[0].innerHTML = "Hiii";
             </code> <br><br>
             <u>Despues:</u>
-            Hiii
+            <div class="ejemplo"> Hiii</div>
             <hr>
 
             <!-- cambiar valor a varios elementos -->
             <h2 class="subtitulo"> Cambiar valor a los TAGS </h2>
             <u>Antes:</u>
-            <p> hi </p>
-            <p> hello </p>
-            <p> hola </p>
-            <code>
+            <div class="ejemplo">
+                <p> hi </p>
+                <p> hello </p>
+                <p> hola </p>
+            </div>
+                <code>
                 var arr = document.getElementsByTagName("p"); <br>
                 for (var x = 0; x < arr.length; x++) { <br>
                    arr[x].innerHTML = "Hi there!"; <br>
                 }
             </code> <br><br>
             <u>Despues:</u> <br>
-            <p> Hi there! </p>
-            <p> Hi there! </p>
-            <p> Hi there! </p>
+            <div class="ejemplo">
+                <p> Hi there! </p>
+                <p> Hi there! </p>
+                <p> Hi there! </p>
+            </div> 
             <hr>
 
             <!-- propiedades y metodos -->
             <h2 class="subtitulo"> Propiedades y metodos </h2>
-            <div id = "demo2">
-                <p>some text</p>
-                <p>some other text</p>
+            <u>Cambiar valores en determinado tiempo (1000 = 1seg)</u>
+            <div class="ejemplo">
+                <div id = "demo2">
+                    <p>some text</p>
+                    <p>some other text</p>
+                </div>
             </div>
-            <code>
-                        <!--  -->
-            </code>
+            <code><pre>
+            function setText() {
+                var a = document.getElementById("demo2");
+                var arr = a.childNodes;
+                for(var x=0;x < arr.length;x++) {
+                    arr[x].innerHTML = "new text";
+                }
+                }
+                setTimeout(setText, 1000);
+            </pre></code>
+            <script>
+                function setText() {
+                    var a = document.getElementById("demo2");
+                    var arr = a.childNodes;
+                    for(var x=0;x<arr.length;x++) {
+                    arr[x].innerHTML = "new text";
+                    }
+                }
+                setTimeout(setText, 1000);
+            </script>
+
             <details>
                 <summary>Propiedades y metoros</summary>
-                    <pre>
-                        element.childNodes:      returns an array of an element's child nodes.
-                        element.firstChild:      returns the first child node of an element.
-                        element.lastChild:       returns the last child node of an element.
-                        element.hasChildNodes:   returns true if an element has any child nodes, otherwise false.
-                        element.nextSibling:     returns the next node at the same tree level.
-                        element.previousSibling: returns the previous node at the same tree level.
-                        element.parentNode:      returns the parent node of an element.
-                    </pre>
+                <pre>
+                    element.childNodes:      returns an array of an element's child nodes.
+                    element.firstChild:      returns the first child node of an element.
+                    element.lastChild:       returns the last child node of an element.
+                    element.hasChildNodes:   returns true if an element has any child nodes, otherwise false.
+                    element.nextSibling:     returns the next node at the same tree level.
+                    element.previousSibling: returns the previous node at the same tree level.
+                    element.parentNode:      returns the parent node of an element.
+                </pre>
             </details>
             <hr>
 
             <!-- modificar Atributos -->
             <h2 class="subtitulo"> Modificar atributos </h2>
+
+            <u>Modificar src a una imagen:</u> <br>
+            <u>Antes:</u> <br>
             <img id="myimg" src="../Imgs/Orange.png" alt="orange"  height="100"/> <br>
-            <a href="http://www.example.com">Some link</a> <hr>
+            <code>
+                var el = document.getElementById("myimg"); <br>
+                el.src = "../Imgs/Apple.png"; <br>
+            </code><br> 
+            <u>Despues:</u> <br>
+            <img id="myimg" src="../Imgs/Apple.png" alt="orange"  height="100"/> <br>
+            <hr>
+
+            <u>Modificar el href a un link</u> <br><br>
+            <u>Antes:</u>
+            <a href="http://www.example.com">Some link</a> <br><br>
+            <code>
+                window.onload = function(){ <br>
+                    var el = document.getElementsByTagName('a'); <br>
+                    el[0].href= 'http://www.sololearn.com'; <br>
+                  }; <br>
+            </code> <br>
+            <u>Despues:</u>
+            <a href="http://www.sololearn.com">Some link</a> <br><br>
+            <hr>
 
             <!-- modificar Estilos -->
             <h2 class="subtitulo"> Modificar Estilos </h2>
-            <div id="demo3" style="width:200px">some text</div> <hr>
+            <u>Antes:</u>
+            <div class="ejemplo">Some Text</div> <br>
+            <code>
+                var x = document.getElementById("demo3"); <br>
+                x.style.color = '#6600FF'; <br>
+            </code><br>
+
+            <u>Despues:</u>
+            <div class="ejemplo" style="color: #e77e06;"> Some Text </div> <hr>
 
             <!-- crear elementos -->
             <h2 class="subtitulo"> Crear elementos </h2>
-            <div id="demo4">some content</div> <hr>
+            <u> Esto crea un nuevo párrafo y lo agrega al elemento div existente en la página. </u> <br><br>
+            <u>Antes:</u> 
+            <div class="ejemplo"> Some content</div> <br>
+
+            <code>
+                //creating a new paragraph  <br>
+                var p = document.createElement("p"); <br>
+                var node = document.createTextNode("Some new text"); <br><br>
+
+                //adding the text to the paragraph <br>
+                p.appendChild(node); <br><br>
+
+                var div = document.getElementById("demo4"); <br><br>
+
+                //adding the paragraph to the div <br>
+                div.appendChild(p); <br><br>
+            </code>
+
+            <u>Despues:</u>
+            <div class="ejemplo">
+                <p>Some content</p>
+                <p>Some new text</p>
+            </div>
+
+            <details>
+                <summary>Crear elem...</summary>
+                element.cloneNode() clones an element and returns the resulting node. <br>
+                document.createElement(element) creates a new element node. <br>
+                document.createTextNode(text) creates a new text node. <br>
+                <br>
+                // Systax <br>
+                Crear texto (pero no está asignado) <br>
+                var node = document.createTextNode("Some new text"); <br>
+                <br>
+                // Asignar con <br>
+                elemento.appendChild(newNode) // adds a new child node to an element as the last child node. <br>
+                elemento.insertBefore(node1, node2) // inserts node1 as a child before node2. <br>
+            </details>
+            <hr>
 
             <!-- borrando elementos -->
             <h2 class="subtitulo"> Borrando elementos </h2>
-            <div id="demo5">
-                <p id="p1">This is a paragraph.</p>
-                <p id="p2">This is another paragraph.</p>
-            </div> <hr>
+            <u>Antes:</u>
+            <div  class="ejemplo">
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </div>
+
+            <code>
+                var parent = document.getElementById("demo5"); <br>
+                var child = document.getElementById("p1"); <br>
+                parent.removeChild(child); <br>
+            </code> <br>
+
+            <u>Despues:</u>
+            <div class="ejemplo">
+                <p>This is another paragraph.</p>
+            </div>
+            <hr>
 
             <!-- reemplazando elementos -->
             <h2 class="subtitulo"> Reemplazando elementos </h2>
-            <div id="demo6">
-                <p id="p01">This is a paragraph.</p>
-                <p id="p02">This is another paragraph.</p>
-            </div> <hr>
+            <u>Antes:</u>
+            <div class="ejemplo">
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </div>
+            <code>
+                var varP = document.createElement("p"); <br>
+                var node = document.createTextNode("This is new"); <br>
+                varP.appendChild(node); <br> <br>
+
+                var parent = document.getElementById("demo6"); <br>
+                var child = document.getElementById("p1"); <br>
+                parent.replaceChild(varP, child); <br>
+            </code> <br>
+            <u>Despues:</u>
+            <div class="ejemplo">
+                <p>This is new.</p>
+                <p>This is another paragraph.</p>
+            </div>
+
+            <hr>
 
 
 
             <!-- creando animaciones -->
-            <h2 class="subtitulo">  </h2>
+            <h2 class="subtitulo"> Creando animaciones </h2>
             <div id="container">
                 <div id="box"> </div>
             </div>
@@ -3502,6 +3641,9 @@
                 <input type="submit" value="Submit" />
                 </form> <hr>
             -->
+
+
+            </div> <!-- Borders -->
             
             
         </div><br>
