@@ -462,6 +462,7 @@ console.log("Hello from console!");
     document.write("hora: " + hours + "<hr>");
   // 
 
+
   // Imprimir Hora actual cada segundo
     function printTime() {
       var d = new Date();
@@ -940,6 +941,8 @@ console.log("Hello from console!");
       slider.src = images[num];
     }
 
+
+
   // Validación de formularios
     /*
       <form onsubmit="return validate()" method="post">
@@ -1077,7 +1080,14 @@ console.log("Hello from console!");
     document.write(test0(5) + "<hr>"); //50 
     // 
 
+
+
+
+
+
+
   // Objetos
+  
     //Ej 1 
     let tree = {
       height: 10,
@@ -1255,7 +1265,7 @@ console.log("Hello from console!");
     // 
   // 
 
-  // Parámetros de descanso
+  // Parámetros de REST (descanso)
     function containsAll(arr) {
       for (let k = 1; k < arguments.length; k++) {
         let num = arguments[k];
@@ -1288,6 +1298,58 @@ console.log("Hello from console!");
 
   // The Spread Operator
     // https://www.sololearn.com/learning/1024/2978/6475/1
+
+    /*
+
+    function myFunction(w, x, y, z) {
+      console.log(w + x + y + z);
+    }
+    var args = [1, 2, 3];
+    myFunction.apply(null, args.concat(4));
+
+
+    const myFunction = (w, x, y, z) => {
+        console.log(w + x + y + z);
+    };
+    let args = [1, 2, 3];
+    myFunction(...args, 4);
+
+
+    var dateFields = [1970, 0, 1];  // 1 Jan 1970
+    var date = new Date(...dateFields);
+    console.log(date);
+
+
+    var arr = ["One", "Two", "Five"];
+    arr.splice(2, 0, "Three");
+    arr.splice(3, 0, "Four");
+    console.log(arr);
+
+
+    let newArr = ['Three', 'Four']; 
+    let arr = ['One', 'Two', ...newArr, 'Five'];
+    console.log(arr);
+
+
+    const obj1 = { foo: 'bar', x: 42 };
+    const obj2 = { foo: 'baz', y: 5 };
+    const clonedObj = { ...obj1 }; // { foo: "bar", x: 42 }
+    const mergedObj = { ...obj1, ...obj2 }; // { foo: "baz", x: 42, y: 5 }
+
+
+    const obj1 = { foo: 'bar', x: 42 };
+    const obj2 = { foo: 'baz', y: 5 };
+    const merge = (...objects) => ({ ...objects });
+
+    let mergedObj = merge (obj1, obj2);
+    // { 0: { foo: 'bar', x: 42 }, 1: { foo: 'baz', y: 5 } }
+
+    let mergedObj2 = merge ({}, obj1, obj2);
+    // { 0: {}, 1: { foo: 'bar', x: 42 }, 2: { foo: 'baz', y: 5 } }
+
+    
+    */
+
   // 
 
   // Clases en ES6

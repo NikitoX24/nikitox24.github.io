@@ -2992,24 +2992,30 @@
         <!-- DOM -->
         <div class="borders">
 
-            <div class="borders">
+            <!-- Fundamentos -->
+            <div class="borders"> 
             <h1 class="titulo">Fundamentos</h1>
 
             <!-- Script -->
-            <h2 class="subtitulo">Colocar un Script en Html:</h2>
+            <h2 class="subtitulo">Colocar un Script en Html: </h2>
             <code>
                 &#60script>
                 &#60/script>
             </code><br><hr>
 
+            <h2 class="subtitulo">Colocar un archivo .JS externo: </h2>
+            <code>
+                &#60script type="text/javascript" src="htmlcheatsheet.js"> &#60/script>
+            </code>
+
             <!-- Salida html -->
-            <h2 class="subtitulo">Salida por Html:</h2>
+            <h2 class="subtitulo">Salida por Html: </h2>
             <code>
                 document.write("&#60h1> Hello World! &#60/h1>"); <br>
             </code><hr>
 
             <!-- Salida Consola -->
-            <h2 class="subtitulo">Salida por Consola:</h2>
+            <h2 class="subtitulo">Salida por Consola: </h2>
             <code>
                 console.log("Hello from Console!");
             </code><hr>
@@ -3108,8 +3114,6 @@
             
             </div> <!-- Borders -->
 
-            
-            
             <!-- Objetos -->
             <div class="borders">
             <h1 class="titulo">Objetos</h1>
@@ -3180,7 +3184,7 @@
             </code>
             </div> <!-- Borders -->
             
-
+            <!-- Objetos Esenciales -->
             <div class="borders">
             <h1 class="titulo">Objetos Esenciales</h1>
 
@@ -3314,15 +3318,36 @@
                 var date1 = new Date(); <br>
                 var hours = date1.getHours(); <br>
                 // Muestra solo la hora actual, sin min-seg.
-            </code>
-            <br><br><br>
+            </code><br>
+
+            <!-- Hora por segundos -->
+            <h2 class="subtitulo"> Hora por segundos </h2>
+            <div id="HoraPS">Hora:</div>
+            <code><pre>
+                function printTime() {
+                    var d = new Date();
+                    var hours = d.getHours();
+                    var mins = d.getMinutes();
+                    var secs = d.getSeconds();
+                    var horaPS = document.getElementById("HoraPS");
+                    horaPS.innerHTML = "Hora: " + hours+":"+mins+":"+secs;
+                  }
+                  setInterval(printTime, 1000);
+            </pre></code>
+            <script>
+                function printTime() {
+                var d = new Date();
+                var hours = d.getHours();
+                var mins = d.getMinutes();
+                var secs = d.getSeconds();
+                var horaPS = document.getElementById("HoraPS");
+                horaPS.innerHTML = "Hora: " + hours+":"+mins+":"+secs;
+                }
+                setInterval(printTime, 1000);
+            </script>
             </div> <!-- Borders -->
 
-
-
-
-
-
+            <!-- DOM -->
             <div class="borders">
 
             <h1 class="titulo"> DOM </h1>
@@ -3566,61 +3591,223 @@
                 <p>This is new.</p>
                 <p>This is another paragraph.</p>
             </div>
-
             <hr>
-
 
 
             <!-- creando animaciones -->
             <h2 class="subtitulo"> Creando animaciones </h2>
-            <div id="container">
-                <div id="box"> </div>
+            <div id="container1">
+                <div id="box1"> </div>
             </div>
             <style>
-                #container {
+                #container1 {
                 width: 200px;
                 height: 200px;
                 background: green;
                 position: relative;
                 }
-                #box {
+                #box1 {
                 width: 50px;
                 height: 50px;
                 background: red;
                 position: absolute;
                 }
-            </style> <hr>
+            </style> 
+            <script>
+                var pos = 0; 
+                var box = document.getElementById('box1');
+                var t = setInterval(move, 10);
+
+                function move() {
+                    if(pos >= 150) {
+                    clearInterval(t);
+                    }
+                    else {
+                    pos += 1;
+                    box.style.left = pos+'px';
+                    }
+                }
+            </script>
+            <code>
+                var pos = 0; <br>
+                var box = document.getElementById('box1'); <br>
+                var t = setInterval(move, 10); <br> <br>
+
+                function move() { <br>
+                    if(pos >= 150) { <br>
+                    clearInterval(t); <br>
+                    } <br>
+                    else { <br>
+                    pos += 1; <br>
+                    box.style.left = pos+'px'; <br>
+                    } <br>
+                } <br>
+            </code>
+            <hr>
 
 
 
 
             <!-- eventos -->
+            <h1 class="titulo">Eventos</h1>
+            Cuando un "evento" ocurre en un elemento, una funcion "handler" se ejecuta.
+            <details>
+                <summary>Eventos: ...</summary>
+                onclick:
+                onload:
+                onunload:
+                onchange: < input>, < keygen>, < select>, < texarea>.
+                onmouseover:
+                onmouseout:
+                onmousedown:
+                onmouseup:
+                onblur: al perder focus
+                onfocus:
+            </details>
+            <hr>
+
             <!-- alerta en boton -->
-            <h2 class="subtitulo"> alerta en boton </h2>
-            <button onclick="show();"> Alert Button</button> <br> <br>
+            <h2 class="subtitulo"> Alerta en boton </h2>
+            <button onclick="show();"> Alert Button</button> <br>
+            <code>
+                < button onclick="show();"> Alert Button </ button> <br><br>
+                function show() { <br>
+                    alert("Esto es una Alerta!"); <br>
+                } <br>
+            </code>
+            <script>
+                function show() {
+                    alert("Esto es una Alerta!");
+                }
+            </script>
+            <hr>
 
             <!-- hora en boton -->
-            <h2 class="subtitulo"> hora en boton </h2>
-            <button id="demo7"> Hour Button</button> <hr>
+            <h2 class="subtitulo"> Hora en boton </h2>
+            <button id="demo7"> Hour Button</button> <br>
+            <code>
+                < button id="demo7"> Hour Button </ button> <br><br>
+                var x = document.getElementById('demo7'); <br>
+                x.onclick = function () { <br>
+                alert(Date()); <br>
+                } <br>
+            </code>
+            <script>
+                var x = document.getElementById('demo7');
+                x.onclick = function () {
+                alert(Date());
+                }
+            </script>
+            <hr>
 
             <!-- OnLoad desde aqui -->
-            <h2 class="subtitulo"> OnLoad desde aqui </h2>
-            <body onload="doSomething()"></body> <hr>
+            <h2 class="subtitulo"> OnLoad desde html </h2>
+            <body onload="doSomething()"></body> 
+            <code>
+                < body onload="doSomething()"> </ body> <br><br>
+                function doSomething(){ <br>
+                } <br>
+            </code>
+            <hr>
 
             <!-- OnLoad desde js -->
             <h2 class="subtitulo"> OnLoad desde js </h2>
-            <div id="onloadjs"> desde html </div> <hr>
+            <code>
+                window.onload = function(){ <br>
+                    // Codigo que aplicará luego de q la pag se cargue por completo. <br>
+                } <br>
+            </code>
+            <hr>
 
             <!-- OnChange -->
             <h2 class="subtitulo"> OnChange </h2>
-            <input type="text" id="name001" onchange="change()"> <hr>
+            <u>Convertir texto en Mayustulas.</u> <br>
+            <input type="text" id="name001" onchange="change()"> <br><br>
+            <code>
+                function change() { <br>
+                    var x001 = document.getElementById('name001'); <br>
+                    x001.value = x001.value.toUpperCase(); <br>
+                } <br>
+            </code>
+            <script>
+                function change() {
+                    var x001 = document.getElementById('name001');
+                    x001.value = x001.value.toUpperCase();
+                }
+            </script>
+            <hr>
 
 
 
 
             <!-- crear un evento manipulador -->
-            <h2 class="subtitulo"> crear un evento manipulador </h2>
-            <button id="demo8"> Evento de un solo uso </button> <hr>
+            <h2 class="subtitulo"> Crear un Evento Manipulador </h2>
+            <button id="demo8"> Evento de un solo uso </button> <br><br>
+            
+
+            <code>
+                < button id="demo8"> Evento de un solo uso </ button> <br><br>
+
+                var btn = document.getElementById("demo8"); <br>
+                btn.addEventListener("click", myFunction01); <br> <br>
+
+                function myFunction01() { <br>
+                    alert(Math.random()); <br>
+                    btn.removeEventListener("click", myFunction01); <br>
+                } <br>
+            </code>
+            <script>
+                var btn = document.getElementById("demo8");
+                btn.addEventListener("click", myFunction01);
+
+                function myFunction01() {
+                    alert(Math.random());
+                    btn.removeEventListener("click", myFunction01);
+                }
+            </script>
+            <details>
+                <summary>Evento manipulador...</summary>
+                <pre>
+                // Syntax
+                    // element.addEventListener(evento, funcion, useCapture(opcional));
+                
+                    // El primer parámetro es el tipo de evento (como "clic" o "mousedown").
+                    // El segundo parámetro es la función a la que queremos llamar cuando se produce el evento.
+                    // El tercer parámetro es un valor booleano que especifica si se va a utilizar el burbujeo de eventos o la captura de eventos. Este parámetro es opcional y se describirá en la siguiente lección.
+                // 
+
+                // Ejemplo
+                    // element.addEventListener("click0", myFunction0);
+                    // element.addEventListener("mouseover0", myFunction0);
+
+                    // function myFunction0() {
+                    //   alert("Hello World!");
+                    // }
+
+                    // remover un evento
+                    // element.removeEventListener("mouseover0", myFunction0);
+                // 
+                </pre>
+            </details>
+            <hr>
+
+            <h2 class="subtitulo"> Propagacion de eventos - bubbling & capturing</h2>
+            <pre>
+                // En q orden se ejecutan las funciones,
+                // si hacemos click en un elemento,
+                // q está dentro de otro elemento.
+
+                
+                // BUBBLING = desde adentro hacia afuera. (Por defecto = FALSE). - Baja por DOM.
+                    // elem1.addEventListener("click02", myFunction02, true); 
+
+                // CAPTURING = desde afuera hacia adentro. (TRUE). - Sube por DOM
+                    // elem2.addEventListener("click02", myFunction02, false);
+
+                // function myFunction02(){      }
+            </pre>
+            <hr>
+
 
             <!-- Image slider -->
             <h2 class="subtitulo"> Image slider </h2>
@@ -3628,95 +3815,663 @@
                 <button onclick="prev()"> Prev </button>
                 <img id="slider" src="https://www.sololearn.com/uploads/slider/1.jpg" width="200px" height="100px"/>
                 <button onclick="next()"> Next </button>
-            </div> <hr>
+            </div> <br>
+     
+            <code><pre>
+                var images = [
+                    'http://www.sololearn.com/uploads/slider/1.jpg', 
+                    'http://www.sololearn.com/uploads/slider/2.jpg', 
+                    'http://www.sololearn.com/uploads/slider/3.jpg'
+                ];
+
+                var num = 0;
+
+                function next() {
+                    var slider = document.getElementById('slider');
+                    num++;
+                    if(num >= images.length) {
+                        num = 0;
+                    }
+                    slider.src = images[num];
+                }
+
+                function prev() {
+                    var slider = document.getElementById('slider');
+                    num--;
+                    if(num < 0) {
+                        num = images.length-1;
+                    }
+                    slider.src = images[num];
+                }
+            </pre></code>
+            <script>
+                var images = [
+                'http://www.sololearn.com/uploads/slider/1.jpg', 
+                'http://www.sololearn.com/uploads/slider/2.jpg', 
+                'http://www.sololearn.com/uploads/slider/3.jpg'
+                ];
+                var num = 0;
+                function next() {
+                var slider = document.getElementById('slider');
+                num++;
+                if(num >= images.length) {
+                    num = 0;
+                }
+                slider.src = images[num];
+                }
+                function prev() {
+                var slider = document.getElementById('slider');
+                num--;
+                if(num < 0) {
+                    num = images.length-1;
+                }
+                slider.src = images[num];
+                }
+            </script>
+            <hr>
+
+
+
 
             <!-- validacion de formularios -->
-            <h2 class="subtitulo"> validacion de formularios </h2>
-            <!-- 
-                <form onsubmit="return validate()" method="post">
-                Number: <input type="text" name="num1" id="num1" />
-                <br />
-                Repeat: <input type="text" name="num2" id="num2" />
-                <br />
-                <input type="submit" value="Submit" />
-                </form> <hr>
-            -->
+            <h2 class="subtitulo"> Validacion de formularios </h2>
+            <code><pre>
+            < form onsubmit="return validate()" method="post">
+                Number: < input type="text" name="num1" id="num1" />
+                Repeat: < input type="text" name="num2" id="num2" />
+                < input type="submit" value="Submit" />
+            < /form> 
+            </pre></code>
+            <code><pre>
+            function validate() {
+                var n1 = document.getElementById('num1');
+                var n2 = document.getElementById('num2');
+                if(n1.value != '' && n2.value != '') {
+                    if(n1.value == n2.value) {
+                    return true;
+                    }
+                }
+                alert("The values should be equal and not blank");
+                return false;
+            }
+            </pre></code>
 
+            </div> <br> <!-- Borders -->
+            
+            <!--ECMAScript  -->
+            <div class="borders">
+                <h2 class="titles"> ECMAScript </h2>
+
+                <!-- Var & Let -->
+                <h2 class="subtitulo"> Var & Let en ES6</h2>
+                <code>
+                    var a = 10;        // publica fuera del {} <br>
+                    let b = true;      // privada dentro del {} <br>
+                    const c = 'hello'; // privado y no se puede modificar  <br>
+                </code> 
+                <br><hr>
+
+                <!-- Literales de plantilla en ES6 -->
+                <h2 class="subtitulo"> Literales de plantilla en ES6 </h2>
+                <code> 
+                    let nameLet2 = 'David'; <br>
+                    let msgLet2 = `Welcome ${nameLet2}!`; <br>
+                </code>
+                <br><hr>
+                
+                <!-- bucles For -->
+                <h2 class="subtitulo"> Bucles For en ES6 </h2>
+                <code>
+                    <u>For In:</u> <br>
+                    let objsV01 = {a:1, b:2, c:3}; <br>
+                    for (let v in objsV01) { <br>
+                        document.write(v); <br>
+                    } <br> <br>
+
+                    <u>For Of:</u> <br>
+                    let objsV02 = ["xL", "y", "z"]; <br>
+                    for (let v of objsV02) { <br>
+                        document.write(v); <br>
+                    } <br>
+                </code>
+                <br><hr>
+
+                <!-- Funciones -->
+                <h2 class="subtitulo"> Funciones en ES6</h2>
+                <code>
+                    <u><b>Antes:</b></u> <br>
+                    function add = (x, y) { <br>
+                        var sum = x + y; <br>
+                        console.log(sum); <br>
+                    } <br><br>
+
+                    <u><b>Despues:</b></u> <br>
+                    const add = (x, y) => { <br>
+                        let sum = x + y; <br>
+                        console.log(sum); <br>
+                    } <br><br><br>
+                
+
+                    <u><b> Funcion simple con 1 argumento: </b></u> <br>
+                    const saludar = x => "Bienvenido " + x; <br>
+                    document.write(saludar("Nico") + " (ej func con 1 arg)");  // Bienvenido Nico <br> <br>
+
+                    <u><b> Funcion simple sin argumento: </b></u> <br>
+                    const funcSinParam = () => document.write("Hola! (ej Func sin arg)"); <br>
+                    funcSinParam(); <br><br><br>
+
+
+                    <u><b>ForEach (recorrer Arrays)</b></u> <br>
+                    <u>Antes:</u> <br>
+                    var arrFE = [2,3,7,8]; <br> <br>
+
+                    arrFE.forEach(function(el) { <br>
+                    document.write(el * 2); <br>
+                    }); <br><br>
+                    
+                    <u>Ahora:</u> <br>
+                    const arrFE2 = [2,3,7,8]; <br><br>
+
+                    arrFE2.forEach(v => { <br>
+                    document.write(v * 2); <br>
+                    }); <br><br><br>
+                
+
+                    <u><b>Parametros predeterminados:</b></u> <br>
+                    // Antes <br>
+                    function testES6(a, b=3, c=42){ <br>
+                    return a + b + c; <br>
+                    } <br>
+                    document.write(testES6(5); // 50 <br> <br>
+
+                    // Ahora <br>
+                    const test0 = (a, b = 3, c = 42) => { <br>
+                    return a + b + c; <br>
+                    } <br>
+                    document.write(test0(5)); //50  <br> <br> <br>
+                </code>
+                <hr>
+
+
+                <!-- Objetos -->
+                <h2 class="subtitulo"> Objetos en ES6</h2>
+
+                <u><b> </b></u>
+                <code><pre>
+                    //Ej 1 
+                    let tree = {
+                        height: 10,
+                        color: 'green',
+                        grow() { 
+                            this.height += 2;
+                        }
+                    };
+                    
+                    tree.grow();
+                    document.write(tree.height); // 12
+                    
+                    // Ej 2
+                    let height = 5;
+                    let health = 100;
+                    
+                    let athlete = {
+                        height, // height: height,
+                        health // health: health
+                    };
+
+                    document.write(athlete.height); // 5
+
+                    // Ej 3
+                    var a = {x: 1, x: 2, x: 3, x: 4};
+                    document.write(a.x); // 4
+                </pre></code> <br>
+                
+                <u><b> Nombres de propiedad calculados: </b></u>
+                <code><pre>
+                    // Ej.1
+                    let prop = 'name';
+                    let id = '1234';
+                    let mobile = '08923';
+
+                    let user = {
+                    [prop]: 'Jack',
+                    [`user_${id}`]: `${mobile}`
+                    };
+
+                    // Ej.2
+                    var i = 0;
+                    var a = {
+                    ['foo' + ++i]: i,
+                    ['foo' + ++i]: i,
+                    ['foo' + ++i]: i
+                    };
+
+                    // Ej. 3
+                    var param = 'size';
+                    var config = {
+                        [param]: 12,
+                        ['mobile' + param.charAt(0).toUpperCase() + param.slice(1)]: 4
+                    };
+                </pre></code>
+
+                <u><b> Object.assign(): </b></u>
+                <code><pre>
+                    let person00 = {
+                        name: 'Jack',
+                        age: 18,
+                        sex: 'male'
+                      };
+                      let student00 = {
+                          name: 'Bob',
+                          age: 20,
+                          xp: '2'
+                      };
+                  
+                      let newStudent = Object.assign({}, person00, student00);
+                  
+                      // console.log(newStudent.name); // Bob
+                      // console.log(newStudent.age); // 20
+                      // console.log(newStudent.sex); // male
+                      // console.log(newStudent.xp); // 2
+                  
+                      // 
+                      let person01 = {
+                        name: 'Jack',
+                        age: 18
+                      };
+                  
+                      let newPerson01 = person01;
+                      newPerson01.name = 'Bob';
+                  
+                      // console.log(person.name); // Bob
+                      // console.log(newPerson.name); // Bob
+                  
+                      // 
+                      let person02 = {
+                        name: 'Jack',
+                        age: 18
+                      };
+                  
+                      let newPerson02 = Object.assign({}, person02);
+                      newPerson02.name = 'Bob';
+                  
+                      // console.log(person.name); // Jack
+                      // console.log(newPerson.name); // Bob
+                  
+                      // 
+                      let person03 = {
+                        name: 'Jack',
+                        age: 18
+                      };
+                  
+                      let newPerson03 = Object.assign({}, person03, {name: 'Bob'});
+                  
+                      // console.log(newPerson.name); // Bob
+                </pre></code>
+
+
+                <hr>
+
+                <h2 class="subtitulo"> Destructuracion en ES6 </h2>
+                <code><pre>
+                    <u><b>Destructurar Arrays:</b></u> <br>
+                    // Ej 1
+                        let arrDes = ['1', '2', '3'];
+
+                        let [one, two, three] = arrDes;
+                        
+                        // console.log(one); // 1
+                        // console.log(two); // 2
+                        // console.log(three); // 3
+                    
+                    // Ej 2
+                        let aDes = () => {
+                        return [1, 3, 2];
+                        };
+                        
+                        [one, ,two] = aDes();
+                        
+                        // console.log(one); // 1
+                        // console.log(two); // 2
+
+                    // Ej 3
+                        let _a, _b, _c = 4, _d = 8;
+
+                        [_a, _b = 6] = [2]; // a=2, b=6.
+                        // console.log(a); // 2
+                        // console.log(b); // 6
+
+                        [_c, _d] = [_d, _c]; // c=8, d=4.
+                        // console.log(c); // 8
+                        // console.log(d); // 4
+
+
+
+                    <u><b>Destructurar Objetos:</b></u>
+                    // Ej 1
+                        let obj = {h:100, s: true};
+                        let {h, s} = obj;
+                        // console.log(h);
+                        // console.log(s);
+                        
+                    // Ej 2
+                        let j0, k0;
+                        ({j0, k0} = {j0: 'Hello ', k0: 'Jack'});
+                        // console.log(a + b);
+
+                    // Ej 3
+                        let {u0, i0} = {u0: 'Hello ', i0: 'Jack'};
+                        // console.log(a + b);
+
+                    // Ej 4
+                        var o0 = {_h: 42, _s: true};
+                        var {_h: foo, _s: bar} = o0;
+                        //console.log(h); // Error
+                        // console.log(foo); // 42
+
+                    // Ej 5
+                        var obj_0 = {_id: 42, name: "Jack"};
+
+                        let {_id = 10, _age = 20} = obj_0;
+                        // console.log(id); // 42
+                        // console.log(age); // 20
+                </pre></code>
+
+                <h2 class="subtitulo"> REST & SPREAD </h2>
+                <code><pre>
+                <u><b>Parámetros de REST (descanso):</b></u>
+
+                    function containsAll(arr) {
+                    for (let k = 1; k < arguments.length; k++) {
+                        let num = arguments[k];
+                        if (arr.indexOf(num) === -1) {
+                            return false;
+                        }
+                    }
+                    return true;
+                    }
+
+                    let x0_ = [2, 4, 6, 7];
+                    console.log(containsAll(x0_, 2, 4, 7));
+                    console.log(containsAll(x0_, 6, 4, 9));
+
+                    // 
+                    function containsAll2(arr, ...nums) {
+                    for (let num of nums) {
+                        if (arr.indexOf(num) === -1) {
+                            return false;
+                        }
+                    }
+                    return true;
+                    }
+                    
+                    let x1_ = [2, 4, 6, 7];
+                    console.log(containsAll2(x1_, 2, 4, 7));
+                    console.log(containsAll2(x1_, 6, 4, 9));
+                
+
+
+
+                <u><b>Parámetros de SPREAD(propagación):</b></u>
+
+                    function myFunction(w, x, y, z) {
+                        console.log(w + x + y + z);
+                    }
+                    var args = [1, 2, 3];
+                    myFunction.apply(null, args.concat(4));
+                
+                
+                    const myFunction = (w, x, y, z) => {
+                        console.log(w + x + y + z);
+                    };
+                    let args = [1, 2, 3];
+                    myFunction(...args, 4);
+                
+                
+                    var dateFields = [1970, 0, 1];  // 1 Jan 1970
+                    var date = new Date(...dateFields);
+                    console.log(date);
+                
+                
+                    var arr = ["One", "Two", "Five"];
+                    arr.splice(2, 0, "Three");
+                    arr.splice(3, 0, "Four");
+                    console.log(arr);
+                
+                
+                    let newArr = ['Three', 'Four']; 
+                    let arr = ['One', 'Two', ...newArr, 'Five'];
+                    console.log(arr);
+                
+                
+                    const obj1 = { foo: 'bar', x: 42 };
+                    const obj2 = { foo: 'baz', y: 5 };
+                    const clonedObj = { ...obj1 }; // { foo: "bar", x: 42 }
+                    const mergedObj = { ...obj1, ...obj2 }; // { foo: "baz", x: 42, y: 5 }
+                
+                
+                    const obj1 = { foo: 'bar', x: 42 };
+                    const obj2 = { foo: 'baz', y: 5 };
+                    const merge = (...objects) => ({ ...objects });
+                
+                    let mergedObj = merge (obj1, obj2);
+                    // { 0: { foo: 'bar', x: 42 }, 1: { foo: 'baz', y: 5 } }
+                
+                    let mergedObj2 = merge ({}, obj1, obj2);
+                    // { 0: {}, 1: { foo: 'bar', x: 42 }, 2: { foo: 'baz', y: 5 } }
+                </pre></code>
+                <hr>
+
+
+                <h2 class="subtitulo"> Clases en ES6</h2>
+                <code><pre>
+                    <u><b>Constructor - (al iniciar):</b></u>
+
+                    class Rectangle0 {
+                        constructor(height, width) 
+                        {
+                        this.height = height;
+                        this.width = width;
+                        }
+                    }
+
+                    const square0 = new Rectangle0(5, 5);
+                    const poster0 = new Rectangle0(2, 3);
+                    console.log(square0.height);
+
+                    <u><b>Clase nombrada:</b></u>
+                    var Square0 = class Rectangle0
+                    {
+                        constructor(height, width) {
+                        this.height = height;
+                        this.width = width;
+                        }
+                    };
+                    
+                    const square00 = new Square0(5, 5);
+                    const poster00 = new Square0(2, 3); 
+                    console.log(square00.height);
+                    
+                    <u><b>Clase no nombrada:</b></u>
+                    var Square1 = class 
+                    {
+                    constructor(height, width) {
+                        this.height = height;
+                        this.width = width;
+                    }
+                    };
+
+                    const square1 = new Square1(5, 5);
+                    const poster1 = new Square1(2, 3); 
+                    console.log(square1.height);
+
+                    <u><b>Metodo/Func</b></u>
+                    class Rectangle1 {
+                    constructor(height, width) {
+                        this.height = height;
+                        this.width = width;
+                    }
+                    
+                    get area() {
+                        return this.calcArea();
+                    }
+                    
+                    calcArea() {
+                        return this.height * this.width;
+                    }
+                    }
+                    const square01 = new Rectangle1(5, 5);
+                    console.log(square01.area); // 25
+                    
+
+                    <u><b>Herencia</b></u>
+                    class Animal0 {
+                    constructor(name) {
+                        this.name = name;
+                    }
+                    speak() {
+                        console.log(this.name + ' makes a noise.');
+                    }
+                    }
+                    
+                    class Dog0 extends Animal0 {
+                    speak() {
+                        console.log(this.name + ' barks.');
+                    }
+                    }
+                    let dog0 = new Dog0('Rex');
+                    dog0.speak(); // Rex barks.
+
+                    // 
+                    class Animal1 {
+                    constructor(name) {
+                        this.name = name;
+                    }
+                    speak() {
+                        console.log(this.name + ' makes a noise.');
+                    }
+                    }
+                    
+                    class Dog1 extends Animal1 {
+                    speak() {
+                        super.speak(); // Rex barks.
+                        console.log(this.name + ' barks.');
+                    }
+                    }
+                    let dog1 = new Dog1('Rex');
+                    dog1.speak(); // Rex makes a noise.
+                </pre></code>
+
+                <h2 class="subtitulo"> Map & Set</h2>
+                <code><pre>
+                    let map00 = new Map([["k1","v1"], ["k2", "v2"]]);
+                        console.log(map00.size); // 2
+                    
+                        // Metodos
+                        // set(key, value)
+                        // get(key)
+                        // has(key)
+                        // delete(key)
+                        // clear()
+                        // keys()    : Arr de k
+                        // value()   : Arr de v
+                        // entries() : Arr de [k, v]
+                        
+                        let map2 = new Map();
+                        map2.set("k1", "v1").set("k2", "v2");
+                        console.log(map2.get("k1")); // v1
+                        console.log(map2.has("k2")); // true
+                        for (let kv of map2.entries())
+                        console.log(kv[0] + " : " + kv[1]); // k1:v1  // k2:v2
+                    // 
+                    
+                    // SET (obj)
+                    let set = new Set([1, 2, 4, 2, 59, 9, 4, 9, 1]);
+                    console.log(set.size); // 5 (size devuelve la cant de valores diferentes)
+                    // Metodos= Add, delete, has, clear, values.
+                </pre></code>
+
+                <h2 class="subtitulo"> Otros </h2>
+                <code><pre>
+                    <u><b>PROMISES (por tiempo):</b></u>
+
+                    // Antes js
+                    setTimeout(function() {
+                        console.log("Work 1");
+                        setTimeout(function() {
+                            console.log("Work 2");
+                        }, 1000);
+                    }, 1000);
+                    console.log("End");
+
+                    // Ahora ES6
+                    new Promise(function(resolve, reject) {
+                        // Work
+                        if (success)
+                            resolve(result);
+                        else
+                            reject(Error("failure"));
+                    }); 
+
+
+
+
+                    <u><b>Iteradores y Generadores:</b></u>
+
+                    let myIterableObj = { 
+                        [Symbol.iterator] : function* () {
+                        yield 1; yield 2; yield 3;
+                        }
+                    };
+                    console.log([...myIterableObj]); // [ 1, 2, 3 ]
+
+                    // 
+                    function* idMaker() {
+                    let index = 0;
+                    while (index < 5)
+                        yield index++;
+                    }
+                    var gen = idMaker();
+
+                    console.log(gen.next().value);
+                    console.log(gen.next().value);
+                    console.log(gen.next().value);
+                    console.log(gen.next().value);
+                    console.log(gen.next().value);
+                    // Try to add one more console.log, just like the above see what happens.
+
+                    // 
+                    const arr_ = ['0', '1', '4', 'a', '9', 'c', '16'];
+                    const my_obj = {
+                        [Symbol.iterator]: function*() {
+                        for(let index of arr_) {
+                            yield `${index}`;
+                        }
+                        }
+                    };
+
+                    const all = [...my_obj] // Here you can replace the '[...my_obj]' with 'arr'.
+                        .map(i => parseInt(i, 10))
+                        .map(Math.sqrt)
+                        .filter((i) => i < 5) // try changing the value of 5 to 4 see what happens.
+                        .reduce((i, d) => i + d); // comment this line while you are changing the value of the line above
+
+                    console.log(all);
+
+
+
+
+
+
+                    <u><b>Módulos:</b></u>
+
+                    <u><b>Métodos integrados:</b></u>
+
+                </pre></code>
 
             </div> <!-- Borders -->
-            
-            
-        </div><br>
 
-        <!--ECMAScript  -->
-        <div class="borders">
-            <h2 class="titles"> ECMAScript </h2>
-
-            <h2 class="subtitulo"> Var & Let </h2>
-            <pre>
-            var a = 10;        // publica fuera del {}
-            let b = true;      // privada dentro del {}
-            const c = 'hello'; // privado y no se puede modificar 
-            </pre>
-
-            <h2 class="subtitulo"> Literales de plantilla en ES6 </h2>
-            
-            <pre> 
-            let nameLet2 = 'David';
-            let msgLet2 = `Welcome ${nameLet2}!`;
-            </pre>
-            
-            <h2 class="subtitulo"> bucles For </h2>
-            <pre>
-            // For In
-            let objsV01 = {a:1, b:2, c:3};
-            for (let v in objsV01) {
-            document.write(v);
-            }
-
-            // For Of
-            let objsV02 = ["xL", "y", "z"];
-            for (let v of objsV02) {
-            document.write(v);
-            }
-            </pre>
-
-
-            <h2 class="subtitulo"> Funciones/Metodos </h2>
-            <pre>
-            
-            </pre>
-
-
-
-
-
-
-
-        
-            <!-- Hora por segundos -->
-            <h2 class="subtitulo"> Hora por segundos </h2>
-            <div id="HoraPS">Hora:</div>
-
-            <h2 class="subtitulo">  </h2>
-
-
-
-
-        </div>
-
-        <div class="borders">
-
-            <h1 class="titulo">Archivo JavaScript.js</h1>
-
-            
-            <!-- Archivo JavaScript -->
-            <!-- <script type="text/javascript" src="htmlcheatsheet.js"></script> -->
-            <!-- Archivo JavaScript -->
-            
-            
-        </div>
-
+        </div> <!-- Borders -->
 
     </details>
 
