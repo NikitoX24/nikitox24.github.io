@@ -20,7 +20,7 @@
         text-decoration: underline;
         text-shadow: 5px 2px 4px grey;
     }
-    h2.subtitulo{
+    .subtitulo{
         text-decoration: underline;
     }
 
@@ -88,6 +88,34 @@
     .ejemplo{
         background-color: white;
         width: 400px;
+    }
+
+    /* <hr> */
+
+    /* Red border */
+    hr.new1 {
+    border-top: 1px solid grey;
+    }
+
+    /* Dashed red border */
+    hr.new2 {
+    border-top: 3px dashed grey;
+    }
+
+    /* Dotted red border */
+    hr.new3 {
+    border-top: 3px dotted grey;
+    }
+
+    /* Thick red border */
+    hr.new4 {
+    border: 1px solid grey;
+    }
+
+    /* Large rounded green border */
+    hr.new5 {
+    border: 10px solid grey;
+    border-radius: 5px;
     }
 
 </style>
@@ -1006,7 +1034,7 @@
 
     <!-- CSS -->
 
-    <details > 
+    <details open> 
         <summary style="font-size: 50px;"> CSS </summary>
 
         <div class="borders">
@@ -1429,8 +1457,6 @@
                 </div>
             </div>
             
-
-
             <!-- (Properties) -->
             <div class="borders">
             <h2 class="titles"> Properties </h2>
@@ -1731,17 +1757,16 @@
             
             </div>
             
-
-            <hr><hr><hr><hr><hr><hr>
-            
-            <!-- Positioning And Layout -->
-            
+            <!-- Positioning And Layout -->         
             <div class="borders">
                 <h2 class="titles"> Positioning And Layout </h2>
+
+
                 <!-- Display -->
+                <div class="borders">
                 <p class="numbers">28) Display</p>
                 <p>
-                    <u>Sin display block</u><br>
+                    <u>Sin display block:</u><br>
                     <span>First paragraph.</span>
                     <span>Second paragraph.</span>
                     <span>Third paragraph.</span>
@@ -1750,7 +1775,7 @@
                 </p>
                 
                 <p>
-                    <u>Con display block</u><br>
+                    <u>Con display block:</u><br>
                     <span class="block">First paragraph.</span>
                     <span class="block">Second paragraph.</span>
                     <span class="block">Third paragraph.</span>
@@ -1764,7 +1789,7 @@
                     <p class="inline">Third paragraph.</p>
                     <p class="inline">Fourth paragraph.</p>
                     <p class="inline">Fifth paragraph.</p>
-                </p>
+                </p><br>
                 <style>
                     span.block{
                         display: block;
@@ -1773,21 +1798,45 @@
                         display: inline;
                     }
                 </style>
-                <hr>
-            
-                <!-- Visibility -->
-                <p class="numbers">29) Visibility</p>
-                <h1 class="none"> Este texto no se mostrará, ya que establecemos el valor en ninguno. </h1>
-                <p> El título de este párrafo no se muestra, ya que establecemos el valor en ninguno.</p>
-            
-                <h4> Este es un texto </h4>
-                <div class = "hidden">
-                Este texto no se mostrará en el navegador.
+                <u>Code:</u>
+                <code><pre>
+                    span.block{
+                        display: block;
+                    }
+                    p.inline{
+                        display: inline;
+                    }
+                </pre></code>
                 </div>
-                <p>
-                    El espacio sobre este párrafo está vacío porque 
-                    la visibilidad del elemento div está configurada como oculta.
-                </p>
+            
+
+                <!-- Visibility -->
+                <div class="borders">
+                <p class="numbers">29) Visibility</p>
+                <div class="ejemplo"> <u>Codigos:</u><br>
+                    < h1 class="none"> Este texto no se mostrará, ya que establecemos el valor en ninguno. </ h1>
+                    < p> El título de este párrafo no se muestra, ya que establecemos el valor en ninguno. </ p>
+                
+                    < h4> Este es un texto </ h4>
+                    < div class = "hidden">
+                    Este texto no se mostrará en el navegador.
+                    </ div>
+                    < p>
+                        El espacio sobre este párrafo está vacío porque 
+                        la visibilidad del elemento div está configurada como oculta.
+                    </ p>
+                </div> <br>
+                <h1 class="none"> Este texto no se mostrará, ya que establecemos el valor en ninguno. </h1>
+                    <p> El título de este párrafo no se muestra, ya que establecemos el valor en ninguno.</p>
+                
+                    <h4> Este es un texto </h4>
+                    <div class = "hidden">
+                    Este texto no se mostrará en el navegador.
+                    </div>
+                    <p>
+                        El espacio sobre este párrafo está vacío porque 
+                        la visibilidad del elemento div está configurada como oculta.
+                    </p>
                 <style>
                     h1.none{
                         display: none;
@@ -1795,54 +1844,74 @@
                     div.hidden{
                         visibility: hidden;
                     }
-                </style>
-                <hr>
+                </style> <br>
+                <u>Code:</u>
+                <code><pre>
+                    h1.none{
+                        display: none;
+                    }
+                    div.hidden{
+                        visibility: hidden;
+                    }
+                </pre></code>
+                </div>
             
                 <!-- posicionamiento -->
-                    <p class="numbers">30) posicionamiento</p>
-                    
-                    <!-- estatico -->
+                <div class="borders">
+                <p class="numbers">30) Posicionamiento</p>
+                
+                <!-- estatico -->
+                <u>Estatico:</u>
+                <div class="ejemplo">
                     <p class="position_static">This paragraph has a static position.</p>
-            
-                    <!-- fijo -->
-                    <p class="position_fixed">30) Fixed position.</p>
-                    
-                    <!-- relativo -->
-                    <span class="spann"> relative text </span>
-            
-                    <style>
-                        p.position_static {
-                            position:static;
-                            top: 30px;
-                            right: 5px;
-                            color: red;
-                        }
-                        /* fijo */
-                        p.position_fixed {
-                            position: fixed;
-                            top: 30px;
-                            right: 15px;
-                            font-size: 30px;
-                        }
-                        /* relativo */
-                        span.spann{
-                            background: green;
-                            color: white;
-                            position: relative;
-                            top: -21px;
-                            left: 50px;
-                        }
-                    </style>
-
+                </div><br>
+        
+                <!-- fijo -->
+                <u>Fijo: (Arriba a la derecha)</u> <br>
+                <div class="ejemplo">
+                    <p class="position_fixed">30) Fixed position.</p><br>
+                </div><br>
+                
+                <!-- relativo -->
+                <u>Relativo:</u> <br>
+                <div class="ejemplo">
+                    <span class="spann"> relative text </span><br>
+                </div>
+        
+                <style>
+                    p.position_static {
+                        position:static;
+                        top: 30px;
+                        right: 5px;
+                        color: red;
+                    }
+                    /* fijo */
+                    p.position_fixed {
+                        position: fixed;
+                        top: 30px;
+                        right: 15px;
+                        font-size: 30px;
+                    }
+                    /* relativo */
+                    span.spann{
+                        background: green;
+                        color: white;
+                        position: relative;
+                        top: -10px;
+                        left: 50px;
+                    }
+                </style> <br>
+                </div>
 
                 <!-- Floating -->
+                <div class="borders">
                 <p class="numbers">31) Floating</p>
                 <p style="font-size: large; width: 50%; text-align: justify; "><img src="../Imgs/css_logo.png" class="imgfloatr" />
-                    This paragraph has an image that is floated to the <strong>right.</strong> 
-                    It is highly recommended to add a margin to images so that the text does 
-                    not get too close to the image. If you want your text to be easily read, you 
-                    should always add a few pixels between words and borders, images, 
-                    and other content.
+                    Este párrafo tiene una imagen que flota a la <b>derecha.</b>
+                    Es muy recomendable añadir un margen a las imágenes para que el texto no
+                    No te acerques demasiado a la imagen. Si desea que su texto sea fácil de leer, puede
+                    siempre debe agregar algunos píxeles entre palabras y bordes, imágenes,
+                    y otro contenido.
                 </p>
                 <style>
                     img.imgfloatr{
@@ -1859,20 +1928,27 @@
                 <hr>
             
                 <!-- Clearing the Float -->
-                <p class="numbers">32)</p>
-                <div>
-                    This paragraph is above the div element 
-                    and is not affected by the float right property. 
-                    <br /><br />
-                <div class="floating">
-                    <img src="../Imgs/css_logo.png" height="40px"/>
-                </div>
-                    This paragraph comes after the div element 
-                    and is affected by the float right property. 
-                    <br><br class="clearing"/>
-                    This paragraph also comes after the div element
-                    and is affected by the float right property.
-                    <br><br>
+                <p class="numbers">32) Clearing the Float</p>
+                <u><b>Floating:</b></u>
+                <div class="ejemplo">
+                    Este párrafo está encima del elemento div y no se ve afectado por la propiedad float right de la imagen. <br><br>
+                    <div class="floating">
+                        <img src="../Imgs/css_logo.png" height="150px"/>
+                    </div>
+                    Este párrafo viene después del elemento div y se ve afectado por la propiedad float right.
+                    <br> <br>
+                    Este párrafo también viene después del elemento div y se ve afectado por la propiedad float right.
+                </div> <br>
+
+                <u><b>Clearing:</b></u>
+                <div class="ejemplo">
+                    Este párrafo está encima del elemento div y no se ve afectado por la propiedad float right de la imagen. <br><br>
+                    <div class="floating">
+                        <img src="../Imgs/css_logo.png" height="150px"/>
+                    </div>
+                    Este párrafo viene después del elemento div y se ve afectado por la propiedad float right.
+                    <br class="clearing"/>
+                    Este párrafo también viene después del elemento div y ya no se ve afectado por la propiedad float right.
                 </div>
                 <style>
                     .floating{
@@ -1882,10 +1958,19 @@
                         clear: both; /* both, right, left */
                     }
                 </style>
-                <hr>
+                <code><pre>
+                    .floating{
+                        float: right;
+                    }
+                    .clearing{
+                        clear: both; /* both, right, left */
+                    }
+                </pre></code>
+                </div>
             
                 <!-- Z-Index -->
-                <p class="numbers">33)</p>
+                <div class="borders">
+                <p class="numbers">33) Z-Index</p>
                 <div class="bluee">Blue</div>
                 <div class="redd">Red</div>
                 <style>
@@ -1909,10 +1994,31 @@
                         margin-left: 50px;
                     }
                 </style>
+                <code><pre>
+                    .bluee { 
+                        z-index: 3;
+                        position: relative;
+                        background-color: blue;
+                        margin-bottom: 15px;
+                        width: 120px;
+                        height: 120px;
+                        color: #FFF;
+                    }
+                    .redd {
+                        z-index: 2;
+                        position: relative;
+                        background-color: red;
+                        width: 120px;
+                        height: 120px;
+                        color: #FFF;
+                        margin-top: -50px;
+                        margin-left: 50px;
+                    }
+                </pre></code>
                 <hr>
             
                 <!-- OverFlow -->
-                <p class="numbers">34)</p>
+                <p class="numbers">34) OverFlow</p>
                 <div class="overflow">
                     This text is inside the div element, which has a blue 
                     background color and is floated to the left. We set a specific 
@@ -1920,269 +2026,302 @@
                     the content cannot fit.
                     <style>
                         div.overflow{
+                            width: 150px;
+                            height: 150px;
+                            background-color: lightblue;
+                            overflow: scroll; /* visible, scroll, hidden, auto */ 
+                        }
+                    </style>
+                </div>
+                <code><pre>
+                    div.overflow{
                         width: 150px;
                         height: 150px;
                         background-color: lightblue;
                         overflow: scroll; /* visible, scroll, hidden, auto */ 
                     }
-                    </style>
+                </pre></code>
                 </div>
-            </div><hr>
-            
+            </div>
             
             <!-- Bacics CSS3 --> 
-            
             <div class="borders">
                 <h2 class="titles"> Bacics CSS3 </h2>
-                <p class="numbers">35)</p><br>
-                <!-- news CSS3:   
-                    border radius/images
-                    multiple-background
-                    anims & effects
-                    box-shadow
-                    degradados
-                    transforms
-                    transiciones
-                    anims
-                -->
-            
-                <!-- Prefijos de provedores css --><!-- soportes para las nuevas caracteristicas de CSS -->
-                <div class = "roundd">
-                    border-radius: 24px;
-                </div><br>
+
+                <!-- News -->
+                <div class="borders">
+                    <p class="numbers">35) News CSS3</p>
+                    
+                
+                    <!-- Prefijos de provedores css -->
+                    <!-- soportes para las nuevas caracteristicas de CSS -->
+                    <h3 class="subtitulo"> Prefijos de provedores css </h3>
+
+                    <u>Prefijos de navegadores:</u> <br>
+                        FireFox = -moz- <br>
+                        Safari =  -webkit- <br>
+                        Chrome =  -webkit- <br>
+                        Opera =   -o- <br>
+                        Explorer = -ms <br><br>
+
+                    <div class = "roundd">
+                        -webkit-border-radius: 24px; <br>
+                        border-radius: 24px;
+                    </div>
+                </div>
             
                 <!-- Border-Radius -->
-                <div class = "divBorderRadius">
-                    border-radius: 0 0 20px 20px;
-                </div><br>
-            
-                <!-- Circulo -->
-                <div class = "divCirculo">
-                    border-radius: 50%;
-                </div><br>
-            
-                <!-- Box-Shadow -->
-                <div class = "boxShadow">
-                    box-shadow: 10px 10px 5px 5px #888888;
-                </div><br>
-            
-                <!-- Box-Inside Shadow -->
-                <div class = "boxInsideShadow">
-                    box-shadow: inset 10px 10px 5px 5px green ;
-                </div><br>
-            
-                <!-- Box-Double Inside Shadow -->
-                <div class = "boxDoubleInsideShadow">
-                    box-shadow: inset 10px 10px 5px green, inset -10px -10px 5px green ;
-                </div><br>
-            
-                <!-- Box-Triple Shadow -->
-                <div class = "BoxTrilpeShadow">
-                    box-shadow: 0 0 10px 4px #FF6347, 0 0 10px 30px #FFDAB9, 30px 0 20px 30px #B0E0E6;
-                </div><br><br><br>
+                <div class="borders">
+                    <h3 class="subtitulo"> Border-Radius </h3>
+                    <div class = "divBorderRadius">
+                        border-radius: 0 0 20px 20px;
+                    </div><br> <hr>
                 
-                <!-- BoxTransparencia -->
-                <div class = "BoxTransparencia">
-                </div>
+                    <!-- Circulo -->
+                    <h3 class="subtitulo"> Circulo </h3>
+                    <div class = "divCirculo">
+                        border-radius: 50%;
+                    </div><br> <hr>
                 
-                <style>
-                    /* 35) Prefijos de provedores css */
-                    /* soportes para las nuevas caracteristicas de CSS */
-                    /* Prefijos de navegadores 
-                        FireFox = -moz-
-                        Safari =  -webkit-
-                        Chrome =  -webkit-
-                        Opera =   -o-
-                        Explorer = -ms
-                    */
-                    .roundd{
-                    -webkit-border-radius: 24px;
-                    border-radius: 24px;
-                    border: 1px solid green;
-                    width: 200px;
-                    padding: 25px;
-                    } 
-
-                /* Border-Radius */
-                .divBorderRadius{
-                    /* border-radius: 20px; */
-                    border-radius: 0 0 20px 20px;
-                    background-color: green;
-                    color: white;
-                    padding: 50px;
-                    width: 200px;
-                }
-
-                /* Circulo */
-                .divCirculo{
-                    width: 200px;
-                    height: 200px;
-                    border-radius: 50%;
-                    background-color: green;
-                    text-align: center;
-                }
-
-                /* Box-Shadow */
-                .boxShadow{
-                    width: 300px;
-                    height: 100px;
-                    background-color: #9ACD32;
-                    /* box-shadow: 10px 10px #888888; */
-                    /* box-shadow: -10px -10px #888888; */
-                    box-shadow: 10px 10px 5px 5px #888888;
-                    /*         Hriz, Vert, blur, spread, color */
-                }
-
-                /* Box- Inside Shadow */
-                .boxInsideShadow{
-                    width: 300px;
-                    height: 100px;
-                    background-color: #9ACD32;
-                    box-shadow: inset 10px 10px 5px 5px green ;
-                }
-
-                /* Box-Double Inside Shadow */
-                .boxDoubleInsideShadow{
-                    width: 300px;
-                    height: 100px;
-                    background-color: #9ACD32;
-                    box-shadow: inset 10px 10px 5px green, inset -10px -10px 5px green ;
-                }
-
-                /* Box Trible Shadow */
-                .BoxTrilpeShadow {
-                    width: 300px;
-                    height: 100px;
-                    background-color: #9ACD32;
-                    box-shadow: 0 0 10px 4px #FF6347, 0 0 10px 30px #FFDAB9, 30px 0 20px 30px #B0E0E6;
-
-                    margin-left:30px;
-                    margin-top:30px;
-                }
-
-                /* Box Transparencia */
-                .BoxTransparencia{
-                    width: 300px;
-                    height: 100px;
-                    background-color: #9ACD32;
-                    background: linear-gradient(90deg, 
-                    rgba(38, 23, 179, 0.515) 0%, 
-                    rgba(16, 129, 133, 0.549) 25%, 
-                    rgba(167, 201, 17, 0.433) 75%, 
-                    rgba(72, 0, 56, 0.419) 100%);
-                    box-shadow: 0 0 25px rgba(19, 8, 80, 0.486),
-                    inset 0 0 1px rgba(0, 189, 85, 0.829);
+                    <!-- Box-Shadow -->
+                    <h3 class="subtitulo"> Box-Shadow </h3>
+                    <div class = "boxShadow">
+                        box-shadow: 10px 10px 5px 5px #888888;
+                    </div><br> <hr>
+                
+                    <!-- Box-Inside Shadow -->
+                    <h3 class="subtitulo"> Box-Inside Shadow </h3>
+                    <div class = "boxInsideShadow">
+                        box-shadow: inset 10px 10px 5px 5px green ;
+                    </div><br> <hr>
+                
+                    <!-- Box-Double Inside Shadow -->
+                    <h3 class="subtitulo"> Box-Double Inside Shadow </h3>
+                    <div class = "boxDoubleInsideShadow">
+                        box-shadow: inset 10px 10px 5px green, inset -10px -10px 5px green ;
+                    </div><br> <hr>
+                
+                    <!-- Box-Triple Shadow -->
+                    <h3 class="subtitulo"> Box-Triple Shadow </h3>
+                    <div class = "BoxTrilpeShadow">
+                        box-shadow: 0 0 10px 4px #FF6347, 0 0 10px 30px #FFDAB9, 30px 0 20px 30px #B0E0E6;
+                    </div><br><br><br> <hr>
                     
-                }
-                </style>
-                
-                
-                
-                <br><br><hr>
-            
-
-
-
-                <!-- Transparencia -->
-                <p class="numbers">36)</p>
-                <nav>
-                    <ul>
-                        <li><a href="#">COURSES</a></li>
-                        <li><a href="#">DISCUSS</a></li>
-                        <li><a href="#">TOP LEARNERS</a></li>
-                        <li><a href="#">BLOG</a></li>
-                    </ul>
-                </nav>
-                <style>
-                    nav {
-                        padding: 50px 0;
-                        min-width: 500px; 
-                    }
-                    nav ul {
-                        background: linear-gradient(90deg, 
-                        rgba(255, 255, 255, 0) 0%, 
-                        rgba(255, 255, 255, 0.2) 25%, 
-                        rgba(255, 255, 255, 0.2) 75%, 
-                        rgba(255, 255, 255, 0) 100%);
-                        box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
-                        inset 0 0 1px rgba(255, 255, 255, 0.6);
-                    }
-                    nav ul li {
-                        display: inline-block;
-                    }
-                    nav ul li a {
-                        padding: 10px; 
-                        color: #000000;
-                        font-size: 18px;
-                        font-family: Arial;
-                        text-decoration: none;
-                        display: block;
-                    }
-                </style>
-                <hr>
-                
-                <!-- Text Shadow -->
-                <p class="numbers">37)</p>
-                <h2 class = "TextShadow">
-                    Text Shadow.
-                </h2>
-                <style>
-                    .TextShadow{
-                        text-shadow: 1px 1px 5px blue, -3px -3px 5px grey;
-                    }
-                </style>
-                <hr>
-            
-                <!-- Pseudo-Clases -->
-                <p class="numbers">38)</p>
-                <div id="parent">
-                    <p>First paragraph</p>
-                    <p>Second paragraph</p>
-                    <p>Third paragraph</p>
-                    <p>Fourth paragraph</p>
+                    <!-- BoxTransparencia -->
+                    <h3 class="subtitulo"> BoxTransparencia </h3>
+                    <div class = "BoxTransparencia">
+                    </div> <br>
+                    
                     <style>
-                        #parent p:first-child { /* first-last */
-                            color: green;
-                            text-decoration: underline;
+                        .roundd{
+                            -webkit-border-radius: 24px;
+                            border-radius: 24px;
+                            border: 1px solid green;
+                            width: 300px;
+                            padding: 25px;
+                        } 
+
+                        /* Border-Radius */
+                        .divBorderRadius{
+                            /* border-radius: 20px; */
+                            border-radius: 0 0 20px 20px;
+                            background-color: green;
+                            color: white;
+                            padding: 50px;
+                            width: 200px;
+                        }
+
+                        /* Circulo */
+                        .divCirculo{
+                            width: 200px;
+                            height: 200px;
+                            border-radius: 50%;
+                            background-color: green;
+                            text-align: center;
+                        }
+
+                        /* Box-Shadow */
+                        .boxShadow{
+                            width: 300px;
+                            height: 100px;
+                            background-color: #9ACD32;
+                            /* box-shadow: 10px 10px #888888; */
+                            /* box-shadow: -10px -10px #888888; */
+                            box-shadow: 10px 10px 5px 5px #888888;
+                            /*         Hriz, Vert, blur, spread, color */
+                        }
+
+                        /* Box- Inside Shadow */
+                        .boxInsideShadow{
+                            width: 300px;
+                            height: 100px;
+                            background-color: #9ACD32;
+                            box-shadow: inset 10px 10px 5px 5px green ;
+                        }
+
+                        /* Box-Double Inside Shadow */
+                        .boxDoubleInsideShadow{
+                            width: 300px;
+                            height: 100px;
+                            background-color: #9ACD32;
+                            box-shadow: inset 10px 10px 5px green, inset -10px -10px 5px green ;
+                        }
+
+                        /* Box Trible Shadow */
+                        .BoxTrilpeShadow {
+                            width: 300px;
+                            height: 100px;
+                            background-color: #9ACD32;
+                            box-shadow: 0 0 10px 4px #FF6347, 0 0 10px 30px #FFDAB9, 30px 0 20px 30px #B0E0E6;
+
+                            margin-left:30px;
+                            margin-top:30px;
+                        }
+
+                        /* Box Transparencia */
+                        .BoxTransparencia{
+                            width: 300px;
+                            height: 100px;
+                            background-color: #9ACD32;
+                            background: linear-gradient(90deg, 
+                            rgba(38, 23, 179, 0.515) 0%, 
+                            rgba(16, 129, 133, 0.549) 25%, 
+                            rgba(167, 201, 17, 0.433) 75%, 
+                            rgba(72, 0, 56, 0.419) 100%);
+                            box-shadow: 0 0 25px rgba(19, 8, 80, 0.486),
+                            inset 0 0 1px rgba(0, 189, 85, 0.829);
                         }
                     </style>
-                </div><hr>
+                </div>
+                
+                
+                <!-- Transparencia -->
+                <div class="borders">
+                    <p class="numbers">36) Transparencia</p>
+                    <nav>
+                        <ul>
+                            <li><a href="#">COURSES</a></li>
+                            <li><a href="#">DISCUSS</a></li>
+                            <li><a href="#">TOP LEARNERS</a></li>
+                            <li><a href="#">BLOG</a></li>
+                        </ul>
+                    </nav>
+                    <style>
+                        nav {
+                            padding: 50px 0;
+                            min-width: 500px; 
+                        }
+                        nav ul {
+                            background: linear-gradient(90deg, 
+                            rgba(255, 255, 255, 0) 0%, 
+                            rgba(255, 255, 255, 0.2) 25%, 
+                            rgba(255, 255, 255, 0.2) 75%, 
+                            rgba(255, 255, 255, 0) 100%);
+                            box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
+                            inset 0 0 1px rgba(255, 255, 255, 0.6);
+                        }
+                        nav ul li {
+                            display: inline-block;
+                        }
+                        nav ul li a {
+                            padding: 10px; 
+                            color: #000000;
+                            font-size: 18px;
+                            font-family: Arial;
+                            text-decoration: none;
+                            display: block;
+                        }
+                    </style>
+                </div>
+                
+                <!-- Text Shadow -->
+                <div class="borders">
+                    <p class="numbers">37) Text Shadow</p>
+                    <h2 class = "TextShadow">
+                        Text Shadow.
+                    </h2>
+                    <style>
+                        .TextShadow{
+                            text-shadow: 1px 1px 5px blue, -3px -3px 5px grey;
+                        }
+                    </style>
+                    <code>
+                        .TextShadow{ <br>
+                            text-shadow: 1px 1px 5px blue, -3px -3px 5px grey; <br>
+                        } <br>
+                    </pre>
+                </div>
             
+                <!-- Pseudo-Clases -->
+                <div class="borders">
+                    <p class="numbers">38) Pseudo-Clases</p>
+                    <div id="parent">
+                        <p>First paragraph</p>
+                        <p>Second paragraph</p>
+                        <p>Third paragraph</p>
+                        <p>Fourth paragraph</p>
+                        <style>
+                            #parent p:first-child { /* first-last */
+                                color: green;
+                                text-decoration: underline;
+                            }
+                        </style>
+                        <code>
+                            #parent p:first-child { <br>
+                                color: green; <br>
+                                text-decoration: underline; <br>
+                            }
+                        </code>
+                    </div>
+                </div>
+                
                 <!-- Pseudo-Elemento -->
-                <p class="numbers">39)</p>
-                <h1 class="textfirstline">The following example demonstrates how to use the ::first-line element to add special effect to the first line of elements in the document.</h6>
-            
-                <p class="numbers">40)</p>
-                <h2 class="seleccioname">Selecciona una parte de este texto para marcarlo de otro color</h2>
-            
-                <p class="numbers">41)</p>
-                <p class="insertImageBeforeText">insert Image Before Text</p><hr>
-                <style>
-                    /* 39) Pseudo-Elemento */
-                    /* 
-                      ::first-line
-                      ::first-letter
-                      ::selection
-                      ::before
-                      ::after
-                    */
-                    .textfirstline::first-line {
-                      color: #589432;
-                    }
-                    .seleccioname::first-letter{
-                      background-color: #589432;
-                    }
-                    .seleccioname::selection{ /* h5::-moz-selection{ (para mozillaFirefox)*/
-                      background-color: #589432;
-                      color: #FF6347;
-                    }
-                    .insertImageBeforeText::before{
-                      content: url("../Imgs/loguito.png");
-                    }
-                </style>
+                <div class="borders">
+                    <p class="numbers">39) Pseudo-Elemento</p>
+
+                    ::first-line <br>
+                    ::first-letter <br>
+                    ::selection <br>
+                    ::before <br>
+                    ::after <br><br>
+                    <hr>
+
+                    <h2 class="subtitulo">First-Line:</h2>
+                    <h1 class="textfirstline">The following example demonstrates how to use the ::first-line element to add special effect to the first line of elements in the document.</h6>
+                    <code>
+                        .textfirstline::first-line { <br>
+                            color: #589432; <br>
+                        } <br>
+                    </code>
+                    
+                    <hr>
+
+                    <p class="numbers">40)</p>
+                    <h2 class="seleccioname">Selecciona una parte de este texto para marcarlo de otro color</h2>
+
+                    <hr>
+
+                    <p class="numbers">41)</p>
+                    <p class="insertImageBeforeText">insert Image Before Text</p>
+                    <style>
+                        .textfirstline::first-line {
+                            color: #589432;
+                        }
+                        .seleccioname::first-letter{
+                            background-color: #589432;
+                        }
+                        .seleccioname::selection{ /* h5::-moz-selection{ (para mozillaFirefox)*/
+                            background-color: #589432;
+                            color: #FF6347;
+                        }
+                        .insertImageBeforeText::before{
+                            content: url("../Imgs/loguito.png");
+                        }
+                    </style>
+                </div>
             
                 <!-- Word-Wrap -->
-                <p class="numbers">42)</p>
+                <p class="numbers">42) Word-Wrap</p>
                 <p class="wordwrapnormal">
                     normal.
                     asfphagfuiyh0198uhasjfy18h8asfhjasfhasiufhasifhagsjsdgjsdhg
@@ -2207,7 +2346,7 @@
                 </style>
                 
                 <!-- Font-Face -->
-                <p class="numbers">43)</p>
+                <p class="numbers">43) Font-Face</p>
                 <h1 class="custfont">This is Delicious Font</h1>
                 <style>
                     @font-face {
@@ -2223,11 +2362,11 @@
                         font-family: Delicious, sans-serif; 
                     }
                 </style>
-            </div><hr>
+                </div>
+            </div><br>
             
             
             <!-- Degradados y Fondos -->
-            
             <div class="borders">
                 <h2 class="titles"> Degradados y Fondos </h2>
             
@@ -2522,7 +2661,6 @@
             
             
             <!-- transiciones y Transparencia -->
-            
             <div class="borders">
             <h2 class="titles"> Transiciones y Transparencia </h2>
             
@@ -3006,7 +3144,7 @@
             <h2 class="subtitulo">Colocar un archivo .JS externo: </h2>
             <code>
                 &#60script type="text/javascript" src="htmlcheatsheet.js"> &#60/script>
-            </code>
+            </code><br><hr>
 
             <!-- Salida html -->
             <h2 class="subtitulo">Salida por Html: </h2>
@@ -3896,7 +4034,7 @@
             }
             </pre></code>
 
-            </div> <br> <!-- Borders -->
+            </div> <!-- Borders -->
             
             <!--ECMAScript  -->
             <div class="borders">
@@ -4176,6 +4314,7 @@
                         // console.log(id); // 42
                         // console.log(age); // 20
                 </pre></code>
+                <hr>
 
                 <h2 class="subtitulo"> REST & SPREAD </h2>
                 <code><pre>
@@ -4361,6 +4500,7 @@
                     let dog1 = new Dog1('Rex');
                     dog1.speak(); // Rex makes a noise.
                 </pre></code>
+                <hr>
 
                 <h2 class="subtitulo"> Map & Set</h2>
                 <code><pre>
@@ -4390,6 +4530,7 @@
                     console.log(set.size); // 5 (size devuelve la cant de valores diferentes)
                     // Metodos= Add, delete, has, clear, values.
                 </pre></code>
+                <hr>
 
                 <h2 class="subtitulo"> Otros </h2>
                 <code><pre>
