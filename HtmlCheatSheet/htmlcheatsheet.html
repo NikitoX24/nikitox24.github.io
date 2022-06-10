@@ -15,6 +15,13 @@
     span{
         color: orangered;
     }
+    summary{
+        color: lightslategray;
+    }
+    code{
+        background-color: rgba(128, 128, 128, 0.135);
+        text-decoration: none;
+    }
     .titulo{
         text-align: center;
         text-decoration: underline;
@@ -23,7 +30,36 @@
     .subtitulo{
         text-decoration: underline;
     }
+    .div{ 
+        min-height: 50px; 
+    }
+    .ejemplo{
+        background-color: white;
+        width: 400px;
+    }
 
+    /* CSS */
+    .borders{
+        border-radius: 15px;
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid grey;
+        background-color: rgba(128, 128, 128, 0.227);
+    } 
+    .titles{
+        text-shadow: 5px 2px 4px grey;
+        text-align: center;
+        text-decoration: underline;
+        text-transform: uppercase;
+    }
+    p.numbers{
+        font-size: 20px;
+        font-weight: 1000;
+        text-decoration: underline;
+    }
+    /* CSS */
+
+    /* Box */
     .round{
         width: 60%;
         padding: 10px;
@@ -53,69 +89,11 @@
         float: right; 
         border-radius: 3px;
     }
-    .div{ 
-        min-height: 50px; 
-    }
-    summary{
-        color: lightslategray;
-    }
-    code{
-        background-color: rgba(128, 128, 128, 0.135);
-        text-decoration: none;
-    }
-
-    /* CSS */
-    .borders{
-        border-radius: 15px;
-        padding: 10px;
-        margin: 10px;
-        border: 1px solid grey;
-        background-color: rgba(128, 128, 128, 0.227);
-    } 
-    .titles{
-        text-shadow: 5px 2px 4px grey;
-        text-align: center;
-        text-decoration: underline;
-        text-transform: uppercase;
-    }
-    p.numbers{
-        font-size: 20px;
-        font-weight: 1000;
-        text-decoration: underline;
-    }
-    /* CSS */
-
-    .ejemplo{
-        background-color: white;
-        width: 400px;
-    }
-
+    /* Box */
+    
     /* <hr> */
-
-    /* Red border */
-    hr.new1 {
-    border-top: 1px solid grey;
-    }
-
-    /* Dashed red border */
-    hr.new2 {
-    border-top: 3px dashed grey;
-    }
-
-    /* Dotted red border */
-    hr.new3 {
-    border-top: 3px dotted grey;
-    }
-
-    /* Thick red border */
-    hr.new4 {
-    border: 1px solid grey;
-    }
-
-    /* Large rounded green border */
-    hr.new5 {
-    border: 10px solid grey;
-    border-radius: 5px;
+    hr.dashed {
+        border-top: 3px dashed grey; /* dashed(-), dotted(.)  */
     }
 
 </style>
@@ -123,9 +101,7 @@
    
     <h1 class="titulo">HTML CheatSheet</h1>
 
-
     <!-- HTML -->
-
     <details >
         <summary style="font-size: 50px;"> HTML </summary>
         <div class="borders">
@@ -663,12 +639,7 @@
 
     </details>
 
-
-
-    
-    
     <!-- HTML5 -->
-
     <details > 
         <summary style="font-size: 50px;"> HTML5 </summary>
 
@@ -1028,13 +999,8 @@
         </div>
     </details>
 
-
-
-
-
     <!-- CSS -->
-
-    <details open> 
+    <details > 
         <summary style="font-size: 50px;"> CSS </summary>
 
         <div class="borders">
@@ -2048,21 +2014,15 @@
             <div class="borders">
                 <h2 class="titles"> Bacics CSS3 </h2>
 
-                <!-- News -->
+                <!-- Prefijos de provedores css -->
                 <div class="borders">
-                    <p class="numbers">35) News CSS3</p>
-                    
-                
-                    <!-- Prefijos de provedores css -->
-                    <!-- soportes para las nuevas caracteristicas de CSS -->
-                    <h3 class="subtitulo"> Prefijos de provedores css </h3>
+                    <p class="numbers">35) Prefijos de provedores/navegadores css:</p>
 
-                    <u>Prefijos de navegadores:</u> <br>
-                        FireFox = -moz- <br>
-                        Safari =  -webkit- <br>
-                        Chrome =  -webkit- <br>
-                        Opera =   -o- <br>
-                        Explorer = -ms <br><br>
+                    FireFox = -moz- <br>
+                    Safari =  -webkit- <br>
+                    Chrome =  -webkit- <br>
+                    Opera =   -o- <br>
+                    Explorer = -ms <br><br>
 
                     <div class = "roundd">
                         -webkit-border-radius: 24px; <br>
@@ -2072,7 +2032,7 @@
             
                 <!-- Border-Radius -->
                 <div class="borders">
-                    <h3 class="subtitulo"> Border-Radius </h3>
+                    <p class="numbers"> 36) Border-Radius </p>
                     <div class = "divBorderRadius">
                         border-radius: 0 0 20px 20px;
                     </div><br> <hr>
@@ -2081,10 +2041,12 @@
                     <h3 class="subtitulo"> Circulo </h3>
                     <div class = "divCirculo">
                         border-radius: 50%;
-                    </div><br> <hr>
+                    </div>
+                </div>
                 
                     <!-- Box-Shadow -->
-                    <h3 class="subtitulo"> Box-Shadow </h3>
+                <div class="borders">
+                    <p class="numbers"> 37) Box-Shadow </p>
                     <div class = "boxShadow">
                         box-shadow: 10px 10px 5px 5px #888888;
                     </div><br> <hr>
@@ -2105,13 +2067,8 @@
                     <h3 class="subtitulo"> Box-Triple Shadow </h3>
                     <div class = "BoxTrilpeShadow">
                         box-shadow: 0 0 10px 4px #FF6347, 0 0 10px 30px #FFDAB9, 30px 0 20px 30px #B0E0E6;
-                    </div><br><br><br> <hr>
-                    
-                    <!-- BoxTransparencia -->
-                    <h3 class="subtitulo"> BoxTransparencia </h3>
-                    <div class = "BoxTransparencia">
-                    </div> <br>
-                    
+                    </div><br><br>
+
                     <style>
                         .roundd{
                             -webkit-border-radius: 24px;
@@ -2177,8 +2134,16 @@
                             margin-left:30px;
                             margin-top:30px;
                         }
-
-                        /* Box Transparencia */
+                    </style>
+                </div>
+                    
+                <!-- BoxTransparencia -->
+                <div class="borders">
+                    <h3 class="subtitulo"> 38) Transparencia </h3>
+                    <div class = "BoxTransparencia">
+                    </div> <br>
+                    
+                    <style>
                         .BoxTransparencia{
                             width: 300px;
                             height: 100px;
@@ -2192,12 +2157,27 @@
                             inset 0 0 1px rgba(0, 189, 85, 0.829);
                         }
                     </style>
-                </div>
-                
-                
-                <!-- Transparencia -->
-                <div class="borders">
-                    <p class="numbers">36) Transparencia</p>
+                    
+                    <details>
+                        <summary>Code...</summary>
+                        <code>
+                            .BoxTransparencia{ <br>
+                                width: 300px; <br>
+                                height: 100px; <br>
+                                background-color: #9ACD32; <br>
+                                background: linear-gradient(90deg,  <br>
+                                rgba(38, 23, 179, 0.515) 0%,  <br>
+                                rgba(16, 129, 133, 0.549) 25%,  <br>
+                                rgba(167, 201, 17, 0.433) 75%,  <br>
+                                rgba(72, 0, 56, 0.419) 100%); <br>
+                                box-shadow: 0 0 25px rgba(19, 8, 80, 0.486), <br>
+                                inset 0 0 1px rgba(0, 189, 85, 0.829); <br>
+                            }
+                        </code>
+                    </details>
+                    <hr>
+
+                    <!-- Transparencia -->
                     <nav>
                         <ul>
                             <li><a href="#">COURSES</a></li>
@@ -2232,16 +2212,46 @@
                             display: block;
                         }
                     </style>
+
+                    <details>
+                        <summary>Code...</summary>
+                        <code><pre>
+                        nav {
+                            padding: 50px 0;
+                            min-width: 500px; 
+                        }
+                        nav ul {
+                            background: linear-gradient(90deg, 
+                            rgba(255, 255, 255, 0) 0%, 
+                            rgba(255, 255, 255, 0.2) 25%, 
+                            rgba(255, 255, 255, 0.2) 75%, 
+                            rgba(255, 255, 255, 0) 100%);
+                            box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
+                            inset 0 0 1px rgba(255, 255, 255, 0.6);
+                        }
+                        nav ul li {
+                            display: inline-block;
+                        }
+                        nav ul li a {
+                            padding: 10px; 
+                            color: #000000;
+                            font-size: 18px;
+                            font-family: Arial;
+                            text-decoration: none;
+                            display: block;
+                        }
+                        </pre></code>
+                    </details>
                 </div>
                 
                 <!-- Text Shadow -->
                 <div class="borders">
-                    <p class="numbers">37) Text Shadow</p>
-                    <h2 class = "TextShadow">
+                    <p class="numbers">39) Text Shadow</p>
+                    <h2 class="TextShadow">
                         Text Shadow.
                     </h2>
                     <style>
-                        .TextShadow{
+                        .TextShadow {
                             text-shadow: 1px 1px 5px blue, -3px -3px 5px grey;
                         }
                     </style>
@@ -2249,12 +2259,12 @@
                         .TextShadow{ <br>
                             text-shadow: 1px 1px 5px blue, -3px -3px 5px grey; <br>
                         } <br>
-                    </pre>
+                    </code>
                 </div>
             
                 <!-- Pseudo-Clases -->
                 <div class="borders">
-                    <p class="numbers">38) Pseudo-Clases</p>
+                    <p class="numbers">40) Pseudo-Clases</p>
                     <div id="parent">
                         <p>First paragraph</p>
                         <p>Second paragraph</p>
@@ -2277,7 +2287,7 @@
                 
                 <!-- Pseudo-Elemento -->
                 <div class="borders">
-                    <p class="numbers">39) Pseudo-Elemento</p>
+                    <p class="numbers">41) Pseudo-Elemento</p>
 
                     ::first-line <br>
                     ::first-letter <br>
@@ -2286,28 +2296,45 @@
                     ::after <br><br>
                     <hr>
 
-                    <h2 class="subtitulo">First-Line:</h2>
+                    <h3 class="subtitulo"> >>First-Line</h3>
                     <h1 class="textfirstline">The following example demonstrates how to use the ::first-line element to add special effect to the first line of elements in the document.</h6>
                     <code>
                         .textfirstline::first-line { <br>
                             color: #589432; <br>
                         } <br>
                     </code>
-                    
                     <hr>
 
-                    <p class="numbers">40)</p>
+                    <h3 class="subtitulo"> >>First-Letter</h3>
+                    <h2 class="firstletter"> La primera letra es de otro color</h2>
+                    <code>
+                        .firstletter::first-letter{ <br>
+                            background-color: #589432; <br>
+                        }
+                    </code>
+                    <hr>
+
+                    <h3 class="subtitulo"> >>Selection</h3>
                     <h2 class="seleccioname">Selecciona una parte de este texto para marcarlo de otro color</h2>
-
+                    <code>
+                        .seleccioname::first-letter{ <br>
+                            background-color: #589432; <br>
+                        }
+                    </code>
                     <hr>
 
-                    <p class="numbers">41)</p>
+                    <h3 class="subtitulo"> >>Before</h3>
                     <p class="insertImageBeforeText">insert Image Before Text</p>
+                    <code>
+                        .insertImageBeforeText::before{ <br>
+                        content: url("../Imgs/loguito.png"); <br>
+                    }
+                    </code>
                     <style>
                         .textfirstline::first-line {
                             color: #589432;
                         }
-                        .seleccioname::first-letter{
+                        .firstletter::first-letter{
                             background-color: #589432;
                         }
                         .seleccioname::selection{ /* h5::-moz-selection{ (para mozillaFirefox)*/
@@ -2321,56 +2348,95 @@
                 </div>
             
                 <!-- Word-Wrap -->
-                <p class="numbers">42) Word-Wrap</p>
-                <p class="wordwrapnormal">
-                    normal.
-                    asfphagfuiyh0198uhasjfy18h8asfhjasfhasiufhasifhagsjsdgjsdhg
-                </p>
-                <p class="wordwrapbreak">
-                    break-word.
-                    asfphagfuiyh0198uhasjfy18h8asfhjasfhasiufhasifhagsjsdgjsdhg
-                </p><br><hr>
-                <style>
-                    .wordwrapnormal{
-                        border: 1px solid black;
-                        width: 120px;
-                        height: 100px;
-                        word-wrap: normal;
-                    }
-                    .wordwrapbreak{
-                        border: 1px solid black;
-                        width: 120px;
-                        height: 100px;
-                        word-wrap: break-word;
-                    }
-                </style>
+                <div class="borders">
+                    <p class="numbers">42) Word-Wrap</p>
+                    <p class="wordwrapnormal">
+                        Normal.
+                        NormalNormalNormalNormalNormalNormalNormalNormalNormalNormalNormalNormal.
+                    </p>
+                    <p class="wordwrapbreak">
+                        Break-Word.
+                        Break-Word.Break-Word.Break-Word.Break-Word.Break-Word.
+                    </p>
+                    <br><br>
+                    <details>
+                        <summary>Code...</summary>
+                        <code>
+                            .wordwrapnormal{ <br>
+                                border: 1px solid black; <br>
+                                width: 120px; <br>
+                                height: 100px; <br>
+                                word-wrap: normal; <br>
+                            } <br>
+                            .wordwrapbreak{ <br>
+                                border: 1px solid black; <br>
+                                width: 120px; <br>
+                                height: 100px; <br>
+                                word-wrap: break-word; <br>
+                            }
+                        </code>
+                    </details>
+                    
+                    <style>
+                        .wordwrapnormal{
+                            border: 1px solid black;
+                            width: 120px;
+                            height: 100px;
+                            word-wrap: normal;
+                        }
+                        .wordwrapbreak{
+                            border: 1px solid black;
+                            width: 120px;
+                            height: 100px;
+                            word-wrap: break-word;
+                        }
+                    </style>
+                </div>
                 
                 <!-- Font-Face -->
-                <p class="numbers">43) Font-Face</p>
-                <h1 class="custfont">This is Delicious Font</h1>
-                <style>
-                    @font-face {
-                        font-family: Delicious; 
-                        src: url('../Imgs/Delicious-Roman.otf'); 
-                    } 
-                    @font-face { 
-                        font-family: Delicious; 
-                        font-weight: bold; 
-                        src: url('../Imgs/Delicious-Bold.otf'); 
-                    }
-                    h1.custfont{
-                        font-family: Delicious, sans-serif; 
-                    }
-                </style>
+                <div class="borders">
+                    <p class="numbers">43) Font-Face</p>
+                    <h1 class="custfont">This is Delicious Font</h1>
+                    <details>
+                        <summary>Code...</summary>
+                        <code>
+                            @font-face { <br>
+                            font-family: Delicious;  <br>
+                            src: url('../Imgs/Delicious-Roman.otf');  <br>
+                        }  <br>
+                        @font-face {  <br>
+                            font-family: Delicious;  <br>
+                            font-weight: bold;  <br>
+                            src: url('../Imgs/Delicious-Bold.otf');  <br>
+                        } <br>
+                        h1.custfont{ <br>
+                            font-family: Delicious, sans-serif;  <br>
+                        }
+                        </code>
+                    </details>
+                    <style>
+                        @font-face {
+                            font-family: Delicious; 
+                            src: url('../Imgs/Delicious-Roman.otf'); 
+                        } 
+                        @font-face { 
+                            font-family: Delicious; 
+                            font-weight: bold; 
+                            src: url('../Imgs/Delicious-Bold.otf'); 
+                        }
+                        h1.custfont{
+                            font-family: Delicious, sans-serif; 
+                        }
+                    </style>
                 </div>
-            </div><br>
-            
+            </div>
             
             <!-- Degradados y Fondos -->
             <div class="borders">
                 <h2 class="titles"> Degradados y Fondos </h2>
             
                 <!-- Dergadados Lineales -->
+                <div class="borders">
                 <p class="numbers">44) Dergadados Lineales</p>
                 <table>
                     <td><div class="degradados">lineal gradient</div></td>
@@ -2383,7 +2449,6 @@
                         margin: 4px;
                         color: #FFF;
                         background: linear-gradient(DeepSkyBlue, black);
-                        /* background: linear-gradient(#A0D468,#354920 ); */
                     }
                     div.degradadosmulticolor{
                         width: 300px;
@@ -2524,147 +2589,152 @@
                         background: -ms-radial-gradient(circle, green 40%, yellow 50%, blue 70%); 
                     }
                 </style>
-                
+                </div>
+    
                 <!-- Background size -->
-                <p class="numbers">51) Background size</p>
-                <table>
-                    <td><div class="backsiz100">background-size: 100px</div></td>
-                    <td><div class="backsiz50">background-size: 50px</div></td>
-                </table>
-                <style>
-                    div.backsiz50 {
-                        height: 150px;
-                        width: 200px;
-                        border: 1px solid #000;
-                        background: url("http://www.sololearn.com/uploads/css_logo.png") no-repeat 50% 50%;
-                        background-size: 50px 50px;
-                    }div.backsiz100 {
-                        height: 150px;
-                        width: 200px;
-                        border: 1px solid #000;
-                        background: url("http://www.sololearn.com/uploads/css_logo.png") no-repeat 50% 50%;
-                        background-size: 100px 100px;
-                    }
-                </style>
-            
-                <p class="numbers">52)</p>
-                <table>
-                    <td><div class="bscont">bs: contain</div> </td>
-                    <td><div class="bscover">bs: cover</div> </td>
-                </table>
-                <style>
-                    div.bscont {
-                        height: 150px;
-                        width: 200px;
-                        border: 1px solid #000;
-                        background: url("http://www.sololearn.com/uploads/css_logo.png") no-repeat 50% 50%;
-                        background-size: contain;
-                    }
-                    div.bscover {
-                        height: 150px;
-                        width: 200px;
-                        border: 1px solid #000;
-                        background: url("http://www.sololearn.com/uploads/css_logo.png") no-repeat 50% 50%;
-                        background-size: cover;
-                    }
-                </style>
+                <div class="borders">
+                    <p class="numbers">51) Background size</p>
+                    <table>
+                        <td><div class="backsiz100">background-size: 100px</div></td>
+                        <td><div class="backsiz50">background-size: 50px</div></td>
+                    </table>
+                    <style>
+                        div.backsiz50 {
+                            height: 150px;
+                            width: 200px;
+                            border: 1px solid #000;
+                            background: url("http://www.sololearn.com/uploads/css_logo.png") no-repeat 50% 50%;
+                            background-size: 50px 50px;
+                        }div.backsiz100 {
+                            height: 150px;
+                            width: 200px;
+                            border: 1px solid #000;
+                            background: url("http://www.sololearn.com/uploads/css_logo.png") no-repeat 50% 50%;
+                            background-size: 100px 100px;
+                        }
+                    </style>
                 
-                <!-- Background Clip -->
-                <p class="numbers">53)</p>
-                <table>
-                    <td><div class="bcpad">background-clip: padding-box</div> </td>
-                    <td><div class="bccont">background-clip: content-box</div> </td>
-                    <td><div class="bcimg">background-clip: content-box</div> </td>
-                </table>
-                <style>
-                    div.bcpad {
-                        border: 2px dotted black;
-                        padding: 20px;
-                        background: LightBlue;
-                        background-clip: padding-box;
-                    }
-                    div.bccont {
-                        border: 2px dotted black;
-                        padding: 20px;
-                        background: LightBlue;
-                        background-clip: content-box;
-                    }
-                    div.bcimg {
-                        background-image: url("http://www.sololearn.com/uploads/css_logo.png");
-                        background-clip: content-box;
-                        border: 2px dotted black;
-                        padding: 20px;
-                    }
-                </style>
+                    <p class="numbers">52)</p>
+                    <table>
+                        <td><div class="bscont">bs: contain</div> </td>
+                        <td><div class="bscover">bs: cover</div> </td>
+                    </table>
+                    <style>
+                        div.bscont {
+                            height: 150px;
+                            width: 200px;
+                            border: 1px solid #000;
+                            background: url("http://www.sololearn.com/uploads/css_logo.png") no-repeat 50% 50%;
+                            background-size: contain;
+                        }
+                        div.bscover {
+                            height: 150px;
+                            width: 200px;
+                            border: 1px solid #000;
+                            background: url("http://www.sololearn.com/uploads/css_logo.png") no-repeat 50% 50%;
+                            background-size: cover;
+                        }
+                    </style>
+                    
+                    <!-- Background Clip -->
+                    <p class="numbers">53)</p>
+                    <table>
+                        <td><div class="bcpad">background-clip: padding-box</div> </td>
+                        <td><div class="bccont">background-clip: content-box</div> </td>
+                        <td><div class="bcimg">background-clip: content-box</div> </td>
+                    </table>
+                    <style>
+                        div.bcpad {
+                            border: 2px dotted black;
+                            padding: 20px;
+                            background: LightBlue;
+                            background-clip: padding-box;
+                        }
+                        div.bccont {
+                            border: 2px dotted black;
+                            padding: 20px;
+                            background: LightBlue;
+                            background-clip: content-box;
+                        }
+                        div.bcimg {
+                            background-image: url("http://www.sololearn.com/uploads/css_logo.png");
+                            background-clip: content-box;
+                            border: 2px dotted black;
+                            padding: 20px;
+                        }
+                    </style>
+                </div>
             
                 <!-- Transparent borders -->
-                <p class="numbers">54) Transparent borders</p>
-                <div class="tbord2"> Transparent borders</div>
-                <style>
-                    div.tbord {
-                        border: 20px solid rgba(0, 0, 0, 0.3);
-                        width:200px;
-                        /* position:absolute; */
-                        top:50px;
-                        left:50px;
-                        background-color:white;
-                    }
-                    div.tbord2 {
-                        border: 20px solid rgba(109, 61, 61, 0.3);
-                        -moz-background-clip: padding-box; 
-                        -webkit-background-clip: padding-box; 
-                        background-clip: padding-box; 
-                        width:200px;
-                        /* position:absolute; */
-                        top:50px;
-                        left:50px;
-                        background-color:white;
-                    }
-                </style>
+                <div class="borders">
+                    <p class="numbers">54) Transparent borders</p>
+                    <div class="tbord2"> Transparent borders</div>
+                    <style>
+                        div.tbord {
+                            border: 20px solid rgba(0, 0, 0, 0.3);
+                            width:200px;
+                            /* position:absolute; */
+                            top:50px;
+                            left:50px;
+                            background-color:white;
+                        }
+                        div.tbord2 {
+                            border: 20px solid rgba(109, 61, 61, 0.3);
+                            -moz-background-clip: padding-box; 
+                            -webkit-background-clip: padding-box; 
+                            background-clip: padding-box; 
+                            width:200px;
+                            /* position:absolute; */
+                            top:50px;
+                            left:50px;
+                            background-color:white;
+                        }
+                    </style>
 
-                <p class="numbers">55) Multiple-background</p>
-                <div class="multbg"></div>
-                <style>
-                    div.multbg {
-                        width: 400px;
-                        height: 300px;
-                        background-image: url("http://www.sololearn.com/uploads/css_logo.png"), url("http://www.sololearn.com/uploads/better-code.jpg");
-                        background-position: right bottom, left top;
-                        background-repeat: no-repeat;
-                    }
-                </style>
-            
-                <!-- Opacity -->
-                <p class="numbers">56) Opacity</p>
-                <table>
-                    <td><img id="img1" src="http://www.sololearn.com/uploads/css_logo.png" />1</td>
-                    <td><img id="img2" src="http://www.sololearn.com/uploads/css_logo.png" />0.5</td>
-                    <td><img id="img3" src="http://www.sololearn.com/uploads/css_logo.png" />0.25</td>
-                    <td><img id="img4" src="http://www.sololearn.com/uploads/css_logo.png" />0.5 + alpha</td>
-                </table>
-                <style>
-                    #img1 {
-                        opacity: 1;
-                    }
-                    #img2 {
-                        opacity: 0.5;
-                    }
-                    #img3 {
-                        opacity: 0.25;
-                    }
-                    #img4 {  
-                        opacity: 0.5;
-                        filter: alpha(opacity=50);
-                    }
-                </style>
-            </div><hr>
-            
+                    <p class="numbers">55) Multiple-background</p>
+                    <div class="multbg"></div>
+                    <style>
+                        div.multbg {
+                            width: 400px;
+                            height: 300px;
+                            background-image: url("http://www.sololearn.com/uploads/css_logo.png"), url("http://www.sololearn.com/uploads/better-code.jpg");
+                            background-position: right bottom, left top;
+                            background-repeat: no-repeat;
+                        }
+                    </style>
+                
+                    <!-- Opacity -->
+                    <p class="numbers">56) Opacity</p>
+                    <table>
+                        <td><img id="img1" src="http://www.sololearn.com/uploads/css_logo.png" />1</td>
+                        <td><img id="img2" src="http://www.sololearn.com/uploads/css_logo.png" />0.5</td>
+                        <td><img id="img3" src="http://www.sololearn.com/uploads/css_logo.png" />0.25</td>
+                        <td><img id="img4" src="http://www.sololearn.com/uploads/css_logo.png" />0.5 + alpha</td>
+                    </table>
+                    <style>
+                        #img1 {
+                            opacity: 1;
+                        }
+                        #img2 {
+                            opacity: 0.5;
+                        }
+                        #img3 {
+                            opacity: 0.25;
+                        }
+                        #img4 {  
+                            opacity: 0.5;
+                            filter: alpha(opacity=50);
+                        }
+                    </style>
+                </div>    
+            </div>
             
             <!-- transiciones y Transparencia -->
             <div class="borders">
             <h2 class="titles"> Transiciones y Transparencia </h2>
             
                 <!-- 57) Transition -->
+                <div class="borders">
                 <p class="numbers">57) Transition</p>
                 <div class="transit"> Apuntame</div>
                 <style>
@@ -2963,168 +3033,156 @@
                         -webkit-transform: rotateX(45deg);
                     }
                 </style>
-            </div><hr>
+                </div>
+            </div>
             
             <!-- Filtros de CSS -->
             <div class="borders">
-            <h2 class="titles"> Filtros de CSS </h2>
-                <!-- 
-                Filter functions include:
-                    blur(),
-                    brightness(), 
-                    contrast(), 
-                    drop-shadow(), 
-                    grayscale(), 
-                    hue-rotate(), 
-                    invert(), 
-                    opacity(), 
-                    saturate(),
-                    sepia().
-                -->
+                <h2 class="titles"> Filtros de CSS </h2>
+                    
+                <!-- Filter Functions -->
+                <div class="borders">
+                    <p class="numbers"> 66) Filter Functions</p><br>
+                    <table>
+                        <td>
+                            Drop-Shadow(w h b c) <br>
+                            <img class="dropshadow" src="http://www.sololearn.com/images/tree.jpg"/>
+                        </td>
+                        <td>
+                            Gray Scale <br>
+                            <img class="grayscale" src="http://www.sololearn.com/images/tree.jpg"/>
+                        </td>
+                        <td>
+                            Sepia <br>
+                            <img class="sepia" src="http://www.sololearn.com/images/tree.jpg"/>
+                        </td>
+                        <td>
+                            Saturate <br>
+                            <img class="saturate" src="http://www.sololearn.com/images/tree.jpg"/>
+                        </td>
+                        <td>
+                            Hue-Rotate <br>
+                            <img class="huerotate" src="http://www.sololearn.com/images/tree.jpg"/>
+                        </td>
+                        <td>
+                            Invert <br>
+                            <img class="invertimg" src="http://www.sololearn.com/images/tree.jpg"/>
+                        </td>
+                    </table>
+                    <style>
+                        /* DropShadow */
+                        .dropshadow {
+                            height: 200px;
+                            filter: drop-shadow(5px 9px 2px blue);
+                            -webkit-filter: drop-shadow(5px 9px 2px blue);
+                        }
+
+                        /* grayscale */
+                        .grayscale{
+                            height: 200px;
+                            filter: grayscale(100%);
+                        }
+
+                        /* Sepia */
+                        .sepia{
+                            height: 200px;
+                            filter: sepia(100%);
+                        }
+
+                        /* Saturate */
+                        .saturate{
+                            height: 200px;
+                            filter: saturate(300%); /* 0: gris, 100: original */
+                        }
+                        
+                        /* Hue-Rotate */
+                        .huerotate{
+                            height: 200px;
+                            filter: hue-rotate(180deg); /* de 0 a 360 (segun imagen e colores */
+                        }
+                        
+                        /* The invert Function */
+                        .invertimg{
+                            height: 200px;
+                            filter: invert(70%);
+                        }
+                        
+                        /* opacity */
+                        .opacity{
+                            height: 200px;
+                            filter: opacity(70%);
+                        }
+                    </style>
+                </div>
                 
-                <p class="numbers"> 66) Filter Functions</p><br>
-                <table>
-                    <td>
-                        Drop-Shadow(w h b c) <br>
-                        <img class="dropshadow" src="http://www.sololearn.com/images/tree.jpg"/>
-                    </td>
-                    <td>
-                        Gray Scale <br>
-                        <img class="grayscale" src="http://www.sololearn.com/images/tree.jpg"/>
-                    </td>
-                    <td>
-                        Sepia <br>
-                        <img class="sepia" src="http://www.sololearn.com/images/tree.jpg"/>
-                    </td>
-                    <td>
-                        Saturate <br>
-                        <img class="saturate" src="http://www.sololearn.com/images/tree.jpg"/>
-                    </td>
-                    <td>
-                        Hue-Rotate <br>
-                        <img class="huerotate" src="http://www.sololearn.com/images/tree.jpg"/>
-                    </td>
-                    <td>
-                        Invert <br>
-                        <img class="invertimg" src="http://www.sololearn.com/images/tree.jpg"/>
-                    </td>
-                </table>
-                <style>
-                    /* DropShadow */
-                    .dropshadow {
-                        height: 200px;
-                        filter: drop-shadow(5px 9px 2px blue);
-                        -webkit-filter: drop-shadow(5px 9px 2px blue);
-                    }
+                <!-- Opacity & Brightness -->
+                <div class="borders">
+                    <p class="numbers"> 67) Opacity & Brightness</p><br>
+                    <table>
+                        <td>
+                            Opacity 70%<br>
+                            <img class="opacity" src="http://www.sololearn.com/images/tree.jpg"/>
+                        </td>
+                        <td>
+                            Brightness 70% <br>
+                            <img class="brightness" src="http://www.sololearn.com/images/tree.jpg"/>
+                        </td>
+                        <td>
+                            Brightness 1.9 <br>
+                            <img class="brightness2" src="http://www.sololearn.com/images/tree.jpg"/>
+                        </td>
+                        </td>
+                        <td>
+                            Contrast 140% <br>
+                            <img class="contrast" src="http://www.sololearn.com/images/tree.jpg"/>
+                        </td>
+                        <td>
+                            blur 5px <br>
+                            <img class="blur" src="http://www.sololearn.com/images/tree.jpg"/>
+                        </td>
+                        <td>
+                            Multi-filters (blur+hue-rot)<br>
+                            <img class="multifilters" src="http://www.sololearn.com/images/tree.jpg"/>
+                        </td>
+                    </table>
+                    <style>
+                        /* Brightness */
+                        .brightness{
+                            height: 200px;
+                            filter: Brightness(70%);
+                        }
+                        
+                        /* Brightness2 */
+                        .brightness2{
+                            height: 200px;
+                            filter: brightness(1.9);
+                        }
 
-                    /* grayscale */
-                    .grayscale{
-                        height: 200px;
-                        filter: grayscale(100%);
-                    }
+                        /* Contrans */
+                        .contrast{
+                            height: 200px;
+                            filter: contrast(140%);
+                        }
+                        
+                        /* Blur */
+                        .blur{
+                            height: 200px;
+                            filter: blur(5px);
+                        }
 
-                    /* Sepia */
-                    .sepia{
-                        height: 200px;
-                        filter: sepia(100%);
-                    }
-
-                    /* Saturate */
-                    .saturate{
-                        height: 200px;
-                        filter: saturate(300%); /* 0: gris, 100: original */
-                    }
-                    
-                    /* Hue-Rotate */
-                    .huerotate{
-                        height: 200px;
-                        filter: hue-rotate(180deg); /* de 0 a 360 (segun imagen e colores */
-                    }
-                    
-                    /* The invert Function */
-                    .invertimg{
-                        height: 200px;
-                        filter: invert(70%);
-                    }
-                    
-                    /* opacity */
-                    .opacity{
-                        height: 200px;
-                        filter: opacity(70%);
-                    }
-                </style>
-            
-                <p class="numbers"> 67) Opacity & Brightness</p><br>
-                <table>
-                    <td>
-                        Opacity 70%<br>
-                        <img class="opacity" src="http://www.sololearn.com/images/tree.jpg"/>
-                    </td>
-                    <td>
-                        Brightness 70% <br>
-                        <img class="brightness" src="http://www.sololearn.com/images/tree.jpg"/>
-                    </td>
-                    <td>
-                        Brightness 1.9 <br>
-                        <img class="brightness2" src="http://www.sololearn.com/images/tree.jpg"/>
-                    </td>
-                    </td>
-                    <td>
-                        Contrast 140% <br>
-                        <img class="contrast" src="http://www.sololearn.com/images/tree.jpg"/>
-                    </td>
-                    <td>
-                        blur 5px <br>
-                        <img class="blur" src="http://www.sololearn.com/images/tree.jpg"/>
-                    </td>
-                    <td>
-                        Multi-filters (blur+hue-rot)<br>
-                        <img class="multifilters" src="http://www.sololearn.com/images/tree.jpg"/>
-                    </td>
-                </table>
-                <style>
-                    /* Brightness */
-                    .brightness{
-                        height: 200px;
-                        filter: Brightness(70%);
-                    }
-                    
-                    /* Brightness2 */
-                    .brightness2{
-                        height: 200px;
-                        filter: brightness(1.9);
-                    }
-
-                    /* Contrans */
-                    .contrast{
-                        height: 200px;
-                        filter: contrast(140%);
-                    }
-                    
-                    /* Blur */
-                    .blur{
-                        height: 200px;
-                        filter: blur(5px);
-                    }
-
-                    /* MultiFilters */
-                    .multifilters{
-                        height: 200px;
-                        filter: blur(5px) hue-rotate(180deg);  
-                    }
-                </style>
+                        /* MultiFilters */
+                        .multifilters{
+                            height: 200px;
+                            filter: blur(5px) hue-rotate(180deg);  
+                        }
+                    </style>
+                </div>
             </div>
         </div>
     </details>
 
-
-
-
-
-
     <!-- JavaScript -->
-    
-    <details open>
+    <details >
         <summary style="font-size: 50px;"> JavaScript </summary>
 
         <!-- DOM -->
@@ -4612,10 +4670,9 @@
 
             </div> <!-- Borders -->
 
-        </div> <!-- Borders -->
+        </div>
 
     </details>
-
 
 </body>
 </html>
