@@ -24,11 +24,12 @@ form{
   -webkit-border-radius: 24px;
   border-radius: 7px;
   border: 1px solid grey;
-  max-width: 200px;
-  padding: 25px;
+  max-width: 330px;
+  padding: 5px;
   box-shadow: 10px 10px 5px 5px rgba(136, 136, 136, 0.207);
   background-color: rgba(0, 0, 0, 0.281);
   margin: auto;
+  margin-top: 60px;
 }
 
 .bar{
@@ -85,4 +86,24 @@ a:hover{
   text-align: right;
   padding-bottom: 10px;
   color: grey;
+}
+
+/* icons */
+.icons{
+  height: 100px;
+  margin: 3px;
+}
+.icons:hover{
+  height: 105px;
+  margin: 0;
+}
+.imgcentred{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.imgcentred:hover{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
