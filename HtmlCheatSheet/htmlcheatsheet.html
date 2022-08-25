@@ -9,14 +9,16 @@
 </head>
 <style>
     body{
-        font-family: 'Brush Script MT', cursive;
+        font-family: 'Brush Script MT';
         text-shadow: 3px 3px 7px grey;
+        font-size: small;
     }
     span{
         color: orangered;
     }
     summary{
         color: lightslategray;
+        font-size: 25px;
     }
     code{
         background-color: rgba(128, 128, 128, 0.135);
@@ -34,15 +36,28 @@
         min-height: 50px; 
     }
     .ejemplo{
-        background-color: white;
         width: 400px;
+        border: 1px black solid;
+        padding: 5px;
+        background-color: white;
+        box-shadow: inset 4px 4px 4px rgba(128, 128, 128, 0.558), inset -4px -4px 4px rgba(128, 128, 128, 0.706) ;
     }
+    .ejoverflow{
+        height: 110px;
+        overflow: auto;
+    }
+    
+    pre{
+        margin-left: -80px;
+    }
+    
 
     /* CSS */
     .borders{
         border-radius: 15px;
-        padding: 10px;
-        margin: 10px;
+        padding-left: 15px;
+        padding-bottom: 12px;
+        margin: 6px;
         border: 1px solid grey;
         background-color: rgba(128, 128, 128, 0.227);
     } 
@@ -96,10 +111,6 @@
         border-top: 3px dashed grey; /* dashed(-), dotted(.)  */
     }
 
-    /* img sum */
-    /* .insertImageBeforeText::before{
-        content: url("../Imgs/html.png");
-    } */
 
 </style>
 <body>
@@ -107,30 +118,28 @@
 <h1 class="titulo">HTML CheatSheet</h1>
 
 <!-- HTML -->
-<details >
-    <summary style="font-size: 50px;" class="insertImageBeforeText"> HTML </summary>
-    <div class="borders">
-    
+<details>
+    <summary> HTML </summary>
 
     <div class="borders">  <!-- Encabezados -->
         <h2 style="text-decoration: underline;"> Encabezados < h1-h6 > </h2>
 
-        <div style="border: 1px solid;">    
+        <div class="ejemplo ejoverflow">    
             <h1> Encabezado h1 </h1>
             <h2> Encabezado h2 </h2>
             <h3> Encabezado h3 </h3>
             <h4> Encabezado h4 </h4>
-            <h5> Encabezado h5 </h5>
+            <h5> Encabezado h5 </h5> 
             <h6> Encabezado h6 </h6>
         </div>
 
     </div>
 
     <div class="borders"> <!-- Tipos de textos -->
-        <h2 class="subtitulo"> tipos de textos </h2>
+        <h2 class="subtitulo"> Tipos de textos </h2>
 
         <p><span>&lt;p></span>       Parrafo     <span>&lt;/p></span> </p>
-        <pre><span>&lt;pre></span> texto  con      mucho        espacio <span>&lt;/pre></span></pre> <!-- preformatted -->
+        <pre>            <span>&lt;pre></span>texto  con      mucho        espacio <span>&lt;/pre></span></pre> <!-- preformatted -->
         <b><span>&lt;b></span>       negrita     <span>&lt;/b></span></b><br>
         <strong><span>&lt;strong></span> reforzado <span>&lt;/strong> </span></strong> <br>
         <big> <span>&lt;big></span>  grande <span>&lt;/big></span></big> <br> 
@@ -386,7 +395,7 @@
             <noframes>Frames not supported!</noframes>
         </frameset>
     </div> 
--->
+    -->
 
     <div class="borders"> <!-- Tipos de elementos en Niveles -->
         <h2 class="subtitulo"> Tipos de elementos en Niveles </h2>
@@ -640,17 +649,15 @@
 
     </div> <br>
     
-    </div> <!-- Borders -->
-
 </details>
 
 <!-- HTML5 -->
-<details > 
-    <summary style="font-size: 50px;"> HTML5 </summary>
+<details open> 
+    <summary> HTML5 </summary>
 
     <div class="borders"> <!-- Estructura de Pag -->
         <h2 class="subtitulo"> Estructura de Pag </h2>
-        <img src="https://api.sololearn.com/DownloadFile?id=2471" alt="" height="300px">
+        <img src="https://api.sololearn.com/DownloadFile?id=2471" alt="" height="250px">
     </div>
 
     <div class="borders"> <!-- Audio & Video -->
@@ -662,7 +669,7 @@
             <audio src="audio.mp3" controls>
             Texto por si el navegador no soporta audio.
             </audio>
-<!--                 
+            <!--                 
             <audio controls autoplay loop>
             <source src="audio.mp3" type="audio/mp3"> 
             </audio> -->
@@ -732,167 +739,253 @@
     <div class="borders">  <!-- Dragg & Drop -->
         <section id="Dragg & Drop (API)">
             <h3 class="subtitles"> Dragg & Drop (API) </h3>
-            <div>
-                <!-- <img draggable="true" src="../Imgs/cat1.png" alt="" height="100px"/> -->
-                <!-- https://www.sololearn.com/learning/1014/2214/4405/1 -->
-                
-                <script>
-            function allowDrop(ev) {
-                ev.preventDefault();
-            }
-        
-            function drag(ev) {
-                ev.dataTransfer.setData("text", ev.target.id);
-            }
-        
-            function drop(ev) {
-                ev.preventDefault();
-                var data = ev.dataTransfer.getData("text");
-                ev.target.appendChild(document.getElementById(data));
-            }
+            <!-- <img draggable="true" src="../Imgs/cat1.png" alt="" height="100px"/> -->
+            <!-- https://www.sololearn.com/learning/1014/2214/4405/1 -->
+            
+            <script>
+                function allowDrop(ev) {
+                    ev.preventDefault();
+                }
+            
+                function drag(ev) {
+                    ev.dataTransfer.setData("text", ev.target.id);
+                }
+            
+                function drop(ev) {
+                    ev.preventDefault();
+                    var data = ev.dataTransfer.getData("text");
+                    ev.target.appendChild(document.getElementById(data));
+                }
             </script>
+
             <div id="box" ondrop="drop(event)"
             ondragover="allowDrop(event)"
             style="border:1px solid black; 
-            width:200px; height:200px">
+            width:150px; height:150px; text-align: center; 
+            color: grey; background-color: #b9bebe;" >
             </div>
         
             <img id="image" src="../Imgs/cat1.png" draggable="true"
-            ondragstart="drag(event)" width="200" height="200" alt="" />
-            </div>
-            </section>
+            ondragstart="drag(event)" width="150" height="150" alt="" />
+        </section>
     </div>
 
     <div class="borders">  <!-- Canvas & SVG -->
     <section id="Canvas Vs SVG">
-        <details>
-        <summary>Info...</summary>
-            <h2 class="subtitles"> Canvas vs SVG </h2>
-            <p>
-            Canvas: <br>
-            - Los elementos se dibujan programáticamente  <br>
-            - Los dibujos se realizan con píxeles <br>
-            - Las animaciones no están incorporadas <br>
-            - Alto rendimiento para operaciones de dibujo basadas en píxeles <br>
-            - Dependiente de la Resolución <br>
-            - No hay soporte para controladores de eventos <br>
-            - Puede guardar la imagen resultante como .png o .jpg <br>
-            - Muy adecuado para los juegos de gráficos intensivos <br> <br>
-            
-            SVG: <br>
-            - Los elementos son parte del DOM de la página (Modelo de Objetos del Documento) <br>
-            - El dibujo se hace con vectores <br>
-            - Efectos, como animaciones son incorporadas <br>
-            - Basado en sintaxis XML estándar, que provee mejor accesibilidad. <br>
-            - Independiente de la Resolución <br>
-            - Soporte para manejadores de eventos <br>
-            - No apto para aplicaciones de juegos <br>
-            - Es mejor para aplicaciones con áreas grandes de renderización (por ejemplo, Google Maps) <br>
-            </p>
-        </details>
+    <h1 class="subtitulo"> CANVAS vs SVG </h1>
+        <p>
+        Canvas: <br>
+        - Los elementos se dibujan programáticamente  <br>
+        - Los dibujos se realizan con píxeles <br>
+        - Las animaciones no están incorporadas <br>
+        - Alto rendimiento para operaciones de dibujo basadas en píxeles <br>
+        - Dependiente de la Resolución <br>
+        - No hay soporte para controladores de eventos <br>
+        - Puede guardar la imagen resultante como .png o .jpg <br>
+        - Muy adecuado para los juegos de gráficos intensivos <br> <br>
+        
+        SVG: <br>
+        - Los elementos son parte del DOM de la página (Modelo de Objetos del Documento) <br>
+        - El dibujo se hace con vectores <br>
+        - Efectos, como animaciones son incorporadas <br>
+        - Basado en sintaxis XML estándar, que provee mejor accesibilidad. <br>
+        - Independiente de la Resolución <br>
+        - Soporte para manejadores de eventos <br>
+        - No apto para aplicaciones de juegos <br>
+        - Es mejor para aplicaciones con áreas grandes de renderización (por ejemplo, Google Maps) <br>
+        </p>
     </section>
     
     <section id="SVG (Graficos Vectorales Escaleables)">
+    <div class="borders">
         <h2 class="subtitles"> SVG (Graficos Vectorales Escaleables) </h2>
         <!-- https://www.sololearn.com/learning/1014/2200/4369/1 -->
-        <div>
         <!-- Imagen -->
         <img src="image.svg" alt="" height="1"> <!-- SVG define imgs basadas en vectores en formato XML -->
-        
         <!-- Objeto -->
         <svg width="1" height="1"></svg>
+            <code><pre class="pree">
+            Imagen:
+            < img src="image.svg" alt="" height="1"> <!-- SVG define imgs basadas en vectores en formato XML -->
+
+            Objeto:
+            < svg width="1" height="1">< /svg>
+            </pre></code>
+            <hr>
         
         <!-- Circulo -->
-        <svg width="500" height="150">
-        <circle cx="80" cy="80" r="50" fill="green" /><!-- stoke= marco -->
-        </svg>
+        <div class="boxizq">
+            <svg width="60" height="60" >
+                <circle cx="30" cy="30" r="30" fill="green" /><!-- stoke= marco -->
+            </svg>
+        </div>
+        <code><pre>
+        < svg width="70" height="70">
+            < circle cx="40" cy="40" r="30" fill="green" /><!-- stoke= marco -->
+        < /svg>
+        </pre></code>
         <hr>
         
         <!-- Rectangulo -->
-        <svg width="300" height="250">
-        <rect width="300" height="100"
-        x="80" y="80" fill="green"/>
-        </svg>
+        <div class="boxizq">
+            <svg width="60" height="70">
+                <rect width="40" height="40"
+                x="10" y="10" fill="green"/>
+            </svg>
+        </div>
+        <code><pre>
+        < svg width="60" height="70">
+            < rect width="40" height="40"
+            x="10" y="10" fill="green"/>
+        < /svg>
+        </pre></code>
         <hr>
         
         <!-- Linea -->
-        <svg width="300" height="125">
-        <line x1="10" y1="10" x2="200" y2="100"
-            style="stroke:#000000; stroke-linecap:round;
-            stroke-width:20">
+        <div class="boxizq">
+            <svg width="60" height="70">
+                <line x1="10" y1="10" x2="50" y2="60"
+                style="stroke:#000000; stroke-linecap:round;
+                stroke-width:7">
             </svg>
+        </div>
+        <code><pre>
+        < svg width="60" height="70">
+            < line x1="10" y1="10" x2="50" y2="60"
+            style="stroke:#000000; stroke-linecap:round;
+            stroke-width:7">
+        < /svg>
+        </pre></code>
         <hr>
         
         <!-- PolyLine -->
-        <svg width="500" height="200">
-        <polyline style="stroke-linejoin:miter;
-        stroke:black;
-            stroke-width:12; fill: none;"
-            points="100 100, 150 150, 200 100" >
-        </polyline>
-        </svg>
+        <div class="boxizq">
+            <svg width="60" height="100">
+                <polyline style="stroke-linejoin:miter;
+                    stroke:black;
+                    stroke-width:5; fill: none;"
+                    points="25 25, 37 37, 50 25" >
+                </polyline>
+            </svg>
+        </div>
+        <code><pre>
+        < svg width="60" height="100">
+            < polyline style="stroke-linejoin:miter;
+                stroke:black;
+                stroke-width:5; fill: none;"
+                points="25 25, 37 37, 50 25" >
+            < /polyline>
+        < /svg>
+        </pre></code>
         <hr>
 
         <!-- Elipse -->
-        <svg width="500" height="300">
-        <ellipse cx="150" cy="150" rx="150" ry="50" style="fill:green" />
-        </svg>
+        <div class="boxizq">
+            <svg width="70" height="40">
+                <ellipse cx="35" cy="25" rx="35" ry="10" style="fill:green" />
+            </svg>
+        </div>
+        <code><pre>
+        < svg width="60" height="60">
+            < ellipse cx="30" cy="30" rx="30" ry="10" style="fill:green" />
+        < /svg>
+        </pre></code>
         <hr>
         
         <!-- PolyGon -->
-        <svg width="1000" height="200">
-        <polygon points="100 100, 200 200, 300 0" 
+        <div class="boxizq">
+            <svg width="60" height="60">
+                <polygon points="10 10, 60 40, 50 0" 
                 style="fill: green; stroke:black;" />
             </svg>
+        </div>
+        <code><pre>
+        < svg width="60" height="60">
+            < polygon points="10 10, 60 40, 50 0" 
+            style="fill: green; stroke:black;" />
+        < /svg>
+        </pre></code>
         <hr>
     
         <!-- Animaciones  <animate> -->
-        <svg width="500" height="150">
-        <rect width="150" height="150" fill="orange">
-            <animate attributeName="x" from="0" to="300"
-            dur="3s" fill="freeze" repeatCount="100"/> 
-        </rect>
-        <!-- 
-            attributeName: el atributo q se va animar.
-            from: valor al comenzar.
-            to: valor al terminar.
-            dur: duracion.
-            fill: valor del atributo al finalzar (remove: resetea valor, freeze: conserva el valor "to").
-            repeatCount: repeticiones, undefined: infinito.
-        -->
-        </svg>
+        <div class="boxizq">
+            <svg width="120" height="70">
+                <rect width="20" height="20" fill="orange">
+                    <animate attributeName="x" from="0" to="100"
+                    dur="1s" fill="freeze" repeatCount="1000"/> 
+                </rect>
+            </svg>
+        </div>
+        <code><pre>
+        < svg width="120" height="50">
+            < rect width="20" height="20" fill="orange">
+                < animate attributeName="x" from="0" to="100"
+                dur="1s" fill="freeze" repeatCount="1000"/> 
+            < /rect>
+        < /svg>
+        </pre></code>
+        <details>
+            <summary style="font-size: 20px;">Info...</summary>
+            <pre>
+                attributeName: el atributo q se va animar.
+                from: valor al comenzar.
+                to: valor al terminar.
+                dur: duracion.
+                fill: valor del atributo al finalzar (remove: resetea valor, freeze: conserva el valor "to").
+                repeatCount: repeticiones, undefined: infinito.
+            </pre>
+        </details>
         <hr>
         
         <!-- Trazos <path> -->
-        <svg width="500" height="200">
-            <!-- triangulo hipot -->
-            <path d="M 0 0 L200 200 L200 0 Z" style="stroke:#000;  fill:none;" />
-        </svg>
-        <br>
-        <!--
-            Usar letras Mayusculas para valores absolutos, y minusculas para pos relativa.
-            M: mover hacia.
-            L: linea hacia.
-            H: linea horiz. hacia.
-            V: linea vert. hacia.
-            C: curva hacia.
-            S: curva suave hacia.
-            Q: curva Bézier cuadrática.
-            T: curva Bézier cuadrática suave.
-            A: arco elíptico.
-            Z: closepath, cerrar trazado.
-        -->
-        <!-- cuadradp -->
-        <svg width="500" height="100">
-            <path d="M0 0 L0 100 L100 100 L100 0 Z" style="stroke:#000;  fill:none;" />
-        </svg>
-        
+
+        <!-- triangulo hipot -->
+        <div class="boxizq">
+            <svg width="50" height="60">
+                <path d="M 0 0 L50 50 L50 0 Z" style="stroke:#000;  fill:none;" />
+            </svg>
         </div>
+
+        <code><pre>
+            < svg width="50" height="60">
+                < path d="M 0 0 L50 50 L50 0 Z" style="stroke:#000;  fill:none;" />
+            < /svg>
+        </pre></code>
+        <details>
+            <summary style="font-size: 20px;">Info...</summary>
+            <pre>
+                Usar letras Mayusculas para valores absolutos, y minusculas para pos relativa.
+                M: mover hacia.
+                L: linea hacia.
+                H: linea horiz. hacia.
+                V: linea vert. hacia.
+                C: curva hacia.
+                S: curva suave hacia.
+                Q: curva Bézier cuadrática.
+                T: curva Bézier cuadrática suave.
+                A: arco elíptico.
+                Z: closepath, cerrar trazado.
+            </pre>
+        </details>
+        <hr>
+
+        <!-- cuadrado -->
+        <div class="boxizq">
+            <svg width="60" height="60">
+                <path d="M0 0 L0 25 L25 25 L25 0 Z" style="stroke:#000;  fill:none;" />
+            </svg>
+        </div>
+        <code><pre>
+            < svg width="60" height="60">
+                < path d="M0 0 L0 25 L25 25 L25 0 Z" style="stroke:#000;  fill:none;" />
+            < /svg>
+        </pre></code>
+    </div>
     </section>
     
     <section id="Canvas (JS)">
-        <h2 class="subtitles"> < Canvas > (JS) </h2>
-        <div>
+    <div class="borders">
+    <h2 class="subtitles"> < CANVAS > (JS) </h2>
         Canvas es solo contenedor grafico (para mostrar requiere JavaScript) <br>
         x0 y0: comienza arriba izq. <br><br>
         
@@ -903,82 +996,114 @@
         < _script_ > <br>
             var can = document.getElementById("canvas1"); <br>
             var ctx = can.getcontext("2d"); <br>
-        < _script_ > <hr width="15%" align="Left">
+        < /_script_ > 
         </b>
+        <hr>
 
         <!-- fillRect(x, y, w, h) -->
-        <h2 class="subtitulo"> fillRect(x, y, w, h) </h4>
-        <canvas id="canvas2" width="400" height="300"> </canvas> 
-        <script>
-        var c = document.getElementById("canvas2");
-        var ctx2 = c.getContext("2d");
-        ctx2.fillRect(20,20,100,100); /* w: ancho, h: alto */
-        </script> <hr width="15%" align="Left">
+        <h3 class="subtitulo"> fillRect(x, y, w, h) </h3>
+        <div class="boxizq">
+            <canvas id="canvas2" width="70" height="70"> </canvas> 
+            <script>
+                var c = document.getElementById("canvas2");
+                var ctx2 = c.getContext("2d");
+                ctx2.fillRect(10,10,60,60); // x, y, w, h 
+            </script>
+        </div>
+        <code><pre>
+            < canvas id="canvas2" width="70" height="70"> < /canvas> 
+            < _script_>
+                var c = document.getElementById ("canvas2");
+                var ctx2 = c.getContext("2d");
+                ctx2.fillRect(10,10,60,60); // x, y, w, h 
+            < /_script_>
+        </pre></code> 
+        <hr>
 
         <!-- fillStyle(rbga) Gradiante -->
-        <h2 class="subtitulo"> fillStyle(rbga) Gradiante </h4>
-        <canvas id="canvas3" width="400" height="300"> </canvas> 
-        <script>
-        var canvas = document.getElementById("canvas3");
-        var ctx3 = canvas.getContext("2d");
-        ctx3.fillStyle = "rgba(0, 200, 0, 1)";
-        ctx3.fillRect (36, 10, 22, 22);
-        </script>
+        <h3 class="subtitulo"> fillStyle(rbga) Gradiante </h3>
+        <div class="boxizq">
+            <canvas id="canvas3" width="70" height="100"> </canvas> 
+            <script>
+                var canvas = document.getElementById("canvas3");
+                var ctx3 = canvas.getContext("2d");
+                ctx3.fillStyle = "rgba(0, 200, 0, 1)";
+                ctx3.fillRect (10, 10, 60, 60);
+            </script>
+        </div>
+        <code><pre>
+            < canvas id="canvas3" width="70" height="70"> < /canvas> 
+            < _script_>
+                var canvas = document.getElementById("canvas3");
+                var ctx3 = canvas.getContext("2d");
+                ctx3.fillStyle = "rgba(0, 200, 0, 1)";
+                ctx3.fillRect (10, 10, 60, 60);
+            < /script>
+        </pre></code>
+        <hr>
 
-        <!-- 
-        Draw a Line
-        moveTo(x,y): Defines the starting point of the line.
-        lineTo(x,y): Defines the ending point of the line.
+        <!-- Otros... -->
+        <details>
+            <summary>Otros...</summary>
+            <pre>
+                Draw a Line
+                moveTo(x,y): Defines the starting point of the line.
+                lineTo(x,y): Defines the ending point of the line.
+                
+                Draw a Circle
+                beginPath(): Starts the drawing.
+                arc(x,y,r,start,stop): Sets the parameters of the circle.
+                stroke(): Ends the drawing.
+                
+                Gradients
+                createLinearGradient(x,y,x1,y1): Creates a linear gradient.
+                createRadialGradient(x,y,r,x1,y1,r1): Creates a radial/circular gradient.
+                
+                Drawing Text on the Canvas
+                Font: Defines the font properties for the text.
+                fillText(text,x,y): Draws "filled" text on the canvas.
+                strokeText(text,x,y): Draws text on the canvas (no fill).
+            </pre>
+        </details>
+        <hr><hr>
 
-        Draw a Circle
-        beginPath(): Starts the drawing.
-        arc(x,y,r,start,stop): Sets the parameters of the circle.
-        stroke(): Ends the drawing.
 
-        Gradients
-        createLinearGradient(x,y,x1,y1): Creates a linear gradient.
-        createRadialGradient(x,y,r,x1,y1,r1): Creates a radial/circular gradient.
-        
-        Drawing Text on the Canvas
-        Font: Defines the font properties for the text.
-        fillText(text,x,y): Draws "filled" text on the canvas.
-        strokeText(text,x,y): Draws text on the canvas (no fill).
-        -->
-    </div>
-    </section>
-    
-    <section id="Canvas Transform (JS)">
-        <h2 class="subtitles"> Canvas Transform JS </h2>
+        <h1 class="subtitulo"> Canvas Transform JS: </h1>
         <div>
         
         <!-- Texto script -->
-        <h2 class="subtitulo"> Texto script </h4>
-        <canvas id="canvas4" width="400" height="300"> </canvas>
-        <script>
-            var c=document.getElementById("canvas4");
-            var ctx=c.getContext("2d");
-            ctx.font="bold 22px Tahoma";
-            ctx.textAlign="start";
-            ctx.fillText("start", 10, 30);
-        </script> <hr width="15%" align="Left">
+        <h3 class="subtitles"> Texto script </h3>
+        <div class="ejemplo">
+            <canvas id="canvas4" width="100" height="50"> </canvas>
+            <script>
+                var c=document.getElementById("canvas4");
+                var ctx=c.getContext("2d");
+                ctx.font="bold 22px Tahoma";
+                ctx.textAlign="texto";
+                ctx.fillText("texto", 10, 30);
+            </script>
+        </div><hr>
 
         <!-- Translate script -->
-        <h2 class="subtitulo"> Translate script </h4>
-        <canvas id="canvas5" width="400" height="300"> </canvas>
+        <h3 class="subtitle"> Translate script </h3>
+        <div class="ejemplo">
+        <canvas id="canvas5" width="400" height="100"> </canvas>
         <script>
             var c=document.getElementById("canvas5");
             var ctx=c.getContext("2d");
             ctx.font="bold 22px Tahoma";
-            ctx.textAlign="start2";
-            ctx.fillText("start2", 10, 30);
-            ctx.translate(100, 150);
-            ctx.fillText("after translate", 10, 30);
-        </script> <hr width="15%" align="Left">
+            ctx.textAlign="texto2";
+            ctx.fillText("texto2", 10, 30);
+            ctx.translate(100, 50);
+            ctx.fillText("texto2 translated", 10, 30);
+        </script>
+        </div><hr>
 
 
         <!-- Rotate script --> 
-        <h2 class="subtitulo"> Rotate script </h4>
-        <canvas id="canvas6" width="400" height="300"> </canvas>
+        <h3 class="subtitle"> Rotate script </h3>
+        <div class="ejemplo">
+        <canvas id="canvas6" width="400" height="150"> </canvas>
         <script>
             var c=document.getElementById("canvas6");
             var ctx=c.getContext("2d");
@@ -987,11 +1112,13 @@
             ctx.rotate( (Math.PI / 180) * 25);  //rotate 25 degrees. (usa radianes, no grados)
             ctx.fillStyle = "#0000FF";
             ctx.fillRect(10,10, 100, 100);
-        </script> <hr width="15%" align="Left">
+        </script>
+        </div><hr>
         
         <!-- Scale script -->
-        <h2 class="subtitulo"> Scale script </h4>
-        <canvas id="canvas7" width="400" height="300"> </canvas>
+        <h3 class="subtitle"> Scale script </h3>
+        <div class="ejemplo">
+        <canvas id="canvas7" width="400" height="100"> </canvas>
         <script>
             var c=document.getElementById("canvas7");
             var ctx=c.getContext("2d");
@@ -1000,16 +1127,19 @@
             ctx.fillText("after scale", 0,20);
         </script>
         </div>
+
+        
+        </div><!-- canvas transform -->
+
+    </div><!-- canvas -->
     </section>
-    </div>
+    </div><!-- html5 -->
 </details>
 
 <!-- CSS -->
-<details > 
-    <summary style="font-size: 50px;"> CSS </summary>
+<details> 
+    <summary> CSS </summary>
 
-    <div class="borders">
-                        
         <h1 class="titles"> CSS </h1> 
         <h3 class="titles"> Cascading Style Sheets </h3>
         
@@ -3183,15 +3313,13 @@
                 </style>
             </div>
         </div>
-    </div>
 </details>
 
 <!-- JavaScript -->
 <details >
-    <summary style="font-size: 50px;"> JavaScript </summary>
+    <summary> JavaScript </summary>
 
-    <!-- DOM -->
-    <div class="borders">
+        <!-- DOM -->
 
         <!-- Fundamentos -->
         <div class="borders"> 
@@ -4017,7 +4145,7 @@
             <img id="slider" src="https://www.sololearn.com/uploads/slider/1.jpg" width="200px" height="100px"/>
             <button onclick="next()"> Next </button>
         </div> <br>
-    
+
         <code><pre>
             var images = [
                 'http://www.sololearn.com/uploads/slider/1.jpg', 
@@ -4675,7 +4803,6 @@
 
         </div> <!-- Borders -->
 
-    </div>
 
 </details>
 

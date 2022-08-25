@@ -192,13 +192,91 @@
 
 
 
-    text <input type="text">
+
+
 
 
   </div>
   
 
-  
+  <div class="round">
+
+    <h3>Probando...</h3><hr>
+
+    <!-- Elejir opciones -->
+      <label>
+        elije:
+        <input list="Lista">
+      </label>
+        
+      <datalist id="Lista">
+          <option value="uno"></option>
+          <option value="dos"></option>
+          <option value="tres"></option>
+      </datalist>
+    <hr>
+
+    <!-- Busqueda -->
+    <style>
+      .search{
+        position: relative;
+        width: 250px;
+        background-color: #fff;
+        display: flex;
+      }
+      .search::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: #0170F0;
+        transform: scaleX(0);
+        transform-origin: center;
+        transform-origin: left;
+        transition: transform .25s;
+      }
+      .search:focus-within::before{
+        transform:scale(1)
+      }
+      .search input,
+      .search button {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: #8e8e8e;
+      }
+      .input{
+        width: 100%;
+        padding: 10px;
+      }
+      .button{
+        display: grid;
+        place-items: center;
+        width: 50px;
+        font-size: 19px;
+        cursor: pointer;
+        transition: color .25%;
+      }
+      .button:hover {
+        color: #0170F0
+      }
+    </style>
+
+    <form class="search">
+      <input type="text" placeholder="Buscar..." class="input">
+      <button type="submit" class="button">
+        <i class="ri-search-2-Line"></i>
+      </button>
+    </form>
+
+
+
+
+
+
+  </div>
   
   
   
