@@ -46,6 +46,13 @@
         height: 110px;
         overflow: auto;
     }
+    .codigo{
+        background-color: rgba(128, 128, 128, 0.512);
+        margin: 5px;
+        padding-top: 5px;
+        width: 500px;
+        box-shadow: inset 4px 4px 4px rgba(128, 128, 128, 0.558), inset -4px -4px 4px rgba(128, 128, 128, 0.706) ;
+    }
     
     pre{
         margin-left: -80px;
@@ -111,14 +118,92 @@
         border-top: 3px dashed grey; /* dashed(-), dotted(.)  */
     }
 
+    
+    /* Guia izquierda
+    ul{
+      margin-top:3px;margin-bottom:6px;padding-left:1.5em;
+    }
+    li{
+      clear:both;margin-top:5px;
+    }
+    li.h{
+      width:120px; display:inline; float:left;
+    }
+    section{
+      border-radius: 15px;
+      padding: 10px;
+      margin: 10px;
+      border: 1px solid grey;
+      background-color: rgba(128, 128, 128, 0.227);
+    }
+    
+    @media screen and (max-width: 768px){
+      html{margin-left:40px;margin-right:5px;}
+      nav{position:fixed;top:0;left:0;width:50px;padding-left:0.2em;font-size:80%;text-align:left;}
+      nav p{margin:5px 0 0;font-size:350%;}
+      nav a{color:black;text-decoration:none;}
+      nav div.toc{display:none;}
+    }
+    @media screen and (min-width: 768px){
+      html{
+        margin-left:12em;margin-right:1em;
+      }
+      nav{
+        position:fixed;top:0;left:0;width:14.5em;padding-left:0.2em;font-size:80%;text-align:left;
+      }
+      nav h2{
+        margin:0;padding:1em 0 0;font-size:110%;text-align:left;
+      }
+      nav p{
+        margin:5px 0 0;font-size:350%;
+      }
+      nav a{
+        color:black;text-decoration:none;
+      }
+      nav ul{
+        margin-top:0;padding-left:1em;
+      }
+      nav ul li{
+        margin:0 0 0.1em 0.1em;
+      }
+    }
+    @media print{
+      html{
+        margin-left:5px;margin-right:0;margin-top:0;
+      }
+      nav{
+        display:none;
+      }
+    }
+    */
+
 
 </style>
 <body>
 
+<!--  Guia Izquierda
+  <nav>
+    <p>
+      <a href="../index.html"><img src="../imgs/n.png" alt="Home" title="Ir a página de inicio" width="50" height="50"></a>
+      <a href="#"><img src="../imgs/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36"></a>
+    </p>
+
+    <div class="toc">
+      <h2>Guia</h2>
+
+      <ul>
+        <li><a href="#">asd</a></li>
+      </ul>
+    </div>
+  </nav>
+-->
+  
+
 <h1 class="titulo">HTML CheatSheet</h1>
 
+
 <!-- HTML -->
-<details>
+<details >
     <summary> HTML </summary>
 
     <div class="borders">  <!-- Encabezados -->
@@ -397,13 +482,14 @@
     </div> 
     -->
 
-    <div class="borders"> <!-- Tipos de elementos en Niveles -->
+    <!-- Tipo de Nivel
+    <div class="borders">
         <h2 class="subtitulo"> Tipos de elementos en Niveles </h2>
-        <!-- 
+        
         Nivel de Bloque en documento:
-            <h1>, <form>, <li>, <ol>, <ul>, <p>, <pre>, <table>, <div>, etc.
+            < h1>, < form>, < li>, < ol>, < ul>, < p>, < pre>, < table>, < div>, etc.
         Nivel en Line en documento:
-            <b>, <a>, <strong>, <img>, <input>, <em>, <span>, etc.
+            < b>, < a>, < strong>, < img>, < input>, < em>, < span>, etc.
         Elementos:
             DIV - container for other HTML elements.
             SPAN - use to style parts of the text:
@@ -413,7 +499,7 @@
             MAP - image map
             OBJECT - embedded object
             SCRIPT - script within an HTML document
-        -->
+    
         Nivel Bloque:
         <div style="background-color: rgba(128, 128, 128, 0.405); padding: 10px;">
             <p> Esto es un PARRAFO dentro de un DIV </p>
@@ -424,9 +510,11 @@
         Esto es un 
             <span style="color: red;"> SPAN </span> 
         dentro de un parrafo
-        </p>
+            </p>
     </div>
 
+     -->
+    
     <div class="borders"> <!-- Input Types -->
         <h2 class="titulo"> Input Types in <span> HTML </span> </h2>
         
@@ -652,7 +740,7 @@
 </details>
 
 <!-- HTML5 -->
-<details open> 
+<details > 
     <summary> HTML5 </summary>
 
     <div class="borders"> <!-- Estructura de Pag -->
@@ -698,7 +786,7 @@
             <h3 class="subtitles"> Barra de Progreso </h3>
 
             <<span>progress <font color="purple"> min="<font color="green">0</font>" max="<font color="green">100</font>" value="<font color="green">35</font>> <</font> /progress</span>><br>
-            <progress min="0" max="100" value="35"></progress>
+            <progress min="0" max="100" value="75" style="height: 24px; width: 300px;"></progress>
         </section>
     </div>
     
@@ -707,8 +795,8 @@
             <h3 class="subtitles"> Almacenamiento (API) </h3>
             <div>
                 <p>
-                    <span>sessionStorage():</span> se borra al cerrar el navegador del usuario <br>
-                    <span>localStorage():</span> permanece en el disco del usuario sin expirar <br> <br>
+                    <span>sessionStorage():</span> Se borra al cerrar el navegador del usuario <br>
+                    <span>localStorage():</span> Permanece en el disco del usuario sin expirar <br> <br>
                     
                     <<span>script</span>> <br>
                     <font style="color: blue;">Guardar=</font>&nbsp;localStorage.SetItem("Clave1", "Valor1");<br>
@@ -1133,11 +1221,11 @@
 
     </div><!-- canvas -->
     </section>
-    </div><!-- html5 -->
+    </div>
 </details>
 
 <!-- CSS -->
-<details> 
+<details open> 
     <summary> CSS </summary>
 
         <h1 class="titles"> CSS </h1> 
@@ -1156,17 +1244,23 @@
             </pre>
 
             <!-- Selector -->
-            <div class="borders">
+            <div class="borders" style="height: 200px;">
                 <p class="numbers"> 1) Selector</p>
-                <p class="selector"> Este es un parrafo con un selector. </p>
+                
+                <div class="boxizq ejemplo">
+                    <p class="selector"> Este es un parrafo con un selector. </p>
+                </div>
+
                 <!-- Code -->
-                <code>
-                    < p class="selector"> Este es un parrafo con un selector. < /p> <br>
-                    
-                    .selector{
-                        color: darkred;
-                    }                        
-                </code>
+                <div class="boxder codigo">
+                <pre>
+                &lt;p class="selector"> Este es un parrafo con un selector. &lt;/p>
+                
+                .selector{
+                    color: darkred;
+                }
+                </pre>
+                </div>
                 <!-- Code -->
                 <!-- Style -->
                 <style>
@@ -1180,23 +1274,25 @@
         
             <!-- Id -->
             <div class="borders">
-                <p class="numbers"> 2) Id </p>
-                    <p id="idpurple">Este es un parrafo con un id.</p>
-                    <!-- Code -->
-                    <code>
-                        < p id="idpurple">Este es un parrafo con un id.< /p> <br>
-                        #idpurple{
-                            color:purple;
-                        }
-                    </code>
-                    <!-- Code -->
-                    <!-- style -->
-                    <style>
-                        #idpurple{
-                            color:purple;
-                        }
-                    </style>
-                    <!-- style -->
+            <p class="numbers"> 2) Id </p>
+            <p id="idpurple">Este es un parrafo con un id.</p>
+            <!-- Code -->
+            <div class="codigo">
+            <pre>
+                <<span>p</span> <font color="purple">id=</font>"<font color="green">idpurple</font>">Este es un parrafo con un id.&lt;/p> <br>
+                #idpurple{
+                    color:purple;
+                }
+            </pre>
+            </div>
+            <!-- Code -->
+            <!-- style -->
+            <style>
+                #idpurple{
+                    color:purple;
+                }
+            </style>
+            <!-- style -->
             </div>
         
             <!-- Descendent Selectors -->
@@ -1674,21 +1770,21 @@
                     </ol>
                     <code>list-style-type: lower-alpha;</code> <hr>
 
-                    <ul class="circle">
+                    <ul class="circle a">
                     <li>Red</li>
                     <li>Green</li>
                     <li>Blue</li>
                     </ul>
                     <code>list-style-type: circle;</code> <hr>
 
-                    <ul class="square">
+                    <ul class="square a">
                     <li>Red</li>
                     <li>Green</li>
                     <li>Blue</li>
                     </ul>
                     <code>list-style-type: square;</code> <hr>
 
-                    <ul class="uimage">
+                    <ul class="uimage a">
                     <li>Red</li>
                     <li>Green</li>
                     <li>Blue</li>
@@ -1696,8 +1792,9 @@
                     <code>list-style-image: url("../Imgs/loguito.png"); <br></code> <hr>
                 </div>
                 <style>
-                    ul{
-                        list-style: square outside none;/* list-style-type, list-style-image, list-style-position */ 
+                    ul.a{
+                        list-style: square outside none;
+                        /* list-style-type, list-style-image, list-style-position */ 
                     }
                     ol.lower-alpha {
                         list-style-type: lower-alpha;
@@ -2311,72 +2408,6 @@
                     </code>
                 </details>
                 <hr>
-
-                <!-- Transparencia -->
-                <nav>
-                    <ul>
-                        <li><a href="#">COURSES</a></li>
-                        <li><a href="#">DISCUSS</a></li>
-                        <li><a href="#">TOP LEARNERS</a></li>
-                        <li><a href="#">BLOG</a></li>
-                    </ul>
-                </nav>
-                <style>
-                    nav {
-                        padding: 50px 0;
-                        min-width: 500px; 
-                    }
-                    nav ul {
-                        background: linear-gradient(90deg, 
-                        rgba(255, 255, 255, 0) 0%, 
-                        rgba(255, 255, 255, 0.2) 25%, 
-                        rgba(255, 255, 255, 0.2) 75%, 
-                        rgba(255, 255, 255, 0) 100%);
-                        box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
-                        inset 0 0 1px rgba(255, 255, 255, 0.6);
-                    }
-                    nav ul li {
-                        display: inline-block;
-                    }
-                    nav ul li a {
-                        padding: 10px; 
-                        color: #000000;
-                        font-size: 18px;
-                        font-family: Arial;
-                        text-decoration: none;
-                        display: block;
-                    }
-                </style>
-
-                <details>
-                    <summary>Code...</summary>
-                    <code><pre>
-                    nav {
-                        padding: 50px 0;
-                        min-width: 500px; 
-                    }
-                    nav ul {
-                        background: linear-gradient(90deg, 
-                        rgba(255, 255, 255, 0) 0%, 
-                        rgba(255, 255, 255, 0.2) 25%, 
-                        rgba(255, 255, 255, 0.2) 75%, 
-                        rgba(255, 255, 255, 0) 100%);
-                        box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
-                        inset 0 0 1px rgba(255, 255, 255, 0.6);
-                    }
-                    nav ul li {
-                        display: inline-block;
-                    }
-                    nav ul li a {
-                        padding: 10px; 
-                        color: #000000;
-                        font-size: 18px;
-                        font-family: Arial;
-                        text-decoration: none;
-                        display: block;
-                    }
-                    </pre></code>
-                </details>
             </div>
             
             <!-- Text Shadow -->
