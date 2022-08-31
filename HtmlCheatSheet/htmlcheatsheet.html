@@ -35,22 +35,22 @@
     .div{ 
         min-height: 50px; 
     }
-    .ejemplo{
-        width: 400px;
-        border: 1px black solid;
-        padding: 5px;
-        background-color: white;
-        box-shadow: inset 4px 4px 4px rgba(128, 128, 128, 0.558), inset -4px -4px 4px rgba(128, 128, 128, 0.706) ;
-    }
     .ejoverflow{
         height: 110px;
         overflow: auto;
     }
+    .ejemplo{
+        max-width: 400px;
+        padding: 5px;
+        border: 1px black solid;
+        background-color: white;
+        box-shadow: inset 4px 4px 4px rgba(128, 128, 128, 0.558), inset -4px -4px 4px rgba(128, 128, 128, 0.706) ;
+    }
     .codigo{
-        background-color: rgba(128, 128, 128, 0.512);
-        margin: 5px;
+        max-width: 500px;
+        margin: 2px;
         padding-top: 5px;
-        width: 500px;
+        background-color: rgba(128, 128, 128, 0.512);
         box-shadow: inset 4px 4px 4px rgba(128, 128, 128, 0.558), inset -4px -4px 4px rgba(128, 128, 128, 0.706) ;
     }
     
@@ -95,7 +95,7 @@
     .box{
         color: black;
         min-width: 27%;
-        height: 25px;
+        height: 20px;
         padding: 5px;
         border: 1px solid grey;
         margin: 5px;
@@ -1222,7 +1222,7 @@
 </details>
 
 <!-- CSS -->
-<details> 
+<details open> 
     <summary> CSS </summary>
 
         <h1 class="titles"> CSS </h1> 
@@ -1241,31 +1241,23 @@
             </pre>
 
             <!-- Selector -->
-            <div class="borders" style="height: 200px;">
+            <div class="borders">
                 <p class="numbers"> 1) Selector</p>
                 
-                <div class="boxizq ejemplo">
-                    <p class="selector"> Este es un parrafo con un selector. </p>
-                </div>
-
-                <!-- Code -->
-                <div class="boxder codigo">
-                <pre>
-                &lt;p class="selector"> Este es un parrafo con un selector. &lt;/p>
-                
-                .selector{
-                    color: darkred;
-                }
-                </pre>
-                </div>
-                <!-- Code -->
-                <!-- Style -->
+                <p class="selector"> Parrafo con un selector. </p>
                 <style>
                     .selector{
                         color:darkred;
                     }
                 </style>
-                <!-- style -->
+
+                <div class="codigo"><pre>
+                <<span>p</span> <font color="purple">class</font>="<font color="green">selector</font>"> Parrafo con un selector. &lt;/<span>p</span>>
+                
+                .<font color="orange">selector</font>{
+                    color: darkred;
+                }
+                </pre></div>
 
             </div>
         
@@ -1497,27 +1489,29 @@
                 </div> <br>
                 <style>
                     .main {
-                        height: 150px; width: 450px;
+                        height: 100px; width: 350px;
                         background-color: rgba(128, 128, 128, 0.398);
                         display: inline-table;
                     }
                     .paragraph {
+                        text-align: center;
                         display: table-cell;
                         vertical-align: middle;
                     }
                 </style>
             <!-- code -->
-                <code>
-                    .main {
-                        height: 150px; width: 450px;
-                        background-color: rgba(128, 128, 128, 0.398);
-                        display: inline-table;
-                    } <br>
-                    .paragraph {
-                        display: table-cell;
-                        vertical-align: middle;
-                    }
-                </code>
+                <div class="codigo"><pre>
+                .main {
+                    height: 150px; width: 450px;
+                    background-color: rgba(128, 128, 128, 0.398);
+                    display: inline-table;
+                } <br>
+                .paragraph {
+                    text-align: center;
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+                </pre></div>
             <!-- code -->
             </div>
         
@@ -2260,17 +2254,39 @@
             </div>
         
             <!-- Border-Radius -->
-            <div class="borders">
+            <div class="borders"  style="height: 150px;">
                 <p class="numbers"> 36) Border-Radius </p>
-                <div class = "divBorderRadius">
-                    border-radius: 0 0 20px 20px;
-                </div><br> <hr>
-            
-                <!-- Circulo -->
-                <h3 class="subtitulo"> Circulo </h3>
-                <div class = "divCirculo">
-                    border-radius: 50%;
+                <div class="boxizq">
+                    <div class = "divBorderRadius">
+                        border-radius: 0 10px 20px 30px;
+                    </div>
                 </div>
+                <div class="boxder">
+                    <div class = "divCirculo">
+                        border-radius: 50%;
+                    </div>
+                </div>
+                <style>
+                    /* Border-Radius */
+                    .divBorderRadius{
+                        border-radius: 0 10px 20px 30px;
+                        background-color: green;
+                        color: white;
+                        padding: 30px;
+                        width: 200px;
+                    }
+                    /* Circulo */
+                    .divCirculo{
+                        width: 90px;
+                        height: 90px;
+                        border-radius: 50%;
+                        color: white;
+                        background-color: green;
+                        text-align: center;
+                        display: table-cell; 
+                        vertical-align: middle;
+                    }
+                </style>
             </div>
             
                 <!-- Box-Shadow -->
@@ -2305,25 +2321,6 @@
                         border: 1px solid green;
                         width: 300px;
                         padding: 25px;
-                    } 
-
-                    /* Border-Radius */
-                    .divBorderRadius{
-                        /* border-radius: 20px; */
-                        border-radius: 0 0 20px 20px;
-                        background-color: green;
-                        color: white;
-                        padding: 50px;
-                        width: 200px;
-                    }
-
-                    /* Circulo */
-                    .divCirculo{
-                        width: 200px;
-                        height: 200px;
-                        border-radius: 50%;
-                        background-color: green;
-                        text-align: center;
                     }
 
                     /* Box-Shadow */
