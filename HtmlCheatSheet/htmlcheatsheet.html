@@ -9,6 +9,7 @@
 </head>
 <style>
     body{
+        background-image: url("/Imgs/TileW.jpg");
         font-family: 'Brush Script MT';
         text-shadow: 3px 3px 7px grey;
         font-size: small;
@@ -2251,18 +2252,36 @@
                     -webkit-border-radius: 24px; <br>
                     border-radius: 24px;
                 </div>
+                <style>
+                    .roundd{
+                        -webkit-border-radius: 24px;
+                        border-radius: 24px;
+                        border: 1px solid green;
+                        width: 300px;
+                        padding: 25px;
+                    }
+                    .boxsh{
+                        width: 250px;
+                        height: 60px;
+                        padding: 7px;
+                        border: 1px solid;
+                        text-align: center;
+                        display: table-cell;
+                        vertical-align: middle;
+                    }
+                </style>
             </div>
         
             <!-- Border-Radius -->
             <div class="borders"  style="height: 150px;">
                 <p class="numbers"> 36) Border-Radius </p>
                 <div class="boxizq">
-                    <div class = "divBorderRadius">
+                    <div class = "divBorderRadius boxsh">
                         border-radius: 0 10px 20px 30px;
                     </div>
                 </div>
                 <div class="boxder">
-                    <div class = "divCirculo">
+                    <div class = "boxsh divCirculo">
                         border-radius: 50%;
                     </div>
                 </div>
@@ -2272,107 +2291,103 @@
                         border-radius: 0 10px 20px 30px;
                         background-color: green;
                         color: white;
-                        padding: 30px;
+                        /* padding: 30px; */
                         width: 200px;
                     }
                     /* Circulo */
                     .divCirculo{
-                        width: 90px;
-                        height: 90px;
+                        width: 80px;
+                        height: 80px;
                         border-radius: 50%;
                         color: white;
                         background-color: green;
-                        text-align: center;
-                        display: table-cell; 
-                        vertical-align: middle;
                     }
                 </style>
             </div>
             
-                <!-- Box-Shadow -->
+            <!-- Box-Shadow -->
             <div class="borders">
                 <p class="numbers"> 37) Box-Shadow </p>
-                <div class = "boxShadow">
-                    box-shadow: 10px 10px 5px 5px #888888;
-                </div><br> <hr>
+                <div class = "boxShadow boxsh">
+                    box-shadow: 10px 10px 10px 5px #888; <br>
+                    <font color="grey">box-shadow: Hriz, Vert, blur, spread, color</font> 
+                </div>
+                <style>
+                    .boxShadow{
+                        background-color: #fff;
+                        box-shadow: 10px 10px 10px 5px grey;
+                        /*         Hriz, Vert, blur, spread, color */
+                    }
+                </style>
+                <br><hr>
             
                 <!-- Box-Inside Shadow -->
                 <h3 class="subtitulo"> Box-Inside Shadow </h3>
-                <div class = "boxInsideShadow">
-                    box-shadow: inset 10px 10px 5px 5px green ;
-                </div><br> <hr>
+                <div class = "boxInsideShadow boxsh">
+                    box-shadow: inset 10px 10px 10px 5px green ;
+                </div>
+                <style>
+                    .boxInsideShadow{
+                        background-color: #fff;
+                        box-shadow: inset 10px 10px 10px 5px grey ;
+                    }
+                </style>
+                <br><hr>
             
                 <!-- Box-Double Inside Shadow -->
                 <h3 class="subtitulo"> Box-Double Inside Shadow </h3>
-                <div class = "boxDoubleInsideShadow">
-                    box-shadow: inset 10px 10px 5px green, inset -10px -10px 5px green ;
-                </div><br> <hr>
+                <div class = "boxDoubleInsideShadow boxsh">
+                    box-shadow: inset 10px 10px 5px green, <br> inset -10px -10px 5px green ;
+                </div>
+                <style>
+                    .boxDoubleInsideShadow{
+                        background-color: #fff;
+                        box-shadow: inset 5px 5px 15px grey, inset -5px -5px 15px grey ;
+                    }
+                </style>
+                <br><hr>
             
                 <!-- Box-Triple Shadow -->
                 <h3 class="subtitulo"> Box-Triple Shadow </h3>
                 <div class = "BoxTrilpeShadow">
-                    box-shadow: 0 0 10px 4px #FF6347, 0 0 10px 30px #FFDAB9, 30px 0 20px 30px #B0E0E6;
-                </div><br><br>
-
+                    box-shadow: 0 0 10px 4px #FF6347, <br> 0 0 10px 30px #FFDAB9, <br> 30px 0 20px 30px #B0E0E6;
+                </div>
                 <style>
-                    .roundd{
-                        -webkit-border-radius: 24px;
-                        border-radius: 24px;
-                        border: 1px solid green;
-                        width: 300px;
-                        padding: 25px;
-                    }
-
-                    /* Box-Shadow */
-                    .boxShadow{
-                        width: 300px;
-                        height: 100px;
-                        background-color: #9ACD32;
-                        /* box-shadow: 10px 10px #888888; */
-                        /* box-shadow: -10px -10px #888888; */
-                        box-shadow: 10px 10px 5px 5px #888888;
-                        /*         Hriz, Vert, blur, spread, color */
-                    }
-
-                    /* Box- Inside Shadow */
-                    .boxInsideShadow{
-                        width: 300px;
-                        height: 100px;
-                        background-color: #9ACD32;
-                        box-shadow: inset 10px 10px 5px 5px green ;
-                    }
-
-                    /* Box-Double Inside Shadow */
-                    .boxDoubleInsideShadow{
-                        width: 300px;
-                        height: 100px;
-                        background-color: #9ACD32;
-                        box-shadow: inset 10px 10px 5px green, inset -10px -10px 5px green ;
-                    }
-
-                    /* Box Trible Shadow */
                     .BoxTrilpeShadow {
-                        width: 300px;
-                        height: 100px;
-                        background-color: #9ACD32;
-                        box-shadow: 0 0 10px 4px #FF6347, 0 0 10px 30px #FFDAB9, 30px 0 20px 30px #B0E0E6;
-
+                        text-align: center;
+                        vertical-align: middle;
+                        width: 250px;
+                        height: 50px;
                         margin-left:30px;
                         margin-top:30px;
+                        background-color: #fff;
+                        box-shadow: 0 0 10px 4px #FF6347, 
+                                    0 0 10px 25px #FFDAB9, 
+                                    20px 20px 15px 20px #42e3f8;
                     }
                 </style>
+                <br><br><br>
             </div>
                 
             <!-- BoxTransparencia -->
             <div class="borders">
                 <h3 class="subtitulo"> 38) Transparencia </h3>
                 <div class = "BoxTransparencia">
+                    background-color: #9ACD32; <br>
+                    background: linear-gradient(90deg,  <br>
+                    rgba(38, 23, 179, 0.515) 0%,  <br>
+                    rgba(16, 129, 133, 0.549) 25%,  <br>
+                    rgba(167, 201, 17, 0.433) 75%,  <br>
+                    rgba(72, 0, 56, 0.419) 100%); <br>
+                    box-shadow: 0 0 25px rgba(19, 8, 80, 0.486), <br>
+                    inset 0 0 1px rgba(0, 189, 85, 0.829); <br>
                 </div> <br>
                 
                 <style>
                     .BoxTransparencia{
-                        width: 300px;
-                        height: 100px;
+                        width: 80%;
+                        height: auto;
+                        padding: 15px;
                         background-color: #9ACD32;
                         background: linear-gradient(90deg, 
                         rgba(38, 23, 179, 0.515) 0%, 
@@ -2383,25 +2398,6 @@
                         inset 0 0 1px rgba(0, 189, 85, 0.829);
                     }
                 </style>
-                
-                <details>
-                    <summary>Code...</summary>
-                    <code>
-                        .BoxTransparencia{ <br>
-                            width: 300px; <br>
-                            height: 100px; <br>
-                            background-color: #9ACD32; <br>
-                            background: linear-gradient(90deg,  <br>
-                            rgba(38, 23, 179, 0.515) 0%,  <br>
-                            rgba(16, 129, 133, 0.549) 25%,  <br>
-                            rgba(167, 201, 17, 0.433) 75%,  <br>
-                            rgba(72, 0, 56, 0.419) 100%); <br>
-                            box-shadow: 0 0 25px rgba(19, 8, 80, 0.486), <br>
-                            inset 0 0 1px rgba(0, 189, 85, 0.829); <br>
-                        }
-                    </code>
-                </details>
-                <hr>
             </div>
             
             <!-- Text Shadow -->
@@ -2596,48 +2592,43 @@
             <h2 class="titles"> Degradados y Fondos </h2>
         
             <!-- Dergadados Lineales -->
-            <div class="borders">
-            <p class="numbers">44) Dergadados Lineales</p>
-            <table>
-                <td><div class="degradados">lineal gradient</div></td>
-                <td><div class="degradadosmulticolor"></div></td>
-            </table>
             <style>
-                div.degradados{
+                .deg{
                     width: 300px;
                     height: 100px;
                     margin: 4px;
+                }
+            </style>
+            <div class="borders">
+            <p class="numbers">44) Dergadados Lineales</p>
+            <table>
+                <td><div class="degradados deg">lineal gradient</div></td>
+                <td><div class="degradadosmulticolor deg"></div></td>
+            </table>
+            <style>
+                div.degradados{
                     color: #FFF;
                     background: linear-gradient(DeepSkyBlue, black);
                 }
                 div.degradadosmulticolor{
-                    width: 300px;
-                    height: 100px;
-                    margin: 4px;
                     background: linear-gradient(blue 20%, yellow 30%, green 85%);
                 }
             </style>
             
             <p class="numbers">45)</p>
             <table>
-                <td><div class="first">Left to Right</div></td>
-                <td><div class="second">Bottom to Top</div></td>
+                <td><div class="first deg">Left to Right</div></td>
+                <td><div class="second deg">Bottom to Top</div></td>
             </table>
             
             <style>
                 div.first {
-                    width: 300px; 
-                    height: 100px;
-                    margin: 4px;
                     color: #FFF;  
                     background:-webkit-linear-gradient(left, blue, green, white);
                     background:-moz-linear-gradient(left, blue, green, white);
                     background:-ms-linear-gradient(left, blue, green, white);
                 } 
-                div.second { 
-                    width: 300px; 
-                    height: 100px;
-                    margin: 4px;
+                div.second {
                     background:-webkit-linear-gradient(bottom, blue, green, white);
                     background:-moz-linear-gradient(bottom, blue, green, white);
                     background:-ms-linear-gradient(bottom, blue, green, white);
@@ -2646,23 +2637,17 @@
             
             <p class="numbers">46)</p>
             <table>
-                <td><div class="first2">Bottom Left</div></td>
-                <td><div class="second2">100 deg</div></td>
+                <td><div class="first2 deg">Bottom Left</div></td>
+                <td><div class="second2 deg">100 deg</div></td>
             </table>
             <style>
                 div.first2 {
-                    width: 300px; 
-                    height: 100px;
-                    margin: 4px;
                     color: #FFF;
                     background: -webkit-linear-gradient(bottom left, blue, green, white);
                     background: -moz-linear-gradient(bottom left, blue, green, white);
                     background: -ms-linear-gradient(bottom left, blue, green, white);
                 }
                 div.second2 {
-                    width: 300px; 
-                    height: 100px;
-                    margin: 4px;
                     background: -webkit-linear-gradient(100deg, blue, green, white);
                     background: -moz-linear-gradient(100deg, blue, green, white);
                     background: -ms-linear-gradient(100deg, blue, green, white);
@@ -2671,14 +2656,11 @@
             
             <p class="numbers">47)</p>
             <table>
-                <td><div class="repeating">Repeating Gradient</div></td>
+                <td><div class="repeating deg">Repeating Gradient</div></td>
             </table>
             <style>
                 div.repeating {
                     float: left;
-                    width: 300px; 
-                    height: 100px;
-                    margin: 4px;
                     color: #FFF;
                     background: repeating-linear-gradient(blue, green 20px);
                 }
