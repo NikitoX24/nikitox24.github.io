@@ -2590,40 +2590,47 @@
         <!-- Degradados y Fondos -->
         <div class="borders">
             <h2 class="titles"> Degradados y Fondos </h2>
-        
-            <!-- Dergadados Lineales -->
             <style>
                 .deg{
                     width: 300px;
                     height: 100px;
                     margin: 4px;
+                    text-align: center;
+                    display: table-cell;
+                    vertical-align: middle;
                 }
             </style>
+            <!-- Dergadados Lineales -->
             <div class="borders">
-            <p class="numbers">44) Dergadados Lineales</p>
-            <table>
-                <td><div class="degradados deg">lineal gradient</div></td>
-                <td><div class="degradadosmulticolor deg"></div></td>
+            <h1 class="numbers">Dergadados Lineales</h1>
+            <br>
+            <table>lineal gradient
+                <td><div class="degradados deg">
+                    background: linear-gradient(<br> #00d4ff, #090979);
+                </div></td>
+                <td><div class="degradadosmulticolor deg">
+                    background: linear-gradient(<br> #020024 0%,<br> #177909 30%,<br> #00d4ff 80%);
+                </div></td>
             </table>
             <style>
                 div.degradados{
-                    color: #FFF;
-                    background: linear-gradient(DeepSkyBlue, black);
+                    background: linear-gradient(#00d4ff, #090979);
+                }
+                div.degradados :hover{
+                    color: red;
                 }
                 div.degradadosmulticolor{
-                    background: linear-gradient(blue 20%, yellow 30%, green 85%);
+                    background: linear-gradient(#020024 0%, #177909 30%, #00d4ff 80%);
                 }
-            </style>
+            </style><br>
             
-            <p class="numbers">45)</p>
-            <table>
-                <td><div class="first deg">Left to Right</div></td>
-                <td><div class="second deg">Bottom to Top</div></td>
+            <table>left & bottom
+                <td><div class="first deg">background: linear-gradient(left, blue, green, white);</div></td>
+                <td><div class="second deg">background: linear-gradient(bottom, blue, green, white);</div></td>
             </table>
             
             <style>
                 div.first {
-                    color: #FFF;  
                     background:-webkit-linear-gradient(left, blue, green, white);
                     background:-moz-linear-gradient(left, blue, green, white);
                     background:-ms-linear-gradient(left, blue, green, white);
@@ -2633,16 +2640,14 @@
                     background:-moz-linear-gradient(bottom, blue, green, white);
                     background:-ms-linear-gradient(bottom, blue, green, white);
                 }
-            </style>
+            </style><br>
             
-            <p class="numbers">46)</p>
-            <table>
-                <td><div class="first2 deg">Bottom Left</div></td>
-                <td><div class="second2 deg">100 deg</div></td>
+            <table>bottom left & 100deg
+                <td><div class="first2 deg">background: linear-gradient(bottom left, blue, green, white);</div></td>
+                <td><div class="second2 deg">background: linear-gradient(100deg, blue, green, white);</div></td>
             </table>
             <style>
                 div.first2 {
-                    color: #FFF;
                     background: -webkit-linear-gradient(bottom left, blue, green, white);
                     background: -moz-linear-gradient(bottom left, blue, green, white);
                     background: -ms-linear-gradient(bottom left, blue, green, white);
@@ -2652,17 +2657,15 @@
                     background: -moz-linear-gradient(100deg, blue, green, white);
                     background: -ms-linear-gradient(100deg, blue, green, white);
                 }
-            </style>
+            </style><br>
             
-            <p class="numbers">47)</p>
-            <table>
-                <td><div class="repeating deg">Repeating Gradient</div></td>
+            <table>Repeating Gradient
+                <td><div class="repeating deg"></div></td>
             </table>
             <style>
                 div.repeating {
                     float: left;
-                    color: #FFF;
-                    background: repeating-linear-gradient(blue, green 20px);
+                    background: repeating-linear-gradient(rgb(244, 212, 70), rgb(86, 232, 149) 20px);
                 }
             </style>
             
