@@ -2966,7 +2966,6 @@
                 div.scalerot{
                     width: 150px;
                     height: 70px;
-                    color:white;
                     background-color: #8BC34A;
                 }
                 div.scale0-7{
@@ -3004,13 +3003,14 @@
             <div class="colorforcc"></div>
             <style>
                 div.colorforcc {
-                    width: 100px;
-                    height: 100px;
+                    width: 60px;
+                    height: 60px;
                     background-color: red;
                     animation-name: colorchange;
                     animation-duration: 1s;
                     -webkit-animation-name: colorchange;
                     -webkit-animation-duration: 1s;
+                    animation-iteration-count: infinite;
                 }
                 @keyframes colorchange {
                     0% {background-color: red; }
@@ -3049,50 +3049,33 @@
             <!-- The animation-name Property -->
             <p class="numbers">62) The animation-name Property</p>
             <div class="animdurat"></div>
+            <!-- https://www.sololearn.com/learning/1023/2254/4511/1 -->
             <style>
                 div.animdurat {
+                    height: 50px;
+                    width: 400px;
+                    background-color:red;
                     animation-name: colorchange2;   
                     animation-duration: 2s;
-                    height:100px;
-                    background-color:red;
                     -webkit-animation-duration: 2s;
                     -webkit-animation-name: colorchange2;
+
+                    animation-iteration-count: infinite;
                     /* -webkit-animation-timing-function: linear; */
                     /* -webkit-animation-delay: 2s; */
                     /* -webkit-animation-iteration-count: 5; */
-                    /* -webkit-animation-iteration-count: infinite; */
                     /* -webkit-animation-direction: reverse; */
                 }
                 @keyframes colorchange2 {
                     from { width: 0px; }
-                    to { width: 100px; }
+                    to { width: 250px; }
                 }
-                @-webkit-keyframes colorchange2 {
-                    from { width: 0px; }
-                    to { width: 100px; }
-                }
-                /* 
-                    Animation Properties
-                ease - specifies an animation with a slow start, then fast, then end slowly (this is default)
-                linear - specifies an animation with the same speed from start to end
-                ease-in - specifies an animation with a slow start
-                ease-out - specifies an animation with a slow end
-                ease-in-out - specifies an animation with a slow start and end
-                cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier function
-                */
-                /* 
-                    The animation-direction
-                normal - the default value, which means it plays forward from 0 % to 100%.
-                reverse - plays the keyframe in an opposite direction from 100 % to 0%
-                alternate - the animation first runs forward, then backward, then forward.
-                alternate-reverse - the animation first runs backward, then forward, then backward.
-                */
 
                 div.ExampleColCha
                 {
-                    animation: colorchange 3s ease-in 1s infinite reverse;
-                    /*   eso sería esto
-                    animation-name: colorchange;
+                    animation: colorchange2 3s ease-in 1s infinite reverse;
+                    /*   esría así:
+                    animation-name: colorchange2;
                     animation-duration: 3s;
                     animation-timing-function: ease-in;
                     animation-delay: 1s;
@@ -3101,51 +3084,66 @@
                     */
                 }
             </style>
+            <details>
+                <summary>Code...</summary>
+                <pre>
+                    div{
+                        animation-duration: 2s;
+                        animation-iteration-count: infinite;
+                    }
+                    @keyframes colorchange2 {
+                        from { width: 0px; }
+                        to { width: 250px; }
+                    }
+                </pre>
+            </details>
+            <details>
+                <summary>Info...</summary>
+                <pre>
+                (animation-timing-function: *)
+                    ease (default) - slow start, then fast, then end slowly 
+                    linear - same speed from start to end
+                    ease-in - slow start
+                    ease-out - slow end
+                    ease-in-out - slow start and end
+                    cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier Function
+
+                (animation-direction: *)
+                    normal - the default value, which means it plays forward from 0 % to 100%.
+                    reverse - plays the keyframe in an opposite direction from 100 % to 0%
+                    alternate - the animation first runs forward, then backward, then forward.
+                    alternate-reverse - the animation first runs backward, then forward, then backward.
+                </pre>
+            </details>
         
             <!-- 3D rotation -->
             <p class="numbers">63) 3D Rotation </p>
             <table>
-                <td><div class="X">rotateX(150deg)</div></td>
-                <td><div class="Y">rotateY(150deg)</div></td>
-                <td><div class="Z">rotateZ(150deg)</div></td>
+                <td><div class="X rot3d">rotateX(150deg)</div></td>
+                <td><div class="Y rot3d">rotateY(150deg)</div></td>
+                <td><div class="Z rot3d">rotateZ(150deg)</div></td>
             </table>
             <style>
-                div.X {
-                    width:250px;
-                    height:100px;
+                div.rot3d{
+                    width:150px;
+                    height:80px;
                     color:white;
                     background-color:green;
+                }
+                div.X {
                     transform: rotateX(150deg);
                     -webkit-transform: rotateX(150deg);
                     /* transform: none; (Desactivar) */
                 }
                 div.Y {
-                    width:250px;
-                    height:100px;
-                    color:white;
-                    background-color:green;
                     transform: rotateY(150deg);
                     -webkit-transform: rotateY(150deg);
                 }
                 div.Z {
-                    width:250px;
-                    height:100px;
-                    color:white;
-                    background-color:green;
                     transform: rotateZ(150deg);
                     -webkit-transform: rotateZ(150deg);
                 }
                 
-                div.empty-div2 {
-                    position: relative;
-                    height: 200px;
-                    width: 200px;
-                    margin: 30px;
-                    padding: 10px;
-                    border: 1px solid black;
-                    perspective: 100px;
-                    -webkit-perspective: 100px;
-                }
             </style>
             
             <p class="numbers">64) 3D Translate </p>
@@ -3153,9 +3151,18 @@
                 <div id="translate3d">3D translate methods</div>
             </div>
             <style>
+                div.empty-div2 {
+                    position: relative;
+                    width: 200px;
+                    height: 70px;
+                    /* padding: 10px; */
+                    border: 1px solid black;
+                    perspective: 60px;
+                    -webkit-perspective: 60px;
+                }
                 #translate3d {
-                    transform: translateX(40px) translateY(5em) translateZ(-13px);
-                    -webkit-transform: translateX(40px) translateY(5em) translateZ(-13px);
+                    transform: translateX(30px) translateY(2em) translateZ(-13px);
+                    -webkit-transform: translateX(30px) translateY(2em) translateZ(-13px);
                     width:250px;
                     height:100px;
                     color:white;
@@ -3170,12 +3177,12 @@
             </div>
             <style>
                 div.green-div {
-                    padding: 60px;
+                    padding: 30px;
                     position: absolute;
                     background-color: #8bc34a;
                     border: 1px solid white;
-                    transform: rotateX(45deg);
-                    -webkit-transform: rotateX(45deg);
+                    transform: rotateX(35deg);
+                    -webkit-transform: rotateX(35deg);
                 }
             </style>
             </div>
@@ -3187,74 +3194,64 @@
                 
             <!-- Filter Functions -->
             <div class="borders">
-                <p class="numbers"> 66) Filter Functions</p><br>
+                <h2 class="numbers"> 66) Filter Functions</h2><br>
                 <table>
-                    <td>
-                        Drop-Shadow(w h b c) <br>
-                        <img class="dropshadow" src="http://www.sololearn.com/images/tree.jpg"/>
+                    <td>Drop-Shadow(w h b c) <br>
+                        <img class="dropshadow fltr" src="http://www.sololearn.com/images/tree.jpg"/>
                     </td>
-                    <td>
-                        Gray Scale <br>
-                        <img class="grayscale" src="http://www.sololearn.com/images/tree.jpg"/>
+                    <td>Gray Scale <br>
+                        <img class="grayscale fltr" src="http://www.sololearn.com/images/tree.jpg"/>
                     </td>
-                    <td>
-                        Sepia <br>
-                        <img class="sepia" src="http://www.sololearn.com/images/tree.jpg"/>
+                    <td>Sepia <br>
+                        <img class="sepia fltr" src="http://www.sololearn.com/images/tree.jpg"/>
                     </td>
-                    <td>
-                        Saturate <br>
-                        <img class="saturate" src="http://www.sololearn.com/images/tree.jpg"/>
+                    <td>Saturate <br>
+                        <img class="saturate fltr" src="http://www.sololearn.com/images/tree.jpg"/>
                     </td>
-                    <td>
-                        Hue-Rotate <br>
-                        <img class="huerotate" src="http://www.sololearn.com/images/tree.jpg"/>
+                    <td>Hue-Rotate <br>
+                        <img class="huerotate fltr" src="http://www.sololearn.com/images/tree.jpg"/>
                     </td>
-                    <td>
-                        Invert <br>
-                        <img class="invertimg" src="http://www.sololearn.com/images/tree.jpg"/>
+                    <td>Invert <br>
+                        <img class="invertimg fltr" src="http://www.sololearn.com/images/tree.jpg"/>
                     </td>
                 </table>
                 <style>
+                    .fltr{
+                        height: 100px;
+                    }
                     /* DropShadow */
                     .dropshadow {
-                        height: 200px;
                         filter: drop-shadow(5px 9px 2px blue);
                         -webkit-filter: drop-shadow(5px 9px 2px blue);
                     }
 
                     /* grayscale */
                     .grayscale{
-                        height: 200px;
                         filter: grayscale(100%);
                     }
 
                     /* Sepia */
                     .sepia{
-                        height: 200px;
                         filter: sepia(100%);
                     }
 
                     /* Saturate */
                     .saturate{
-                        height: 200px;
                         filter: saturate(300%); /* 0: gris, 100: original */
                     }
                     
                     /* Hue-Rotate */
                     .huerotate{
-                        height: 200px;
                         filter: hue-rotate(180deg); /* de 0 a 360 (segun imagen e colores */
                     }
                     
                     /* The invert Function */
                     .invertimg{
-                        height: 200px;
                         filter: invert(70%);
                     }
                     
                     /* opacity */
                     .opacity{
-                        height: 200px;
                         filter: opacity(70%);
                     }
                 </style>
@@ -3262,62 +3259,50 @@
             
             <!-- Opacity & Brightness -->
             <div class="borders">
-                <p class="numbers"> 67) Opacity & Brightness</p><br>
+                <h2 class="numbers"> 67) Opacity & Brightness</h2><br>
                 <table>
-                    <td>
-                        Opacity 70%<br>
-                        <img class="opacity" src="http://www.sololearn.com/images/tree.jpg"/>
+                    <td>Opacity 70%<br>
+                        <img class="opacity fltr" src="http://www.sololearn.com/images/tree.jpg"/>
                     </td>
-                    <td>
-                        Brightness 70% <br>
-                        <img class="brightness" src="http://www.sololearn.com/images/tree.jpg"/>
+                    <td>Brightness 70% <br>
+                        <img class="brightness fltr" src="http://www.sololearn.com/images/tree.jpg"/>
                     </td>
-                    <td>
-                        Brightness 1.9 <br>
-                        <img class="brightness2" src="http://www.sololearn.com/images/tree.jpg"/>
+                    <td>Brightness 1.9 <br>
+                        <img class="brightness2 fltr" src="http://www.sololearn.com/images/tree.jpg"/>
                     </td>
+                    <td>Contrast 140% <br>
+                        <img class="contrast fltr" src="http://www.sololearn.com/images/tree.jpg"/>
                     </td>
-                    <td>
-                        Contrast 140% <br>
-                        <img class="contrast" src="http://www.sololearn.com/images/tree.jpg"/>
+                    <td>blur 5px <br>
+                        <img class="blur fltr" src="http://www.sololearn.com/images/tree.jpg"/>
                     </td>
-                    <td>
-                        blur 5px <br>
-                        <img class="blur" src="http://www.sololearn.com/images/tree.jpg"/>
-                    </td>
-                    <td>
-                        Multi-filters (blur+hue-rot)<br>
-                        <img class="multifilters" src="http://www.sololearn.com/images/tree.jpg"/>
+                    <td>Multi-filters (blur+hue-rot)<br>
+                        <img class="multifilters fltr" src="http://www.sololearn.com/images/tree.jpg"/>
                     </td>
                 </table>
                 <style>
                     /* Brightness */
                     .brightness{
-                        height: 200px;
                         filter: Brightness(70%);
                     }
                     
                     /* Brightness2 */
                     .brightness2{
-                        height: 200px;
                         filter: brightness(1.9);
                     }
 
                     /* Contrans */
                     .contrast{
-                        height: 200px;
                         filter: contrast(140%);
                     }
                     
                     /* Blur */
                     .blur{
-                        height: 200px;
                         filter: blur(5px);
                     }
 
                     /* MultiFilters */
                     .multifilters{
-                        height: 200px;
                         filter: blur(5px) hue-rotate(180deg);  
                     }
                 </style>
@@ -3326,7 +3311,7 @@
 </details>
 
 <!-- JavaScript -->
-<details >
+<details open>
     <summary> JavaScript </summary>
 
         <!-- DOM -->
