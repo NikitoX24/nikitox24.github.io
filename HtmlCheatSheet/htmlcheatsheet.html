@@ -2599,17 +2599,27 @@
                     display: table-cell;
                     vertical-align: middle;
                 }
+                .degrad{
+                    height: 150px;
+                    width: 200px;
+                    color: #FFF;
+                    text-align: center;
+                    display: table-cell;
+                    vertical-align: middle;
+                }
             </style>
+
             <!-- Dergadados Lineales -->
             <div class="borders">
             <h1 class="numbers">Dergadados Lineales</h1>
-            <br>
+            (Si no se usa rgb usar "-webkit-linear-gradient(#fff, #000)" 
+            <br><br>
             <table>lineal gradient
                 <td><div class="degradados deg">
                     background: linear-gradient(<br> #00d4ff, #090979);
                 </div></td>
                 <td><div class="degradadosmulticolor deg">
-                    background: linear-gradient(<br> #020024 0%,<br> #177909 30%,<br> #00d4ff 80%);
+                    background: linear-gradient(<br> blue 0%,<br> #00bfff 30%,<br> #fff 80%);
                 </div></td>
             </table>
             <style>
@@ -2620,117 +2630,104 @@
                     color: red;
                 }
                 div.degradadosmulticolor{
-                    background: linear-gradient(#020024 0%, #177909 30%, #00d4ff 80%);
+                    background: linear-gradient(blue 0%, #00bfff 30%, #fff 80%);
                 }
             </style><br>
             
             <table>left & bottom
-                <td><div class="first deg">background: linear-gradient(left, blue, green, white);</div></td>
-                <td><div class="second deg">background: linear-gradient(bottom, blue, green, white);</div></td>
+                <td><div class="first deg">background: linear-gradient(left, blue, 00bfff, white);</div></td>
+                <td><div class="second deg">background: linear-gradient(bottom, blue, 00bfff, white);</div></td>
             </table>
             
             <style>
                 div.first {
-                    background:-webkit-linear-gradient(left, blue, green, white);
-                    background:-moz-linear-gradient(left, blue, green, white);
-                    background:-ms-linear-gradient(left, blue, green, white);
+                    background:-webkit-linear-gradient(left, blue, #00bfff, white);
+                    background:-moz-linear-gradient(left, blue, #00bfff, white);
+                    background:-ms-linear-gradient(left, blue, #00bfff, white);
                 } 
                 div.second {
-                    background:-webkit-linear-gradient(bottom, blue, green, white);
-                    background:-moz-linear-gradient(bottom, blue, green, white);
-                    background:-ms-linear-gradient(bottom, blue, green, white);
+                    background:-webkit-linear-gradient(bottom, blue, #00bfff, white);
+                    background:-moz-linear-gradient(bottom, blue, #00bfff, white);
+                    background:-ms-linear-gradient(bottom, blue, #00bfff, white);
                 }
             </style><br>
             
             <table>bottom left & 100deg
-                <td><div class="first2 deg">background: linear-gradient(bottom left, blue, green, white);</div></td>
-                <td><div class="second2 deg">background: linear-gradient(100deg, blue, green, white);</div></td>
+                <td><div class="first2 deg">background: linear-gradient(bottom left, blue, #00bfff, white);</div></td>
+                <td><div class="second2 deg">background: linear-gradient(100deg, blue, #00bfff, white);</div></td>
             </table>
             <style>
                 div.first2 {
-                    background: -webkit-linear-gradient(bottom left, blue, green, white);
-                    background: -moz-linear-gradient(bottom left, blue, green, white);
-                    background: -ms-linear-gradient(bottom left, blue, green, white);
+                    background: -webkit-linear-gradient(bottom left, blue, #00bfff, white);
+                    background: -moz-linear-gradient(bottom left, blue, #00bfff, white);
+                    background: -ms-linear-gradient(bottom left, blue, #00bfff, white);
                 }
                 div.second2 {
-                    background: -webkit-linear-gradient(100deg, blue, green, white);
-                    background: -moz-linear-gradient(100deg, blue, green, white);
-                    background: -ms-linear-gradient(100deg, blue, green, white);
+                    background: -webkit-linear-gradient(100deg, blue, #00bfff, white);
+                    background: -moz-linear-gradient(100deg, blue, #00bfff, white);
+                    background: -ms-linear-gradient(100deg, blue, #00bfff, white);
                 }
             </style><br>
             
             <table>Repeating Gradient
-                <td><div class="repeating deg"></div></td>
+                <td><div class="repeating deg">background: repeating-linear-gradient(rgb(0, 21, 255), rgb(0, 255, 238) 20px);</div></td>
             </table>
             <style>
                 div.repeating {
                     float: left;
-                    background: repeating-linear-gradient(rgb(244, 212, 70), rgb(86, 232, 149) 20px);
+                    background: repeating-linear-gradient(rgb(0, 21, 255), rgb(0, 255, 238) 20px);
                 }
             </style>
-            
+            </div>
+
             <!-- Degradados Radiales -->
+            <div class="borders">
             <p class="numbers">48) Degradados Radiales</p>
+            <pre>
+            background: radial-gradient(position, shape or size, color-stops); 
+            position: top, left.. 0% 0%(sup izq), 50% 50%(medio)
+            </pre>
             <table>
-                <td><div class="first48">Ellipse (Default)</div></td>
-                <td><div class="second48">Circle</div></td>
+                <td><div class="first48 degrad">Ellipse (Default)</div></td>
+                <td><div class="second48 degrad">Circle</div></td>
             </table>
             <style>
-                /* Degradados Radiales */
-                /* background: radial-gradient(position, shape or size, color-stops); 
-                    position: top, left.. 0% 0%(sup izq), 50% 50%(medio)
-                */
                 div.first48 {
-                    height: 150px;
-                    width: 200px;
-                    color: #FFF;
+                    background: -webkit-radial-gradient(red, yellow, blue);
                     background: -moz-radial-gradient(green, yellow, blue);   
-                    background: -webkit-radial-gradient(green, yellow, blue);
                     background: -ms-radial-gradient(green, yellow, blue);
                 }
                 div.second48 {
-                    height: 150px;
-                    width: 200px;
-                    color: #FFF;
+                    background: -webkit-radial-gradient(circle, red, yellow, blue); 
                     background: -moz-radial-gradient(circle, green, yellow, blue); 
-                    background: -webkit-radial-gradient(circle, green, yellow, blue); 
                     background: -ms-radial-gradient(circle, green, yellow, blue); 
                 }                  
             </style>
         
-            <p class="numbers">49)</p>
             <table>
-                <td><div class="first49">Top Left</div></td>
-                <td><div class="second49">In Percentages</div></td>
+                <td><div class="first49 degrad">Top Left</div></td>
+                <td><div class="second49 degrad">In Percentages</div></td>
             </table>
             <style>
                 div.first49 {
-                    height: 150px;
-                    width: 200px;
-                    color: #FFF;
-                    background: -moz-radial-gradient(top left, green, yellow, blue);   
-                    background: -webkit-radial-gradient(top left, green, yellow, blue);
+                    background: -moz-radial-gradient(top left, red, yellow, blue);   
+                    background: -webkit-radial-gradient(top left, red, yellow, blue);
                     background: -ms-radial-gradient(top left, green, yellow, blue);
                 }
                 div.second49 {
-                    height: 150px;
-                    width: 200px;
-                    color: #FFF;
                     background: -moz-radial-gradient(green 5%, yellow 15%, blue 60%); 
-                    background: -webkit-radial-gradient(green 5%, yellow 15%, blue 60%); 
+                    background: -webkit-radial-gradient(red 5%, yellow 15%, blue 60%); 
                     background: -ms-radial-gradient(green 5%, yellow 15%, blue 60%); 
                 }
             </style>
         
-            <p class="numbers">50)</p>
-            <div class="colorstop">Color Stops</div>
+            <table>
+                <td><div class="colorstop degrad">Color Stops</div></td>
+            </table>
             <style>
                 div.colorstop{
-                    height: 150px;
-                    width: 200px;
-                    color: #FFF;
                     background: -moz-radial-gradient(circle, green 40%, yellow 50%, blue 70%); 
-                    background: -webkit-radial-gradient(circle, green 40%, yellow 50%, blue 70%); 
+                    background: -webkit-radial-gradient(circle, red 40%, yellow 50%, blue 70%); 
                     background: -ms-radial-gradient(circle, green 40%, yellow 50%, blue 70%); 
                 }
             </style>
@@ -2738,74 +2735,66 @@
 
             <!-- Background size -->
             <div class="borders">
+                <style>
+                    .backsize{
+                        height: 150px;
+                        width: 200px;
+                        border: 1px solid #000;
+                        background: url("http://www.sololearn.com/uploads/css_logo.png") no-repeat 50% 50%;
+                    }
+                </style>
                 <p class="numbers">51) Background size</p>
                 <table>
-                    <td><div class="backsiz100">background-size: 100px</div></td>
-                    <td><div class="backsiz50">background-size: 50px</div></td>
+                    <td><div class="backsiz100 backsize">background-size: 100px</div></td>
+                    <td><div class="backsiz50 backsize">background-size: 50px</div></td>
                 </table>
                 <style>
                     div.backsiz50 {
-                        height: 150px;
-                        width: 200px;
-                        border: 1px solid #000;
-                        background: url("http://www.sololearn.com/uploads/css_logo.png") no-repeat 50% 50%;
                         background-size: 50px 50px;
-                    }div.backsiz100 {
-                        height: 150px;
-                        width: 200px;
-                        border: 1px solid #000;
-                        background: url("http://www.sololearn.com/uploads/css_logo.png") no-repeat 50% 50%;
+                    }
+                    div.backsiz100 {
                         background-size: 100px 100px;
                     }
                 </style>
             
-                <p class="numbers">52)</p>
                 <table>
-                    <td><div class="bscont">bs: contain</div> </td>
-                    <td><div class="bscover">bs: cover</div> </td>
+                    <td><div class="bscont backsize">bs: contain</div> </td>
+                    <td><div class="bscover backsize">bs: cover</div> </td>
                 </table>
                 <style>
                     div.bscont {
-                        height: 150px;
-                        width: 200px;
-                        border: 1px solid #000;
-                        background: url("http://www.sololearn.com/uploads/css_logo.png") no-repeat 50% 50%;
                         background-size: contain;
                     }
                     div.bscover {
-                        height: 150px;
-                        width: 200px;
-                        border: 1px solid #000;
-                        background: url("http://www.sololearn.com/uploads/css_logo.png") no-repeat 50% 50%;
                         background-size: cover;
                     }
                 </style>
                 
                 <!-- Background Clip -->
-                <p class="numbers">53)</p>
+                <p class="numbers"> 52) Background Clip</p>
+                <style>
+                    .backclip{
+                        border: 2px dotted black;
+                        padding: 20px;
+                        background: LightBlue;
+                    }
+                </style>
                 <table>
-                    <td><div class="bcpad">background-clip: padding-box</div> </td>
-                    <td><div class="bccont">background-clip: content-box</div> </td>
-                    <td><div class="bcimg">background-clip: content-box</div> </td>
+                    <td><div class="bcpad backclip">background-clip: padding-box</div> </td>
+                    <td><div class="bccont backclip">background-clip: content-box</div> </td>
+                    <td><div class="bcimg backclip">background-clip: content-box</div> </td>
                 </table>
                 <style>
                     div.bcpad {
-                        border: 2px dotted black;
-                        padding: 20px;
-                        background: LightBlue;
                         background-clip: padding-box;
                     }
                     div.bccont {
-                        border: 2px dotted black;
-                        padding: 20px;
-                        background: LightBlue;
                         background-clip: content-box;
                     }
                     div.bcimg {
-                        background-image: url("http://www.sololearn.com/uploads/css_logo.png");
+                        background: none;
                         background-clip: content-box;
-                        border: 2px dotted black;
-                        padding: 20px;
+                        background-image: url("http://www.sololearn.com/uploads/css_logo.png");
                     }
                 </style>
             </div>
@@ -2815,16 +2804,8 @@
                 <p class="numbers">54) Transparent borders</p>
                 <div class="tbord2"> Transparent borders</div>
                 <style>
-                    div.tbord {
-                        border: 20px solid rgba(0, 0, 0, 0.3);
-                        width:200px;
-                        /* position:absolute; */
-                        top:50px;
-                        left:50px;
-                        background-color:white;
-                    }
                     div.tbord2 {
-                        border: 20px solid rgba(109, 61, 61, 0.3);
+                        border: 20px solid rgba(109, 61, 102, 0.085);
                         -moz-background-clip: padding-box; 
                         -webkit-background-clip: padding-box; 
                         background-clip: padding-box; 
@@ -2841,7 +2822,7 @@
                 <style>
                     div.multbg {
                         width: 400px;
-                        height: 300px;
+                        height: 200px;
                         background-image: url("http://www.sololearn.com/uploads/css_logo.png"), url("http://www.sololearn.com/uploads/better-code.jpg");
                         background-position: right bottom, left top;
                         background-repeat: no-repeat;
@@ -2877,94 +2858,97 @@
         <!-- transiciones y Transparencia -->
         <div class="borders">
         <h2 class="titles"> Transiciones y Transparencia </h2>
+        <!-- https://code.sololearn.com/WhEb9aoMSiUB/ -->
         
             <!-- 57) Transition -->
             <div class="borders">
             <p class="numbers">57) Transition</p>
-            <div class="transit"> Apuntame</div>
+            <div class="transit"> Apuntame...</div>
             <style>
                 div.transit {
-                    width: 50px;
-                    height: 50px;
+                    width: 120px;
+                    height: 60px;
                     background: #32CD32;
-                    transition: width 3s;
-                    -webkit-transition: width 3s;
+                    transition: width 2s;
+                    -webkit-transition: width 2s;
                 }
                 div.transit:hover {
-                    width: 250px;
+                    width: 350px;
                 }
             </style>
+            <details>
+                <summary>code...</summary>
+                <pre>
+                div.transit {
+                    transition: width 2s;
+                }
+                div.transit:hover {
+                    width: 350px;
+                }
+                </pre>
+            </details>
+            <hr><br>
         
-            <p class="numbers">58) Rotate</p><br>
             <table>
-                <td><div class="rotate"></div></td>
-                <td><div class="rotatenegative"></div></td>
+                <td><div class="rotate">transform: rotate(10deg);</div></td>
             </table>
             <style>
                 div.rotate {
                     width: 200px;
                     height: 100px;
-                    margin-top: 30px;
                     background-color: #32CD32;
                     transform: rotate(10deg);
                     -webkit-transform: rotate(10deg);
                 }
-                div.rotatenegative {
-                    width: 200px;
-                    height: 100px;
-                    margin-top: 30px;
-                    background-color: #32CD32;
-                    transform: rotate(-10deg);
-                    -webkit-transform: rotate(-10deg);
-                }
-            </style>
+            </style> <br><hr>
         
-            <p class="numbers">59) Transform Origin</p>
             <div class="empty-div">
-                <div class="green-div"></div>
+                <div class="greendivrot">
+                margin-top: 10px; <br>
+                transform: rotate(10deg); <br><br>
+                transform-origin: bottom center; <br>
+                </div>
             </div>
             <style>
                 div.empty-div {
-                    position: relative;
+                    /* position: relative; */
                     height: 100px;
                     width: 100px;
-                    margin: 30px;
-                    padding: 10px;
                     border: 1px solid black;
                 }
-                div.green-div {
-                    padding: 50px;
-                    position: absolute;
-                    background-color: #8bc34a;
-                    border: 1px solid white;
-                    transform: rotate(15deg);
-                    transform-origin: 25% 75%;
-                    -webkit-transform: rotate(15deg);
-                    -webkit-transform-origin: 25% 75%;
+                .greendivrot{
+                    font-size: 12px;
+                    width: 100px;
+                    height: 100px;
+                    margin-top: 10px;
+                    background-color: #32CD32;
+                    transform: rotate(10deg);
+                    transform-origin: bottom center;
                 }
-            </style>
+            </style> <br><hr>
         
             <p class="numbers">60) Translate() Method</p>
             <div class="empty-div">
-                <div class="torig"></div>
+                <div class="torig">transform: translate(20px, 20px);</div>
             </div>
             <style>
                 div.torig {
-                    padding: 50px;
-                    position: absolute;
+                    height: 100px;
+                    width: 100px;
                     background-color: #32CD32;
-                    transform:translate(100px, 50px);
-                    -webkit-transform:translate(100px, 50px);
+                    transform:translate(20px, 20px);
+                    -webkit-transform:translate(20px, 20px);
                 }
             </style><br>
         
             <p class="numbers">60) Skew() Method</p>
             <div class="empty-div">
-            <div class="skew"></div>
+                <div class="skew">transform: skew(30deg);</div>
             </div>
             <style>
                 div.skew {
-                    padding: 50px;
+                    height: 100px;
+                    width: 100px;
                     position: absolute;
                     background-color: #32CD32;
                     transform: skew(30deg);
@@ -2974,35 +2958,29 @@
         
             <p class="numbers">60) Scale y rotate</p>
             <table>
-                <td><div class="scale0-7">the factor 0.7 both horizontally and vertically</div></td>
-                <td><div class="scale1-5">div by a factor of 1.5 horizontally and vertically</div></td>
-                <td><div class="scaleandrotate">div rotated at 45deg</div></td>
+                <td><div class="scale0-7 scalerot">the factor 0.7 both horizontally and vertically</div></td>
+                <td><div class="scale1-5 scalerot">div by a factor of 1.5 horizontally and vertically</div></td>
+                <td><div class="scaleandrotate scalerot">div rotated at 45deg</div></td>
             </table>
             <style>
-                div.scale0-7{
-                    width: 200px;
-                    height: 100px;
+                div.scalerot{
+                    width: 150px;
+                    height: 70px;
+                    color:white;
                     background-color: #8BC34A;
+                }
+                div.scale0-7{
                     transform: scale(0.7, 0.7);
                     -webkit-transform: scale(0.7, 0.7);
-                    color:white;
                 }
                 div.scale1-5{
-                    margin: 60px;
-                    width: 200px;
-                    height: 100px;
-                    background-color: #8bc34a;
                     transform: scale(1.5,1.5);
                     -webkit-transform: scale(1.5,1.5);
-                    color:white;
+                    margin: 45px;
                 }
                 div.scaleandrotate{
-                    width: 300px;
-                    height: 100px;
-                    background-color: #8BC34A;
-                    transform: rotate(45deg) translate(100px);
-                    -webkit-transform: rotate(45deg) translate(100px);
-                    color:white;
+                    transform: rotate(45deg);
+                    -webkit-transform: rotate(45deg);
                 }
 
                 @keyframes examplecc {
@@ -3045,6 +3023,28 @@
                     100% {background-color: blue; }
                 }
             </style>
+            <details>
+                <summary>code...</summary>
+                div.colorforcc {
+                    width: 100px;
+                    height: 100px;
+                    background-color: red;
+                    animation-name: colorchange;
+                    animation-duration: 1s;
+                    -webkit-animation-name: colorchange;
+                    -webkit-animation-duration: 1s;
+                }
+                @keyframes colorchange {
+                    0% {background-color: red; }
+                    50% {background-color: green; }
+                    100% {background-color: blue; }
+                }
+                @-webkit-keyframes colorchange {
+                    0% {background-color: red; }
+                    50% {background-color: green; }
+                    100% {background-color: blue; }
+                }
+            </details>
         
             <!-- The animation-name Property -->
             <p class="numbers">62) The animation-name Property</p>
