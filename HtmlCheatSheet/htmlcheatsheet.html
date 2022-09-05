@@ -18,8 +18,12 @@
         color: orangered;
     }
     summary{
+        color: rgb(0, 77, 155);
+        font-size: 17px;
+    }
+    summary.hcj{
         color: lightslategray;
-        font-size: 25px;
+        font-size: 30px;
     }
     code{
         background-color: rgba(128, 128, 128, 0.135);
@@ -205,7 +209,7 @@
 
 <!-- HTML -->
 <details >
-    <summary> HTML </summary>
+    <summary class="hcj"> HTML </summary>
 
     <div class="borders">  <!-- Encabezados -->
         <h2 style="text-decoration: underline;"> Encabezados < h1-h6 > </h2>
@@ -739,7 +743,7 @@
 
 <!-- HTML5 -->
 <details > 
-    <summary> HTML5 </summary>
+    <summary class="hcj"> HTML5 </summary>
 
     <div class="borders"> <!-- Estructura de Pag -->
         <h2 class="subtitulo"> Estructura de Pag </h2>
@@ -1224,7 +1228,7 @@
 
 <!-- CSS -->
 <details> 
-    <summary> CSS </summary>
+    <summary class="hcj"> CSS </summary>
 
         <h1 class="titles"> CSS </h1> 
         <h3 class="titles"> Cascading Style Sheets </h3>
@@ -3312,7 +3316,7 @@
 
 <!-- JavaScript -->
 <details open>
-    <summary> JavaScript </summary>
+    <summary class="hcj"> JavaScript </summary>
 
         <!-- DOM -->
 
@@ -3363,7 +3367,7 @@
                     var boolean = true;
                 </pre>
             </details>
-        </div> <!-- Borders -->
+        </div>
         
         <!-- Condicionales y Bucles -->
         <div class="borders">
@@ -3452,7 +3456,7 @@
             </script>
             Confirm("Esto es una Confirmacion")
             
-        </div> <!-- Borders -->
+        </div>
 
         <!-- Objetos -->
         <div class="borders">
@@ -3519,13 +3523,14 @@
                 var p = new person("A", 22); 
                 document.write(p.yearOfBirth());
             </pre></div>
-        </div> <!-- Borders -->
+        </div>
         
         <!-- Objetos Esenciales -->
         <div class="borders">
-        <h1 class="titulo">Objetos Esenciales</h1>
+            <h1 class="titulo">Objetos Esenciales</h1>
 
-        <h1 class="subtitulo">Arrays:</h1>
+            <div class="borders">
+            <h1 class="subtitulo">Arrays:</h1>
             <!-- Crear: -->
             Crear:
             <div class="codigo"><pre>
@@ -3556,120 +3561,154 @@
             
             <!-- Propiedades -->
             <h3>Propiedades:</h3>
-            <u>Length:</u> <br>
-            var courses = ["HTML", "CSS", "JS"] <br>
-            document.write(courses.length) //3 <br><br>
+            Length:
+            <div class="codigo"><pre>
+                var courses = ["HTML", "CSS", "JS"]
+                document.write(courses.length) //3
+            </pre></div>
 
-            <u>Concat:</u> <br>
-            var c1 = ["HTML", "CSS"] <br>
-            var c2 = ["JS", "C++"] <br>
-            var courses = c1.concat(c2); <br>
-            // ahora coursees es (HTML, CSS, JS, C++) <br><br>
+            Concat:
+            <div class="codigo"><pre>
+                var c1 = ["HTML", "CSS"]
+                var c2 = ["JS", "C++"]
+                var courses = c1.concat(c2);
+                // ahora coursees es (HTML, CSS, JS, C++)
+            </pre></div>
 
             <!-- Arrays asociativos -->
             <h3>Arrays asociativos</h3>
-            Los arrays asociativos son listas con indices textuales, por lo cual <br> 
-            js no soporta arrays asociativos por lo q se convierten en objetos. <br>
-            <br>
-            var person = []; <br>
-            person["name"] = "Jhon"; <br>
-            person["age"] = 46; <br>
-            document.write(person["age"]) // 46 <br>
+            Los arrays asociativos son listas con indices textuales, por lo cual js no soporta arrays asociativos por lo q se convierten en objetos.
+            <div class="codigo"><pre>
+                var person = []; 
+                person["name"] = "Jhon";
+                person["age"] = 46;
+                document.write(person["age"]) // 46
+            </pre></div>
+        </div>
 
-        <h2 class="subtitulo">Math</h2>
-        <code>
-            document.write(Math.PI); <br> // 3.14.... <br>
-        </code>
-        <details>
-            <summary>Metodos de Math</summary>
-            abs(x)	  Returns the absolute value of x   <br>
-            acos(x)	  Returns the arccosine of x, in radians <br>
-            acosh(x)	Returns the hyperbolic arccosine of x <br>
-            asin(x)	  Returns the arcsine of x, in radians <br>
-            asinh(x)	Returns the hyperbolic arcsine of x <br>
-            atan(x)	  Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians <br>
-            atan2(y, x)	Returns the arctangent of the quotient of its arguments <br>
-            atanh(x)	Returns the hyperbolic arctangent of x <br>
-            cbrt(x)  	Returns the cubic root of x <br>
-            ceil(x) 	Returns x, rounded upwards to the nearest integer <br>
-            cos(x)	  Returns the cosine of x (x is in radians) <br>
-            cosh(x) 	Returns the hyperbolic cosine of x <br>
-            exp(x)  	Returns the value of Ex <br>
-            floor(x)	Returns x, rounded downwards to the nearest integer <br>
-            log(x)  	Returns the natural logarithm (base E) of x <br>
-            max(x, y, z, ..., n)	Returns the number with the highest value <br>
-            min(x, y, z, ..., n)	Returns the number with the lowest value <br>
-            pow(x, y)	Returns the value of x to the power of y <br>
-            random()	Returns a random number between 0 and 1 <br>
-            round(x)	Rounds x to the nearest integer <br>
-            sign(x) 	Returns if x is negative, null or positive (-1, 0, 1) <br>
-            sin(x)  	Returns the sine of x (x is in radians) <br>
-            sinh(x) 	Returns the hyperbolic sine of x <br>
-            sqrt(x) 	Returns the square root of x <br>
-            tan(x)  	Returns the tangent of an angle <br>
-            tanh(x)	  Returns the hyperbolic tangent of a number <br>
-            trunc(x)	Returns the integer part of a number (x) <br>
-        </details> <hr>
+        <!-- Math -->
+        <div class="borders">
+            <h2 class="subtitulo">Math:</h2>
+            <div class="codigo"><pre>
+                document.write(Math.PI); 
+                // 3.14.... 
+            </pre></div>
+            <details>
+                <summary>Metodos de Math</summary>
+                abs(x)	  Returns the absolute value of x   <br>
+                acos(x)	  Returns the arccosine of x, in radians <br>
+                acosh(x)	Returns the hyperbolic arccosine of x <br>
+                asin(x)	  Returns the arcsine of x, in radians <br>
+                asinh(x)	Returns the hyperbolic arcsine of x <br>
+                atan(x)	  Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians <br>
+                atan2(y, x)	Returns the arctangent of the quotient of its arguments <br>
+                atanh(x)	Returns the hyperbolic arctangent of x <br>
+                cbrt(x)  	Returns the cubic root of x <br>
+                ceil(x) 	Returns x, rounded upwards to the nearest integer <br>
+                cos(x)	  Returns the cosine of x (x is in radians) <br>
+                cosh(x) 	Returns the hyperbolic cosine of x <br>
+                exp(x)  	Returns the value of Ex <br>
+                floor(x)	Returns x, rounded downwards to the nearest integer <br>
+                log(x)  	Returns the natural logarithm (base E) of x <br>
+                max(x, y, z, ..., n)	Returns the number with the highest value <br>
+                min(x, y, z, ..., n)	Returns the number with the lowest value <br>
+                pow(x, y)	Returns the value of x to the power of y <br>
+                random()	Returns a random number between 0 and 1 <br>
+                round(x)	Rounds x to the nearest integer <br>
+                sign(x) 	Returns if x is negative, null or positive (-1, 0, 1) <br>
+                sin(x)  	Returns the sine of x (x is in radians) <br>
+                sinh(x) 	Returns the hyperbolic sine of x <br>
+                sqrt(x) 	Returns the square root of x <br>
+                tan(x)  	Returns the tangent of an angle <br>
+                tanh(x)	  Returns the hyperbolic tangent of a number <br>
+                trunc(x)	Returns the integer part of a number (x) <br>
+            </details>
+        </div>
+        
+        <!-- Date -->
+        <div class="borders">
+            <h2 class="subtitulo">Date:</h2>
 
-        <h2 class="subtitulo">Date</h2>
-        <u>Setinterval:</u> <br><br>
-        <code>
-            function myAlert() { <br>
-                alert("Hi"); <br>
-            } <br>
-            setInterval(myAlert, 3000) <br><br>
-            // 1000ms = 1seg
-        </code> <br><br>
+            <details>
+                <summary>Info...</summary>
+                Las fechas de JS se calculan en milisegundos, <br>
+                desde el 01 de enero de 1970 a las 00:00:00 hora universal (UTC). <br>
+                JS cuenta los meses de 0(Enero) a 11(dic). <br>
+                -Un día contiene 86.400.000 milisegundos. <br>
+            </details>
 
-        <u>Date:</u> <br>
-        <details>
-            <summary>Info...</summary>
-            Las fechas de JS se calculan en milisegundos, <br>
-            desde el 01 de enero de 1970 a las 00:00:00 hora universal (UTC). <br>
-            JS cuenta los meses de 0(Enero) a 11(dic). <br>
-            -Un día contiene 86.400.000 milisegundos. <br>
-        </details>
+            Guardar fecha actual:
+            <div class="codigo"><pre>
+                var d = new Date();
+            </pre></div>
 
-        <code> 
-            // Guardar fecha actual <br>
-            var d = new Date(); <br><br>
+            New Date(milliseconds);
+            <div class="codigo"><pre>
+                var d1 = new Date(86400000); 
+                Fri Jan 02 1970 00:00:00 
+            </pre></div>
 
+            new Date(dateString);
+            <div class="codigo"><pre>
+                Fri Jan 02 2015 10:42:00
+                var d2 = new Date("January 2, 2015 10:42:00");
+            </pre></div>
 
-            <u> new Date(milliseconds); </u> <br>
-            var d1 = new Date(86400000); <br>
-            Fri Jan 02 1970 00:00:00 <br><br>
+            new Date(year, month, day, hours, minutes, seconds, milliseconds);
+            <div class="codigo"><pre>
+                Sat Jun 11 1988 11:42:00
+                var d3 = new Date(88,5,11,11,42,0,0);
+            </pre></div> <hr>
+            
+            <h3>Metodos de Date:</h3>
+            <div class="codigo"> <pre>
+                getFullYer()    = año.
+                getMonth()      = mes.
+                getDate()       = dia(num).
+                getDay()        = dia(semana).
+                getHours()      = hora.
+                getMinutes()    = min.
+                getSeconds()    = seg.
+                getMilliseconds()= ms.
+            </pre></div>
 
-            <u>new Date(dateString);</u> <br>
-            Fri Jan 02 2015 10:42:00 <br>
-            var d2 = new Date("January 2, 2015 10:42:00"); <br><br>
+            Ej:
+            <div class="codigo"><pre>
+                var date1 = new Date();
+                var hours = date1.getHours();
 
-            <u>new Date(year, month, day, hours, minutes, seconds, milliseconds);</u> <br>
-            Sat Jun 11 1988 11:42:00 <br>
-            var d3 = new Date(88,5,11,11,42,0,0); <br>
-        </code><br>
+                // Muestra solo la hora actual, sin min-seg.
+            </pre></div>
+                <hr>
 
-        <u>Metodos de Date:</u> <br>
-        <code>
-            getFullYer()  = año. <br>
-            getMonth()    = mes. <br>
-            getDate()     = dia(num). <br>
-            getDay()      = dia(semana). <br>
-            getHours()    = hora. <br>
-            getMinutes()  = min. <br>
-            getSeconds()  = seg. <br>
-            getMilliseconds() = ms. <br><br>
+            <h2 class="subtitulo">Otros...</h2>
 
-            Ej: <br>
-            var date1 = new Date(); <br>
-            var hours = date1.getHours(); <br>
-            // Muestra solo la hora actual, sin min-seg.
-        </code><br>
+            Set interval:
+            <div class="codigo"> <pre>
+                function myAlert() { 
+                    alert("Hi");
+                }
+                setInterval(myAlert, 3000)
 
-        <!-- Hora por segundos -->
-        <h2 class="subtitulo"> Hora por segundos </h2>
-        <div id="HoraPS">Hora:</div>
-        <code><pre>
-            function printTime() {
+                // 1000ms = 1seg
+            </pre></div>
+
+            <!-- Hora por segundos -->
+            <h2 class="subtitulo"> Hora por segundos </h2>
+            <div id="HoraPS">Hora:</div>
+            <div class="codigo"><pre>
+                function printTime() {
+                    var d = new Date();
+                    var hours = d.getHours();
+                    var mins = d.getMinutes();
+                    var secs = d.getSeconds();
+                    var horaPS = document.getElementById("HoraPS");
+                    horaPS.innerHTML = "Hora: " + hours+":"+mins+":"+secs;
+                }
+                setInterval(printTime, 1000);
+            </pre></div>
+            <script>
+                function printTime() {
                 var d = new Date();
                 var hours = d.getHours();
                 var mins = d.getMinutes();
@@ -3678,568 +3717,565 @@
                 horaPS.innerHTML = "Hora: " + hours+":"+mins+":"+secs;
                 }
                 setInterval(printTime, 1000);
-        </pre></code>
-        <script>
-            function printTime() {
-            var d = new Date();
-            var hours = d.getHours();
-            var mins = d.getMinutes();
-            var secs = d.getSeconds();
-            var horaPS = document.getElementById("HoraPS");
-            horaPS.innerHTML = "Hora: " + hours+":"+mins+":"+secs;
-            }
-            setInterval(printTime, 1000);
-        </script>
-        </div> <!-- Borders -->
+            </script>
+            </div> <!-- Borders -->
+        </div>
 
         <!-- DOM -->
         <div class="borders">
+            <h1 class="titulo"> DOM </h1>
 
-        <h1 class="titulo"> DOM </h1>
-        <h2><u>DOM</u>: Document Object Model.</h2>
-        Usada para añadir, borrar y modificar elementos. <br>
-        <img src="../Imgs/DOM.png" alt="Arbol de DOM"> <br>
+            <h2><u>DOM</u>(Document Object Model):</h2>
+            Usada para añadir, borrar y modificar elementos. <br>
+            <details><summary>Imagen mapa DOM</summary>
+                <img src="../Imgs/DOM.png" alt="Arbol de DOM"> <br>
+            </details> <br>
 
-        El objeto <u>document</u> es la raiz de todos los otros objs de la pag. <br>
-        <code>
-            <u>document</u>.body.innerHTML = "Algun Texto";
-        </code> <br>
-        (La propiedad <u>innerHTML</u> se usa para modificar el contenido de un elemento.) <br><br>
+            El objeto <u>document</u> es la raiz de todos los otros objs de la pag. <br>
+            <div class="codigo"><pre>
+                <u>document</u>.body.innerHTML = "Algun Texto";
+            </pre></div>
+            (La propiedad <u>innerHTML</u> se usa para modificar el contenido de un elemento.) <br><br>
+            <hr>
 
+            <h2 class="subtitulo">Seleccionar Elementos</h2>
 
-        <h2 class="subtitulo">Seleccionar Elementos</h2>
-        <code>
-            <u>Buscar Id:</u> <br>
-            document.getElementById("idDelElemento") <br><br>
+            Buscar <u>Id</u>:
+            <div class="codigo"><pre>
+                document.<u>getElementById</u>("idDelElemento")
+            </pre></div>
 
-            <u>Buscar Class:</u> <br>
-            document.getElementsByClassName("nombreDeLaClase") <br><br>
+            Buscar <u>Class</u>:
+            <div class="codigo"><pre>
+                document.<u>getElementsByClassName</u>("nombreDeLaClase")
+            </pre></div>
 
-            <u>Buscar Tag:</u> <br>
-            document.getElementsByTagName("tagDelElemento") <br>
-        </code><br>
-        <hr>
+            Buscar <u>Tag</u>:
+            <div class="codigo"><pre>
+                document.<u>getElementsByTagName</u>("tagDelElemento")
+            </pre></div>
+            <hr>
 
-        <!-- cambiar valor a un elemento -->
-        <h2 class="subtitulo"> Cambiar valor a un ID</h2>
-        <u>Antes:</u>
-        <div class="ejemplo">
-            Esto es un div con id "idDemo".
-        </div> <br>
-        <code>
-            var elem = document.getElementById("idDemo"); <br>
-            elem.innerHTML = "Hello World!";
-        </code> <br><br>
-        <u>Despues:</u> <br>
-        <div class="ejemplo"> 
-            Hello World!
-        </div> <br>
-        <hr>
+            <!-- cambiar valor a un elemento -->
+            <h2 class="subtitulo"> Cambiar valor a un ID</h2>
+            <u>Antes:</u>
+            <div class="ejemplo">
+                Esto es un div con id "idDemo".
+            </div> <br>
+            <div class="codigo"><pre>
+                var elem = document.getElementById("idDemo");
+                elem.innerHTML = "Hello World!";
+            </pre></div>
+            <u>Despues:</u> <br>
+            <div class="ejemplo"> 
+                Hello World!
+            </div> <br>
+            <hr>
 
-        <!-- cambiar valor a alguna clase -->
-        <h2 class="subtitulo"> Cambiar valor a una CLASS </h2>
-        <u>Antes:</u>
-        <div class="ejemplo"> Esto es un div com class "classDemo" </div> <br>
-        <code>
-            var arr =  document.getElementsByClassName("classDemo"); <br>
-            arr[0].innerHTML = "Hiii";
-        </code> <br><br>
-        <u>Despues:</u>
-        <div class="ejemplo"> Hiii</div>
-        <hr>
+            <!-- cambiar valor a alguna clase -->
+            <h2 class="subtitulo"> Cambiar valor a una CLASS </h2>
+            <u>Antes:</u>
+            <div class="ejemplo"> Esto es un div con class "classDemo" </div> <br>
+            <div class="codigo"><pre>
+                var arr =  document.getElementsByClassName("classDemo");
+                arr[0].innerHTML = "Hiii";
+            </pre></div>
+            <u>Despues:</u>
+            <div class="ejemplo"> Hiii</div>
+            <hr>
 
-        <!-- cambiar valor a varios elementos -->
-        <h2 class="subtitulo"> Cambiar valor a los TAGS </h2>
-        <u>Antes:</u>
-        <div class="ejemplo">
-            <p> hi </p>
-            <p> hello </p>
-            <p> hola </p>
-        </div>
-            <code>
-            var arr = document.getElementsByTagName("p"); <br>
-            for (var x = 0; x < arr.length; x++) { <br>
-                arr[x].innerHTML = "Hi there!"; <br>
-            }
-        </code> <br><br>
-        <u>Despues:</u> <br>
-        <div class="ejemplo">
-            <p> Hi there! </p>
-            <p> Hi there! </p>
-            <p> Hi there! </p>
-        </div> 
-        <hr>
+            <!-- cambiar valor a varios elementos -->
+            <h2 class="subtitulo"> Cambiar valor a los TAGS </h2>
+            <u>Antes:</u>
+            <div class="ejemplo">
+                <p> hi </p>
+                <p> hello </p>
+                <p> hola </p>
+            </div> <br>
+            <div class="codigo"><pre>
+                var arr = document.getElementsByTagName("p");
+                for (var x = 0; x < arr.length; x++) {
+                    arr[x].innerHTML = "Hi there!";
+                }
+            </pre></div>
+            <u>Despues:</u> <br>
+            <div class="ejemplo">
+                <p> Hi there! </p>
+                <p> Hi there! </p>
+                <p> Hi there! </p>
+            </div> 
+            <br><hr>
 
-        <!-- propiedades y metodos -->
-        <h2 class="subtitulo"> Propiedades y metodos </h2>
-        <u>Cambiar valores en determinado tiempo (1000 = 1seg)</u>
-        <div class="ejemplo">
-            <div id = "demo2">
-                <p>some text</p>
-                <p>some other text</p>
+            <!-- propiedades y metodos -->
+            <h2 class="subtitulo"> Propiedades y metodos </h2>
+            <u>Cambiar valores en determinado tiempo (1000 = 1seg)</u>
+            <div class="ejemplo">
+                <div id = "demo2">
+                    <p>some text</p>
+                    <p>some other text</p>
+                </div>
             </div>
-        </div>
-        <code><pre>
-        function setText() {
-            var a = document.getElementById("demo2");
-            var arr = a.childNodes;
-            for(var x=0;x < arr.length;x++) {
-                arr[x].innerHTML = "new text";
-            }
-            }
-            setTimeout(setText, 1000);
-        </pre></code>
-        <script>
+            <code><pre>
             function setText() {
                 var a = document.getElementById("demo2");
                 var arr = a.childNodes;
-                for(var x=0;x<arr.length;x++) {
-                arr[x].innerHTML = "new text";
+                for(var x=0;x < arr.length;x++) {
+                    arr[x].innerHTML = "new text";
                 }
-            }
-            setTimeout(setText, 1000);
-        </script>
-
-        <details>
-            <summary>Propiedades y metoros</summary>
-            <pre>
-                element.childNodes:      returns an array of an element's child nodes.
-                element.firstChild:      returns the first child node of an element.
-                element.lastChild:       returns the last child node of an element.
-                element.hasChildNodes:   returns true if an element has any child nodes, otherwise false.
-                element.nextSibling:     returns the next node at the same tree level.
-                element.previousSibling: returns the previous node at the same tree level.
-                element.parentNode:      returns the parent node of an element.
-            </pre>
-        </details>
-        <hr>
-
-        <!-- modificar Atributos -->
-        <h2 class="subtitulo"> Modificar atributos </h2>
-
-        <u>Modificar src a una imagen:</u> <br>
-        <u>Antes:</u> <br>
-        <img id="myimg" src="../Imgs/Orange.png" alt="orange"  height="100"/> <br>
-        <code>
-            var el = document.getElementById("myimg"); <br>
-            el.src = "../Imgs/Apple.png"; <br>
-        </code><br> 
-        <u>Despues:</u> <br>
-        <img id="myimg" src="../Imgs/Apple.png" alt="orange"  height="100"/> <br>
-        <hr>
-
-        <u>Modificar el href a un link</u> <br><br>
-        <u>Antes:</u>
-        <a href="http://www.example.com">Some link</a> <br><br>
-        <code>
-            window.onload = function(){ <br>
-                var el = document.getElementsByTagName('a'); <br>
-                el[0].href= 'http://www.sololearn.com'; <br>
-                }; <br>
-        </code> <br>
-        <u>Despues:</u>
-        <a href="http://www.sololearn.com">Some link</a> <br><br>
-        <hr>
-
-        <!-- modificar Estilos -->
-        <h2 class="subtitulo"> Modificar Estilos </h2>
-        <u>Antes:</u>
-        <div class="ejemplo">Some Text</div> <br>
-        <code>
-            var x = document.getElementById("demo3"); <br>
-            x.style.color = '#6600FF'; <br>
-        </code><br>
-
-        <u>Despues:</u>
-        <div class="ejemplo" style="color: #e77e06;"> Some Text </div> <hr>
-
-        <!-- crear elementos -->
-        <h2 class="subtitulo"> Crear elementos </h2>
-        <u> Esto crea un nuevo párrafo y lo agrega al elemento div existente en la página. </u> <br><br>
-        <u>Antes:</u> 
-        <div class="ejemplo"> Some content</div> <br>
-
-        <code>
-            //creating a new paragraph  <br>
-            var p = document.createElement("p"); <br>
-            var node = document.createTextNode("Some new text"); <br><br>
-
-            //adding the text to the paragraph <br>
-            p.appendChild(node); <br><br>
-
-            var div = document.getElementById("demo4"); <br><br>
-
-            //adding the paragraph to the div <br>
-            div.appendChild(p); <br><br>
-        </code>
-
-        <u>Despues:</u>
-        <div class="ejemplo">
-            <p>Some content</p>
-            <p>Some new text</p>
-        </div>
-
-        <details>
-            <summary>Crear elem...</summary>
-            element.cloneNode() clones an element and returns the resulting node. <br>
-            document.createElement(element) creates a new element node. <br>
-            document.createTextNode(text) creates a new text node. <br>
-            <br>
-            // Systax <br>
-            Crear texto (pero no está asignado) <br>
-            var node = document.createTextNode("Some new text"); <br>
-            <br>
-            // Asignar con <br>
-            elemento.appendChild(newNode) // adds a new child node to an element as the last child node. <br>
-            elemento.insertBefore(node1, node2) // inserts node1 as a child before node2. <br>
-        </details>
-        <hr>
-
-        <!-- borrando elementos -->
-        <h2 class="subtitulo"> Borrando elementos </h2>
-        <u>Antes:</u>
-        <div  class="ejemplo">
-            <p>This is a paragraph.</p>
-            <p>This is another paragraph.</p>
-        </div>
-
-        <code>
-            var parent = document.getElementById("demo5"); <br>
-            var child = document.getElementById("p1"); <br>
-            parent.removeChild(child); <br>
-        </code> <br>
-
-        <u>Despues:</u>
-        <div class="ejemplo">
-            <p>This is another paragraph.</p>
-        </div>
-        <hr>
-
-        <!-- reemplazando elementos -->
-        <h2 class="subtitulo"> Reemplazando elementos </h2>
-        <u>Antes:</u>
-        <div class="ejemplo">
-            <p>This is a paragraph.</p>
-            <p>This is another paragraph.</p>
-        </div>
-        <code>
-            var varP = document.createElement("p"); <br>
-            var node = document.createTextNode("This is new"); <br>
-            varP.appendChild(node); <br> <br>
-
-            var parent = document.getElementById("demo6"); <br>
-            var child = document.getElementById("p1"); <br>
-            parent.replaceChild(varP, child); <br>
-        </code> <br>
-        <u>Despues:</u>
-        <div class="ejemplo">
-            <p>This is new.</p>
-            <p>This is another paragraph.</p>
-        </div>
-        <hr>
-
-
-        <!-- creando animaciones -->
-        <h2 class="subtitulo"> Creando animaciones </h2>
-        <div id="container1">
-            <div id="box1"> </div>
-        </div>
-        <style>
-            #container1 {
-            width: 200px;
-            height: 200px;
-            background: green;
-            position: relative;
-            }
-            #box1 {
-            width: 50px;
-            height: 50px;
-            background: red;
-            position: absolute;
-            }
-        </style> 
-        <script>
-            var pos = 0; 
-            var box = document.getElementById('box1');
-            var t = setInterval(move, 10);
-
-            function move() {
-                if(pos >= 150) {
-                clearInterval(t);
                 }
-                else {
-                pos += 1;
-                box.style.left = pos+'px';
+                setTimeout(setText, 1000);
+            </pre></code>
+            <script>
+                function setText() {
+                    var a = document.getElementById("demo2");
+                    var arr = a.childNodes;
+                    for(var x=0;x<arr.length;x++) {
+                    arr[x].innerHTML = "new text";
+                    }
                 }
-            }
-        </script>
-        <code>
-            var pos = 0; <br>
-            var box = document.getElementById('box1'); <br>
-            var t = setInterval(move, 10); <br> <br>
+                setTimeout(setText, 1000);
+            </script>
 
-            function move() { <br>
-                if(pos >= 150) { <br>
-                clearInterval(t); <br>
+            <details>
+                <summary>Propiedades y metoros</summary>
+                <pre>
+                    element.childNodes:      returns an array of an element's child nodes.
+                    element.firstChild:      returns the first child node of an element.
+                    element.lastChild:       returns the last child node of an element.
+                    element.hasChildNodes:   returns true if an element has any child nodes, otherwise false.
+                    element.nextSibling:     returns the next node at the same tree level.
+                    element.previousSibling: returns the previous node at the same tree level.
+                    element.parentNode:      returns the parent node of an element.
+                </pre>
+            </details>
+            <hr>
+
+            <!-- modificar Atributos -->
+            <h2 class="subtitulo"> Modificar atributos </h2>
+
+            <u>Modificar src a una imagen:</u> <br>
+            <u>Antes:</u> <br>
+            <img id="myimg" src="../Imgs/Orange.png" alt="orange"  height="100"/> <br>
+            <code>
+                var el = document.getElementById("myimg"); <br>
+                el.src = "../Imgs/Apple.png"; <br>
+            </code><br> 
+            <u>Despues:</u> <br>
+            <img id="myimg" src="../Imgs/Apple.png" alt="orange"  height="100"/> <br>
+            <hr>
+
+            <u>Modificar el href a un link</u> <br><br>
+            <u>Antes:</u>
+            <a href="http://www.example.com">Some link</a> <br><br>
+            <code>
+                window.onload = function(){ <br>
+                    var el = document.getElementsByTagName('a'); <br>
+                    el[0].href= 'http://www.sololearn.com'; <br>
+                    }; <br>
+            </code> <br>
+            <u>Despues:</u>
+            <a href="http://www.sololearn.com">Some link</a> <br><br>
+            <hr>
+
+            <!-- modificar Estilos -->
+            <h2 class="subtitulo"> Modificar Estilos </h2>
+            <u>Antes:</u>
+            <div class="ejemplo">Some Text</div> <br>
+            <code>
+                var x = document.getElementById("demo3"); <br>
+                x.style.color = '#6600FF'; <br>
+            </code><br>
+
+            <u>Despues:</u>
+            <div class="ejemplo" style="color: #e77e06;"> Some Text </div> <hr>
+
+            <!-- crear elementos -->
+            <h2 class="subtitulo"> Crear elementos </h2>
+            <u> Esto crea un nuevo párrafo y lo agrega al elemento div existente en la página. </u> <br><br>
+            <u>Antes:</u> 
+            <div class="ejemplo"> Some content</div> <br>
+
+            <code>
+                //creating a new paragraph  <br>
+                var p = document.createElement("p"); <br>
+                var node = document.createTextNode("Some new text"); <br><br>
+
+                //adding the text to the paragraph <br>
+                p.appendChild(node); <br><br>
+
+                var div = document.getElementById("demo4"); <br><br>
+
+                //adding the paragraph to the div <br>
+                div.appendChild(p); <br><br>
+            </code>
+
+            <u>Despues:</u>
+            <div class="ejemplo">
+                <p>Some content</p>
+                <p>Some new text</p>
+            </div>
+
+            <details>
+                <summary>Crear elem...</summary>
+                element.cloneNode() clones an element and returns the resulting node. <br>
+                document.createElement(element) creates a new element node. <br>
+                document.createTextNode(text) creates a new text node. <br>
+                <br>
+                // Systax <br>
+                Crear texto (pero no está asignado) <br>
+                var node = document.createTextNode("Some new text"); <br>
+                <br>
+                // Asignar con <br>
+                elemento.appendChild(newNode) // adds a new child node to an element as the last child node. <br>
+                elemento.insertBefore(node1, node2) // inserts node1 as a child before node2. <br>
+            </details>
+            <hr>
+
+            <!-- borrando elementos -->
+            <h2 class="subtitulo"> Borrando elementos </h2>
+            <u>Antes:</u>
+            <div  class="ejemplo">
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </div>
+
+            <code>
+                var parent = document.getElementById("demo5"); <br>
+                var child = document.getElementById("p1"); <br>
+                parent.removeChild(child); <br>
+            </code> <br>
+
+            <u>Despues:</u>
+            <div class="ejemplo">
+                <p>This is another paragraph.</p>
+            </div>
+            <hr>
+
+            <!-- reemplazando elementos -->
+            <h2 class="subtitulo"> Reemplazando elementos </h2>
+            <u>Antes:</u>
+            <div class="ejemplo">
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </div>
+            <code>
+                var varP = document.createElement("p"); <br>
+                var node = document.createTextNode("This is new"); <br>
+                varP.appendChild(node); <br> <br>
+
+                var parent = document.getElementById("demo6"); <br>
+                var child = document.getElementById("p1"); <br>
+                parent.replaceChild(varP, child); <br>
+            </code> <br>
+            <u>Despues:</u>
+            <div class="ejemplo">
+                <p>This is new.</p>
+                <p>This is another paragraph.</p>
+            </div>
+            <hr>
+
+
+            <!-- creando animaciones -->
+            <h2 class="subtitulo"> Creando animaciones </h2>
+            <div id="container1">
+                <div id="box1"> </div>
+            </div>
+            <style>
+                #container1 {
+                width: 200px;
+                height: 200px;
+                background: green;
+                position: relative;
+                }
+                #box1 {
+                width: 50px;
+                height: 50px;
+                background: red;
+                position: absolute;
+                }
+            </style> 
+            <script>
+                var pos = 0; 
+                var box = document.getElementById('box1');
+                var t = setInterval(move, 10);
+
+                function move() {
+                    if(pos >= 150) {
+                    clearInterval(t);
+                    }
+                    else {
+                    pos += 1;
+                    box.style.left = pos+'px';
+                    }
+                }
+            </script>
+            <code>
+                var pos = 0; <br>
+                var box = document.getElementById('box1'); <br>
+                var t = setInterval(move, 10); <br> <br>
+
+                function move() { <br>
+                    if(pos >= 150) { <br>
+                    clearInterval(t); <br>
+                    } <br>
+                    else { <br>
+                    pos += 1; <br>
+                    box.style.left = pos+'px'; <br>
+                    } <br>
                 } <br>
-                else { <br>
-                pos += 1; <br>
-                box.style.left = pos+'px'; <br>
+            </code>
+            <hr>
+
+
+
+
+            <!-- eventos -->
+            <h1 class="titulo">Eventos</h1>
+            Cuando un "evento" ocurre en un elemento, una funcion "handler" se ejecuta.
+            <details>
+                <summary>Eventos: ...</summary>
+                onclick:
+                onload:
+                onunload:
+                onchange: < input>, < keygen>, < select>, < texarea>.
+                onmouseover:
+                onmouseout:
+                onmousedown:
+                onmouseup:
+                onblur: al perder focus
+                onfocus:
+            </details>
+            <hr>
+
+            <!-- alerta en boton -->
+            <h2 class="subtitulo"> Alerta en boton </h2>
+            <button onclick="show();"> Alert Button</button> <br>
+            <code>
+                < button onclick="show();"> Alert Button </ button> <br><br>
+                function show() { <br>
+                    alert("Esto es una Alerta!"); <br>
                 } <br>
-            } <br>
-        </code>
-        <hr>
+            </code>
+            <script>
+                function show() {
+                    alert("Esto es una Alerta!");
+                }
+            </script>
+            <hr>
+
+            <!-- hora en boton -->
+            <h2 class="subtitulo"> Hora en boton </h2>
+            <button id="demo7"> Hour Button</button> <br>
+            <code>
+                < button id="demo7"> Hour Button </ button> <br><br>
+                var x = document.getElementById('demo7'); <br>
+                x.onclick = function () { <br>
+                alert(Date()); <br>
+                } <br>
+            </code>
+            <script>
+                var x = document.getElementById('demo7');
+                x.onclick = function () {
+                alert(Date());
+                }
+            </script>
+            <hr>
+
+            <!-- OnLoad desde aqui -->
+            <h2 class="subtitulo"> OnLoad desde html </h2>
+            <body onload="doSomething()"></body> 
+            <code>
+                < body onload="doSomething()"> </ body> <br><br>
+                function doSomething(){ <br>
+                } <br>
+            </code>
+            <hr>
+
+            <!-- OnLoad desde js -->
+            <h2 class="subtitulo"> OnLoad desde js </h2>
+            <code>
+                window.onload = function(){ <br>
+                    // Codigo que aplicará luego de q la pag se cargue por completo. <br>
+                } <br>
+            </code>
+            <hr>
+
+            <!-- OnChange -->
+            <h2 class="subtitulo"> OnChange </h2>
+            <u>Convertir texto en Mayustulas.</u> <br>
+            <input type="text" id="name001" onchange="change()"> <br><br>
+            <code>
+                function change() { <br>
+                    var x001 = document.getElementById('name001'); <br>
+                    x001.value = x001.value.toUpperCase(); <br>
+                } <br>
+            </code>
+            <script>
+                function change() {
+                    var x001 = document.getElementById('name001');
+                    x001.value = x001.value.toUpperCase();
+                }
+            </script>
+            <hr>
 
 
 
 
-        <!-- eventos -->
-        <h1 class="titulo">Eventos</h1>
-        Cuando un "evento" ocurre en un elemento, una funcion "handler" se ejecuta.
-        <details>
-            <summary>Eventos: ...</summary>
-            onclick:
-            onload:
-            onunload:
-            onchange: < input>, < keygen>, < select>, < texarea>.
-            onmouseover:
-            onmouseout:
-            onmousedown:
-            onmouseup:
-            onblur: al perder focus
-            onfocus:
-        </details>
-        <hr>
+            <!-- crear un evento manipulador -->
+            <h2 class="subtitulo"> Crear un Evento Manipulador </h2>
+            <button id="demo8"> Evento de un solo uso </button> <br><br>
+            
 
-        <!-- alerta en boton -->
-        <h2 class="subtitulo"> Alerta en boton </h2>
-        <button onclick="show();"> Alert Button</button> <br>
-        <code>
-            < button onclick="show();"> Alert Button </ button> <br><br>
-            function show() { <br>
-                alert("Esto es una Alerta!"); <br>
-            } <br>
-        </code>
-        <script>
-            function show() {
-                alert("Esto es una Alerta!");
-            }
-        </script>
-        <hr>
+            <code>
+                < button id="demo8"> Evento de un solo uso </ button> <br><br>
 
-        <!-- hora en boton -->
-        <h2 class="subtitulo"> Hora en boton </h2>
-        <button id="demo7"> Hour Button</button> <br>
-        <code>
-            < button id="demo7"> Hour Button </ button> <br><br>
-            var x = document.getElementById('demo7'); <br>
-            x.onclick = function () { <br>
-            alert(Date()); <br>
-            } <br>
-        </code>
-        <script>
-            var x = document.getElementById('demo7');
-            x.onclick = function () {
-            alert(Date());
-            }
-        </script>
-        <hr>
+                var btn = document.getElementById("demo8"); <br>
+                btn.addEventListener("click", myFunction01); <br> <br>
 
-        <!-- OnLoad desde aqui -->
-        <h2 class="subtitulo"> OnLoad desde html </h2>
-        <body onload="doSomething()"></body> 
-        <code>
-            < body onload="doSomething()"> </ body> <br><br>
-            function doSomething(){ <br>
-            } <br>
-        </code>
-        <hr>
+                function myFunction01() { <br>
+                    alert(Math.random()); <br>
+                    btn.removeEventListener("click", myFunction01); <br>
+                } <br>
+            </code>
+            <script>
+                var btn = document.getElementById("demo8");
+                btn.addEventListener("click", myFunction01);
 
-        <!-- OnLoad desde js -->
-        <h2 class="subtitulo"> OnLoad desde js </h2>
-        <code>
-            window.onload = function(){ <br>
-                // Codigo que aplicará luego de q la pag se cargue por completo. <br>
-            } <br>
-        </code>
-        <hr>
+                function myFunction01() {
+                    alert(Math.random());
+                    btn.removeEventListener("click", myFunction01);
+                }
+            </script>
+            <details>
+                <summary>Evento manipulador...</summary>
+                <pre>
+                // Syntax
+                    // element.addEventListener(evento, funcion, useCapture(opcional));
+                
+                    // El primer parámetro es el tipo de evento (como "clic" o "mousedown").
+                    // El segundo parámetro es la función a la que queremos llamar cuando se produce el evento.
+                    // El tercer parámetro es un valor booleano que especifica si se va a utilizar el burbujeo de eventos o la captura de eventos. Este parámetro es opcional y se describirá en la siguiente lección.
+                // 
 
-        <!-- OnChange -->
-        <h2 class="subtitulo"> OnChange </h2>
-        <u>Convertir texto en Mayustulas.</u> <br>
-        <input type="text" id="name001" onchange="change()"> <br><br>
-        <code>
-            function change() { <br>
-                var x001 = document.getElementById('name001'); <br>
-                x001.value = x001.value.toUpperCase(); <br>
-            } <br>
-        </code>
-        <script>
-            function change() {
-                var x001 = document.getElementById('name001');
-                x001.value = x001.value.toUpperCase();
-            }
-        </script>
-        <hr>
+                // Ejemplo
+                    // element.addEventListener("click0", myFunction0);
+                    // element.addEventListener("mouseover0", myFunction0);
 
+                    // function myFunction0() {
+                    //   alert("Hello World!");
+                    // }
 
+                    // remover un evento
+                    // element.removeEventListener("mouseover0", myFunction0);
+                // 
+                </pre>
+            </details>
+            <hr>
 
-
-        <!-- crear un evento manipulador -->
-        <h2 class="subtitulo"> Crear un Evento Manipulador </h2>
-        <button id="demo8"> Evento de un solo uso </button> <br><br>
-        
-
-        <code>
-            < button id="demo8"> Evento de un solo uso </ button> <br><br>
-
-            var btn = document.getElementById("demo8"); <br>
-            btn.addEventListener("click", myFunction01); <br> <br>
-
-            function myFunction01() { <br>
-                alert(Math.random()); <br>
-                btn.removeEventListener("click", myFunction01); <br>
-            } <br>
-        </code>
-        <script>
-            var btn = document.getElementById("demo8");
-            btn.addEventListener("click", myFunction01);
-
-            function myFunction01() {
-                alert(Math.random());
-                btn.removeEventListener("click", myFunction01);
-            }
-        </script>
-        <details>
-            <summary>Evento manipulador...</summary>
+            <h2 class="subtitulo"> Propagacion de eventos - bubbling & capturing</h2>
             <pre>
-            // Syntax
-                // element.addEventListener(evento, funcion, useCapture(opcional));
-            
-                // El primer parámetro es el tipo de evento (como "clic" o "mousedown").
-                // El segundo parámetro es la función a la que queremos llamar cuando se produce el evento.
-                // El tercer parámetro es un valor booleano que especifica si se va a utilizar el burbujeo de eventos o la captura de eventos. Este parámetro es opcional y se describirá en la siguiente lección.
-            // 
+                // En q orden se ejecutan las funciones,
+                // si hacemos click en un elemento,
+                // q está dentro de otro elemento.
 
-            // Ejemplo
-                // element.addEventListener("click0", myFunction0);
-                // element.addEventListener("mouseover0", myFunction0);
+                
+                // BUBBLING = desde adentro hacia afuera. (Por defecto = FALSE). - Baja por DOM.
+                    // elem1.addEventListener("click02", myFunction02, true); 
 
-                // function myFunction0() {
-                //   alert("Hello World!");
-                // }
+                // CAPTURING = desde afuera hacia adentro. (TRUE). - Sube por DOM
+                    // elem2.addEventListener("click02", myFunction02, false);
 
-                // remover un evento
-                // element.removeEventListener("mouseover0", myFunction0);
-            // 
+                // function myFunction02(){      }
             </pre>
-        </details>
-        <hr>
-
-        <h2 class="subtitulo"> Propagacion de eventos - bubbling & capturing</h2>
-        <pre>
-            // En q orden se ejecutan las funciones,
-            // si hacemos click en un elemento,
-            // q está dentro de otro elemento.
-
-            
-            // BUBBLING = desde adentro hacia afuera. (Por defecto = FALSE). - Baja por DOM.
-                // elem1.addEventListener("click02", myFunction02, true); 
-
-            // CAPTURING = desde afuera hacia adentro. (TRUE). - Sube por DOM
-                // elem2.addEventListener("click02", myFunction02, false);
-
-            // function myFunction02(){      }
-        </pre>
-        <hr>
+            <hr>
 
 
-        <!-- Image slider -->
-        <h2 class="subtitulo"> Image slider </h2>
-        <div>
-            <button onclick="prev()"> Prev </button>
-            <img id="slider" src="https://www.sololearn.com/uploads/slider/1.jpg" width="200px" height="100px"/>
-            <button onclick="next()"> Next </button>
-        </div> <br>
+            <!-- Image slider -->
+            <h2 class="subtitulo"> Image slider </h2>
+            <div>
+                <button onclick="prev()"> Prev </button>
+                <img id="slider" src="https://www.sololearn.com/uploads/slider/1.jpg" width="200px" height="100px"/>
+                <button onclick="next()"> Next </button>
+            </div> <br>
 
-        <code><pre>
-            var images = [
+            <code><pre>
+                var images = [
+                    'http://www.sololearn.com/uploads/slider/1.jpg', 
+                    'http://www.sololearn.com/uploads/slider/2.jpg', 
+                    'http://www.sololearn.com/uploads/slider/3.jpg'
+                ];
+
+                var num = 0;
+
+                function next() {
+                    var slider = document.getElementById('slider');
+                    num++;
+                    if(num >= images.length) {
+                        num = 0;
+                    }
+                    slider.src = images[num];
+                }
+
+                function prev() {
+                    var slider = document.getElementById('slider');
+                    num--;
+                    if(num < 0) {
+                        num = images.length-1;
+                    }
+                    slider.src = images[num];
+                }
+            </pre></code>
+            <script>
+                var images = [
                 'http://www.sololearn.com/uploads/slider/1.jpg', 
                 'http://www.sololearn.com/uploads/slider/2.jpg', 
                 'http://www.sololearn.com/uploads/slider/3.jpg'
-            ];
-
-            var num = 0;
-
-            function next() {
+                ];
+                var num = 0;
+                function next() {
                 var slider = document.getElementById('slider');
                 num++;
                 if(num >= images.length) {
                     num = 0;
                 }
                 slider.src = images[num];
-            }
-
-            function prev() {
+                }
+                function prev() {
                 var slider = document.getElementById('slider');
                 num--;
                 if(num < 0) {
                     num = images.length-1;
                 }
                 slider.src = images[num];
-            }
-        </pre></code>
-        <script>
-            var images = [
-            'http://www.sololearn.com/uploads/slider/1.jpg', 
-            'http://www.sololearn.com/uploads/slider/2.jpg', 
-            'http://www.sololearn.com/uploads/slider/3.jpg'
-            ];
-            var num = 0;
-            function next() {
-            var slider = document.getElementById('slider');
-            num++;
-            if(num >= images.length) {
-                num = 0;
-            }
-            slider.src = images[num];
-            }
-            function prev() {
-            var slider = document.getElementById('slider');
-            num--;
-            if(num < 0) {
-                num = images.length-1;
-            }
-            slider.src = images[num];
-            }
-        </script>
-        <hr>
-
-
-
-
-        <!-- validacion de formularios -->
-        <h2 class="subtitulo"> Validacion de formularios </h2>
-        <code><pre>
-        < form onsubmit="return validate()" method="post">
-            Number: < input type="text" name="num1" id="num1" />
-            Repeat: < input type="text" name="num2" id="num2" />
-            < input type="submit" value="Submit" />
-        < /form> 
-        </pre></code>
-        <code><pre>
-        function validate() {
-            var n1 = document.getElementById('num1');
-            var n2 = document.getElementById('num2');
-            if(n1.value != '' && n2.value != '') {
-                if(n1.value == n2.value) {
-                return true;
                 }
+            </script>
+            <hr>
+
+
+
+
+            <!-- validacion de formularios -->
+            <h2 class="subtitulo"> Validacion de formularios </h2>
+            <code><pre>
+            < form onsubmit="return validate()" method="post">
+                Number: < input type="text" name="num1" id="num1" />
+                Repeat: < input type="text" name="num2" id="num2" />
+                < input type="submit" value="Submit" />
+            < /form> 
+            </pre></code>
+            <code><pre>
+            function validate() {
+                var n1 = document.getElementById('num1');
+                var n2 = document.getElementById('num2');
+                if(n1.value != '' && n2.value != '') {
+                    if(n1.value == n2.value) {
+                    return true;
+                    }
+                }
+                alert("The values should be equal and not blank");
+                return false;
             }
-            alert("The values should be equal and not blank");
-            return false;
-        }
-        </pre></code>
+            </pre></code>
 
         </div> <!-- Borders -->
         
