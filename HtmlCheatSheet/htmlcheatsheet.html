@@ -1223,7 +1223,7 @@
 </details>
 
 <!-- CSS -->
-<details open> 
+<details> 
     <summary> CSS </summary>
 
         <h1 class="titles"> CSS </h1> 
@@ -3318,222 +3318,243 @@
 
         <!-- Fundamentos -->
         <div class="borders"> 
-        <h1 class="titulo">Fundamentos</h1>
+            <h1 class="titulo">Fundamentos</h1>
 
-        <!-- Script -->
-        <h2 class="subtitulo">Colocar un Script en Html: </h2>
-        <code>
-            &#60script>
-            &#60/script>
-        </code><br><hr>
+            <!-- Script -->
+            <h3 class="subtitulo">Colocar un Script en Html: </h3>
+            <code>
+                &#60script>
+                &#60/script>
+            </code><br><hr>
 
-        <h2 class="subtitulo">Colocar un archivo .JS externo: </h2>
-        <code>
-            &#60script type="text/javascript" src="htmlcheatsheet.js"> &#60/script>
-        </code><br><hr>
+            <h3 class="subtitulo">Colocar un archivo .JS externo: </h3>
+            <code>
+                &#60script type="text/javascript" src="htmlcheatsheet.js"> &#60/script>
+            </code><br><hr>
 
-        <!-- Salida html -->
-        <h2 class="subtitulo">Salida por Html: </h2>
-        <code>
-            document.write("&#60h1> Hello World! &#60/h1>"); <br>
-        </code><hr>
+            <!-- Salida html -->
+            <h3 class="subtitulo">Salida por Html: </h3>
+            <code>
+                document.write("&#60h1> Hello World! &#60/h1>"); <br>
+            </code><hr>
 
-        <!-- Salida Consola -->
-        <h2 class="subtitulo">Salida por Consola: </h2>
-        <code>
-            console.log("Hello from Console!");
-        </code><hr>
+            <!-- Salida Consola -->
+            <h3 class="subtitulo">Salida por Consola: </h3>
+            <code>
+                console.log("Hello from Console!");
+            </code><hr>
 
-        <!-- Variables -->
-        <h2 class="subtitulo">Variables</h2>
-        <code>
-            <u>Crear</u>: var x = 10; <br>
-            <u>Editar</u>: x = 45; <br>
-            <u>Usar</u>: document.write(x);
-        </code>
-        <details>
-            <summary>+Info</summary>
-            <pre>
-                Nombres de Variables; Respetar Mayusc, Empezar por: "a-z" , "_" , "$".
-                
-                Tipos de Variables
-                var int = 5;
-                var price = 5.5;
-                var string = "texto con espacio";
-                var boolean = true;
-            </pre>
-        </details>
+            <!-- Variables -->
+            <h3 class="subtitulo">Variables</h3>
+            <code>
+                <u>Crear</u>: var x = 10; <br>
+                <u>Editar</u>: x = 45; <br>
+                <u>Usar</u>: document.write(x);
+            </code>
+            <details>
+                <summary>+Info</summary>
+                <pre>
+                    Nombres de Variables; Respetar Mayusc, Empezar por: "a-z" , "_" , "$".
+                    
+                    Tipos de Variables
+                    var int = 5;
+                    var price = 5.5;
+                    var string = "texto con espacio";
+                    var boolean = true;
+                </pre>
+            </details>
         </div> <!-- Borders -->
         
         <!-- Condicionales y Bucles -->
         <div class="borders">
-        <h1 class="titulo">Condicionales y Bucles</h1>
+            <h1 class="titulo">Condicionales y Bucles</h1>
 
-        <h2 class="subtitulo">Declaracion If:</h2>
-        <code><pre>
-            if(condicion) {
-                // Declaraciones si es Verdadero
-            }
-            else {
-                // Declaraciones si es Falso
-            }
-        </pre></code> <hr>
-        
-        <h2 class="subtitulo">Declaracion Switch:</h2>
-        <code><pre>
-            switch( Expresion ) {
-                Case n1:
+            <h3 class="subtitulo">Declaracion If:</h3>
+            <div class="codigo"><pre>
+                if(condicion) {
+                    // Declaraciones si es Verdadero
+                }
+                else {
+                    // Declaraciones si es Falso
+                }
+            </pre></div> <hr>
+            
+            <h3 class="subtitulo">Declaracion Switch:</h3>
+            <div class="codigo"><pre>
+                switch( Expresion ) {
+                    Case n1:
+                        // Bloque de Codigo
+                        breack;
+                    Case n2:
+                        // Bloque de Codigo
+                        breack;
+                    default:
+                        // Bloque de Codigo
+                }
+            </pre></div> <hr>
+
+            <h3 class="subtitulo">Bucle For:</h3>
+            
+            <div class="codigo"><pre>
+                for ( Condicion1; Condicion2; Condicion3 ) {
                     // Bloque de Codigo
-                    breack;
-                Case n2:
+                }
+            </pre></div> <hr>
+
+            <h3 class="subtitulo">Bucle While:</h3>
+            
+            <div class="codigo"><pre>
+                while( condicion ) {
                     // Bloque de Codigo
-                    breack;
-                default:
+                }
+            </pre></div>
+            
+            <h3 class="subtitulo">Bucle Do-While:</h3>
+            <div class="codigo"><pre>
+                do {
                     // Bloque de Codigo
-            }
-        </pre></code> <hr>
-
-        <h2 class="subtitulo">Bucle For:</h2>
-        
-        <code><pre>
-            for ( Condicion1; Condicion2; Condicion3 ) {
-                // Bloque de Codigo
-            }
-        </pre></code> <hr>
-
-        <h2 class="subtitulo">Bucle While:</h2>
-        
-        <code><pre>
-            while( condicion ) {
-                // Bloque de Codigo
-            }
-        </pre></code>
-        
-        <h2 class="subtitulo">Bucle Do-While:</h2>
-        <code><pre>
-            do {
-                // Bloque de Codigo
-            }
-            while (condicion)
-        </pre></code> <hr>
-        
-        <h2 class="subtitulo"> Funciones </h2>
-        <code><pre>
-            function name( parametro1, parametro2, parametro3 ) {
-                return param1 + param2 + param3;
-            }
-        </pre></code>
+                }
+                while (condicion)
+            </pre></div> <hr>
+            
+            <h3 class="subtitulo"> Funciones </h3>
+            <div class="codigo"><pre>
+                function name( parametro1, parametro2, parametro3 ) {
+                    return param1 + param2 + param3;
+                }
+            </pre></div>
 
 
-        <hr>
-        <h2 class="subtitulo">Alert, Prompt, Confirm.</h2>
-        <u>Alert:</u> <br>
-            <code> Alert("Esto es una Alerta") </code> <br><br>
+            <hr>
+            <h3 class="subtitulo">Alert, Prompt, Confirm.</h3>
+            
+            <button onclick="botonalerta();"> Alert </button>
+            <script>
+                function botonalerta() {
+                    alert("Esto es una Alerta!");
+                }
+            </script>
+            Alert("Esto es una Alerta")<br><br>
 
-        <u>Prompt:</u> <br>
-            <code> Prompt("Esto es una Solicitud")</code> <br><br>
+            <button onclick="botonalerta();"> Prompt </button>
+            <script>
+                function botonalerta() {
+                    alert("Esto es una Solicitud!");
+                }
+            </script> 
+            Prompt("Esto es una Solicitud")<br><br>
 
-        <u>Confirm:</u> <br>
-            <code> Confirm("Esto es una Confirmacion")</code>
-        
+            <button onclick="botonalerta();"> Confirm </button>
+            <script>
+                function botonalerta() {
+                    alert("Esto es una Confirmacion!");
+                }
+            </script>
+            Confirm("Esto es una Confirmacion")
+            
         </div> <!-- Borders -->
 
         <!-- Objetos -->
         <div class="borders">
-        <h1 class="titulo">Objetos</h1>
-        <h2 class="subtitulo">Crear Objeto</h2>
-        <code> <br>
-            var person = { <br>
-                name: "john", age: 31, <br>
-                favColor: "green", height: 183 <br>
-            }; <br>
-        </code> <hr>
+            <h1 class="titulo">Objetos</h1>
 
-        <h2 class="subtitulo">Acceder a las propiedades de los objetos:</h2>
-        <code> <br>
-            person.name; <br>
-            ó <br>
-            person["name"]; <br>
-        </code> <hr>
+            <h3 class="subtitulo">Crear Objeto</h3>
+            <div class="codigo"> <pre>
+                var person = {
+                    name: "john", age: 31,
+                    favColor: "green", height: 183
+                };
+            </pre></div> <hr>
 
-        <h2 class="subtitulo">Constructor de Objetos</h2>
-        <code> <br>
-            function person(name, age, color) { <br>
-                this.name = name; <br>
-                this.age = age; <br>
-                this.color = color <br>
-            }                
-        </code> <hr>
+            <h3 class="subtitulo">Acceder a las propiedades de los objetos:</h3>
+            <div class="codigo"> <pre>
+                person.name;
+                ó 
+                person["name"];
+            </pre></div> <hr>
 
-        <h2 class="subtitulo">Crear Objeto del constructor</h2>
-        <code> <br>
-            var p1 = new person("John", 42, "green") <br>
-            var p2 = new person("Amy", 21, "red") <br><br>
+            <h3 class="subtitulo">Constructor de Objetos</h3>
+            <div class="codigo"> <pre>
+                function person(name, age, color) { 
+                    this.name = name; 
+                    this.age = age; 
+                    this.color = color
+                }                
+            </pre></div> <hr>
 
-            document.write(p1.age) //42 <br>
-            document.write(p2.name) //Amy <br>
-        </code> <hr>
-        
-        <h2 class="subtitulo">Metodos en los objetos</h2>
-        <code> <br>
-            function person(name, age) { <br>
-                this.name = name; <br>
-                this.age = age; <br>
-                this.changeName = funcion (name) { <br>
-                    this.name = name; <br>
-                } <br>
-            } <br><br>
-            var p = new person("David", 21); <br>
-            p.changeName("Jhon"); <br>
-            // Ahora p.name es Jhon.
-        </code> <br>
-        
-        
-        _________________________ <br> <br>
+            <h3 class="subtitulo">Crear Objeto del constructor</h3>
+            <div class="codigo"> <pre>
+                var p1 = new person("John", 42, "green") 
+                var p2 = new person("Amy", 21, "red") 
+                
+                document.write(p1.age) //42 
+                document.write(p2.name) //Amy 
+            </pre></div> <hr>
+            
+            <h3 class="subtitulo">Metodos en los objetos</h3>
+            <div class="codigo"> <pre>
+                function person(name, age) {
+                    this.name = name; 
+                    this.age = age; 
+                    this.changeName = funcion (name) { 
+                        this.name = name; 
+                    }
+                } 
+                var p = new person("David", 21); 
+                p.changeName("Jhon"); 
+                // Ahora p.name es Jhon.
+            </pre></div> <br>
 
-        Fuera del constructor 
-        <code> <br>
-            function person(name, age) { <br>
-                this.name = name; <br>
-                this.age = age; <br>
-                this.yearOfBirth = bornYear; <br>
-            } <br>
-            function bornYear() { <br>
-                return 2022 - this.age; <br>
-            } <br>
-            <br>
-            var p = new person("A", 22); <br>
-            document.write(p.yearOfBirth());
-
-        </code>
+            <h3 class="subtitulo">Fuera del constructor</h3>
+            <div class="codigo"><pre>
+                function person(name, age) { 
+                    this.name = name; 
+                    this.age = age; 
+                    this.yearOfBirth = bornYear;
+                } 
+                function bornYear() { 
+                    return 2022 - this.age; 
+                } 
+                
+                var p = new person("A", 22); 
+                document.write(p.yearOfBirth());
+            </pre></div>
         </div> <!-- Borders -->
         
         <!-- Objetos Esenciales -->
         <div class="borders">
         <h1 class="titulo">Objetos Esenciales</h1>
 
-        <h2 class="subtitulo">Arrays:</h2>
-        <code>
-            <u>Crear:</u> <br>
-            var courses = new Array("HTML", "CSS", "JS"); <br>
-            <details>
-                <summary>Otras formas...</summary>
-                <code>
-                    var courses = new Array(3); <br><br>
-                    courses[0] = "HTML"; <br>
-                    courses[1] = "CSS"; <br>
-                    courses[2] = "JS"; <br><br>
-                    _________________________ <br><br>
-                    var courses = ["HTML", "CSS", "JS"]
-                </code>
-            </details> <br>
+        <h1 class="subtitulo">Arrays:</h1>
+            <!-- Crear: -->
+            Crear:
+            <div class="codigo"><pre>
+                var courses = new Array("HTML", "CSS", "JS");
+            </pre></div>
+            <div class="codigo"><pre>
+                var courses = new Array(3);
+                
+                courses[0] = "HTML";
+                courses[1] = "CSS";
+                courses[2] = "JS";
+            </pre></div>
+            <div class="codigo"><pre>
+                var courses = ["HTML", "CSS", "JS"]
+            </pre></div>
 
-            <u>Usar:</u> <br>
-            var couse = courses[0] //HTML <br><br>
+            <!-- Usar -->
+            Usar:
+            <div class="codigo"><pre>
+                var couse = courses[0] //HTML
+            </pre></div>
 
-            <u>Editar:</u> <br>
-            couses[1] = "C++"; <br><br><br>
+            <!-- Editar -->
+            Editar:
+            <div class="codigo"><pre>
+                couses[1] = "C++"; //"CSS" ahora es "C++"
+            </pre></div>
             
+            <!-- Propiedades -->
             <h3>Propiedades:</h3>
             <u>Length:</u> <br>
             var courses = ["HTML", "CSS", "JS"] <br>
@@ -3545,6 +3566,7 @@
             var courses = c1.concat(c2); <br>
             // ahora coursees es (HTML, CSS, JS, C++) <br><br>
 
+            <!-- Arrays asociativos -->
             <h3>Arrays asociativos</h3>
             Los arrays asociativos son listas con indices textuales, por lo cual <br> 
             js no soporta arrays asociativos por lo q se convierten en objetos. <br>
@@ -3553,7 +3575,6 @@
             person["name"] = "Jhon"; <br>
             person["age"] = 46; <br>
             document.write(person["age"]) // 46 <br>
-        </code> <hr>
 
         <h2 class="subtitulo">Math</h2>
         <code>
