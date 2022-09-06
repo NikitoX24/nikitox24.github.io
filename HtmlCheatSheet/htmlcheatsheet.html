@@ -3784,7 +3784,7 @@
 
         <!-- Modificar Elementos -->
         <div class="borders">
-            <h2 class="subtitulo">Modificar Elementos:</h2>
+            <h1 class="subtitulo">Modificar Elementos:</h1>
             <h3 class="subtitulo"> Cambiar valor a un ID</h3>
             <u>Antes:</u>
             <div class="ejemplo">
@@ -3836,7 +3836,7 @@
 
         <!-- propiedades y metodos -->
         <div class="borders">
-            <h2 class="subtitulo"> Propiedades y metodos </h2>
+            <h1 class="subtitulo"> Propiedades y metodos </h1>
             
             Cambiar valores en determinado tiempo <u>(USANDO CHILDNODES)</u>
             <div class="ejemplo">
@@ -3882,9 +3882,9 @@
 
         <!-- Modificar Atributos -->
         <div class="borders">
-            <h2 class="subtitulo"> Modificar Atributos </h2>
+            <h1 class="subtitulo"> Modificar Atributos: </h1>
 
-            <u>Modificar src a una imagen:</u> <br>
+            <h3 class="subtitulo"> Modificar src a una imagen </h3>
             <u>Antes:</u> <br>
             <img id="myimg" src="../Imgs/Orange.png" alt="orange"  height="100"/> <br>
             <div class="codigo"><pre>
@@ -3895,170 +3895,168 @@
             <img id="myimg" src="../Imgs/Apple.png" alt="orange"  height="100"/> <br>
             <hr>
 
-            <u>Modificar el href a un link</u> <br><br>
+            <h3 class="subtitulo">Modificar el href a un link</h3>
             <u>Antes:</u>
             <a href="http://www.example.com">Some link</a> <br><br>
-            <code>
-                window.onload = function(){ <br>
-                    var el = document.getElementsByTagName('a'); <br>
-                    el[0].href= 'http://www.sololearn.com'; <br>
-                    }; <br>
-            </code> <br>
+            <div class="codigo"><pre>
+                window.onload = function(){
+                    var el = document.getElementsByTagName('a');
+                    el[0].href= 'http://www.sololearn.com';
+                };
+            </pre></div>
             <u>Despues:</u>
             <a href="http://www.sololearn.com">Some link</a> <br><br>
             <hr>
 
             <!-- modificar Estilos -->
-            <h2 class="subtitulo"> Modificar Estilos </h2>
+            <h3 class="subtitulo"> Modificar Estilos </h3>
             <u>Antes:</u>
             <div class="ejemplo">Some Text</div> <br>
-            <code>
-                var x = document.getElementById("demo3"); <br>
-                x.style.color = '#6600FF'; <br>
-            </code><br>
+            <div class="codigo"><pre>
+                var x = document.getElementById("demo3");
+                x.style.color = '#6600FF';
+            </pre></div>
 
             <u>Despues:</u>
             <div class="ejemplo" style="color: #e77e06;"> Some Text </div>
         </div>
 
-        <!-- crear elementos -->
-        <h2 class="subtitulo"> Crear elementos </h2>
-        <u> Esto crea un nuevo párrafo y lo agrega al elemento div existente en la página. </u> <br><br>
-        <u>Antes:</u> 
-        <div class="ejemplo"> Some content</div> <br>
+        <!-- Elementos -->
+        <div class="borders">
+            <h1 class="subtitulo"> Elementos: </h1>
 
-        <code>
-            //creating a new paragraph  <br>
-            var p = document.createElement("p"); <br>
-            var node = document.createTextNode("Some new text"); <br><br>
+            <h2 class="subtitulo"> Crear Elementos </h2>
+            <u> Esto crea un nuevo párrafo y lo agrega al elemento div existente en la página. </u> <br><br>
+            <u>Antes:</u> 
+            <div class="ejemplo"> Some content</div> <br>
+            <div class="codigo"><pre>
+                //Crear un paragraph.
+                var p = document.createElement("p");
+                var node = document.createTextNode("Some new text");
+                
+                //Agregar un text al paragraph.
+                p.appendChild(node);
+                
+                var div = document.getElementById("demo4");
+                
+                //Agregar el paragraph al div.
+                div.appendChild(p);
+            </pre></div>
+            <u>Despues:</u>
+            <div class="ejemplo">
+                <p>Some content</p>
+                <p>Some new text</p>
+            </div>
+            <details>
+                <summary>Crear elem...</summary>
+                element.cloneNode() clones an element and returns the resulting node. <br>
+                document.createElement(element) creates a new element node. <br>
+                document.createTextNode(text) creates a new text node. <br>
+                <br>
+                // Systax <br>
+                Crear texto (pero no está asignado) <br>
+                var node = document.createTextNode("Some new text"); <br>
+                <br>
+                // Asignar con <br>
+                elemento.appendChild(newNode) // adds a new child node to an element as the last child node. <br>
+                elemento.insertBefore(node1, node2) // inserts node1 as a child before node2. <br>
+            </details> 
+            <hr>
 
-            //adding the text to the paragraph <br>
-            p.appendChild(node); <br><br>
+            <!-- borrando elementos -->
+            <h2 class="subtitulo"> Borrar Elementos </h2>
+            <u>Antes:</u>
+            <div  class="ejemplo">
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </div><br>
+            <div class="codigo"><pre>
+                var parent = document.getElementById("demo5");
+                var child = document.getElementById("p1");
+                parent.removeChild(child);
+            </pre></div>
+            <u>Despues:</u>
+            <div class="ejemplo">
+                <p>This is another paragraph.</p>
+            </div>
+            <hr>
 
-            var div = document.getElementById("demo4"); <br><br>
-
-            //adding the paragraph to the div <br>
-            div.appendChild(p); <br><br>
-        </code>
-
-        <u>Despues:</u>
-        <div class="ejemplo">
-            <p>Some content</p>
-            <p>Some new text</p>
+            <!-- reemplazando elementos -->
+            <h2 class="subtitulo"> Reemplazar Elementos </h2>
+            <u>Antes:</u>
+            <div class="ejemplo">
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </div><br>
+            <div class="codigo"><pre>
+                var varP = document.createElement("p");
+                var node = document.createTextNode("This is new");
+                varP.appendChild(node);
+                
+                var parent = document.getElementById("demo6");
+                var child = document.getElementById("p1");
+                parent.replaceChild(varP, child);
+            </pre></div>
+            <u>Despues:</u>
+            <div class="ejemplo">
+                <p>This is new.</p>
+                <p>This is another paragraph.</p>
+            </div>
+            <hr>
         </div>
 
-        <details>
-            <summary>Crear elem...</summary>
-            element.cloneNode() clones an element and returns the resulting node. <br>
-            document.createElement(element) creates a new element node. <br>
-            document.createTextNode(text) creates a new text node. <br>
-            <br>
-            // Systax <br>
-            Crear texto (pero no está asignado) <br>
-            var node = document.createTextNode("Some new text"); <br>
-            <br>
-            // Asignar con <br>
-            elemento.appendChild(newNode) // adds a new child node to an element as the last child node. <br>
-            elemento.insertBefore(node1, node2) // inserts node1 as a child before node2. <br>
-        </details>
-        <hr>
 
-        <!-- borrando elementos -->
-        <h2 class="subtitulo"> Borrando elementos </h2>
-        <u>Antes:</u>
-        <div  class="ejemplo">
-            <p>This is a paragraph.</p>
-            <p>This is another paragraph.</p>
-        </div>
-
-        <code>
-            var parent = document.getElementById("demo5"); <br>
-            var child = document.getElementById("p1"); <br>
-            parent.removeChild(child); <br>
-        </code> <br>
-
-        <u>Despues:</u>
-        <div class="ejemplo">
-            <p>This is another paragraph.</p>
-        </div>
-        <hr>
-
-        <!-- reemplazando elementos -->
-        <h2 class="subtitulo"> Reemplazando elementos </h2>
-        <u>Antes:</u>
-        <div class="ejemplo">
-            <p>This is a paragraph.</p>
-            <p>This is another paragraph.</p>
-        </div>
-        <code>
-            var varP = document.createElement("p"); <br>
-            var node = document.createTextNode("This is new"); <br>
-            varP.appendChild(node); <br> <br>
-
-            var parent = document.getElementById("demo6"); <br>
-            var child = document.getElementById("p1"); <br>
-            parent.replaceChild(varP, child); <br>
-        </code> <br>
-        <u>Despues:</u>
-        <div class="ejemplo">
-            <p>This is new.</p>
-            <p>This is another paragraph.</p>
-        </div>
-        <hr>
-
-
-        <!-- creando animaciones -->
-        <h2 class="subtitulo"> Creando animaciones </h2>
-        <div id="container1">
-            <div id="box1"> </div>
-        </div>
-        <style>
-            #container1 {
-            width: 200px;
-            height: 200px;
-            background: green;
-            position: relative;
-            }
-            #box1 {
-            width: 50px;
-            height: 50px;
-            background: red;
-            position: absolute;
-            }
-        </style> 
-        <script>
-            var pos = 0; 
-            var box = document.getElementById('box1');
-            var t = setInterval(move, 10);
-
-            function move() {
-                if(pos >= 150) {
-                clearInterval(t);
+        <!-- Crear Animaciones -->
+        <div class="borders">
+            <h1 class="subtitulo"> Crear Animaciones </h1>
+            <div id="container1">
+                <div id="box1"> </div>
+            </div>
+            <style>
+                #container1 {
+                width: 200px;
+                height: 200px;
+                background: green;
+                position: relative;
                 }
-                else {
-                pos += 1;
-                box.style.left = pos+'px';
+                #box1 {
+                width: 50px;
+                height: 50px;
+                background: red;
+                position: absolute;
                 }
-            }
-        </script>
-        <code>
-            var pos = 0; <br>
-            var box = document.getElementById('box1'); <br>
-            var t = setInterval(move, 10); <br> <br>
+            </style> 
+            <script>
+                var pos = 0; 
+                var box = document.getElementById('box1');
+                var t = setInterval(move, 10);
 
-            function move() { <br>
-                if(pos >= 150) { <br>
-                clearInterval(t); <br>
-                } <br>
-                else { <br>
-                pos += 1; <br>
-                box.style.left = pos+'px'; <br>
-                } <br>
-            } <br>
-        </code>
-        <hr>
-
-
+                function move() {
+                    if(pos >= 150) {
+                    clearInterval(t);
+                    }
+                    else {
+                    pos += 1;
+                    box.style.left = pos+'px';
+                    }
+                }
+            </script>
+            <div class="codigo"><pre>
+                var pos = 0;
+                var box = document.getElementById('box1');
+                var t = setInterval(move, 10);
+                
+                function move() {
+                    if(pos >= 150) {
+                        clearInterval(t);
+                    }
+                    else {
+                        pos += 1;
+                        box.style.left = pos+'px';
+                    }
+                }
+            </pre></div>
+        </div>
 
 
         <!-- eventos -->
