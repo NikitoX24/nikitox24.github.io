@@ -26,7 +26,7 @@
         font-size: 30px;
     }
     code{
-        background-color: rgba(128, 128, 128, 0.135);
+        background-color: rgba(128, 128, 128, 0.289);
         text-decoration: none;
     }
     .titulo{
@@ -3365,7 +3365,7 @@
                 var boolean = true;
             </pre>
         </details>
-    </div>
+    </div> <br>
     
     <!-- Condicionales y Bucles -->
     <div class="borders">
@@ -3466,7 +3466,7 @@
         </script>
         Confirm("Esto es una Confirmacion")
         
-    </div>
+    </div> <br>
 
     <!-- Objetos -->
     <div class="borders">
@@ -3545,7 +3545,7 @@
                 document.write(p.yearOfBirth());
             </pre>
         </div>
-    </div>
+    </div> <br>
     
     <!-- Objetos Esenciales -->
     <div class="borders">
@@ -3742,12 +3742,13 @@
                 setInterval(printTime, 1000);
             </script>
         </div>
-    </div>
+    </div> <br>
 
     <!-- DOM -->
     <div class="borders">
         <h1 class="titulo"> DOM </h1>
 
+        <!-- DOM -->
         <div class="borders">
             <h2><u>DOM</u>(Document Object Model):</h2>
             Usada para añadir, borrar y modificar elementos. <br>
@@ -3834,7 +3835,7 @@
             </div> 
         </div>
 
-        <!-- propiedades y metodos -->
+        <!-- Propiedades y metodos -->
         <div class="borders">
             <h1 class="subtitulo"> Propiedades y metodos </h1>
             
@@ -4005,7 +4006,6 @@
             <hr>
         </div>
 
-
         <!-- Crear Animaciones -->
         <div class="borders">
             <h1 class="subtitulo"> Crear Animaciones </h1>
@@ -4058,256 +4058,265 @@
             </pre></div>
         </div>
 
+        <br><br>
 
-        <!-- eventos -->
-        <h1 class="titulo">Eventos</h1>
-        Cuando un "evento" ocurre en un elemento, una funcion "handler" se ejecuta.
-        <details>
-            <summary>Eventos: ...</summary>
-            onclick:
-            onload:
-            onunload:
-            onchange: < input>, < keygen>, < select>, < texarea>.
-            onmouseover:
-            onmouseout:
-            onmousedown:
-            onmouseup:
-            onblur: al perder focus
-            onfocus:
-        </details>
-        <hr>
+        <!-- Eventos -->
+        <div class="borders">
+            <h1 class="titulo">Eventos</h1>
+            Cuando un "evento" ocurre en un elemento, una funcion "handler" se ejecuta.
+            <details>
+                <summary>Eventos: ...</summary>
+                <pre>
+                onclick:
+                onload:
+                onunload:
+                onchange: < input>, < keygen>, < select>, < texarea>.
+                onmouseover:
+                onmouseout:
+                onmousedown:
+                onmouseup:
+                onblur: al perder focus
+                onfocus:
+                </pre>
+            </details>
+            <hr>
 
-        <!-- alerta en boton -->
-        <h2 class="subtitulo"> Alerta en boton </h2>
-        <button onclick="show();"> Alert Button</button> <br>
-        <code>
-            < button onclick="show();"> Alert Button </ button> <br><br>
-            function show() { <br>
-                alert("Esto es una Alerta!"); <br>
-            } <br>
-        </code>
-        <script>
-            function show() {
-                alert("Esto es una Alerta!");
-            }
-        </script>
-        <hr>
+            <!-- Alerta en boton -->
+            <h2 class="subtitulo"> Alerta en botón </h2>
+            <button onclick="show();"> Alert Button</button>
+            <div class="codigo"><pre>
+                < button onclick="show();"> Alert Button </ button>
+                function show() { 
+                    alert("Esto es una Alerta!");
+                }
+            </pre></div>
+            <script>
+                function show() {
+                    alert("Esto es una Alerta!");
+                }
+            </script>
+            <hr>
 
-        <!-- hora en boton -->
-        <h2 class="subtitulo"> Hora en boton </h2>
-        <button id="demo7"> Hour Button</button> <br>
-        <code>
-            < button id="demo7"> Hour Button </ button> <br><br>
-            var x = document.getElementById('demo7'); <br>
-            x.onclick = function () { <br>
-            alert(Date()); <br>
-            } <br>
-        </code>
-        <script>
-            var x = document.getElementById('demo7');
-            x.onclick = function () {
-            alert(Date());
-            }
-        </script>
-        <hr>
+            <!-- hora en boton -->
+            <h2 class="subtitulo"> Hora en botón (alerta) </h2>
+            <button id="demo7"> Hour Button</button> <br>
+            <div class="codigo"><pre>
+                < button id="demo7"> Hour Button </ button>
+                var x = document.getElementById('demo7');
+                x.onclick = function () {
+                    alert(Date());
+                }
+            </pre></div>
+            <script>
+                var x = document.getElementById('demo7');
+                x.onclick = function () {
+                alert(Date());
+                }
+            </script>
+            <hr>
 
-        <!-- OnLoad desde aqui -->
-        <h2 class="subtitulo"> OnLoad desde html </h2>
-        <body onload="doSomething()"></body> 
-        <code>
-            < body onload="doSomething()"> </ body> <br><br>
-            function doSomething(){ <br>
-            } <br>
-        </code>
-        <hr>
+            <!-- OnLoad desde html -->
+            <h2 class="subtitulo"> OnLoad desde html </h2>
+            <body onload="doSomething()"></body> 
+            <div class="codigo"><pre>
+                < body onload="doSomething()"> </ body>
+                function doSomething(){
+                }
+            </pre></div>
+            <hr>
 
-        <!-- OnLoad desde js -->
-        <h2 class="subtitulo"> OnLoad desde js </h2>
-        <code>
-            window.onload = function(){ <br>
-                // Codigo que aplicará luego de q la pag se cargue por completo. <br>
-            } <br>
-        </code>
-        <hr>
+            <!-- OnLoad desde js -->
+            <h2 class="subtitulo"> OnLoad desde js </h2>
+            <div class="codigo"><pre>
+                window.onload = function(){
+                    // Codigo que aplicará luego de q la pag se cargue por completo.
+                }
+            </pre></div>
+            <hr>
 
-        <!-- OnChange -->
-        <h2 class="subtitulo"> OnChange </h2>
-        <u>Convertir texto en Mayustulas.</u> <br>
-        <input type="text" id="name001" onchange="change()"> <br><br>
-        <code>
-            function change() { <br>
-                var x001 = document.getElementById('name001'); <br>
-                x001.value = x001.value.toUpperCase(); <br>
-            } <br>
-        </code>
-        <script>
-            function change() {
-                var x001 = document.getElementById('name001');
-                x001.value = x001.value.toUpperCase();
-            }
-        </script>
-        <hr>
+            <!-- OnChange -->
+            <h2 class="subtitulo"> OnChange </h2>
+            <u>Convertir texto en Mayustulas.</u> <br>
+            <input type="text" id="name001" onchange="change()" placeholder="Escribe y apreta Enter">
+            <div class="codigo"><pre>
+                function change() {
+                    var x001 = document.getElementById('name001');
+                    x001.value = x001.value.toUpperCase();
+                }
+            </pre></div>
+            <script>
+                function change() {
+                    var x001 = document.getElementById('name001');
+                    x001.value = x001.value.toUpperCase();
+                }
+            </script>
+            <hr>
 
+            <!-- crear un evento manipulador -->
+            <h2 class="subtitulo"> Crear un Evento Manipulador </h2>
+            <button id="demo8"> Evento de un solo uso </button> <br><br>
+            <div class="codigo"><pre>
+                < button id="demo8"> Evento de un solo uso </ button>
 
+                var btn = document.getElementById("demo8");
+                btn.addEventListener("click", myFunction01);
 
+                function myFunction01() {
+                    alert(Math.random());
+                    btn.removeEventListener("click", myFunction01);
+                }
+            </pre></div>
+            <script>
+                var btn = document.getElementById("demo8");
+                btn.addEventListener("click", myFunction01);
 
-        <!-- crear un evento manipulador -->
-        <h2 class="subtitulo"> Crear un Evento Manipulador </h2>
-        <button id="demo8"> Evento de un solo uso </button> <br><br>
-        
+                function myFunction01() {
+                    alert(Math.random());
+                    btn.removeEventListener("click", myFunction01);
+                }
+            </script>
+            <details>
+                <summary>Evento manipulador...</summary>
+                <pre>
+                // Syntax
+                    // element.addEventListener(evento, funcion, useCapture(opcional));
+                
+                    // El primer parámetro es el tipo de evento (como "clic" o "mousedown").
+                    // El segundo parámetro es la función a la que queremos llamar cuando se produce el evento.
+                    // El tercer parámetro es un valor booleano que especifica si se va a utilizar el burbujeo de eventos o la captura de eventos. Este parámetro es opcional y se describirá en la siguiente lección.
+                // 
 
-        <code>
-            < button id="demo8"> Evento de un solo uso </ button> <br><br>
+                // Ejemplo
+                    // element.addEventListener("click0", myFunction0);
+                    // element.addEventListener("mouseover0", myFunction0);
 
-            var btn = document.getElementById("demo8"); <br>
-            btn.addEventListener("click", myFunction01); <br> <br>
+                    // function myFunction0() {
+                    //   alert("Hello World!");
+                    // }
 
-            function myFunction01() { <br>
-                alert(Math.random()); <br>
-                btn.removeEventListener("click", myFunction01); <br>
-            } <br>
-        </code>
-        <script>
-            var btn = document.getElementById("demo8");
-            btn.addEventListener("click", myFunction01);
+                    // remover un evento
+                    // element.removeEventListener("mouseover0", myFunction0);
+                // 
+                </pre>
+            </details>
+            <hr>
 
-            function myFunction01() {
-                alert(Math.random());
-                btn.removeEventListener("click", myFunction01);
-            }
-        </script>
-        <details>
-            <summary>Evento manipulador...</summary>
+            <!-- Propagacion de eventos - bubbling & capturing -->
+            <h2 class="subtitulo"> Propagacion de eventos - bubbling & capturing</h2>
             <pre>
-            // Syntax
-                // element.addEventListener(evento, funcion, useCapture(opcional));
-            
-                // El primer parámetro es el tipo de evento (como "clic" o "mousedown").
-                // El segundo parámetro es la función a la que queremos llamar cuando se produce el evento.
-                // El tercer parámetro es un valor booleano que especifica si se va a utilizar el burbujeo de eventos o la captura de eventos. Este parámetro es opcional y se describirá en la siguiente lección.
-            // 
+                Hay dos formas de propagación de eventos en HTML DOM: burbujeo y captura.
 
-            // Ejemplo
-                // element.addEventListener("click0", myFunction0);
-                // element.addEventListener("mouseover0", myFunction0);
+                La propagación de eventos da orden en la que se ejecutan las funciones,
+                (ej. Si tiene un elemento < p> dentro de un elemento < div> y el usuario hace clic en el elemento < p>,
+                ¿qué evento de "clic" de elemento debe manejarse primero?)
 
-                // function myFunction0() {
-                //   alert("Hello World!");
-                // }
-
-                // remover un evento
-                // element.removeEventListener("mouseover0", myFunction0);
-            // 
+                <u>Bubbling</u>: primero < p> y luego < div>. (de adentro hacia afuera).
+                <u>Capturing</u>: primero < div> y luego < p>. (de afuera hacia adentro).
+                
+                Esta funcion permite especificar el tipo de propagación, con el parametro "useCapture".
+                <code>addEventListener(event, function, useCapture)</code>
+                
+                
+                <u>BUBBLING</u>: Desde adentro hacia afuera. (Por defecto = FALSE).
+                    <code>elem1.addEventListener("click02", myFunction02, false);</code>
+                
+                <u>CAPTURING</u>: Desde afuera hacia adentro. (TRUE).
+                    <code>elem2.addEventListener("click02", myFunction02, true);</code>
             </pre>
-        </details>
-        <hr>
+            <hr>
 
-        <h2 class="subtitulo"> Propagacion de eventos - bubbling & capturing</h2>
-        <pre>
-            // En q orden se ejecutan las funciones,
-            // si hacemos click en un elemento,
-            // q está dentro de otro elemento.
+            <!-- Image Slider -->
+            <h2 class="subtitulo"> Image Slider </h2>
+            <div>
+                <button onclick="prev()"> Prev </button>
+                <img id="slider" src="https://www.sololearn.com/uploads/slider/1.jpg" width="200px" height="100px"/>
+                <button onclick="next()"> Next </button>
+            </div> <br>
 
-            
-            // BUBBLING = desde adentro hacia afuera. (Por defecto = FALSE). - Baja por DOM.
-                // elem1.addEventListener("click02", myFunction02, true); 
+            <div class="codigo"><pre>
+                < button onclick="prev()"> Prev </ button>
+                < img id="slider" src="https://www.sololearn.com/uploads/slider/1.jpg" width="200px" height="100px"/>
+                < button onclick="next()"> Next </ button>
+                
+                < _script_ >
+                var images = [
+                    'http://www.sololearn.com/uploads/slider/1.jpg', 
+                    'http://www.sololearn.com/uploads/slider/2.jpg', 
+                    'http://www.sololearn.com/uploads/slider/3.jpg'
+                ];
 
-            // CAPTURING = desde afuera hacia adentro. (TRUE). - Sube por DOM
-                // elem2.addEventListener("click02", myFunction02, false);
+                var num = 0;
 
-            // function myFunction02(){      }
-        </pre>
-        <hr>
+                function next() {
+                    var slider = document.getElementById('slider');
+                    num++;
+                    if(num >= images.length) {
+                        num = 0;
+                    }
+                    slider.src = images[num];
+                }
 
-
-        <!-- Image slider -->
-        <h2 class="subtitulo"> Image slider </h2>
-        <div>
-            <button onclick="prev()"> Prev </button>
-            <img id="slider" src="https://www.sololearn.com/uploads/slider/1.jpg" width="200px" height="100px"/>
-            <button onclick="next()"> Next </button>
-        </div> <br>
-
-        <code><pre>
-            var images = [
+                function prev() {
+                    var slider = document.getElementById('slider');
+                    num--;
+                    if(num < 0) {
+                        num = images.length-1;
+                    }
+                    slider.src = images[num];
+                }
+                < _/script_ >
+            </pre></div>
+            <script>
+                var images = [
                 'http://www.sololearn.com/uploads/slider/1.jpg', 
                 'http://www.sololearn.com/uploads/slider/2.jpg', 
                 'http://www.sololearn.com/uploads/slider/3.jpg'
-            ];
-
-            var num = 0;
-
-            function next() {
+                ];
+                var num = 0;
+                function next() {
                 var slider = document.getElementById('slider');
                 num++;
                 if(num >= images.length) {
                     num = 0;
                 }
                 slider.src = images[num];
-            }
-
-            function prev() {
+                }
+                function prev() {
                 var slider = document.getElementById('slider');
                 num--;
                 if(num < 0) {
                     num = images.length-1;
                 }
                 slider.src = images[num];
-            }
-        </pre></code>
-        <script>
-            var images = [
-            'http://www.sololearn.com/uploads/slider/1.jpg', 
-            'http://www.sololearn.com/uploads/slider/2.jpg', 
-            'http://www.sololearn.com/uploads/slider/3.jpg'
-            ];
-            var num = 0;
-            function next() {
-            var slider = document.getElementById('slider');
-            num++;
-            if(num >= images.length) {
-                num = 0;
-            }
-            slider.src = images[num];
-            }
-            function prev() {
-            var slider = document.getElementById('slider');
-            num--;
-            if(num < 0) {
-                num = images.length-1;
-            }
-            slider.src = images[num];
-            }
-        </script>
-        <hr>
-
-
-
-
-        <!-- validacion de formularios -->
-        <h2 class="subtitulo"> Validacion de formularios </h2>
-        <code><pre>
-        < form onsubmit="return validate()" method="post">
-            Number: < input type="text" name="num1" id="num1" />
-            Repeat: < input type="text" name="num2" id="num2" />
-            < input type="submit" value="Submit" />
-        < /form> 
-        </pre></code>
-        <code><pre>
-        function validate() {
-            var n1 = document.getElementById('num1');
-            var n2 = document.getElementById('num2');
-            if(n1.value != '' && n2.value != '') {
-                if(n1.value == n2.value) {
-                return true;
                 }
-            }
-            alert("The values should be equal and not blank");
-            return false;
-        }
-        </pre></code>
+            </script>
+            <hr>
 
-    </div> <!-- Borders -->
+            <!-- validacion de formularios -->
+            <h2 class="subtitulo"> Validacion de formularios </h2>
+            <div class="codigo"><pre>
+                < form onsubmit="return validate()" method="post">
+                    Number: < input type="text" name="num1" id="num1" />
+                    Repeat: < input type="text" name="num2" id="num2" />
+                    < input type="submit" value="Submit" />
+                < /form>
+                
+                < _script_ >
+                function validate() {
+                    var n1 = document.getElementById('num1');
+                    var n2 = document.getElementById('num2');
+                    if(n1.value != '' && n2.value != '') {
+                        if(n1.value == n2.value) {
+                        return true;
+                        }
+                    }
+                    alert("The values should be equal and not blank");
+                    return false;
+                }
+                < _/script_ >
+            </pre></div>
+        </div>
+    </div> <br>
     
     <!--ECMAScript  -->
     <div class="borders">
@@ -4883,7 +4892,7 @@
 
         </pre></code>
 
-    </div> <!-- Borders -->
+    </div>
 
 </details>
 
