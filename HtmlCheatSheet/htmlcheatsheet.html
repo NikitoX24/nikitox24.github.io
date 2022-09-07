@@ -3323,48 +3323,55 @@
         <h1 class="titulo">Fundamentos</h1>
 
         <!-- Script -->
-        <h3 class="subtitulo">Colocar un Script en Html: </h3>
-        <code>
-            &#60script>
-            &#60/script>
-        </code><br><hr>
+        <div class="borders">
+            <h3 class="subtitulo">Colocar un Script en Html: </h3>
+            <div class="codigo"><pre>
+                &#60script>
+                    // Codigos de JavaScript.
+                &#60/script>
+            </pre></div>
 
-        <h3 class="subtitulo">Colocar un archivo .JS externo: </h3>
-        <code>
-            &#60script type="text/javascript" src="htmlcheatsheet.js"> &#60/script>
-        </code><br><hr>
+            <h3 class="subtitulo">Colocar un archivo .JS externo: </h3>
+            <div class="codigo"><pre>
+                &#60script type="text/javascript" src="htmlcheatsheet.js"> &#60/script>
+            </pre></div>
+        </div>
 
         <!-- Salida html -->
-        <h3 class="subtitulo">Salida por Html: </h3>
-        <code>
-            document.write("&#60h1> Hello World! &#60/h1>"); <br>
-        </code><hr>
+        <div class="borders">
+            <h3 class="subtitulo">Salida por Html: </h3>
+            <div class="codigo"><pre>
+                &#60script>
+                    document.write("&#60h1> Hello World! &#60/h1>");
+                &#60/script>
+            </pre></div>
 
         <!-- Salida Consola -->
-        <h3 class="subtitulo">Salida por Consola: </h3>
-        <code>
-            console.log("Hello from Console!");
-        </code><hr>
+            <h3 class="subtitulo">Salida por Consola: </h3>
+            <div class="codigo"><pre>
+                &#60script>
+                    console.log("Hello from Console!");
+                &#60/script>
+            </pre></div>
+        </div>
 
         <!-- Variables -->
-        <h3 class="subtitulo">Variables</h3>
-        <code>
-            <u>Crear</u>: var x = 10; <br>
-            <u>Editar</u>: x = 45; <br>
-            <u>Usar</u>: document.write(x);
-        </code>
-        <details>
-            <summary>+Info</summary>
-            <pre>
-                Nombres de Variables; Respetar Mayusc, Empezar por: "a-z" , "_" , "$".
-                
-                Tipos de Variables
-                var int = 5;
-                var price = 5.5;
-                var string = "texto con espacio";
-                var boolean = true;
-            </pre>
-        </details>
+        <div class="borders">
+            <h3 class="subtitulo">Variables</h3>
+            Nombres de Variables; Respetar Mayusc, Empezar por: "a-z" , "_" , "$".
+            <div class="codigo"><pre>
+                <u>Crear</u>: var x = 10;
+                <u>Editar</u>: x = 45;
+                <u>Usar</u>: document.write(x);
+            </pre></div>
+            Tipos de Variables:
+            <div class="codigo"><pre>
+                <b>var</b> int = 5;
+                <b>var</b> price = 5.5;
+                <b>var</b> string = "texto con espacio";
+                <b>var</b> boolean = true;
+            </pre></div>
+        </div>
     </div> <br>
     
     <!-- Condicionales y Bucles -->
@@ -4336,8 +4343,8 @@
             <!-- Literales de plantilla en ES6 -->
             <h2 class="subtitulo"> Literales de plantilla</h2>
             <div class="codigo"><pre>
-                let nameLet2 = 'David';
-                let msgLet2 = `Welcome ${nameLet2}!`;
+                let <b>nombre</b> = 'David';
+                let mensaje = `Welcome <u>${<b>nombre</b>}</u>!`;
             </pre></div>
         </div>
         
@@ -4903,7 +4910,7 @@
             </pre></div>
 
             <u><b>Módulos:</b></u> <br>
-            
+
             <u><b>Métodos integrados:</b></u>
 
         </div>
