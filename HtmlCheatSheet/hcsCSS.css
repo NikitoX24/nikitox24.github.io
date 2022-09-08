@@ -1,0 +1,114 @@
+body{
+    background-image: url("../Imgs/TileW.jpg");
+    font-family: 'Brush Script MT';
+    text-shadow: 3px 3px 7px grey;
+    font-size: small;
+}
+span{
+    color: orangered;
+}
+summary{
+    color: rgb(0, 77, 155);
+    font-size: 17px;
+}
+summary.hcj{
+    color: lightslategray;
+    font-size: 30px;
+}
+code{
+    background-color: rgba(128, 128, 128, 0.289);
+    text-decoration: none;
+}
+.titulo{
+    text-align: center;
+    text-decoration: underline;
+    text-shadow: 5px 2px 4px grey;
+}
+.subtitulo{
+    text-decoration: underline;
+}
+.div{ 
+    min-height: 50px; 
+}
+.ejoverflow{
+    height: 110px;
+    overflow: auto;
+}
+.ejemplo{
+    max-width: 400px;
+    padding: 5px;
+    border: 1px black solid;
+    background-color: white;
+    box-shadow: inset 4px 4px 4px rgba(128, 128, 128, 0.558), inset -4px -4px 4px rgba(128, 128, 128, 0.706) ;
+}
+.codigo{
+    max-width: 500px;
+    margin: 2px;
+    padding-top: 5px;
+    background-color: rgba(128, 128, 128, 0.512);
+    box-shadow: inset 4px 4px 4px rgba(128, 128, 128, 0.558), inset -4px -4px 4px rgba(128, 128, 128, 0.706) ;
+}
+
+pre{
+    margin-left: -80px;
+}
+
+
+/* CSS */
+.borders{
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-bottom: 12px;
+    margin: 6px;
+    border: 1px solid grey;
+    background-color: rgba(128, 128, 128, 0.227);
+} 
+.titles{
+    text-shadow: 5px 2px 4px grey;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+p.numbers{
+    font-size: 20px;
+    font-weight: 1000;
+    text-decoration: underline;
+}
+/* CSS */
+
+/* Box */
+.round{
+    width: 60%;
+    padding: 10px;
+    border: 1px solid grey;
+    background-color: rgba(128, 128, 128, 0.227);
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px 5px rgba(220, 220, 220, 0.522);
+    margin: 20px;
+    overflow: auto;
+}
+.box{
+    color: black;
+    min-width: 27%;
+    height: 20px;
+    padding: 5px;
+    border: 1px solid grey;
+    margin: 5px;
+    background-color: rgba(255, 255, 255, 0.53);
+    box-shadow: 5px 5px 4px 1px rgba(155, 155, 155, 0.322);
+    overflow: hidden;
+}
+.boxizq{
+    float: left;
+    border-radius: 10px;
+}
+.boxder{
+    float: right; 
+    border-radius: 3px;
+}
+/* Box */
+
+/* <hr> */
+hr.dashed {
+    border-top: 3px dashed grey; /* dashed(-), dotted(.)  */
+}
