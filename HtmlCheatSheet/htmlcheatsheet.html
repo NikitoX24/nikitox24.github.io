@@ -11,8 +11,8 @@
     <h1 class="titulo">HTML CheatSheet</h1>
 
     <a href="htmlcheatsheet.html"><img src="../Imgs/html.png" alt="html" class="icons"></a>
-    <a href="CssCheatSheet.html"><img src="../Imgs/css.png" alt="css" class="icons"></a>
-    <a href="JSCheatSheet.html"><img src="../Imgs/js.png" alt="js" class="icons"></a>
+    <a href="CssCheatSheet.html"><img src="../Imgs/css.png" alt="css" class="icons filtrogris"></a>
+    <a href="JSCheatSheet.html"><img src="../Imgs/js.png" alt="js" class="icons filtrogris"></a>
 
     <!-- HTML -->
     <div class="borders">
@@ -60,16 +60,20 @@
         </div>
 
         <div class="borders">  <!-- Imagen -->
-
-            <h2 class="subtitulo"> Imagen </h2> 
-            <u> Imagen con texto alternativo: </u> <br><br>
-            <img src="../Imagen.png" alt="Texto por si no carga imagen"> <br>
+            <h2 class="subtitulo"> Imagen </h2>
+            
+            <!-- Imagen con texto alternativo: -->
+            <h3 class="subtitulo">Imagen con texto alternativo:</h3>
+            <div class="ejemplo">
+                <img src="../Imagen.png" alt="Texto por si no carga imagen"> <br>
+            </div>
             <!-- Código -->
-            <code>
-                <span>&lt;img</span> <font color="purple">src=</font> "<font color="green">../Imagenes/Imagen.png</font>" <font color="purple">alt=</font>"Texto por si no carga imagen"<span>></span>
-            </code>
-            <!-- Código -->
-
+            <div class="codigo">
+             <pre>
+                 <span>&lt;img</span> <font color="purple">src=</font> "<font color="green">../Imagenes/Imagen.png</font>" <font color="purple">alt=</font>"Texto por si no carga imagen"<span>></span>
+             </pre>
+            </div>
+            <hr>
             <!-- Atributos de img...
                 height, width, border.
                 align=""    (posicion del texto)
@@ -79,8 +83,7 @@
                 alt=""      (texto por si la imagen no carga)
                 <font color="">
             -->
-
-            <br><br> <hr>
+            
             Imagen con link: <br>
             <a href="../Imgs/Apple.png"><img src="../Imgs/Apple.png" alt="apple" width="100px"></a> <br>
             <!-- Codigo -->
@@ -88,8 +91,9 @@
                 <font color="red">&lt;a</font> <font color="purple">href</font> ="<font color="green">../Imgs/Apple.png</font>" <span>>&lt;img</span> <font color="purple">src</font>="<font color="green">../Imgs/Apple.png</font>" <font color="purple">alt</font>="apple" <font color="purple">width</font>="100px"<span>></span></a>
             </code>
             <!-- Codigo -->
-
             <br><br> <hr>
+
+            <!-- Mapa -->
             Igamen con Mapa: <br>
             <img src="../Imgs/imgMap.png" usemap="htmlcheatsheet.html#ejemplo_mapa" height="163px">
             <map name="ejemplo_mapa">
@@ -208,19 +212,21 @@
 
             <details>
                 <summary>Mostrar Código</summary>
-                &lt;table border="2"> <br>
-                    &lt;tr> <br>
-                    &lt;caption> Colores &lt;/caption> <br>
-                        &nbsp;    &lt;td bgcolor="red">Rojo</td> <br>
-                        &nbsp;    &lt;td>Azul</td> <br>
-                        &nbsp;    &lt;td>Verde</td> <br>
-                        &nbsp;    &lt;td rowspan="2">Violeta</td> <br>
-                        &lt;/tr> <br>
-                    &lt;tr> <br>
-                        &nbsp;    &lt;td>Amarillo</td> <br>
-                        &nbsp;    &lt;td colspan="2">Naranja</td> <br>
-                    &lt;/tr> <br>
-                &lt;/table> <br>
+                <div class="codigo"><pre>
+                    &lt;table border="2">
+                    &lt;caption> Colores &lt;/caption>
+                        &lt;tr>
+                            &lt;td bgcolor="red">Rojo &lt;/td>
+                            &lt;td>Azul &lt;/td>
+                            &lt;td>Verde &lt;/td>
+                            &lt;td rowspan="2">Violeta &lt;/td>
+                        &lt;/tr>
+                        &lt;tr> 
+                            &lt;td>Amarillo &lt;/td>
+                            &lt;td colspan="2">Naranja &lt;/td>
+                        &lt;/tr>
+                    &lt;/table>
+                </pre></div>
             </details>
 
 
@@ -323,7 +329,7 @@
         </div>
 
         -->
-        
+
         <div class="borders"> <!-- Input Types -->
             <h2 class="titulo"> Input Types in <span> HTML </span> </h2>
             
@@ -412,7 +418,6 @@
                 </div>
             </div>
 
-
             <div class="div">
                 <div class="box boxizq">
                     < input type="<span>image</span>" >
@@ -421,7 +426,6 @@
                     <input type="image" src="../Imgs/login-button.png" alt="Login" width="50px">
                 </div>
             </div>
-
 
             <div class="div">
                 <div class="box boxizq">
@@ -432,8 +436,6 @@
                 </div>
             </div>
 
-            
-
             <div class="div">
                 <div class="box boxizq">
                     < input type="<span>range</span>" >
@@ -442,7 +444,6 @@
                     <input type="range" name="" id="">
                 </div>
             </div>
-
 
             <div class="div">
                 <div class="box boxizq">
@@ -453,7 +454,6 @@
                 </div>
             </div>
 
-            
             <div class="div">
                 <div class="box boxizq">
                     < input type="<span>tel</span>" >
@@ -462,7 +462,6 @@
                     <input type="tel" name="" id="" placeholder="123-456-789">
                 </div>
             </div>
-
             
             <div class="div">
                 <div class="box boxizq">
@@ -473,7 +472,6 @@
                 </div>
             </div>
 
-
             <div class="div">
                 <div class="box boxizq">
                     < input type="<span>date</span>" >
@@ -483,7 +481,6 @@
                 </div>
             </div>
             
-
             <div class="div">
                 <div class="box boxizq">
                     < input type="<span>datetime-local</span>" >
@@ -492,7 +489,6 @@
                     <input type="datetime-local" name="" id="">
                 </div>
             </div>
-
 
             <div class="div">
                 <div class="box boxizq">
@@ -503,7 +499,6 @@
                 </div>
             </div>
 
-
             <div class="div">
                 <div class="box boxizq">
                     < input type="<span>month</span>" >
@@ -512,7 +507,6 @@
                     <input type="month" name="" id="">
                 </div>
             </div>
-
 
             <div class="div">
                 <div class="box boxizq">
@@ -523,7 +517,6 @@
                 </div>
             </div>
 
-
             <div class="div">
                 <div class="box boxizq">
                     < input type="<span>submit</span>" >
@@ -533,7 +526,6 @@
                 </div>
             </div>
 
-
             <div class="div">
                 <div class="box boxizq">
                     < input type="<span>reset</span>" >
@@ -542,13 +534,10 @@
                     <input type="reset" name="" id="">
                 </div>
             </div>
-
-
         </div> <br>
         
 
     <!-- HTML5 -->
-
         <div class="borders"> <!-- Estructura de Pag -->
             <h2 class="subtitulo"> Estructura de Pag </h2>
             <img src="https://api.sololearn.com/DownloadFile?id=2471" alt="" height="250px">

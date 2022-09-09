@@ -3,13 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <title>Título de la página</title>
+    <link rel="stylesheet" href="../HtmlCheatSheet/hcsCSS.css">
 </head>
 <body>
   
 
     
+<div class="borders">  <!-- Listas -->
+    <h2 class="subtitulo"> Tipos de Listas: </h2>
+
+    <style>
+        table{
+            display: flex;
+            justify-content: space-around;
+        }
+        td{
+            padding: 5px;
+        }
+        .xd{
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
     
+
+    <table>
+        <!-- desordenada -->
+        <td>
+            <h3 class="subtitles">Desordenadas &lt;ul&gt;</h3>
+            <ul>
+                <li type="disc">Disc</li>
+                <li type="circle">Circle</li>
+                <li type="square">Square</li>
+            </ul>
+            <div class="codigo">
+                &lt;ul> <br>
+                &nbsp;    &lt;li type="disc"> Disc &lt;/li> <br>
+                &nbsp;    &lt;li type="circle"> Circle &lt;/li> <br>
+                &nbsp;    &lt;li type="square"> Square &lt;/li> <br>
+                &lt;/ul> 
+            </div>
+        </td>
     
+
+        <!-- Ordenada -->
+        <td>
+            <h3 class="subtitles">Ordenada &lt;ol&gt;</h3>
+            <ol>
+                <li type="1">Numeros (1).</li>
+                <li type="a">Letras (a-A).</li>
+                <li type="I">Num romanos (i-I).</li>
+            </ol>
+            <div class="codigo">
+                &lt;ol> <br>
+                &nbsp;    &lt;li type="1"> Numeros (1). &lt;/li> <br>
+                &nbsp;    &lt;li type="a"> Letras (a-A). &lt;/li> <br>
+                &nbsp;    &lt;li type="I">Num romanos (i-I). &lt;/li> <br>
+                &lt;/ol> 
+            </div>
+        </td>
+
+        <!-- Listas descriptivas -->
+        <td>
+            <h3 class="subtitles">Listas descriptivas</h3>
+            <dl>
+                <dt> &#60;dt> Texto a detallar.
+                    <dd> &#60;dd> Texto descriptivo... &#60;/dd></dd>
+                &#60;/dt>
+            </dl>
+        </td>
+    </table>
+
+
+
+</div>
+    
+
+
+<div class="xd">
+
+    <!-- desordenada -->
+    <div>
+        <h3 class="subtitles">Desordenadas &lt;ul&gt;</h3>
+        <ul>
+            <li type="disc">Disc</li>
+            <li type="circle">Circle</li>
+            <li type="square">Square</li>
+        </ul>
+        <div class="codigo">
+            &lt;ul> <br>
+            &nbsp;    &lt;li type="disc"> Disc &lt;/li> <br>
+            &nbsp;    &lt;li type="circle"> Circle &lt;/li> <br>
+            &nbsp;    &lt;li type="square"> Square &lt;/li> <br>
+            &lt;/ul> 
+        </div>
+    </div>
+
+
+    <!-- Ordenada -->
+    <div>
+        <h3 class="subtitles">Ordenada &lt;ol&gt;</h3>
+        <ol>
+            <li type="1">Numeros (1).</li>
+            <li type="a">Letras (a-A).</li>
+            <li type="I">Num romanos (i-I).</li>
+        </ol>
+        <div class="codigo">
+            &lt;ol> <br>
+            &nbsp;    &lt;li type="1"> Numeros (1). &lt;/li> <br>
+            &nbsp;    &lt;li type="a"> Letras (a-A). &lt;/li> <br>
+            &nbsp;    &lt;li type="I">Num romanos (i-I). &lt;/li> <br>
+            &lt;/ol> 
+        </div>
+    </div>
+
+    <!-- Listas descriptivas -->
+    <div>
+        <h3 class="subtitles">Listas descriptivas</h3>
+        <dl>
+            <dt> &#60;dt> Texto a detallar.
+                <dd> &#60;dd> Texto descriptivo... &#60;/dd></dd>
+            &#60;/dt>
+        </dl>
+    </div>
+</div>
     
 
 </body>
