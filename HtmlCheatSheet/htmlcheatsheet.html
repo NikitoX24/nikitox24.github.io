@@ -8,44 +8,73 @@
     <title>HTML CheatSheet</title>
 </head>
 <body>
-    <h1 class="titulo">HTML CheatSheet</h1>
+    <h1 class="titulo xd">HTML CheatSheet</h1>
 
-    <a href="htmlcheatsheet.html"><img src="../Imgs/html.png" alt="html" class="icons"></a>
-    <a href="CssCheatSheet.html"><img src="../Imgs/css.png" alt="css" class="icons filtrogris"></a>
-    <a href="JSCheatSheet.html"><img src="../Imgs/js.png" alt="js" class="icons filtrogris"></a>
+    <!-- icons -->
+    <div class="flex">
+        <a href="htmlcheatsheet.html"><img src="../Imgs/html.png" alt="html" class="icons"></a>
+        <a href="CssCheatSheet.html"><img src="../Imgs/css.png" alt="css" class="icons filtrogris"></a>
+        <a href="JSCheatSheet.html"><img src="../Imgs/js.png" alt="js" class="icons filtrogris"></a>
+    </div>
+    
+    <style>
+        .xd{
+            line-height: 6px;
+        }
+
+
+        fieldset{
+            border-radius: 12px;
+            padding: 0 10px 10px 10px;
+            /* margin: 5px; */
+            /* border: 1px solid grey; */
+            background-color: rgba(128, 128, 128, 0.227);
+        }
+        legend{
+            /* border: 1px solid; */
+            line-height: 0px;
+        }
+
+    </style>
 
     <!-- HTML -->
     <div class="borders">
     <h1 class="titulo">HTML</h1>
 
-        <div class="borders">  <!-- Encabezados -->
-            <h2 style="text-decoration: underline;"> Encabezados < h1-h6 > </h2>
-
-            <div class="ejemplo ejoverflow">    
-                <h1> Encabezado h1 </h1>
-                <h2> Encabezado h2 </h2>
-                <h3> Encabezado h3 </h3>
-                <h4> Encabezado h4 </h4>
-                <h5> Encabezado h5 </h5> 
-                <h6> Encabezado h6 </h6>
+    <!-- Encabezados -->
+    <!-- <div class="borders">   -->
+        <fieldset>
+            <legend><h2> Encabezados < h1-h6 > </h2></legend>
+            
+            <div class="flex">  <!-- class="ejemplo ejoverflow" -->
+                <h1>Encabezado h1</h1><h2>Encabezado h2</h2><h3> Encabezado h3</h3><h4>Encabezado h4</h4><h5>Encabezado h5</h5><h6>Encabezado h6</h6>
             </div>
+        </fieldset>    
+        <!-- </div> -->
 
-        </div>
+        <!-- Tipos de textos -->
+        <!-- <div class="borders">  -->
+        <fieldset>
+            <legend><h2>Tipos de textos</h2></legend>
+            <!-- <h2 class="subtitulo"> Tipos de textos </h2> -->
 
-        <div class="borders"> <!-- Tipos de textos -->
-            <h2 class="subtitulo"> Tipos de textos </h2>
+                    <pre>            <span>&lt;pre></span>texto  con      mucho        espacio <span>&lt;/pre></span></pre> <!-- preformatted -->
+                    
+                    <p style="line-height: 0;"><span>&lt;p></span>       Parrafo     <span>&lt;/p></span> </p>
+                    <b><span>&lt;b></span>       negrita     <span>&lt;/b></span></b><br>
+                    <strong><span>&lt;strong></span> reforzado <span>&lt;/strong> </span></strong> <br>
+                    <big> <span>&lt;big></span>  grande <span>&lt;/big></span></big>          <br> 
+                    <small> <span>&lt;small></span> pequeño  <span>&lt;/small></span></small> <br> 
+                    <i> <span>&lt;i></span>      cursiva     <span>&lt;/i></span></i>         <br> 
+                    <sub><span>&lt;sub></span>   subIndice   <span>&lt;/sub></span> </sub>    <br> 
+                    <sup> <span>&lt;sup></span>  superIndice <span>&lt;/sup></span> </sup>    <br> 
+                    <ins> <span>&lt;ins></span>  subrayado   <span>&lt;/ins></span> </ins>    <br>
+                    <del> <span>&lt;del></span>  borrado     <span>&lt;/del></span></del>     <br>
+                    <span>&lt;mark></span> texto <mark>remarcado</mark> <span>&lt;/mark></span>
+                    <marquee> <span>&lt;marquee></span>texto tipo marquee que se desplaza de un lado al otro<span>&lt;/marquee></span></marquee>
+                
+        </fieldset>
 
-            <p><span>&lt;p></span>       Parrafo     <span>&lt;/p></span> </p>
-            <pre>            <span>&lt;pre></span>texto  con      mucho        espacio <span>&lt;/pre></span></pre> <!-- preformatted -->
-            <b><span>&lt;b></span>       negrita     <span>&lt;/b></span></b><br>
-            <strong><span>&lt;strong></span> reforzado <span>&lt;/strong> </span></strong> <br>
-            <big> <span>&lt;big></span>  grande <span>&lt;/big></span></big> <br> 
-            <small> <span>&lt;small></span> pequeño  <span>&lt;/small></span></small> <br> 
-            <i> <span>&lt;i></span>      cursiva     <span>&lt;/i></span></i> <br> 
-            <sub><span>&lt;sub></span>   subIndice   <span>&lt;/sub></span> </sub>    <br> 
-            <sup> <span>&lt;sup></span>  superIndice <span>&lt;/sup></span> </sup>    <br> 
-            <ins> <span>&lt;ins></span>  subrayado   <span>&lt;/ins></span> </ins>    <br>
-            <del> <span>&lt;del></span>  borrado     <span>&lt;/del></span></del>
         </div>
 
         <div class="borders"> <!-- Atributos -->
@@ -63,7 +92,7 @@
             <h2 class="subtitulo"> Imagen </h2>
             
             <!-- Imagen con texto alternativo: -->
-            <h3 class="subtitulo">Imagen con texto alternativo:</h3>
+            <h3>Imagen con texto alternativo:</h3>
             <div class="ejemplo">
                 <img src="../Imagen.png" alt="Texto por si no carga imagen"> <br>
             </div>
@@ -107,91 +136,67 @@
                 href=""     (URL al apuntar)
                 nohref=""   (indica q este area no tiene enlace)
             -->
-            <br>
-            <!-- codigo -->
-            <code>
-                < img src="../imgs/imgMap.png" usemap="htmlcheatsheet.html#ejemplo_mapa" height="163px"> <br>
-                < map name="ejemplo_mapa"> <br>
-                    < area shape="rect" coords="18,16,171,73" href="../Imgs/Apple.png" alt="rectangulo"> <br>
-                    < area shape="circle" coords="263,55,36" href="../Imgs/css_logo.png" alt="circulo"> <br>
-                    < area shape="poly" coords="163,91,213,141,127,141" href="../Imgs/Orange.png" alt="poligono"> <br>
-                < /map> <br>
-            </code> 
-            <!-- codigo -->
+            <div class="codigo"><pre>
+                < img src="../imgs/imgMap.png" usemap="htmlcheatsheet.html#ejemplo_mapa" height="163px">
+                < map name="ejemplo_mapa">
+                    < area shape="rect" coords="18,16,171,73" href="../Imgs/Apple.png" alt="rectangulo">
+                    < area shape="circle" coords="263,55,36" href="../Imgs/css_logo.png" alt="circulo">
+                    < area shape="poly" coords="163,91,213,141,127,141" href="../Imgs/Orange.png" alt="poligono">
+                < /map>
+            </pre></div>
         </div>
 
-        <div class="borders">  <!-- Listas -->
-            <h2 class="subtitulo"> Tipos de Listas: </h2>
-
-                <!-- Lista desordenada -->
-            <h3 class="subtitles">Desordenadas &lt;ul&gt;</h3>
-            <ul>
-                <li type="disc">Disc</li>
-                <li type="circle">Circle</li>
-                <li type="square">Square</li>
-            </ul> 
-
-            <details> <!-- Código -->
-                <summary>Mostrar Código</summary>
+        <div class="borders"> <!-- Listas -->
+            <h2 class="subtitulo">Listas</h2>
+            <div class="flex borders">
+                <!-- desordenada -->
+                <div>
+                    <h3 class="subtitles">Desordenadas &lt;ul&gt;</h3>
+                    <ul>
+                        <li type="disc">Disc</li>
+                        <li type="circle">Circle</li>
+                        <li type="square">Square</li>    
+                    </ul>
+                    <div class="codigo">
+                        &lt;ul> <br>
+                        &nbsp;    &lt;li type="disc"> Disc &lt;/li> <br>
+                        &nbsp;    &lt;li type="circle"> Circle &lt;/li> <br>
+                        &nbsp;    &lt;li type="square"> Square &lt;/li> <br>
+                        &lt;/ul> 
+                    </div>
+                </div>
                 
-            <!-- Código -->
-                &lt;ul> <br>
-                &nbsp;    &lt;li type="disc"> Disc &lt;/li> <br>
-                &nbsp;    &lt;li type="circle"> Circle &lt;/li> <br>
-                &nbsp;    &lt;li type="square"> Square &lt;/li> <br>
-                &lt;/ul> 
-            <!-- Código -->
-            </details>
+                <hr>
 
-            <hr width="300px" align="left"/>
-
-            <!-- Lista ordenada -->
-            <h3 class="subtitles">Ordenada &lt;ol&gt;</h3>
-            <ol>
-                <li type="1">Numeros (1).</li>
-                <li type="a">Letras (a-A).</li>
-                <li type="I">Num romanos (i-I).</li>
-            </ol>
-
-            <details> <!-- Código -->
-                <summary>Mostrar Código</summary>
+                <!-- Ordenada -->
+                <div>
+                    <h3 class="subtitles">Ordenada &lt;ol&gt;</h3>
+                    <ol>
+                        <li type="1">Numeros (1).</li>
+                        <li type="a">Letras (a-A).</li>
+                        <li type="I">Num romanos (i-I).</li>
+                    </ol>
+                    <div class="codigo">
+                        &lt;ol> <br>
+                        &nbsp;    &lt;li type="1"> Numeros (1). &lt;/li> <br>
+                        &nbsp;    &lt;li type="a"> Letras (a-A). &lt;/li> <br>
+                        &nbsp;    &lt;li type="I">Num romanos (i-I). &lt;/li> <br>
+                        &lt;/ol> 
+                    </div>
+                </div>
                 
-            <!-- Código -->
-                &lt;ol> <br>
-                &nbsp;    &lt;li type="1"> Numeros (1). &lt;/li> <br>
-                &nbsp;    &lt;li type="a"> Letras (a-A). &lt;/li> <br>
-                &nbsp;    &lt;li type="I">Num romanos (i-I). &lt;/li> <br>
-                &lt;/ol> 
-            <!-- Código -->
-            </details>
+                <hr>
 
-            <hr width="300px" align="left"/>
-
-            <h3 class="subtitles">Listas descriptivas</h3>
-
-            <dl>
-                <dt> &#60;dt> Texto a detallar.
-                    <dd> &#60;dd> Texto descriptivo... &#60;/dd></dd>
-                &#60;/dt>
-            </dl>
-
-            <!-- 
-                <DL>
-                <DT><B>CAR&Oacute;N</B> o <B>CARONTE,</B>
-                <DD>personaje de la mitolog&iacute;a griega, etrusca y romana que ayudaba a los
-                muertos a cruzar los r&iacute;os infernales a cambio de un &oacute;bolo. De
-                ah&iacute; la costumbre, extendida entre griegos y romanos, de colocar una moneda
-                en la boca de los difuntos.
-                <DT><B>CARONA,</B>
-                <DD>n.f. Manta, tela o almohadilla que se pone entre la silla o albarda y el
-                sudadero para que no se lastimen las caballer&iacute;as.
-                <DT><B>CARON&Iacute;,</B>
-                <DD>r. de Venezuela (Bol&iacute;var), el mayor afluente del Orinoco; 925 km.
-                Destaca por las diferencias de amplitud y por los saltos (Saltos del Caron&iacute;,
-                de 2.750 m de long.). Su gran potencia hidr&aacute;ulica es aprovechada en parte
-                por las centrales de Macagua y Guri.
-                </DL>
-            -->
+                <!-- Listas descriptivas -->
+                <div>
+                    <h3 class="subtitles">Listas descriptivas</h3>
+                    <dl> &#60;dl>
+                            <dt> &#60;dt> Texto a detallar.
+                                <dd> &#60;dd> Texto descriptivo... &#60;/dd></dd>
+                            &#60;/dt>
+                    </dl> &#60;/dl>
+                </div>
+            </div>
         </div>
 
         <div class="borders">  <!-- Tabla -->
@@ -535,15 +540,17 @@
                 </div>
             </div>
         </div> <br>
-        
-
+    </div>
+    
     <!-- HTML5 -->
+    <div class="borders">
+        <h1 class="titulo">HTML5</h1>
         <div class="borders"> <!-- Estructura de Pag -->
             <h2 class="subtitulo"> Estructura de Pag </h2>
             <img src="https://api.sololearn.com/DownloadFile?id=2471" alt="" height="250px">
         </div>
 
-        <div class="borders"> <!-- Audio & Video -->
+        <div class="borders flex"> <!-- Audio & Video -->
             <section id="Audio">
                 <h3 class="subtitles"> Audio </h3>
                 
@@ -641,15 +648,17 @@
                     }
                 </script>
 
-                <div id="box" ondrop="drop(event)"
-                ondragover="allowDrop(event)"
-                style="border:1px solid black; 
-                width:150px; height:150px; text-align: center; 
-                color: grey; background-color: #b9bebe;" >
+                <div class="flex">
+                    <div id="box" ondrop="drop(event)"
+                    ondragover="allowDrop(event)"
+                    style="border:1px solid black; 
+                    width:150px; height:150px; text-align: center; 
+                    color: grey; background-color: #b9bebe;" >
+                    </div>
+                
+                    <img id="image" src="../Imgs/cat1.png" draggable="true"
+                    ondragstart="drag(event)" width="150" height="150" alt="" />
                 </div>
-            
-                <img id="image" src="../Imgs/cat1.png" draggable="true"
-                ondragstart="drag(event)" width="150" height="150" alt="" />
             </section>
         </div>
 

@@ -29,9 +29,11 @@ code{
     text-transform: uppercase;
     text-decoration: underline;
     text-shadow: 5px 2px 4px grey;
+    line-height: 6px;
 }
 .subtitulo{
     text-decoration: underline;
+    line-height: 6px;
 }
 
 .ejoverflow{
@@ -52,8 +54,14 @@ code{
     background-color: rgba(128, 128, 128, 0.512);
     box-shadow: inset 4px 4px 4px rgba(128, 128, 128, 0.558), inset -4px -4px 4px rgba(128, 128, 128, 0.706) ;
 }
+.flex{
+    display: flex;
+    justify-content: space-around;
+}
 
-
+.icons{
+    height: 85px;
+}
 .filtrogris{
     filter: grayscale(75%);
 }
@@ -65,7 +73,7 @@ code{
     border: 1px solid grey;
     background-color: rgba(128, 128, 128, 0.227);
 
-    box-shadow: inset 0 50px 0 0 rgba(128, 128, 128, 0.499) ;
+    box-shadow: inset 0 40px 0 0 rgba(128, 128, 128, 0.499) ;
 }
 
 /* CSS */

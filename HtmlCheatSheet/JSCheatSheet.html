@@ -10,10 +10,13 @@
 <body>
     <h1 class="titulo">HTML CheatSheet</h1>
 
-    <a href="htmlcheatsheet.html"><img src="../Imgs/html.png" alt="html" class="icons filtrogris"></a>
-    <a href="CssCheatSheet.html"><img src="../Imgs/css.png" alt="css" class="icons filtrogris"></a>
-    <a href="JSCheatSheet.html"><img src="../Imgs/js.png" alt="js" class="icons"></a>
-
+    <!-- icons -->
+    <div class="flex">
+        <a href="htmlcheatsheet.html"><img src="../Imgs/html.png" alt="html" class="icons filtrogris"></a>
+        <a href="CssCheatSheet.html"><img src="../Imgs/css.png" alt="css" class="icons filtrogris"></a>
+        <a href="JSCheatSheet.html"><img src="../Imgs/js.png" alt="js" class="icons"></a>
+    </div>
+    
     <!-- JavaScript -->
     <div class="borders">
     <h1 class="titulo">JavaScript</h1>
@@ -823,9 +826,8 @@
     
                 <!-- OnLoad desde html -->
                 <h2 class="subtitulo"> OnLoad desde html </h2>
-                <body onload="doSomething()"></body> 
                 <div class="codigo"><pre>
-                    < body onload="doSomething()"> </ body>
+                    < body onload="doSomething()"> < / body>
                     function doSomething(){
                     }
                 </pre></div>
