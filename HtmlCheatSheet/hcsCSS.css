@@ -5,7 +5,9 @@ body{
     font-size: small;
 }
 span{
-    color: orangered;
+    color: rgb(255, 0, 0);
+    font-size: medium;
+    text-shadow: .2px .2px black;
 }
 pre{
     margin-left: -80px;
@@ -48,12 +50,27 @@ code{
     box-shadow: inset 4px 4px 4px rgba(128, 128, 128, 0.558), inset -4px -4px 4px rgba(128, 128, 128, 0.706) ;
 }
 .codigo{
-    max-width: 500px;
+    width: 80%;
     margin: 5px 0px 5px 0px;
     padding-top: 1px;
     background-color: rgba(128, 128, 128, 0.512);
     box-shadow: inset 4px 4px 4px rgba(128, 128, 128, 0.558), inset -4px -4px 4px rgba(128, 128, 128, 0.706) ;
 }
+
+.ej{ /* Tipos de Textos */
+    width: 100%;
+    padding: 5px;
+    border: 1px black solid;
+    background-color: white;
+    box-shadow: inset 4px 4px 4px rgba(128, 128, 128, 0.558), inset -4px -4px 4px rgba(128, 128, 128, 0.706) ;
+} 
+.cod{ /* Tipos de Textos */
+    width: 100%;
+    border: 1px black solid;
+    background-color: rgba(128, 128, 128, 0.512);
+    box-shadow: inset 4px 4px 4px rgba(128, 128, 128, 0.558), inset -4px -4px 4px rgba(128, 128, 128, 0.706) ;
+}
+ 
 .flex{
     display: flex;
     justify-content: space-around;
@@ -68,8 +85,8 @@ code{
 
 .borders{
     border-radius: 12px;
-    padding: 0 10px 10px 10px;
-    margin: 5px;
+    padding: 2px 5px 5px 5px;
+    margin-top: 5px;
     border: 1px solid grey;
     background-color: rgba(128, 128, 128, 0.227);
 

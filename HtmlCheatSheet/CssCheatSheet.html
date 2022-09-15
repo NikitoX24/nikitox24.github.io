@@ -16,6 +16,13 @@
         <a href="CssCheatSheet.html"><img src="../Imgs/css.png" alt="css" class="icons"></a>
         <a href="JSCheatSheet.html"><img src="../Imgs/js.png" alt="js" class="icons filtrogris"></a>
     </div>
+
+    <style>
+        .borders{
+            background-color: rgba(0, 0, 255, .05);
+            box-shadow: inset 0 40px 0 0 rgba(0, 0, 255, 0.2) ;
+        }
+    </style>
     
     <!-- CSS -->
     <div class="borders">
@@ -91,18 +98,16 @@
                 <p> Este es otro parrafo fuera del div y sin selector. </p>
 
                 <!-- Code -->
-                <code>
-                    #idpurple2{
-                        color:purple;
-                        background-color: rgba(128, 128, 128, 0.356);
-                    }<br>
-                    #idpurple2 .first em{
-                        color:pink;
-                        background-color: rgba(100, 95, 95, 0.551);
-                    }
-                </code>
-                <!-- Code -->
-                <!-- Style -->
+                <div class="codigo"><pre>
+                #idpurple2{
+                    color:purple;
+                    background-color: rgba(128, 128, 128, 0.356);
+                }
+                #idpurple2 .first em{
+                    color:pink;
+                    background-color: rgba(100, 95, 95, 0.551);
+                }
+                </div></pre>
                 <style>
                     #idpurple2{
                         color:purple;
@@ -113,7 +118,6 @@
                         background-color: rgba(100, 95, 95, 0.551);
                     }
                 </style>
-                <!-- Style -->
             </div>
         </div>
         
@@ -745,7 +749,6 @@
         <div class="borders">
             <h2 class="titulo"> Positioning And Layout </h2>
 
-
             <!-- Display -->
             <div class="borders">
             <p class="numbers">28) Display</p>
@@ -793,7 +796,6 @@
             </pre></code>
             </div>
         
-
             <!-- Visibility -->
             <div class="borders">
             <p class="numbers">29) Visibility</p>
@@ -842,49 +844,45 @@
         
             <!-- posicionamiento -->
             <div class="borders">
-            <p class="numbers">30) Posicionamiento</p>
-            
-            <!-- estatico -->
-            <u>Estatico:</u>
-            <div class="ejemplo">
-                <p class="position_static">This paragraph has a static position.</p>
-            </div><br>
+                <p class="numbers">30) Posicionamiento</p>
+                
+                <!-- estatico -->
+                <u>Estatico:</u>
+                <div class="ejemplo">
+                    <p class="position_static">This paragraph has a <u>static</u> position.</p>
+                </div><br>
 
-            <!-- fijo -->
-            <u>Fijo: (Arriba a la derecha)</u> <br>
-            <div class="ejemplo">
-                <p class="position_fixed">30) Fixed position.</p><br>
-            </div><br>
-            
-            <!-- relativo -->
-            <u>Relativo:</u> <br>
-            <div class="ejemplo">
-                <span class="spann"> relative text </span><br>
-            </div>
+                <!-- fijo -->
+                <u>Fijo: (Arriba a la derecha)</u> <br>
+                <div class="ejemplo">
+                    <p class="position_fixed">30) Fixed position.</p><br>
+                </div><br>
+                
+                <!-- relativo -->
+                <u>Relativo:</u> <br>
+                <div class="ejemplo">
+                    <enum class="spann"> relative text </enum><br>
+                </div>
 
-            <style>
-                p.position_static {
-                    position:static;
-                    top: 30px;
-                    right: 5px;
-                    color: red;
-                }
-                /* fijo */
-                p.position_fixed {
-                    position: fixed;
-                    top: 30px;
-                    right: 15px;
-                    font-size: 30px;
-                }
-                /* relativo */
-                span.spann{
-                    background: green;
-                    color: white;
-                    position: relative;
-                    top: -10px;
-                    left: 50px;
-                }
-            </style> <br>
+                <style>
+                    p.position_static {
+                        position:static;
+                        top: 130px;
+                        right: 115px;
+                    }
+                    /* fijo */
+                    p.position_fixed {
+                        position: fixed;
+                        top: 30px;
+                        right: 15px;
+                    }
+                    /* relativo */
+                    .spann{
+                        position: relative;
+                        top: -10px;
+                        left: 50px;
+                    }
+                </style> <br>
             </div>
 
             <!-- Floating -->

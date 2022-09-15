@@ -18,6 +18,13 @@
     </div>
     
     <style>
+        .borders{
+            background-color: rgba(255, 0, 0, .05);
+            box-shadow: inset 0 40px 0 0 rgba(255, 0, 0, 0.2) ;
+        }
+    </style>
+    
+    <style>
         .xd{
             line-height: 6px;
         }
@@ -39,43 +46,136 @@
 
     <!-- HTML -->
     <div class="borders">
-    <h1 class="titulo">HTML</h1>
+        <h2 class="titulo">HTML</h2>
 
-    <!-- Encabezados -->
-    <!-- <div class="borders">   -->
+        <!-- Encabezados -->
         <fieldset>
-            <legend><h2> Encabezados < h1-h6 > </h2></legend>
-            
-            <div class="flex">  <!-- class="ejemplo ejoverflow" -->
+            <legend><h3> Encabezados < h1-h6 > </h3></legend>
+            <div class="flex">
                 <h1>Encabezado h1</h1><h2>Encabezado h2</h2><h3> Encabezado h3</h3><h4>Encabezado h4</h4><h5>Encabezado h5</h5><h6>Encabezado h6</h6>
             </div>
-        </fieldset>    
-        <!-- </div> -->
-
-        <!-- Tipos de textos -->
-        <!-- <div class="borders">  -->
-        <fieldset>
-            <legend><h2>Tipos de textos</h2></legend>
-            <!-- <h2 class="subtitulo"> Tipos de textos </h2> -->
-
-                    <pre>            <span>&lt;pre></span>texto  con      mucho        espacio <span>&lt;/pre></span></pre> <!-- preformatted -->
-                    
-                    <p style="line-height: 0;"><span>&lt;p></span>       Parrafo     <span>&lt;/p></span> </p>
-                    <b><span>&lt;b></span>       negrita     <span>&lt;/b></span></b><br>
-                    <strong><span>&lt;strong></span> reforzado <span>&lt;/strong> </span></strong> <br>
-                    <big> <span>&lt;big></span>  grande <span>&lt;/big></span></big>          <br> 
-                    <small> <span>&lt;small></span> pequeño  <span>&lt;/small></span></small> <br> 
-                    <i> <span>&lt;i></span>      cursiva     <span>&lt;/i></span></i>         <br> 
-                    <sub><span>&lt;sub></span>   subIndice   <span>&lt;/sub></span> </sub>    <br> 
-                    <sup> <span>&lt;sup></span>  superIndice <span>&lt;/sup></span> </sup>    <br> 
-                    <ins> <span>&lt;ins></span>  subrayado   <span>&lt;/ins></span> </ins>    <br>
-                    <del> <span>&lt;del></span>  borrado     <span>&lt;/del></span></del>     <br>
-                    <span>&lt;mark></span> texto <mark>remarcado</mark> <span>&lt;/mark></span>
-                    <marquee> <span>&lt;marquee></span>texto tipo marquee que se desplaza de un lado al otro<span>&lt;/marquee></span></marquee>
-                
         </fieldset>
 
-        </div>
+        <!-- Tipos de textos -->
+        <fieldset>
+            <legend><h2>Tipos de textos</h2></legend>
+
+            <div class="flex"> <!-- PREformado -->
+                <div class="ej">
+                    <pre>             Texto  con      mucho        espacio. </pre> 
+                </div>
+                <div class="cod"> 
+                    <p><span>&lt;pre></span> PREformado <span>&lt;/pre></p>
+                </div>
+            </div> 
+            
+            <div class="flex"> <!-- Parrafo -->
+                <div class="ej">
+                    <p style="line-height: 0;">Parrafo</p>
+                </div>
+                <div class="cod">
+                    <p><span>&lt;p></span> Parrafo <span>&lt;/p></span> </p>
+                </div>
+            </div>
+
+            <div class="flex"> <!-- Negrita -->
+                <div class="ej">
+                    <b>Negrita</b>
+                </div>
+                <div class="cod"><span>&lt;b></span> Negrita <span>&lt;/b></span></div>
+            </div> 
+
+            <div class="flex"> <!-- Reforzado -->
+                <div class="ej">
+                    <strong> Reforzado </strong>
+                </div>
+                <div class="cod">
+                    <span>&lt;strong></span> reforzado <span>&lt;/strong> </span>
+                </div>
+            </div> 
+
+            <div class="flex"> <!-- Grande -->
+                <div class="ej">
+                    <big> grande </big>
+                </div>
+                <div class="cod">              
+                    <span>&lt;big></span> Grande <span>&lt;/big></span>
+                </div>
+            </div> 
+            
+            <div class="flex"> <!-- Pequeño -->
+                <div class="ej">
+                    <small> Pequeño </small>
+                </div>
+                <div class="cod">
+                    <small> <span>&lt;small></span> Pequeño <span>&lt;/small></span></small>
+                </div>
+            </div> 
+
+            <div class="flex"> <!-- Cursiva -->
+                <div class="ej">
+                    <i> Cursiva </i>
+                </div>
+                <div class="cod">
+                    <span>&lt;i></span>      Cursiva     <span>&lt;/i></span>
+                </div>
+            </div> 
+
+            <div class="flex"> <!-- SubIndice -->
+                <div class="ej">
+                    Texto <sub> SubIndice </sub>
+                </div>
+                <div class="cod">
+                    <span>&lt;sub></span> SubIndice <span>&lt;/sub></span>
+                </div>
+            </div> 
+            
+            <div class="flex"> <!-- SupIndice -->
+                <div class="ej">
+                    Texto <Sup> SupIndice </Sup>
+                </div>
+                <div class="cod">
+                    <span>&lt;sup></span> SupIndice <span>&lt;/sup></span>
+                </div>
+            </div> 
+
+            <div class="flex"> <!-- Subrayado -->
+                <div class="ej">
+                    <ins>Subrayado</ins>
+                </div>
+                <div class="cod">
+                    <span>&lt;ins></span>  Subrayado   <span>&lt;/ins></span>
+                </div>
+            </div> 
+
+            <div class="flex"> <!-- Borrado -->
+                <div class="ej">
+                    <del> Borrado </del>
+                </div>
+                <div class="cod">
+                    <span>&lt;del></span> Borrado <span>&lt;/del></span>
+                </div>
+            </div> 
+            
+            <div class="flex"> <!-- Remarcado -->
+                <div class="ej">
+                    <mark> Remarcado</mark>
+                </div>
+                <div class="cod">
+                    <span>&lt;mark></span> Remarcado <span>&lt;/mark></span>
+                </div>
+            </div> 
+            
+            <div class="flex"> <!-- Marquee -->
+                <div class="ej">
+                    <marquee> Texto que se desplaza de un lado al otro. </marquee>
+                </div>
+                <div class="cod">
+                    <span>&lt;marquee></span> Marquee <span>&lt;/marquee></span>
+                </div>
+            </div> 
+        </fieldset>
+
 
         <div class="borders"> <!-- Atributos -->
 
@@ -539,8 +639,8 @@
                     <input type="reset" name="" id="">
                 </div>
             </div>
-        </div> <br>
-    </div>
+        </div>
+    </div> <br>
     
     <!-- HTML5 -->
     <div class="borders">
