@@ -515,7 +515,6 @@
                 </div>
             </div>
             
-        
             <!-- Background (BODY) -->
             <!-- 
                 /* Background-Body */
@@ -526,7 +525,6 @@
                     background-attachment: fixed; /* fixel, scroll, inherit */
                 }
             -->
-        
         
             <!-- Background-Image -->
             <div class="borders">
@@ -552,34 +550,42 @@
             <!-- List-Style-Type -->
             <div class="borders">
                 <p class="numbers">22) List-Style-Type </p>
-                <div>
-                    <ol class="lower-alpha">
-                    <li>Red</li>
-                    <li>Green</li>
-                    <li>Blue</li>
-                    </ol>
-                    <code>list-style-type: lower-alpha;</code> <hr>
+                <div class="flex">
+                    <div>
+                        <ol class="lower-alpha">
+                            <li>Red</li>
+                            <li>Green</li>
+                            <li>Blue</li>
+                        </ol>
+                        <code>list-style-type: lower-alpha;</code>
+                    </div><hr>
 
-                    <ul class="circle a">
-                    <li>Red</li>
-                    <li>Green</li>
-                    <li>Blue</li>
-                    </ul>
-                    <code>list-style-type: circle;</code> <hr>
+                    <div>
+                        <ul class="circle a">
+                            <li>Red</li>
+                            <li>Green</li>
+                            <li>Blue</li>
+                        </ul>
+                        <code>list-style-type: circle;</code> 
+                    </div><hr>
 
-                    <ul class="square a">
-                    <li>Red</li>
-                    <li>Green</li>
-                    <li>Blue</li>
-                    </ul>
-                    <code>list-style-type: square;</code> <hr>
+                    <div>
+                        <ul class="square a">
+                            <li>Red</li>
+                            <li>Green</li>
+                            <li>Blue</li>
+                        </ul>
+                        <code>list-style-type: square;</code>
+                    </div><hr>
 
-                    <ul class="uimage a">
-                    <li>Red</li>
-                    <li>Green</li>
-                    <li>Blue</li>
-                    </ul>
-                    <code>list-style-image: url("../Imgs/loguito.png"); <br></code> <hr>
+                    <div>
+                        <ul class="uimage a">
+                            <li>Red</li>
+                            <li>Green</li>
+                            <li>Blue</li>
+                        </ul>
+                        <code>list-style-image: url("../Imgs/loguito.png"); <br></code> 
+                    </div>
                 </div>
                 <style>
                     ul.a{
@@ -602,84 +608,95 @@
                 </style>
             </div>
             
-            
             <!-- Table -->
             <div class="borders">
-                <!-- Table-Style -->
                 <p class="numbers">23) Table</p>
-                <table class="styled" border="1">
-                    <caption>"Caption-Side Text"</caption>
-                    <tr>
-                        <td>Red</td>
-                        <td>Green</td>
-                    </tr>
-                    <tr>
-                        <td>Blue</td>
-                        <td>Yellow</td>
-                    </tr>
-                </table><br>
-                <style>
-                    table.styled{
-                        caption-side: top; /* top, bottom */
-                        border-collapse: separate;
-                        border-spacing: 20px 20px;
-                    }
-                </style>
-        
-                <!-- Empty-Cells -->
-                <p class="numbers">24)</p>
-                <table class="styled2" border="1">
-                    <tr>
-                        <td>HTML</td>
-                        <td>CSS</td>
-                    </tr>
-                    <tr>
-                        <td>JavaScript</td>
-                        <td></td>
-                    </tr>
-                </table>
-                <style>
-                    table.styled2{
-                        border-collapse: separate;
-                        empty-cells: hide;
-                    }
-                </style>
-        
-                <!-- Table-Style -->
-                <p class="numbers">25)</p>
-                <p>Table-layout is set to <strong>auto</strong></p>
-                <table id="tablee" class="auto">
-                    <tr>
-                    <td width=“10%">500.000.000.000.000</td>
-                    <td width="90%">20.000</td>
-                    </tr>
-                </table> <hr>
-        
-                <!-- Table-layout -->
-                <p>Table-layout is set to <strong>fixed</strong></p>
-                <table id="tablee" class="fixed">
-                    <tr>
-                    <td width="10%">500.000.000.000.000</td>
-                    <td width="90%">20.000</td>
-                    </tr>
-                </table>
+                <div class="flex">
 
-                <style>
-                    #tablee {
-                        border-collapse: separate;
-                        width: 100%;
-                        border: 1px solid gray;
-                    } 
-                    td {
-                        border: 1px solid gray;
-                    }
-                    table.auto {
-                        table-layout: auto;
-                    }
-                    table.fixed {
-                        table-layout: fixed;
-                    }
-                </style>
+                    <div><!-- Table-Style -->
+                        <table class="styled" border="1">
+                            <caption>"Caption-Side Text"</caption>
+                            <tr>
+                                <td>Red</td>
+                                <td>Green</td>
+                            </tr>
+                            <tr>
+                                <td>Blue</td>
+                                <td>Yellow</td>
+                            </tr>
+                        </table><br>
+                        <style>
+                            table.styled{
+                                caption-side: top; /* top, bottom */
+                                border-collapse: separate;
+                                border-spacing: 30px 10px;
+                            }
+                        </style>
+                    </div><hr>
+
+                    <div><!-- Empty-Cells -->
+                        Empty-Cells
+                        <table class="styled2" border="1">
+                            <tr>
+                                <td>HTML</td>
+                                <td>CSS</td>
+                            </tr>
+                            <tr>
+                                <td>JavaScript</td>
+                                <td></td>
+                            </tr>
+                        </table>
+                        <style>
+                            table.styled2{
+                                border-collapse: separate;
+                                empty-cells: hide;
+                            }
+                        </style>
+                    </div><hr>
+            
+                    <!-- Table-Style -->
+                    <div>
+                        <p>Table-layout is set to <strong>auto</strong></p>
+                        <table id="tablee" class="auto">
+                            <tr>
+                            <td width=“10%">500.000.000.000.000</td>
+                            <td width="90%">20.000</td>
+                            </tr>
+                        </table>
+                    </div><hr>
+                </div><hr>
+            
+                <!-- Table-layout -->
+                <div>
+                    <p>Table-layout is set to <strong>fixed</strong></p>
+                    
+                    <table id="tablee" class="fixed">
+                        <tr>
+                            <td width="7%" class="tdred">500.000.000.000.000</td>
+                            <td width="95%">20.000</td>
+                        </tr>
+                    </table>
+                    
+                    <style>
+                        #tablee {
+                            border-collapse: separate;
+                            width: 100%;
+                            border: 1px solid gray;
+                        } 
+                        td {
+                            border: 1px solid gray;
+                        }
+                        table.auto {
+                            table-layout: auto;
+                        }
+                        table.fixed {
+                            table-layout: fixed;
+                        }
+                        .tdred{
+                            color: red;
+                        }
+                    </style>
+                </div>
             </div>
         
             <!-- Links -->
@@ -776,7 +793,7 @@
                 <p class="inline">Third paragraph.</p>
                 <p class="inline">Fourth paragraph.</p>
                 <p class="inline">Fifth paragraph.</p>
-            </p><br>
+            </p>
             <style>
                 span.block{
                     display: block;
@@ -785,15 +802,14 @@
                     display: inline;
                 }
             </style>
-            <u>Code:</u>
-            <code><pre>
+            <div class="codigo"><pre>
                 span.block{
                     display: block;
                 }
                 p.inline{
                     display: inline;
                 }
-            </pre></code>
+            </div></code>
             </div>
         
             <!-- Visibility -->

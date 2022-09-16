@@ -50,7 +50,7 @@ code{
     box-shadow: inset 4px 4px 4px rgba(128, 128, 128, 0.558), inset -4px -4px 4px rgba(128, 128, 128, 0.706) ;
 }
 .codigo{
-    width: 80%;
+    max-width: 80%;
     margin: 5px 0px 5px 0px;
     padding-top: 1px;
     background-color: rgba(128, 128, 128, 0.512);
