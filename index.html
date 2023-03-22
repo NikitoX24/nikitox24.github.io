@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es-AR">
-  <head>
+<head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,14 +11,8 @@
 
 <body>
 
-  <!-- Navegador -->
-  <nav><ul>
-    <li><a href="#"> INICIO </a></li>
-    <li><a href="https://github.com/NikitoX24/Main"> GITHUB </a></li>
-    <li><a href="https://github.com/NikitoX24?tab=repositories"> REPOSITORIOS </a></li>
-    <li><a href="https://nikitox24.github.io/Main/"> Mi Pag </a></li>
-    <li><a href="#Final"> FINAL </a></li>
-  </ul></nav>
+  <!-- Menú -->
+  <menu-component></menu-component>
   
   
   <!-- Pags -->
@@ -229,7 +223,7 @@
     </form>
     <hr>
 
-    <!-- Loader -->
+    <!-- Loader Circle -->
     <style>
       .loader{
           width: 100px;
@@ -250,13 +244,21 @@
           }
       }
     </style>
-    <div class="loader"></div>
+    <div class="loader"></div> <hr>
 
-
+    <!-- Mapa Google -->
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0140467050082!2d-58.38153846050341!3d-34.60380631035785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca8c901cefa7%3A0x2bf1c86478d6f525!2sObelisco!5e0!3m2!1ses-419!2sar!4v1679357073003!5m2!1ses-419!2sar" 
+      width="320" 
+      height="320" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
 
 
   </div>
-  
   
   
   
@@ -270,6 +272,7 @@
   </div>
   <!-- JavaScript -->
   <script type="text/javascript" src="indexJS.js"></script>
+  <script type="text/javascript" src="/Menu/MenuJS.js"></script>
+  
 </body>
 </html>
-
