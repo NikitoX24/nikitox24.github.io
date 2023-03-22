@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es-AR">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,9 +13,9 @@
 <body>
 
   <!-- Menú -->
-  <menu-component></menu-component> 
-  
-  
+  <menu-component></menu-component>
+
+
   <!-- Pags -->
   <div class="round">
 
@@ -22,7 +23,8 @@
     <hr>
 
     <!-- CheatSheet -->
-    <a href="HtmlCheatSheet\htmlcheatsheet.html"><img src="Imgs/htmlcssjs.png" alt="HtmlCssJss" class="icons imgcentred"></a>
+    <a href="HtmlCheatSheet\htmlcheatsheet.html"><img src="Imgs/htmlcssjs.png" alt="HtmlCssJss"
+        class="icons imgcentred"></a>
     <hr>
     <a href="HtmlCheatSheet\htmlcheatsheet.html"><img src="Imgs/html.png" alt="html" class="icons"></a>
     <a href="HtmlCheatSheet\CssCheatSheet.html"><img src="Imgs/css.png" alt="css" class="icons"></a>
@@ -59,7 +61,7 @@
       <input type="submit" value="social" />
     </form>
     <br>
-    
+
     <!-- Viejos -->
     <details>
       <summary>Viejos</summary>
@@ -97,12 +99,13 @@
 
     <!-- Ejercicios HTML-CSS -->
     <details>
-      <summary>Ejercicios HTML-CSS</summary> <hr>
+      <summary>Ejercicios HTML-CSS</summary>
+      <hr>
 
       <form action="Ejercicios/HTML-CSS/2- Ejemplo/ejemplo.html">
         <input type="submit" value="ejemplo" />
       </form>
-      
+
       <form action="Ejercicios/HTML-CSS/3- Jargon-file/jargon-file.html">
         <input type="submit" value="jargon-file" />
       </form>
@@ -118,15 +121,15 @@
       <form action="Ejercicios/HTML-CSS/5.2- Emoji-peliculas/emoji-peliculas.html">
         <input type="submit" value="emoji-peliculas" />
       </form>
-      
+
       <form action="Ejercicios/HTML-CSS/6.1- Refranes 1/refranes-1.html">
         <input type="submit" value="refranes-1" />
       </form>
-      
+
       <form action="Ejercicios/HTML-CSS/6.2- Citas-dijkstra/citas-dijkstra.html">
         <input type="submit" value="citas-dijkstra" />
       </form>
-      
+
       <form action="Ejercicios/HTML-CSS/necrologicas/necrologicas-2014.html">
         <input type="submit" value="necrologicas-2014" />
       </form>
@@ -134,7 +137,8 @@
 
     <!-- Ejercicios JavaScript -->
     <details>
-      <summary>Ejercicios JavaScript</summary> <hr>
+      <summary>Ejercicios JavaScript</summary>
+      <hr>
 
       <form action="Ejercicios/JavaScript/Ejercicio1.html">
         <input type="submit" value="Ejerciocio 1" />
@@ -148,13 +152,15 @@
     <hr>
 
     <!-- HORA -->
-    <div id="HoraPS" class="centred">Hora: 00:00:00</div> <hr>
+    <div id="HoraPS" class="centred">Hora: 00:00:00</div>
+    <hr>
   </div>
-  
+
   <!-- Probando... -->
   <div class="round">
 
-    <h3>Probando...</h3><hr>
+    <h3>Probando...</h3>
+    <hr>
 
     <!-- Elejir opciones -->
     <label>
@@ -162,21 +168,22 @@
       <input list="Lista">
     </label>
     <datalist id="Lista">
-        <option value="uno"></option>
-        <option value="dos"></option>
-        <option value="tres"></option>
+      <option value="uno"></option>
+      <option value="dos"></option>
+      <option value="tres"></option>
     </datalist>
     <hr>
 
     <!-- Busqueda -->
     <style>
-      .search{
+      .search {
         position: relative;
         width: 250px;
         background-color: #fff;
         display: flex;
       }
-      .search::before{
+
+      .search::before {
         content: "";
         position: absolute;
         left: 0;
@@ -189,9 +196,11 @@
         transform-origin: left;
         transition: transform .25s;
       }
-      .search:focus-within::before{
-        transform:scale(1)
+
+      .search:focus-within::before {
+        transform: scale(1)
       }
+
       .search input,
       .search button {
         border: none;
@@ -199,11 +208,13 @@
         background-color: transparent;
         color: #8e8e8e;
       }
-      .input{
+
+      .input {
         width: 100%;
         padding: 10px;
       }
-      .button{
+
+      .button {
         display: grid;
         place-items: center;
         width: 50px;
@@ -211,6 +222,7 @@
         cursor: pointer;
         transition: color .25%;
       }
+
       .button:hover {
         color: #0170F0
       }
@@ -225,54 +237,54 @@
 
     <!-- Loader Circle -->
     <style>
-      .loader{
-          width: 100px;
-          height: 100px;
-          border-radius: 50%;
-          background: #000;
-          animation: zoom 1.5s ease infinite;
+      .loader {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: #000;
+        animation: zoom 1.5s ease infinite;
       }
-      
-      @keyframes zoom{
-          0%{
-              transform: scale(0);
-              opacity: 1;
-          }
-          100%{
-              transform: scale(1);
-              opacity: 0;
-          }
+
+      @keyframes zoom {
+        0% {
+          transform: scale(0);
+          opacity: 1;
+        }
+
+        100% {
+          transform: scale(1);
+          opacity: 0;
+        }
       }
     </style>
-    <div class="loader"></div> <hr>
+    <div class="loader"></div>
+    <hr>
 
     <!-- Mapa Google -->
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0140467050082!2d-58.38153846050341!3d-34.60380631035785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca8c901cefa7%3A0x2bf1c86478d6f525!2sObelisco!5e0!3m2!1ses-419!2sar!4v1679357073003!5m2!1ses-419!2sar" 
-      width="320" 
-      height="320" 
-      style="border:0;" 
-      allowfullscreen="" 
-      loading="lazy" 
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0140467050082!2d-58.38153846050341!3d-34.60380631035785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca8c901cefa7%3A0x2bf1c86478d6f525!2sObelisco!5e0!3m2!1ses-419!2sar!4v1679357073003!5m2!1ses-419!2sar"
+      width="320" height="320" style="border:0;" allowfullscreen="" loading="lazy"
       referrerpolicy="no-referrer-when-downgrade">
     </iframe>
 
 
   </div>
-  
-  
-  
+
+
+
   <!-- ESPACIO EN BLANCO -->
   <div style="height: 700px;"></div>
-  
+
   <!-- FINAL -->
   <section id="Final">
-  <div class="copyright">
-    © 2022 My Blog. All rights reserved.
-  </div>
-  <!-- JavaScript -->
-  <script type="text/javascript" src="indexJS.js"></script>
-  <script type="text/javascript" src="../Menu/MenuJS.js"></script>
-  
+    <div class="copyright">
+      © 2022 My Blog. All rights reserved.
+    </div>
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="indexJS.js"></script>
+    <script type="text/javascript" src="../Menu/MenuJS.js"></script>
+
 </body>
+
 </html>
