@@ -45,17 +45,6 @@ iframe {
   border-style: none;
 }
 
-/* div con nombre */
-fieldset {
-  border-radius: 12px;
-  padding: 0 10px 10px 10px;
-  background-color: rgba(128, 128, 128, 0.227);
-}
-/* nombre del div */
-legend {
-  line-height: 0px;
-}
-
 
 .titulo {
   text-align: center;
@@ -91,19 +80,21 @@ legend {
   box-shadow: inset 4px 4px 4px rgba(128, 128, 128, 0.558), inset -4px -4px 4px rgba(128, 128, 128, 0.706);
 }
 
-/* Tipos de Textos */
 .ej {
+  /* Tipos de Textos */
   width: 100%;
-  padding: 3px;
+  padding: 5px;
   border: 1px black solid;
   background-color: white;
-  box-shadow: inset 3px 3px 3px rgba(128, 128, 128, 0.558), inset -3px -3px 3px rgba(128, 128, 128, 0.706);
+  box-shadow: inset 4px 4px 4px rgba(128, 128, 128, 0.558), inset -4px -4px 4px rgba(128, 128, 128, 0.706);
 }
+
 .cod {
+  /* Tipos de Textos */
   width: 100%;
   border: 1px black solid;
-  background-color: rgba(128, 128, 128, 0.053);
-  box-shadow: inset 3px 3px 3px rgba(128, 128, 128, 0.558), inset -3px -3px 3px rgba(128, 128, 128, 0.706);
+  background-color: rgba(128, 128, 128, 0.512);
+  box-shadow: inset 4px 4px 4px rgba(128, 128, 128, 0.558), inset -4px -4px 4px rgba(128, 128, 128, 0.706);
 }
 
 .flex {
@@ -135,10 +126,12 @@ p.numbers {
   font-weight: 1000;
   text-decoration: underline;
 }
+
 .div {
   /* input */
   min-height: 50px;
 }
+
 /* CSS */
 
 /* Box */
@@ -152,6 +145,7 @@ p.numbers {
   margin: 20px;
   overflow: auto;
 }
+
 .box {
   color: black;
   min-width: 27%;
@@ -163,12 +157,15 @@ p.numbers {
   box-shadow: 5px 5px 4px 1px rgba(155, 155, 155, 0.322);
   overflow: hidden;
 }
+
 .boxizq {
   float: left;
   border-radius: 10px;
 }
+
 .boxder {
   float: right;
   border-radius: 3px;
 }
+
 /* Box */
