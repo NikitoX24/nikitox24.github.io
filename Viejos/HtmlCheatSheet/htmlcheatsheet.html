@@ -386,21 +386,63 @@
 
     </div>
 
-    <div class="borders"> <!-- Input Types -->
-      <h2 class="titulo"> Input Types </h2>
-      <br>
+    <!-- Frame
+        <div class="borders">
+            <h2 class="subtitulo"> Frame </h2>
 
-      <!-- Text -->
+            <frameset cols="25%,50%,25%">
+                <iframe src="https://github.com/NikitoX24" />
+                <noframes>Frames not supported!</noframes>
+            </frameset>
+        </div> 
+        -->
+
+    <!-- Tipo de Nivel
+        <div class="borders">
+            <h2 class="subtitulo"> Tipos de elementos en Niveles </h2>
+            
+            Nivel de Bloque en documento:
+                < h1>, < form>, < li>, < ol>, < ul>, < p>, < pre>, < table>, < div>, etc.
+            Nivel en Line en documento:
+                < b>, < a>, < strong>, < img>, < input>, < em>, < span>, etc.
+            Elementos:
+                DIV - container for other HTML elements.
+                SPAN - use to style parts of the text:
+                APPLET - embedded Java applet
+                IFRAME - Inline frame
+                INS - inserted text
+                MAP - image map
+                OBJECT - embedded object
+                SCRIPT - script within an HTML document
+        
+            Nivel Bloque:
+            <div style="background-color: rgba(128, 128, 128, 0.405); padding: 10px;">
+                <p> Esto es un PARRAFO dentro de un DIV </p>
+            </div><hr>
+        
+            Nivel Line:
+            <p> 
+            Esto es un 
+                <span style="color: red;"> SPAN </span> 
+            dentro de un parrafo
+                </p>
+        </div>
+
+        -->
+
+    <div class="borders"> <!-- Input Types -->
+      <h2 class="titulo"> Input Types in <span> HTML </span> </h2>
+
       <div class="div">
         <div class="box boxizq">
           < input type="<span>text</span>">
+
         </div>
         <div class="box boxder">
           <input type="text" placeholder="Texto">
         </div>
       </div>
 
-      <!-- Password -->
       <div class="div">
         <div class="box boxizq">
           < input type="<span>password</span>">
@@ -409,7 +451,6 @@
           <input type="password" placeholder="********">
         </div>
       </div>
-
 
       <div class="div">
         <div class="box boxizq">
@@ -643,9 +684,8 @@
       <section id="Barra de Progreso">
         <h3 class="subtitles"> Barra de Progreso </h3>
 
-         <span> progress <font color="purple"> min="<font color="green">0</font>" max="<font color="green">100</font>"
-            value="<font color="green">35</font>>  </font> /progress 
-        </span>><br>
+        <<span>progress <font color="purple"> min="<font color="green">0</font>" max="<font color="green">100</font>"
+            value="<font color="green">35</font>> << /font> /progress</span>><br>
               <progress min="0" max="100" value="75" style="height: 24px; width: 300px;"></progress>
       </section>
     </div>
@@ -718,188 +758,21 @@
         </div>
       </section>
     </div>
-  </div>
 
-  <!-- Canvas & SVG -->
-  <div class="borders"> 
-    <h1 class="titulo">CANVAS & SVG</h1>
-
-    <section id="Canvas (JS)">
-      <div class="borders">
-        <h2 class="subtitles"> CANVAS (JS) </h2>
-
-        
-        Canvas: <br>
-        - Los elementos se dibujan programáticamente <br>
-        - Los dibujos se realizan con píxeles <br>
-        - Las animaciones no están incorporadas <br>
-        - Alto rendimiento para operaciones de dibujo basadas en píxeles <br>
-        - Dependiente de la Resolución <br>
-        - No hay soporte para controladores de eventos <br>
-        - Puede guardar la imagen resultante como .png o .jpg <br>
-        - Muy adecuado para los juegos de gráficos intensivos <br> <br>
-
-
-        Canvas es solo contenedor grafico (para mostrar requiere JavaScript) <br>
-        x0 y0: comienza arriba izq. <br><br>
-
-        <b>
-          < canvas id="canvas1" width="200" height="100"> </ canvas>
-        </b><br>
-        El Id es necesario para identificarlo en JS. <br><br>
-
-        <b>
-          < _script_> <br>
-            var can = document.getElementById("canvas1"); <br>
-            var ctx = can.getcontext("2d"); <br>
-            < /_script_>
-        </b>
-        <hr>
-
-        <!-- fillRect(x, y, w, h) -->
-        <h3 class="subtitulo"> fillRect(x, y, w, h) </h3>
-        <div class="boxizq">
-          <canvas id="canvas2" width="70" height="70"> </canvas>
-          <script>
-            var c = document.getElementById("canvas2");
-            var ctx2 = c.getContext("2d");
-            ctx2.fillRect(10, 10, 60, 60); // x, y, w, h 
-          </script>
-        </div>
-        <code><pre>
-              < canvas id="canvas2" width="70" height="70"> < /canvas> 
-              < _script_>
-                  var c = document.getElementById ("canvas2");
-                  var ctx2 = c.getContext("2d");
-                  ctx2.fillRect(10,10,60,60); // x, y, w, h 
-              < /_script_>
-          </pre></code>
-        <hr>
-
-        <!-- fillStyle(rbga) Gradiante -->
-        <h3 class="subtitulo"> fillStyle(rbga) Gradiante </h3>
-        <div class="boxizq">
-          <canvas id="canvas3" width="70" height="100"> </canvas>
-          <script>
-            var canvas = document.getElementById("canvas3");
-            var ctx3 = canvas.getContext("2d");
-            ctx3.fillStyle = "rgba(0, 200, 0, 1)";
-            ctx3.fillRect(10, 10, 60, 60);
-          </script>
-        </div>
-        <code><pre>
-              < canvas id="canvas3" width="70" height="70"> < /canvas> 
-              < _script_>
-                  var canvas = document.getElementById("canvas3");
-                  var ctx3 = canvas.getContext("2d");
-                  ctx3.fillStyle = "rgba(0, 200, 0, 1)";
-                  ctx3.fillRect (10, 10, 60, 60);
-              < /script>
-          </pre></code>
-        <hr>
-
-        <!-- Otros... -->
-        <details>
-          <summary>Otros...</summary>
-          <pre>
-                  Draw a Line
-                  moveTo(x,y): Defines the starting point of the line.
-                  lineTo(x,y): Defines the ending point of the line.
-                  
-                  Draw a Circle
-                  beginPath(): Starts the drawing.
-                  arc(x,y,r,start,stop): Sets the parameters of the circle.
-                  stroke(): Ends the drawing.
-                  
-                  Gradients
-                  createLinearGradient(x,y,x1,y1): Creates a linear gradient.
-                  createRadialGradient(x,y,r,x1,y1,r1): Creates a radial/circular gradient.
-                  
-                  Drawing Text on the Canvas
-                  Font: Defines the font properties for the text.
-                  fillText(text,x,y): Draws "filled" text on the canvas.
-                  strokeText(text,x,y): Draws text on the canvas (no fill).
-              </pre>
-        </details>
-        <hr>
-        <hr>
-
-
-        <h1 class="subtitulo"> Canvas Transform JS: </h1>
-        <div>
-
-          <!-- Texto script -->
-          <h3 class="subtitles"> Texto script </h3>
-          <div class="ejemplo">
-            <canvas id="canvas4" width="100" height="50"> </canvas>
-            <script>
-              var c = document.getElementById("canvas4");
-              var ctx = c.getContext("2d");
-              ctx.font = "bold 22px Tahoma";
-              ctx.textAlign = "texto";
-              ctx.fillText("texto", 10, 30);
-            </script>
-          </div>
-          <hr>
-
-          <!-- Translate script -->
-          <h3 class="subtitle"> Translate script </h3>
-          <div class="ejemplo">
-            <canvas id="canvas5" width="400" height="100"> </canvas>
-            <script>
-              var c = document.getElementById("canvas5");
-              var ctx = c.getContext("2d");
-              ctx.font = "bold 22px Tahoma";
-              ctx.textAlign = "texto2";
-              ctx.fillText("texto2", 10, 30);
-              ctx.translate(100, 50);
-              ctx.fillText("texto2 translated", 10, 30);
-            </script>
-          </div>
-          <hr>
-
-
-          <!-- Rotate script -->
-          <h3 class="subtitle"> Rotate script </h3>
-          <div class="ejemplo">
-            <canvas id="canvas6" width="400" height="150"> </canvas>
-            <script>
-              var c = document.getElementById("canvas6");
-              var ctx = c.getContext("2d");
-              ctx.fillStyle = "#FF0000";
-              ctx.fillRect(10, 10, 100, 100);
-              ctx.rotate((Math.PI / 180) * 25);  //rotate 25 degrees. (usa radianes, no grados)
-              ctx.fillStyle = "#0000FF";
-              ctx.fillRect(10, 10, 100, 100);
-            </script>
-          </div>
-          <hr>
-
-          <!-- Scale script -->
-          <h3 class="subtitle"> Scale script </h3>
-          <div class="ejemplo">
-            <canvas id="canvas7" width="400" height="100"> </canvas>
-            <script>
-              var c = document.getElementById("canvas7");
-              var ctx = c.getContext("2d");
-              ctx.font = "bold 22px Tahoma";
-              ctx.scale(1.5, 4);
-              ctx.fillText("after scale", 0, 20);
-            </script>
-          </div>
-
-
-        </div><!-- canvas transform -->
-
-      </div><!-- canvas -->
-    </section>
-
-    <section id="SVG (Graficos Vectorales Escaleables)">
-      <div class="borders">
-        <h2 class="subtitles"> SVG (Graficos Vectorales Escaleables) </h2>
-
-          
+    <div class="borders"> <!-- Canvas & SVG -->
+      <section id="Canvas Vs SVG">
+        <h1 class="subtitulo"> CANVAS vs SVG </h1>
         <p>
+          Canvas: <br>
+          - Los elementos se dibujan programáticamente <br>
+          - Los dibujos se realizan con píxeles <br>
+          - Las animaciones no están incorporadas <br>
+          - Alto rendimiento para operaciones de dibujo basadas en píxeles <br>
+          - Dependiente de la Resolución <br>
+          - No hay soporte para controladores de eventos <br>
+          - Puede guardar la imagen resultante como .png o .jpg <br>
+          - Muy adecuado para los juegos de gráficos intensivos <br> <br>
+
           SVG: <br>
           - Los elementos son parte del DOM de la página (Modelo de Objetos del Documento) <br>
           - El dibujo se hace con vectores <br>
@@ -910,186 +783,349 @@
           - No apto para aplicaciones de juegos <br>
           - Es mejor para aplicaciones con áreas grandes de renderización (por ejemplo, Google Maps) <br>
         </p>
+      </section>
 
-        <!-- https://www.sololearn.com/learning/1014/2200/4369/1 -->
-        <!-- Imagen -->
-        <img src="image.svg" alt="" height="1"> <!-- SVG define imgs basadas en vectores en formato XML -->
-        <!-- Objeto -->
-        <svg width="1" height="1"></svg>
-        <code><pre class="pree">
-              Imagen:
-              < img src="image.svg" alt="" height="1"> <!-- SVG define imgs basadas en vectores en formato XML -->
+      <section id="SVG (Graficos Vectorales Escaleables)">
+        <div class="borders">
+          <h2 class="subtitles"> SVG (Graficos Vectorales Escaleables) </h2>
+          <!-- https://www.sololearn.com/learning/1014/2200/4369/1 -->
+          <!-- Imagen -->
+          <img src="image.svg" alt="" height="1"> <!-- SVG define imgs basadas en vectores en formato XML -->
+          <!-- Objeto -->
+          <svg width="1" height="1"></svg>
+          <code><pre class="pree">
+                Imagen:
+                < img src="image.svg" alt="" height="1"> <!-- SVG define imgs basadas en vectores en formato XML -->
 
-              Objeto:
-              < svg width="1" height="1">< /svg>
-              </pre></code>
-        <hr>
+                Objeto:
+                < svg width="1" height="1">< /svg>
+                </pre></code>
+          <hr>
 
-        <!-- Circulo -->
-        <div class="boxizq">
-          <svg width="60" height="60">
-            <circle cx="30" cy="30" r="30" fill="green" /><!-- stoke= marco -->
-          </svg>
+          <!-- Circulo -->
+          <div class="boxizq">
+            <svg width="60" height="60">
+              <circle cx="30" cy="30" r="30" fill="green" /><!-- stoke= marco -->
+            </svg>
+          </div>
+          <code><pre>
+            < svg width="70" height="70">
+                < circle cx="40" cy="40" r="30" fill="green" /><!-- stoke= marco -->
+            < /svg>
+            </pre></code>
+          <hr>
+
+          <!-- Rectangulo -->
+          <div class="boxizq">
+            <svg width="60" height="70">
+              <rect width="40" height="40" x="10" y="10" fill="green" />
+            </svg>
+          </div>
+          <code><pre>
+            < svg width="60" height="70">
+                < rect width="40" height="40"
+                x="10" y="10" fill="green"/>
+            < /svg>
+            </pre></code>
+          <hr>
+
+          <!-- Linea -->
+          <div class="boxizq">
+            <svg width="60" height="70">
+              <line x1="10" y1="10" x2="50" y2="60" style="stroke:#000000; stroke-linecap:round;
+                    stroke-width:7">
+            </svg>
+          </div>
+          <code><pre>
+            < svg width="60" height="70">
+                < line x1="10" y1="10" x2="50" y2="60"
+                style="stroke:#000000; stroke-linecap:round;
+                stroke-width:7">
+            < /svg>
+            </pre></code>
+          <hr>
+
+          <!-- PolyLine -->
+          <div class="boxizq">
+            <svg width="60" height="100">
+              <polyline style="stroke-linejoin:miter;
+                        stroke:black;
+                        stroke-width:5; fill: none;" points="25 25, 37 37, 50 25">
+              </polyline>
+            </svg>
+          </div>
+          <code><pre>
+            < svg width="60" height="100">
+                < polyline style="stroke-linejoin:miter;
+                    stroke:black;
+                    stroke-width:5; fill: none;"
+                    points="25 25, 37 37, 50 25" >
+                < /polyline>
+            < /svg>
+            </pre></code>
+          <hr>
+
+          <!-- Elipse -->
+          <div class="boxizq">
+            <svg width="70" height="40">
+              <ellipse cx="35" cy="25" rx="35" ry="10" style="fill:green" />
+            </svg>
+          </div>
+          <code><pre>
+            < svg width="60" height="60">
+                < ellipse cx="30" cy="30" rx="30" ry="10" style="fill:green" />
+            < /svg>
+            </pre></code>
+          <hr>
+
+          <!-- PolyGon -->
+          <div class="boxizq">
+            <svg width="60" height="60">
+              <polygon points="10 10, 60 40, 50 0" style="fill: green; stroke:black;" />
+            </svg>
+          </div>
+          <code><pre>
+            < svg width="60" height="60">
+                < polygon points="10 10, 60 40, 50 0" 
+                style="fill: green; stroke:black;" />
+            < /svg>
+            </pre></code>
+          <hr>
+
+          <!-- Animaciones  <animate> -->
+          <div class="boxizq">
+            <svg width="120" height="70">
+              <rect width="20" height="20" fill="orange">
+                <animate attributeName="x" from="0" to="100" dur="1s" fill="freeze" repeatCount="1000" />
+              </rect>
+            </svg>
+          </div>
+          <code><pre>
+            < svg width="120" height="50">
+                < rect width="20" height="20" fill="orange">
+                    < animate attributeName="x" from="0" to="100"
+                    dur="1s" fill="freeze" repeatCount="1000"/> 
+                < /rect>
+            < /svg>
+            </pre></code>
+          <details>
+            <summary style="font-size: 20px;">Info...</summary>
+            <pre>
+                    attributeName: el atributo q se va animar.
+                    from: valor al comenzar.
+                    to: valor al terminar.
+                    dur: duracion.
+                    fill: valor del atributo al finalzar (remove: resetea valor, freeze: conserva el valor "to").
+                    repeatCount: repeticiones, undefined: infinito.
+                </pre>
+          </details>
+          <hr>
+
+          <!-- Trazos <path> -->
+
+          <!-- triangulo hipot -->
+          <div class="boxizq">
+            <svg width="50" height="60">
+              <path d="M 0 0 L50 50 L50 0 Z" style="stroke:#000;  fill:none;" />
+            </svg>
+          </div>
+
+          <code><pre>
+                < svg width="50" height="60">
+                    < path d="M 0 0 L50 50 L50 0 Z" style="stroke:#000;  fill:none;" />
+                < /svg>
+            </pre></code>
+          <details>
+            <summary style="font-size: 20px;">Info...</summary>
+            <pre>
+                    Usar letras Mayusculas para valores absolutos, y minusculas para pos relativa.
+                    M: mover hacia.
+                    L: linea hacia.
+                    H: linea horiz. hacia.
+                    V: linea vert. hacia.
+                    C: curva hacia.
+                    S: curva suave hacia.
+                    Q: curva Bézier cuadrática.
+                    T: curva Bézier cuadrática suave.
+                    A: arco elíptico.
+                    Z: closepath, cerrar trazado.
+                </pre>
+          </details>
+          <hr>
+
+          <!-- cuadrado -->
+          <div class="boxizq">
+            <svg width="60" height="60">
+              <path d="M0 0 L0 25 L25 25 L25 0 Z" style="stroke:#000;  fill:none;" />
+            </svg>
+          </div>
+          <code><pre>
+                < svg width="60" height="60">
+                    < path d="M0 0 L0 25 L25 25 L25 0 Z" style="stroke:#000;  fill:none;" />
+                < /svg>
+            </pre></code>
         </div>
-        <code><pre>
-          < svg width="70" height="70">
-              < circle cx="40" cy="40" r="30" fill="green" /><!-- stoke= marco -->
-          < /svg>
-          </pre></code>
-        <hr>
+      </section>
 
-        <!-- Rectangulo -->
-        <div class="boxizq">
-          <svg width="60" height="70">
-            <rect width="40" height="40" x="10" y="10" fill="green" />
-          </svg>
-        </div>
-        <code><pre>
-          < svg width="60" height="70">
-              < rect width="40" height="40"
-              x="10" y="10" fill="green"/>
-          < /svg>
-          </pre></code>
-        <hr>
+      <section id="Canvas (JS)">
+        <div class="borders">
+          <h2 class="subtitles">
+            < CANVAS> (JS)
+          </h2>
+          Canvas es solo contenedor grafico (para mostrar requiere JavaScript) <br>
+          x0 y0: comienza arriba izq. <br><br>
 
-        <!-- Linea -->
-        <div class="boxizq">
-          <svg width="60" height="70">
-            <line x1="10" y1="10" x2="50" y2="60" style="stroke:#000000; stroke-linecap:round;
-                  stroke-width:7">
-          </svg>
-        </div>
-        <code><pre>
-          < svg width="60" height="70">
-              < line x1="10" y1="10" x2="50" y2="60"
-              style="stroke:#000000; stroke-linecap:round;
-              stroke-width:7">
-          < /svg>
-          </pre></code>
-        <hr>
+          <b>
+            < canvas id="canvas1" width="200" height="100"> </ canvas>
+          </b><br>
+          El Id es necesario para identificarlo en JS. <br><br>
 
-        <!-- PolyLine -->
-        <div class="boxizq">
-          <svg width="60" height="100">
-            <polyline style="stroke-linejoin:miter;
-                      stroke:black;
-                      stroke-width:5; fill: none;" points="25 25, 37 37, 50 25">
-            </polyline>
-          </svg>
-        </div>
-        <code><pre>
-          < svg width="60" height="100">
-              < polyline style="stroke-linejoin:miter;
-                  stroke:black;
-                  stroke-width:5; fill: none;"
-                  points="25 25, 37 37, 50 25" >
-              < /polyline>
-          < /svg>
-          </pre></code>
-        <hr>
+          <b>
+            < _script_> <br>
+              var can = document.getElementById("canvas1"); <br>
+              var ctx = can.getcontext("2d"); <br>
+              < /_script_>
+          </b>
+          <hr>
 
-        <!-- Elipse -->
-        <div class="boxizq">
-          <svg width="70" height="40">
-            <ellipse cx="35" cy="25" rx="35" ry="10" style="fill:green" />
-          </svg>
-        </div>
-        <code><pre>
-          < svg width="60" height="60">
-              < ellipse cx="30" cy="30" rx="30" ry="10" style="fill:green" />
-          < /svg>
-          </pre></code>
-        <hr>
+          <!-- fillRect(x, y, w, h) -->
+          <h3 class="subtitulo"> fillRect(x, y, w, h) </h3>
+          <div class="boxizq">
+            <canvas id="canvas2" width="70" height="70"> </canvas>
+            <script>
+              var c = document.getElementById("canvas2");
+              var ctx2 = c.getContext("2d");
+              ctx2.fillRect(10, 10, 60, 60); // x, y, w, h 
+            </script>
+          </div>
+          <code><pre>
+                < canvas id="canvas2" width="70" height="70"> < /canvas> 
+                < _script_>
+                    var c = document.getElementById ("canvas2");
+                    var ctx2 = c.getContext("2d");
+                    ctx2.fillRect(10,10,60,60); // x, y, w, h 
+                < /_script_>
+            </pre></code>
+          <hr>
 
-        <!-- PolyGon -->
-        <div class="boxizq">
-          <svg width="60" height="60">
-            <polygon points="10 10, 60 40, 50 0" style="fill: green; stroke:black;" />
-          </svg>
-        </div>
-        <code><pre>
-          < svg width="60" height="60">
-              < polygon points="10 10, 60 40, 50 0" 
-              style="fill: green; stroke:black;" />
-          < /svg>
-          </pre></code>
-        <hr>
+          <!-- fillStyle(rbga) Gradiante -->
+          <h3 class="subtitulo"> fillStyle(rbga) Gradiante </h3>
+          <div class="boxizq">
+            <canvas id="canvas3" width="70" height="100"> </canvas>
+            <script>
+              var canvas = document.getElementById("canvas3");
+              var ctx3 = canvas.getContext("2d");
+              ctx3.fillStyle = "rgba(0, 200, 0, 1)";
+              ctx3.fillRect(10, 10, 60, 60);
+            </script>
+          </div>
+          <code><pre>
+                < canvas id="canvas3" width="70" height="70"> < /canvas> 
+                < _script_>
+                    var canvas = document.getElementById("canvas3");
+                    var ctx3 = canvas.getContext("2d");
+                    ctx3.fillStyle = "rgba(0, 200, 0, 1)";
+                    ctx3.fillRect (10, 10, 60, 60);
+                < /script>
+            </pre></code>
+          <hr>
 
-        <!-- Animaciones  <animate> -->
-        <div class="boxizq">
-          <svg width="120" height="70">
-            <rect width="20" height="20" fill="orange">
-              <animate attributeName="x" from="0" to="100" dur="1s" fill="freeze" repeatCount="1000" />
-            </rect>
-          </svg>
-        </div>
-        <code><pre>
-          < svg width="120" height="50">
-              < rect width="20" height="20" fill="orange">
-                  < animate attributeName="x" from="0" to="100"
-                  dur="1s" fill="freeze" repeatCount="1000"/> 
-              < /rect>
-          < /svg>
-          </pre></code>
-        <details>
-          <summary style="font-size: 20px;">Info...</summary>
-          <pre>
-                  attributeName: el atributo q se va animar.
-                  from: valor al comenzar.
-                  to: valor al terminar.
-                  dur: duracion.
-                  fill: valor del atributo al finalzar (remove: resetea valor, freeze: conserva el valor "to").
-                  repeatCount: repeticiones, undefined: infinito.
-              </pre>
-        </details>
-        <hr>
+          <!-- Otros... -->
+          <details>
+            <summary>Otros...</summary>
+            <pre>
+                    Draw a Line
+                    moveTo(x,y): Defines the starting point of the line.
+                    lineTo(x,y): Defines the ending point of the line.
+                    
+                    Draw a Circle
+                    beginPath(): Starts the drawing.
+                    arc(x,y,r,start,stop): Sets the parameters of the circle.
+                    stroke(): Ends the drawing.
+                    
+                    Gradients
+                    createLinearGradient(x,y,x1,y1): Creates a linear gradient.
+                    createRadialGradient(x,y,r,x1,y1,r1): Creates a radial/circular gradient.
+                    
+                    Drawing Text on the Canvas
+                    Font: Defines the font properties for the text.
+                    fillText(text,x,y): Draws "filled" text on the canvas.
+                    strokeText(text,x,y): Draws text on the canvas (no fill).
+                </pre>
+          </details>
+          <hr>
+          <hr>
 
-        <!-- Trazos <path> -->
 
-        <!-- triangulo hipot -->
-        <div class="boxizq">
-          <svg width="50" height="60">
-            <path d="M 0 0 L50 50 L50 0 Z" style="stroke:#000;  fill:none;" />
-          </svg>
-        </div>
+          <h1 class="subtitulo"> Canvas Transform JS: </h1>
+          <div>
 
-        <code><pre>
-              < svg width="50" height="60">
-                  < path d="M 0 0 L50 50 L50 0 Z" style="stroke:#000;  fill:none;" />
-              < /svg>
-          </pre></code>
-        <details>
-          <summary style="font-size: 20px;">Info...</summary>
-          <pre>
-                  Usar letras Mayusculas para valores absolutos, y minusculas para pos relativa.
-                  M: mover hacia.
-                  L: linea hacia.
-                  H: linea horiz. hacia.
-                  V: linea vert. hacia.
-                  C: curva hacia.
-                  S: curva suave hacia.
-                  Q: curva Bézier cuadrática.
-                  T: curva Bézier cuadrática suave.
-                  A: arco elíptico.
-                  Z: closepath, cerrar trazado.
-              </pre>
-        </details>
-        <hr>
+            <!-- Texto script -->
+            <h3 class="subtitles"> Texto script </h3>
+            <div class="ejemplo">
+              <canvas id="canvas4" width="100" height="50"> </canvas>
+              <script>
+                var c = document.getElementById("canvas4");
+                var ctx = c.getContext("2d");
+                ctx.font = "bold 22px Tahoma";
+                ctx.textAlign = "texto";
+                ctx.fillText("texto", 10, 30);
+              </script>
+            </div>
+            <hr>
 
-        <!-- cuadrado -->
-        <div class="boxizq">
-          <svg width="60" height="60">
-            <path d="M0 0 L0 25 L25 25 L25 0 Z" style="stroke:#000;  fill:none;" />
-          </svg>
-        </div>
-        <code><pre>
-              < svg width="60" height="60">
-                  < path d="M0 0 L0 25 L25 25 L25 0 Z" style="stroke:#000;  fill:none;" />
-              < /svg>
-          </pre></code>
-      </div>
-    </section>
+            <!-- Translate script -->
+            <h3 class="subtitle"> Translate script </h3>
+            <div class="ejemplo">
+              <canvas id="canvas5" width="400" height="100"> </canvas>
+              <script>
+                var c = document.getElementById("canvas5");
+                var ctx = c.getContext("2d");
+                ctx.font = "bold 22px Tahoma";
+                ctx.textAlign = "texto2";
+                ctx.fillText("texto2", 10, 30);
+                ctx.translate(100, 50);
+                ctx.fillText("texto2 translated", 10, 30);
+              </script>
+            </div>
+            <hr>
 
+
+            <!-- Rotate script -->
+            <h3 class="subtitle"> Rotate script </h3>
+            <div class="ejemplo">
+              <canvas id="canvas6" width="400" height="150"> </canvas>
+              <script>
+                var c = document.getElementById("canvas6");
+                var ctx = c.getContext("2d");
+                ctx.fillStyle = "#FF0000";
+                ctx.fillRect(10, 10, 100, 100);
+                ctx.rotate((Math.PI / 180) * 25);  //rotate 25 degrees. (usa radianes, no grados)
+                ctx.fillStyle = "#0000FF";
+                ctx.fillRect(10, 10, 100, 100);
+              </script>
+            </div>
+            <hr>
+
+            <!-- Scale script -->
+            <h3 class="subtitle"> Scale script </h3>
+            <div class="ejemplo">
+              <canvas id="canvas7" width="400" height="100"> </canvas>
+              <script>
+                var c = document.getElementById("canvas7");
+                var ctx = c.getContext("2d");
+                ctx.font = "bold 22px Tahoma";
+                ctx.scale(1.5, 4);
+                ctx.fillText("after scale", 0, 20);
+              </script>
+            </div>
+
+
+          </div><!-- canvas transform -->
+
+        </div><!-- canvas -->
+      </section>
+    </div>
   </div>
 
 </main>

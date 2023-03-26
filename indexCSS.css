@@ -75,3 +75,7 @@ summary{
   margin-right: auto;
   display: block;
 }
+
+.summaryBackground{
+  background-color: rgba(0, 0, 0, 0.137);
+}
