@@ -43,9 +43,7 @@
 
     <!-- Tipos de textos -->
     <fieldset>
-      <legend>
-        <h2>Tipos de textos</h2>
-      </legend>
+      <legend> <h2>Tipos de textos</h2> </legend>
 
       <div class="flex"> <!-- PREformado -->
         <div class="ej">
@@ -161,83 +159,91 @@
           <span>&lt;marquee></span> Marquee <span>&lt;/marquee></span>
         </div>
       </div>
+
+      Atributos:
+      <div class="flex"> <!-- Font -->
+        <div class="ej">
+          <font> Texto <font color="red">Fuente</font> que se puede modificar. </font>
+        </div>
+        <div class="cod">
+          <span>&lt;font <font color="purple""> color="red"</font>></span> Fuente <span>&lt;/font></span>
+        </div>
+      </div>
+      
+      <div class="flex"> <!-- Style -->
+        <div class="ej">
+          <p style="color: red;">Parrafo con Style color red</p>
+        </div>
+        <div class="cod">
+          <span>&lt;p <font color="purple"">style</font> ="<font color="green">color: red;</font>"></span> Parrafo <span>&lt;/p></span>
+        </div>
+      </div>
     </fieldset>
 
-
-    <div class="borders"> <!-- Atributos -->
-
-      <h2 class="subtitulo"> Atributos </h2>
-
-      <span>&lt;p</span>
-      <font color="purple"">style</font> =" <font color="green">color: red;</font>"> Texto de Color Rojo
-      <span>&lt;/p></span> <br><br>
-
-      <!-- Código -->
-      <span>&lt;font</span>
-      <font color="purple"">color=" red"></font> Texto de Color Rojo <span>&lt;/font></span> <br>
-      <!-- Código -->
-    </div>
-
-    <div class="borders"> <!-- Imagen -->
-      <h2 class="subtitulo"> Imagen </h2>
-
+    <!-- Imagen -->
+    <fieldset>
+      <legend> <h2 class="subtitulo"> Imagen </h2> </legend>
+    
       <!-- Imagen con texto alternativo: -->
       <h3>Imagen con texto alternativo:</h3>
-      <div class="ejemplo">
-        <img src="../Imagen.png" alt="Texto por si no carga imagen"> <br>
-      </div>
-      <!-- Código -->
-      <div class="codigo">
-        <pre>
-                 <span>&lt;img</span> <font color="purple">src=</font> "<font color="green">../Imagenes/Imagen.png</font>" <font color="purple">alt=</font>"Texto por si no carga imagen"<span>></span>
-             </pre>
-      </div>
+        
+        <div class="ejemplo">
+          <img src="../Imagen.png" alt="Texto por si no carga imagen"> <br>
+        </div>
+        <!-- Código -->
+        <div class="codigo">
+          <span>&lt;img</span> <font color="purple">src=</font> "<font color="green">../Imagen.png</font>" <font color="purple">alt=</font>"Texto alternativo"<span>></span>
+        </div>
+        <details>
+          <summary>Atributos...</summary>
+          <pre>
+            Atributos de img...
+              height, width, border.
+              align=""    (posicion del texto)
+              style=""    (color, font, size, etc)
+              href=""     (hipervinculo, link para redirigirse)
+              src=""      (ruta de acceso de un link para poner una imagen)
+              alt=""      (texto por si la imagen no carga)
+          </pre>
+        </details>
       <hr>
-      <!-- Atributos de img...
-                height, width, border.
-                align=""    (posicion del texto)
-                style=""    (color, font, size, etc)
-                href=""     (hipervinculo, link para redirigirse)
-                src=""      (ruta de acceso de un link para poner una imagen)
-                alt=""      (texto por si la imagen no carga)
-                <font color="">
-            -->
 
-      Imagen con link: <br>
-      <a href="../Imgs/Apple.png"><img src="../Imgs/Apple.png" alt="apple" width="100px"></a> <br>
-      <!-- Codigo -->
-      <code>
-                <font color="red">&lt;a</font> <font color="purple">href</font> ="<font color="green">../Imgs/Apple.png</font>" <span>>&lt;img</span> <font color="purple">src</font>="<font color="green">../Imgs/Apple.png</font>" <font color="purple">alt</font>="apple" <font color="purple">width</font>="100px"<span>></span></a>
-            </code>
-      <!-- Codigo -->
-      <br><br>
+      <h3>Imagen con link:</h3>
+        <a href="../Imgs/Apple.png"><img src="../Imgs/Apple.png" alt="apple" width="100px"></a> <br>
+        <!-- Codigo -->
+        <div class="codigo">
+          <font color="red">&lt;a</font> <font color="purple">href</font> ="<font color="green">../Apple.png</font>" <span>>&lt;img</span> <font color="purple">src</font>="<font color="green">../Apple.png</font>" <font color="purple">alt</font>="apple"<span>></span></a>
+        </div>
       <hr>
 
       <!-- Mapa -->
-      Igamen con Mapa: <br>
-      <img src="../Imgs/imgMap.png" usemap="htmlcheatsheet.html#ejemplo_mapa" height="163px">
-      <map name="ejemplo_mapa">
-        <area shape="rect" coords="18,16,171,73" href="../Imgs/Apple.png" alt="rectangulo">
-        <area shape="circle" coords="263,55,36" href="../Imgs/css_logo.png" alt="circulo">
-        <area shape="poly" coords="163,91,213,141,127,141" href="../Imgs/Orange.png" alt="poligono">
-      </map>
-      <!-- Atributos de AREA...
-                shape=""    (RECT, CIRCLE, POLY)
-                coords=""   (RECT(izq, sup, der, inf), CIRCLE(centro-x, centro-y, redia), POLY(x1, y1, x2, y2, ..., xN, yN))
-                href=""     (URL al apuntar)
-                nohref=""   (indica q este area no tiene enlace)
-            -->
-      <div class="codigo">
-        <pre>
-                < img src="../imgs/imgMap.png" usemap="htmlcheatsheet.html#ejemplo_mapa" height="163px">
-                < map name="ejemplo_mapa">
-                    < area shape="rect" coords="18,16,171,73" href="../Imgs/Apple.png" alt="rectangulo">
-                    < area shape="circle" coords="263,55,36" href="../Imgs/css_logo.png" alt="circulo">
-                    < area shape="poly" coords="163,91,213,141,127,141" href="../Imgs/Orange.png" alt="poligono">
-                < /map>
+      <h3>Igamen con Mapa:</h3>
+        <img src="../Imgs/imgMap.png" usemap="htmlcheatsheet.html#ejemplo_mapa" height="163px">
+        <map name="ejemplo_mapa">
+          <area shape="rect" coords="18,16,171,73" href="../Imgs/Apple.png" alt="rectangulo">
+          <area shape="circle" coords="263,55,36" href="../Imgs/css_logo.png" alt="circulo">
+          <area shape="poly" coords="163,91,213,141,127,141" href="../Imgs/Orange.png" alt="poligono">
+        </map>
+        <!-- Atributos de AREA...
+            shape=""    (RECT, CIRCLE, POLY)
+            coords=""   (RECT(izq, sup, der, inf), CIRCLE(centro-x, centro-y, redia), POLY(x1, y1, x2, y2, ..., xN, yN))
+            href=""     (URL al apuntar)
+            nohref=""   (indica q este area no tiene enlace)
+        -->
+        <details>
+          <summary>Codigo...</summary>
+          <div class="codigo">
+            <pre>
+              &lt;img src="../imgs/imgMap.png" usemap="htmlcheatsheet.html#ejemplo_mapa" height="163px">
+              &lt;map name="ejemplo_mapa">
+                &lt;area shape="rect" coords="18,16,171,73" href="../Imgs/Apple.png" alt="rectangulo">
+                &lt;area shape="circle" coords="263,55,36" href="../Imgs/css_logo.png" alt="circulo">
+                &lt;area shape="poly" coords="163,91,213,141,127,141" href="../Imgs/Orange.png" alt="poligono">
+              &lt;/map>
             </pre>
-      </div>
-    </div>
+          </div>
+        </details>
+    </fieldset>
 
     <div class="borders"> <!-- Listas -->
       <h2 class="subtitulo">Listas</h2>
@@ -611,7 +617,7 @@
         <<span>audio <font color="purple"> src="<font color="green">audio.mp3</font>" controls autoplay loop</font> > <
             /audio</span>> <br>
             <!-- type: mp3, ogg, wav -->
-            <audio src="audio.mp3" controls>
+            <audio src="audio.mp3" controls style="height: 50px; width: 240px;">
               Texto por si el navegador no soporta audio.
             </audio>
             <!--                 
