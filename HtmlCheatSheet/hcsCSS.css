@@ -8,12 +8,12 @@ header {
   margin-top: 60px;
 }
 main {
-  max-width: 600px;
+  max-width: 720px;
   margin: auto;
 }
 span {
   color: rgb(255, 0, 0);
-  font-size: medium;
+  /* font-size: medium; */
   text-shadow: .2px .2px black;
 }
 pre {
@@ -66,6 +66,7 @@ h3{
   height: 110px;
   overflow: auto;
 }
+
 .ejemplo {
   max-width: 400px;
   padding: 5px;
@@ -84,6 +85,7 @@ h3{
 
 /* Tipos de Textos */
 .ej {
+  border-radius: 7px;
   width: 100%;
   padding: 3px;
   border: 1px black solid;
@@ -91,10 +93,13 @@ h3{
   box-shadow: inset 3px 3px 3px rgba(128, 128, 128, 0.558), inset -3px -3px 3px rgba(128, 128, 128, 0.706);
 }
 .cod {
+  border-radius: 7px;
   width: 100%;
+  padding: 3px;
   border: 1px black solid;
   background-color: rgba(128, 128, 128, 0.053);
   box-shadow: inset 3px 3px 3px rgba(128, 128, 128, 0.558), inset -3px -3px 3px rgba(128, 128, 128, 0.706);
+  /* overflow: auto; */
 }
 
 .flex {

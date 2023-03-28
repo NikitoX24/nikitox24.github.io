@@ -182,18 +182,21 @@
 
     <!-- Imagen -->
     <fieldset>
-      <legend> <h2 class="subtitulo"> Imagen </h2> </legend>
+      <legend> <h2> Imagen </h2> </legend>
     
       <!-- Imagen con texto alternativo: -->
       <h3>Imagen con texto alternativo:</h3>
-        
-        <div class="ejemplo">
-          <img src="../Imagen.png" alt="Texto por si no carga imagen"> <br>
+        <div class="flex">
+          <div class="ej">
+            <img src="../Imagen.png" alt="Texto por si no carga imagen"> <br>
+          </div>
+          <!-- Código -->
+          <div class="cod">
+            <span>&lt;img</span> <font color="purple">src=</font> "<font color="green">../Imagen.png</font>" <font color="purple">alt=</font>"Texto alternativo"<span>></span>
+          </div>
         </div>
-        <!-- Código -->
-        <div class="codigo">
-          <span>&lt;img</span> <font color="purple">src=</font> "<font color="green">../Imagen.png</font>" <font color="purple">alt=</font>"Texto alternativo"<span>></span>
-        </div>
+
+        <!-- Detalles -->
         <details>
           <summary>Atributos...</summary>
           <pre>
@@ -208,179 +211,181 @@
         </details>
       <hr>
 
-      <h3>Imagen con link:</h3>
-        <a href="../Imgs/Apple.png"><img src="../Imgs/Apple.png" alt="apple" width="100px"></a> <br>
-        <!-- Codigo -->
-        <div class="codigo">
-          <font color="red">&lt;a</font> <font color="purple">href</font> ="<font color="green">../Apple.png</font>" <span>>&lt;img</span> <font color="purple">src</font>="<font color="green">../Apple.png</font>" <font color="purple">alt</font>="apple"<span>></span></a>
+      <!-- Imagen con Link: -->
+      <h3>Imagen con Link:</h3>
+        <div class="flex">
+          <div class="ej">
+            <a href="../Imgs/Apple.png"><img src="../Imgs/Apple.png" alt="apple" width="40px"></a> <br>
+          </div>
+          <!-- Codigo -->
+          <div class="cod">
+            <font color="red">&lt;a</font> <font color="purple">href</font> ="<font color="green">../Apple.png</font>" <span>>&lt;img</span> <font color="purple">src</font>="<font color="green">../Apple.png</font>" <font color="purple">alt</font>="apple"<span>></span></a>
+          </div>
         </div>
       <hr>
 
       <!-- Mapa -->
       <h3>Igamen con Mapa:</h3>
-        <img src="../Imgs/imgMap.png" usemap="htmlcheatsheet.html#ejemplo_mapa" height="163px">
-        <map name="ejemplo_mapa">
-          <area shape="rect" coords="18,16,171,73" href="../Imgs/Apple.png" alt="rectangulo">
-          <area shape="circle" coords="263,55,36" href="../Imgs/css_logo.png" alt="circulo">
-          <area shape="poly" coords="163,91,213,141,127,141" href="../Imgs/Orange.png" alt="poligono">
-        </map>
-        <!-- Atributos de AREA...
-            shape=""    (RECT, CIRCLE, POLY)
-            coords=""   (RECT(izq, sup, der, inf), CIRCLE(centro-x, centro-y, redia), POLY(x1, y1, x2, y2, ..., xN, yN))
-            href=""     (URL al apuntar)
-            nohref=""   (indica q este area no tiene enlace)
-        -->
-        <details>
-          <summary>Codigo...</summary>
-          <div class="codigo">
-            <pre>
-              &lt;img src="../imgs/imgMap.png" usemap="htmlcheatsheet.html#ejemplo_mapa" height="163px">
-              &lt;map name="ejemplo_mapa">
-                &lt;area shape="rect" coords="18,16,171,73" href="../Imgs/Apple.png" alt="rectangulo">
-                &lt;area shape="circle" coords="263,55,36" href="../Imgs/css_logo.png" alt="circulo">
-                &lt;area shape="poly" coords="163,91,213,141,127,141" href="../Imgs/Orange.png" alt="poligono">
-              &lt;/map>
-            </pre>
+        <div class="flex">
+          <div class="ej">
+            <img src="../Imgs/imgMap.png" usemap="htmlcheatsheet.html#ejemplo_mapa" height="163px">
+            
+            <map name="ejemplo_mapa">
+              <area shape="rect" coords="18,16,171,73" href="../Imgs/Apple.png" alt="rectangulo">
+              <area shape="circle" coords="263,55,36" href="../Imgs/css_logo.png" alt="circulo">
+              <area shape="poly" coords="163,91,213,141,127,141" href="../Imgs/Orange.png" alt="poligono">
+            </map>
           </div>
-        </details>
+          
+          <div class="cod" style="font-size:smaller;">
+              &lt;img src="../imgs/imgMap.png" usemap="htmlcheatsheet.html#ejemplo_mapa" height="163px"> <br>
+              <br>
+              &lt;map name="ejemplo_mapa"> <br>
+              &nbsp; &lt;area shape="rect" coords="18,16,171,73" href="../Imgs/Apple.png" alt="rectangulo"> <br>
+              &nbsp; &lt;area shape="circle" coords="263,55,36" href="../Imgs/css_logo.png" alt="circulo"> <br>
+              &nbsp; &lt;area shape="poly" coords="163,91,213,141,127,141" href="../Imgs/Orange.png" alt="poligono"> <br>
+              &lt;/map> <br>
+          </div>
+      </div>
+      <details> <!-- Atributos -->
+        <summary>Atributos...</summary>
+          shape=""    (RECT, CIRCLE, POLY) <br>
+          coords=""   (RECT(izq, sup, der, inf), CIRCLE(centro-x, centro-y, redia), POLY(x1, y1, x2, y2, ..., xN, yN)) <br>
+          href=""     (URL al apuntar) <br>
+          nohref=""   (indica q este area no tiene enlace) <br>
+      </details>
     </fieldset>
 
-    <div class="borders"> <!-- Listas -->
-      <h2 class="subtitulo">Listas</h2>
-      <div class="flex borders">
-        <!-- desordenada -->
-        <div>
-          <h3 class="subtitles">Desordenadas &lt;ul&gt;</h3>
-          <ul>
-            <li type="disc">Disc</li>
-            <li type="circle">Circle</li>
-            <li type="square">Square</li>
-          </ul>
-          <div class="codigo">
-            &lt;ul> <br>
+    <!-- Listas -->
+    <fieldset class="flex">
+      <legend> <h2>Listas</h2> </legend>
+
+      <!-- Lista desordenada -->
+      <div>
+        <h3 class="subtitles">Desordenada &lt;ul&gt;</h3>
+        <ul>
+          <li type="disc">Disc</li>
+          <li type="circle">Circle</li>
+          <li type="square">Square</li>
+        </ul>
+        <div class="codigo">
+          &lt;ul> <br>
             &nbsp; &lt;li type="disc"> Disc &lt;/li> <br>
             &nbsp; &lt;li type="circle"> Circle &lt;/li> <br>
             &nbsp; &lt;li type="square"> Square &lt;/li> <br>
-            &lt;/ul>
-          </div>
+          &lt;/ul>
         </div>
-
-        <hr>
-
-        <!-- Ordenada -->
-        <div>
-          <h3 class="subtitles">Ordenada &lt;ol&gt;</h3>
-          <ol>
-            <li type="1">Numeros (1).</li>
-            <li type="a">Letras (a-A).</li>
-            <li type="I">Num romanos (i-I).</li>
-          </ol>
-          <div class="codigo">
-            &lt;ol> <br>
+      </div>
+      <hr>
+        
+      <!-- Lista  Ordenada -->
+      <div>
+        <h3 class="subtitles">Ordenada &lt;ol&gt;</h3>
+        <ol>
+          <li type="1">Numeros (1).</li>
+          <li type="a">Letras (a-A).</li>
+          <li type="I">Num romanos (i-I).</li>
+        </ol>
+        <div class="codigo">
+          &lt;ol> <br>
             &nbsp; &lt;li type="1"> Numeros (1). &lt;/li> <br>
             &nbsp; &lt;li type="a"> Letras (a-A). &lt;/li> <br>
             &nbsp; &lt;li type="I">Num romanos (i-I). &lt;/li> <br>
-            &lt;/ol>
-          </div>
-        </div>
-
-        <hr>
-
-        <!-- Listas descriptivas -->
-        <div>
-          <h3 class="subtitles">Listas descriptivas</h3>
-          <dl> &#60;dl>
-            <dt> &#60;dt> Texto a detallar.
-            <dd> &#60;dd> Texto descriptivo... &#60;/dd></dd>
-            &#60;/dt>
-          </dl> &#60;/dl>
+          &lt;/ol>
         </div>
       </div>
-    </div>
+      <hr>
+      
+      <!-- Lista descriptiva -->
+      <div>
+        <h3 class="subtitles">Descriptiva &lt;dl&gt;</h3>
+        <dl>
+          <dt>Texto a detallar.
+            <dd> Texto descriptivo...</dd>
+          </dt>
+        </dl>
+        <br>
 
-    <div class="borders"> <!-- Tabla -->
-      <h2 class="subtitulo"> Tabla</h2>
-      <table border="2">
-        <caption>Colores</caption>
-        <tr>
-          <td bgcolor="red">Rojo</td>
-          <td>Azul</td>
-          <td>Verde</td>
-          <td rowspan="2">Violeta</td>
-        </tr>
-        <tr>
-          <td>Amarillo</td>
-          <td colspan="2">Naranja</td>
-        </tr>
-      </table>
-
-      <details>
-        <summary>Mostrar Código</summary>
         <div class="codigo">
-          <pre>
-                    &lt;table border="2">
-                    &lt;caption> Colores &lt;/caption>
-                        &lt;tr>
-                            &lt;td bgcolor="red">Rojo &lt;/td>
-                            &lt;td>Azul &lt;/td>
-                            &lt;td>Verde &lt;/td>
-                            &lt;td rowspan="2">Violeta &lt;/td>
-                        &lt;/tr>
-                        &lt;tr> 
-                            &lt;td>Amarillo &lt;/td>
-                            &lt;td colspan="2">Naranja &lt;/td>
-                        &lt;/tr>
-                    &lt;/table>
-                </pre>
+          &#60;dl> <br>
+            &nbsp; &#60;dt> Texto a detallar. <br>
+              &nbsp; &nbsp; &#60;dd> Texto descriptivo... &#60;/dd></dd> <br>
+              &nbsp; &#60;/dt> <br>
+          &#60;/dl>
         </div>
-      </details>
+      </div>
+    </fieldset>
 
+    <!-- Tabla -->
+    <fieldset class="flex">
+      <legend> <h2> Tabla</h2> </legend>
 
-      <!-- 
-                Atributos: BORDER, CELLPADDING, CELLSPACING.
-                    VALING = alinear verticalmente. (top, bottom, middle)
-                    ALING = alinear horizontalmente. (right, left, center)
+      <div>
+        <br>
+        <table border="2" style="width: 300px; height: 100px;">
+          <caption>Colores</caption>
+          <tr>
+            <td bgcolor="red">Rojo</td>
+            <td>Azul</td>
+            <td>Verde</td>
+            <td rowspan="2">Violeta</td>
+          </tr>
+          <tr>
+            <td>Amarillo</td>
+            <td colspan="2">Naranja</td>
+          </tr>
+        </table>
 
-                -->
+        <p>
+          Atributos: BORDER, CELLPADDING, CELLSPACING. <br>
+            VALING = alinear verticalmente. (top, bottom, middle) <br>
+            ALING = alinear horizontalmente. (right, left, center) <br>
+        </p>
+      </div>
 
+      <div class="codigo">
+        &lt;table border="2">  <br>
+          &nbsp; &lt;caption> Colores &lt;/caption> <br>
+          &nbsp; &lt;tr> <br>
+            &nbsp; &nbsp; &lt;td bgcolor="red">Rojo &lt;/td> <br>
+            &nbsp; &nbsp; &lt;td>Azul &lt;/td> <br>
+            &nbsp; &nbsp; &lt;td>Verde &lt;/td> <br>
+            &nbsp; &nbsp; &lt;td rowspan="2">Violeta &lt;/td> <br>
+          &nbsp; &lt;/tr> <br>
+          &nbsp; &lt;tr>  <br>
+            &nbsp; &nbsp; &lt;td>Amarillo &lt;/td> <br>
+            &nbsp; &nbsp; &lt;td colspan="2">Naranja &lt;/td> <br>
+          &nbsp; &lt;/tr> <br>
+        &lt;/table> <br>
+      </div>
+    </fieldset>
 
-    </div>
+    <!-- Links -->
+    <fieldset>
+      <legend> <h2> Links </h2> </legend>
 
-    <div class="borders"> <!-- Links -->
-      <h2 class="subtitulo"> Links </h2>
-      <dt><b> Colores en &#60body>:</b></dt>
+      <!-- Link Externo: -->
+      <dt> <h3>Link Externo:</h3> </dt>
       <dd>
-        <u>link:</u> no visitados. <br>
-        <u>vlink:</u> visitados. <br>
-        <u>alink:</u> al activarlos. <br>
-      </dd> <br>
-
-      <dt>
-        <b><u>Link Externo: </u></b> <br>
-      </dt>
-      <dd>
-        <a href="https://nikitox24.github.io/Main/" target="_blank">
-          Mi Pag Web
-        </a> <br>
+        <a href="https://nikitox24.github.io/Main/" target="_blank"> Mi Pag Web... </a> <br>
         <!-- Código -->
         <code>
-                    <span>&lt;a</span> <font color="purple">href=</font>"<u>https://nikitox24.github.io/Main/#section</u>"
-                    <font color="purple">target=</font>"_blank"<span>></span>
-                    Mi Pag Web
-                    <span>&lt;/a></span>
-                </code>
-        <!-- Código -->
-      </dd> <br> <br>
-      <dt>
-        <b><u> Link Interno:</u> </b> <br>
-      </dt>
+          <span>&lt;a</span> <font color="purple">href=</font>"<u>https://ejemplo.com/#section</u>" <font color="purple">target=</font>"_blank"<span>></span>
+          Texto del link
+          <span>&lt;/a></span>
+        </code>
+      </dd> 
+      <br> <hr>
+
+
+      <!-- Link Interno: -->
+      <dt> <h3>Link Interno:</h3> </dt>
       <dd>
         <a href="../index.html">ir a index</a> <br>
         <!-- Código -->
         <code>
-                    <span>&lt;a</span> <font color="purple">href=</font>"<u>../index.html</u>"<span>></span> ir a index<span>&lt;/a></span>
-                </code>
-        <!-- Código -->
+          <span>&lt;a</span> <font color="purple">href=</font>"<u>../index.html</u>"<span>></span> ir a index<span>&lt;/a></span>
+        </code>
 
         <br><br>
         <a name="inicio"> ("Este es el principio del documento") </a> <br>
@@ -390,251 +395,197 @@
         Acceder: <code> &lt;a href="#principio" &lt;/a></code>
       </dd>
 
-    </div>
+      <br> <hr>
+      
+      <!-- Colores -->
+      <dt><h3> Colores en &#60body>:</h3></dt>
+      <dd>
+        <u>link:</u> no visitados. <br>
+        <u>vlink:</u> visitados. <br>
+        <u>alink:</u> al activarlos. <br>
+      </dd> <br>
+    </fieldset>
 
-    <div class="borders"> <!-- Input Types -->
-      <h2 class="titulo"> Input Types </h2>
-      <br>
+    <!-- Tipos de Entradas -->
+    <fieldset>
+      <legend> <h2> Tipos de Entradas </h2> </legend>
 
-      <!-- Text -->
+      <!-- Text / number -->
       <div class="div">
         <div class="box boxizq">
-          < input type="<span>text</span>">
+          &lt; input type="<span>text</span> / <span>number</span>">
         </div>
         <div class="box boxder">
           <input type="text" placeholder="Texto">
+          <input type="number" name="" id="" placeholder="123">
         </div>
       </div>
 
-      <!-- Password -->
+      <!-- Radio / Checkbox -->
       <div class="div">
         <div class="box boxizq">
-          < input type="<span>password</span>">
+          &lt; input type="<span>radio</span> / <span>checkbox</span>">
+        </div>
+        <div class="boxder">
+          <div class="box boxder">
+            <input type="checkbox" />
+            <input type="checkbox" checked />
+            <input type="checkbox" />
+          </div>
+          <div class="box boxizq">
+            <input type="radio" name="siono" value="no" />NO
+            <input type="radio" name="siono" value="yes" checked />YES
+          </div>
+        </div>
+      </div>
+
+      <!-- Button / Color -->
+      <div class="div">
+        <div class="box boxizq">
+          &lt; input type="<span>button</span> / <span>image</span> / <span>color</span>">
+        </div>
+        <div class="boxder">
+          <div class="box boxizq">
+            <input type="button" value="Botón">
+          </div>
+          <div class="box boxder">
+            <input type="color" name="" id="" value="#00fff0">
+          </div>
+            <input type="image" src="../Imgs/login-button.png" alt="Login" width="50px">
+        </div>
+      </div>
+
+      <!-- Email / Password -->
+      <div class="div">
+        <div class="box boxizq">
+          &lt; input type="<span>email</span> / <span>password</span>">
         </div>
         <div class="box boxder">
+          <input type="email" name="" id="" placeholder="ejemplo@hotmail.com">
           <input type="password" placeholder="********">
         </div>
       </div>
 
-
+      <!-- File -->
       <div class="div">
         <div class="box boxizq">
-          < input type="<span>radio</span>">
-        </div>
-        <div class="box boxder">
-          <input type="radio" name="siono" value="no" />NO
-          <input type="radio" name="siono" value="yes" checked />YES
-        </div>
-      </div>
-
-      <div class="div">
-        <div class="box boxizq">
-          < input type="<span>checkbox</span>">
-        </div>
-        <div class="box boxder">
-          <input type="checkbox" />
-          <input type="checkbox" checked />
-          <input type="checkbox" />
-        </div>
-      </div>
-
-      <div class="div">
-        <div class="box boxizq">
-          < input type="<span>button</span>">
-        </div>
-        <div class="box boxder">
-          <input type="button" value="  Botón  ">
-        </div>
-      </div>
-
-      <div class="div">
-        <div class="box boxizq">
-          < input type="<span>color</span>">
-        </div>
-        <div class="box boxder">
-          <input type="color" name="" id="" value="#00fff0">
-        </div>
-      </div>
-
-      <div class="div">
-        <div class="box boxizq">
-          < input type="<span>email</span>">
-        </div>
-        <div class="box boxder">
-          <input type="email" name="" id="" placeholder="ejemplo@hotmail.com">
-        </div>
-      </div>
-
-      <div class="div">
-        <div class="box boxizq">
-          < input type="<span>file</span>">
+          &lt; input type="<span>file</span>">
         </div>
         <div class="box boxder">
           <input type="file" name="" id="">
         </div>
       </div>
 
+      <!-- Range -->
       <div class="div">
         <div class="box boxizq">
-          < input type="<span>hidden</span>">
-        </div>
-        <div class="box boxder">
-          <input type="hidden" name="">
-        </div>
-      </div>
-
-      <div class="div">
-        <div class="box boxizq">
-          < input type="<span>image</span>">
-        </div>
-        <div class="box boxder">
-          <input type="image" src="../Imgs/login-button.png" alt="Login" width="50px">
-        </div>
-      </div>
-
-      <div class="div">
-        <div class="box boxizq">
-          < input type="<span>number</span>">
-        </div>
-        <div class="box boxder">
-          <input type="number" name="" id="" placeholder="123">
-        </div>
-      </div>
-
-      <div class="div">
-        <div class="box boxizq">
-          < input type="<span>range</span>">
+          &lt; input type="<span>range</span>">
         </div>
         <div class="box boxder">
           <input type="range" name="" id="">
         </div>
       </div>
 
+      <!-- Search -->
       <div class="div">
         <div class="box boxizq">
-          < input type="<span>search</span>">
+          &lt; input type="<span>search</span>">
         </div>
         <div class="box boxder">
           <input type="search" name="" id="" placeholder="Buscar">
         </div>
       </div>
 
+      <!-- Tel -->
       <div class="div">
         <div class="box boxizq">
-          < input type="<span>tel</span>">
+          &lt; input type="<span>tel</span>">
         </div>
         <div class="box boxder">
           <input type="tel" name="" id="" placeholder="123-456-789">
         </div>
       </div>
 
+      <!-- Time / Date / Datetime-local -->
       <div class="div">
         <div class="box boxizq">
-          < input type="<span>time</span>">
+          &lt; input type="<span>time</span>/<span>date</span>/<span>datetime-local</span>">
         </div>
         <div class="box boxder">
           <input type="time" name="" id="">
-        </div>
-      </div>
-
-      <div class="div">
-        <div class="box boxizq">
-          < input type="<span>date</span>">
-        </div>
-        <div class="box boxder">
           <input type="date" name="" id="">
-        </div>
-      </div>
-
-      <div class="div">
-        <div class="box boxizq">
-          < input type="<span>datetime-local</span>">
-        </div>
-        <div class="box boxder">
           <input type="datetime-local" name="" id="">
         </div>
       </div>
 
+      <!-- Week / Month -->
       <div class="div">
         <div class="box boxizq">
-          < input type="<span>week</span>">
+          &lt; input type="<span>week</span> / <span>month</span>">
         </div>
         <div class="box boxder">
           <input type="week" name="" id="">
-        </div>
-      </div>
-
-      <div class="div">
-        <div class="box boxizq">
-          < input type="<span>month</span>">
-        </div>
-        <div class="box boxder">
           <input type="month" name="" id="">
         </div>
       </div>
 
+      <!-- Url -->
       <div class="div">
         <div class="box boxizq">
-          < input type="<span>url</span>">
+          &lt; input type="<span>url</span>">
         </div>
         <div class="box boxder">
           <input type="url" name="" id="" placeholder="https://www.google.com">
         </div>
       </div>
 
+      <!-- Submit / Reset -->
       <div class="div">
         <div class="box boxizq">
-          < input type="<span>submit</span>">
+          &lt; input type="<span>submit</span> / <span>reset</span>">
         </div>
         <div class="box boxder">
           <input type="submit" name="" id="">
-        </div>
-      </div>
-
-      <div class="div">
-        <div class="box boxizq">
-          < input type="<span>reset</span>">
-        </div>
-        <div class="box boxder">
           <input type="reset" name="" id="">
         </div>
       </div>
-    </div>
+
+    </fieldset>
+  
   </div> <br>
 
   <!-- HTML5 -->
   <div class="borders">
     <h1 class="titulo">HTML5</h1>
-    <div class="borders"> <!-- Estructura de Pag -->
+
+    <!-- Estructura de Pag -->
+    <fieldset>
+
       <h2 class="subtitulo"> Estructura de Pag </h2>
       <img src="https://api.sololearn.com/DownloadFile?id=2471" alt="" height="250px">
-    </div>
+    </fieldset>
 
-    <div class="borders flex"> <!-- Audio & Video -->
+    <!-- Audio & Video -->
+    <fieldset>
       <section id="Audio">
         <h3 class="subtitles"> Audio </h3>
-
         <<span>audio <font color="purple"> src="<font color="green">audio.mp3</font>" controls autoplay loop</font> > <
             /audio</span>> <br>
             <!-- type: mp3, ogg, wav -->
             <audio src="audio.mp3" controls style="height: 50px; width: 240px;">
               Texto por si el navegador no soporta audio.
             </audio>
-            <!--                 
+            <!--
                 <audio controls autoplay loop>
-                <source src="audio.mp3" type="audio/mp3"> 
+                <source src="audio.mp3" type="audio/mp3">
                 </audio> -->
             <br>
       </section>
-
       <hr>
-
       <section id="Video">
         <h3 class="subtitles"> Video </h3>
-
         <<span>video <font color="purple"> src="<font color="green">video.mp4</font>" controls autoplay loop</font>> <
             /video</span>> <br>
-
             <!-- type: mp4, webM, ogg -->
             <video controls autoplay loop>
               <source src="video.mp4" type="video/mp4">
@@ -642,7 +593,7 @@
               Este navegador no soporta audio.
             </video>
       </section>
-    </div>
+    </fieldset>
 
     <div class="borders"> <!-- Barra de Progreso -->
 
