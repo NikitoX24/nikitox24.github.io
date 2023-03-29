@@ -50,6 +50,9 @@ legend {
 h3{
   text-decoration: underline;
 }
+font.azul{
+  color: blue;
+}
 
 .titulo {
   text-align: center;

@@ -560,91 +560,64 @@
 
     <!-- Estructura de Pag -->
     <fieldset>
-
-      <h2 class="subtitulo"> Estructura de Pag </h2>
+      <legend> <h2> Estructura de Pag </h2> </legend>
       <img src="https://api.sololearn.com/DownloadFile?id=2471" alt="" height="250px">
     </fieldset>
 
     <!-- Audio & Video -->
     <fieldset>
-      <section id="Audio">
-        <h3 class="subtitles"> Audio </h3>
-        <<span>audio <font color="purple"> src="<font color="green">audio.mp3</font>" controls autoplay loop</font> > <
-            /audio</span>> <br>
-            <!-- type: mp3, ogg, wav -->
-            <audio src="audio.mp3" controls style="height: 50px; width: 240px;">
-              Texto por si el navegador no soporta audio.
-            </audio>
-            <!--
-                <audio controls autoplay loop>
-                <source src="audio.mp3" type="audio/mp3">
-                </audio> -->
-            <br>
-      </section>
+      <legend> <h2>Audio & Video</h2> </legend>
+      <h3> Audio </h3>
+        &lt;<span>audio <font color="purple"> src="<font color="green">audio.mp3</font>" controls autoplay loop</font> > &lt;/audio</span>> <br>
+        <audio src="audio.mp3" controls style="height: 50px; width: 240px;">
+          Texto por si el navegador no soporta audio.
+        </audio>
+        <br>
       <hr>
-      <section id="Video">
-        <h3 class="subtitles"> Video </h3>
-        <<span>video <font color="purple"> src="<font color="green">video.mp4</font>" controls autoplay loop</font>> <
-            /video</span>> <br>
-            <!-- type: mp4, webM, ogg -->
-            <video controls autoplay loop>
-              <source src="video.mp4" type="video/mp4">
-              <!-- <source src="video.ogg" type="video/ogg"> -->
-              Este navegador no soporta audio.
-            </video>
-      </section>
+      <h3> Video </h3>
+        &lt;<span>video <font color="purple"> src="<font color="green">video.mp4</font>" controls autoplay loop</font>> &lt;/video</span>> <br>
+      <video controls autoplay loop>
+          <source src="video.mp4" type="video/mp4">
+          Este navegador no soporta audio.
+        </video>
+    </fieldset>
+    
+    <!-- Barra de Progreso -->
+    <fieldset>
+      <legend> <h2> Barra de Progreso </h2> </legend>
+      <span> progress <font color="purple"> min="<font color="green">0</font>" max="<font color="green">100</font>"value="<font color="green">35</font>>  </font> /progress</span>><br>
+      <progress min="0" max="100" value="75" style="height: 24px; width: 300px;"></progress>
     </fieldset>
 
-    <div class="borders"> <!-- Barra de Progreso -->
+    <!-- Almacenamiento -->
+    <fieldset>
+      <legend> <h2> Almacenamiento (API) </h2> </legend>
+      <span>sessionStorage():</span> Se borra al cerrar el navegador del usuario <br>
+      <span>localStorage():</span> Permanece en el disco del usuario sin expirar <br> <br>
 
-      <section id="Barra de Progreso">
-        <h3 class="subtitles"> Barra de Progreso </h3>
+      &lt;<span>script</span>> <br>
+        &nbsp; <font class="azul">Guardar=</font>&nbsp;localStorage.SetItem("Clave1", "Valor1");<br>
+        &nbsp; <font class="azul">Cargar=</font>&nbsp;localStorage.GetItem("Clave1");<br>
+        &nbsp; <font class="azul">Borrar=</font>&nbsp;localStorage.removeItem("Clave1");<br>
+        &nbsp; <font class="azul">Limpiar=</font>&nbsp;localStorage.clear();<br>
+      &lt;<span>/script</span>>
 
-         <span> progress <font color="purple"> min="<font color="green">0</font>" max="<font color="green">100</font>"
-            value="<font color="green">35</font>>  </font> /progress 
-        </span>><br>
-              <progress min="0" max="100" value="75" style="height: 24px; width: 300px;"></progress>
-      </section>
-    </div>
+      <script>
+        localStorage.setItem("Clave1", "Valor1");
+      </script>
+    </fieldset>
 
-    <div class="borders"> <!-- Almacenamiento -->
-      <section id="Almacenamiento (API)">
-        <h3 class="subtitles"> Almacenamiento (API) </h3>
-        <div>
-          <p>
-            <span>sessionStorage():</span> Se borra al cerrar el navegador del usuario <br>
-            <span>localStorage():</span> Permanece en el disco del usuario sin expirar <br> <br>
+    <!-- Geo-Localizacion -->
+    <fieldset> 
+      <legend> <h2> Geo-Localizacion (API) </h2> </legend>
+      &lt;<span>script</span>> <br>
+        &nbsp; navigator.geolocation.getCurrentPosition();<br>
+      &lt;<span>/script</span>>
+    </fieldset>
 
-            <<span>script</span>> <br>
-              <font style="color: blue;">Guardar=</font>&nbsp;localStorage.SetItem("Clave1", "Valor1");<br>
-              <font style="color: blue;">Cargar=</font>&nbsp;localStorage.GetItem("Clave1");<br>
-              <font style="color: blue;">Borrar=</font>&nbsp;localStorage.removeItem("Clave1");<br>
-              <font style="color: blue;">Limpiar=</font>&nbsp;localStorage.clear();<br>
-              <<span>/script</span>>
-
-                <script>
-                  localStorage.setItem("Clave1", "Valor1");
-                </script>
-
-          </p>
-        </div>
-      </section>
-    </div>
-
-    <div class="borders"> <!-- Geo-Localizacion -->
-      <section id="Geo-Localizacion (API)">
-        <h3 class="subtitles"> Geo-Localizacion (API) </h3>
-        <<span>script</span>> <br>
-          &nbsp; navigator.geolocation.getCurrentPosition();
-          <!-- parametros: ShowLocation(obl), ErrorHandler(opc), Options(ops) -->
-          <br>
-          <<span>/script</span>>
-      </section>
-    </div>
-
-    <div class="borders"> <!-- Dragg & Drop -->
-      <section id="Dragg & Drop (API)">
-        <h3 class="subtitles"> Dragg & Drop (API) </h3>
+    <!-- Dragg & Drop -->
+    <fieldset>
+      <legend> <h2> Dragg & Drop (API) </h2> </legend>
         <!-- <img draggable="true" src="../Imgs/cat1.png" alt="" height="100px"/> -->
         <!-- https://www.sololearn.com/learning/1014/2214/4405/1 -->
 
@@ -666,27 +639,24 @@
 
         <div class="flex">
           <div id="box" ondrop="drop(event)" ondragover="allowDrop(event)" style="border:1px solid black; 
-                    width:150px; height:150px; text-align: center; 
-                    color: grey; background-color: #b9bebe;">
+            width:150px; height:150px; text-align: center; 
+            color: grey; background-color: #b9bebe;">
           </div>
 
-          <img id="image" src="../Imgs/cat1.png" draggable="true" ondragstart="drag(event)" width="150" height="150"
-            alt="" />
+          <img id="image" src="../Imgs/cat1.png" draggable="true" ondragstart="drag(event)" width="150" height="150" alt="" />
         </div>
-      </section>
-    </div>
+    </fieldset>
   </div>
 
   <!-- Canvas & SVG -->
   <div class="borders"> 
     <h1 class="titulo">CANVAS & SVG</h1>
 
-    <section id="Canvas (JS)">
-      <div class="borders">
-        <h2 class="subtitles"> CANVAS (JS) </h2>
+    <fieldset>
+      <legend> <h2> CANVAS (JS) </h2> </legend>
 
-        
-        Canvas: <br>
+      <details>
+        <summary>Canvas...(más info)...</summary>
         - Los elementos se dibujan programáticamente <br>
         - Los dibujos se realizan con píxeles <br>
         - Las animaciones no están incorporadas <br>
@@ -695,7 +665,7 @@
         - No hay soporte para controladores de eventos <br>
         - Puede guardar la imagen resultante como .png o .jpg <br>
         - Muy adecuado para los juegos de gráficos intensivos <br> <br>
-
+      </details>
 
         Canvas es solo contenedor grafico (para mostrar requiere JavaScript) <br>
         x0 y0: comienza arriba izq. <br><br>
@@ -848,10 +818,9 @@
 
         </div><!-- canvas transform -->
 
-      </div><!-- canvas -->
-    </section>
+    </fieldset>
 
-    <section id="SVG (Graficos Vectorales Escaleables)">
+    <fieldset>
       <div class="borders">
         <h2 class="subtitles"> SVG (Graficos Vectorales Escaleables) </h2>
 
@@ -1045,7 +1014,7 @@
               < /svg>
           </pre></code>
       </div>
-    </section>
+    </fieldset>
 
   </div>
 
