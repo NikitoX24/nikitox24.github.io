@@ -25,7 +25,6 @@
     <a href="CssCheatSheet.html"><img src="../Imgs/css.png" alt="css" class="icons filtrogris"></a>
     <a href="JSCheatSheet.html"><img src="../Imgs/js.png" alt="js" class="icons filtrogris"></a>
   </div>
-
   <style>
     .borders {
       background-color: rgba(255, 0, 0, .05);
@@ -568,14 +567,14 @@
     <fieldset>
       <legend> <h2>Audio & Video</h2> </legend>
       <h3> Audio </h3>
-        &lt;<span>audio <font color="purple"> src="<font color="green">audio.mp3</font>" controls autoplay loop</font> > &lt;/audio</span>> <br>
+        &lt;<span>audio <font class="purp"> src="<font class="green">audio.mp3</font>" controls autoplay loop</font> > &lt;/audio</span>> <br>
         <audio src="audio.mp3" controls style="height: 50px; width: 240px;">
           Texto por si el navegador no soporta audio.
         </audio>
         <br>
       <hr>
       <h3> Video </h3>
-        &lt;<span>video <font color="purple"> src="<font color="green">video.mp4</font>" controls autoplay loop</font>> &lt;/video</span>> <br>
+        &lt;<span>video <font class="purp"> src="<font class="green">video.mp4</font>" controls autoplay loop</font>> &lt;/video</span>> <br>
       <video controls autoplay loop>
           <source src="video.mp4" type="video/mp4">
           Este navegador no soporta audio.
@@ -585,7 +584,7 @@
     <!-- Barra de Progreso -->
     <fieldset>
       <legend> <h2> Barra de Progreso </h2> </legend>
-      <span> progress <font color="purple"> min="<font color="green">0</font>" max="<font color="green">100</font>"value="<font color="green">35</font>>  </font> /progress</span>><br>
+      <span> progress <font class="purp"> min="<font class="green">0</font>" max="<font class="green">100</font>"value="<font class="green">35</font>>  </font> /progress</span>><br>
       <progress min="0" max="100" value="75" style="height: 24px; width: 300px;"></progress>
     </fieldset>
 
@@ -667,156 +666,157 @@
         - Muy adecuado para los juegos de gráficos intensivos <br> <br>
       </details>
 
-        Canvas es solo contenedor grafico (para mostrar requiere JavaScript) <br>
-        x0 y0: comienza arriba izq. <br><br>
+      Canvas es solo contenedor grafico (para mostrar requiere JavaScript) <br>
+      x0 y0: comienza arriba izq. <br><br>
 
-        <b>
-          < canvas id="canvas1" width="200" height="100"> </ canvas>
-        </b><br>
-        El Id es necesario para identificarlo en JS. <br><br>
+      html:
+      <div class="codigo">
+        <span> &lt;canvas</span> <font class="purp">id=</font>"canvas1" <font class="purp">width=</font>"200" <font class="purp">height=</font>"100"<span>></span>
+        <br>(El Id es necesario para identificarlo en JS).
+      </div>
+      javascript:
+      <div class="codigo">
+        &lt;<span>script</span>> <br>
+         &nbsp; <font class="purp">var</font> can = document.<font class="azul">getElementById</font>("<font class="green">canvas1</font>"); <br>
+         &nbsp; <font class="purp">var</font> ctx = can.<font class="azul">getContext</font>("<font class="green">2d</font>"); <br>
+        &lt;<span>/script</span>>
+      </div>
+      <hr>
 
-        <b>
-          < _script_> <br>
-            var can = document.getElementById("canvas1"); <br>
-            var ctx = can.getcontext("2d"); <br>
-            < /_script_>
-        </b>
-        <hr>
+      <!-- fillRect(x, y, w, h) -->
+      <h3 class="subtitulo"> fillRect(x, y, w, h) </h3>
+      <div class="boxizq">
+        <canvas id="canvas2" width="70" height="70"> </canvas>
+        <script>
+          var c = document.getElementById("canvas2");
+          var ctx2 = c.getContext("2d");
+          ctx2.fillRect(10, 10, 60, 60); // x, y, w, h 
+        </script>
+      </div>
+      <code><pre>
+        &lt;canvas id="canvas2" width="70" height="70"> &lt;/canvas> 
+        &lt;script>
+          var c = document.getElementById ("canvas2");
+          var ctx2 = c.getContext("2d");
+          ctx2.fillRect(10,10,60,60); // x, y, w, h 
+        &lt;/script>
+      </pre></code>
+      <hr>
 
-        <!-- fillRect(x, y, w, h) -->
-        <h3 class="subtitulo"> fillRect(x, y, w, h) </h3>
-        <div class="boxizq">
-          <canvas id="canvas2" width="70" height="70"> </canvas>
+      <!-- fillStyle(rbga) Gradiante -->
+      <h3 class="subtitulo"> fillStyle(rbga) Gradiante </h3>
+      <div class="boxizq">
+        <canvas id="canvas3" width="70" height="100"> </canvas>
+        <script>
+          var canvas = document.getElementById("canvas3");
+          var ctx3 = canvas.getContext("2d");
+          ctx3.fillStyle = "rgba(0, 200, 0, 1)";
+          ctx3.fillRect(10, 10, 60, 60);
+        </script>
+      </div>
+      <code><pre>
+        &lt;canvas id="canvas3" width="70" height="70"> &lt;/canvas> 
+        &lt;script_>
+          var canvas = document.getElementById("canvas3");
+          var ctx3 = canvas.getContext("2d");
+          ctx3.fillStyle = "rgba(0, 200, 0, 1)";
+          ctx3.fillRect (10, 10, 60, 60);
+        &lt;/script>
+        </pre></code>
+      <hr>
+
+      <!-- Otros... -->
+      <details>
+        <summary>Otros...</summary>
+        <pre>
+                Draw a Line
+                moveTo(x,y): Defines the starting point of the line.
+                lineTo(x,y): Defines the ending point of the line.
+                
+                Draw a Circle
+                beginPath(): Starts the drawing.
+                arc(x,y,r,start,stop): Sets the parameters of the circle.
+                stroke(): Ends the drawing.
+                
+                Gradients
+                createLinearGradient(x,y,x1,y1): Creates a linear gradient.
+                createRadialGradient(x,y,r,x1,y1,r1): Creates a radial/circular gradient.
+                
+                Drawing Text on the Canvas
+                Font: Defines the font properties for the text.
+                fillText(text,x,y): Draws "filled" text on the canvas.
+                strokeText(text,x,y): Draws text on the canvas (no fill).
+            </pre>
+      </details>
+      <hr>
+      <hr>
+
+
+      <h1 class="subtitulo"> Canvas Transform JS: </h1>
+      <div>
+
+        <!-- Texto script -->
+        <h3 class="subtitles"> Texto script </h3>
+        <div class="ejemplo">
+          <canvas id="canvas4" width="100" height="50"> </canvas>
           <script>
-            var c = document.getElementById("canvas2");
-            var ctx2 = c.getContext("2d");
-            ctx2.fillRect(10, 10, 60, 60); // x, y, w, h 
+            var c = document.getElementById("canvas4");
+            var ctx = c.getContext("2d");
+            ctx.font = "bold 22px Tahoma";
+            ctx.textAlign = "texto";
+            ctx.fillText("texto", 10, 30);
           </script>
         </div>
-        <code><pre>
-              < canvas id="canvas2" width="70" height="70"> < /canvas> 
-              < _script_>
-                  var c = document.getElementById ("canvas2");
-                  var ctx2 = c.getContext("2d");
-                  ctx2.fillRect(10,10,60,60); // x, y, w, h 
-              < /_script_>
-          </pre></code>
         <hr>
 
-        <!-- fillStyle(rbga) Gradiante -->
-        <h3 class="subtitulo"> fillStyle(rbga) Gradiante </h3>
-        <div class="boxizq">
-          <canvas id="canvas3" width="70" height="100"> </canvas>
+        <!-- Translate script -->
+        <h3 class="subtitle"> Translate script </h3>
+        <div class="ejemplo">
+          <canvas id="canvas5" width="400" height="100"> </canvas>
           <script>
-            var canvas = document.getElementById("canvas3");
-            var ctx3 = canvas.getContext("2d");
-            ctx3.fillStyle = "rgba(0, 200, 0, 1)";
-            ctx3.fillRect(10, 10, 60, 60);
+            var c = document.getElementById("canvas5");
+            var ctx = c.getContext("2d");
+            ctx.font = "bold 22px Tahoma";
+            ctx.textAlign = "texto2";
+            ctx.fillText("texto2", 10, 30);
+            ctx.translate(100, 50);
+            ctx.fillText("texto2 translated", 10, 30);
           </script>
         </div>
-        <code><pre>
-              < canvas id="canvas3" width="70" height="70"> < /canvas> 
-              < _script_>
-                  var canvas = document.getElementById("canvas3");
-                  var ctx3 = canvas.getContext("2d");
-                  ctx3.fillStyle = "rgba(0, 200, 0, 1)";
-                  ctx3.fillRect (10, 10, 60, 60);
-              < /script>
-          </pre></code>
-        <hr>
-
-        <!-- Otros... -->
-        <details>
-          <summary>Otros...</summary>
-          <pre>
-                  Draw a Line
-                  moveTo(x,y): Defines the starting point of the line.
-                  lineTo(x,y): Defines the ending point of the line.
-                  
-                  Draw a Circle
-                  beginPath(): Starts the drawing.
-                  arc(x,y,r,start,stop): Sets the parameters of the circle.
-                  stroke(): Ends the drawing.
-                  
-                  Gradients
-                  createLinearGradient(x,y,x1,y1): Creates a linear gradient.
-                  createRadialGradient(x,y,r,x1,y1,r1): Creates a radial/circular gradient.
-                  
-                  Drawing Text on the Canvas
-                  Font: Defines the font properties for the text.
-                  fillText(text,x,y): Draws "filled" text on the canvas.
-                  strokeText(text,x,y): Draws text on the canvas (no fill).
-              </pre>
-        </details>
-        <hr>
         <hr>
 
 
-        <h1 class="subtitulo"> Canvas Transform JS: </h1>
-        <div>
+        <!-- Rotate script -->
+        <h3 class="subtitle"> Rotate script </h3>
+        <div class="ejemplo">
+          <canvas id="canvas6" width="400" height="150"> </canvas>
+          <script>
+            var c = document.getElementById("canvas6");
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = "#FF0000";
+            ctx.fillRect(10, 10, 100, 100);
+            ctx.rotate((Math.PI / 180) * 25);  //rotate 25 degrees. (usa radianes, no grados)
+            ctx.fillStyle = "#0000FF";
+            ctx.fillRect(10, 10, 100, 100);
+          </script>
+        </div>
+        <hr>
 
-          <!-- Texto script -->
-          <h3 class="subtitles"> Texto script </h3>
-          <div class="ejemplo">
-            <canvas id="canvas4" width="100" height="50"> </canvas>
-            <script>
-              var c = document.getElementById("canvas4");
-              var ctx = c.getContext("2d");
-              ctx.font = "bold 22px Tahoma";
-              ctx.textAlign = "texto";
-              ctx.fillText("texto", 10, 30);
-            </script>
-          </div>
-          <hr>
+        <!-- Scale script -->
+        <h3 class="subtitle"> Scale script </h3>
+        <div class="ejemplo">
+          <canvas id="canvas7" width="400" height="100"> </canvas>
+          <script>
+            var c = document.getElementById("canvas7");
+            var ctx = c.getContext("2d");
+            ctx.font = "bold 22px Tahoma";
+            ctx.scale(1.5, 4);
+            ctx.fillText("after scale", 0, 20);
+          </script>
+        </div>
 
-          <!-- Translate script -->
-          <h3 class="subtitle"> Translate script </h3>
-          <div class="ejemplo">
-            <canvas id="canvas5" width="400" height="100"> </canvas>
-            <script>
-              var c = document.getElementById("canvas5");
-              var ctx = c.getContext("2d");
-              ctx.font = "bold 22px Tahoma";
-              ctx.textAlign = "texto2";
-              ctx.fillText("texto2", 10, 30);
-              ctx.translate(100, 50);
-              ctx.fillText("texto2 translated", 10, 30);
-            </script>
-          </div>
-          <hr>
-
-
-          <!-- Rotate script -->
-          <h3 class="subtitle"> Rotate script </h3>
-          <div class="ejemplo">
-            <canvas id="canvas6" width="400" height="150"> </canvas>
-            <script>
-              var c = document.getElementById("canvas6");
-              var ctx = c.getContext("2d");
-              ctx.fillStyle = "#FF0000";
-              ctx.fillRect(10, 10, 100, 100);
-              ctx.rotate((Math.PI / 180) * 25);  //rotate 25 degrees. (usa radianes, no grados)
-              ctx.fillStyle = "#0000FF";
-              ctx.fillRect(10, 10, 100, 100);
-            </script>
-          </div>
-          <hr>
-
-          <!-- Scale script -->
-          <h3 class="subtitle"> Scale script </h3>
-          <div class="ejemplo">
-            <canvas id="canvas7" width="400" height="100"> </canvas>
-            <script>
-              var c = document.getElementById("canvas7");
-              var ctx = c.getContext("2d");
-              ctx.font = "bold 22px Tahoma";
-              ctx.scale(1.5, 4);
-              ctx.fillText("after scale", 0, 20);
-            </script>
-          </div>
-
-
-        </div><!-- canvas transform -->
+      </div><!-- canvas transform -->
+    </div>
 
     </fieldset>
 

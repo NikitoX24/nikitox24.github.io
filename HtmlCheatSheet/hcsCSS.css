@@ -12,8 +12,7 @@ main {
   margin: auto;
 }
 span {
-  color: rgb(255, 0, 0);
-  /* font-size: medium; */
+  color: rgb(212, 0, 0);
   text-shadow: .2px .2px black;
 }
 pre {
@@ -47,11 +46,18 @@ fieldset {
 legend {
   line-height: 0px;
 }
+
 h3{
   text-decoration: underline;
 }
 font.azul{
-  color: blue;
+  color: rgb(0, 62, 219);
+}
+font.purp{
+  color: rgb(174, 0, 174);
+}
+font.green{
+  color: green;
 }
 
 .titulo {
