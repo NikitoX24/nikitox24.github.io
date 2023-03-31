@@ -67,6 +67,10 @@ font.green{
   text-decoration: underline;
   line-height: 6px;
 }
+.subText{
+  font-size: smaller; 
+  text-transform: none
+}
 .ejoverflow {
   height: 110px;
   overflow: auto;
@@ -132,7 +136,7 @@ font.green{
 }
 
 /* CSS */
-p.numbers {
+.numbers {
   font-size: 20px;
   font-weight: 1000;
   text-decoration: underline;

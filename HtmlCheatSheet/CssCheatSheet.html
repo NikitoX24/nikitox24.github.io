@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es-AR">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +9,6 @@
 </head>
 
 <body>
-
 <!-- Menú -->
 <header>
   <menu-component></menu-component>
@@ -25,7 +23,6 @@
     <a href="CssCheatSheet.html"><img src="../Imgs/css.png" alt="css" class="icons"></a>
     <a href="JSCheatSheet.html"><img src="../Imgs/js.png" alt="js" class="icons filtrogris"></a>
   </div>
-
   <style>
     .borders {
       background-color: rgba(0, 0, 255, .05);
@@ -35,24 +32,23 @@
 
   <!-- CSS -->
   <div class="borders">
-    <h1 class="titulo"> CSS </h1>
-    <h3 class="titulo"> Cascading Style Sheets </h3>
+    <h1 class="titulo"> CSS <font class="subText">(Cascading Style Sheets)</font> </h1>
 
     <!-- (Basics) -->
     <div class="borders">
       <h2 class="titulo"> Basics </h2>
 
       <pre>
-                <<span>style</span>>
-                    .<font color="green">selector</font>{
-                        <font color="blue">prepiedad</font>: <font color="orange">valor</font>;
-                    }
-                <<span>/style</span>>
-            </pre>
+          <<span>style</span>>
+              .<font color="green">selector</font>{
+                  <font color="blue">prepiedad</font>: <font color="orange">valor</font>;
+              }
+          <<span>/style</span>>
+      </pre>
 
       <!-- Selector -->
       <div class="borders">
-        <p class="numbers"> Selector</p>
+        <h2 class="numbers"> Selector</h2>
 
         <p class="selector"> Parrafo con un selector. </p>
         <style>
@@ -63,12 +59,12 @@
 
         <div class="codigo">
           <pre>
-                <<span>p</span> <font color="purple">class</font>="<font color="green">selector</font>"> Parrafo con un selector. &lt;/<span>p</span>>
-                
-                .<font color="orange">selector</font>{
-                    color: darkred;
-                }
-                </pre>
+              <<span>p</span> <font color="purple">class</font>="<font color="green">selector</font>"> Parrafo con un selector. &lt;/<span>p</span>>
+              
+              .<font color="orange">selector</font>{
+                  color: darkred;
+              }
+              </pre>
         </div>
 
       </div>
@@ -80,11 +76,11 @@
         <!-- Code -->
         <div class="codigo">
           <pre>
-                <<span>p</span> <font color="purple">id=</font>"<font color="green">idpurple</font>">Este es un parrafo con un id.&lt;/p> <br>
-                #idpurple{
-                    color:purple;
-                }
-            </pre>
+              <<span>p</span> <font color="purple">id=</font>"<font color="green">idpurple</font>">Este es un parrafo con un id.&lt;/p> <br>
+              #idpurple{
+                  color:purple;
+              }
+          </pre>
         </div>
         <!-- Code -->
         <!-- style -->
@@ -111,15 +107,15 @@
         <!-- Code -->
         <div class="codigo">
           <pre>
-                #idpurple2{
-                    color:purple;
-                    background-color: rgba(128, 128, 128, 0.356);
-                }
-                #idpurple2 .first em{
-                    color:pink;
-                    background-color: rgba(100, 95, 95, 0.551);
-                }
-                </div></pre>
+              #idpurple2{
+                  color:purple;
+                  background-color: rgba(128, 128, 128, 0.356);
+              }
+              #idpurple2 .first em{
+                  color:pink;
+                  background-color: rgba(100, 95, 95, 0.551);
+              }
+              </div></pre>
           <style>
             #idpurple2 {
               color: purple;
@@ -146,10 +142,10 @@
             This is a paragraph shown in serif font.
           </p>
           <code>
-                    p.serif {
-                        font-family: "Times New Roman", Times, serif;
-                    }
-                </code>
+                  p.serif {
+                      font-family: "Times New Roman", Times, serif;
+                  }
+              </code>
 
           <!-- Font-Style -->
           <p class="numbers">5) Font-Style</p>
@@ -157,10 +153,10 @@
             This is a paragraph in italic style.
           </p>
           <code>
-                    p.italic{
-                        font-style: italic; /* normal, italic, oblique */
-                    }
-                </code>
+                  p.italic{
+                      font-style: italic; /* normal, italic, oblique */
+                  }
+              </code>
 
           <!-- Font-Weight -->
           <p class="numbers">6) Font-Weight</p>
@@ -168,10 +164,10 @@
             This is a paragraph in bolder.
           </p>
           <code>
-                    p.weight{
-                        font-weight: 900; /* lighter(100), normal(400), bold(700), bolder(900) */
-                    }
-                </code>
+                  p.weight{
+                      font-weight: 900; /* lighter(100), normal(400), bold(700), bolder(900) */
+                  }
+              </code>
 
           <!-- Font-Variant -->
           <p class="numbers">7) Font-Variant</p>
@@ -179,10 +175,10 @@
             This is a paragraph in small-caps.
           </p>
           <code>
-                    p.variant{
-                        font-variant: small-caps; /* normal, small-caps, inherit */
-                    }
-                </code>
+                  p.variant{
+                      font-variant: small-caps; /* normal, small-caps, inherit */
+                  }
+              </code>
 
           <!-- Font-Color -->
           <p class="numbers">8) Font-Color</p>
@@ -190,10 +186,10 @@
             This is a paragraph in red.
           </p>
           <code>
-                    p.colored{
-                        color: red; /* red, #F00, rgb(255,0,0) */
-                    }
-                </code>
+                  p.colored{
+                      color: red; /* red, #F00, rgb(255,0,0) */
+                  }
+              </code>
 
           <!-- style -->
           <style>
@@ -334,17 +330,17 @@
           <!-- code -->
           <div class="codigo">
             <pre>
-                .main {
-                    height: 150px; width: 450px;
-                    background-color: rgba(128, 128, 128, 0.398);
-                    display: inline-table;
-                } <br>
-                .paragraph {
-                    text-align: center;
-                    display: table-cell;
-                    vertical-align: middle;
-                }
-                </pre>
+              .main {
+                  height: 150px; width: 450px;
+                  background-color: rgba(128, 128, 128, 0.398);
+                  display: inline-table;
+              } <br>
+              .paragraph {
+                  text-align: center;
+                  display: table-cell;
+                  vertical-align: middle;
+              }
+              </pre>
           </div>
           <!-- code -->
         </div>
@@ -499,9 +495,9 @@
             pero será ignorado, ya que usamos el valor
             nowrap. <br>
             <code>
-                    white-space: nowrap; <br>
-                    <u>Valores</u>: pre, pre-line, pre-wrap.
-                </code>
+                  white-space: nowrap; <br>
+                  <u>Valores</u>: pre, pre-line, pre-wrap.
+              </code>
           </p>
           <style>
             p.witespacing {
@@ -531,10 +527,10 @@
               }
             </style>
             <code>
-                        p.border{ <br>
-                            <u>border</u>: 5px solid green; <br>
-                        }
-                    </code>
+                      p.border{ <br>
+                          <u>border</u>: 5px solid green; <br>
+                      }
+                  </code>
             <hr>
 
             <h2>Border-Style</h2>
@@ -612,25 +608,25 @@
               </style>
             </div><br>
             <code>
-                        div.wh{
-                            border: 5px solid green;
-                            width: 100px;
-                            height: 90px;
-                        }
-                    </code>
+                      div.wh{
+                          border: 5px solid green;
+                          width: 100px;
+                          height: 90px;
+                      }
+                  </code>
           </div>
         </div>
 
         <!-- Background (BODY) -->
         <!-- 
-                /* Background-Body */
-                body{
-                    background-color: beige;
-                    background-image: url("../Imgs/TileW.jpg");
-                    background-repeat: repeat; /* repeat-x, repeat-y, no-repeat, inherit */
-                    background-attachment: fixed; /* fixel, scroll, inherit */
-                }
-            -->
+              /* Background-Body */
+              body{
+                  background-color: beige;
+                  background-image: url("../Imgs/TileW.jpg");
+                  background-repeat: repeat; /* repeat-x, repeat-y, no-repeat, inherit */
+                  background-attachment: fixed; /* fixel, scroll, inherit */
+              }
+          -->
 
         <!-- Background-Image -->
         <div class="borders">
@@ -646,12 +642,12 @@
             }
           </style>
           <code>
-                    p.background-image{ <br>
-                        background-image: url("../Imgs/banner_orange.png"); <br>
-                        background-repeat: no-repeat; <br>
-                    } <br>
-                    <u>valores</u>: repeat-x, repeat-y, no-repeat, inherit.
-                </code>
+                  p.background-image{ <br>
+                      background-image: url("../Imgs/banner_orange.png"); <br>
+                      background-repeat: no-repeat; <br>
+                  } <br>
+                  <u>valores</u>: repeat-x, repeat-y, no-repeat, inherit.
+              </code>
         </div>
 
         <!-- List-Style-Type -->
@@ -831,10 +827,10 @@
             </a>
           </p>
           <code>
-                    a:hover{
-                        color: red;
-                    }
-                </code>
+                  a:hover{
+                      color: red;
+                  }
+              </code>
           <details>
             <summary>Selectors & Propiedades...</summary>
             a:link : define el estilo de los enlaces normales no visitados <br>
@@ -872,10 +868,10 @@
             }
           </style> <br>
           <code>
-                    span.mousee{
-                        cursor: help;
-                }
-                </code> <br><br>
+                  span.mousee{
+                      cursor: help;
+              }
+              </code> <br><br>
 
           <details>
             <summary>Valores...</summary>
@@ -931,59 +927,59 @@
           </style>
           <div class="codigo">
             <pre>
-                span.block{
-                    display: block;
-                }
-                p.inline{
-                    display: inline;
-                }
-            </div></code>
-            </div>
-        
-            <!-- Visibility -->
-            <div class="borders">
-            <p class="numbers">29) Visibility</p>
-            <div class="ejemplo"> <u>Codigos:</u><br>
-                < h1 class="none"> Este texto no se mostrará, ya que establecemos el valor en ninguno. </ h1>
-                < p> El título de este párrafo no se muestra, ya que establecemos el valor en ninguno. </ p>
-            
-                < h4> Este es un texto </ h4>
-                < div class = "hidden">
-                Este texto no se mostrará en el navegador.
-                </ div>
-                < p>
-                    El espacio sobre este párrafo está vacío porque 
-                    la visibilidad del elemento div está configurada como oculta.
-                </ p>
-            </div> <br>
-            <h1 class="none"> Este texto no se mostrará, ya que establecemos el valor en ninguno. </h1>
-                <p> El título de este párrafo no se muestra, ya que establecemos el valor en ninguno.</p>
-            
-                <h4> Este es un texto </h4>
-                <div class = "hidden">
-                Este texto no se mostrará en el navegador.
-                </div>
-                <p>
-                    El espacio sobre este párrafo está vacío porque 
-                    la visibilidad del elemento div está configurada como oculta.
-                </p>
-            <style>
-                h1.none{
-                    display: none;
-                }
-                div.hidden{
-                    visibility: hidden;
-                }
-            </style> <br>
-            <u>Code:</u>
-            <code><pre>
-                h1.none{
-                    display: none;
-                }
-                div.hidden{
-                    visibility: hidden;
-                }
-            </pre></code>
+              span.block{
+                  display: block;
+              }
+              p.inline{
+                  display: inline;
+              }
+          </div></code>
+          </div>
+      
+          <!-- Visibility -->
+          <div class="borders">
+          <p class="numbers">29) Visibility</p>
+          <div class="ejemplo"> <u>Codigos:</u><br>
+              < h1 class="none"> Este texto no se mostrará, ya que establecemos el valor en ninguno. </ h1>
+              < p> El título de este párrafo no se muestra, ya que establecemos el valor en ninguno. </ p>
+          
+              < h4> Este es un texto </ h4>
+              < div class = "hidden">
+              Este texto no se mostrará en el navegador.
+              </ div>
+              < p>
+                  El espacio sobre este párrafo está vacío porque 
+                  la visibilidad del elemento div está configurada como oculta.
+              </ p>
+          </div> <br>
+          <h1 class="none"> Este texto no se mostrará, ya que establecemos el valor en ninguno. </h1>
+              <p> El título de este párrafo no se muestra, ya que establecemos el valor en ninguno.</p>
+          
+              <h4> Este es un texto </h4>
+              <div class = "hidden">
+              Este texto no se mostrará en el navegador.
+              </div>
+              <p>
+                  El espacio sobre este párrafo está vacío porque 
+                  la visibilidad del elemento div está configurada como oculta.
+              </p>
+          <style>
+              h1.none{
+                  display: none;
+              }
+              div.hidden{
+                  visibility: hidden;
+              }
+          </style> <br>
+          <u>Code:</u>
+          <code><pre>
+              h1.none{
+                  display: none;
+              }
+              div.hidden{
+                  visibility: hidden;
+              }
+          </pre></code>
           </div>
 
           <!-- posicionamiento -->
@@ -1050,11 +1046,11 @@
               }
             </style>
             <code>
-                img.imgfloatr{
-                    height: 40px;
-                    float: left;
-                }
-            </code>
+              img.imgfloatr{
+                  height: 40px;
+                  float: left;
+              }
+          </code>
             <hr>
 
             <!-- Clearing the Float -->
@@ -1093,13 +1089,13 @@
               }
             </style>
             <code><pre>
-                .floating{
-                    float: right;
-                }
-                .clearing{
-                    clear: both; /* both, right, left */
-                }
-            </pre></code>
+              .floating{
+                  float: right;
+              }
+              .clearing{
+                  clear: both; /* both, right, left */
+              }
+          </pre></code>
           </div>
 
           <!-- Z-Index -->
@@ -1130,26 +1126,26 @@
               }
             </style>
             <code><pre>
-                .bluee { 
-                    z-index: 3;
-                    position: relative;
-                    background-color: blue;
-                    margin-bottom: 15px;
-                    width: 120px;
-                    height: 120px;
-                    color: #FFF;
-                }
-                .redd {
-                    z-index: 2;
-                    position: relative;
-                    background-color: red;
-                    width: 120px;
-                    height: 120px;
-                    color: #FFF;
-                    margin-top: -50px;
-                    margin-left: 50px;
-                }
-            </pre></code>
+              .bluee { 
+                  z-index: 3;
+                  position: relative;
+                  background-color: blue;
+                  margin-bottom: 15px;
+                  width: 120px;
+                  height: 120px;
+                  color: #FFF;
+              }
+              .redd {
+                  z-index: 2;
+                  position: relative;
+                  background-color: red;
+                  width: 120px;
+                  height: 120px;
+                  color: #FFF;
+                  margin-top: -50px;
+                  margin-left: 50px;
+              }
+          </pre></code>
             <hr>
 
             <!-- OverFlow -->
@@ -1170,13 +1166,13 @@
               </style>
             </div>
             <code><pre>
-                div.overflow{
-                    width: 150px;
-                    height: 150px;
-                    background-color: lightblue;
-                    overflow: scroll; /* visible, scroll, hidden, auto */ 
-                }
-            </pre></code>
+              div.overflow{
+                  width: 150px;
+                  height: 150px;
+                  background-color: lightblue;
+                  overflow: scroll; /* visible, scroll, hidden, auto */ 
+              }
+          </pre></code>
           </div>
         </div>
 
@@ -1363,10 +1359,10 @@
               }
             </style>
             <code>
-                    .TextShadow{ <br>
-                        text-shadow: 1px 1px 5px blue, -3px -3px 5px grey; <br>
-                    } <br>
-                </code>
+                  .TextShadow{ <br>
+                      text-shadow: 1px 1px 5px blue, -3px -3px 5px grey; <br>
+                  } <br>
+              </code>
           </div>
 
           <!-- Pseudo-Clases -->
@@ -1385,11 +1381,11 @@
                 }
               </style>
               <code>
-                        #parent p:first-child { <br>
-                            color: green; <br>
-                            text-decoration: underline; <br>
-                        }
-                    </code>
+                      #parent p:first-child { <br>
+                          color: green; <br>
+                          text-decoration: underline; <br>
+                      }
+                  </code>
             </div>
           </div>
 
@@ -1408,37 +1404,37 @@
             <h1 class="textfirstline">The following example demonstrates how to use the ::first-line element to add
               special effect to the first line of elements in the document.</h6>
               <code>
-                    .textfirstline::first-line { <br>
-                        color: #589432; <br>
-                    } <br>
-                </code>
+                  .textfirstline::first-line { <br>
+                      color: #589432; <br>
+                  } <br>
+              </code>
               <hr>
 
               <h3 class="subtitulo"> >>First-Letter</h3>
               <h2 class="firstletter"> La primera letra es de otro color</h2>
               <code>
-                    .firstletter::first-letter{ <br>
-                        background-color: #589432; <br>
-                    }
-                </code>
+                  .firstletter::first-letter{ <br>
+                      background-color: #589432; <br>
+                  }
+              </code>
               <hr>
 
               <h3 class="subtitulo"> >>Selection</h3>
               <h2 class="seleccioname">Selecciona una parte de este texto para marcarlo de otro color</h2>
               <code>
-                    .seleccioname::first-letter{ <br>
-                        background-color: #589432; <br>
-                    }
-                </code>
+                  .seleccioname::first-letter{ <br>
+                      background-color: #589432; <br>
+                  }
+              </code>
               <hr>
 
               <h3 class="subtitulo"> >>Before</h3>
               <p class="insertImageBeforeText">insert Image Before Text</p>
               <code>
-                    .insertImageBeforeText::before{ <br>
-                    content: url("../Imgs/loguito.png"); <br>
-                }
-                </code>
+                  .insertImageBeforeText::before{ <br>
+                  content: url("../Imgs/loguito.png"); <br>
+              }
+              </code>
               <style>
                 .textfirstline::first-line {
                   color: #589432;
@@ -1475,19 +1471,19 @@
             <details>
               <summary>Code...</summary>
               <code>
-                        .wordwrapnormal{ <br>
-                            border: 1px solid black; <br>
-                            width: 120px; <br>
-                            height: 100px; <br>
-                            word-wrap: normal; <br>
-                        } <br>
-                        .wordwrapbreak{ <br>
-                            border: 1px solid black; <br>
-                            width: 120px; <br>
-                            height: 100px; <br>
-                            word-wrap: break-word; <br>
-                        }
-                    </code>
+                      .wordwrapnormal{ <br>
+                          border: 1px solid black; <br>
+                          width: 120px; <br>
+                          height: 100px; <br>
+                          word-wrap: normal; <br>
+                      } <br>
+                      .wordwrapbreak{ <br>
+                          border: 1px solid black; <br>
+                          width: 120px; <br>
+                          height: 100px; <br>
+                          word-wrap: break-word; <br>
+                      }
+                  </code>
             </details>
 
             <style>
@@ -1514,19 +1510,19 @@
             <details>
               <summary>Code...</summary>
               <code>
-                        @font-face { <br>
-                        font-family: Delicious;  <br>
-                        src: url('../Imgs/Delicious-Roman.otf');  <br>
-                    }  <br>
-                    @font-face {  <br>
-                        font-family: Delicious;  <br>
-                        font-weight: bold;  <br>
-                        src: url('../Imgs/Delicious-Bold.otf');  <br>
-                    } <br>
-                    h1.custfont{ <br>
-                        font-family: Delicious, sans-serif;  <br>
-                    }
-                    </code>
+                      @font-face { <br>
+                      font-family: Delicious;  <br>
+                      src: url('../Imgs/Delicious-Roman.otf');  <br>
+                  }  <br>
+                  @font-face {  <br>
+                      font-family: Delicious;  <br>
+                      font-weight: bold;  <br>
+                      src: url('../Imgs/Delicious-Bold.otf');  <br>
+                  } <br>
+                  h1.custfont{ <br>
+                      font-family: Delicious, sans-serif;  <br>
+                  }
+                  </code>
             </details>
             <style>
               @font-face {
@@ -1664,9 +1660,9 @@
           <div class="borders">
             <p class="numbers">48) Degradados Radiales</p>
             <pre>
-            background: radial-gradient(position, shape or size, color-stops); 
-            position: top, left.. 0% 0%(sup izq), 50% 50%(medio)
-            </pre>
+          background: radial-gradient(position, shape or size, color-stops); 
+          position: top, left.. 0% 0%(sup izq), 50% 50%(medio)
+          </pre>
             <table>
               <td>
                 <div class="first48 degrad">Ellipse (Default)</div>
@@ -1893,13 +1889,13 @@
             <details>
               <summary>code...</summary>
               <pre>
-                div.transit {
-                    transition: width 2s;
-                }
-                div.transit:hover {
-                    width: 350px;
-                }
-                </pre>
+              div.transit {
+                  transition: width 2s;
+              }
+              div.transit:hover {
+                  width: 350px;
+              }
+              </pre>
             </details>
             <hr><br>
 
@@ -2143,45 +2139,45 @@
               div.ExampleColCha {
                 animation: colorchange2 3s ease-in 1s infinite reverse;
                 /*   esría así:
-                    animation-name: colorchange2;
-                    animation-duration: 3s;
-                    animation-timing-function: ease-in;
-                    animation-delay: 1s;
-                    animation-iteration-count: infinite;
-                    animation-direction: reverse; 
-                    */
+                  animation-name: colorchange2;
+                  animation-duration: 3s;
+                  animation-timing-function: ease-in;
+                  animation-delay: 1s;
+                  animation-iteration-count: infinite;
+                  animation-direction: reverse; 
+                  */
               }
             </style>
             <details>
               <summary>Code...</summary>
               <pre>
-                    div{
-                        animation-duration: 2s;
-                        animation-iteration-count: infinite;
-                    }
-                    @keyframes colorchange2 {
-                        from { width: 0px; }
-                        to { width: 250px; }
-                    }
-                </pre>
+                  div{
+                      animation-duration: 2s;
+                      animation-iteration-count: infinite;
+                  }
+                  @keyframes colorchange2 {
+                      from { width: 0px; }
+                      to { width: 250px; }
+                  }
+              </pre>
             </details>
             <details>
               <summary>Info...</summary>
               <pre>
-                (animation-timing-function: *)
-                    ease (default) - slow start, then fast, then end slowly 
-                    linear - same speed from start to end
-                    ease-in - slow start
-                    ease-out - slow end
-                    ease-in-out - slow start and end
-                    cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier Function
+              (animation-timing-function: *)
+                  ease (default) - slow start, then fast, then end slowly 
+                  linear - same speed from start to end
+                  ease-in - slow start
+                  ease-out - slow end
+                  ease-in-out - slow start and end
+                  cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier Function
 
-                (animation-direction: *)
-                    normal - the default value, which means it plays forward from 0 % to 100%.
-                    reverse - plays the keyframe in an opposite direction from 100 % to 0%
-                    alternate - the animation first runs forward, then backward, then forward.
-                    alternate-reverse - the animation first runs backward, then forward, then backward.
-                </pre>
+              (animation-direction: *)
+                  normal - the default value, which means it plays forward from 0 % to 100%.
+                  reverse - plays the keyframe in an opposite direction from 100 % to 0%
+                  alternate - the animation first runs forward, then backward, then forward.
+                  alternate-reverse - the animation first runs backward, then forward, then backward.
+              </pre>
             </details>
 
             <!-- 3D rotation -->
@@ -2388,8 +2384,8 @@
             </style>
           </div>
         </div>
-      </div>
-      <script type="text/javascript" src="../MenuJS.js"></script>
+  </div>
+  <script type="text/javascript" src="../MenuJS.js"></script>
 </main>
 </body>
 
