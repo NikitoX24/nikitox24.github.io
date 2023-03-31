@@ -26,2367 +26,2342 @@
   <style>
     .borders {
       background-color: rgba(0, 0, 255, .05);
-      box-shadow: inset 0 40px 0 0 rgba(0, 0, 255, 0.2);
+      box-shadow: inset 0 40px 0 0 rgba(0, 119, 255, 0.164);
     }
   </style>
 
   <!-- CSS -->
+  <h1 class="titulo"> CSS <font class="subText">(Cascading Style Sheets)</font> </h1>
+
+  <!-- Conceptos Básicos -->
   <div class="borders">
-    <h1 class="titulo"> CSS <font class="subText">(Cascading Style Sheets)</font> </h1>
+    <h1 class="titulo"> Conceptos Básicos </h1>
 
-    <!-- (Basics) -->
-    <div class="borders">
-      <h2 class="titulo"> Basics </h2>
+    <!-- Sintaxis -->
+    <fieldset> 
+      <legend> <h2>Sintaxis</h2></legend>
+      <div class="codigo">
+        &lt;<span>style</span>> <br>
+          &nbsp;.<font class="selector">selector</font>{ <br>
+            &nbsp;&nbsp;<font class="prop">prepiedad</font>: <font class="orange">valor</font>; <br>
+          &nbsp;} <br>
+        &lt;<span>/style</span>>
+      </div>
+    </fieldset>
 
-      <pre>
-          <<span>style</span>>
-              .<font color="green">selector</font>{
-                  <font color="blue">prepiedad</font>: <font color="orange">valor</font>;
-              }
-          <<span>/style</span>>
-      </pre>
-
-      <!-- Selector -->
-      <div class="borders">
-        <h2 class="numbers"> Selector</h2>
-
-        <p class="selector"> Parrafo con un selector. </p>
-        <style>
-          .selector {
-            color: darkred;
-          }
-        </style>
-
-        <div class="codigo">
-          <pre>
-              <<span>p</span> <font color="purple">class</font>="<font color="green">selector</font>"> Parrafo con un selector. &lt;/<span>p</span>>
-              
-              .<font color="orange">selector</font>{
-                  color: darkred;
-              }
-              </pre>
-        </div>
-
+    <!-- Selector -->
+    <fieldset>
+      <legend> <h2> Selector (Class)</h2> </legend>
+      <sub>html:</sub>
+      <div class="codigo">
+        &lt;<span>p</span> <u><font class="purp">class</font>="<font class="green">selector</font>"</u> > Parrafo con un selector. &lt;/<span>p</span>>
       </div>
 
-      <!-- Id -->
-      <div class="borders">
-        <p class="numbers"> 2) Id </p>
-        <p id="idpurple">Este es un parrafo con un id.</p>
-        <!-- Code -->
-        <div class="codigo">
-          <pre>
-              <<span>p</span> <font color="purple">id=</font>"<font color="green">idpurple</font>">Este es un parrafo con un id.&lt;/p> <br>
-              #idpurple{
-                  color:purple;
-              }
-          </pre>
-        </div>
-        <!-- Code -->
-        <!-- style -->
-        <style>
-          #idpurple {
-            color: purple;
-          }
-        </style>
-        <!-- style -->
+      <sub>css:</sub>
+      <div class="codigo">
+        .<font class="selector">selector</font>{ <br>
+          &nbsp;<font class="prop">color</font>: <font class="orange">darked</font>; <br>
+        }
       </div>
+    </fieldset>
 
-      <!-- Descendent Selectors -->
-      <div class="borders">
-        <p class="numbers"> 3) Selector descendiente </p>
-
-        <div id="idpurple2">
-          Esto está dentro de un div con id "idpurple2".
-          <p class="first">Esto es un parrafo con selector "first" y con un <em> "em"</em>.</p>
-          <p> Esto es otro parrafo dentro del mismo div. </p>
-        </div>
-        <p class="first"> Esto es un parrafo fuera del div, pero con selector"first" y un <em>"em"</em>.</p>
-        <p> Este es otro parrafo fuera del div y sin selector. </p>
-
-        <!-- Code -->
-        <div class="codigo">
-          <pre>
-              #idpurple2{
-                  color:purple;
-                  background-color: rgba(128, 128, 128, 0.356);
-              }
-              #idpurple2 .first em{
-                  color:pink;
-                  background-color: rgba(100, 95, 95, 0.551);
-              }
-              </div></pre>
-          <style>
-            #idpurple2 {
-              color: purple;
-              background-color: rgba(128, 128, 128, 0.356);
-            }
-
-            #idpurple2 .first em {
-              color: pink;
-              background-color: rgba(100, 95, 95, 0.551);
-            }
-          </style>
-        </div>
+    <!-- Id -->
+    <fieldset>
+      <legend> <h2> Id </h2> </legend>
+      <sub>html:</sub>
+      <div class="codigo">
+        &lt;<span>p</span> <u><font class="purp">id=</font>"<font color="green">idpurple</font>"</u> >Este es un parrafo con un id.&lt;<span>/p</span>>
       </div>
-
-      <!-- (Text) -->
-      <div class="borders">
-        <h2 class="titulo"> Text </h2>
-
-        <!-- Fonts -->
-        <div class="borders">
-          <!-- Font-Family -->
-          <p class="numbers">4) Font-Family</p>
-          <p class="serif">
-            This is a paragraph shown in serif font.
-          </p>
-          <code>
-                  p.serif {
-                      font-family: "Times New Roman", Times, serif;
-                  }
-              </code>
-
-          <!-- Font-Style -->
-          <p class="numbers">5) Font-Style</p>
-          <p class="italic">
-            This is a paragraph in italic style.
-          </p>
-          <code>
-                  p.italic{
-                      font-style: italic; /* normal, italic, oblique */
-                  }
-              </code>
-
-          <!-- Font-Weight -->
-          <p class="numbers">6) Font-Weight</p>
-          <p class="weight">
-            This is a paragraph in bolder.
-          </p>
-          <code>
-                  p.weight{
-                      font-weight: 900; /* lighter(100), normal(400), bold(700), bolder(900) */
-                  }
-              </code>
-
-          <!-- Font-Variant -->
-          <p class="numbers">7) Font-Variant</p>
-          <p class="variant">
-            This is a paragraph in small-caps.
-          </p>
-          <code>
-                  p.variant{
-                      font-variant: small-caps; /* normal, small-caps, inherit */
-                  }
-              </code>
-
-          <!-- Font-Color -->
-          <p class="numbers">8) Font-Color</p>
-          <p class="colored">
-            This is a paragraph in red.
-          </p>
-          <code>
-                  p.colored{
-                      color: red; /* red, #F00, rgb(255,0,0) */
-                  }
-              </code>
-
-          <!-- style -->
-          <style>
-            /* 4) Font Family */
-            p.serif {
-              font-family: "Times New Roman", Times, serif;
-            }
-
-            /* 5) Font Style */
-            p.italic {
-              font-style: italic;
-              /* normal, italic, oblique */
-            }
-
-            /* 6) Font Weight (Grosor) */
-            p.weight {
-              font-weight: 900;
-              /* lighter(100), normal(400), bold(700), bolder(900) */
-            }
-
-            /* 7) Font Variant */
-            p.variant {
-              font-variant: small-caps;
-              /* normal, small-caps, inherit */
-            }
-
-            /* 8) Font Color */
-            p.colored {
-              color: red;
-              /* red, #F00, rgb(255,0,0) */
-            }
-          </style>
-          <!-- style -->
-        </div>
-
-        <!-- Text-Align (Horizontal)-->
-        <div class="borders">
-          <p class="numbers">9) Text-Align (Horizontal)</p>
-          <div style="width: 500px;">
-            <p class="center">This paragraph is aligned to center</p>
-          </div>
-          <!-- style -->
-          <style>
-            p.center {
-              text-align: center;
-              /* left, right, center, justify */
-              background-color: rgba(128, 128, 128, 0.216);
-            }
-          </style>
-          <!-- style -->
-
-          <!-- Text-Align (Vertical) -->
-          <p class="numbers">10) Text-Align (Vertical)</p>
-          <table border="1" cellpadding="2" cellspacing="0" style="height: 150px;">
-            <tr>
-              <td class="top">Top</td>
-              <td class="middle">Middle</td>
-              <td class="bottom">Bottom</td>
-            </tr>
-          </table>
-          <!-- style -->
-          <style>
-            td.top {
-              vertical-align: top;
-            }
-
-            td.middle {
-              vertical-align: middle;
-            }
-
-            td.bottom {
-              vertical-align: bottom;
-            }
-          </style>
-          <!-- style -->
-        </div>
-
-        <!-- Text-Align Property (Vertical) -->
-        <div class="borders">
-          <p class="numbers">11) Text-Align Property (Vertical)</p>
-
-          <p> This is an <span class="baseline"> <b> inline text </b></span> example.</p>
-          <code> span.baseline { vertical-align: baseline; } </code>
-          <hr>
-
-          <p> This is a <span class="sub"><b>sub line text</b></span> example.</p>
-          <code> span.sub { vertical-align: sub;} </code>
-          <hr>
-
-          <p> This is a <span class="super"><b>super line text</b></span> example.</p>
-          <code> span.super { vertical-align: super; } </code>
-          <hr>
-
-          <p> This is a <span class="pixel"><b>pixel</b></span> example.</p>
-          <code> span.pixel { vertical-align: -10px; /* px(pixels), pt(points), cm(centimeters), %(percentage) */ } </code>
-          <style>
-            span.baseline {
-              vertical-align: baseline;
-            }
-
-            span.sub {
-              vertical-align: sub;
-            }
-
-            span.super {
-              vertical-align: super;
-            }
-
-            span.pixel {
-              vertical-align: -10px;
-              /* px(pixels), pt(points), cm(centimeters), %(percentage) */
-            }
-          </style>
-        </div>
-
-        <!-- Text-Align Property Div (Vertical) -->
-        <div class="borders">
-          <p class="numbers">12) Text-Align Property Div (Vertical)</p>
-          <div class="main">
-            <div class="paragraph">
-              Aligned to the middle of div.
-            </div>
-          </div> <br>
-          <style>
-            .main {
-              height: 100px;
-              width: 350px;
-              background-color: rgba(128, 128, 128, 0.398);
-              display: inline-table;
-            }
-
-            .paragraph {
-              text-align: center;
-              display: table-cell;
-              vertical-align: middle;
-            }
-          </style>
-          <!-- code -->
-          <div class="codigo">
-            <pre>
-              .main {
-                  height: 150px; width: 450px;
-                  background-color: rgba(128, 128, 128, 0.398);
-                  display: inline-table;
-              } <br>
-              .paragraph {
-                  text-align: center;
-                  display: table-cell;
-                  vertical-align: middle;
-              }
-              </pre>
-          </div>
-          <!-- code -->
-        </div>
-
-        <!-- Text-decoration -->
-        <div class="borders">
-          <p class="numbers">13) Text-decoration</p>
-
-          <p class="none">This is <b> default</b> style of the text (none). <br>
-            <code> text-decoration: none; </code>
-          </p>
-
-          <p class="inherit">This text <b> inherits</b> the decoration of the parent. <br>
-            <code> text-decoration: inherit; </code>
-          </p>
-
-          <p class="overline">This is <b> overlined </b> text. <br>
-            <code> text-decoration: overline; </code>
-          </p>
-
-          <p class="underline">This is <b> underlined</b> text. <br>
-            <code> text-decoration: underline; </code>
-          </p>
-
-          <p class="line-through">This is <b> lined-through</b> text. <br>
-            <code> text-decoration: line-through; </code>
-          </p>
-
-          <p class="blink">This is <b> blink</b> text. <br>
-            <code> text-decoration: blink; </code>
-          </p>
-
-          <!-- style -->
-          <style>
-            p.none b {
-              text-decoration: none;
-            }
-
-            p.inherit b {
-              text-decoration: inherit;
-            }
-
-            p.overline b {
-              text-decoration: overline;
-            }
-
-            p.underline b {
-              text-decoration: underline;
-            }
-
-            p.line-through b {
-              text-decoration: line-through;
-            }
-
-            p.blink b {
-              text-decoration: blink;
-            }
-
-            /* parpadear (algunos no funciona) */
-          </style>
-          <!-- style -->
-        </div>
-
-        <!-- text-indent (sangria) -->
-        <div class="borders">
-          <p class="numbers">14) text-indent (sangria)</p>
-          <p class="indent">
-            This is an example of
-            <strong>text-indent </strong> property. <br>
-            First line of our text is indented to the right in 60px. <br>
-            Besides pixels you can also use other measurement units,
-            like pt, cm, em, etc. <br>
-            <code> text-indent: 60px; </code>
-          </p>
-          <style>
-            p.indent {
-              text-indent: 60px;
-              /* -60px */
-            }
-          </style>
-        </div>
-
-        <!-- Text-Sadow -->
-        <div class="borders">
-          <p class="numbers">15) Text-Sadow</p>
-          <h1 class="shadowT"> Text-shadow example</h1>
-          <code> text-shadow: 5px 2px 6px grey; <br> (x, y, blur radius, color) Se puede poner mas de una sombra separandola con coma.</code>
-          <hr>
-          <h1 class="blurT"> Text-shadow with blur effect</h1>
-          <code> text-shadow: rgba(0, 0, 255, 1) -1px -1px 0.3em; </code>
-          <style>
-            h1.shadowT {
-              text-shadow: 5px 2px 2px grey;
-              /* (x, y, blur radius, color) Se puede poner mas de una sombra separandola con coma */
-            }
-
-            h1.blurT {
-              text-shadow: rgba(0, 0, 255, 1) -1px -1px 0.3em;
-              /* Internet Explorer 9 and earlier do not support the text-shadow property. */
-            }
-          </style>
-        </div>
-
-        <!-- Text-Transform -->
-        <div class="borders">
-          <p class="numbers">16) Text-Transform</p>
-          <p class="capitalize">
-            el valor "capitalize" transforma el primer carácter de cada palabra en mayúsculas;
-            Todos los demás caracteres no se ven afectados. <br>
-          </p>
-          <code> text-transform: capitalize; <br><u>Valores</u>: capitalize, uppercase, lowercase.</code>
-          <style>
-            p.capitalize {
-              text-transform: capitalize;
-              /* capitalize, uppercase, lowercase */
-            }
-          </style>
-        </div>
-
-        <!-- Text-Spacing -->
-        <div class="borders">
-          <p class="numbers">17) Text-Spacing </p>
-          <div>
-            <p>This paragraph has no additional letter-spacing applied.</p>
-            <hr>
-            <!-- Letter-Spacing -->
-            <p class="lspacing">This paragraph is letter-spaced at 4px.</p>
-            <code> letter-spacing: 4px; </code>
-            <hr>
-            <!-- Word-Spacing -->
-            <p class="wspacing">This paragraph is word-spaced at 30px.</p>
-            <code> word-spacing: 30px; </code>
-          </div>
-          <style>
-            p.lspacing {
-              letter-spacing: 4px;
-              /* px, pt, cm, mm, ( + , - ) */
-            }
-
-            p.wspacing {
-              word-spacing: 30px;
-            }
-          </style>
-        </div>
-
-        <!-- Wite-Spacing -->
-        <div class="borders">
-          <p class="numbers">18) Wite-Spacing</p>
-          <p class="witespacing">
-            Este párrafo tiene varios
-            espacios y un salto de línea,
-            pero será ignorado, ya que usamos el valor
-            nowrap. <br>
-            <code>
-                  white-space: nowrap; <br>
-                  <u>Valores</u>: pre, pre-line, pre-wrap.
-              </code>
-          </p>
-          <style>
-            p.witespacing {
-              white-space: nowrap;
-              /* pre, pre-line, pre-wrap */
-            }
-          </style>
-        </div>
+      <sub>css:</sub>
+      <div class="codigo">
+        #<font class="purp">idpurple</font> { <br>
+          &nbsp;<font class="prop">color</font>: <font class="orange">purple</font>; <br>
+        }
       </div>
+    </fieldset>
 
-      <!-- (Properties) -->
-      <div class="borders">
-        <h2 class="titulo"> Properties </h2>
+    <!-- Descendencias del Selector -->
+    <fieldset>
+      <legend> <p class="numbers"> Descendencias del Selector(class) </p> </legend>
 
-        <div class="borders">
-          <p class="numbers"> 19) Box-Model </p>
-          <!-- Box-Model -->
-          <div>
-            <!-- Box-Border -->
-            <p class="border">This is an example of a solid border.</p>
-            <style>
-              p.border {
-                padding: 10px;
-                /* relleno*/
-                border: 5px solid green;
-                /* tamaño, estilo, color */
-              }
-            </style>
-            <code>
-                      p.border{ <br>
-                          <u>border</u>: 5px solid green; <br>
-                      }
-                  </code>
-            <hr>
-
-            <h2>Border-Style</h2>
-
-            <!-- Border-Style -->
-            <p class="none">none.</p>
-            <p class="dotted">dotted.</p>
-            <p class="dashed">dashed.</p>
-            <p class="double">double.</p>
-            <p class="groove">grooved.</p>
-            <p class="ridge">ridged.</p>
-            <p class="inset">inset.</p>
-            <p class="outset">outset.</p>
-            <p class="hidden">hidden.</p>
-            <hr>
-
-            <style>
-              p.none {
-                border-style: none;
-              }
-
-              p.dotted {
-                border-style: dotted;
-              }
-
-              /* punteado. ( . . . . .) */
-              p.dashed {
-                border-style: dashed;
-              }
-
-              /* discontinua. ( - - - ) */
-              p.double {
-                border-style: double;
-              }
-
-              /* doble borde */
-              p.groove {
-                border-style: groove;
-              }
-
-              /* entrante */
-              p.ridge {
-                border-style: ridge;
-              }
-
-              /* saliente */
-              p.inset {
-                border-style: inset;
-              }
-
-              /* adentro */
-              p.outset {
-                border-style: outset;
-              }
-
-              /* afuera */
-              p.hidden {
-                border-style: hidden;
-              }
-
-              /* oculto */
-            </style>
-
-
-            <!-- Width & Height -->
-            <p class="numbers">20) Width & Height</p>
-            <div class="wh">
-              The total width and height of this element is 100px.
-              <style>
-                div.wh {
-                  border: 5px solid green;
-                  width: 100px;
-                  height: 90px;
-                }
-              </style>
-            </div><br>
-            <code>
-                      div.wh{
-                          border: 5px solid green;
-                          width: 100px;
-                          height: 90px;
-                      }
-                  </code>
-          </div>
-        </div>
-
-        <!-- Background (BODY) -->
-        <!-- 
-              /* Background-Body */
-              body{
-                  background-color: beige;
-                  background-image: url("../Imgs/TileW.jpg");
-                  background-repeat: repeat; /* repeat-x, repeat-y, no-repeat, inherit */
-                  background-attachment: fixed; /* fixel, scroll, inherit */
-              }
-          -->
-
-        <!-- Background-Image -->
-        <div class="borders">
-          <p class="numbers">21) Background-Image </p>
-          <p class="background-image">Imagen de fondo</p>
-          <style>
-            p.background-image {
-              padding: 15px;
-              background-image: url("../Imgs/banner_orange.png");
-              background-repeat: no-repeat;
-              /* repeat-x, repeat-y, no-repeat, inherit */
-              width: 300px;
-            }
-          </style>
-          <code>
-                  p.background-image{ <br>
-                      background-image: url("../Imgs/banner_orange.png"); <br>
-                      background-repeat: no-repeat; <br>
-                  } <br>
-                  <u>valores</u>: repeat-x, repeat-y, no-repeat, inherit.
-              </code>
-        </div>
-
-        <!-- List-Style-Type -->
-        <div class="borders">
-          <p class="numbers">22) List-Style-Type </p>
-          <div class="flex">
-            <div>
-              <ol class="lower-alpha">
-                <li>Red</li>
-                <li>Green</li>
-                <li>Blue</li>
-              </ol>
-              <code>list-style-type: lower-alpha;</code>
-            </div>
-            <hr>
-
-            <div>
-              <ul class="circle a">
-                <li>Red</li>
-                <li>Green</li>
-                <li>Blue</li>
-              </ul>
-              <code>list-style-type: circle;</code>
-            </div>
-            <hr>
-
-            <div>
-              <ul class="square a">
-                <li>Red</li>
-                <li>Green</li>
-                <li>Blue</li>
-              </ul>
-              <code>list-style-type: square;</code>
-            </div>
-            <hr>
-
-            <div>
-              <ul class="uimage a">
-                <li>Red</li>
-                <li>Green</li>
-                <li>Blue</li>
-              </ul>
-              <code>list-style-image: url("../Imgs/loguito.png"); <br></code>
-            </div>
-          </div>
-          <style>
-            ul.a {
-              list-style: square outside none;
-              /* list-style-type, list-style-image, list-style-position */
-            }
-
-            ol.lower-alpha {
-              list-style-type: lower-alpha;
-            }
-
-            ul.circle {
-              list-style-type: circle;
-            }
-
-            ul.square {
-              list-style-type: square;
-            }
-
-            ul.uimage {
-              list-style-image: url("../Imgs/loguito.png");
-              /* list-style-position: outside; insede, outside */
-            }
-          </style>
-        </div>
-
-        <!-- Table -->
-        <div class="borders">
-          <p class="numbers">23) Table</p>
-          <div class="flex">
-
-            <div><!-- Table-Style -->
-              <table class="styled" border="1">
-                <caption>"Caption-Side Text"</caption>
-                <tr>
-                  <td>Red</td>
-                  <td>Green</td>
-                </tr>
-                <tr>
-                  <td>Blue</td>
-                  <td>Yellow</td>
-                </tr>
-              </table><br>
-              <style>
-                table.styled {
-                  caption-side: top;
-                  /* top, bottom */
-                  border-collapse: separate;
-                  border-spacing: 30px 10px;
-                }
-              </style>
-            </div>
-            <hr>
-
-            <div><!-- Empty-Cells -->
-              Empty-Cells
-              <table class="styled2" border="1">
-                <tr>
-                  <td>HTML</td>
-                  <td>CSS</td>
-                </tr>
-                <tr>
-                  <td>JavaScript</td>
-                  <td></td>
-                </tr>
-              </table>
-              <style>
-                table.styled2 {
-                  border-collapse: separate;
-                  empty-cells: hide;
-                }
-              </style>
-            </div>
-            <hr>
-
-            <!-- Table-Style -->
-            <div>
-              <p>Table-layout is set to <strong>auto</strong></p>
-              <table id="tablee" class="auto">
-                <tr>
-                  <td width=“10%">500.000.000.000.000</td>
-                  <td width="90%">20.000</td>
-                </tr>
-              </table>
-            </div>
-            <hr>
-          </div>
-          <hr>
-
-          <!-- Table-layout -->
-          <div>
-            <p>Table-layout is set to <strong>fixed</strong></p>
-
-            <table id="tablee" class="fixed">
-              <tr>
-                <td width="7%" class="tdred">500.000.000.000.000</td>
-                <td width="95%">20.000</td>
-              </tr>
-            </table>
-
-            <style>
-              #tablee {
-                border-collapse: separate;
-                width: 100%;
-                border: 1px solid gray;
-              }
-
-              td {
-                border: 1px solid gray;
-              }
-
-              table.auto {
-                table-layout: auto;
-              }
-
-              table.fixed {
-                table-layout: fixed;
-              }
-
-              .tdred {
-                color: red;
-              }
-            </style>
-          </div>
-        </div>
-
-        <!-- Links -->
-        <div class="borders">
-          <p class="numbers"> 26) Links </p>
-          <p>
-            <a href="http://www.sololearn.com" target="_blank">
-              This link is hovered when we mouse over it
-            </a>
-          </p>
-          <code>
-                  a:hover{
-                      color: red;
-                  }
-              </code>
-          <details>
-            <summary>Selectors & Propiedades...</summary>
-            a:link : define el estilo de los enlaces normales no visitados <br>
-            a:visited : define el estilo de los enlaces visitados <br>
-            a:active : a el enlace se activa una vez que hace clic en él <br>
-            a:hover : un enlace se desplaza cuando el mouse está sobre él <br>
-
-            border:none - removes border from images with links <br>
-            outline:none - removes the dotted border on clicked lines in IE <br>
-          </details>
-
-          <style>
-            a:link {
-              text-decoration: none;
-              /* Quitar UnderLine */
-            }
-
-            a:hover {
-              color: red;
-              /* Mouse encima */
-            }
-          </style>
-        </div>
-
-        <!-- Mouse-Cursor -->
-        <div class="borders">
-          <p class="numbers"> 27) Mouse-Cursor</p>
-          <span class="mousee">
-            Do you need help?<br>
-            The mouse-cursor here will be "?"
-          </span>
-          <style>
-            span.mousee {
-              cursor: help;
-            }
-          </style> <br>
-          <code>
-                  span.mousee{
-                      cursor: help;
-              }
-              </code> <br><br>
-
-          <details>
-            <summary>Valores...</summary>
-            auto, crosshair, default, move, help, text, wait,
-            n-resize, s-resize, ne-resize, sw-resize, nw-resize, se-resize, e-resize, w-resize,
-            pointer, progress, not-allowed, no-drop, vertical-text, all-scroll, col-resize, row-resize.
-          </details>
-
-        </div>
-
+      <div id="idpurple2">
+        (Esto es un div con id "idpurple2").
+        <p class="first">Esto es un parrafo con selector(class)="first" y con un <em>"em"</em>.</p>
+        <p> Esto es otro parrafo con un <em>"em"</em>. </p>
       </div>
+      <p class="first"> Esto es un parrafo con selector"first" y un <em>"em"</em>. pero fuera del div.</p>
 
-      <!-- Positioning And Layout -->
-      <div class="borders">
-        <h2 class="titulo"> Positioning And Layout </h2>
+      <!-- Code -->
+      <div class="codigo">
+        #idpurple2{ <br>
+          &nbsp;color:purple; <br>
+          &nbsp;background-color: rgba(128, 128, 128, 0.356); <br>
+        } <br>
+        #idpurple2 .first em{ <br>
+          &nbsp;color:pink; <br>
+          &nbsp;background-color: rgba(100, 95, 95, 0.551); <br>
+        }
+      </div>
+      <style>
+        #idpurple2 {
+          color: purple;
+          background-color: rgba(128, 128, 128, 0.356);
+        }
+        #idpurple2 .first em {
+          color: pink;
+          background-color: rgba(100, 95, 95, 0.551);
+        }
+      </style>
+    </fieldset>
+  </div>
 
-        <!-- Display -->
-        <div class="borders">
-          <p class="numbers">28) Display</p>
-          <p>
-            <u>Sin display block:</u><br>
-            <span>First paragraph.</span>
-            <span>Second paragraph.</span>
-            <span>Third paragraph.</span>
-            <span>Fourth paragraph.</span>
-            <span>Fifth paragraph.</span>
-          </p>
+  <!-- Text -->
+  <div class="borders">
+    <h2 class="titulo"> Textos </h2>
 
-          <p>
-            <u>Con display block:</u><br>
-            <span class="block">First paragraph.</span>
-            <span class="block">Second paragraph.</span>
-            <span class="block">Third paragraph.</span>
-            <span class="block">Fourth paragraph.</span>
-            <span class="block">Fifth paragraph.</span>
-          </p>
+    <!-- Fonts -->
+    <fieldset>
+      <legend></legend>
+      <!-- Font-Family -->
+      <p> Font-Family</p>
+      <p class="serif">
+        This is a paragraph shown in serif font.
+      </p>
+      <code>
+        p.serif {
+          font-family: "Times New Roman", Times, serif;
+        }
+      </code>
 
-          <p><u>InLine</u>
-          <p class="inline">First paragraph.</p>
-          <p class="inline">Second paragraph.</p>
-          <p class="inline">Third paragraph.</p>
-          <p class="inline">Fourth paragraph.</p>
-          <p class="inline">Fifth paragraph.</p>
-          </p>
-          <style>
-            span.block {
-              display: block;
-            }
+      <!-- Font-Style -->
+      <p class="numbers">5) Font-Style</p>
+      <p class="italic">
+        This is a paragraph in italic style.
+      </p>
+      <code>
+        p.italic{
+          font-style: italic; /* normal, italic, oblique */
+        }
+      </code>
 
-            p.inline {
-              display: inline;
-            }
-          </style>
-          <div class="codigo">
-            <pre>
-              span.block{
-                  display: block;
-              }
-              p.inline{
-                  display: inline;
-              }
-          </div></code>
-          </div>
-      
-          <!-- Visibility -->
-          <div class="borders">
-          <p class="numbers">29) Visibility</p>
-          <div class="ejemplo"> <u>Codigos:</u><br>
-              < h1 class="none"> Este texto no se mostrará, ya que establecemos el valor en ninguno. </ h1>
-              < p> El título de este párrafo no se muestra, ya que establecemos el valor en ninguno. </ p>
-          
-              < h4> Este es un texto </ h4>
-              < div class = "hidden">
-              Este texto no se mostrará en el navegador.
-              </ div>
-              < p>
-                  El espacio sobre este párrafo está vacío porque 
-                  la visibilidad del elemento div está configurada como oculta.
-              </ p>
-          </div> <br>
-          <h1 class="none"> Este texto no se mostrará, ya que establecemos el valor en ninguno. </h1>
-              <p> El título de este párrafo no se muestra, ya que establecemos el valor en ninguno.</p>
-          
-              <h4> Este es un texto </h4>
-              <div class = "hidden">
-              Este texto no se mostrará en el navegador.
-              </div>
-              <p>
-                  El espacio sobre este párrafo está vacío porque 
-                  la visibilidad del elemento div está configurada como oculta.
-              </p>
-          <style>
-              h1.none{
-                  display: none;
-              }
-              div.hidden{
-                  visibility: hidden;
-              }
-          </style> <br>
-          <u>Code:</u>
-          <code><pre>
-              h1.none{
-                  display: none;
-              }
-              div.hidden{
-                  visibility: hidden;
-              }
-          </pre></code>
-          </div>
+      <!-- Font-Weight -->
+      <p class="numbers">6) Font-Weight</p>
+      <p class="weight">
+        This is a paragraph in bolder.
+      </p>
+      <code>
+        p.weight{
+          font-weight: 900; /* lighter(100), normal(400), bold(700), bolder(900) */
+        }
+      </code>
 
-          <!-- posicionamiento -->
-          <div class="borders">
-            <p class="numbers">30) Posicionamiento</p>
-
-            <!-- estatico -->
-            <u>Estatico:</u>
-            <div class="ejemplo">
-              <p class="position_static">This paragraph has a <u>static</u> position.</p>
-            </div><br>
-
-            <!-- fijo -->
-            <u>Fijo: (Arriba a la derecha)</u> <br>
-            <div class="ejemplo">
-              <p class="position_fixed">30) Fixed position.</p><br>
-            </div><br>
-
-            <!-- relativo -->
-            <u>Relativo:</u> <br>
-            <div class="ejemplo">
-              <enum class="spann"> relative text </enum><br>
-            </div>
-
-            <style>
-              p.position_static {
-                position: static;
-                top: 130px;
-                right: 115px;
-              }
-
-              /* fijo */
-              p.position_fixed {
-                position: fixed;
-                top: 30px;
-                right: 15px;
-              }
-
-              /* relativo */
-              .spann {
-                position: relative;
-                top: -10px;
-                left: 50px;
-              }
-            </style> <br>
-          </div>
-
-          <!-- Floating -->
-          <div class="borders">
-            <p class="numbers">31) Floating</p>
-            <p style="font-size: large; width: 50%; text-align: justify; "><img src="../Imgs/css_logo.png"
-                class="imgfloatr" />
-              Este párrafo tiene una imagen que flota a la <b>derecha.</b>
-              Es muy recomendable añadir un margen a las imágenes para que el texto no
-              No te acerques demasiado a la imagen. Si desea que su texto sea fácil de leer, puede
-              siempre debe agregar algunos píxeles entre palabras y bordes, imágenes,
-              y otro contenido.
-            </p>
-            <style>
-              img.imgfloatr {
-                height: 40px;
-                float: left;
-                /* right, left */
-              }
-            </style>
-            <code>
-              img.imgfloatr{
-                  height: 40px;
-                  float: left;
+      <!-- Font-Variant -->
+      <p class="numbers">7) Font-Variant</p>
+      <p class="variant">
+        This is a paragraph in small-caps.
+      </p>
+      <code>
+              p.variant{
+                  font-variant: small-caps; /* normal, small-caps, inherit */
               }
           </code>
-            <hr>
 
-            <!-- Clearing the Float -->
-            <p class="numbers">32) Clearing the Float</p>
-            <u><b>Floating:</b></u>
-            <div class="ejemplo">
-              Este párrafo está encima del elemento div y no se ve afectado por la propiedad float right de la imagen.
-              <br><br>
-              <div class="floating">
-                <img src="../Imgs/css_logo.png" height="150px" />
-              </div>
-              Este párrafo viene después del elemento div y se ve afectado por la propiedad float right.
-              <br> <br>
-              Este párrafo también viene después del elemento div y se ve afectado por la propiedad float right.
-            </div> <br>
+      <!-- Font-Color -->
+      <p class="numbers">8) Font-Color</p>
+      <p class="colored">
+        This is a paragraph in red.
+      </p>
+      <code>
+              p.colored{
+                  color: red; /* red, #F00, rgb(255,0,0) */
+              }
+          </code>
 
-            <u><b>Clearing:</b></u>
-            <div class="ejemplo">
-              Este párrafo está encima del elemento div y no se ve afectado por la propiedad float right de la imagen.
-              <br><br>
-              <div class="floating">
-                <img src="../Imgs/css_logo.png" height="150px" />
-              </div>
-              Este párrafo viene después del elemento div y se ve afectado por la propiedad float right.
-              <br class="clearing" />
-              Este párrafo también viene después del elemento div y ya no se ve afectado por la propiedad float right.
-            </div>
-            <style>
-              .floating {
-                float: right;
-              }
+      <!-- style -->
+      <style>
+        /* 4) Font Family */
+        p.serif {
+          font-family: "Times New Roman", Times, serif;
+        }
 
-              .clearing {
-                clear: both;
-                /* both, right, left */
-              }
-            </style>
-            <code><pre>
-              .floating{
-                  float: right;
-              }
-              .clearing{
-                  clear: both; /* both, right, left */
-              }
-          </pre></code>
-          </div>
+        /* 5) Font Style */
+        p.italic {
+          font-style: italic;
+          /* normal, italic, oblique */
+        }
 
-          <!-- Z-Index -->
-          <div class="borders">
-            <p class="numbers">33) Z-Index</p>
-            <div class="bluee">Blue</div>
-            <div class="redd">Red</div>
-            <style>
-              .bluee {
-                z-index: 3;
-                position: relative;
-                background-color: blue;
-                margin-bottom: 15px;
-                width: 120px;
-                height: 120px;
-                color: #FFF;
-              }
+        /* 6) Font Weight (Grosor) */
+        p.weight {
+          font-weight: 900;
+          /* lighter(100), normal(400), bold(700), bolder(900) */
+        }
 
-              .redd {
-                z-index: 2;
-                position: relative;
-                background-color: red;
-                width: 120px;
-                height: 120px;
-                color: #FFF;
-                margin-top: -50px;
-                margin-left: 50px;
-              }
-            </style>
-            <code><pre>
-              .bluee { 
-                  z-index: 3;
-                  position: relative;
-                  background-color: blue;
-                  margin-bottom: 15px;
-                  width: 120px;
-                  height: 120px;
-                  color: #FFF;
-              }
-              .redd {
-                  z-index: 2;
-                  position: relative;
-                  background-color: red;
-                  width: 120px;
-                  height: 120px;
-                  color: #FFF;
-                  margin-top: -50px;
-                  margin-left: 50px;
-              }
-          </pre></code>
-            <hr>
+        /* 7) Font Variant */
+        p.variant {
+          font-variant: small-caps;
+          /* normal, small-caps, inherit */
+        }
 
-            <!-- OverFlow -->
-            <p class="numbers">34) OverFlow</p>
-            <div class="overflow">
-              This text is inside the div element, which has a blue
-              background color and is floated to the left. We set a specific
-              height and width for the div element, and as you can see,
-              the content cannot fit.
-              <style>
-                div.overflow {
-                  width: 150px;
-                  height: 150px;
-                  background-color: lightblue;
-                  overflow: scroll;
-                  /* visible, scroll, hidden, auto */
-                }
-              </style>
-            </div>
-            <code><pre>
-              div.overflow{
-                  width: 150px;
-                  height: 150px;
-                  background-color: lightblue;
-                  overflow: scroll; /* visible, scroll, hidden, auto */ 
-              }
-          </pre></code>
-          </div>
+        /* 8) Font Color */
+        p.colored {
+          color: red;
+          /* red, #F00, rgb(255,0,0) */
+        }
+      </style>
+      <!-- style -->
+    </fieldset>
+
+    <!-- Text-Align (Horizontal)-->
+    <div class="borders">
+      <p class="numbers">9) Text-Align (Horizontal)</p>
+      <div style="width: 500px;">
+        <p class="center">This paragraph is aligned to center</p>
+      </div>
+      <!-- style -->
+      <style>
+        p.center {
+          text-align: center;
+          /* left, right, center, justify */
+          background-color: rgba(128, 128, 128, 0.216);
+        }
+      </style>
+      <!-- style -->
+
+      <!-- Text-Align (Vertical) -->
+      <p class="numbers">10) Text-Align (Vertical)</p>
+      <table border="1" cellpadding="2" cellspacing="0" style="height: 150px;">
+        <tr>
+          <td class="top">Top</td>
+          <td class="middle">Middle</td>
+          <td class="bottom">Bottom</td>
+        </tr>
+      </table>
+      <!-- style -->
+      <style>
+        td.top {
+          vertical-align: top;
+        }
+
+        td.middle {
+          vertical-align: middle;
+        }
+
+        td.bottom {
+          vertical-align: bottom;
+        }
+      </style>
+      <!-- style -->
+    </div>
+
+    <!-- Text-Align Property (Vertical) -->
+    <div class="borders">
+      <p class="numbers">11) Text-Align Property (Vertical)</p>
+
+      <p> This is an <span class="baseline"> <b> inline text </b></span> example.</p>
+      <code> span.baseline { vertical-align: baseline; } </code>
+      <hr>
+
+      <p> This is a <span class="sub"><b>sub line text</b></span> example.</p>
+      <code> span.sub { vertical-align: sub;} </code>
+      <hr>
+
+      <p> This is a <span class="super"><b>super line text</b></span> example.</p>
+      <code> span.super { vertical-align: super; } </code>
+      <hr>
+
+      <p> This is a <span class="pixel"><b>pixel</b></span> example.</p>
+      <code> span.pixel { vertical-align: -10px; /* px(pixels), pt(points), cm(centimeters), %(percentage) */ } </code>
+      <style>
+        span.baseline {
+          vertical-align: baseline;
+        }
+
+        span.sub {
+          vertical-align: sub;
+        }
+
+        span.super {
+          vertical-align: super;
+        }
+
+        span.pixel {
+          vertical-align: -10px;
+          /* px(pixels), pt(points), cm(centimeters), %(percentage) */
+        }
+      </style>
+    </div>
+
+    <!-- Text-Align Property Div (Vertical) -->
+    <div class="borders">
+      <p class="numbers">12) Text-Align Property Div (Vertical)</p>
+      <div class="main">
+        <div class="paragraph">
+          Aligned to the middle of div.
         </div>
+      </div> <br>
+      <style>
+        .main {
+          height: 100px;
+          width: 350px;
+          background-color: rgba(128, 128, 128, 0.398);
+          display: inline-table;
+        }
 
-        <!-- Bacics CSS3 -->
-        <div class="borders">
-          <h2 class="titulo"> Bacics CSS3 </h2>
+        .paragraph {
+          text-align: center;
+          display: table-cell;
+          vertical-align: middle;
+        }
+      </style>
+      <!-- code -->
+      <div class="codigo">
+        <pre>
+          .main {
+              height: 150px; width: 450px;
+              background-color: rgba(128, 128, 128, 0.398);
+              display: inline-table;
+          } <br>
+          .paragraph {
+              text-align: center;
+              display: table-cell;
+              vertical-align: middle;
+          }
+          </pre>
+      </div>
+      <!-- code -->
+    </div>
 
-          <!-- Prefijos de provedores css -->
-          <div class="borders">
-            <p class="numbers">35) Prefijos de provedores/navegadores css:</p>
+    <!-- Text-decoration -->
+    <div class="borders">
+      <p class="numbers">13) Text-decoration</p>
 
-            FireFox = -moz- <br>
-            Safari = -webkit- <br>
-            Chrome = -webkit- <br>
-            Opera = -o- <br>
-            Explorer = -ms <br><br>
+      <p class="none">This is <b> default</b> style of the text (none). <br>
+        <code> text-decoration: none; </code>
+      </p>
 
-            <div class="roundd">
-              -webkit-border-radius: 24px; <br>
-              border-radius: 24px;
-            </div>
-            <style>
-              .roundd {
-                -webkit-border-radius: 24px;
-                border-radius: 24px;
-                border: 1px solid green;
-                width: 300px;
-                padding: 25px;
-              }
+      <p class="inherit">This text <b> inherits</b> the decoration of the parent. <br>
+        <code> text-decoration: inherit; </code>
+      </p>
 
-              .boxsh {
-                width: 250px;
-                height: 60px;
-                padding: 7px;
-                border: 1px solid;
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-              }
-            </style>
-          </div>
+      <p class="overline">This is <b> overlined </b> text. <br>
+        <code> text-decoration: overline; </code>
+      </p>
 
-          <!-- Border-Radius -->
-          <div class="borders" style="height: 150px;">
-            <p class="numbers"> 36) Border-Radius </p>
-            <div class="boxizq">
-              <div class="divBorderRadius boxsh">
-                border-radius: 0 10px 20px 30px;
-              </div>
-            </div>
-            <div class="boxder">
-              <div class="boxsh divCirculo">
-                border-radius: 50%;
-              </div>
-            </div>
-            <style>
-              /* Border-Radius */
-              .divBorderRadius {
-                border-radius: 0 10px 20px 30px;
-                background-color: green;
-                color: white;
-                /* padding: 30px; */
-                width: 200px;
-              }
+      <p class="underline">This is <b> underlined</b> text. <br>
+        <code> text-decoration: underline; </code>
+      </p>
 
-              /* Circulo */
-              .divCirculo {
-                width: 80px;
-                height: 80px;
-                border-radius: 50%;
-                color: white;
-                background-color: green;
-              }
-            </style>
-          </div>
+      <p class="line-through">This is <b> lined-through</b> text. <br>
+        <code> text-decoration: line-through; </code>
+      </p>
 
-          <!-- Box-Shadow -->
-          <div class="borders">
-            <p class="numbers"> 37) Box-Shadow </p>
-            <div class="boxShadow boxsh">
-              box-shadow: 10px 10px 10px 5px #888; <br>
-              <font color="grey">box-shadow: Hriz, Vert, blur, spread, color</font>
-            </div>
-            <style>
-              .boxShadow {
-                background-color: #fff;
-                box-shadow: 10px 10px 10px 5px grey;
-                /*         Hriz, Vert, blur, spread, color */
-              }
-            </style>
-            <br>
-            <hr>
+      <p class="blink">This is <b> blink</b> text. <br>
+        <code> text-decoration: blink; </code>
+      </p>
 
-            <!-- Box-Inside Shadow -->
-            <h3 class="subtitulo"> Box-Inside Shadow </h3>
-            <div class="boxInsideShadow boxsh">
-              box-shadow: inset 10px 10px 10px 5px green ;
-            </div>
-            <style>
-              .boxInsideShadow {
-                background-color: #fff;
-                box-shadow: inset 10px 10px 10px 5px grey;
-              }
-            </style>
-            <br>
-            <hr>
+      <!-- style -->
+      <style>
+        p.none b {
+          text-decoration: none;
+        }
 
-            <!-- Box-Double Inside Shadow -->
-            <h3 class="subtitulo"> Box-Double Inside Shadow </h3>
-            <div class="boxDoubleInsideShadow boxsh">
-              box-shadow: inset 10px 10px 5px green, <br> inset -10px -10px 5px green ;
-            </div>
-            <style>
-              .boxDoubleInsideShadow {
-                background-color: #fff;
-                box-shadow: inset 5px 5px 15px grey, inset -5px -5px 15px grey;
-              }
-            </style>
-            <br>
-            <hr>
+        p.inherit b {
+          text-decoration: inherit;
+        }
 
-            <!-- Box-Triple Shadow -->
-            <h3 class="subtitulo"> Box-Triple Shadow </h3>
-            <div class="BoxTrilpeShadow">
-              box-shadow: 0 0 10px 4px #FF6347, <br> 0 0 10px 30px #FFDAB9, <br> 30px 0 20px 30px #B0E0E6;
-            </div>
-            <style>
-              .BoxTrilpeShadow {
-                text-align: center;
-                vertical-align: middle;
-                width: 250px;
-                height: 50px;
-                margin-left: 30px;
-                margin-top: 30px;
-                background-color: #fff;
-                box-shadow: 0 0 10px 4px #FF6347,
-                  0 0 10px 25px #FFDAB9,
-                  20px 20px 15px 20px #42e3f8;
-              }
-            </style>
-            <br><br><br>
-          </div>
+        p.overline b {
+          text-decoration: overline;
+        }
 
-          <!-- BoxTransparencia -->
-          <div class="borders">
-            <h3 class="subtitulo"> 38) Transparencia </h3>
-            <div class="BoxTransparencia">
-              background-color: #9ACD32; <br>
-              background: linear-gradient(90deg, <br>
-              rgba(38, 23, 179, 0.515) 0%, <br>
-              rgba(16, 129, 133, 0.549) 25%, <br>
-              rgba(167, 201, 17, 0.433) 75%, <br>
-              rgba(72, 0, 56, 0.419) 100%); <br>
-              box-shadow: 0 0 25px rgba(19, 8, 80, 0.486), <br>
-              inset 0 0 1px rgba(0, 189, 85, 0.829); <br>
-            </div> <br>
+        p.underline b {
+          text-decoration: underline;
+        }
 
-            <style>
-              .BoxTransparencia {
-                width: 80%;
-                height: auto;
-                padding: 15px;
-                background-color: #9ACD32;
-                background: linear-gradient(90deg,
-                    rgba(38, 23, 179, 0.515) 0%,
-                    rgba(16, 129, 133, 0.549) 25%,
-                    rgba(167, 201, 17, 0.433) 75%,
-                    rgba(72, 0, 56, 0.419) 100%);
-                box-shadow: 0 0 25px rgba(19, 8, 80, 0.486),
-                  inset 0 0 1px rgba(0, 189, 85, 0.829);
-              }
-            </style>
-          </div>
+        p.line-through b {
+          text-decoration: line-through;
+        }
 
-          <!-- Text Shadow -->
-          <div class="borders">
-            <p class="numbers">39) Text Shadow</p>
-            <h2 class="TextShadow">
-              Text Shadow.
-            </h2>
-            <style>
-              .TextShadow {
-                text-shadow: 1px 1px 5px blue, -3px -3px 5px grey;
-              }
-            </style>
-            <code>
-                  .TextShadow{ <br>
-                      text-shadow: 1px 1px 5px blue, -3px -3px 5px grey; <br>
-                  } <br>
-              </code>
-          </div>
+        p.blink b {
+          text-decoration: blink;
+        }
 
-          <!-- Pseudo-Clases -->
-          <div class="borders">
-            <p class="numbers">40) Pseudo-Clases</p>
-            <div id="parent">
-              <p>First paragraph</p>
-              <p>Second paragraph</p>
-              <p>Third paragraph</p>
-              <p>Fourth paragraph</p>
-              <style>
-                #parent p:first-child {
-                  /* first-last */
-                  color: green;
-                  text-decoration: underline;
-                }
-              </style>
-              <code>
-                      #parent p:first-child { <br>
-                          color: green; <br>
-                          text-decoration: underline; <br>
-                      }
-                  </code>
-            </div>
-          </div>
+        /* parpadear (algunos no funciona) */
+      </style>
+      <!-- style -->
+    </div>
 
-          <!-- Pseudo-Elemento -->
-          <div class="borders">
-            <p class="numbers">41) Pseudo-Elemento</p>
+    <!-- text-indent (sangria) -->
+    <div class="borders">
+      <p class="numbers">14) text-indent (sangria)</p>
+      <p class="indent">
+        This is an example of
+        <strong>text-indent </strong> property. <br>
+        First line of our text is indented to the right in 60px. <br>
+        Besides pixels you can also use other measurement units,
+        like pt, cm, em, etc. <br>
+        <code> text-indent: 60px; </code>
+      </p>
+      <style>
+        p.indent {
+          text-indent: 60px;
+          /* -60px */
+        }
+      </style>
+    </div>
 
-            ::first-line <br>
-            ::first-letter <br>
-            ::selection <br>
-            ::before <br>
-            ::after <br><br>
-            <hr>
+    <!-- Text-Sadow -->
+    <div class="borders">
+      <p class="numbers">15) Text-Sadow</p>
+      <h1 class="shadowT"> Text-shadow example</h1>
+      <code> text-shadow: 5px 2px 6px grey; <br> (x, y, blur radius, color) Se puede poner mas de una sombra separandola con coma.</code>
+      <hr>
+      <h1 class="blurT"> Text-shadow with blur effect</h1>
+      <code> text-shadow: rgba(0, 0, 255, 1) -1px -1px 0.3em; </code>
+      <style>
+        h1.shadowT {
+          text-shadow: 5px 2px 2px grey;
+          /* (x, y, blur radius, color) Se puede poner mas de una sombra separandola con coma */
+        }
 
-            <h3 class="subtitulo"> >>First-Line</h3>
-            <h1 class="textfirstline">The following example demonstrates how to use the ::first-line element to add
-              special effect to the first line of elements in the document.</h6>
-              <code>
-                  .textfirstline::first-line { <br>
-                      color: #589432; <br>
-                  } <br>
-              </code>
-              <hr>
+        h1.blurT {
+          text-shadow: rgba(0, 0, 255, 1) -1px -1px 0.3em;
+          /* Internet Explorer 9 and earlier do not support the text-shadow property. */
+        }
+      </style>
+    </div>
 
-              <h3 class="subtitulo"> >>First-Letter</h3>
-              <h2 class="firstletter"> La primera letra es de otro color</h2>
-              <code>
-                  .firstletter::first-letter{ <br>
-                      background-color: #589432; <br>
+    <!-- Text-Transform -->
+    <div class="borders">
+      <p class="numbers">16) Text-Transform</p>
+      <p class="capitalize">
+        el valor "capitalize" transforma el primer carácter de cada palabra en mayúsculas;
+        Todos los demás caracteres no se ven afectados. <br>
+      </p>
+      <code> text-transform: capitalize; <br><u>Valores</u>: capitalize, uppercase, lowercase.</code>
+      <style>
+        p.capitalize {
+          text-transform: capitalize;
+          /* capitalize, uppercase, lowercase */
+        }
+      </style>
+    </div>
+
+    <!-- Text-Spacing -->
+    <div class="borders">
+      <p class="numbers">17) Text-Spacing </p>
+      <div>
+        <p>This paragraph has no additional letter-spacing applied.</p>
+        <hr>
+        <!-- Letter-Spacing -->
+        <p class="lspacing">This paragraph is letter-spaced at 4px.</p>
+        <code> letter-spacing: 4px; </code>
+        <hr>
+        <!-- Word-Spacing -->
+        <p class="wspacing">This paragraph is word-spaced at 30px.</p>
+        <code> word-spacing: 30px; </code>
+      </div>
+      <style>
+        p.lspacing {
+          letter-spacing: 4px;
+          /* px, pt, cm, mm, ( + , - ) */
+        }
+
+        p.wspacing {
+          word-spacing: 30px;
+        }
+      </style>
+    </div>
+
+    <!-- Wite-Spacing -->
+    <div class="borders">
+      <p class="numbers">18) Wite-Spacing</p>
+      <p class="witespacing">
+        Este párrafo tiene varios
+        espacios y un salto de línea,
+        pero será ignorado, ya que usamos el valor
+        nowrap. <br>
+        <code>
+              white-space: nowrap; <br>
+              <u>Valores</u>: pre, pre-line, pre-wrap.
+          </code>
+      </p>
+      <style>
+        p.witespacing {
+          white-space: nowrap;
+          /* pre, pre-line, pre-wrap */
+        }
+      </style>
+    </div>
+  </div>
+
+  <!-- Properties -->
+  <div class="borders">
+    <h2 class="titulo"> Properties </h2>
+
+    <div class="borders">
+      <p class="numbers"> 19) Box-Model </p>
+      <!-- Box-Model -->
+      <div>
+        <!-- Box-Border -->
+        <p class="border">This is an example of a solid border.</p>
+        <style>
+          p.border {
+            padding: 10px;
+            /* relleno*/
+            border: 5px solid green;
+            /* tamaño, estilo, color */
+          }
+        </style>
+        <code>
+                  p.border{ <br>
+                      <u>border</u>: 5px solid green; <br>
                   }
               </code>
-              <hr>
+        <hr>
 
-              <h3 class="subtitulo"> >>Selection</h3>
-              <h2 class="seleccioname">Selecciona una parte de este texto para marcarlo de otro color</h2>
-              <code>
-                  .seleccioname::first-letter{ <br>
-                      background-color: #589432; <br>
-                  }
-              </code>
-              <hr>
+        <h2>Border-Style</h2>
 
-              <h3 class="subtitulo"> >>Before</h3>
-              <p class="insertImageBeforeText">insert Image Before Text</p>
-              <code>
-                  .insertImageBeforeText::before{ <br>
-                  content: url("../Imgs/loguito.png"); <br>
-              }
-              </code>
-              <style>
-                .textfirstline::first-line {
-                  color: #589432;
-                }
+        <!-- Border-Style -->
+        <p class="none">none.</p>
+        <p class="dotted">dotted.</p>
+        <p class="dashed">dashed.</p>
+        <p class="double">double.</p>
+        <p class="groove">grooved.</p>
+        <p class="ridge">ridged.</p>
+        <p class="inset">inset.</p>
+        <p class="outset">outset.</p>
+        <p class="hidden">hidden.</p>
+        <hr>
 
-                .firstletter::first-letter {
-                  background-color: #589432;
-                }
+        <style>
+          p.none {
+            border-style: none;
+          }
 
-                .seleccioname::selection {
-                  /* h5::-moz-selection{ (para mozillaFirefox)*/
-                  background-color: #589432;
-                  color: #FF6347;
-                }
+          p.dotted {
+            border-style: dotted;
+          }
 
-                .insertImageBeforeText::before {
-                  content: url("../Imgs/loguito.png");
-                }
-              </style>
-          </div>
+          /* punteado. ( . . . . .) */
+          p.dashed {
+            border-style: dashed;
+          }
 
-          <!-- Word-Wrap -->
-          <div class="borders">
-            <p class="numbers">42) Word-Wrap</p>
-            <p class="wordwrapnormal">
-              Normal.
-              NormalNormalNormalNormalNormalNormalNormalNormalNormalNormalNormalNormal.
-            </p>
-            <p class="wordwrapbreak">
-              Break-Word.
-              Break-Word.Break-Word.Break-Word.Break-Word.Break-Word.
-            </p>
-            <br><br>
-            <details>
-              <summary>Code...</summary>
-              <code>
-                      .wordwrapnormal{ <br>
-                          border: 1px solid black; <br>
-                          width: 120px; <br>
-                          height: 100px; <br>
-                          word-wrap: normal; <br>
-                      } <br>
-                      .wordwrapbreak{ <br>
-                          border: 1px solid black; <br>
-                          width: 120px; <br>
-                          height: 100px; <br>
-                          word-wrap: break-word; <br>
-                      }
-                  </code>
-            </details>
+          /* discontinua. ( - - - ) */
+          p.double {
+            border-style: double;
+          }
 
-            <style>
-              .wordwrapnormal {
-                border: 1px solid black;
-                width: 120px;
-                height: 100px;
-                word-wrap: normal;
-              }
+          /* doble borde */
+          p.groove {
+            border-style: groove;
+          }
 
-              .wordwrapbreak {
-                border: 1px solid black;
-                width: 120px;
-                height: 100px;
-                word-wrap: break-word;
-              }
-            </style>
-          </div>
+          /* entrante */
+          p.ridge {
+            border-style: ridge;
+          }
 
-          <!-- Font-Face -->
-          <div class="borders">
-            <p class="numbers">43) Font-Face</p>
-            <h1 class="custfont">This is Delicious Font</h1>
-            <details>
-              <summary>Code...</summary>
-              <code>
-                      @font-face { <br>
-                      font-family: Delicious;  <br>
-                      src: url('../Imgs/Delicious-Roman.otf');  <br>
-                  }  <br>
-                  @font-face {  <br>
-                      font-family: Delicious;  <br>
-                      font-weight: bold;  <br>
-                      src: url('../Imgs/Delicious-Bold.otf');  <br>
-                  } <br>
-                  h1.custfont{ <br>
-                      font-family: Delicious, sans-serif;  <br>
-                  }
-                  </code>
-            </details>
-            <style>
-              @font-face {
-                font-family: Delicious;
-                src: url('../Imgs/Delicious-Roman.otf');
-              }
+          /* saliente */
+          p.inset {
+            border-style: inset;
+          }
 
-              @font-face {
-                font-family: Delicious;
-                font-weight: bold;
-                src: url('../Imgs/Delicious-Bold.otf');
-              }
+          /* adentro */
+          p.outset {
+            border-style: outset;
+          }
 
-              h1.custfont {
-                font-family: Delicious, sans-serif;
-              }
-            </style>
-          </div>
-        </div>
+          /* afuera */
+          p.hidden {
+            border-style: hidden;
+          }
 
-        <!-- Degradados y Fondos -->
-        <div class="borders">
-          <h2 class="titulo"> Degradados y Fondos </h2>
+          /* oculto */
+        </style>
+
+
+        <!-- Width & Height -->
+        <p class="numbers">20) Width & Height</p>
+        <div class="wh">
+          The total width and height of this element is 100px.
           <style>
-            .deg {
-              width: 300px;
-              height: 100px;
-              margin: 4px;
-              text-align: center;
-              display: table-cell;
-              vertical-align: middle;
-            }
-
-            .degrad {
-              height: 150px;
-              width: 200px;
-              color: #FFF;
-              text-align: center;
-              display: table-cell;
-              vertical-align: middle;
+            div.wh {
+              border: 5px solid green;
+              width: 100px;
+              height: 90px;
             }
           </style>
+        </div><br>
+        <code>
+                  div.wh{
+                      border: 5px solid green;
+                      width: 100px;
+                      height: 90px;
+                  }
+              </code>
+      </div>
+    </div>
 
-          <!-- Dergadados Lineales -->
-          <div class="borders">
-            <h1 class="numbers">Dergadados Lineales</h1>
-            (Si no se usa rgb usar "-webkit-linear-gradient(#fff, #000)"
-            <br><br>
-            <table>lineal gradient
-              <td>
-                <div class="degradados deg">
-                  background: linear-gradient(<br> #00d4ff, #090979);
-                </div>
-              </td>
-              <td>
-                <div class="degradadosmulticolor deg">
-                  background: linear-gradient(<br> blue 0%,<br> #00bfff 30%,<br> #fff 80%);
-                </div>
-              </td>
-            </table>
-            <style>
-              div.degradados {
-                background: linear-gradient(#00d4ff, #090979);
+    <!-- Background (BODY) -->
+    <!-- 
+          /* Background-Body */
+          body{
+              background-color: beige;
+              background-image: url("../Imgs/TileW.jpg");
+              background-repeat: repeat; /* repeat-x, repeat-y, no-repeat, inherit */
+              background-attachment: fixed; /* fixel, scroll, inherit */
+          }
+      -->
+
+    <!-- Background-Image -->
+    <div class="borders">
+      <p class="numbers">21) Background-Image </p>
+      <p class="background-image">Imagen de fondo</p>
+      <style>
+        p.background-image {
+          padding: 15px;
+          background-image: url("../Imgs/banner_orange.png");
+          background-repeat: no-repeat;
+          /* repeat-x, repeat-y, no-repeat, inherit */
+          width: 300px;
+        }
+      </style>
+      <code>
+              p.background-image{ <br>
+                  background-image: url("../Imgs/banner_orange.png"); <br>
+                  background-repeat: no-repeat; <br>
+              } <br>
+              <u>valores</u>: repeat-x, repeat-y, no-repeat, inherit.
+          </code>
+    </div>
+
+    <!-- List-Style-Type -->
+    <div class="borders">
+      <p class="numbers">22) List-Style-Type </p>
+      <div class="flex">
+        <div>
+          <ol class="lower-alpha">
+            <li>Red</li>
+            <li>Green</li>
+            <li>Blue</li>
+          </ol>
+          <code>list-style-type: lower-alpha;</code>
+        </div>
+        <hr>
+
+        <div>
+          <ul class="circle a">
+            <li>Red</li>
+            <li>Green</li>
+            <li>Blue</li>
+          </ul>
+          <code>list-style-type: circle;</code>
+        </div>
+        <hr>
+
+        <div>
+          <ul class="square a">
+            <li>Red</li>
+            <li>Green</li>
+            <li>Blue</li>
+          </ul>
+          <code>list-style-type: square;</code>
+        </div>
+        <hr>
+
+        <div>
+          <ul class="uimage a">
+            <li>Red</li>
+            <li>Green</li>
+            <li>Blue</li>
+          </ul>
+          <code>list-style-image: url("../Imgs/loguito.png"); <br></code>
+        </div>
+      </div>
+      <style>
+        ul.a {
+          list-style: square outside none;
+          /* list-style-type, list-style-image, list-style-position */
+        }
+
+        ol.lower-alpha {
+          list-style-type: lower-alpha;
+        }
+
+        ul.circle {
+          list-style-type: circle;
+        }
+
+        ul.square {
+          list-style-type: square;
+        }
+
+        ul.uimage {
+          list-style-image: url("../Imgs/loguito.png");
+          /* list-style-position: outside; insede, outside */
+        }
+      </style>
+    </div>
+
+    <!-- Table -->
+    <div class="borders">
+      <p class="numbers">23) Table</p>
+      <div class="flex">
+
+        <div><!-- Table-Style -->
+          <table class="styled" border="1">
+            <caption>"Caption-Side Text"</caption>
+            <tr>
+              <td>Red</td>
+              <td>Green</td>
+            </tr>
+            <tr>
+              <td>Blue</td>
+              <td>Yellow</td>
+            </tr>
+          </table><br>
+          <style>
+            table.styled {
+              caption-side: top;
+              /* top, bottom */
+              border-collapse: separate;
+              border-spacing: 30px 10px;
+            }
+          </style>
+        </div>
+        <hr>
+
+        <div><!-- Empty-Cells -->
+          Empty-Cells
+          <table class="styled2" border="1">
+            <tr>
+              <td>HTML</td>
+              <td>CSS</td>
+            </tr>
+            <tr>
+              <td>JavaScript</td>
+              <td></td>
+            </tr>
+          </table>
+          <style>
+            table.styled2 {
+              border-collapse: separate;
+              empty-cells: hide;
+            }
+          </style>
+        </div>
+        <hr>
+
+        <!-- Table-Style -->
+        <div>
+          <p>Table-layout is set to <strong>auto</strong></p>
+          <table id="tablee" class="auto">
+            <tr>
+              <td width=“10%">500.000.000.000.000</td>
+              <td width="90%">20.000</td>
+            </tr>
+          </table>
+        </div>
+        <hr>
+      </div>
+      <hr>
+
+      <!-- Table-layout -->
+      <div>
+        <p>Table-layout is set to <strong>fixed</strong></p>
+
+        <table id="tablee" class="fixed">
+          <tr>
+            <td width="7%" class="tdred">500.000.000.000.000</td>
+            <td width="95%">20.000</td>
+          </tr>
+        </table>
+
+        <style>
+          #tablee {
+            border-collapse: separate;
+            width: 100%;
+            border: 1px solid gray;
+          }
+
+          td {
+            border: 1px solid gray;
+          }
+
+          table.auto {
+            table-layout: auto;
+          }
+
+          table.fixed {
+            table-layout: fixed;
+          }
+
+          .tdred {
+            color: red;
+          }
+        </style>
+      </div>
+    </div>
+
+    <!-- Links -->
+    <div class="borders">
+      <p class="numbers"> 26) Links </p>
+      <p>
+        <a href="http://www.sololearn.com" target="_blank">
+          This link is hovered when we mouse over it
+        </a>
+      </p>
+      <code>
+              a:hover{
+                  color: red;
               }
+          </code>
+      <details>
+        <summary>Selectors & Propiedades...</summary>
+        a:link : define el estilo de los enlaces normales no visitados <br>
+        a:visited : define el estilo de los enlaces visitados <br>
+        a:active : a el enlace se activa una vez que hace clic en él <br>
+        a:hover : un enlace se desplaza cuando el mouse está sobre él <br>
 
-              div.degradados :hover {
-                color: red;
-              }
+        border:none - removes border from images with links <br>
+        outline:none - removes the dotted border on clicked lines in IE <br>
+      </details>
 
-              div.degradadosmulticolor {
-                background: linear-gradient(blue 0%, #00bfff 30%, #fff 80%);
-              }
-            </style><br>
+      <style>
+        a:link {
+          text-decoration: none;
+          /* Quitar UnderLine */
+        }
 
-            <table>left & bottom
-              <td>
-                <div class="first deg">background: linear-gradient(left, blue, 00bfff, white);</div>
-              </td>
-              <td>
-                <div class="second deg">background: linear-gradient(bottom, blue, 00bfff, white);</div>
-              </td>
-            </table>
+        a:hover {
+          color: red;
+          /* Mouse encima */
+        }
+      </style>
+    </div>
 
-            <style>
-              div.first {
-                background: -webkit-linear-gradient(left, blue, #00bfff, white);
-                background: -moz-linear-gradient(left, blue, #00bfff, white);
-                background: -ms-linear-gradient(left, blue, #00bfff, white);
-              }
+    <!-- Mouse-Cursor -->
+    <div class="borders">
+      <p class="numbers"> 27) Mouse-Cursor</p>
+      <span class="mousee">
+        Do you need help?<br>
+        The mouse-cursor here will be "?"
+      </span>
+      <style>
+        span.mousee {
+          cursor: help;
+        }
+      </style> <br>
+      <code>
+              span.mousee{
+                  cursor: help;
+          }
+          </code> <br><br>
 
-              div.second {
-                background: -webkit-linear-gradient(bottom, blue, #00bfff, white);
-                background: -moz-linear-gradient(bottom, blue, #00bfff, white);
-                background: -ms-linear-gradient(bottom, blue, #00bfff, white);
-              }
-            </style><br>
+      <details>
+        <summary>Valores...</summary>
+        auto, crosshair, default, move, help, text, wait,
+        n-resize, s-resize, ne-resize, sw-resize, nw-resize, se-resize, e-resize, w-resize,
+        pointer, progress, not-allowed, no-drop, vertical-text, all-scroll, col-resize, row-resize.
+      </details>
 
-            <table>bottom left & 100deg
-              <td>
-                <div class="first2 deg">background: linear-gradient(bottom left, blue, #00bfff, white);</div>
-              </td>
-              <td>
-                <div class="second2 deg">background: linear-gradient(100deg, blue, #00bfff, white);</div>
-              </td>
-            </table>
-            <style>
-              div.first2 {
-                background: -webkit-linear-gradient(bottom left, blue, #00bfff, white);
-                background: -moz-linear-gradient(bottom left, blue, #00bfff, white);
-                background: -ms-linear-gradient(bottom left, blue, #00bfff, white);
-              }
+    </div>
 
-              div.second2 {
-                background: -webkit-linear-gradient(100deg, blue, #00bfff, white);
-                background: -moz-linear-gradient(100deg, blue, #00bfff, white);
-                background: -ms-linear-gradient(100deg, blue, #00bfff, white);
-              }
-            </style><br>
+  </div>
 
-            <table>Repeating Gradient
-              <td>
-                <div class="repeating deg">background: repeating-linear-gradient(rgb(0, 21, 255), rgb(0, 255, 238)
-                  20px);</div>
-              </td>
-            </table>
-            <style>
-              div.repeating {
-                float: left;
-                background: repeating-linear-gradient(rgb(0, 21, 255), rgb(0, 255, 238) 20px);
-              }
-            </style>
+  <!-- Positioning And Layout -->
+  <div class="borders">
+    <h2 class="titulo"> Positioning And Layout </h2>
+
+    <!-- Display -->
+    <div class="borders">
+      <p class="numbers">28) Display</p>
+      <p>
+        <u>Sin display block:</u><br>
+        <span>First paragraph.</span>
+        <span>Second paragraph.</span>
+        <span>Third paragraph.</span>
+        <span>Fourth paragraph.</span>
+        <span>Fifth paragraph.</span>
+      </p>
+
+      <p>
+        <u>Con display block:</u><br>
+        <span class="block">First paragraph.</span>
+        <span class="block">Second paragraph.</span>
+        <span class="block">Third paragraph.</span>
+        <span class="block">Fourth paragraph.</span>
+        <span class="block">Fifth paragraph.</span>
+      </p>
+
+      <p><u>InLine</u>
+      <p class="inline">First paragraph.</p>
+      <p class="inline">Second paragraph.</p>
+      <p class="inline">Third paragraph.</p>
+      <p class="inline">Fourth paragraph.</p>
+      <p class="inline">Fifth paragraph.</p>
+      </p>
+      <style>
+        span.block {
+          display: block;
+        }
+
+        p.inline {
+          display: inline;
+        }
+      </style>
+      <div class="codigo">
+        <pre>
+          span.block{
+              display: block;
+          }
+          p.inline{
+              display: inline;
+          }
+      </div></code>
+    </div>
+  
+      <!-- Visibility -->
+      <div class="borders">
+      <p class="numbers">29) Visibility</p>
+      <div class="ejemplo"> <u>Codigos:</u><br>
+          < h1 class="none"> Este texto no se mostrará, ya que establecemos el valor en ninguno. </ h1>
+          < p> El título de este párrafo no se muestra, ya que establecemos el valor en ninguno. </ p>
+      
+          < h4> Este es un texto </ h4>
+          < div class = "hidden">
+          Este texto no se mostrará en el navegador.
+          </ div>
+          < p>
+              El espacio sobre este párrafo está vacío porque 
+              la visibilidad del elemento div está configurada como oculta.
+          </ p>
+      </div> <br>
+      <h1 class="none"> Este texto no se mostrará, ya que establecemos el valor en ninguno. </h1>
+          <p> El título de este párrafo no se muestra, ya que establecemos el valor en ninguno.</p>
+      
+          <h4> Este es un texto </h4>
+          <div class = "hidden">
+          Este texto no se mostrará en el navegador.
           </div>
+          <p>
+              El espacio sobre este párrafo está vacío porque 
+              la visibilidad del elemento div está configurada como oculta.
+          </p>
+      <style>
+          h1.none{
+              display: none;
+          }
+          div.hidden{
+              visibility: hidden;
+          }
+      </style> <br>
+      <u>Code:</u>
+      <code><pre>
+          h1.none{
+              display: none;
+          }
+          div.hidden{
+              visibility: hidden;
+          }
+      </pre></code>
+      </div>
 
-          <!-- Degradados Radiales -->
-          <div class="borders">
-            <p class="numbers">48) Degradados Radiales</p>
-            <pre>
-          background: radial-gradient(position, shape or size, color-stops); 
-          position: top, left.. 0% 0%(sup izq), 50% 50%(medio)
-          </pre>
-            <table>
-              <td>
-                <div class="first48 degrad">Ellipse (Default)</div>
-              </td>
-              <td>
-                <div class="second48 degrad">Circle</div>
-              </td>
-            </table>
-            <style>
-              div.first48 {
-                background: -webkit-radial-gradient(red, yellow, blue);
-                background: -moz-radial-gradient(green, yellow, blue);
-                background: -ms-radial-gradient(green, yellow, blue);
-              }
+      <!-- posicionamiento -->
+      <div class="borders">
+        <p class="numbers">30) Posicionamiento</p>
 
-              div.second48 {
-                background: -webkit-radial-gradient(circle, red, yellow, blue);
-                background: -moz-radial-gradient(circle, green, yellow, blue);
-                background: -ms-radial-gradient(circle, green, yellow, blue);
-              }
-            </style>
+        <!-- estatico -->
+        <u>Estatico:</u>
+        <div class="ejemplo">
+          <p class="position_static">This paragraph has a <u>static</u> position.</p>
+        </div><br>
 
-            <table>
-              <td>
-                <div class="first49 degrad">Top Left</div>
-              </td>
-              <td>
-                <div class="second49 degrad">In Percentages</div>
-              </td>
-            </table>
-            <style>
-              div.first49 {
-                background: -moz-radial-gradient(top left, red, yellow, blue);
-                background: -webkit-radial-gradient(top left, red, yellow, blue);
-                background: -ms-radial-gradient(top left, green, yellow, blue);
-              }
+        <!-- fijo -->
+        <u>Fijo: (Arriba a la derecha)</u> <br>
+        <div class="ejemplo">
+          <p class="position_fixed">30) Fixed position.</p><br>
+        </div><br>
 
-              div.second49 {
-                background: -moz-radial-gradient(green 5%, yellow 15%, blue 60%);
-                background: -webkit-radial-gradient(red 5%, yellow 15%, blue 60%);
-                background: -ms-radial-gradient(green 5%, yellow 15%, blue 60%);
-              }
-            </style>
-
-            <table>
-              <td>
-                <div class="colorstop degrad">Color Stops</div>
-              </td>
-            </table>
-            <style>
-              div.colorstop {
-                background: -moz-radial-gradient(circle, green 40%, yellow 50%, blue 70%);
-                background: -webkit-radial-gradient(circle, red 40%, yellow 50%, blue 70%);
-                background: -ms-radial-gradient(circle, green 40%, yellow 50%, blue 70%);
-              }
-            </style>
-          </div>
-
-          <!-- Background size -->
-          <div class="borders">
-            <style>
-              .backsize {
-                height: 150px;
-                width: 200px;
-                border: 1px solid #000;
-                background: url("http://www.sololearn.com/uploads/css_logo.png") no-repeat 50% 50%;
-              }
-            </style>
-            <p class="numbers">51) Background size</p>
-            <table>
-              <td>
-                <div class="backsiz100 backsize">background-size: 100px</div>
-              </td>
-              <td>
-                <div class="backsiz50 backsize">background-size: 50px</div>
-              </td>
-            </table>
-            <style>
-              div.backsiz50 {
-                background-size: 50px 50px;
-              }
-
-              div.backsiz100 {
-                background-size: 100px 100px;
-              }
-            </style>
-
-            <table>
-              <td>
-                <div class="bscont backsize">bs: contain</div>
-              </td>
-              <td>
-                <div class="bscover backsize">bs: cover</div>
-              </td>
-            </table>
-            <style>
-              div.bscont {
-                background-size: contain;
-              }
-
-              div.bscover {
-                background-size: cover;
-              }
-            </style>
-
-            <!-- Background Clip -->
-            <p class="numbers"> 52) Background Clip</p>
-            <style>
-              .backclip {
-                border: 2px dotted black;
-                padding: 20px;
-                background: LightBlue;
-              }
-            </style>
-            <table>
-              <td>
-                <div class="bcpad backclip">background-clip: padding-box</div>
-              </td>
-              <td>
-                <div class="bccont backclip">background-clip: content-box</div>
-              </td>
-              <td>
-                <div class="bcimg backclip">background-clip: content-box</div>
-              </td>
-            </table>
-            <style>
-              div.bcpad {
-                background-clip: padding-box;
-              }
-
-              div.bccont {
-                background-clip: content-box;
-              }
-
-              div.bcimg {
-                background: none;
-                background-clip: content-box;
-                background-image: url("http://www.sololearn.com/uploads/css_logo.png");
-              }
-            </style>
-          </div>
-
-          <!-- Transparent borders -->
-          <div class="borders">
-            <p class="numbers">54) Transparent borders</p>
-            <div class="tbord2"> Transparent borders</div>
-            <style>
-              div.tbord2 {
-                border: 20px solid rgba(109, 61, 102, 0.085);
-                -moz-background-clip: padding-box;
-                -webkit-background-clip: padding-box;
-                background-clip: padding-box;
-                width: 200px;
-                /* position:absolute; */
-                top: 50px;
-                left: 50px;
-                background-color: white;
-              }
-            </style>
-
-            <p class="numbers">55) Multiple-background</p>
-            <div class="multbg"></div>
-            <style>
-              div.multbg {
-                width: 400px;
-                height: 200px;
-                background-image: url("http://www.sololearn.com/uploads/css_logo.png"), url("http://www.sololearn.com/uploads/better-code.jpg");
-                background-position: right bottom, left top;
-                background-repeat: no-repeat;
-              }
-            </style>
-
-            <!-- Opacity -->
-            <p class="numbers">56) Opacity</p>
-            <table>
-              <td><img id="img1" src="http://www.sololearn.com/uploads/css_logo.png" />1</td>
-              <td><img id="img2" src="http://www.sololearn.com/uploads/css_logo.png" />0.5</td>
-              <td><img id="img3" src="http://www.sololearn.com/uploads/css_logo.png" />0.25</td>
-              <td><img id="img4" src="http://www.sololearn.com/uploads/css_logo.png" />0.5 + alpha</td>
-            </table>
-            <style>
-              #img1 {
-                opacity: 1;
-              }
-
-              #img2 {
-                opacity: 0.5;
-              }
-
-              #img3 {
-                opacity: 0.25;
-              }
-
-              #img4 {
-                opacity: 0.5;
-                filter: alpha(opacity=50);
-              }
-            </style>
-          </div>
+        <!-- relativo -->
+        <u>Relativo:</u> <br>
+        <div class="ejemplo">
+          <enum class="spann"> relative text </enum><br>
         </div>
 
-        <!-- transiciones y Transparencia -->
-        <div class="borders">
-          <h2 class="titulo"> Transiciones y Transparencia </h2>
-          <!-- https://code.sololearn.com/WhEb9aoMSiUB/ -->
+        <style>
+          p.position_static {
+            position: static;
+            top: 130px;
+            right: 115px;
+          }
 
-          <!-- 57) Transition -->
-          <div class="borders">
-            <p class="numbers">57) Transition</p>
-            <div class="transit"> Apuntame...</div>
-            <style>
-              div.transit {
-                width: 120px;
-                height: 60px;
-                background: #32CD32;
-                transition: width 2s;
-                -webkit-transition: width 2s;
-              }
+          /* fijo */
+          p.position_fixed {
+            position: fixed;
+            top: 30px;
+            right: 15px;
+          }
 
-              div.transit:hover {
-                width: 350px;
-              }
-            </style>
-            <details>
-              <summary>code...</summary>
-              <pre>
-              div.transit {
-                  transition: width 2s;
-              }
-              div.transit:hover {
-                  width: 350px;
-              }
-              </pre>
-            </details>
-            <hr><br>
+          /* relativo */
+          .spann {
+            position: relative;
+            top: -10px;
+            left: 50px;
+          }
+        </style> <br>
+      </div>
 
-            <table>
-              <td>
-                <div class="rotate">transform: rotate(10deg);</div>
-              </td>
-            </table>
-            <style>
-              div.rotate {
-                width: 200px;
-                height: 100px;
-                background-color: #32CD32;
-                transform: rotate(10deg);
-                -webkit-transform: rotate(10deg);
-              }
-            </style> <br>
-            <hr>
+      <!-- Floating -->
+      <div class="borders">
+        <p class="numbers">31) Floating</p>
+        <p style="font-size: large; width: 50%; text-align: justify; "><img src="../Imgs/css_logo.png"
+            class="imgfloatr" />
+          Este párrafo tiene una imagen que flota a la <b>derecha.</b>
+          Es muy recomendable añadir un margen a las imágenes para que el texto no
+          No te acerques demasiado a la imagen. Si desea que su texto sea fácil de leer, puede
+          siempre debe agregar algunos píxeles entre palabras y bordes, imágenes,
+          y otro contenido.
+        </p>
+        <style>
+          img.imgfloatr {
+            height: 40px;
+            float: left;
+            /* right, left */
+          }
+        </style>
+        <code>
+          img.imgfloatr{
+              height: 40px;
+              float: left;
+          }
+      </code>
+        <hr>
 
-            <div class="empty-div">
-              <div class="greendivrot">
-                margin-top: 10px; <br>
-                transform: rotate(10deg); <br><br>
-                transform-origin: bottom center; <br>
-              </div>
-            </div>
-            <style>
-              div.empty-div {
-                /* position: relative; */
-                height: 100px;
-                width: 100px;
-                border: 1px solid black;
-              }
+        <!-- Clearing the Float -->
+        <p class="numbers">32) Clearing the Float</p>
+        <u><b>Floating:</b></u>
+        <div class="ejemplo">
+          Este párrafo está encima del elemento div y no se ve afectado por la propiedad float right de la imagen.
+          <br><br>
+          <div class="floating">
+            <img src="../Imgs/css_logo.png" height="150px" />
+          </div>
+          Este párrafo viene después del elemento div y se ve afectado por la propiedad float right.
+          <br> <br>
+          Este párrafo también viene después del elemento div y se ve afectado por la propiedad float right.
+        </div> <br>
 
-              .greendivrot {
-                font-size: 12px;
-                width: 100px;
-                height: 100px;
-                margin-top: 10px;
-                background-color: #32CD32;
-                transform: rotate(10deg);
-                transform-origin: bottom center;
-              }
-            </style> <br>
-            <hr>
+        <u><b>Clearing:</b></u>
+        <div class="ejemplo">
+          Este párrafo está encima del elemento div y no se ve afectado por la propiedad float right de la imagen.
+          <br><br>
+          <div class="floating">
+            <img src="../Imgs/css_logo.png" height="150px" />
+          </div>
+          Este párrafo viene después del elemento div y se ve afectado por la propiedad float right.
+          <br class="clearing" />
+          Este párrafo también viene después del elemento div y ya no se ve afectado por la propiedad float right.
+        </div>
+        <style>
+          .floating {
+            float: right;
+          }
 
-            <p class="numbers">60) Translate() Method</p>
-            <div class="empty-div">
-              <div class="torig">transform: translate(20px, 20px);</div>
-            </div>
-            <style>
-              div.torig {
-                height: 100px;
-                width: 100px;
-                background-color: #32CD32;
-                transform: translate(20px, 20px);
-                -webkit-transform: translate(20px, 20px);
-              }
-            </style><br>
+          .clearing {
+            clear: both;
+            /* both, right, left */
+          }
+        </style>
+        <code><pre>
+          .floating{
+              float: right;
+          }
+          .clearing{
+              clear: both; /* both, right, left */
+          }
+      </pre></code>
+      </div>
 
-            <p class="numbers">60) Skew() Method</p>
-            <div class="empty-div">
-              <div class="skew">transform: skew(30deg);</div>
-            </div>
-            <style>
-              div.skew {
-                height: 100px;
-                width: 100px;
-                position: absolute;
-                background-color: #32CD32;
-                transform: skew(30deg);
-                -webkit-transform: skew(30deg);
-              }
-            </style>
+      <!-- Z-Index -->
+      <div class="borders">
+        <p class="numbers">33) Z-Index</p>
+        <div class="bluee">Blue</div>
+        <div class="redd">Red</div>
+        <style>
+          .bluee {
+            z-index: 3;
+            position: relative;
+            background-color: blue;
+            margin-bottom: 15px;
+            width: 120px;
+            height: 120px;
+            color: #FFF;
+          }
 
-            <p class="numbers">60) Scale y rotate</p>
-            <table>
-              <td>
-                <div class="scale0-7 scalerot">the factor 0.7 both horizontally and vertically</div>
-              </td>
-              <td>
-                <div class="scale1-5 scalerot">div by a factor of 1.5 horizontally and vertically</div>
-              </td>
-              <td>
-                <div class="scaleandrotate scalerot">div rotated at 45deg</div>
-              </td>
-            </table>
-            <style>
-              div.scalerot {
-                width: 150px;
-                height: 70px;
-                background-color: #8BC34A;
-              }
-
-              div.scale0-7 {
-                transform: scale(0.7, 0.7);
-                -webkit-transform: scale(0.7, 0.7);
-              }
-
-              div.scale1-5 {
-                transform: scale(1.5, 1.5);
-                -webkit-transform: scale(1.5, 1.5);
-                margin: 45px;
-              }
-
-              div.scaleandrotate {
-                transform: rotate(45deg);
-                -webkit-transform: rotate(45deg);
-              }
-
-              @keyframes examplecc {
-                0% {
-                  background-color: red;
-                }
-
-                50% {
-                  background-color: yellow;
-                }
-
-                70% {
-                  background-color: blue;
-                }
-
-                100% {
-                  background-color: green;
-                }
-              }
-
-              @keyframes ColorChangeExample {
-                from {
-                  background-color: red;
-                }
-
-                /* 0% {background-color: red;} */
-
-                to {
-                  background-color: green;
-                }
-
-                /* 100% {background-color: green;} */
-              }
-            </style>
-
-            <!-- The @keyframes Rule -->
-            <p class="numbers">61) The @keyframes Rule</p>
-            <div class="colorforcc"></div>
-            <style>
-              div.colorforcc {
-                width: 60px;
-                height: 60px;
-                background-color: red;
-                animation-name: colorchange;
-                animation-duration: 1s;
-                -webkit-animation-name: colorchange;
-                -webkit-animation-duration: 1s;
-                animation-iteration-count: infinite;
-              }
-
-              @keyframes colorchange {
-                0% {
-                  background-color: red;
-                }
-
-                50% {
-                  background-color: green;
-                }
-
-                100% {
-                  background-color: blue;
-                }
-              }
-
-              @-webkit-keyframes colorchange {
-                0% {
-                  background-color: red;
-                }
-
-                50% {
-                  background-color: green;
-                }
-
-                100% {
-                  background-color: blue;
-                }
-              }
-            </style>
-            <details>
-              <summary>code...</summary>
-              div.colorforcc {
-              width: 100px;
-              height: 100px;
+          .redd {
+            z-index: 2;
+            position: relative;
+            background-color: red;
+            width: 120px;
+            height: 120px;
+            color: #FFF;
+            margin-top: -50px;
+            margin-left: 50px;
+          }
+        </style>
+        <code><pre>
+          .bluee { 
+              z-index: 3;
+              position: relative;
+              background-color: blue;
+              margin-bottom: 15px;
+              width: 120px;
+              height: 120px;
+              color: #FFF;
+          }
+          .redd {
+              z-index: 2;
+              position: relative;
               background-color: red;
-              animation-name: colorchange;
-              animation-duration: 1s;
-              -webkit-animation-name: colorchange;
-              -webkit-animation-duration: 1s;
-              }
-              @keyframes colorchange {
-              0% {background-color: red; }
-              50% {background-color: green; }
-              100% {background-color: blue; }
-              }
-              @-webkit-keyframes colorchange {
-              0% {background-color: red; }
-              50% {background-color: green; }
-              100% {background-color: blue; }
-              }
-            </details>
+              width: 120px;
+              height: 120px;
+              color: #FFF;
+              margin-top: -50px;
+              margin-left: 50px;
+          }
+      </pre></code>
+        <hr>
 
-            <!-- The animation-name Property -->
-            <p class="numbers">62) The animation-name Property</p>
-            <div class="animdurat"></div>
-            <!-- https://www.sololearn.com/learning/1023/2254/4511/1 -->
-            <style>
-              div.animdurat {
-                height: 50px;
-                width: 400px;
-                background-color: red;
-                animation-name: colorchange2;
-                animation-duration: 2s;
-                -webkit-animation-duration: 2s;
-                -webkit-animation-name: colorchange2;
+        <!-- OverFlow -->
+        <p class="numbers">34) OverFlow</p>
+        <div class="overflow">
+          This text is inside the div element, which has a blue
+          background color and is floated to the left. We set a specific
+          height and width for the div element, and as you can see,
+          the content cannot fit.
+          <style>
+            div.overflow {
+              width: 150px;
+              height: 150px;
+              background-color: lightblue;
+              overflow: scroll;
+              /* visible, scroll, hidden, auto */
+            }
+          </style>
+        </div>
+        <code><pre>
+          div.overflow{
+              width: 150px;
+              height: 150px;
+              background-color: lightblue;
+              overflow: scroll; /* visible, scroll, hidden, auto */ 
+          }
+      </pre></code>
+      </div>
+  </div>
 
-                animation-iteration-count: infinite;
-                /* -webkit-animation-timing-function: linear; */
-                /* -webkit-animation-delay: 2s; */
-                /* -webkit-animation-iteration-count: 5; */
-                /* -webkit-animation-direction: reverse; */
-              }
+  <!-- Bacics CSS3 -->
+  <div class="borders">
+    <h2 class="titulo"> Bacics CSS3 </h2>
 
-              @keyframes colorchange2 {
-                from {
-                  width: 0px;
+    <!-- Prefijos de provedores css -->
+    <div class="borders">
+      <p class="numbers">35) Prefijos de provedores/navegadores css:</p>
+
+      FireFox = -moz- <br>
+      Safari = -webkit- <br>
+      Chrome = -webkit- <br>
+      Opera = -o- <br>
+      Explorer = -ms <br><br>
+
+      <div class="roundd">
+        -webkit-border-radius: 24px; <br>
+        border-radius: 24px;
+      </div>
+      <style>
+        .roundd {
+          -webkit-border-radius: 24px;
+          border-radius: 24px;
+          border: 1px solid green;
+          width: 300px;
+          padding: 25px;
+        }
+
+        .boxsh {
+          width: 250px;
+          height: 60px;
+          padding: 7px;
+          border: 1px solid;
+          text-align: center;
+          display: table-cell;
+          vertical-align: middle;
+        }
+      </style>
+    </div>
+
+    <!-- Border-Radius -->
+    <div class="borders" style="height: 150px;">
+      <p class="numbers"> 36) Border-Radius </p>
+      <div class="boxizq">
+        <div class="divBorderRadius boxsh">
+          border-radius: 0 10px 20px 30px;
+        </div>
+      </div>
+      <div class="boxder">
+        <div class="boxsh divCirculo">
+          border-radius: 50%;
+        </div>
+      </div>
+      <style>
+        /* Border-Radius */
+        .divBorderRadius {
+          border-radius: 0 10px 20px 30px;
+          background-color: green;
+          color: white;
+          /* padding: 30px; */
+          width: 200px;
+        }
+
+        /* Circulo */
+        .divCirculo {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          color: white;
+          background-color: green;
+        }
+      </style>
+    </div>
+
+    <!-- Box-Shadow -->
+    <div class="borders">
+      <p class="numbers"> 37) Box-Shadow </p>
+      <div class="boxShadow boxsh">
+        box-shadow: 10px 10px 10px 5px #888; <br>
+        <font color="grey">box-shadow: Hriz, Vert, blur, spread, color</font>
+      </div>
+      <style>
+        .boxShadow {
+          background-color: #fff;
+          box-shadow: 10px 10px 10px 5px grey;
+          /*         Hriz, Vert, blur, spread, color */
+        }
+      </style>
+      <br>
+      <hr>
+
+      <!-- Box-Inside Shadow -->
+      <h3 class="subtitulo"> Box-Inside Shadow </h3>
+      <div class="boxInsideShadow boxsh">
+        box-shadow: inset 10px 10px 10px 5px green ;
+      </div>
+      <style>
+        .boxInsideShadow {
+          background-color: #fff;
+          box-shadow: inset 10px 10px 10px 5px grey;
+        }
+      </style>
+      <br>
+      <hr>
+
+      <!-- Box-Double Inside Shadow -->
+      <h3 class="subtitulo"> Box-Double Inside Shadow </h3>
+      <div class="boxDoubleInsideShadow boxsh">
+        box-shadow: inset 10px 10px 5px green, <br> inset -10px -10px 5px green ;
+      </div>
+      <style>
+        .boxDoubleInsideShadow {
+          background-color: #fff;
+          box-shadow: inset 5px 5px 15px grey, inset -5px -5px 15px grey;
+        }
+      </style>
+      <br>
+      <hr>
+
+      <!-- Box-Triple Shadow -->
+      <h3 class="subtitulo"> Box-Triple Shadow </h3>
+      <div class="BoxTrilpeShadow">
+        box-shadow: 0 0 10px 4px #FF6347, <br> 0 0 10px 30px #FFDAB9, <br> 30px 0 20px 30px #B0E0E6;
+      </div>
+      <style>
+        .BoxTrilpeShadow {
+          text-align: center;
+          vertical-align: middle;
+          width: 250px;
+          height: 50px;
+          margin-left: 30px;
+          margin-top: 30px;
+          background-color: #fff;
+          box-shadow: 0 0 10px 4px #FF6347,
+            0 0 10px 25px #FFDAB9,
+            20px 20px 15px 20px #42e3f8;
+        }
+      </style>
+      <br><br><br>
+    </div>
+
+    <!-- BoxTransparencia -->
+    <div class="borders">
+      <h3 class="subtitulo"> 38) Transparencia </h3>
+      <div class="BoxTransparencia">
+        background-color: #9ACD32; <br>
+        background: linear-gradient(90deg, <br>
+        rgba(38, 23, 179, 0.515) 0%, <br>
+        rgba(16, 129, 133, 0.549) 25%, <br>
+        rgba(167, 201, 17, 0.433) 75%, <br>
+        rgba(72, 0, 56, 0.419) 100%); <br>
+        box-shadow: 0 0 25px rgba(19, 8, 80, 0.486), <br>
+        inset 0 0 1px rgba(0, 189, 85, 0.829); <br>
+      </div> <br>
+
+      <style>
+        .BoxTransparencia {
+          width: 80%;
+          height: auto;
+          padding: 15px;
+          background-color: #9ACD32;
+          background: linear-gradient(90deg,
+              rgba(38, 23, 179, 0.515) 0%,
+              rgba(16, 129, 133, 0.549) 25%,
+              rgba(167, 201, 17, 0.433) 75%,
+              rgba(72, 0, 56, 0.419) 100%);
+          box-shadow: 0 0 25px rgba(19, 8, 80, 0.486),
+            inset 0 0 1px rgba(0, 189, 85, 0.829);
+        }
+      </style>
+    </div>
+
+    <!-- Text Shadow -->
+    <div class="borders">
+      <p class="numbers">39) Text Shadow</p>
+      <h2 class="TextShadow">
+        Text Shadow.
+      </h2>
+      <style>
+        .TextShadow {
+          text-shadow: 1px 1px 5px blue, -3px -3px 5px grey;
+        }
+      </style>
+      <code>
+            .TextShadow{ <br>
+                text-shadow: 1px 1px 5px blue, -3px -3px 5px grey; <br>
+            } <br>
+        </code>
+    </div>
+
+    <!-- Pseudo-Clases -->
+    <div class="borders">
+      <p class="numbers">40) Pseudo-Clases</p>
+      <div id="parent">
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <p>Third paragraph</p>
+        <p>Fourth paragraph</p>
+        <style>
+          #parent p:first-child {
+            /* first-last */
+            color: green;
+            text-decoration: underline;
+          }
+        </style>
+        <code>
+                #parent p:first-child { <br>
+                    color: green; <br>
+                    text-decoration: underline; <br>
                 }
+            </code>
+      </div>
+    </div>
 
-                to {
-                  width: 250px;
+    <!-- Pseudo-Elemento -->
+    <div class="borders">
+      <p class="numbers">41) Pseudo-Elemento</p>
+
+      ::first-line <br>
+      ::first-letter <br>
+      ::selection <br>
+      ::before <br>
+      ::after <br><br>
+      <hr>
+
+      <h3 class="subtitulo"> >>First-Line</h3>
+      <h1 class="textfirstline">The following example demonstrates how to use the ::first-line element to add
+        special effect to the first line of elements in the document.</h6>
+        <code>
+            .textfirstline::first-line { <br>
+                color: #589432; <br>
+            } <br>
+        </code>
+        <hr>
+
+        <h3 class="subtitulo"> >>First-Letter</h3>
+        <h2 class="firstletter"> La primera letra es de otro color</h2>
+        <code>
+            .firstletter::first-letter{ <br>
+                background-color: #589432; <br>
+            }
+        </code>
+        <hr>
+
+        <h3 class="subtitulo"> >>Selection</h3>
+        <h2 class="seleccioname">Selecciona una parte de este texto para marcarlo de otro color</h2>
+        <code>
+            .seleccioname::first-letter{ <br>
+                background-color: #589432; <br>
+            }
+        </code>
+        <hr>
+
+        <h3 class="subtitulo"> >>Before</h3>
+        <p class="insertImageBeforeText">insert Image Before Text</p>
+        <code>
+            .insertImageBeforeText::before{ <br>
+            content: url("../Imgs/loguito.png"); <br>
+        }
+        </code>
+        <style>
+          .textfirstline::first-line {
+            color: #589432;
+          }
+
+          .firstletter::first-letter {
+            background-color: #589432;
+          }
+
+          .seleccioname::selection {
+            /* h5::-moz-selection{ (para mozillaFirefox)*/
+            background-color: #589432;
+            color: #FF6347;
+          }
+
+          .insertImageBeforeText::before {
+            content: url("../Imgs/loguito.png");
+          }
+        </style>
+    </div>
+
+    <!-- Word-Wrap -->
+    <div class="borders">
+      <p class="numbers">42) Word-Wrap</p>
+      <p class="wordwrapnormal">
+        Normal.
+        NormalNormalNormalNormalNormalNormalNormalNormalNormalNormalNormalNormal.
+      </p>
+      <p class="wordwrapbreak">
+        Break-Word.
+        Break-Word.Break-Word.Break-Word.Break-Word.Break-Word.
+      </p>
+      <br><br>
+      <details>
+        <summary>Code...</summary>
+        <code>
+                .wordwrapnormal{ <br>
+                    border: 1px solid black; <br>
+                    width: 120px; <br>
+                    height: 100px; <br>
+                    word-wrap: normal; <br>
+                } <br>
+                .wordwrapbreak{ <br>
+                    border: 1px solid black; <br>
+                    width: 120px; <br>
+                    height: 100px; <br>
+                    word-wrap: break-word; <br>
                 }
-              }
+            </code>
+      </details>
 
-              div.ExampleColCha {
-                animation: colorchange2 3s ease-in 1s infinite reverse;
-                /*   esría así:
-                  animation-name: colorchange2;
-                  animation-duration: 3s;
-                  animation-timing-function: ease-in;
-                  animation-delay: 1s;
+      <style>
+        .wordwrapnormal {
+          border: 1px solid black;
+          width: 120px;
+          height: 100px;
+          word-wrap: normal;
+        }
+
+        .wordwrapbreak {
+          border: 1px solid black;
+          width: 120px;
+          height: 100px;
+          word-wrap: break-word;
+        }
+      </style>
+    </div>
+
+    <!-- Font-Face -->
+    <div class="borders">
+      <p class="numbers">43) Font-Face</p>
+      <h1 class="custfont">This is Delicious Font</h1>
+      <details>
+        <summary>Code...</summary>
+        <code>
+                @font-face { <br>
+                font-family: Delicious;  <br>
+                src: url('../Imgs/Delicious-Roman.otf');  <br>
+            }  <br>
+            @font-face {  <br>
+                font-family: Delicious;  <br>
+                font-weight: bold;  <br>
+                src: url('../Imgs/Delicious-Bold.otf');  <br>
+            } <br>
+            h1.custfont{ <br>
+                font-family: Delicious, sans-serif;  <br>
+            }
+            </code>
+      </details>
+      <style>
+        @font-face {
+          font-family: Delicious;
+          src: url('../Imgs/Delicious-Roman.otf');
+        }
+
+        @font-face {
+          font-family: Delicious;
+          font-weight: bold;
+          src: url('../Imgs/Delicious-Bold.otf');
+        }
+
+        h1.custfont {
+          font-family: Delicious, sans-serif;
+        }
+      </style>
+    </div>
+  </div>
+
+  <!-- Degradados y Fondos -->
+  <div class="borders">
+    <h2 class="titulo"> Degradados y Fondos </h2>
+    <style>
+      .deg {
+        width: 300px;
+        height: 100px;
+        margin: 4px;
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      .degrad {
+        height: 150px;
+        width: 200px;
+        color: #FFF;
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+      }
+    </style>
+
+    <!-- Dergadados Lineales -->
+    <div class="borders">
+      <h1 class="numbers">Dergadados Lineales</h1>
+      (Si no se usa rgb usar "-webkit-linear-gradient(#fff, #000)"
+      <br><br>
+      <table>lineal gradient
+        <td>
+          <div class="degradados deg">
+            background: linear-gradient(<br> #00d4ff, #090979);
+          </div>
+        </td>
+        <td>
+          <div class="degradadosmulticolor deg">
+            background: linear-gradient(<br> blue 0%,<br> #00bfff 30%,<br> #fff 80%);
+          </div>
+        </td>
+      </table>
+      <style>
+        div.degradados {
+          background: linear-gradient(#00d4ff, #090979);
+        }
+
+        div.degradados :hover {
+          color: red;
+        }
+
+        div.degradadosmulticolor {
+          background: linear-gradient(blue 0%, #00bfff 30%, #fff 80%);
+        }
+      </style><br>
+
+      <table>left & bottom
+        <td>
+          <div class="first deg">background: linear-gradient(left, blue, 00bfff, white);</div>
+        </td>
+        <td>
+          <div class="second deg">background: linear-gradient(bottom, blue, 00bfff, white);</div>
+        </td>
+      </table>
+
+      <style>
+        div.first {
+          background: -webkit-linear-gradient(left, blue, #00bfff, white);
+          background: -moz-linear-gradient(left, blue, #00bfff, white);
+          background: -ms-linear-gradient(left, blue, #00bfff, white);
+        }
+
+        div.second {
+          background: -webkit-linear-gradient(bottom, blue, #00bfff, white);
+          background: -moz-linear-gradient(bottom, blue, #00bfff, white);
+          background: -ms-linear-gradient(bottom, blue, #00bfff, white);
+        }
+      </style><br>
+
+      <table>bottom left & 100deg
+        <td>
+          <div class="first2 deg">background: linear-gradient(bottom left, blue, #00bfff, white);</div>
+        </td>
+        <td>
+          <div class="second2 deg">background: linear-gradient(100deg, blue, #00bfff, white);</div>
+        </td>
+      </table>
+      <style>
+        div.first2 {
+          background: -webkit-linear-gradient(bottom left, blue, #00bfff, white);
+          background: -moz-linear-gradient(bottom left, blue, #00bfff, white);
+          background: -ms-linear-gradient(bottom left, blue, #00bfff, white);
+        }
+
+        div.second2 {
+          background: -webkit-linear-gradient(100deg, blue, #00bfff, white);
+          background: -moz-linear-gradient(100deg, blue, #00bfff, white);
+          background: -ms-linear-gradient(100deg, blue, #00bfff, white);
+        }
+      </style><br>
+
+      <table>Repeating Gradient
+        <td>
+          <div class="repeating deg">background: repeating-linear-gradient(rgb(0, 21, 255), rgb(0, 255, 238)
+            20px);</div>
+        </td>
+      </table>
+      <style>
+        div.repeating {
+          float: left;
+          background: repeating-linear-gradient(rgb(0, 21, 255), rgb(0, 255, 238) 20px);
+        }
+      </style>
+    </div>
+
+    <!-- Degradados Radiales -->
+    <div class="borders">
+      <p class="numbers">48) Degradados Radiales</p>
+      <pre>
+    background: radial-gradient(position, shape or size, color-stops); 
+    position: top, left.. 0% 0%(sup izq), 50% 50%(medio)
+    </pre>
+      <table>
+        <td>
+          <div class="first48 degrad">Ellipse (Default)</div>
+        </td>
+        <td>
+          <div class="second48 degrad">Circle</div>
+        </td>
+      </table>
+      <style>
+        div.first48 {
+          background: -webkit-radial-gradient(red, yellow, blue);
+          background: -moz-radial-gradient(green, yellow, blue);
+          background: -ms-radial-gradient(green, yellow, blue);
+        }
+
+        div.second48 {
+          background: -webkit-radial-gradient(circle, red, yellow, blue);
+          background: -moz-radial-gradient(circle, green, yellow, blue);
+          background: -ms-radial-gradient(circle, green, yellow, blue);
+        }
+      </style>
+
+      <table>
+        <td>
+          <div class="first49 degrad">Top Left</div>
+        </td>
+        <td>
+          <div class="second49 degrad">In Percentages</div>
+        </td>
+      </table>
+      <style>
+        div.first49 {
+          background: -moz-radial-gradient(top left, red, yellow, blue);
+          background: -webkit-radial-gradient(top left, red, yellow, blue);
+          background: -ms-radial-gradient(top left, green, yellow, blue);
+        }
+
+        div.second49 {
+          background: -moz-radial-gradient(green 5%, yellow 15%, blue 60%);
+          background: -webkit-radial-gradient(red 5%, yellow 15%, blue 60%);
+          background: -ms-radial-gradient(green 5%, yellow 15%, blue 60%);
+        }
+      </style>
+
+      <table>
+        <td>
+          <div class="colorstop degrad">Color Stops</div>
+        </td>
+      </table>
+      <style>
+        div.colorstop {
+          background: -moz-radial-gradient(circle, green 40%, yellow 50%, blue 70%);
+          background: -webkit-radial-gradient(circle, red 40%, yellow 50%, blue 70%);
+          background: -ms-radial-gradient(circle, green 40%, yellow 50%, blue 70%);
+        }
+      </style>
+    </div>
+
+    <!-- Background size -->
+    <div class="borders">
+      <style>
+        .backsize {
+          height: 150px;
+          width: 200px;
+          border: 1px solid #000;
+          background: url("http://www.sololearn.com/uploads/css_logo.png") no-repeat 50% 50%;
+        }
+      </style>
+      <p class="numbers">51) Background size</p>
+      <table>
+        <td>
+          <div class="backsiz100 backsize">background-size: 100px</div>
+        </td>
+        <td>
+          <div class="backsiz50 backsize">background-size: 50px</div>
+        </td>
+      </table>
+      <style>
+        div.backsiz50 {
+          background-size: 50px 50px;
+        }
+
+        div.backsiz100 {
+          background-size: 100px 100px;
+        }
+      </style>
+
+      <table>
+        <td>
+          <div class="bscont backsize">bs: contain</div>
+        </td>
+        <td>
+          <div class="bscover backsize">bs: cover</div>
+        </td>
+      </table>
+      <style>
+        div.bscont {
+          background-size: contain;
+        }
+
+        div.bscover {
+          background-size: cover;
+        }
+      </style>
+
+      <!-- Background Clip -->
+      <p class="numbers"> 52) Background Clip</p>
+      <style>
+        .backclip {
+          border: 2px dotted black;
+          padding: 20px;
+          background: LightBlue;
+        }
+      </style>
+      <table>
+        <td>
+          <div class="bcpad backclip">background-clip: padding-box</div>
+        </td>
+        <td>
+          <div class="bccont backclip">background-clip: content-box</div>
+        </td>
+        <td>
+          <div class="bcimg backclip">background-clip: content-box</div>
+        </td>
+      </table>
+      <style>
+        div.bcpad {
+          background-clip: padding-box;
+        }
+
+        div.bccont {
+          background-clip: content-box;
+        }
+
+        div.bcimg {
+          background: none;
+          background-clip: content-box;
+          background-image: url("http://www.sololearn.com/uploads/css_logo.png");
+        }
+      </style>
+    </div>
+
+    <!-- Transparent borders -->
+    <div class="borders">
+      <p class="numbers">54) Transparent borders</p>
+      <div class="tbord2"> Transparent borders</div>
+      <style>
+        div.tbord2 {
+          border: 20px solid rgba(109, 61, 102, 0.085);
+          -moz-background-clip: padding-box;
+          -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+          width: 200px;
+          /* position:absolute; */
+          top: 50px;
+          left: 50px;
+          background-color: white;
+        }
+      </style>
+
+      <p class="numbers">55) Multiple-background</p>
+      <div class="multbg"></div>
+      <style>
+        div.multbg {
+          width: 400px;
+          height: 200px;
+          background-image: url("http://www.sololearn.com/uploads/css_logo.png"), url("http://www.sololearn.com/uploads/better-code.jpg");
+          background-position: right bottom, left top;
+          background-repeat: no-repeat;
+        }
+      </style>
+
+      <!-- Opacity -->
+      <p class="numbers">56) Opacity</p>
+      <table>
+        <td><img id="img1" src="http://www.sololearn.com/uploads/css_logo.png" />1</td>
+        <td><img id="img2" src="http://www.sololearn.com/uploads/css_logo.png" />0.5</td>
+        <td><img id="img3" src="http://www.sololearn.com/uploads/css_logo.png" />0.25</td>
+        <td><img id="img4" src="http://www.sololearn.com/uploads/css_logo.png" />0.5 + alpha</td>
+      </table>
+      <style>
+        #img1 {
+          opacity: 1;
+        }
+
+        #img2 {
+          opacity: 0.5;
+        }
+
+        #img3 {
+          opacity: 0.25;
+        }
+
+        #img4 {
+          opacity: 0.5;
+          filter: alpha(opacity=50);
+        }
+      </style>
+    </div>
+  </div>
+
+    <!-- transiciones y Transparencia -->
+    <div class="borders">
+      <h2 class="titulo"> Transiciones y Transparencia </h2>
+      <!-- https://code.sololearn.com/WhEb9aoMSiUB/ -->
+
+      <!-- 57) Transition -->
+      <div class="borders">
+        <p class="numbers">57) Transition</p>
+        <div class="transit"> 
+          Apuntame...
+        </div>
+        <style>
+          div.transit {
+            width: 120px;
+            height: 60px;
+            background: #32CD32;
+            transition: width 2s;
+            -webkit-transition: width 2s;
+          }
+
+          div.transit:hover {
+            width: 350px;
+          }
+        </style>
+        <details>
+          <summary>code...</summary>
+          <pre>
+          div.transit {
+              transition: width 2s;
+          }
+          div.transit:hover {
+              width: 350px;
+          }
+          </pre>
+        </details>
+        <hr><br>
+
+        <table>
+          <td>
+            <div class="rotate">transform: rotate(10deg);</div>
+          </td>
+        </table>
+        <style>
+          div.rotate {
+            width: 200px;
+            height: 100px;
+            background-color: #32CD32;
+            transform: rotate(10deg);
+            -webkit-transform: rotate(10deg);
+          }
+        </style> <br>
+        <hr>
+
+        <div class="empty-div">
+          <div class="greendivrot">
+            margin-top: 10px; <br>
+            transform: rotate(10deg); <br><br>
+            transform-origin: bottom center; <br>
+          </div>
+        </div>
+        <style>
+          div.empty-div {
+            /* position: relative; */
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+          }
+
+          .greendivrot {
+            font-size: 12px;
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+            background-color: #32CD32;
+            transform: rotate(10deg);
+            transform-origin: bottom center;
+          }
+        </style> <br>
+        <hr>
+
+        <p class="numbers">60) Translate() Method</p>
+        <div class="empty-div">
+          <div class="torig">transform: translate(20px, 20px);</div>
+        </div>
+        <style>
+          div.torig {
+            height: 100px;
+            width: 100px;
+            background-color: #32CD32;
+            transform: translate(20px, 20px);
+            -webkit-transform: translate(20px, 20px);
+          }
+        </style><br>
+
+        <p class="numbers">60) Skew() Method</p>
+        <div class="empty-div">
+          <div class="skew">transform: skew(30deg);</div>
+        </div>
+        <style>
+          div.skew {
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            background-color: #32CD32;
+            transform: skew(30deg);
+            -webkit-transform: skew(30deg);
+          }
+        </style>
+
+        <p class="numbers">60) Scale y rotate</p>
+        <table>
+          <td>
+            <div class="scale0-7 scalerot">the factor 0.7 both horizontally and vertically</div>
+          </td>
+          <td>
+            <div class="scale1-5 scalerot">div by a factor of 1.5 horizontally and vertically</div>
+          </td>
+          <td>
+            <div class="scaleandrotate scalerot">div rotated at 45deg</div>
+          </td>
+        </table>
+        <style>
+          div.scalerot {
+            width: 150px;
+            height: 70px;
+            background-color: #8BC34A;
+          }
+          div.scale0-7 {
+            transform: scale(0.7, 0.7);
+            -webkit-transform: scale(0.7, 0.7);
+          }
+          div.scale1-5 {
+            transform: scale(1.5, 1.5);
+            -webkit-transform: scale(1.5, 1.5);
+            margin: 45px;
+          }
+          div.scaleandrotate {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+          }
+
+          @keyframes examplecc {
+            0% {
+              background-color: red;
+            }
+            50% {
+              background-color: yellow;
+            }
+            70% {
+              background-color: blue;
+            }
+            100% {
+              background-color: green;
+            }
+          }
+
+          @keyframes ColorChangeExample {
+            from {
+              background-color: red;
+            }
+            /* 0% {background-color: red;} */
+
+            to {
+              background-color: green;
+            }
+            /* 100% {background-color: green;} */
+          }
+        </style>
+
+        <!-- The @keyframes Rule -->
+        <p class="numbers">61) The @keyframes Rule</p>
+        <div class="colorforcc"></div>
+        <style>
+          div.colorforcc {
+            width: 60px;
+            height: 60px;
+            background-color: red;
+            animation-name: colorchange;
+            animation-duration: 1s;
+            -webkit-animation-name: colorchange;
+            -webkit-animation-duration: 1s;
+            animation-iteration-count: infinite;
+          }
+
+          @keyframes colorchange {
+            0% {
+              background-color: red;
+            }
+            50% {
+              background-color: green;
+            }
+            100% {
+              background-color: blue;
+            }
+          }
+
+          @-webkit-keyframes colorchange {
+            0% {
+              background-color: red;
+            }
+            50% {
+              background-color: green;
+            }
+            100% {
+              background-color: blue;
+            }
+          }
+        </style>
+        <details>
+          <summary>code...</summary>
+          div.colorforcc {
+          width: 100px;
+          height: 100px;
+          background-color: red;
+          animation-name: colorchange;
+          animation-duration: 1s;
+          -webkit-animation-name: colorchange;
+          -webkit-animation-duration: 1s;
+          }
+          @keyframes colorchange {
+          0% {background-color: red; }
+          50% {background-color: green; }
+          100% {background-color: blue; }
+          }
+          @-webkit-keyframes colorchange {
+          0% {background-color: red; }
+          50% {background-color: green; }
+          100% {background-color: blue; }
+          }
+        </details>
+
+        <!-- The animation-name Property -->
+        <p class="numbers">62) The animation-name Property</p>
+        <div class="animdurat"></div>
+        <!-- https://www.sololearn.com/learning/1023/2254/4511/1 -->
+        <style>
+          div.animdurat {
+            height: 50px;
+            width: 400px;
+            background-color: red;
+            animation-name: colorchange2;
+            animation-duration: 2s;
+            -webkit-animation-duration: 2s;
+            -webkit-animation-name: colorchange2;
+
+            animation-iteration-count: infinite;
+            /* -webkit-animation-timing-function: linear; */
+            /* -webkit-animation-delay: 2s; */
+            /* -webkit-animation-iteration-count: 5; */
+            /* -webkit-animation-direction: reverse; */
+          }
+
+          @keyframes colorchange2 {
+            from {
+              width: 0px;
+            }
+
+            to {
+              width: 250px;
+            }
+          }
+
+          div.ExampleColCha {
+            animation: colorchange2 3s ease-in 1s infinite reverse;
+            /*   esría así:
+              animation-name: colorchange2;
+              animation-duration: 3s;
+              animation-timing-function: ease-in;
+              animation-delay: 1s;
+              animation-iteration-count: infinite;
+              animation-direction: reverse; 
+              */
+          }
+        </style>
+        <details>
+          <summary>Code...</summary>
+          <pre>
+              div{
+                  animation-duration: 2s;
                   animation-iteration-count: infinite;
-                  animation-direction: reverse; 
-                  */
               }
-            </style>
-            <details>
-              <summary>Code...</summary>
-              <pre>
-                  div{
-                      animation-duration: 2s;
-                      animation-iteration-count: infinite;
-                  }
-                  @keyframes colorchange2 {
-                      from { width: 0px; }
-                      to { width: 250px; }
-                  }
-              </pre>
-            </details>
-            <details>
-              <summary>Info...</summary>
-              <pre>
-              (animation-timing-function: *)
-                  ease (default) - slow start, then fast, then end slowly 
-                  linear - same speed from start to end
-                  ease-in - slow start
-                  ease-out - slow end
-                  ease-in-out - slow start and end
-                  cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier Function
-
-              (animation-direction: *)
-                  normal - the default value, which means it plays forward from 0 % to 100%.
-                  reverse - plays the keyframe in an opposite direction from 100 % to 0%
-                  alternate - the animation first runs forward, then backward, then forward.
-                  alternate-reverse - the animation first runs backward, then forward, then backward.
-              </pre>
-            </details>
-
-            <!-- 3D rotation -->
-            <p class="numbers">63) 3D Rotation </p>
-            <table>
-              <td>
-                <div class="X rot3d">rotateX(150deg)</div>
-              </td>
-              <td>
-                <div class="Y rot3d">rotateY(150deg)</div>
-              </td>
-              <td>
-                <div class="Z rot3d">rotateZ(150deg)</div>
-              </td>
-            </table>
-            <style>
-              div.rot3d {
-                width: 150px;
-                height: 80px;
-                color: white;
-                background-color: green;
+              @keyframes colorchange2 {
+                  from { width: 0px; }
+                  to { width: 250px; }
               }
+          </pre>
+        </details>
+        <details>
+          <summary>Info...</summary>
+          <pre>
+          (animation-timing-function: *)
+              ease (default) - slow start, then fast, then end slowly 
+              linear - same speed from start to end
+              ease-in - slow start
+              ease-out - slow end
+              ease-in-out - slow start and end
+              cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier Function
 
-              div.X {
-                transform: rotateX(150deg);
-                -webkit-transform: rotateX(150deg);
-                /* transform: none; (Desactivar) */
-              }
+          (animation-direction: *)
+              normal - the default value, which means it plays forward from 0 % to 100%.
+              reverse - plays the keyframe in an opposite direction from 100 % to 0%
+              alternate - the animation first runs forward, then backward, then forward.
+              alternate-reverse - the animation first runs backward, then forward, then backward.
+          </pre>
+        </details>
 
-              div.Y {
-                transform: rotateY(150deg);
-                -webkit-transform: rotateY(150deg);
-              }
+        <!-- 3D rotation -->
+        <p class="numbers">63) 3D Rotation </p>
+        <table>
+          <td>
+            <div class="X rot3d">rotateX(150deg)</div>
+          </td>
+          <td>
+            <div class="Y rot3d">rotateY(150deg)</div>
+          </td>
+          <td>
+            <div class="Z rot3d">rotateZ(150deg)</div>
+          </td>
+        </table>
+        <style>
+          div.rot3d {
+            width: 150px;
+            height: 80px;
+            color: white;
+            background-color: green;
+          }
 
-              div.Z {
-                transform: rotateZ(150deg);
-                -webkit-transform: rotateZ(150deg);
-              }
-            </style>
+          div.X {
+            transform: rotateX(150deg);
+            -webkit-transform: rotateX(150deg);
+            /* transform: none; (Desactivar) */
+          }
 
-            <p class="numbers">64) 3D Translate </p>
-            <div class="empty-div2">
-              <div id="translate3d">3D translate methods</div>
-            </div>
-            <style>
-              div.empty-div2 {
-                position: relative;
-                width: 200px;
-                height: 70px;
-                /* padding: 10px; */
-                border: 1px solid black;
-                perspective: 60px;
-                -webkit-perspective: 60px;
-              }
+          div.Y {
+            transform: rotateY(150deg);
+            -webkit-transform: rotateY(150deg);
+          }
 
-              #translate3d {
-                transform: translateX(30px) translateY(2em) translateZ(-13px);
-                -webkit-transform: translateX(30px) translateY(2em) translateZ(-13px);
-                width: 250px;
-                height: 100px;
-                color: white;
-                background-color: green;
-              }
-            </style>
-            <br><br>
+          div.Z {
+            transform: rotateZ(150deg);
+            -webkit-transform: rotateZ(150deg);
+          }
+        </style>
 
-            <p class="numbers">65) 3D Perspective </p>
-            <div class="empty-div2">
-              <div class="green-div">Example</div>
-            </div>
-            <style>
-              div.green-div {
-                padding: 30px;
-                position: absolute;
-                background-color: #8bc34a;
-                border: 1px solid white;
-                transform: rotateX(35deg);
-                -webkit-transform: rotateX(35deg);
-              }
-            </style>
-          </div>
+        <p class="numbers">64) 3D Translate </p>
+        <div class="empty-div2">
+          <div id="translate3d">3D translate methods</div>
         </div>
+        <style>
+          div.empty-div2 {
+            position: relative;
+            width: 200px;
+            height: 70px;
+            /* padding: 10px; */
+            border: 1px solid black;
+            perspective: 60px;
+            -webkit-perspective: 60px;
+          }
 
-        <!-- Filtros de CSS -->
-        <div class="borders">
-          <h2 class="titulo"> Filtros de CSS </h2>
+          #translate3d {
+            transform: translateX(30px) translateY(2em) translateZ(-13px);
+            -webkit-transform: translateX(30px) translateY(2em) translateZ(-13px);
+            width: 250px;
+            height: 100px;
+            color: white;
+            background-color: green;
+          }
+        </style>
+        <br><br>
 
-          <!-- Filter Functions -->
-          <div class="borders">
-            <h2 class="numbers"> 66) Filter Functions</h2><br>
-            <table>
-              <td>Drop-Shadow() <br>
-                <img class="dropshadow fltr" src="http://www.sololearn.com/images/tree.jpg" />
-              </td>
-              <td>Gray Scale() <br>
-                <img class="grayscale fltr" src="http://www.sololearn.com/images/tree.jpg" />
-              </td>
-              <td>Sepia() <br>
-                <img class="sepia fltr" src="http://www.sololearn.com/images/tree.jpg" />
-              </td>
-              <td>Saturate() <br>
-                <img class="saturate fltr" src="http://www.sololearn.com/images/tree.jpg" />
-              </td>
-              <td>Hue-Rotate() <br>
-                <img class="huerotate fltr" src="http://www.sololearn.com/images/tree.jpg" />
-              </td>
-              <td>Invert() <br>
-                <img class="invertimg fltr" src="http://www.sololearn.com/images/tree.jpg" />
-              </td>
-            </table>
-            <style>
-              /* tamaño */
-              .fltr {
-                height: 100px;
-              }
-
-              /* DropShadow */
-              .dropshadow {
-                filter: drop-shadow(5px 5px 2px green);
-              }
-
-              /* grayscale */
-              .grayscale {
-                filter: grayscale(100%);
-              }
-
-              /* Sepia */
-              .sepia {
-                filter: sepia(100%);
-              }
-
-              /* Saturate */
-              .saturate {
-                filter: saturate(300%);
-                /* 0: gris, 100: original */
-              }
-
-              /* Hue-Rotate */
-              .huerotate {
-                filter: hue-rotate(180deg);
-                /* de 0 a 360 (segun imagen e colores */
-              }
-
-              /* The invert Function */
-              .invertimg {
-                filter: invert(70%);
-              }
-
-              /* opacity */
-              .opacity {
-                filter: opacity(70%);
-              }
-            </style>
-          </div>
-
-          <!-- Opacity & Brightness -->
-          <div class="borders">
-            <h2 class="numbers"> 67) Opacity & Brightness</h2><br>
-            <table>
-              <td>Opacity 70%<br>
-                <img class="opacity fltr" src="http://www.sololearn.com/images/tree.jpg" />
-              </td>
-              <td>Brightness 70% <br>
-                <img class="brightness fltr" src="http://www.sololearn.com/images/tree.jpg" />
-              </td>
-              <td>Brightness 1.9 <br>
-                <img class="brightness2 fltr" src="http://www.sololearn.com/images/tree.jpg" />
-              </td>
-              <td>Contrast 140% <br>
-                <img class="contrast fltr" src="http://www.sololearn.com/images/tree.jpg" />
-              </td>
-              <td>blur 5px <br>
-                <img class="blur fltr" src="http://www.sololearn.com/images/tree.jpg" />
-              </td>
-              <td>Multi-filters (blur+hue-rot)<br>
-                <img class="multifilters fltr" src="http://www.sololearn.com/images/tree.jpg" />
-              </td>
-            </table>
-            <style>
-              /* Brightness */
-              .brightness {
-                filter: Brightness(70%);
-              }
-
-              /* Brightness2 */
-              .brightness2 {
-                filter: brightness(1.9);
-              }
-
-              /* Contrans */
-              .contrast {
-                filter: contrast(140%);
-              }
-
-              /* Blur */
-              .blur {
-                filter: blur(5px);
-              }
-
-              /* MultiFilters */
-              .multifilters {
-                filter: blur(5px) hue-rotate(180deg);
-              }
-            </style>
-          </div>
+        <p class="numbers">65) 3D Perspective </p>
+        <div class="empty-div2">
+          <div class="green-div">Example</div>
         </div>
+        <style>
+          div.green-div {
+            padding: 30px;
+            position: absolute;
+            background-color: #8bc34a;
+            border: 1px solid white;
+            transform: rotateX(35deg);
+            -webkit-transform: rotateX(35deg);
+          }
+        </style>
+      </div>
+    </div>
+
+    <!-- Filtros de CSS -->
+    <div class="borders">
+      <h2 class="titulo"> Filtros de CSS </h2>
+
+      <!-- Filter Functions -->
+      <div class="borders">
+        <h2 class="numbers"> 66) Filter Functions</h2><br>
+        <table>
+          <td>Drop-Shadow() <br>
+            <img class="dropshadow fltr" src="http://www.sololearn.com/images/tree.jpg" />
+          </td>
+          <td>Gray Scale() <br>
+            <img class="grayscale fltr" src="http://www.sololearn.com/images/tree.jpg" />
+          </td>
+          <td>Sepia() <br>
+            <img class="sepia fltr" src="http://www.sololearn.com/images/tree.jpg" />
+          </td>
+          <td>Saturate() <br>
+            <img class="saturate fltr" src="http://www.sololearn.com/images/tree.jpg" />
+          </td>
+          <td>Hue-Rotate() <br>
+            <img class="huerotate fltr" src="http://www.sololearn.com/images/tree.jpg" />
+          </td>
+          <td>Invert() <br>
+            <img class="invertimg fltr" src="http://www.sololearn.com/images/tree.jpg" />
+          </td>
+        </table>
+        <style>
+          /* tamaño */
+          .fltr {
+            height: 100px;
+          }
+
+          /* DropShadow */
+          .dropshadow {
+            filter: drop-shadow(5px 5px 2px green);
+          }
+
+          /* grayscale */
+          .grayscale {
+            filter: grayscale(100%);
+          }
+
+          /* Sepia */
+          .sepia {
+            filter: sepia(100%);
+          }
+
+          /* Saturate */
+          .saturate {
+            filter: saturate(300%);
+            /* 0: gris, 100: original */
+          }
+
+          /* Hue-Rotate */
+          .huerotate {
+            filter: hue-rotate(180deg);
+            /* de 0 a 360 (segun imagen e colores */
+          }
+
+          /* The invert Function */
+          .invertimg {
+            filter: invert(70%);
+          }
+
+          /* opacity */
+          .opacity {
+            filter: opacity(70%);
+          }
+        </style>
+      </div>
+
+      <!-- Opacity & Brightness -->
+      <div class="borders">
+        <h2 class="numbers"> 67) Opacity & Brightness</h2><br>
+        <table>
+          <td>Opacity 70%<br>
+            <img class="opacity fltr" src="http://www.sololearn.com/images/tree.jpg" />
+          </td>
+          <td>Brightness 70% <br>
+            <img class="brightness fltr" src="http://www.sololearn.com/images/tree.jpg" />
+          </td>
+          <td>Brightness 1.9 <br>
+            <img class="brightness2 fltr" src="http://www.sololearn.com/images/tree.jpg" />
+          </td>
+          <td>Contrast 140% <br>
+            <img class="contrast fltr" src="http://www.sololearn.com/images/tree.jpg" />
+          </td>
+          <td>blur 5px <br>
+            <img class="blur fltr" src="http://www.sololearn.com/images/tree.jpg" />
+          </td>
+          <td>Multi-filters (blur+hue-rot)<br>
+            <img class="multifilters fltr" src="http://www.sololearn.com/images/tree.jpg" />
+          </td>
+        </table>
+        <style>
+          /* Brightness */
+          .brightness {
+            filter: Brightness(70%);
+          }
+
+          /* Brightness2 */
+          .brightness2 {
+            filter: brightness(1.9);
+          }
+
+          /* Contrans */
+          .contrast {
+            filter: contrast(140%);
+          }
+
+          /* Blur */
+          .blur {
+            filter: blur(5px);
+          }
+
+          /* MultiFilters */
+          .multifilters {
+            filter: blur(5px) hue-rotate(180deg);
+          }
+        </style>
+      </div>
+    </div>
   </div>
   <script type="text/javascript" src="../MenuJS.js"></script>
 </main>
 </body>
-
 </html>
