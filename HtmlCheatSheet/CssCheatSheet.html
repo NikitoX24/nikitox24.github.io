@@ -26,7 +26,8 @@
   <style>
     .borders {
       background-color: rgba(0, 0, 255, .05);
-      box-shadow: inset 0 40px 0 0 rgba(0, 119, 255, 0.164);
+      box-shadow: inset 0 40px 0 0 rgba(0, 119, 255, 0.164), 
+          4px 4px 15px 5px rgba(0, 0, 255, 0.1);
     }
   </style>
 
@@ -82,7 +83,7 @@
 
     <!-- Descendencias del Selector -->
     <fieldset>
-      <legend> <p class="numbers"> Descendencias del Selector(class) </p> </legend>
+      <legend> <h2> Descendencias del Selector(class) </h2> </legend>
 
       <div id="idpurple2">
         (Esto es un div con id "idpurple2").
@@ -117,183 +118,139 @@
 
   <!-- Text -->
   <div class="borders">
-    <h2 class="titulo"> Textos </h2>
+    <h1 class="titulo"> Textos </h1>
 
-    <!-- Fonts -->
+    <!-- Fuentes -->
     <fieldset>
-      <legend></legend>
+      <legend> <h2>Fuentes</h2> </legend>
+      
       <!-- Font-Family -->
-      <p> Font-Family</p>
+      <h3 class="numbers"> Font-Family: </h3>
       <p class="serif">
         This is a paragraph shown in serif font.
       </p>
-      <code>
-        p.serif {
+      <div class="codigo">
           font-family: "Times New Roman", Times, serif;
-        }
-      </code>
+      </div> <hr>
 
       <!-- Font-Style -->
-      <p class="numbers">5) Font-Style</p>
+      <h3 class="numbers"> Font-Style: </h3>
       <p class="italic">
         This is a paragraph in italic style.
       </p>
-      <code>
-        p.italic{
-          font-style: italic; /* normal, italic, oblique */
-        }
-      </code>
+      <div class="codigo">
+          font-style: italic; <br> /* normal, italic, oblique */
+      </div> <hr>
 
       <!-- Font-Weight -->
-      <p class="numbers">6) Font-Weight</p>
+      <h3 class="numbers"> Font-Weight</h3>
       <p class="weight">
-        This is a paragraph in bolder.
+        This is a paragraph in lighter.
       </p>
-      <code>
-        p.weight{
-          font-weight: 900; /* lighter(100), normal(400), bold(700), bolder(900) */
-        }
-      </code>
+      <div class="codigo">
+          font-weight: 100; <br> /* 100: finito, 900: grueso */
+      </div> <hr>
 
       <!-- Font-Variant -->
-      <p class="numbers">7) Font-Variant</p>
+      <h3 class="numbers"> Font-Variant</h3>
       <p class="variant">
         This is a paragraph in small-caps.
       </p>
-      <code>
-              p.variant{
-                  font-variant: small-caps; /* normal, small-caps, inherit */
-              }
-          </code>
+      <div class="codigo">
+          font-variant: small-caps; <br> /* normal, small-caps, inherit */
+      </div> <hr>
 
       <!-- Font-Color -->
-      <p class="numbers">8) Font-Color</p>
+      <h3 class="numbers"> Font-Color</h3>
       <p class="colored">
         This is a paragraph in red.
       </p>
-      <code>
-              p.colored{
-                  color: red; /* red, #F00, rgb(255,0,0) */
-              }
-          </code>
+      <div class="codigo">
+          color: red; <br> /* red, #F00, rgb(255,0,0) */
+      </div>
 
       <!-- style -->
       <style>
-        /* 4) Font Family */
+        /* Font Family */
         p.serif {
           font-family: "Times New Roman", Times, serif;
         }
 
-        /* 5) Font Style */
+        /* Font Style */
         p.italic {
           font-style: italic;
-          /* normal, italic, oblique */
         }
 
-        /* 6) Font Weight (Grosor) */
+        /* Font Weight (Grosor) */
         p.weight {
-          font-weight: 900;
-          /* lighter(100), normal(400), bold(700), bolder(900) */
+          font-weight: 100;
         }
 
         /* 7) Font Variant */
         p.variant {
           font-variant: small-caps;
-          /* normal, small-caps, inherit */
         }
 
         /* 8) Font Color */
         p.colored {
           color: red;
-          /* red, #F00, rgb(255,0,0) */
         }
       </style>
-      <!-- style -->
     </fieldset>
 
-    <!-- Text-Align (Horizontal)-->
-    <div class="borders">
-      <p class="numbers">9) Text-Align (Horizontal)</p>
-      <div style="width: 500px;">
-        <p class="center">This paragraph is aligned to center</p>
-      </div>
-      <!-- style -->
-      <style>
-        p.center {
-          text-align: center;
+    <!-- Alineacion de Texto -->
+    <fieldset>
+      <legend><h2>Alineación de Texto</h2></legend>
+
+      <!-- Text-Align (Horizontal)-->
+      <div>
+        <h3 class="numbers"> Horizontal:</h3>
+        <div style="width: 300px;">
+          <p class="ejemplo" style="text-align: center;">This paragraph is aligned to center</p>
+        </div>
+        <div class="codigo">
+          text-align: center; <br>
           /* left, right, center, justify */
-          background-color: rgba(128, 128, 128, 0.216);
-        }
-      </style>
-      <!-- style -->
+        </div> <hr>
 
-      <!-- Text-Align (Vertical) -->
-      <p class="numbers">10) Text-Align (Vertical)</p>
-      <table border="1" cellpadding="2" cellspacing="0" style="height: 150px;">
-        <tr>
-          <td class="top">Top</td>
-          <td class="middle">Middle</td>
-          <td class="bottom">Bottom</td>
-        </tr>
-      </table>
-      <!-- style -->
-      <style>
-        td.top {
-          vertical-align: top;
-        }
+        <!-- Text-Align (Vertical) -->
+        <h3 class="numbers"> Vertical:</h3>
+        <table border="1" cellpadding="2" cellspacing="0" style="height: 100px;">
+          <tr>
+            <td style="vertical-align: top;">Top</td>
+            <td style="vertical-align: middle;">Middle</td>
+            <td style="vertical-align: bottom;">Bottom</td>
+          </tr>
+        </table>
+        <div class="codigo">
+          vertical-align: top/middle/bottom;
+        </div>
+      </div>
 
-        td.middle {
-          vertical-align: middle;
-        }
+      <!-- Text-Align Property (Vertical) -->
+      <fieldset>
+        <legend> <h2> Text-Align Property (Vertical)</h2> </legend>
 
-        td.bottom {
-          vertical-align: bottom;
-        }
-      </style>
-      <!-- style -->
-    </div>
+        <p> This is an <span style="vertical-align: baseline;"> <b> inline text </b></span> example.</p>
+        <div class="codigo"> vertical-align: baseline; </div>
+        <hr>
 
-    <!-- Text-Align Property (Vertical) -->
-    <div class="borders">
-      <p class="numbers">11) Text-Align Property (Vertical)</p>
+        <p> This is a <span style="vertical-align: sub;"><b>sub line text</b></span> example.</p>
+        <div class="codigo"> vertical-align: sub; </div>
+        <hr>
 
-      <p> This is an <span class="baseline"> <b> inline text </b></span> example.</p>
-      <code> span.baseline { vertical-align: baseline; } </code>
-      <hr>
+        <p> This is a <span style="vertical-align: super;"><b>super line text</b></span> example.</p>
+        <div class="codigo"> vertical-align: super; </div>
+        <hr>
 
-      <p> This is a <span class="sub"><b>sub line text</b></span> example.</p>
-      <code> span.sub { vertical-align: sub;} </code>
-      <hr>
-
-      <p> This is a <span class="super"><b>super line text</b></span> example.</p>
-      <code> span.super { vertical-align: super; } </code>
-      <hr>
-
-      <p> This is a <span class="pixel"><b>pixel</b></span> example.</p>
-      <code> span.pixel { vertical-align: -10px; /* px(pixels), pt(points), cm(centimeters), %(percentage) */ } </code>
-      <style>
-        span.baseline {
-          vertical-align: baseline;
-        }
-
-        span.sub {
-          vertical-align: sub;
-        }
-
-        span.super {
-          vertical-align: super;
-        }
-
-        span.pixel {
-          vertical-align: -10px;
+        <p> This is a <span style="vertical-align: -10px;"><b>pixel</b></span> example.</p>
+        <div class="codigo"> vertical-align: -10px; <br>
           /* px(pixels), pt(points), cm(centimeters), %(percentage) */
-        }
-      </style>
-    </div>
+        </div>
+      </fieldset><hr>
 
-    <!-- Text-Align Property Div (Vertical) -->
-    <div class="borders">
-      <p class="numbers">12) Text-Align Property Div (Vertical)</p>
+      <!-- Text-Align Property Div (Vertical) -->
+      <h2> Text-Align Property Div (Vertical)</h2>
       <div class="main">
         <div class="paragraph">
           Aligned to the middle of div.
@@ -301,322 +258,173 @@
       </div> <br>
       <style>
         .main {
-          height: 100px;
-          width: 350px;
+          height: 70px;
+          width: 300px;
           background-color: rgba(128, 128, 128, 0.398);
           display: inline-table;
         }
-
         .paragraph {
           text-align: center;
           display: table-cell;
           vertical-align: middle;
         }
       </style>
-      <!-- code -->
       <div class="codigo">
-        <pre>
-          .main {
-              height: 150px; width: 450px;
-              background-color: rgba(128, 128, 128, 0.398);
-              display: inline-table;
-          } <br>
-          .paragraph {
-              text-align: center;
-              display: table-cell;
-              vertical-align: middle;
-          }
-          </pre>
+        .div {
+          display: inline-table;
+        } <br>
+        .paragraph {
+          text-align: center;
+          display: table-cell;
+          vertical-align: middle;
+        }
       </div>
-      <!-- code -->
-    </div>
-
+    </fieldset>
+    
     <!-- Text-decoration -->
-    <div class="borders">
-      <p class="numbers">13) Text-decoration</p>
+    <fieldset>
+      <legend> <h2> Text-Decoration </h2> </legend>
 
-      <p class="none">This is <b> default</b> style of the text (none). <br>
-        <code> text-decoration: none; </code>
-      </p>
-
-      <p class="inherit">This text <b> inherits</b> the decoration of the parent. <br>
-        <code> text-decoration: inherit; </code>
-      </p>
-
-      <p class="overline">This is <b> overlined </b> text. <br>
+      <p style="text-decoration: overline;">This is <b> overlined </b> text. <br>
         <code> text-decoration: overline; </code>
-      </p>
+      </p><hr>
 
-      <p class="underline">This is <b> underlined</b> text. <br>
+      <p style="text-decoration: underline;">This is <b> lined-through</b> text. <br>
+        <code> text-decoration: line-through; </code>
+      </p><hr>
+
+      <p style="text-decoration: line-through;">This is <b> underlined</b> text. <br>
         <code> text-decoration: underline; </code>
       </p>
+    </fieldset>
 
-      <p class="line-through">This is <b> lined-through</b> text. <br>
-        <code> text-decoration: line-through; </code>
-      </p>
-
-      <p class="blink">This is <b> blink</b> text. <br>
-        <code> text-decoration: blink; </code>
-      </p>
-
-      <!-- style -->
-      <style>
-        p.none b {
-          text-decoration: none;
-        }
-
-        p.inherit b {
-          text-decoration: inherit;
-        }
-
-        p.overline b {
-          text-decoration: overline;
-        }
-
-        p.underline b {
-          text-decoration: underline;
-        }
-
-        p.line-through b {
-          text-decoration: line-through;
-        }
-
-        p.blink b {
-          text-decoration: blink;
-        }
-
-        /* parpadear (algunos no funciona) */
-      </style>
-      <!-- style -->
-    </div>
-
-    <!-- text-indent (sangria) -->
-    <div class="borders">
-      <p class="numbers">14) text-indent (sangria)</p>
-      <p class="indent">
+    <!-- text-indent (Sangria) -->
+    <fieldset>
+      <legend> <h2> Text-Indent (Sangria)</h2> </legend>
+      <p style="text-indent: 60px;">
         This is an example of
         <strong>text-indent </strong> property. <br>
-        First line of our text is indented to the right in 60px. <br>
-        Besides pixels you can also use other measurement units,
-        like pt, cm, em, etc. <br>
-        <code> text-indent: 60px; </code>
+        La primera línea del texto tiene una sangría hacia la derecha de 60px.
+        <div class="codigo"> text-indent: 60px; </div>
       </p>
-      <style>
-        p.indent {
-          text-indent: 60px;
-          /* -60px */
-        }
-      </style>
-    </div>
+    </fieldset>
 
     <!-- Text-Sadow -->
-    <div class="borders">
-      <p class="numbers">15) Text-Sadow</p>
-      <h1 class="shadowT"> Text-shadow example</h1>
-      <code> text-shadow: 5px 2px 6px grey; <br> (x, y, blur radius, color) Se puede poner mas de una sombra separandola con coma.</code>
+    <fieldset>
+      <legend> <h2>Text-Sadow</h2> </legend>
+      <h1 style="text-shadow: 5px 2px 2px grey;"> Text-shadow example</h1>
+      <div class="codigo"> text-shadow: 5px 2px 6px grey; <br> (x, y, blur radius, color) Se puede poner mas de una sombra separandola con coma.</div>
       <hr>
-      <h1 class="blurT"> Text-shadow with blur effect</h1>
-      <code> text-shadow: rgba(0, 0, 255, 1) -1px -1px 0.3em; </code>
-      <style>
-        h1.shadowT {
-          text-shadow: 5px 2px 2px grey;
-          /* (x, y, blur radius, color) Se puede poner mas de una sombra separandola con coma */
-        }
-
-        h1.blurT {
-          text-shadow: rgba(0, 0, 255, 1) -1px -1px 0.3em;
-          /* Internet Explorer 9 and earlier do not support the text-shadow property. */
-        }
-      </style>
-    </div>
+      <h1 style="text-shadow: rgba(0, 0, 255, 1) -1px -1px 0.3em;"> Text-shadow with blur effect</h1>
+      <div class="codigo"> text-shadow: rgba(0, 0, 255, 1) -1px -1px 0.3em; </div>
+    </fieldset>
 
     <!-- Text-Transform -->
-    <div class="borders">
-      <p class="numbers">16) Text-Transform</p>
-      <p class="capitalize">
+    <fieldset>
+      <legend> <h2>Text-Transform</h2> </legend>
+      <p style="text-transform: capitalize;">
         el valor "capitalize" transforma el primer carácter de cada palabra en mayúsculas;
         Todos los demás caracteres no se ven afectados. <br>
       </p>
-      <code> text-transform: capitalize; <br><u>Valores</u>: capitalize, uppercase, lowercase.</code>
-      <style>
-        p.capitalize {
-          text-transform: capitalize;
-          /* capitalize, uppercase, lowercase */
-        }
-      </style>
-    </div>
+      <div class="codigo"> text-transform: capitalize; <br><u>Valores</u>: capitalize, uppercase, lowercase.</div>
+    </fieldset>
 
     <!-- Text-Spacing -->
-    <div class="borders">
-      <p class="numbers">17) Text-Spacing </p>
+    <fieldset>
+      <legend> <h2>Text-Spacing </h2> </legend>
       <div>
-        <p>This paragraph has no additional letter-spacing applied.</p>
-        <hr>
         <!-- Letter-Spacing -->
-        <p class="lspacing">This paragraph is letter-spaced at 4px.</p>
-        <code> letter-spacing: 4px; </code>
+        <p style="letter-spacing: 4px;">This paragraph is letter-spaced at 4px.</p>
+        <div class="codigo"> letter-spacing: 4px; </div>
         <hr>
         <!-- Word-Spacing -->
-        <p class="wspacing">This paragraph is word-spaced at 30px.</p>
-        <code> word-spacing: 30px; </code>
+        <p style="word-spacing: 30px;">This paragraph is word-spaced at 30px.</p>
+        <div class="codigo"> word-spacing: 30px; </div>
       </div>
-      <style>
-        p.lspacing {
-          letter-spacing: 4px;
-          /* px, pt, cm, mm, ( + , - ) */
-        }
-
-        p.wspacing {
-          word-spacing: 30px;
-        }
-      </style>
-    </div>
+    </fieldset>
 
     <!-- Wite-Spacing -->
-    <div class="borders">
-      <p class="numbers">18) Wite-Spacing</p>
-      <p class="witespacing">
-        Este párrafo tiene varios
-        espacios y un salto de línea,
-        pero será ignorado, ya que usamos el valor
-        nowrap. <br>
-        <code>
-              white-space: nowrap; <br>
-              <u>Valores</u>: pre, pre-line, pre-wrap.
-          </code>
+    <fieldset>
+      <legend> <h2>Wite-Spacing</h2> </legend>
+      <p style="white-space: nowrap;">
+        Este párrafo     tiene      varios
+        espacios y   un    salto de línea,
+        pero   será ignorado,   ya que usamos el valor
+        nowrap.
       </p>
-      <style>
-        p.witespacing {
-          white-space: nowrap;
-          /* pre, pre-line, pre-wrap */
-        }
-      </style>
-    </div>
+      <div class="codigo">
+        white-space: nowrap; <br>
+        <u>Valores</u>: pre, pre-line, pre-wrap.
+      </div>
+    </fieldset>
   </div>
 
-  <!-- Properties -->
+  <!-- Propiedades -->
   <div class="borders">
-    <h2 class="titulo"> Properties </h2>
+    <h1 class="titulo"> Propiedades </h1>
 
-    <div class="borders">
-      <p class="numbers"> 19) Box-Model </p>
-      <!-- Box-Model -->
+    <!-- Box-Model -->
+    <fieldset>
+      <legend> <h2> Box-Model </h2> </legend>
       <div>
         <!-- Box-Border -->
-        <p class="border">This is an example of a solid border.</p>
-        <style>
-          p.border {
-            padding: 10px;
-            /* relleno*/
-            border: 5px solid green;
-            /* tamaño, estilo, color */
-          }
-        </style>
-        <code>
-                  p.border{ <br>
-                      <u>border</u>: 5px solid green; <br>
-                  }
-              </code>
-        <hr>
-
-        <h2>Border-Style</h2>
-
-        <!-- Border-Style -->
-        <p class="none">none.</p>
-        <p class="dotted">dotted.</p>
-        <p class="dashed">dashed.</p>
-        <p class="double">double.</p>
-        <p class="groove">grooved.</p>
-        <p class="ridge">ridged.</p>
-        <p class="inset">inset.</p>
-        <p class="outset">outset.</p>
-        <p class="hidden">hidden.</p>
-        <hr>
-
-        <style>
-          p.none {
-            border-style: none;
-          }
-
-          p.dotted {
-            border-style: dotted;
-          }
-
-          /* punteado. ( . . . . .) */
-          p.dashed {
-            border-style: dashed;
-          }
-
-          /* discontinua. ( - - - ) */
-          p.double {
-            border-style: double;
-          }
-
-          /* doble borde */
-          p.groove {
-            border-style: groove;
-          }
-
-          /* entrante */
-          p.ridge {
-            border-style: ridge;
-          }
-
-          /* saliente */
-          p.inset {
-            border-style: inset;
-          }
-
-          /* adentro */
-          p.outset {
-            border-style: outset;
-          }
-
-          /* afuera */
-          p.hidden {
-            border-style: hidden;
-          }
-
-          /* oculto */
-        </style>
-
+        <p style="border: 5px solid green;">This is an example of a solid border.</p>
+        <div class="codigo">
+          <u>border</u>: 5px solid green; <br>
+          /* tamaño, estilo, color */
+        </div><hr>
 
         <!-- Width & Height -->
-        <p class="numbers">20) Width & Height</p>
+        <h3 class="numbers">Width & Height</h3>
         <div class="wh">
           The total width and height of this element is 100px.
-          <style>
-            div.wh {
-              border: 5px solid green;
-              width: 100px;
-              height: 90px;
-            }
-          </style>
         </div><br>
-        <code>
-                  div.wh{
-                      border: 5px solid green;
-                      width: 100px;
-                      height: 90px;
-                  }
-              </code>
+        <style>
+          div.wh {
+            border: 5px solid green;
+            width: 100px;
+            height: 90px;
+          }
+        </style>
+        <div class="codigo">
+          div.wh{
+            border: 5px solid green;
+            width: 100px;
+            height: 90px;
+          }
+        </div><hr>
+
+        <!-- Border-Style -->
+        <h2>Border-Style</h2>
+        <div class="flex">
+          <p style="border-style: dotted;">dotted.</p>
+          <p style="border-style: dashed;">dashed.</p>
+          <p style="border-style: double;">double.</p>
+          <p style="border-style: groove;">grooved.</p>
+          <p style="border-style: ridge;">ridged.</p>
+          <p style="border-style: inset;">inset.</p>
+          <p style="border-style: outset;">outset.</p>
+        </div>
+        <div class="codigo">
+          border-style: dotted/dashed/double/groove/ridge/inset/ouset;
+        </div>
       </div>
-    </div>
+    </fieldset>
 
     <!-- Background (BODY) -->
     <!-- 
-          /* Background-Body */
-          body{
-              background-color: beige;
-              background-image: url("../Imgs/TileW.jpg");
-              background-repeat: repeat; /* repeat-x, repeat-y, no-repeat, inherit */
-              background-attachment: fixed; /* fixel, scroll, inherit */
-          }
-      -->
+      /* Background-Body */
+      body{
+        background-color: beige;
+        background-image: url("../Imgs/TileW.jpg");
+        background-repeat: repeat; /* repeat-x, repeat-y, no-repeat, inherit */
+        background-attachment: fixed; /* fixel, scroll, inherit */
+      }
+    -->
 
     <!-- Background-Image -->
-    <div class="borders">
-      <p class="numbers">21) Background-Image </p>
+    <fieldset>
+      <legend> <h2> Background-Image </h2> </legend>
       <p class="background-image">Imagen de fondo</p>
       <style>
         p.background-image {
@@ -627,21 +435,21 @@
           width: 300px;
         }
       </style>
-      <code>
-              p.background-image{ <br>
-                  background-image: url("../Imgs/banner_orange.png"); <br>
-                  background-repeat: no-repeat; <br>
-              } <br>
-              <u>valores</u>: repeat-x, repeat-y, no-repeat, inherit.
-          </code>
-    </div>
+      <div class="codigo">
+        p.background-image{ <br>
+          background-image: url("../Imgs/banner_orange.png"); <br>
+          background-repeat: no-repeat; <br>
+        } <br>
+        <u>valores</u>: repeat-x, repeat-y, no-repeat, inherit.
+      </div>
+    </fieldset>
 
     <!-- List-Style-Type -->
-    <div class="borders">
-      <p class="numbers">22) List-Style-Type </p>
+    <fieldset>
+      <legend> <h2> List-Style-Type </h2> </legend>
       <div class="flex">
         <div>
-          <ol class="lower-alpha">
+          <ol start="list-style-type: lower-alpha;">
             <li>Red</li>
             <li>Green</li>
             <li>Blue</li>
@@ -651,7 +459,7 @@
         <hr>
 
         <div>
-          <ul class="circle a">
+          <ul class="a" style="list-style-type: circle;">
             <li>Red</li>
             <li>Green</li>
             <li>Blue</li>
@@ -661,7 +469,7 @@
         <hr>
 
         <div>
-          <ul class="square a">
+          <ul class="a" style="list-style-type: square;">
             <li>Red</li>
             <li>Green</li>
             <li>Blue</li>
@@ -674,9 +482,8 @@
           <ul class="uimage a">
             <li>Red</li>
             <li>Green</li>
-            <li>Blue</li>
           </ul>
-          <code>list-style-image: url("../Imgs/loguito.png"); <br></code>
+          <code>list-style-image: url("Icon.png"); <br></code>
         </div>
       </div>
       <style>
@@ -684,29 +491,16 @@
           list-style: square outside none;
           /* list-style-type, list-style-image, list-style-position */
         }
-
-        ol.lower-alpha {
-          list-style-type: lower-alpha;
-        }
-
-        ul.circle {
-          list-style-type: circle;
-        }
-
-        ul.square {
-          list-style-type: square;
-        }
-
         ul.uimage {
           list-style-image: url("../Imgs/loguito.png");
           /* list-style-position: outside; insede, outside */
         }
       </style>
-    </div>
+    </fieldset>
 
     <!-- Table -->
-    <div class="borders">
-      <p class="numbers">23) Table</p>
+    <fieldset>
+      <legend> <h2>Table</h2> </legend>
       <div class="flex">
 
         <div><!-- Table-Style -->
@@ -784,39 +578,35 @@
             width: 100%;
             border: 1px solid gray;
           }
-
           td {
             border: 1px solid gray;
           }
-
           table.auto {
             table-layout: auto;
           }
-
           table.fixed {
             table-layout: fixed;
           }
-
           .tdred {
             color: red;
           }
         </style>
       </div>
-    </div>
+    </fieldset>
 
     <!-- Links -->
-    <div class="borders">
-      <p class="numbers"> 26) Links </p>
+    <fieldset>
+      <legend> <h2> Links </h2> </legend>
       <p>
         <a href="http://www.sololearn.com" target="_blank">
-          This link is hovered when we mouse over it
+          Este Link cambia de color cuando pones el mouse por encima.
         </a>
       </p>
-      <code>
-              a:hover{
-                  color: red;
-              }
-          </code>
+      <div class="codigo">
+        a:hover{ <br>
+          color: red; <br>
+        }
+      </div>
       <details>
         <summary>Selectors & Propiedades...</summary>
         a:link : define el estilo de los enlaces normales no visitados <br>
@@ -827,47 +617,43 @@
         border:none - removes border from images with links <br>
         outline:none - removes the dotted border on clicked lines in IE <br>
       </details>
-
       <style>
-        a:link {
-          text-decoration: none;
-          /* Quitar UnderLine */
-        }
-
         a:hover {
           color: red;
-          /* Mouse encima */
         }
       </style>
-    </div>
+    </fieldset>
 
     <!-- Mouse-Cursor -->
-    <div class="borders">
-      <p class="numbers"> 27) Mouse-Cursor</p>
-      <span class="mousee">
-        Do you need help?<br>
-        The mouse-cursor here will be "?"
-      </span>
-      <style>
-        span.mousee {
-          cursor: help;
-        }
-      </style> <br>
-      <code>
-              span.mousee{
-                  cursor: help;
-          }
-          </code> <br><br>
-
-      <details>
-        <summary>Valores...</summary>
-        auto, crosshair, default, move, help, text, wait,
-        n-resize, s-resize, ne-resize, sw-resize, nw-resize, se-resize, e-resize, w-resize,
-        pointer, progress, not-allowed, no-drop, vertical-text, all-scroll, col-resize, row-resize.
-      </details>
-
-    </div>
-
+    <fieldset>
+      <legend> <h2> Mouse-Cursor</h2> </legend>
+      <div class="noColor">
+        <span style="cursor: default;">default</span>,
+        <span style="cursor: crosshair;">crosshair</span>,
+        <span style="cursor: help;">Help</span>,
+        <span style="cursor: move;">move</span>,
+        <span style="cursor: text;">text</span>,
+        <span style="cursor: wait;">wait</span>,
+        <span style="cursor: n-resize;">n-resize</span>,
+        <span style="cursor: s-resize;">s-resize</span>,
+        <span style="cursor: ne-resize;">ne-resize</span>,
+        <span style="cursor: sw-resize;">sw-resize</span>,
+        <span style="cursor: se-resize;">se-resize</span>,
+        <span style="cursor: e-resize;">e-resize</span>,
+        <span style="cursor: w-resize;">w-resize</span>,
+        <span style="cursor: pointer;">pointer</span>,
+        <span style="cursor: progress;">progress</span>,
+        <span style="cursor: not-allowed;">not-allowed</span>,
+        <span style="cursor: no-drop;">no-drop</span>,
+        <span style="cursor: vertical-text;">vertical-text</span>,
+        <span style="cursor: all-scroll;">all-scroll</span>,
+        <span style="cursor: col-resize;">col-resize</span>,
+        <span style="cursor: row-resize;">row-resize</span>.
+      </div>
+      <div class="codigo">
+        cursor: default;
+      </div>
+    </fieldset>
   </div>
 
   <!-- Positioning And Layout -->
@@ -1850,517 +1636,517 @@
     </div>
   </div>
 
-    <!-- transiciones y Transparencia -->
+  <!-- transiciones y Transparencia -->
+  <div class="borders">
+    <h2 class="titulo"> Transiciones y Transparencia </h2>
+    <!-- https://code.sololearn.com/WhEb9aoMSiUB/ -->
+
+    <!-- 57) Transition -->
     <div class="borders">
-      <h2 class="titulo"> Transiciones y Transparencia </h2>
-      <!-- https://code.sololearn.com/WhEb9aoMSiUB/ -->
+      <p class="numbers">57) Transition</p>
+      <div class="transit"> 
+        Apuntame...
+      </div>
+      <style>
+        div.transit {
+          width: 120px;
+          height: 60px;
+          background: #32CD32;
+          transition: width 2s;
+          -webkit-transition: width 2s;
+        }
 
-      <!-- 57) Transition -->
-      <div class="borders">
-        <p class="numbers">57) Transition</p>
-        <div class="transit"> 
-          Apuntame...
-        </div>
-        <style>
-          div.transit {
-            width: 120px;
-            height: 60px;
-            background: #32CD32;
+        div.transit:hover {
+          width: 350px;
+        }
+      </style>
+      <details>
+        <summary>code...</summary>
+        <pre>
+        div.transit {
             transition: width 2s;
-            -webkit-transition: width 2s;
-          }
-
-          div.transit:hover {
+        }
+        div.transit:hover {
             width: 350px;
-          }
-        </style>
-        <details>
-          <summary>code...</summary>
-          <pre>
-          div.transit {
-              transition: width 2s;
-          }
-          div.transit:hover {
-              width: 350px;
-          }
-          </pre>
-        </details>
-        <hr><br>
+        }
+        </pre>
+      </details>
+      <hr><br>
 
-        <table>
-          <td>
-            <div class="rotate">transform: rotate(10deg);</div>
-          </td>
-        </table>
-        <style>
-          div.rotate {
-            width: 200px;
-            height: 100px;
-            background-color: #32CD32;
-            transform: rotate(10deg);
-            -webkit-transform: rotate(10deg);
-          }
-        </style> <br>
-        <hr>
+      <table>
+        <td>
+          <div class="rotate">transform: rotate(10deg);</div>
+        </td>
+      </table>
+      <style>
+        div.rotate {
+          width: 200px;
+          height: 100px;
+          background-color: #32CD32;
+          transform: rotate(10deg);
+          -webkit-transform: rotate(10deg);
+        }
+      </style> <br>
+      <hr>
 
-        <div class="empty-div">
-          <div class="greendivrot">
-            margin-top: 10px; <br>
-            transform: rotate(10deg); <br><br>
-            transform-origin: bottom center; <br>
-          </div>
+      <div class="empty-div">
+        <div class="greendivrot">
+          margin-top: 10px; <br>
+          transform: rotate(10deg); <br><br>
+          transform-origin: bottom center; <br>
         </div>
-        <style>
-          div.empty-div {
-            /* position: relative; */
-            height: 100px;
-            width: 100px;
-            border: 1px solid black;
-          }
+      </div>
+      <style>
+        div.empty-div {
+          /* position: relative; */
+          height: 100px;
+          width: 100px;
+          border: 1px solid black;
+        }
 
-          .greendivrot {
-            font-size: 12px;
-            width: 100px;
-            height: 100px;
-            margin-top: 10px;
-            background-color: #32CD32;
-            transform: rotate(10deg);
-            transform-origin: bottom center;
-          }
-        </style> <br>
-        <hr>
-
-        <p class="numbers">60) Translate() Method</p>
-        <div class="empty-div">
-          <div class="torig">transform: translate(20px, 20px);</div>
-        </div>
-        <style>
-          div.torig {
-            height: 100px;
-            width: 100px;
-            background-color: #32CD32;
-            transform: translate(20px, 20px);
-            -webkit-transform: translate(20px, 20px);
-          }
-        </style><br>
-
-        <p class="numbers">60) Skew() Method</p>
-        <div class="empty-div">
-          <div class="skew">transform: skew(30deg);</div>
-        </div>
-        <style>
-          div.skew {
-            height: 100px;
-            width: 100px;
-            position: absolute;
-            background-color: #32CD32;
-            transform: skew(30deg);
-            -webkit-transform: skew(30deg);
-          }
-        </style>
-
-        <p class="numbers">60) Scale y rotate</p>
-        <table>
-          <td>
-            <div class="scale0-7 scalerot">the factor 0.7 both horizontally and vertically</div>
-          </td>
-          <td>
-            <div class="scale1-5 scalerot">div by a factor of 1.5 horizontally and vertically</div>
-          </td>
-          <td>
-            <div class="scaleandrotate scalerot">div rotated at 45deg</div>
-          </td>
-        </table>
-        <style>
-          div.scalerot {
-            width: 150px;
-            height: 70px;
-            background-color: #8BC34A;
-          }
-          div.scale0-7 {
-            transform: scale(0.7, 0.7);
-            -webkit-transform: scale(0.7, 0.7);
-          }
-          div.scale1-5 {
-            transform: scale(1.5, 1.5);
-            -webkit-transform: scale(1.5, 1.5);
-            margin: 45px;
-          }
-          div.scaleandrotate {
-            transform: rotate(45deg);
-            -webkit-transform: rotate(45deg);
-          }
-
-          @keyframes examplecc {
-            0% {
-              background-color: red;
-            }
-            50% {
-              background-color: yellow;
-            }
-            70% {
-              background-color: blue;
-            }
-            100% {
-              background-color: green;
-            }
-          }
-
-          @keyframes ColorChangeExample {
-            from {
-              background-color: red;
-            }
-            /* 0% {background-color: red;} */
-
-            to {
-              background-color: green;
-            }
-            /* 100% {background-color: green;} */
-          }
-        </style>
-
-        <!-- The @keyframes Rule -->
-        <p class="numbers">61) The @keyframes Rule</p>
-        <div class="colorforcc"></div>
-        <style>
-          div.colorforcc {
-            width: 60px;
-            height: 60px;
-            background-color: red;
-            animation-name: colorchange;
-            animation-duration: 1s;
-            -webkit-animation-name: colorchange;
-            -webkit-animation-duration: 1s;
-            animation-iteration-count: infinite;
-          }
-
-          @keyframes colorchange {
-            0% {
-              background-color: red;
-            }
-            50% {
-              background-color: green;
-            }
-            100% {
-              background-color: blue;
-            }
-          }
-
-          @-webkit-keyframes colorchange {
-            0% {
-              background-color: red;
-            }
-            50% {
-              background-color: green;
-            }
-            100% {
-              background-color: blue;
-            }
-          }
-        </style>
-        <details>
-          <summary>code...</summary>
-          div.colorforcc {
+        .greendivrot {
+          font-size: 12px;
           width: 100px;
           height: 100px;
+          margin-top: 10px;
+          background-color: #32CD32;
+          transform: rotate(10deg);
+          transform-origin: bottom center;
+        }
+      </style> <br>
+      <hr>
+
+      <p class="numbers">60) Translate() Method</p>
+      <div class="empty-div">
+        <div class="torig">transform: translate(20px, 20px);</div>
+      </div>
+      <style>
+        div.torig {
+          height: 100px;
+          width: 100px;
+          background-color: #32CD32;
+          transform: translate(20px, 20px);
+          -webkit-transform: translate(20px, 20px);
+        }
+      </style><br>
+
+      <p class="numbers">60) Skew() Method</p>
+      <div class="empty-div">
+        <div class="skew">transform: skew(30deg);</div>
+      </div>
+      <style>
+        div.skew {
+          height: 100px;
+          width: 100px;
+          position: absolute;
+          background-color: #32CD32;
+          transform: skew(30deg);
+          -webkit-transform: skew(30deg);
+        }
+      </style>
+
+      <p class="numbers">60) Scale y rotate</p>
+      <table>
+        <td>
+          <div class="scale0-7 scalerot">the factor 0.7 both horizontally and vertically</div>
+        </td>
+        <td>
+          <div class="scale1-5 scalerot">div by a factor of 1.5 horizontally and vertically</div>
+        </td>
+        <td>
+          <div class="scaleandrotate scalerot">div rotated at 45deg</div>
+        </td>
+      </table>
+      <style>
+        div.scalerot {
+          width: 150px;
+          height: 70px;
+          background-color: #8BC34A;
+        }
+        div.scale0-7 {
+          transform: scale(0.7, 0.7);
+          -webkit-transform: scale(0.7, 0.7);
+        }
+        div.scale1-5 {
+          transform: scale(1.5, 1.5);
+          -webkit-transform: scale(1.5, 1.5);
+          margin: 45px;
+        }
+        div.scaleandrotate {
+          transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+        }
+
+        @keyframes examplecc {
+          0% {
+            background-color: red;
+          }
+          50% {
+            background-color: yellow;
+          }
+          70% {
+            background-color: blue;
+          }
+          100% {
+            background-color: green;
+          }
+        }
+
+        @keyframes ColorChangeExample {
+          from {
+            background-color: red;
+          }
+          /* 0% {background-color: red;} */
+
+          to {
+            background-color: green;
+          }
+          /* 100% {background-color: green;} */
+        }
+      </style>
+
+      <!-- The @keyframes Rule -->
+      <p class="numbers">61) The @keyframes Rule</p>
+      <div class="colorforcc"></div>
+      <style>
+        div.colorforcc {
+          width: 60px;
+          height: 60px;
           background-color: red;
           animation-name: colorchange;
           animation-duration: 1s;
           -webkit-animation-name: colorchange;
           -webkit-animation-duration: 1s;
-          }
-          @keyframes colorchange {
-          0% {background-color: red; }
-          50% {background-color: green; }
-          100% {background-color: blue; }
-          }
-          @-webkit-keyframes colorchange {
-          0% {background-color: red; }
-          50% {background-color: green; }
-          100% {background-color: blue; }
-          }
-        </details>
+          animation-iteration-count: infinite;
+        }
 
-        <!-- The animation-name Property -->
-        <p class="numbers">62) The animation-name Property</p>
-        <div class="animdurat"></div>
-        <!-- https://www.sololearn.com/learning/1023/2254/4511/1 -->
-        <style>
-          div.animdurat {
-            height: 50px;
-            width: 400px;
+        @keyframes colorchange {
+          0% {
             background-color: red;
-            animation-name: colorchange2;
-            animation-duration: 2s;
-            -webkit-animation-duration: 2s;
-            -webkit-animation-name: colorchange2;
-
-            animation-iteration-count: infinite;
-            /* -webkit-animation-timing-function: linear; */
-            /* -webkit-animation-delay: 2s; */
-            /* -webkit-animation-iteration-count: 5; */
-            /* -webkit-animation-direction: reverse; */
           }
-
-          @keyframes colorchange2 {
-            from {
-              width: 0px;
-            }
-
-            to {
-              width: 250px;
-            }
-          }
-
-          div.ExampleColCha {
-            animation: colorchange2 3s ease-in 1s infinite reverse;
-            /*   esría así:
-              animation-name: colorchange2;
-              animation-duration: 3s;
-              animation-timing-function: ease-in;
-              animation-delay: 1s;
-              animation-iteration-count: infinite;
-              animation-direction: reverse; 
-              */
-          }
-        </style>
-        <details>
-          <summary>Code...</summary>
-          <pre>
-              div{
-                  animation-duration: 2s;
-                  animation-iteration-count: infinite;
-              }
-              @keyframes colorchange2 {
-                  from { width: 0px; }
-                  to { width: 250px; }
-              }
-          </pre>
-        </details>
-        <details>
-          <summary>Info...</summary>
-          <pre>
-          (animation-timing-function: *)
-              ease (default) - slow start, then fast, then end slowly 
-              linear - same speed from start to end
-              ease-in - slow start
-              ease-out - slow end
-              ease-in-out - slow start and end
-              cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier Function
-
-          (animation-direction: *)
-              normal - the default value, which means it plays forward from 0 % to 100%.
-              reverse - plays the keyframe in an opposite direction from 100 % to 0%
-              alternate - the animation first runs forward, then backward, then forward.
-              alternate-reverse - the animation first runs backward, then forward, then backward.
-          </pre>
-        </details>
-
-        <!-- 3D rotation -->
-        <p class="numbers">63) 3D Rotation </p>
-        <table>
-          <td>
-            <div class="X rot3d">rotateX(150deg)</div>
-          </td>
-          <td>
-            <div class="Y rot3d">rotateY(150deg)</div>
-          </td>
-          <td>
-            <div class="Z rot3d">rotateZ(150deg)</div>
-          </td>
-        </table>
-        <style>
-          div.rot3d {
-            width: 150px;
-            height: 80px;
-            color: white;
+          50% {
             background-color: green;
           }
+          100% {
+            background-color: blue;
+          }
+        }
 
-          div.X {
-            transform: rotateX(150deg);
-            -webkit-transform: rotateX(150deg);
-            /* transform: none; (Desactivar) */
+        @-webkit-keyframes colorchange {
+          0% {
+            background-color: red;
+          }
+          50% {
+            background-color: green;
+          }
+          100% {
+            background-color: blue;
+          }
+        }
+      </style>
+      <details>
+        <summary>code...</summary>
+        div.colorforcc {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        animation-name: colorchange;
+        animation-duration: 1s;
+        -webkit-animation-name: colorchange;
+        -webkit-animation-duration: 1s;
+        }
+        @keyframes colorchange {
+        0% {background-color: red; }
+        50% {background-color: green; }
+        100% {background-color: blue; }
+        }
+        @-webkit-keyframes colorchange {
+        0% {background-color: red; }
+        50% {background-color: green; }
+        100% {background-color: blue; }
+        }
+      </details>
+
+      <!-- The animation-name Property -->
+      <p class="numbers">62) The animation-name Property</p>
+      <div class="animdurat"></div>
+      <!-- https://www.sololearn.com/learning/1023/2254/4511/1 -->
+      <style>
+        div.animdurat {
+          height: 50px;
+          width: 400px;
+          background-color: red;
+          animation-name: colorchange2;
+          animation-duration: 2s;
+          -webkit-animation-duration: 2s;
+          -webkit-animation-name: colorchange2;
+
+          animation-iteration-count: infinite;
+          /* -webkit-animation-timing-function: linear; */
+          /* -webkit-animation-delay: 2s; */
+          /* -webkit-animation-iteration-count: 5; */
+          /* -webkit-animation-direction: reverse; */
+        }
+
+        @keyframes colorchange2 {
+          from {
+            width: 0px;
           }
 
-          div.Y {
-            transform: rotateY(150deg);
-            -webkit-transform: rotateY(150deg);
-          }
-
-          div.Z {
-            transform: rotateZ(150deg);
-            -webkit-transform: rotateZ(150deg);
-          }
-        </style>
-
-        <p class="numbers">64) 3D Translate </p>
-        <div class="empty-div2">
-          <div id="translate3d">3D translate methods</div>
-        </div>
-        <style>
-          div.empty-div2 {
-            position: relative;
-            width: 200px;
-            height: 70px;
-            /* padding: 10px; */
-            border: 1px solid black;
-            perspective: 60px;
-            -webkit-perspective: 60px;
-          }
-
-          #translate3d {
-            transform: translateX(30px) translateY(2em) translateZ(-13px);
-            -webkit-transform: translateX(30px) translateY(2em) translateZ(-13px);
+          to {
             width: 250px;
-            height: 100px;
-            color: white;
-            background-color: green;
           }
-        </style>
-        <br><br>
+        }
 
-        <p class="numbers">65) 3D Perspective </p>
-        <div class="empty-div2">
-          <div class="green-div">Example</div>
-        </div>
-        <style>
-          div.green-div {
-            padding: 30px;
-            position: absolute;
-            background-color: #8bc34a;
-            border: 1px solid white;
-            transform: rotateX(35deg);
-            -webkit-transform: rotateX(35deg);
-          }
-        </style>
+        div.ExampleColCha {
+          animation: colorchange2 3s ease-in 1s infinite reverse;
+          /*   esría así:
+            animation-name: colorchange2;
+            animation-duration: 3s;
+            animation-timing-function: ease-in;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: reverse; 
+            */
+        }
+      </style>
+      <details>
+        <summary>Code...</summary>
+        <pre>
+            div{
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+            @keyframes colorchange2 {
+                from { width: 0px; }
+                to { width: 250px; }
+            }
+        </pre>
+      </details>
+      <details>
+        <summary>Info...</summary>
+        <pre>
+        (animation-timing-function: *)
+            ease (default) - slow start, then fast, then end slowly 
+            linear - same speed from start to end
+            ease-in - slow start
+            ease-out - slow end
+            ease-in-out - slow start and end
+            cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier Function
+
+        (animation-direction: *)
+            normal - the default value, which means it plays forward from 0 % to 100%.
+            reverse - plays the keyframe in an opposite direction from 100 % to 0%
+            alternate - the animation first runs forward, then backward, then forward.
+            alternate-reverse - the animation first runs backward, then forward, then backward.
+        </pre>
+      </details>
+
+      <!-- 3D rotation -->
+      <p class="numbers">63) 3D Rotation </p>
+      <table>
+        <td>
+          <div class="X rot3d">rotateX(150deg)</div>
+        </td>
+        <td>
+          <div class="Y rot3d">rotateY(150deg)</div>
+        </td>
+        <td>
+          <div class="Z rot3d">rotateZ(150deg)</div>
+        </td>
+      </table>
+      <style>
+        div.rot3d {
+          width: 150px;
+          height: 80px;
+          color: white;
+          background-color: green;
+        }
+
+        div.X {
+          transform: rotateX(150deg);
+          -webkit-transform: rotateX(150deg);
+          /* transform: none; (Desactivar) */
+        }
+
+        div.Y {
+          transform: rotateY(150deg);
+          -webkit-transform: rotateY(150deg);
+        }
+
+        div.Z {
+          transform: rotateZ(150deg);
+          -webkit-transform: rotateZ(150deg);
+        }
+      </style>
+
+      <p class="numbers">64) 3D Translate </p>
+      <div class="empty-div2">
+        <div id="translate3d">3D translate methods</div>
       </div>
-    </div>
+      <style>
+        div.empty-div2 {
+          position: relative;
+          width: 200px;
+          height: 70px;
+          /* padding: 10px; */
+          border: 1px solid black;
+          perspective: 60px;
+          -webkit-perspective: 60px;
+        }
 
-    <!-- Filtros de CSS -->
-    <div class="borders">
-      <h2 class="titulo"> Filtros de CSS </h2>
+        #translate3d {
+          transform: translateX(30px) translateY(2em) translateZ(-13px);
+          -webkit-transform: translateX(30px) translateY(2em) translateZ(-13px);
+          width: 250px;
+          height: 100px;
+          color: white;
+          background-color: green;
+        }
+      </style>
+      <br><br>
 
-      <!-- Filter Functions -->
-      <div class="borders">
-        <h2 class="numbers"> 66) Filter Functions</h2><br>
-        <table>
-          <td>Drop-Shadow() <br>
-            <img class="dropshadow fltr" src="http://www.sololearn.com/images/tree.jpg" />
-          </td>
-          <td>Gray Scale() <br>
-            <img class="grayscale fltr" src="http://www.sololearn.com/images/tree.jpg" />
-          </td>
-          <td>Sepia() <br>
-            <img class="sepia fltr" src="http://www.sololearn.com/images/tree.jpg" />
-          </td>
-          <td>Saturate() <br>
-            <img class="saturate fltr" src="http://www.sololearn.com/images/tree.jpg" />
-          </td>
-          <td>Hue-Rotate() <br>
-            <img class="huerotate fltr" src="http://www.sololearn.com/images/tree.jpg" />
-          </td>
-          <td>Invert() <br>
-            <img class="invertimg fltr" src="http://www.sololearn.com/images/tree.jpg" />
-          </td>
-        </table>
-        <style>
-          /* tamaño */
-          .fltr {
-            height: 100px;
-          }
-
-          /* DropShadow */
-          .dropshadow {
-            filter: drop-shadow(5px 5px 2px green);
-          }
-
-          /* grayscale */
-          .grayscale {
-            filter: grayscale(100%);
-          }
-
-          /* Sepia */
-          .sepia {
-            filter: sepia(100%);
-          }
-
-          /* Saturate */
-          .saturate {
-            filter: saturate(300%);
-            /* 0: gris, 100: original */
-          }
-
-          /* Hue-Rotate */
-          .huerotate {
-            filter: hue-rotate(180deg);
-            /* de 0 a 360 (segun imagen e colores */
-          }
-
-          /* The invert Function */
-          .invertimg {
-            filter: invert(70%);
-          }
-
-          /* opacity */
-          .opacity {
-            filter: opacity(70%);
-          }
-        </style>
+      <p class="numbers">65) 3D Perspective </p>
+      <div class="empty-div2">
+        <div class="green-div">Example</div>
       </div>
-
-      <!-- Opacity & Brightness -->
-      <div class="borders">
-        <h2 class="numbers"> 67) Opacity & Brightness</h2><br>
-        <table>
-          <td>Opacity 70%<br>
-            <img class="opacity fltr" src="http://www.sololearn.com/images/tree.jpg" />
-          </td>
-          <td>Brightness 70% <br>
-            <img class="brightness fltr" src="http://www.sololearn.com/images/tree.jpg" />
-          </td>
-          <td>Brightness 1.9 <br>
-            <img class="brightness2 fltr" src="http://www.sololearn.com/images/tree.jpg" />
-          </td>
-          <td>Contrast 140% <br>
-            <img class="contrast fltr" src="http://www.sololearn.com/images/tree.jpg" />
-          </td>
-          <td>blur 5px <br>
-            <img class="blur fltr" src="http://www.sololearn.com/images/tree.jpg" />
-          </td>
-          <td>Multi-filters (blur+hue-rot)<br>
-            <img class="multifilters fltr" src="http://www.sololearn.com/images/tree.jpg" />
-          </td>
-        </table>
-        <style>
-          /* Brightness */
-          .brightness {
-            filter: Brightness(70%);
-          }
-
-          /* Brightness2 */
-          .brightness2 {
-            filter: brightness(1.9);
-          }
-
-          /* Contrans */
-          .contrast {
-            filter: contrast(140%);
-          }
-
-          /* Blur */
-          .blur {
-            filter: blur(5px);
-          }
-
-          /* MultiFilters */
-          .multifilters {
-            filter: blur(5px) hue-rotate(180deg);
-          }
-        </style>
-      </div>
+      <style>
+        div.green-div {
+          padding: 30px;
+          position: absolute;
+          background-color: #8bc34a;
+          border: 1px solid white;
+          transform: rotateX(35deg);
+          -webkit-transform: rotateX(35deg);
+        }
+      </style>
     </div>
   </div>
+
+  <!-- Filtros de CSS -->
+  <div class="borders">
+    <h2 class="titulo"> Filtros de CSS </h2>
+
+    <!-- Filter Functions -->
+    <div class="borders">
+      <h2 class="numbers"> 66) Filter Functions</h2><br>
+      <table>
+        <td>Drop-Shadow() <br>
+          <img class="dropshadow fltr" src="http://www.sololearn.com/images/tree.jpg" />
+        </td>
+        <td>Gray Scale() <br>
+          <img class="grayscale fltr" src="http://www.sololearn.com/images/tree.jpg" />
+        </td>
+        <td>Sepia() <br>
+          <img class="sepia fltr" src="http://www.sololearn.com/images/tree.jpg" />
+        </td>
+        <td>Saturate() <br>
+          <img class="saturate fltr" src="http://www.sololearn.com/images/tree.jpg" />
+        </td>
+        <td>Hue-Rotate() <br>
+          <img class="huerotate fltr" src="http://www.sololearn.com/images/tree.jpg" />
+        </td>
+        <td>Invert() <br>
+          <img class="invertimg fltr" src="http://www.sololearn.com/images/tree.jpg" />
+        </td>
+      </table>
+      <style>
+        /* tamaño */
+        .fltr {
+          height: 100px;
+        }
+
+        /* DropShadow */
+        .dropshadow {
+          filter: drop-shadow(5px 5px 2px green);
+        }
+
+        /* grayscale */
+        .grayscale {
+          filter: grayscale(100%);
+        }
+
+        /* Sepia */
+        .sepia {
+          filter: sepia(100%);
+        }
+
+        /* Saturate */
+        .saturate {
+          filter: saturate(300%);
+          /* 0: gris, 100: original */
+        }
+
+        /* Hue-Rotate */
+        .huerotate {
+          filter: hue-rotate(180deg);
+          /* de 0 a 360 (segun imagen e colores */
+        }
+
+        /* The invert Function */
+        .invertimg {
+          filter: invert(70%);
+        }
+
+        /* opacity */
+        .opacity {
+          filter: opacity(70%);
+        }
+      </style>
+    </div>
+
+    <!-- Opacity & Brightness -->
+    <div class="borders">
+      <h2 class="numbers"> 67) Opacity & Brightness</h2><br>
+      <table>
+        <td>Opacity 70%<br>
+          <img class="opacity fltr" src="http://www.sololearn.com/images/tree.jpg" />
+        </td>
+        <td>Brightness 70% <br>
+          <img class="brightness fltr" src="http://www.sololearn.com/images/tree.jpg" />
+        </td>
+        <td>Brightness 1.9 <br>
+          <img class="brightness2 fltr" src="http://www.sololearn.com/images/tree.jpg" />
+        </td>
+        <td>Contrast 140% <br>
+          <img class="contrast fltr" src="http://www.sololearn.com/images/tree.jpg" />
+        </td>
+        <td>blur 5px <br>
+          <img class="blur fltr" src="http://www.sololearn.com/images/tree.jpg" />
+        </td>
+        <td>Multi-filters (blur+hue-rot)<br>
+          <img class="multifilters fltr" src="http://www.sololearn.com/images/tree.jpg" />
+        </td>
+      </table>
+      <style>
+        /* Brightness */
+        .brightness {
+          filter: Brightness(70%);
+        }
+
+        /* Brightness2 */
+        .brightness2 {
+          filter: brightness(1.9);
+        }
+
+        /* Contrans */
+        .contrast {
+          filter: contrast(140%);
+        }
+
+        /* Blur */
+        .blur {
+          filter: blur(5px);
+        }
+
+        /* MultiFilters */
+        .multifilters {
+          filter: blur(5px) hue-rotate(180deg);
+        }
+      </style>
+    </div>
+  </div>
+  
   <script type="text/javascript" src="../MenuJS.js"></script>
 </main>
 </body>
