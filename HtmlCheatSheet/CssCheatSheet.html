@@ -1224,7 +1224,7 @@
           font-family: Delicious, sans-serif;
         }
       </style>
-    </div>
+    </fieldset>
   </div>
 
   <!-- Degradados y Fondos -->
@@ -1458,41 +1458,37 @@
 
   <!-- transiciones y Transparencia -->
   <div class="borders">
-    <h2 class="titulo"> Transiciones y Transparencia </h2>
+    <h1 class="titulo"> Transiciones y Transparencia </h1>
     <!-- https://code.sololearn.com/WhEb9aoMSiUB/ -->
 
-    <!-- 57) Transition -->
-    <div class="borders">
-      <p class="numbers">57) Transition</p>
+    <!-- Transition -->
+    <fieldset>
+      <legend> <h2>Transition</h2> </legend>
+
+      <!-- Transition -->
+      Apuntar el sig cuadro...
       <div class="transit"> 
-        Apuntame...
+        div.transit { 
+          transition: width 2s;
+        } <br>
+        div.transit:hover {
+          width: 350px;
+        }
       </div>
       <style>
         div.transit {
-          width: 120px;
+          width: 200px;
           height: 60px;
           background: #32CD32;
           transition: width 2s;
           -webkit-transition: width 2s;
         }
-
         div.transit:hover {
           width: 350px;
         }
-      </style>
-      <details>
-        <summary>code...</summary>
-        <pre>
-        div.transit {
-            transition: width 2s;
-        }
-        div.transit:hover {
-            width: 350px;
-        }
-        </pre>
-      </details>
-      <hr><br>
+      </style> <hr>
 
+      <!-- Rotation -->
       <table>
         <td>
           <div class="rotate">transform: rotate(10deg);</div>
@@ -1500,72 +1496,74 @@
       </table>
       <style>
         div.rotate {
-          width: 200px;
-          height: 100px;
+          width: 150px;
+          height: 50px;
           background-color: #32CD32;
           transform: rotate(10deg);
           -webkit-transform: rotate(10deg);
         }
-      </style> <br>
-      <hr>
+      </style> <hr>
 
-      <div class="empty-div">
-        <div class="greendivrot">
-          margin-top: 10px; <br>
-          transform: rotate(10deg); <br><br>
-          transform-origin: bottom center; <br>
-        </div>
-      </div>
+      <!-- Rot Bot-Centr. -->
+      <table>
+        <td>  
+          <div class="greendivrot">
+            margin-top: 10px; <br>
+            transform: rotate(10deg); <br>
+            transform-origin: bottom center; <br>
+          </div>
+        </td>
+      </table>
       <style>
         div.empty-div {
-          /* position: relative; */
-          height: 100px;
-          width: 100px;
+          width: 180px;
+          height: 50px;
           border: 1px solid black;
         }
-
         .greendivrot {
           font-size: 12px;
-          width: 100px;
-          height: 100px;
-          margin-top: 10px;
+          width: 180px;
+          height: 50px;
+          margin-top: 11px;
           background-color: #32CD32;
           transform: rotate(10deg);
           transform-origin: bottom center;
         }
-      </style> <br>
-      <hr>
+      </style> <br><hr>
 
-      <p class="numbers">60) Translate() Method</p>
-      <div class="empty-div">
-        <div class="torig">transform: translate(20px, 20px);</div>
-      </div>
+      <h3 class="numbers">Translate() Method</h3>
+      <table>
+        <td>
+          <div class="torig">transform: translate(20px, 20px);</div>
+        </td>
+      </table>
       <style>
         div.torig {
-          height: 100px;
           width: 100px;
+          height: 50px;
           background-color: #32CD32;
-          transform: translate(20px, 20px);
-          -webkit-transform: translate(20px, 20px);
+          transform: translate(10px, 10px);
+          /* -webkit-transform: translate(20px, 20px); */
         }
-      </style><br>
+      </style> <br><hr>
 
-      <p class="numbers">60) Skew() Method</p>
-      <div class="empty-div">
-        <div class="skew">transform: skew(30deg);</div>
-      </div>
+      <h3 class="numbers">Skew() Method</h3>
+      <table>
+        <td>
+          <div class="skew">transform: skew(30deg);</div>
+        </td>
+      </table>
       <style>
         div.skew {
-          height: 100px;
           width: 100px;
-          position: absolute;
+          height: 40px;
           background-color: #32CD32;
           transform: skew(30deg);
           -webkit-transform: skew(30deg);
         }
-      </style>
+      </style> <hr>
 
-      <p class="numbers">60) Scale y rotate</p>
+      <h3 class="numbers">Scale y rotate</h3>
       <table>
         <td>
           <div class="scale0-7 scalerot">the factor 0.7 both horizontally and vertically</div>
@@ -1579,8 +1577,8 @@
       </table>
       <style>
         div.scalerot {
-          width: 150px;
-          height: 70px;
+          width: 130px;
+          height: 50px;
           background-color: #8BC34A;
         }
         div.scale0-7 {
@@ -1596,37 +1594,10 @@
           transform: rotate(45deg);
           -webkit-transform: rotate(45deg);
         }
-
-        @keyframes examplecc {
-          0% {
-            background-color: red;
-          }
-          50% {
-            background-color: yellow;
-          }
-          70% {
-            background-color: blue;
-          }
-          100% {
-            background-color: green;
-          }
-        }
-
-        @keyframes ColorChangeExample {
-          from {
-            background-color: red;
-          }
-          /* 0% {background-color: red;} */
-
-          to {
-            background-color: green;
-          }
-          /* 100% {background-color: green;} */
-        }
-      </style>
+      </style> <hr>
 
       <!-- The @keyframes Rule -->
-      <p class="numbers">61) The @keyframes Rule</p>
+      <h3 class="numbers">The @keyframes Rule</h3>
       <div class="colorforcc"></div>
       <style>
         div.colorforcc {
@@ -1651,8 +1622,7 @@
             background-color: blue;
           }
         }
-
-        @-webkit-keyframes colorchange {
+        /* @-webkit-keyframes colorchange {
           0% {
             background-color: red;
           }
@@ -1661,31 +1631,28 @@
           }
           100% {
             background-color: blue;
-          }
+          } 
         }
+        */
       </style>
       <details>
         <summary>code...</summary>
-        div.colorforcc {
-        width: 100px;
-        height: 100px;
-        background-color: red;
-        animation-name: colorchange;
-        animation-duration: 1s;
-        -webkit-animation-name: colorchange;
-        -webkit-animation-duration: 1s;
-        }
-        @keyframes colorchange {
-        0% {background-color: red; }
-        50% {background-color: green; }
-        100% {background-color: blue; }
-        }
-        @-webkit-keyframes colorchange {
-        0% {background-color: red; }
-        50% {background-color: green; }
-        100% {background-color: blue; }
-        }
-      </details>
+        div.colorforcc { <br>
+          width: 100px; <br>
+          height: 100px; <br>
+          background-color: red; <br>
+          animation-name: colorchange; <br>
+          animation-duration: 1s; <br>
+          -webkit-animation-name: colorchange; <br>
+          -webkit-animation-duration: 1s; <br>
+        } <br>
+        usar tambien...... @-webkit-keyframes colorchange {}..... <br>
+        @keyframes colorchange { <br>
+          0% {background-color: red; } <br>
+          50% {background-color: green; } <br>
+          100% {background-color: blue; } <br>
+        } <br>
+      </details> <hr>
 
       <!-- The animation-name Property -->
       <p class="numbers">62) The animation-name Property</p>
@@ -1712,7 +1679,6 @@
           from {
             width: 0px;
           }
-
           to {
             width: 250px;
           }
@@ -1727,7 +1693,7 @@
             animation-delay: 1s;
             animation-iteration-count: infinite;
             animation-direction: reverse; 
-            */
+          */
         }
       </style>
       <details>
@@ -1760,87 +1726,71 @@
           alternate - the animation first runs forward, then backward, then forward.
           alternate-reverse - the animation first runs backward, then forward, then backward.
         </pre>
-      </details>
+      </details> <hr>
 
       <!-- 3D rotation -->
-      <p class="numbers">63) 3D Rotation </p>
+      <h3 class="numbers">3D Rotation </h3>
+      /* transform: none; (Desactivar) */
       <table>
         <td>
-          <div class="X rot3d">rotateX(150deg)</div>
+          transform: rotateX(150deg);
+          <div class="rot3d" style="transform: rotateX(150deg);">rotateX(150deg)</div>
         </td>
         <td>
-          <div class="Y rot3d">rotateY(150deg)</div>
+          transform: rotateY(150deg);
+          <div class="rot3d" style="transform: rotateY(150deg);">rotateY(150deg)</div>
         </td>
         <td>
-          <div class="Z rot3d">rotateZ(150deg)</div>
+          transform: rotateZ(150deg);
+          <div class="rot3d" style="transform: rotateZ(150deg);">rotateZ(150deg)</div>
         </td>
       </table>
       <style>
         div.rot3d {
-          width: 150px;
-          height: 80px;
-          color: white;
+          width: 140px;
+          height: 50px;
+          font-size: large;
           background-color: green;
         }
+      </style> <br><hr>
 
-        div.X {
-          transform: rotateX(150deg);
-          -webkit-transform: rotateX(150deg);
-          /* transform: none; (Desactivar) */
-        }
-
-        div.Y {
-          transform: rotateY(150deg);
-          -webkit-transform: rotateY(150deg);
-        }
-
-        div.Z {
-          transform: rotateZ(150deg);
-          -webkit-transform: rotateZ(150deg);
-        }
-      </style>
-
-      <p class="numbers">64) 3D Translate </p>
+      <h3 class="numbers">3D Translate </h3>
       <div class="empty-div2">
-        <div id="translate3d">3D translate methods</div>
+        <div class="translate3d">
+          transform: translateZ(20px);
+        </div>
       </div>
       <style>
         div.empty-div2 {
           position: relative;
-          width: 200px;
-          height: 70px;
-          /* padding: 10px; */
+          width: 150px;
+          height: 50px;
           border: 1px solid black;
           perspective: 60px;
           -webkit-perspective: 60px;
         }
 
-        #translate3d {
-          transform: translateX(30px) translateY(2em) translateZ(-13px);
-          -webkit-transform: translateX(30px) translateY(2em) translateZ(-13px);
-          width: 250px;
-          height: 100px;
-          color: white;
+        .translate3d {
+          width: 150px;
+          height: 50px;
           background-color: green;
+          transform: translateX(10px) translateY(10px) translateZ(15px);
         }
-      </style>
-      <br><br>
+      </style><hr>
 
-      <p class="numbers">65) 3D Perspective </p>
+      <h3 class="numbers">3D Perspective </h3>
       <div class="empty-div2">
-        <div class="green-div">Example</div>
+        <div class="green-div">transform: rotateX(35deg);</div>
       </div>
       <style>
-        div.green-div {
-          padding: 30px;
-          position: absolute;
+        .green-div {
+          height: 50px;
           background-color: #8bc34a;
           border: 1px solid white;
           transform: rotateX(35deg);
-          -webkit-transform: rotateX(35deg);
         }
       </style>
-    </div>
+    </fieldset>
   </div>
 
   <!-- Filtros de CSS -->
@@ -1848,8 +1798,8 @@
     <h2 class="titulo"> Filtros de CSS </h2>
 
     <!-- Filter Functions -->
-    <div class="borders">
-      <h2 class="numbers"> Filter Functions</h2><br>
+    <fieldset>
+      <legend> <h2> Filter Functions</h2> </legend>
       <table>
         <td>Drop-Shadow() <br>
           <img class="fltr" style="filter: drop-shadow(5px 5px 2px green);" src="http://www.sololearn.com/images/tree.jpg" />
@@ -1870,11 +1820,11 @@
           <img class="fltr" style="filter: invert(70%);" src="http://www.sololearn.com/images/tree.jpg" />
         </td>
       </table>
-    </div>
+    </fieldset>
 
     <!-- Opacity & Brightness -->
-    <div class="borders">
-      <h2 class="numbers"> Opacity & Brightness</h2><br>
+    <fieldset>
+      <legend> <h2> Opacity & Brightness</h2> </legend>
       <table>
         <td>Opacity 70%<br>
           <img class="fltr" style="filter: opacity(70%);" src="http://www.sololearn.com/images/tree.jpg" />
@@ -1895,7 +1845,7 @@
           <img class="fltr" style="filter: blur(5px) hue-rotate(180deg);" src="http://www.sololearn.com/images/tree.jpg" />
         </td>
       </table>
-    </div>
+    </fieldset>
     <style>
       .fltr {
         height: 100px;
