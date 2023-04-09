@@ -407,7 +407,37 @@
         <div class="codigo">
           border-style: dotted/dashed/double/groove/ridge/inset/ouset;
         </div>
-      </div>
+      </div> <hr>
+
+      <div class="tbord2"> Transparent borders</div>
+      <style>
+        div.tbord2 {
+          border: 20px solid rgba(77, 131, 72, 0.161);
+          -moz-background-clip: padding-box;
+          -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+          width: 200px;
+          /* position:absolute; */
+          top: 50px;
+          left: 50px;
+          background-color: white;
+        }
+      </style>
+      <details>
+        <summary>Codigo...</summary>
+        <div class="codigo">
+          div.tbord2 { <br>
+            border: 20px solid rgba(77, 131, 72, 0.161); <br>
+            -moz-background-clip: padding-box; <br>
+            -webkit-background-clip: padding-box; <br>
+            background-clip: padding-box; <br>
+            width: 200px; <br>
+            top: 50px; <br>
+            left: 50px; <br>
+            background-color: white; <br>
+          }
+        </div>
+      </details>
     </fieldset>
 
     <!-- Background (BODY) -->
@@ -943,8 +973,8 @@
       </div>
       <style>
         .boxsh {
-          width: 250px;
-          height: 50px;
+          width: 245px;
+          height: 40px;
           padding: 7px;
           border: 1px solid;
           text-align: center;
@@ -961,7 +991,6 @@
           border-radius: 0 10px 20px 30px;
           background-color: green;
           color: white;
-          /* padding: 30px; */
           width: 200px;
           height: 25px;
         }
@@ -978,33 +1007,14 @@
     </fieldset>
 
     <!-- Box-Shadow -->
-    <div class="borders">
-      <p class="numbers"> 37) Box-Shadow </p>
+    <fieldset>
+      <legend> <h2> Box-Shadow </h2> </legend>
       <div class="backgw boxsh" style="box-shadow: 10px 10px 10px 5px grey;">
         box-shadow: 10px 10px 10px 5px #888; <br>
         <font color="grey">box-shadow: Hriz, Vert, blur, spread, color</font>
       </div>
-      <br>
-      <hr>
-
-      <!-- Box-Inside Shadow -->
-      <h3 class="subtitulo"> Box-Inside Shadow </h3>
-      <div class="backgw boxsh" style="box-shadow: inset 10px 10px 10px 5px grey;">
-        box-shadow: inset 10px 10px 10px 5px green ;
-      </div>
-      <br>
-      <hr>
-
-      <!-- Box-Double Inside Shadow -->
-      <h3 class="subtitulo"> Box-Double Inside Shadow </h3>
-      <div class="backgw boxsh" style="box-shadow: inset 5px 5px 15px grey, inset -5px -5px 15px grey;">
-        box-shadow: inset 10px 10px 5px green, <br> inset -10px -10px 5px green ;
-      </div>
-      <br>
-      <hr>
 
       <!-- Box-Triple Shadow -->
-      <h3 class="subtitulo"> Box-Triple Shadow </h3>
       <div class="BoxTrilpeShadow">
         box-shadow: 0 0 10px 4px #FF6347, <br> 0 0 10px 30px #FFDAB9, <br> 30px 0 20px 30px #B0E0E6;
       </div>
@@ -1012,156 +1022,160 @@
         .BoxTrilpeShadow {
           text-align: center;
           vertical-align: middle;
-          width: 250px;
+          width: 220px;
           height: 50px;
-          margin-left: 30px;
-          margin-top: 30px;
+          margin-left: 20px;
+          margin-top: 50px;
+          margin-bottom: 50px;
           background-color: #fff;
-          box-shadow: 0 0 10px 4px #FF6347,
-            0 0 10px 25px #FFDAB9,
-            20px 20px 15px 20px #42e3f8;
+          box-shadow: 0 0 5px 5px #FF6347, 0 0 8px 20px #ffbf88, 15px 15px 10px 15px #004048;
         }
       </style>
-      <br><br><br>
-    </div>
+
+      <!-- Box-Inside Shadow -->
+      <div class="backgw boxsh" style="box-shadow: inset 10px 10px 10px 5px grey;">
+        box-shadow: inset 10px 10px 10px 5px grey ;
+      </div>
+
+      <!-- Box-Double Inside Shadow -->
+      <div class="backgw boxsh" style="box-shadow: inset 5px 5px 15px grey, inset -5px -5px 15px grey;">
+        box-shadow: inset 10px 10px 5px green, <br> inset -10px -10px 5px grey ;
+      </div> <br>
+    </fieldset>
 
     <!-- BoxTransparencia -->
-    <div class="borders">
-      <h3 class="subtitulo"> 38) Transparencia </h3>
+    <fieldset>
+      <legend> <h2> Transparencia </h2> </legend>
       <div class="BoxTransparencia">
         background-color: #9ACD32; <br>
         background: linear-gradient(90deg, <br>
-        rgba(38, 23, 179, 0.515) 0%, <br>
-        rgba(16, 129, 133, 0.549) 25%, <br>
-        rgba(167, 201, 17, 0.433) 75%, <br>
-        rgba(72, 0, 56, 0.419) 100%); <br>
-        box-shadow: 0 0 25px rgba(19, 8, 80, 0.486), <br>
-        inset 0 0 1px rgba(0, 189, 85, 0.829); <br>
-      </div> <br>
+        &nbsp; rgba(38, 23, 179, 0.515) 0%, rgba(16, 129, 133, 0.549) 25%, <br>
+        &nbsp; rgba(167, 201, 17, 0.433) 75%, rgba(72, 0, 56, 0.419) 100%); <br>
+        box-shadow: 0 0 25px rgba(19, 8, 80, 0.486), inset 0 0 1px rgba(0, 189, 85, 0.829); <br>
+      </div>
 
       <style>
         .BoxTransparencia {
           width: 80%;
           height: auto;
           padding: 15px;
+          margin: 8px;
           background-color: #9ACD32;
           background: linear-gradient(90deg,
-              rgba(38, 23, 179, 0.515) 0%,
-              rgba(16, 129, 133, 0.549) 25%,
-              rgba(167, 201, 17, 0.433) 75%,
-              rgba(72, 0, 56, 0.419) 100%);
+            rgba(38, 23, 179, 0.515) 0%,
+            rgba(16, 129, 133, 0.549) 25%,
+            rgba(167, 201, 17, 0.433) 75%,
+            rgba(72, 0, 56, 0.419) 100%);
           box-shadow: 0 0 25px rgba(19, 8, 80, 0.486),
             inset 0 0 1px rgba(0, 189, 85, 0.829);
         }
       </style>
-    </div>
+    </fieldset>
 
     <!-- Pseudo-Clases -->
-    <div class="borders">
-      <p class="numbers">40) Pseudo-Clases</p>
-      <div id="parent">
+    <fieldset>
+      <legend> <h2>Pseudo-Clases</h2> </legend>
+      <div id="parent" class="ejemplo">
         <p>First paragraph</p>
         <p>Second paragraph</p>
         <p>Third paragraph</p>
-        <style>
-          #parent p:first-child {
-            /* first-last */
-            color: green;
-            text-decoration: underline;
-          }
-        </style>
-        <code>
-          #parent p:first-child { <br>
-            color: green; <br>
-            text-decoration: underline; <br>
-          }
-        </code>
       </div>
-    </div>
+      <style>
+        #parent p:first-child {
+          color: green;
+          text-decoration: underline;
+        }
+      </style>
+      <div class="codigo">
+        /* first-last */ <br>
+        #parent p:first-child { <br>
+          &nbsp; color: green; <br>
+          &nbsp; text-decoration: underline; <br>
+        }
+      </div>
+    </fieldset>
 
     <!-- Pseudo-Elemento -->
-    <div class="borders">
-      <p class="numbers">41) Pseudo-Elemento</p>
+    <fieldset>
+      <legend> <h2> Pseudo-Elemento</h2> </legend>
 
-      ::first-line <br>
-      ::first-letter <br>
-      ::selection <br>
-      ::before <br>
-      ::after <br><br>
-      <hr>
-
-      <h2 class="subtitulo"> >>First-Line</h3>
-      <h3 class="textfirstline">The following example demonstrates how to use the ::first-line element to add
-        special effect to the first line of elements in the document.</h6>
-        <code>
-          .textfirstline::first-line { <br>
-            color: #589432; <br>
-          } <br>
-        </code>
-        <hr>
-
-        <h2 class="subtitulo"> >>First-Letter</h3>
-        <h3 class="firstletter"> La primera letra es de otro color</h2>
-        <code>
-          .firstletter::first-letter{ <br>
-            background-color: #589432; <br>
-          }
-        </code>
-        <hr>
-
-        <h2 class="subtitulo"> >>Selection</h3>
-        <h3 class="seleccioname">Selecciona una parte de este texto para marcarlo de otro color</h2>
-        <code>
-          .seleccioname::first-letter{ <br>
-            background-color: #589432; <br>
-          }
-        </code>
-        <hr>
-
-        <h2 class="subtitulo"> >>Before</h3>
-        <h3 class="insertImageBeforeText">insert Image Before Text</h3>
-        <code>
-          .insertImageBeforeText::before{ <br>
-          content: url("../Imgs/loguito.png"); <br>
+      <h3 class="subtitulo"> ::First-Line</h3>
+      
+      <div class="ejemplo">
+        <h4 class="textfirstline">
+          El siguiente ejemplo demuestra cómo usar el elemento ::first-line 
+          para agregar un efecto especial a la primera línea de elementos en el documento.
+        </h4>
+      </div>
+      <div class="codigo">
+        .textfirstline::first-line { <br>
+          &nbsp; color: #589432; <br>
         }
-        </code>
-        <style>
-          .textfirstline::first-line {
-            color: #589432;
-          }
+      </div> <hr>
 
-          .firstletter::first-letter {
-            background-color: #589432;
-          }
+      <h3 class="subtitulo"> ::First-Letter</h3>
+      <div class="ejemplo">
+        <h4 class="firstletter"> La primera letra es de otro color</h4>
+      </div>
+      <div class="codigo">
+        .firstletter::first-letter{ <br>
+          &nbsp; background-color: #589432; <br>
+        }
+      </div> <hr>
 
-          .seleccioname::selection {
-            /* h5::-moz-selection{ (para mozillaFirefox)*/
-            background-color: #589432;
-            color: #FF6347;
-          }
+      <h3 class="subtitulo"> ::Selection</h3>
+      <div class="ejemplo">
+        <h4 class="seleccioname">Selecciona una parte de este texto para marcarlo de otro color</h4>
+      </div>
+      <div class="codigo">
+        /* h5::-moz-selection (para mozillaFirefox)*/ <br>
+        .seleccioname::first-letter{ <br>
+          &nbsp; background-color: #589432; <br>
+        }
+      </div> <hr>
 
-          .insertImageBeforeText::before {
-            content: url("../Imgs/loguito.png");
-          }
-        </style>
-    </div>
+      <h3 class="subtitulo"> ::Before</h3>
+      <div class="ejemplo">
+        <h3 class="insertImageBeforeText">insert Image Before Text</h3>
+      </div>
+      <div class="codigo">
+        .insertImageBeforeText::before{ <br>
+          &nbsp; content: url("../Imgs/loguito.png"); <br>
+        }
+      </div>
+      <style>
+        .textfirstline::first-line {
+          color: #589432;
+        }
+        .firstletter::first-letter {
+          background-color: #589432;
+        }
+        .seleccioname::selection {
+          background-color: #589432;
+          color: #FF6347;
+        }
+        .insertImageBeforeText::before {
+          content: url("../Imgs/loguito.png");
+        }
+      </style>
+    </fieldset>
 
     <!-- Word-Wrap -->
-    <div class="borders">
-      <p class="numbers">Word-Wrap</p>
+    <fieldset>
+      <legend> <h2>Word-Wrap</h2> </legend>
       <p class="wordwrap" style="word-wrap: normal;">
         NormalNormalNormalNormalNormalNormal.
         NormalNormalNormalNormalNormalNormal.
       </p>
       <p class="wordwrap" style="word-wrap: break-word;">
-        Break-Word.Break-Word.Break-Word.Break-Word.Break-Word.
+        BreakWord.BreakWord.BreakWord.BreakWord.BreakWord.
       </p>
       <div class="codigo">
         .wordwrapnormal{ <br>
-           word-wrap: normal; <br>
+          word-wrap: normal; <br>
         } <br>
         .wordwrapbreak{ <br>
-           word-wrap: break-word; <br>
+          word-wrap: break-word; <br>
         }
       </div>
       <style>
@@ -1171,11 +1185,11 @@
           height: 80px;
         }
       </style>
-    </div>
+    </fieldset>
 
     <!-- Font-Face -->
-    <div class="borders">
-      <p class="numbers">43) Font-Face</p>
+    <fieldset>
+      <legend> <h2>Font-Face</h2> </legend>
       <h1 class="custfont">This is Delicious Font</h1>
       <details>
         <summary>Code...</summary>
@@ -1225,21 +1239,12 @@
         display: table-cell;
         vertical-align: middle;
       }
-      .degrad {
-        height: 150px;
-        width: 200px;
-        color: #FFF;
-        text-align: center;
-        display: table-cell;
-        vertical-align: middle;
-      }
     </style>
 
     <!-- Dergadados Lineales -->
-    <div class="borders">
-      <h1 class="numbers">Dergadados Lineales</h1>
-      (Si no se usa rgb usar "-webkit-linear-gradient(#fff, #000)"
-      <br><br>
+    <fieldset>
+      <legend> <h2>Dergadados Lineales</h2> </legend>
+      <p>(Si no se usa rgb usar "-webkit-linear-gradient(#fff, #000)"</p>
       <table>lineal gradient
         <td>
           <div class="degradados deg">
@@ -1318,176 +1323,117 @@
           background: repeating-linear-gradient(rgb(0, 21, 255), rgb(0, 255, 238) 20px);
         }
       </style>
-    </div>
+    </fieldset>
 
     <!-- Degradados Radiales -->
-    <div class="borders">
-      <p class="numbers">48) Degradados Radiales</p>
-      <pre>
-    background: radial-gradient(position, shape or size, color-stops); 
-    position: top, left.. 0% 0%(sup izq), 50% 50%(medio)
-    </pre>
-      <table>
-        <td>
-          <div class="first48 degrad">Ellipse (Default)</div>
-        </td>
-        <td>
-          <div class="second48 degrad">Circle</div>
-        </td>
-      </table>
+    <fieldset>
+      <legend> <h2>Degradados Radiales</h2> </legend>
+      
+      <div class="first48 degrad">Ellipse (Default)</div>
+      <div class="second48 degrad">Circle</div>
+      <div class="first49 degrad">Top Left</div>
+      <div class="second49 degrad">In Percentages</div>
+      <div class="colorstop degrad">Color Stops</div>
+
+      <div class="codigo">
+        background: radial-gradient(position, shape or size, color-stops); <br>
+        position: top, left.. 0% 0%(sup izq), 50% 50%(medio)
+      </div>
+
       <style>
+        .degrad {
+          height: 80px;
+          width: 100px;
+          border: 1px solid;
+          color: #FFF;
+          text-align: center;
+          display: table-cell;
+          vertical-align: middle;
+        }
         div.first48 {
           background: -webkit-radial-gradient(red, yellow, blue);
           background: -moz-radial-gradient(green, yellow, blue);
           background: -ms-radial-gradient(green, yellow, blue);
         }
-
         div.second48 {
           background: -webkit-radial-gradient(circle, red, yellow, blue);
           background: -moz-radial-gradient(circle, green, yellow, blue);
           background: -ms-radial-gradient(circle, green, yellow, blue);
         }
-      </style>
-
-      <table>
-        <td>
-          <div class="first49 degrad">Top Left</div>
-        </td>
-        <td>
-          <div class="second49 degrad">In Percentages</div>
-        </td>
-      </table>
-      <style>
         div.first49 {
           background: -moz-radial-gradient(top left, red, yellow, blue);
           background: -webkit-radial-gradient(top left, red, yellow, blue);
           background: -ms-radial-gradient(top left, green, yellow, blue);
         }
-
         div.second49 {
           background: -moz-radial-gradient(green 5%, yellow 15%, blue 60%);
           background: -webkit-radial-gradient(red 5%, yellow 15%, blue 60%);
           background: -ms-radial-gradient(green 5%, yellow 15%, blue 60%);
         }
-      </style>
-
-      <table>
-        <td>
-          <div class="colorstop degrad">Color Stops</div>
-        </td>
-      </table>
-      <style>
         div.colorstop {
           background: -moz-radial-gradient(circle, green 40%, yellow 50%, blue 70%);
           background: -webkit-radial-gradient(circle, red 40%, yellow 50%, blue 70%);
           background: -ms-radial-gradient(circle, green 40%, yellow 50%, blue 70%);
         }
       </style>
-    </div>
+    </fieldset>
 
-    <!-- Background size -->
-    <div class="borders">
+    <!-- Background size-clip -->
+    <fieldset>
+      <legend> <h2>Backgrounds</h2> </legend>
+      <!-- Background size -->
+      <h3>Background size</h3>
+      <table>
+        <td>
+          <div class="backsize" style="background-size: 75px 75px;">background-size: 75px</div>
+        </td>
+        <td>
+          <div class="backsize" style="background-size: 50px 50px;">background-size: 50px</div>
+        </td>
+        <td>
+          <div class="backsize" style="background-size: contain;">bs: contain</div>
+        </td>
+        <td>
+          <div class="backsize" style="background-size: cover;">bs: cover</div>
+        </td>
+      </table>
       <style>
         .backsize {
-          height: 150px;
-          width: 200px;
+          height: 100px;
+          width: 120px;
           border: 1px solid #000;
           background: url("http://www.sololearn.com/uploads/css_logo.png") no-repeat 50% 50%;
         }
-      </style>
-      <p class="numbers">51) Background size</p>
-      <table>
-        <td>
-          <div class="backsiz100 backsize">background-size: 100px</div>
-        </td>
-        <td>
-          <div class="backsiz50 backsize">background-size: 50px</div>
-        </td>
-      </table>
-      <style>
-        div.backsiz50 {
-          background-size: 50px 50px;
-        }
-
-        div.backsiz100 {
-          background-size: 100px 100px;
-        }
-      </style>
-
-      <table>
-        <td>
-          <div class="bscont backsize">bs: contain</div>
-        </td>
-        <td>
-          <div class="bscover backsize">bs: cover</div>
-        </td>
-      </table>
-      <style>
-        div.bscont {
-          background-size: contain;
-        }
-
-        div.bscover {
-          background-size: cover;
-        }
-      </style>
+      </style> <hr>
 
       <!-- Background Clip -->
-      <p class="numbers"> 52) Background Clip</p>
-      <style>
-        .backclip {
-          border: 2px dotted black;
-          padding: 20px;
-          background: LightBlue;
-        }
-      </style>
+      <h3>Background Clip</h3>
       <table>
         <td>
-          <div class="bcpad backclip">background-clip: padding-box</div>
+          <div class="backclip" style="background-clip: padding-box;">background-clip: padding-box</div>
         </td>
         <td>
-          <div class="bccont backclip">background-clip: content-box</div>
+          <div class="backclip" style="background-clip: content-box;">background-clip: content-box</div>
         </td>
         <td>
           <div class="bcimg backclip">background-clip: content-box</div>
         </td>
       </table>
       <style>
-        div.bcpad {
-          background-clip: padding-box;
+        .backclip {
+          border: 2px dotted black;
+          padding: 20px;
+          background: LightBlue;
         }
-
-        div.bccont {
-          background-clip: content-box;
-        }
-
         div.bcimg {
           background: none;
           background-clip: content-box;
           background-image: url("http://www.sololearn.com/uploads/css_logo.png");
         }
-      </style>
-    </div>
+      </style> <hr>
 
-    <!-- Transparent borders -->
-    <div class="borders">
-      <p class="numbers">54) Transparent borders</p>
-      <div class="tbord2"> Transparent borders</div>
-      <style>
-        div.tbord2 {
-          border: 20px solid rgba(109, 61, 102, 0.085);
-          -moz-background-clip: padding-box;
-          -webkit-background-clip: padding-box;
-          background-clip: padding-box;
-          width: 200px;
-          /* position:absolute; */
-          top: 50px;
-          left: 50px;
-          background-color: white;
-        }
-      </style>
-
-      <p class="numbers">55) Multiple-background</p>
+      <!-- Multiple background -->
+      <h3>Multiple-background</h3>
       <div class="multbg"></div>
       <style>
         div.multbg {
@@ -1500,14 +1446,14 @@
       </style>
 
       <!-- Opacity -->
-      <p class="numbers">56) Opacity</p>
+      <h3>Opacity</h3>
       <table>
         <td><img style="opacity: 1;" src="http://www.sololearn.com/uploads/css_logo.png" />opacity: 1</td>
         <td><img style="opacity: 0.5;" src="http://www.sololearn.com/uploads/css_logo.png" />opacity: 0.5</td>
         <td><img style="opacity: 0.25;" src="http://www.sololearn.com/uploads/css_logo.png" />opacity: 0.25</td>
         <td><img style="opacity: 0.5; filter: alpha(opacity=50);" src="http://www.sololearn.com/uploads/css_logo.png" />op 0.5 + alpha(op 50)</td>
       </table>
-    </div>
+    </fieldset>
   </div>
 
   <!-- transiciones y Transparencia -->
