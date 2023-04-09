@@ -667,7 +667,6 @@
         <span>First paragraph.</span>
         <span>Second paragraph.</span>
         <span>Third paragraph.</span>
-        <span>Fourth paragraph.</span>
       </p>
 
       <p>
@@ -675,20 +674,17 @@
         <span class="block">First paragraph.</span>
         <span class="block">Second paragraph.</span>
         <span class="block">Third paragraph.</span>
-        <span class="block">Fourth paragraph.</span>
       </p>
 
       <p><u>InLine</u>
       <p class="inline">First paragraph.</p>
       <p class="inline">Second paragraph.</p>
       <p class="inline">Third paragraph.</p>
-      <p class="inline">Fourth paragraph.</p>
       </p>
       <style>
         span.block {
           display: block;
         }
-
         p.inline {
           display: inline;
         }
@@ -707,14 +703,17 @@
     <fieldset>
       <legend> <h2>Visibility</h2> </legend>
       <div class="ejemplo"> 
-        <p class="dispnone">Esto se ocultará cuando lo apuntes</p>
+        <p class="dispnone">Este texto se ocultará cuando lo apuntes.</p>
+      </div>
+      <div class="ejemplo"> 
+        <p class="vishidden">Y esto también se ocultará cuando lo apuntes.</p>
       </div>
      
       <style>
-        .dispnone{
+        .dispnone:hover{
           display: none;
         }
-        .vishidden{
+        .vishidden:hover{
           visibility: hidden;
         }
       </style> <br>
@@ -729,183 +728,175 @@
       </div>
     </fieldset>
 
-    <!-- posicionamiento -->
+    <!-- Posicionamiento -->
     <fieldset>
       <legend> <h2> Posicionamiento </h2> </legend>
 
-        <!-- estatico -->
-        <u>Estatico:</u>
-        <div class="ejemplo">
-          <p class="position_static">This paragraph has a <u>static</u> position.</p>
-        </div><br>
+      <!-- estatico -->
+      <u>Estatico:</u>
+      <div class="ejemplo">
+        <p class="position_static">This paragraph has a <u>static</u> position.</p>
+      </div><br>
 
-        <!-- fijo -->
-        <u>Fijo: (Arriba a la derecha)</u> <br>
-        <div class="ejemplo">
-          <p class="position_fixed">Fixed position.</p><br>
-        </div><br>
+      <!-- fijo -->
+      <u>Fijo: (Arriba a la derecha)</u> <br>
+      <div class="ejemplo">
+        <p class="position_fixed">Fixed position.</p><br>
+      </div><br>
 
-        <!-- relativo -->
-        <u>Relativo:</u> <br>
-        <div class="ejemplo">
-          <enum class="spann"> relative text </enum><br>
-        </div>
-
-        <style>
-          p.position_static {
-            position: static;
-            top: 130px;
-            right: 115px;
-          }
-
-          /* fijo */
-          p.position_fixed {
-            position: fixed;
-            top: 30px;
-            right: 15px;
-          }
-
-          /* relativo */
-          .spann {
-            position: relative;
-            top: -10px;
-            left: 50px;
-          }
-        </style> <br>
-      </fieldset>
-
-      <!-- Floating -->
-      <fieldset>
-        <legend> <h2>Floating</h2> </legend>
-        <p style="font-size: large; width: 50%; text-align: justify; "><img src="../Imgs/css_logo.png"
-            class="imgfloatr" />
-          Este párrafo tiene una imagen que flota a la <b>derecha.</b>
-          Es muy recomendable añadir un margen a las imágenes para que el texto no
-          No te acerques demasiado a la imagen.
-        </p>
-        <style>
-          img.imgfloatr {
-            height: 40px;
-            float: left;
-          }
-        </style>
-        <code>
-          img.imgfloatr{       
-            float: left;
-          }
-        </code>
-        <hr>
-
-        <!-- Clearing the Float -->
-        <p class="numbers">32) Clearing the Float</p>
-        <u><b>Floating:</b></u>
-        <div class="ejemplo">
-          Este párrafo está encima del elemento div y no se ve afectado por la propiedad float right de la imagen.
-          <br><br>
-          <div class="floating">
-            <img src="../Imgs/css_logo.png" height="100px" />
-          </div>
-          Este párrafo viene después del elemento div y se ve afectado por la propiedad float right.
-          <br> <br>
-          Este párrafo también viene después del elemento div y se ve afectado por la propiedad float right.
-        </div> <br>
-
-        <u><b>Clearing:</b></u>
-        <div class="ejemplo">
-          Este párrafo está encima del elemento div y no se ve afectado por la propiedad float right de la imagen.
-          <br><br>
-          <div class="floating">
-            <img src="../Imgs/css_logo.png" height="120px" />
-          </div>
-          Este párrafo viene después del elemento div y se ve afectado por la propiedad float right.
-          <br class="clearing" />
-          Este párrafo también viene después del elemento div y ya no se ve afectado por la propiedad float right.
-        </div>
-        <style>
-          .floating {
-            float: right;
-          }
-
-          .clearing {
-            clear: both;
-            /* both, right, left */
-          }
-        </style>
-        <div class="codigo">
-          .floating{
-              float: right;
-          } <br>
-          .clearing{
-              clear: both; /* both, right, left */
-          }
-        </div>
-      </fieldset>
-
-      <!-- Z-Index -->
-      <fieldset>
-        <p class="numbers"> Z-Index</p>
-        <div class="boxi bluee">Blue</div>
-        <div class="boxi redd">Red</div>
-        <style>
-          .boxi{
-            position: relative;
-            width: 70px;
-            height: 70px;
-            color: #FFF;
-          }
-          .bluee {
-            z-index: 3;
-            background-color: blue;
-            margin-bottom: 15px;
-          }
-
-          .redd {
-            z-index: 2;
-            background-color: red;
-            margin-top: -50px;
-            margin-left: 50px;
-          }
-        </style>
-        <div class="codigo">
-          .bluee { 
-            z-index: 3;
-            position: relative;
-          } <br>
-          .redd {
-            z-index: 2;
-            position: relative;
-            margin-top: -50px;
-            margin-left: 50px;
-          }
-        </div>
-        <hr>
-
-        <!-- OverFlow -->
-        <p class="numbers">34) OverFlow</p>
-        <div class="overflow">
-          This text is inside the div element, which has a blue
-          background color and is floated to the left. We set a specific
-          height and width for the div element, and as you can see,
-          the content cannot fit.
-          <style>
-            div.overflow {
-              width: 150px;
-              height: 150px;
-              background-color: lightblue;
-              overflow: scroll;
-              /* visible, scroll, hidden, auto */
-            }
-          </style>
-        </div>
-        <div class="codigo">
-          div.overflow{
-            width: 150px;
-            height: 150px;
-            background-color: lightblue;
-            overflow: scroll; /* visible, scroll, hidden, auto */ 
-          }
-        </div>
+      <!-- relativo -->
+      <u>Relativo:</u> <br>
+      <div class="ejemplo">
+        <enum class="spann"> relative text </enum><br>
       </div>
+
+      <style>
+        p.position_static {
+          position: static;
+          top: 130px;
+          right: 115px;
+        }
+        /* fijo */
+        p.position_fixed {
+          position: fixed;
+          top: 30px;
+          right: 15px;
+        }
+        /* relativo */
+        .spann {
+          position: relative;
+          top: -10px;
+          left: 50px;
+          color: red;
+        }
+      </style> <br>
+    </fieldset>
+
+    <!-- Floating -->
+    <fieldset>
+      <legend> <h2>Floating</h2> </legend>
+      <p style="font-size: large; width: 50%; text-align: justify; "><img src="../Imgs/css_logo.png"
+          class="imgfloatr" />
+        Este párrafo tiene una imagen que flota a la <b>derecha.</b>
+        Es muy recomendable añadir un margen a las imágenes para que el texto no se acerque demasiado a la imagen.
+      </p>
+      <style>
+        img.imgfloatr {
+          height: 40px;
+          float: left;
+        }
+      </style>
+      <div class="codigo">
+        img.imgfloatr{       
+          float: left;
+        }
+      </div>
+      <hr>
+
+      <!-- Clearing the Float -->
+      <h2 class="numbers">Clearing the Float</h2>
+      <sub>Floating:</sub>
+      <div class="ejemplo" style="text-align: justify;">
+        Este párrafo está por encima del elemento div y no se ve afectado por la propiedad float right de la imagen, por lo que no afecta al texto.
+        <br><br>
+        <div style="float: right;">
+          <img src="../Imgs/cat1.png" height="100px" style="margin-left: 4px;" />
+        </div>
+        Este párrafo viene después del elemento div y se ve afectado por la propiedad float right.
+        <br> <br>
+        Este párrafo también viene después del elemento div y se ve afectado por la propiedad float right.
+      </div>
+      <div class="codigo">
+        .floating{
+          float: right;
+        }
+      </div> <hr>
+
+      <sub>Clearing:</sub>
+      <div class="ejemplo" style="text-align: justify;">
+        Este párrafo está encima del elemento div y no se ve afectado por la propiedad float right de la imagen, por lo que no afecta al texto.
+        <br><br>
+        <div style="float: right;">
+          <img src="../Imgs/cat1.png" height="50px" style="margin-left: 4px;" />
+        </div>
+        Este párrafo viene después del elemento div y se ve afectado todo este texto por la propiedad float right, como se puede ver.
+        <br style="clear: both;" />
+        Este párrafo también viene después del elemento div y ya no se ve afectado por la propiedad float right.
+      </div>
+      <div class="codigo">
+        .clearing{
+          clear: both; <br> /* both, right, left */
+        }
+      </div>
+    </fieldset>
+
+    <!-- Z-Index -->
+    <fieldset>
+      <legend> <h2> Z-Index</h2> </legend>
+      <div class="boxi bluee">Blue</div>
+      <div class="boxi redd">Red</div>
+      <style>
+        .boxi{
+          position: relative;
+          width: 60px;
+          height: 60px;
+          color: #FFF;
+        }
+        .bluee {
+          z-index: 3;
+          background-color: blue;
+          margin-bottom: 15px;
+        }
+
+        .redd {
+          z-index: 2;
+          background-color: red;
+          margin-top: -50px;
+          margin-left: 50px;
+        }
+      </style>
+      <div class="codigo">
+        .bluee { 
+          z-index: 3;
+          position: relative;
+        } <br>
+        .redd {
+          z-index: 2;
+          position: relative;
+          margin-top: -50px;
+          margin-left: 50px;
+        }
+      </div>
+    </fieldset>
+    
+    <!-- OverFlow -->
+    <fieldset>
+      <legend> <h2>OverFlow</h2> </legend>
+      <div class="overflow">
+        This text is inside the div element, which has a blue
+        background color and is floated to the left. We set a specific
+        height and width for the div element, and as you can see,
+        the content cannot fit.
+      </div>
+      <style>
+        div.overflow {
+          width: 130px;
+          height: 130px;
+          background-color: lightblue;
+          overflow: scroll;
+          /* visible, scroll, hidden, auto */
+        }
+      </style>
+      <div class="codigo">
+        div.overflow{
+          width: 150px;
+          height: 150px;
+          background-color: lightblue;
+          overflow: scroll; 
+          /* visible, scroll, hidden, auto */ 
+        }
+      </div>
+    </fieldset>
   </div>
 
   <!-- Bacics CSS3 -->
@@ -913,15 +904,15 @@
     <h2 class="titulo"> Bacics CSS3 </h2>
 
     <!-- Prefijos de provedores css -->
-    <div class="borders">
-      <p class="numbers">35) Prefijos de provedores/navegadores css:</p>
+    <fieldset>
+      <legend> <h3 class="numbers">Prefijos de provedores/navegadores css:</h3> </legend>
 
       FireFox = -moz- <br>
       Safari = -webkit- <br>
       Chrome = -webkit- <br>
       Opera = -o- <br>
       Explorer = -ms <br><br>
-
+    
       <div class="roundd">
         -webkit-border-radius: 24px; <br>
         border-radius: 24px;
@@ -931,25 +922,15 @@
           -webkit-border-radius: 24px;
           border-radius: 24px;
           border: 1px solid green;
-          width: 3100px;
-          padding: 25px;
-        }
-
-        .boxsh {
-          width: 250px;
-          height: 60px;
-          padding: 7px;
-          border: 1px solid;
-          text-align: center;
-          display: table-cell;
-          vertical-align: middle;
+          width: 200px;
+          padding: 20px;
         }
       </style>
-    </div>
+    </fieldset>
 
     <!-- Border-Radius -->
-    <div class="borders" style="height: 150px;">
-      <p class="numbers"> 36) Border-Radius </p>
+    <fieldset style="height: 100px;">
+      <legend> <h2> Border-Radius </h2> </legend>
       <div class="boxizq">
         <div class="divBorderRadius boxsh">
           border-radius: 0 10px 20px 30px;
@@ -961,6 +942,20 @@
         </div>
       </div>
       <style>
+        .boxsh {
+          width: 250px;
+          height: 50px;
+          padding: 7px;
+          border: 1px solid;
+          text-align: center;
+          display: table-cell;
+          vertical-align: middle;
+        }
+
+        .backgw {
+          background-color: #fff;
+        }
+
         /* Border-Radius */
         .divBorderRadius {
           border-radius: 0 10px 20px 30px;
@@ -968,61 +963,43 @@
           color: white;
           /* padding: 30px; */
           width: 200px;
+          height: 25px;
         }
 
         /* Circulo */
         .divCirculo {
-          width: 80px;
-          height: 80px;
+          width: 60px;
+          height: 60px;
           border-radius: 50%;
           color: white;
           background-color: green;
         }
       </style>
-    </div>
+    </fieldset>
 
     <!-- Box-Shadow -->
     <div class="borders">
       <p class="numbers"> 37) Box-Shadow </p>
-      <div class="boxShadow boxsh">
+      <div class="backgw boxsh" style="box-shadow: 10px 10px 10px 5px grey;">
         box-shadow: 10px 10px 10px 5px #888; <br>
         <font color="grey">box-shadow: Hriz, Vert, blur, spread, color</font>
       </div>
-      <style>
-        .boxShadow {
-          background-color: #fff;
-          box-shadow: 10px 10px 10px 5px grey;
-          /*         Hriz, Vert, blur, spread, color */
-        }
-      </style>
       <br>
       <hr>
 
       <!-- Box-Inside Shadow -->
       <h3 class="subtitulo"> Box-Inside Shadow </h3>
-      <div class="boxInsideShadow boxsh">
+      <div class="backgw boxsh" style="box-shadow: inset 10px 10px 10px 5px grey;">
         box-shadow: inset 10px 10px 10px 5px green ;
       </div>
-      <style>
-        .boxInsideShadow {
-          background-color: #fff;
-          box-shadow: inset 10px 10px 10px 5px grey;
-        }
-      </style>
       <br>
       <hr>
 
       <!-- Box-Double Inside Shadow -->
       <h3 class="subtitulo"> Box-Double Inside Shadow </h3>
-      <div class="boxDoubleInsideShadow boxsh">
+      <div class="backgw boxsh" style="box-shadow: inset 5px 5px 15px grey, inset -5px -5px 15px grey;">
         box-shadow: inset 10px 10px 5px green, <br> inset -10px -10px 5px green ;
       </div>
-      <style>
-        .boxDoubleInsideShadow {
-          background-color: #fff;
-          box-shadow: inset 5px 5px 15px grey, inset -5px -5px 15px grey;
-        }
-      </style>
       <br>
       <hr>
 
@@ -1113,8 +1090,8 @@
       ::after <br><br>
       <hr>
 
-      <h3 class="subtitulo"> >>First-Line</h3>
-      <h1 class="textfirstline">The following example demonstrates how to use the ::first-line element to add
+      <h2 class="subtitulo"> >>First-Line</h3>
+      <h3 class="textfirstline">The following example demonstrates how to use the ::first-line element to add
         special effect to the first line of elements in the document.</h6>
         <code>
           .textfirstline::first-line { <br>
@@ -1123,8 +1100,8 @@
         </code>
         <hr>
 
-        <h3 class="subtitulo"> >>First-Letter</h3>
-        <h2 class="firstletter"> La primera letra es de otro color</h2>
+        <h2 class="subtitulo"> >>First-Letter</h3>
+        <h3 class="firstletter"> La primera letra es de otro color</h2>
         <code>
           .firstletter::first-letter{ <br>
             background-color: #589432; <br>
@@ -1132,8 +1109,8 @@
         </code>
         <hr>
 
-        <h3 class="subtitulo"> >>Selection</h3>
-        <h2 class="seleccioname">Selecciona una parte de este texto para marcarlo de otro color</h2>
+        <h2 class="subtitulo"> >>Selection</h3>
+        <h3 class="seleccioname">Selecciona una parte de este texto para marcarlo de otro color</h2>
         <code>
           .seleccioname::first-letter{ <br>
             background-color: #589432; <br>
@@ -1141,8 +1118,8 @@
         </code>
         <hr>
 
-        <h3 class="subtitulo"> >>Before</h3>
-        <p class="insertImageBeforeText">insert Image Before Text</p>
+        <h2 class="subtitulo"> >>Before</h3>
+        <h3 class="insertImageBeforeText">insert Image Before Text</h3>
         <code>
           .insertImageBeforeText::before{ <br>
           content: url("../Imgs/loguito.png"); <br>
@@ -1177,8 +1154,7 @@
         NormalNormalNormalNormalNormalNormal.
       </p>
       <p class="wordwrap" style="word-wrap: break-word;">
-        Break-Word. Break-Word. Break-Word.
-        Break-Word. Break-Word. Break-Word.
+        Break-Word.Break-Word.Break-Word.Break-Word.Break-Word.
       </p>
       <div class="codigo">
         .wordwrapnormal{ <br>
@@ -1242,14 +1218,13 @@
     <h2 class="titulo"> Degradados y Fondos </h2>
     <style>
       .deg {
-        width: 300px;
-        height: 100px;
+        width: 250px;
+        height: 70px;
         margin: 4px;
         text-align: center;
         display: table-cell;
         vertical-align: middle;
       }
-
       .degrad {
         height: 150px;
         width: 200px;
@@ -1281,11 +1256,6 @@
         div.degradados {
           background: linear-gradient(#00d4ff, #090979);
         }
-
-        div.degradados :hover {
-          color: red;
-        }
-
         div.degradadosmulticolor {
           background: linear-gradient(blue 0%, #00bfff 30%, #fff 80%);
         }
