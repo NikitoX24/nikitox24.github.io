@@ -30,7 +30,7 @@
           4px 4px 15px 5px rgba(0, 0, 255, 0.1);
     }
   </style>
-
+  
   <!-- CSS -->
   <h1 class="titulo"> CSS <font class="subText">(Cascading Style Sheets)</font> </h1>
 
@@ -285,17 +285,16 @@
     <fieldset>
       <legend> <h2> Text-Decoration </h2> </legend>
 
-      <p style="text-decoration: overline;">This is <b> overlined </b> text. <br>
+      <p style="text-decoration: overline;">This is <b> overlined </b> text. </p>
         <code> text-decoration: overline; </code>
-      </p><hr>
+      <hr>
 
-      <p style="text-decoration: underline;">This is <b> lined-through</b> text. <br>
+      <p style="text-decoration: underline;">This is <b> lined-through</b> text. <p>
         <code> text-decoration: line-through; </code>
-      </p><hr>
+      <hr>
 
-      <p style="text-decoration: line-through;">This is <b> underlined</b> text. <br>
+      <p style="text-decoration: line-through;">This is <b> underlined</b> text. <p>
         <code> text-decoration: underline; </code>
-      </p>
     </fieldset>
 
     <!-- text-indent (Sangria) -->
@@ -654,22 +653,21 @@
         cursor: default;
       </div>
     </fieldset>
-  </div>
+  </div> 
 
   <!-- Positioning And Layout -->
   <div class="borders">
-    <h2 class="titulo"> Positioning And Layout </h2>
+    <h1 class="titulo"> Positioning And Layout </h1>
 
     <!-- Display -->
-    <div class="borders">
-      <p class="numbers">28) Display</p>
+    <fieldset>
+      <legend> <h2>Display</h2> </legend>
       <p>
         <u>Sin display block:</u><br>
         <span>First paragraph.</span>
         <span>Second paragraph.</span>
         <span>Third paragraph.</span>
         <span>Fourth paragraph.</span>
-        <span>Fifth paragraph.</span>
       </p>
 
       <p>
@@ -678,7 +676,6 @@
         <span class="block">Second paragraph.</span>
         <span class="block">Third paragraph.</span>
         <span class="block">Fourth paragraph.</span>
-        <span class="block">Fifth paragraph.</span>
       </p>
 
       <p><u>InLine</u>
@@ -686,7 +683,6 @@
       <p class="inline">Second paragraph.</p>
       <p class="inline">Third paragraph.</p>
       <p class="inline">Fourth paragraph.</p>
-      <p class="inline">Fifth paragraph.</p>
       </p>
       <style>
         span.block {
@@ -698,65 +694,44 @@
         }
       </style>
       <div class="codigo">
-        <pre>
-          span.block{
-              display: block;
-          }
-          p.inline{
-              display: inline;
-          }
-      </div></code>
-    </div>
+        span.block{
+          display: block;
+        } <br>
+        p.inline{
+          display: inline;
+        }
+      </div>
+    </fieldset>
   
-      <!-- Visibility -->
-      <div class="borders">
-      <p class="numbers">29) Visibility</p>
-      <div class="ejemplo"> <u>Codigos:</u><br>
-          < h1 class="none"> Este texto no se mostrará, ya que establecemos el valor en ninguno. </ h1>
-          < p> El título de este párrafo no se muestra, ya que establecemos el valor en ninguno. </ p>
-      
-          < h4> Este es un texto </ h4>
-          < div class = "hidden">
-          Este texto no se mostrará en el navegador.
-          </ div>
-          < p>
-              El espacio sobre este párrafo está vacío porque 
-              la visibilidad del elemento div está configurada como oculta.
-          </ p>
-      </div> <br>
-      <h1 class="none"> Este texto no se mostrará, ya que establecemos el valor en ninguno. </h1>
-          <p> El título de este párrafo no se muestra, ya que establecemos el valor en ninguno.</p>
-      
-          <h4> Este es un texto </h4>
-          <div class = "hidden">
-          Este texto no se mostrará en el navegador.
-          </div>
-          <p>
-              El espacio sobre este párrafo está vacío porque 
-              la visibilidad del elemento div está configurada como oculta.
-          </p>
+    <!-- Visibility -->
+    <fieldset>
+      <legend> <h2>Visibility</h2> </legend>
+      <div class="ejemplo"> 
+        <p class="dispnone">Esto se ocultará cuando lo apuntes</p>
+      </div>
+     
       <style>
-          h1.none{
-              display: none;
-          }
-          div.hidden{
-              visibility: hidden;
-          }
+        .dispnone{
+          display: none;
+        }
+        .vishidden{
+          visibility: hidden;
+        }
       </style> <br>
       <u>Code:</u>
-      <code><pre>
-          h1.none{
-              display: none;
-          }
-          div.hidden{
-              visibility: hidden;
-          }
-      </pre></code>
+      <div class="codigo">
+        .none{
+          display: none;
+        } <br>
+        .hidden{
+          visibility: hidden;
+        }
       </div>
+    </fieldset>
 
-      <!-- posicionamiento -->
-      <div class="borders">
-        <p class="numbers">30) Posicionamiento</p>
+    <!-- posicionamiento -->
+    <fieldset>
+      <legend> <h2> Posicionamiento </h2> </legend>
 
         <!-- estatico -->
         <u>Estatico:</u>
@@ -767,7 +742,7 @@
         <!-- fijo -->
         <u>Fijo: (Arriba a la derecha)</u> <br>
         <div class="ejemplo">
-          <p class="position_fixed">30) Fixed position.</p><br>
+          <p class="position_fixed">Fixed position.</p><br>
         </div><br>
 
         <!-- relativo -->
@@ -797,32 +772,28 @@
             left: 50px;
           }
         </style> <br>
-      </div>
+      </fieldset>
 
       <!-- Floating -->
-      <div class="borders">
-        <p class="numbers">31) Floating</p>
+      <fieldset>
+        <legend> <h2>Floating</h2> </legend>
         <p style="font-size: large; width: 50%; text-align: justify; "><img src="../Imgs/css_logo.png"
             class="imgfloatr" />
           Este párrafo tiene una imagen que flota a la <b>derecha.</b>
           Es muy recomendable añadir un margen a las imágenes para que el texto no
-          No te acerques demasiado a la imagen. Si desea que su texto sea fácil de leer, puede
-          siempre debe agregar algunos píxeles entre palabras y bordes, imágenes,
-          y otro contenido.
+          No te acerques demasiado a la imagen.
         </p>
         <style>
           img.imgfloatr {
             height: 40px;
             float: left;
-            /* right, left */
           }
         </style>
         <code>
-          img.imgfloatr{
-              height: 40px;
-              float: left;
+          img.imgfloatr{       
+            float: left;
           }
-      </code>
+        </code>
         <hr>
 
         <!-- Clearing the Float -->
@@ -832,7 +803,7 @@
           Este párrafo está encima del elemento div y no se ve afectado por la propiedad float right de la imagen.
           <br><br>
           <div class="floating">
-            <img src="../Imgs/css_logo.png" height="150px" />
+            <img src="../Imgs/css_logo.png" height="100px" />
           </div>
           Este párrafo viene después del elemento div y se ve afectado por la propiedad float right.
           <br> <br>
@@ -844,7 +815,7 @@
           Este párrafo está encima del elemento div y no se ve afectado por la propiedad float right de la imagen.
           <br><br>
           <div class="floating">
-            <img src="../Imgs/css_logo.png" height="150px" />
+            <img src="../Imgs/css_logo.png" height="120px" />
           </div>
           Este párrafo viene después del elemento div y se ve afectado por la propiedad float right.
           <br class="clearing" />
@@ -860,64 +831,53 @@
             /* both, right, left */
           }
         </style>
-        <code><pre>
+        <div class="codigo">
           .floating{
               float: right;
-          }
+          } <br>
           .clearing{
               clear: both; /* both, right, left */
           }
-      </pre></code>
-      </div>
+        </div>
+      </fieldset>
 
       <!-- Z-Index -->
-      <div class="borders">
-        <p class="numbers">33) Z-Index</p>
-        <div class="bluee">Blue</div>
-        <div class="redd">Red</div>
+      <fieldset>
+        <p class="numbers"> Z-Index</p>
+        <div class="boxi bluee">Blue</div>
+        <div class="boxi redd">Red</div>
         <style>
+          .boxi{
+            position: relative;
+            width: 70px;
+            height: 70px;
+            color: #FFF;
+          }
           .bluee {
             z-index: 3;
-            position: relative;
             background-color: blue;
             margin-bottom: 15px;
-            width: 120px;
-            height: 120px;
-            color: #FFF;
           }
 
           .redd {
             z-index: 2;
-            position: relative;
             background-color: red;
-            width: 120px;
-            height: 120px;
-            color: #FFF;
             margin-top: -50px;
             margin-left: 50px;
           }
         </style>
-        <code><pre>
+        <div class="codigo">
           .bluee { 
-              z-index: 3;
-              position: relative;
-              background-color: blue;
-              margin-bottom: 15px;
-              width: 120px;
-              height: 120px;
-              color: #FFF;
-          }
+            z-index: 3;
+            position: relative;
+          } <br>
           .redd {
-              z-index: 2;
-              position: relative;
-              background-color: red;
-              width: 120px;
-              height: 120px;
-              color: #FFF;
-              margin-top: -50px;
-              margin-left: 50px;
+            z-index: 2;
+            position: relative;
+            margin-top: -50px;
+            margin-left: 50px;
           }
-      </pre></code>
+        </div>
         <hr>
 
         <!-- OverFlow -->
@@ -937,14 +897,14 @@
             }
           </style>
         </div>
-        <code><pre>
+        <div class="codigo">
           div.overflow{
-              width: 150px;
-              height: 150px;
-              background-color: lightblue;
-              overflow: scroll; /* visible, scroll, hidden, auto */ 
+            width: 150px;
+            height: 150px;
+            background-color: lightblue;
+            overflow: scroll; /* visible, scroll, hidden, auto */ 
           }
-      </pre></code>
+        </div>
       </div>
   </div>
 
@@ -971,7 +931,7 @@
           -webkit-border-radius: 24px;
           border-radius: 24px;
           border: 1px solid green;
-          width: 300px;
+          width: 3100px;
           padding: 25px;
         }
 
@@ -1119,24 +1079,6 @@
       </style>
     </div>
 
-    <!-- Text Shadow -->
-    <div class="borders">
-      <p class="numbers">39) Text Shadow</p>
-      <h2 class="TextShadow">
-        Text Shadow.
-      </h2>
-      <style>
-        .TextShadow {
-          text-shadow: 1px 1px 5px blue, -3px -3px 5px grey;
-        }
-      </style>
-      <code>
-            .TextShadow{ <br>
-                text-shadow: 1px 1px 5px blue, -3px -3px 5px grey; <br>
-            } <br>
-        </code>
-    </div>
-
     <!-- Pseudo-Clases -->
     <div class="borders">
       <p class="numbers">40) Pseudo-Clases</p>
@@ -1144,7 +1086,6 @@
         <p>First paragraph</p>
         <p>Second paragraph</p>
         <p>Third paragraph</p>
-        <p>Fourth paragraph</p>
         <style>
           #parent p:first-child {
             /* first-last */
@@ -1153,11 +1094,11 @@
           }
         </style>
         <code>
-                #parent p:first-child { <br>
-                    color: green; <br>
-                    text-decoration: underline; <br>
-                }
-            </code>
+          #parent p:first-child { <br>
+            color: green; <br>
+            text-decoration: underline; <br>
+          }
+        </code>
       </div>
     </div>
 
@@ -1176,35 +1117,35 @@
       <h1 class="textfirstline">The following example demonstrates how to use the ::first-line element to add
         special effect to the first line of elements in the document.</h6>
         <code>
-            .textfirstline::first-line { <br>
-                color: #589432; <br>
-            } <br>
+          .textfirstline::first-line { <br>
+            color: #589432; <br>
+          } <br>
         </code>
         <hr>
 
         <h3 class="subtitulo"> >>First-Letter</h3>
         <h2 class="firstletter"> La primera letra es de otro color</h2>
         <code>
-            .firstletter::first-letter{ <br>
-                background-color: #589432; <br>
-            }
+          .firstletter::first-letter{ <br>
+            background-color: #589432; <br>
+          }
         </code>
         <hr>
 
         <h3 class="subtitulo"> >>Selection</h3>
         <h2 class="seleccioname">Selecciona una parte de este texto para marcarlo de otro color</h2>
         <code>
-            .seleccioname::first-letter{ <br>
-                background-color: #589432; <br>
-            }
+          .seleccioname::first-letter{ <br>
+            background-color: #589432; <br>
+          }
         </code>
         <hr>
 
         <h3 class="subtitulo"> >>Before</h3>
         <p class="insertImageBeforeText">insert Image Before Text</p>
         <code>
-            .insertImageBeforeText::before{ <br>
-            content: url("../Imgs/loguito.png"); <br>
+          .insertImageBeforeText::before{ <br>
+          content: url("../Imgs/loguito.png"); <br>
         }
         </code>
         <style>
@@ -1230,47 +1171,28 @@
 
     <!-- Word-Wrap -->
     <div class="borders">
-      <p class="numbers">42) Word-Wrap</p>
-      <p class="wordwrapnormal">
-        Normal.
-        NormalNormalNormalNormalNormalNormalNormalNormalNormalNormalNormalNormal.
+      <p class="numbers">Word-Wrap</p>
+      <p class="wordwrap" style="word-wrap: normal;">
+        NormalNormalNormalNormalNormalNormal.
+        NormalNormalNormalNormalNormalNormal.
       </p>
-      <p class="wordwrapbreak">
-        Break-Word.
-        Break-Word.Break-Word.Break-Word.Break-Word.Break-Word.
+      <p class="wordwrap" style="word-wrap: break-word;">
+        Break-Word. Break-Word. Break-Word.
+        Break-Word. Break-Word. Break-Word.
       </p>
-      <br><br>
-      <details>
-        <summary>Code...</summary>
-        <code>
-                .wordwrapnormal{ <br>
-                    border: 1px solid black; <br>
-                    width: 120px; <br>
-                    height: 100px; <br>
-                    word-wrap: normal; <br>
-                } <br>
-                .wordwrapbreak{ <br>
-                    border: 1px solid black; <br>
-                    width: 120px; <br>
-                    height: 100px; <br>
-                    word-wrap: break-word; <br>
-                }
-            </code>
-      </details>
-
-      <style>
-        .wordwrapnormal {
-          border: 1px solid black;
-          width: 120px;
-          height: 100px;
-          word-wrap: normal;
+      <div class="codigo">
+        .wordwrapnormal{ <br>
+           word-wrap: normal; <br>
+        } <br>
+        .wordwrapbreak{ <br>
+           word-wrap: break-word; <br>
         }
-
-        .wordwrapbreak {
+      </div>
+      <style>
+        .wordwrap{
           border: 1px solid black;
-          width: 120px;
-          height: 100px;
-          word-wrap: break-word;
+          width: 100px;
+          height: 80px;
         }
       </style>
     </div>
@@ -1282,19 +1204,19 @@
       <details>
         <summary>Code...</summary>
         <code>
-                @font-face { <br>
-                font-family: Delicious;  <br>
-                src: url('../Imgs/Delicious-Roman.otf');  <br>
-            }  <br>
-            @font-face {  <br>
-                font-family: Delicious;  <br>
-                font-weight: bold;  <br>
-                src: url('../Imgs/Delicious-Bold.otf');  <br>
-            } <br>
-            h1.custfont{ <br>
-                font-family: Delicious, sans-serif;  <br>
-            }
-            </code>
+          @font-face { <br>
+            font-family: Delicious;  <br>
+            src: url('../Imgs/Delicious-Roman.otf');  <br>
+          }  <br>
+          @font-face {  <br>
+            font-family: Delicious;  <br>
+            font-weight: bold;  <br>
+            src: url('../Imgs/Delicious-Bold.otf');  <br>
+          } <br>
+          h1.custfont{ <br>
+            font-family: Delicious, sans-serif;  <br>
+          }
+        </code>
       </details>
       <style>
         @font-face {
@@ -1599,8 +1521,8 @@
       <div class="multbg"></div>
       <style>
         div.multbg {
-          width: 400px;
-          height: 200px;
+          width: 200px;
+          height: 100px;
           background-image: url("http://www.sololearn.com/uploads/css_logo.png"), url("http://www.sololearn.com/uploads/better-code.jpg");
           background-position: right bottom, left top;
           background-repeat: no-repeat;
@@ -1610,29 +1532,11 @@
       <!-- Opacity -->
       <p class="numbers">56) Opacity</p>
       <table>
-        <td><img id="img1" src="http://www.sololearn.com/uploads/css_logo.png" />1</td>
-        <td><img id="img2" src="http://www.sololearn.com/uploads/css_logo.png" />0.5</td>
-        <td><img id="img3" src="http://www.sololearn.com/uploads/css_logo.png" />0.25</td>
-        <td><img id="img4" src="http://www.sololearn.com/uploads/css_logo.png" />0.5 + alpha</td>
+        <td><img style="opacity: 1;" src="http://www.sololearn.com/uploads/css_logo.png" />opacity: 1</td>
+        <td><img style="opacity: 0.5;" src="http://www.sololearn.com/uploads/css_logo.png" />opacity: 0.5</td>
+        <td><img style="opacity: 0.25;" src="http://www.sololearn.com/uploads/css_logo.png" />opacity: 0.25</td>
+        <td><img style="opacity: 0.5; filter: alpha(opacity=50);" src="http://www.sololearn.com/uploads/css_logo.png" />op 0.5 + alpha(op 50)</td>
       </table>
-      <style>
-        #img1 {
-          opacity: 1;
-        }
-
-        #img2 {
-          opacity: 0.5;
-        }
-
-        #img3 {
-          opacity: 0.25;
-        }
-
-        #img4 {
-          opacity: 0.5;
-          filter: alpha(opacity=50);
-        }
-      </style>
     </div>
   </div>
 
@@ -1913,32 +1817,32 @@
       <details>
         <summary>Code...</summary>
         <pre>
-            div{
-                animation-duration: 2s;
-                animation-iteration-count: infinite;
-            }
-            @keyframes colorchange2 {
-                from { width: 0px; }
-                to { width: 250px; }
-            }
+          div{
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+          }
+          @keyframes colorchange2 {
+            from { width: 0px; }
+            to { width: 250px; }
+          }
         </pre>
       </details>
       <details>
         <summary>Info...</summary>
         <pre>
         (animation-timing-function: *)
-            ease (default) - slow start, then fast, then end slowly 
-            linear - same speed from start to end
-            ease-in - slow start
-            ease-out - slow end
-            ease-in-out - slow start and end
-            cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier Function
+          ease (default) - slow start, then fast, then end slowly 
+          linear - same speed from start to end
+          ease-in - slow start
+          ease-out - slow end
+          ease-in-out - slow start and end
+          cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier Function
 
         (animation-direction: *)
-            normal - the default value, which means it plays forward from 0 % to 100%.
-            reverse - plays the keyframe in an opposite direction from 100 % to 0%
-            alternate - the animation first runs forward, then backward, then forward.
-            alternate-reverse - the animation first runs backward, then forward, then backward.
+          normal - the default value, which means it plays forward from 0 % to 100%.
+          reverse - plays the keyframe in an opposite direction from 100 % to 0%
+          alternate - the animation first runs forward, then backward, then forward.
+          alternate-reverse - the animation first runs backward, then forward, then backward.
         </pre>
       </details>
 
@@ -2029,122 +1933,58 @@
 
     <!-- Filter Functions -->
     <div class="borders">
-      <h2 class="numbers"> 66) Filter Functions</h2><br>
+      <h2 class="numbers"> Filter Functions</h2><br>
       <table>
         <td>Drop-Shadow() <br>
-          <img class="dropshadow fltr" src="http://www.sololearn.com/images/tree.jpg" />
+          <img class="fltr" style="filter: drop-shadow(5px 5px 2px green);" src="http://www.sololearn.com/images/tree.jpg" />
         </td>
         <td>Gray Scale() <br>
-          <img class="grayscale fltr" src="http://www.sololearn.com/images/tree.jpg" />
+          <img class="fltr" style="filter: grayscale(100%);" src="http://www.sololearn.com/images/tree.jpg" />
         </td>
         <td>Sepia() <br>
-          <img class="sepia fltr" src="http://www.sololearn.com/images/tree.jpg" />
+          <img class="fltr" style="filter: sepia(100%);" src="http://www.sololearn.com/images/tree.jpg" />
         </td>
         <td>Saturate() <br>
-          <img class="saturate fltr" src="http://www.sololearn.com/images/tree.jpg" />
+          <img class="fltr" style="filter: saturate(300%);" src="http://www.sololearn.com/images/tree.jpg" />
         </td>
         <td>Hue-Rotate() <br>
-          <img class="huerotate fltr" src="http://www.sololearn.com/images/tree.jpg" />
+          <img class="fltr" style="filter: hue-rotate(180deg);" src="http://www.sololearn.com/images/tree.jpg" />
         </td>
         <td>Invert() <br>
-          <img class="invertimg fltr" src="http://www.sololearn.com/images/tree.jpg" />
+          <img class="fltr" style="filter: invert(70%);" src="http://www.sololearn.com/images/tree.jpg" />
         </td>
       </table>
-      <style>
-        /* tamaño */
-        .fltr {
-          height: 100px;
-        }
-
-        /* DropShadow */
-        .dropshadow {
-          filter: drop-shadow(5px 5px 2px green);
-        }
-
-        /* grayscale */
-        .grayscale {
-          filter: grayscale(100%);
-        }
-
-        /* Sepia */
-        .sepia {
-          filter: sepia(100%);
-        }
-
-        /* Saturate */
-        .saturate {
-          filter: saturate(300%);
-          /* 0: gris, 100: original */
-        }
-
-        /* Hue-Rotate */
-        .huerotate {
-          filter: hue-rotate(180deg);
-          /* de 0 a 360 (segun imagen e colores */
-        }
-
-        /* The invert Function */
-        .invertimg {
-          filter: invert(70%);
-        }
-
-        /* opacity */
-        .opacity {
-          filter: opacity(70%);
-        }
-      </style>
     </div>
 
     <!-- Opacity & Brightness -->
     <div class="borders">
-      <h2 class="numbers"> 67) Opacity & Brightness</h2><br>
+      <h2 class="numbers"> Opacity & Brightness</h2><br>
       <table>
         <td>Opacity 70%<br>
-          <img class="opacity fltr" src="http://www.sololearn.com/images/tree.jpg" />
+          <img class="fltr" style="filter: opacity(70%);" src="http://www.sololearn.com/images/tree.jpg" />
         </td>
         <td>Brightness 70% <br>
-          <img class="brightness fltr" src="http://www.sololearn.com/images/tree.jpg" />
+          <img class="fltr" style="filter: Brightness(70%);" src="http://www.sololearn.com/images/tree.jpg" />
         </td>
         <td>Brightness 1.9 <br>
-          <img class="brightness2 fltr" src="http://www.sololearn.com/images/tree.jpg" />
+          <img class="fltr" style="filter: brightness(1.9);" src="http://www.sololearn.com/images/tree.jpg" />
         </td>
         <td>Contrast 140% <br>
-          <img class="contrast fltr" src="http://www.sololearn.com/images/tree.jpg" />
+          <img class="fltr" style="filter: contrast(140%);" src="http://www.sololearn.com/images/tree.jpg" />
         </td>
         <td>blur 5px <br>
-          <img class="blur fltr" src="http://www.sololearn.com/images/tree.jpg" />
+          <img class="fltr" style="filter: blur(5px);" src="http://www.sololearn.com/images/tree.jpg" />
         </td>
         <td>Multi-filters (blur+hue-rot)<br>
-          <img class="multifilters fltr" src="http://www.sololearn.com/images/tree.jpg" />
+          <img class="fltr" style="filter: blur(5px) hue-rotate(180deg);" src="http://www.sololearn.com/images/tree.jpg" />
         </td>
       </table>
-      <style>
-        /* Brightness */
-        .brightness {
-          filter: Brightness(70%);
-        }
-
-        /* Brightness2 */
-        .brightness2 {
-          filter: brightness(1.9);
-        }
-
-        /* Contrans */
-        .contrast {
-          filter: contrast(140%);
-        }
-
-        /* Blur */
-        .blur {
-          filter: blur(5px);
-        }
-
-        /* MultiFilters */
-        .multifilters {
-          filter: blur(5px) hue-rotate(180deg);
-        }
-      </style>
     </div>
+    <style>
+      .fltr {
+        height: 100px;
+      }
+    </style>
   </div>
   
   <script type="text/javascript" src="../MenuJS.js"></script>
