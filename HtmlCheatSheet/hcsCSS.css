@@ -72,6 +72,9 @@ font.prop{
   color: rgb(114, 125, 122);
   text-shadow: .1px .1px rgb(124, 156, 150);
 }
+font.comentario{
+  color: rgb(91, 91, 91);
+}
 
 .icons {
   height: 85px;
@@ -122,8 +125,8 @@ font.prop{
 }
 .codigo {
   max-width: 500px;
-  margin: 5px 0px 5px 0px;
-  padding: 5px;
+  padding: 8px;
+  margin: 0px 0px 15px 0px;
   overflow: auto;
   background-color: rgba(128, 128, 128, 0.512);
   box-shadow: inset 4px 4px 4px rgba(128, 128, 128, 0.558), inset -4px -4px 4px rgba(128, 128, 128, 0.706);
