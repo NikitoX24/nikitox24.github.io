@@ -62,7 +62,7 @@ font.green{
 }
 font.orange{
   color: rgb(214, 139, 0);
-  text-shadow: .2px .2px black;
+  text-shadow: .3px .3px rgb(255, 0, 0);
 }
 font.selector{
   color: rgb(146, 146, 0);

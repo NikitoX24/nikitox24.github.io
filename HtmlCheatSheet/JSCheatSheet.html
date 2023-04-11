@@ -181,79 +181,80 @@
 
     <h3 class="subtitulo">Crear Objeto</h3>
     <div class="codigo">
-      var person = {
-        name: "john", age: 31,
-        favColor: "green", height: 183
+      <font class="purp">var</font> person = { <br>
+        &nbsp; name: "john", <br>
+        &nbsp; age: 31, <br>
+        &nbsp; favColor: "green", <br> 
+        &nbsp; height: 183 <br>
       };
-    </div>
-    <hr>
+    </div> <hr>
 
     <h3 class="subtitulo">Acceder a las propiedades de los objetos:</h3>
     <div class="codigo">
-      <pre>
-                person.name;
-                ó 
-                person["name"];
-            </pre>
-    </div>
-    <hr>
+        person.name; <br>
+        person["name"];
+    </div> <hr>
 
     <h3 class="subtitulo">Constructor de Objetos</h3>
     <div class="codigo">
-      <pre>
-                function person(name, age, color) { 
-                    this.name = name; 
-                    this.age = age; 
-                    this.color = color
-                }                
-            </pre>
+      <font class="purp">function</font> <font class="blue">person</font>(name, age, color) { <br>
+        &nbsp; this.name = name; <br>
+        &nbsp; this.age = age; <br>
+        &nbsp; this.color = color <br>
+      }
+    </div> <hr>
+
+    <h3 class="subtitulo">Crear y Usar Objeto del constructor</h3>
+    <div class="codigo">
+      <font class="purp">var</font> p1 = <font class="purp">new</font> <font class="blue">person</font>("John", 42, "green") <br>
+      <font class="purp">var</font> p2 = <font class="purp">new</font> <font class="blue">person</font>("Amy", 21, "red") <br> <br>
+      
+      document.<font class="blue">write</font>(p1.age) <font class="comentario">//42</font> <br>
+      document.<font class="blue">write</font>(p2.name) <font class="comentario">//Amy</font>
     </div>
     <hr>
 
-    <h3 class="subtitulo">Crear Objeto del constructor</h3>
-    <div class="codigo">
-      <pre>
-                var p1 = new person("John", 42, "green") 
-                var p2 = new person("Amy", 21, "red") 
-                
-                document.write(p1.age) //42 
-                document.write(p2.name) //Amy 
-            </pre>
-    </div>
-    <hr>
+    <!-- Metodos -->
+    <fieldset>
+      <legend> <h2>Metodos</h2> </legend>
+      <h3 class="subtitulo">Metodos en los Objetos</h3>
+      <div class="codigo">
+        <font class="purp">function</font> <font class="blue">person</font>(name, age) { <br>
+          &nbsp;this.name = name; <br>
+          &nbsp;this.age = age; <br>
+          <div style="background-color: rgb(124, 124, 124);">
+            &nbsp;this.<u>changeName</u> = funcion (name) { <br>
+              &nbsp; this.name = name; <br>
+              &nbsp;} <br>
+          </div>
+        } <br> <br>
+        <font class="purp">var</font> p = <font class="purp">new</font> <font class="blue">person</font>("David", 21) <br>
+        <div style="background-color: rgb(124, 124, 124);">
+          p.<font class="blue"><u>changeName</u></font>("Jhon"); <br>
+        </div>
+        <font class="comentario">// Ahora (p.name) es Jhon.</font>
+      </div> <br>
 
-    <h3 class="subtitulo">Metodos en los objetos</h3>
-    <div class="codigo">
-      <pre>
-                function person(name, age) {
-                    this.name = name; 
-                    this.age = age; 
-                    this.changeName = funcion (name) { 
-                        this.name = name; 
-                    }
-                } 
-                var p = new person("David", 21); 
-                p.changeName("Jhon"); 
-                // Ahora p.name es Jhon.
-            </pre>
-    </div> <br>
-
-    <h3 class="subtitulo">Fuera del constructor</h3>
-    <div class="codigo">
-      <pre>
-                function person(name, age) { 
-                    this.name = name; 
-                    this.age = age; 
-                    this.yearOfBirth = bornYear;
-                } 
-                function bornYear() { 
-                    return 2022 - this.age; 
-                } 
-                
-                var p = new person("A", 22); 
-                document.write(p.yearOfBirth());
-            </pre>
-    </div>
+      <h3 class="subtitulo">Metodo fuera del constructor</h3>
+      <div class="codigo">
+        <font class="purp">function</font> <font class="blue">person</font>(name, age) { <br>
+          &nbsp; this.name = name; <br>
+          &nbsp; this.age = age; <br>
+          <div style="background-color: rgb(124, 124, 124);">
+            &nbsp; this.yearOfBirth = bornYear; <br>
+          </div>
+        } <br>
+        <div style="background-color: rgb(124, 124, 124);">
+          function bornYear() { <br>
+          &nbsp; return 2023 - this.age; <br>
+        }
+        </div> <br>
+        
+        <font class="purp">var</font> p = <font class="purp">new</font> <font class="blue">person</font>("Nick", 24) <br>
+        document.<font class="blue"><u>write</u></font>(p.yearOfBirth()); <br>
+        <font class="comentario">// 1999</font>
+      </div>
+    </fieldset>
   </div>
 
   <!-- Objetos Esenciales -->
@@ -261,88 +262,70 @@
     <h1 class="titulo">Objetos Esenciales</h1>
 
     <!-- Arrays -->
-    <div class="borders">
-      <h1 class="subtitulo">Arrays:</h1>
+    <fieldset>
+      <legend> <h2>Arrays</h2> </legend>
       <!-- Crear: -->
       Crear:
       <div class="codigo">
-        <pre>
-                var courses = new Array("HTML", "CSS", "JS");
-            </pre>
+        <font class="purp">var</font> courses = <font class="purp">new</font> <font class="blue">Array</font>("HTML", "CSS", "JS");
       </div>
       <div class="codigo">
-        <pre>
-                var courses = new Array(3);
-                
-                courses[0] = "HTML";
-                courses[1] = "CSS";
-                courses[2] = "JS";
-            </pre>
+        <font class="purp">var</font> courses = <font class="purp">new</font> <font class="blue">Array</font>(<font class="orange">3</font>); <br> <br>
+        
+        courses[<font class="orange">0</font>] = "HTML"; <br>
+        courses[<font class="orange">1</font>] = "CSS"; <br>
+        courses[<font class="orange">2</font>] = "JS";
       </div>
       <div class="codigo">
-        <pre>
-                var courses = ["HTML", "CSS", "JS"]
-            </pre>
-      </div>
+        <font class="purp">var</font> courses = ["HTML", "CSS", "JS"]
+      </div> <hr>
 
       <!-- Usar -->
       Usar:
       <div class="codigo">
-        <pre>
-                var couse = courses[0] //HTML
-            </pre>
-      </div>
+        <font class="purp">var</font> couse = courses[<font class="orange">0</font>] <font class="comentario">//HTML</font>
+      </div> <hr>
 
       <!-- Editar -->
       Editar:
       <div class="codigo">
-        <pre>
-                couses[1] = "C++"; //"CSS" ahora es "C++"
-            </pre>
-      </div>
+        couses[<font class="orange">1</font>] = "C++"; <font class="comentario">//"CSS" ahora es "C++"</font>
+      </div> <hr>
 
       <!-- Propiedades -->
       <h3>Propiedades:</h3>
       Length:
       <div class="codigo">
-        <pre>
-                var courses = ["HTML", "CSS", "JS"]
-                document.write(courses.length) //3
-            </pre>
-      </div>
+        <font class="purp">var</font> courses = ["HTML", "CSS", "JS"] <br><br>
+        document.<font class="blue">write</font>(courses.length); <font class="comentario">//3</font>
+      </div> <hr>
 
       Concat:
       <div class="codigo">
-        <pre>
-                var c1 = ["HTML", "CSS"]
-                var c2 = ["JS", "C++"]
-                var courses = c1.concat(c2);
-                // ahora coursees es (HTML, CSS, JS, C++)
-            </pre>
-      </div>
+        <font class="purp">var</font> c1 = ["HTML", "CSS"] <br>
+        <font class="purp">var</font> c2 = ["JS", "C++"] <br>
+        <font class="purp">var</font> courses = c1.<font class="blue">concat</font>(c2); <br>
+        <font class="comentario">// ahora coursees es (HTML, CSS, JS, C++)</font>
+      </div> <hr>
 
       <!-- Arrays asociativos -->
       <h3>Arrays asociativos</h3>
       Los arrays asociativos son listas con indices textuales, por lo cual js no soporta arrays asociativos por lo q
       se convierten en objetos.
       <div class="codigo">
-        <pre>
-                var person = []; 
-                person["name"] = "Jhon";
-                person["age"] = 46;
-                document.write(person["age"]) // 46
-            </pre>
+        <font class="purp">var</font> person = []; <br>
+        person["name"] = "Jhon"; <br>
+        person["age"] = 46; <br><br>
+        document.<font class="blue">write</font>(person["<font class="orange">age</font>"]) <font class="comentario">// 46</font>
       </div>
-    </div>
+    </fieldset>
 
     <!-- Math -->
-    <div class="borders">
-      <h2 class="subtitulo">Math:</h2>
+    <fieldset>
+      <legend> <h2>Math:</h2> </legend>
       <div class="codigo">
-        <pre>
-                document.write(Math.PI); 
-                // 3.14.... 
-            </pre>
+        document.write(<u>Math.PI</u>); 
+        <font class="comentario">// 3.14....</font>
       </div>
       <details>
         <summary>Metodos de Math</summary>
@@ -374,106 +357,87 @@
         tanh(x) Returns the hyperbolic tangent of a number <br>
         trunc(x) Returns the integer part of a number (x) <br>
       </details>
-    </div>
+    </fieldset>
 
     <!-- Date -->
-    <div class="borders">
-      <h2 class="subtitulo">Date:</h2>
-
+    <fieldset>
+      <legend> <h2>Date:</h2> </legend>
       <details>
         <summary>Info...</summary>
         Las fechas de JS se calculan en milisegundos, <br>
         desde el 01 de enero de 1970 a las 00:00:00 hora universal (UTC). <br>
         JS cuenta los meses de 0(Enero) a 11(dic). <br>
         -Un día contiene 86.400.000 milisegundos. <br>
-      </details>
+      </details> <br>
 
       Guardar fecha actual:
       <div class="codigo">
-        <pre>
-                var d = new Date();
-            </pre>
+        <font class="purp">var</font> d = <font class="purp">new</font> <font class="blue">Date</font>();
+        <font class="comentario"> // <script> var d = new Date(); document.write(d); </script> </font>
       </div>
 
       New Date(milliseconds);
       <div class="codigo">
-        <pre>
-                var d1 = new Date(86400000); 
-                Fri Jan 02 1970 00:00:00 
-            </pre>
+        <font class="purp">var</font> d1 = <font class="purp">new</font> <font class="blue">Date</font>(86400000);
+        <font class="comentario"> // Fri Jan 02 1970 00:00:00</font>
       </div>
 
-      new Date(dateString);
+      New Date(dateString);
       <div class="codigo">
-        <pre>
-                Fri Jan 02 2015 10:42:00
-                var d2 = new Date("January 2, 2015 10:42:00");
-            </pre>
+        <font class="purp">var</font> d1 = <font class="purp">new</font> <font class="blue">Date</font>("January 2, 2015 10:42:00");
+        <font class="comentario"> // Fri Jan 02 2015 10:42:00</font>
       </div>
 
-      new Date(year, month, day, hours, minutes, seconds, milliseconds);
+      New Date(year, month, day, hours, minutes, seconds, milliseconds);
       <div class="codigo">
-        <pre>
-                Sat Jun 11 1988 11:42:00
-                var d3 = new Date(88,5,11,11,42,0,0);
-            </pre>
+        <font class="purp">var</font> d1 = <font class="purp">new</font> <font class="blue">Date</font>(88,5,11,11,42,0,0);
+        <font class="comentario"> // Sat Jun 11 1988 11:42:00</font>
       </div>
       <hr>
 
       <h3>Metodos de Date:</h3>
       <div class="codigo">
-        <pre>
-                getFullYer()    = año.
-                getMonth()      = mes.
-                getDate()       = dia(num).
-                getDay()        = dia(semana).
-                getHours()      = hora.
-                getMinutes()    = min.
-                getSeconds()    = seg.
-                getMilliseconds()= ms.
-            </pre>
+        getFullYer()    = año. <br>
+        getMonth()      = mes. <br>
+        getDate()       = dia(num). <br>
+        getDay()        = dia(semana). <br>
+        getHours()      = hora. <br>
+        getMinutes()    = min. <br>
+        getSeconds()    = seg. <br>
+        getMilliseconds()= ms.
       </div>
 
       Ej:
       <div class="codigo">
-        <pre>
-                var date1 = new Date();
-                var hours = date1.getHours();
-
-                // Muestra solo la hora actual, sin min-seg.
-            </pre>
+        <font class="purp">var</font> date1 = <font class="purp">new</font> <font class="blue">Date</font>(); <br>
+        <font class="purp">var</font> hours = date1.<font class="blue">getHours</font>(); <br>
+        <font class="comentario">// Muestra solo la hora actual, sin min-seg.</font>
       </div>
       <hr>
 
       <h2 class="subtitulo">Otros...</h2>
 
-      Set interval:
+      Set interval: (Cada determinado tiempo)
       <div class="codigo">
-        <pre>
-                function myAlert() { 
-                    alert("Hi");
-                }
-                setInterval(myAlert, 3000)
-
-                // 1000ms = 1seg
-            </pre>
-      </div>
+        function myAlert() { <br>
+          &nbsp; alert("Hi"); <br>
+        } <br>
+        setInterval(myAlert, 3000) <font class="comentario">(1000ms = 1seg)</font>
+      </div> <br>
 
       <!-- Hora por segundos -->
       <h2 class="subtitulo"> Hora por segundos </h2>
       <div id="HoraPS">Hora:</div>
       <div class="codigo">
-        <pre>
-                function printTime() {
-                    var d = new Date();
-                    var hours = d.getHours();
-                    var mins = d.getMinutes();
-                    var secs = d.getSeconds();
-                    var horaPS = document.getElementById("HoraPS");
-                    horaPS.innerHTML = "Hora: " + hours+":"+mins+":"+secs;
-                }
-                setInterval(printTime, 1000);
-            </pre>
+        function printTime() { <br>
+          &nbsp; var d = new Date(); <br>
+          &nbsp; var hours = d.getHours(); <br>
+          &nbsp; var mins = d.getMinutes(); <br>
+          &nbsp; var secs = d.getSeconds(); <br>
+          &nbsp; var horaPS = document.getElementById("HoraPS"); <br>
+          &nbsp; horaPS.innerHTML = "Hora: " + hours + ":" + mins + ":" + secs; <br>
+        } <br>
+        setInterval(printTime, 1000);
       </div>
       <script>
         function printTime() {
@@ -486,7 +450,7 @@
         }
         setInterval(printTime, 1000);
       </script>
-    </div>
+    </fieldset>
   </div>
 
   <!-- DOM -->
