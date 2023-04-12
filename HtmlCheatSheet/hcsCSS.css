@@ -75,6 +75,10 @@ font.prop{
 font.comentario{
   color: rgb(91, 91, 91);
 }
+font.aqua{
+  color: rgba(0, 208, 255, 0.62);
+  text-shadow: .1px .1px rgb(124, 156, 150);
+}
 
 .icons {
   height: 85px;

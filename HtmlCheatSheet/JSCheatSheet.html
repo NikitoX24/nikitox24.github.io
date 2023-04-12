@@ -94,31 +94,32 @@
 
     <h3 class="subtitulo">Declaracion If:</h3>
     <div class="codigo">
-      if(condicion) { <br>
+      <font class="aqua">if</font> (condicion) { <br>
         &nbsp; <font class="comentario">// Declaraciones si es Verdadero.</font> <br>
       } <br>
-      else { <br>
+      <font class="aqua">else</font> { <br>
         &nbsp; <font class="comentario">// Declaraciones si es Falso.</font> <br>
       }
     </div> <hr>
 
     <h3 class="subtitulo">Declaracion Switch:</h3>
     <div class="codigo">
-      switch( Expresion ) { <br>
-        &nbsp;Case n1: <br>
-        &nbsp; <font class="comentario">// Bloque de Codigo</font> <br>
-        &nbsp; breack; <br>
-        &nbsp;Case n2: <br>
-        &nbsp; <font class="comentario">// Bloque de Codigo</font> <br>
-        &nbsp; breack; <br>
-        &nbsp;default: <br>
-        &nbsp; <font class="comentario">// Bloque de Codigo</font> <br>
-      }
+      <font class="aqua">switch</font> ( Expresion ) { <br>
+        &nbsp;<font class="aqua">Case</font> n1: <br>
+          &nbsp; <font class="comentario">// Bloque de Codigo</font> <br>
+        &nbsp; <font class="aqua">breack;</font> <br>
+        &nbsp;<font class="aqua">Case</font> n2: <br>
+          &nbsp; <font class="comentario">// Bloque de Codigo</font> <br>
+        &nbsp; <font class="aqua">breack;</font> <br>
+        &nbsp;<font class="aqua">default:</font> <br>
+          &nbsp; <font class="comentario">// Bloque de Codigo</font> <br>
+        &nbsp; <font class="aqua">breack;</font> <br>
+        }
     </div> <hr>
 
     <h3 class="subtitulo">Bucle For:</h3>
     <div class="codigo">
-      for ( Condicion1; Condicion2; Condicion3 ) { <br>
+      <font class="aqua">for</font> ( Condicion1; Condicion2; Condicion3 ) { <br>
         &nbsp; <font class="comentario">// Bloque de Codigo</font> <br>
       }
     </div> <hr>
@@ -126,23 +127,23 @@
     <h3 class="subtitulo">Bucle While:</h3>
 
     <div class="codigo">
-      while( condicion ) { <br>
+      <font class="aqua">while</font>( condicion ) { <br>
         &nbsp; <font class="comentario">// Bloque de Codigo</font> <br>
       }
     </div>
 
     <h3 class="subtitulo">Bucle Do-While:</h3>
     <div class="codigo">
-      do { <br>
+      <font class="aqua">do</font> { <br>
         &nbsp; <font class="comentario">// Bloque de Codigo</font> <br>
       } <br>
-      while (condicion)
+      <font class="aqua">while</font> (condicion)
     </div> <hr>
 
     <h3 class="subtitulo"> Funciones </h3>
     <div class="codigo">
-      function name( parametro1, parametro2, parametro3 ) { <br>
-        &nbsp; return param1 + param2 + param3; <br>
+      <font class="purp">function</font> <font class="blue">name</font>( parametro1, parametro2, parametro3 ) { <br>
+        &nbsp; <font class="aqua">return</font> param1 + param2 + param3; <br>
       }
     </div>
 
@@ -155,7 +156,7 @@
           alert("Esto es una Alerta!");
         }
       </script>
-      Alert("Esto es una Alerta")<br><br>
+      <font class="blue">Alert</font>("<font class="green">Esto es una Alerta</font>")<br><br>
 
       <button onclick="botonalerta2();"> Prompt </button>
       <script>
@@ -163,7 +164,7 @@
           alert("Esto es una Solicitud!");
         }
       </script>
-      Prompt("Esto es una Solicitud")<br><br>
+      <font class="blue">Prompt</font>("<font class="green">Esto es una Solicitud</font>")<br><br>
 
       <button onclick="botonalerta3();"> Confirm </button>
       <script>
@@ -171,7 +172,7 @@
           alert("Esto es una Confirmacion!");
         }
       </script>
-      Confirm("Esto es una Confirmacion")
+      <font class="blue">Confirm</font>("<font class="green">Esto es una Confirmacion</font>")
     </fieldset>
   </div>
 
@@ -455,113 +456,118 @@
 
   <!-- DOM -->
   <div class="borders">
-    <h1 class="titulo"> DOM </h1>
+    <h1 class="titulo"> DOM <font class="subText">(Document Object Model)</font> </h1>
 
     <!-- DOM -->
-    <div class="borders">
-      <h2><u>DOM</u>(Document Object Model):</h2>
+    <fieldset>
+      <legend> <h2>DOM</h2> </legend>
       Usada para añadir, borrar y modificar elementos. <br>
       <details>
         <summary>Imagen mapa DOM</summary>
         <img src="../Imgs/DOM.png" alt="Arbol de DOM"> <br>
       </details> <br>
 
-      El objeto <u>document</u> es la raiz de todos los otros objs de la pag. <br>
+      El objeto <font class="blue"><u>document</u></font> es la raiz de todos los otros objs de la pag. <br>
       <div class="codigo">
-        <pre>
-                <u>document</u>.body.innerHTML = "Algun Texto";
-            </pre>
+        <font class="blue"><u>document</u></font>.body.<font class="purp">innerHTML</font> = "Algun Texto";
       </div>
-      (La propiedad <u>innerHTML</u> se usa para modificar el contenido de un elemento.)
-    </div>
+      (La propiedad <font class="purp">innerHTML</font> se usa para modificar el contenido de un elemento.)
+    </fieldset>
 
     <!-- Seleccionar Elementos -->
-    <div class="borders">
-      <h2 class="subtitulo">Seleccionar Elementos</h2>
+    <fieldset>
+      <legend> <h2>Seleccionar/Buscar Elementos</h2> </legend>
 
       Buscar <u>Id</u>:
       <div class="codigo">
-        <pre>
-                document.<u>getElementById</u>("idDelElemento")
-            </pre>
+        document.<font class="blue">getElementById</font>("<font class="green">idDelElemento</font>")
       </div>
+
+      <script>
+        document.getElementById("idDelElemento")
+      </script>
 
       Buscar <u>Class</u>:
       <div class="codigo">
-        <pre>
-                document.<u>getElementsByClassName</u>("nombreDeLaClase")
-            </pre>
+        document.<font class="blue">getElementsByClassName</font>("<font class="green">nombreDeLaClase</font>")
       </div>
 
       Buscar <u>Tag</u>:
       <div class="codigo">
-        <pre>
-                document.<u>getElementsByTagName</u>("tagDelElemento")
-            </pre>
+        document.<font class="blue">getElementsByTagName</font>("<font class="green">TagDelElemento</font>")
       </div>
-    </div>
+    </fieldset>
 
     <!-- Modificar Elementos -->
-    <div class="borders">
-      <h1 class="subtitulo">Modificar Elementos:</h1>
-      <h3 class="subtitulo"> Cambiar valor a un ID</h3>
-      <u>Antes:</u>
-      <div class="ejemplo">
-        Esto es un div con id "idDemo".
-      </div> <br>
-      <div class="codigo">
-        <pre>
-                var elem = document.getElementById("idDemo");
-                elem.innerHTML = "Hello World!";
-            </pre>
+    <fieldset>
+      <legend> <h2>Modificar Elementos:</h2> </legend>
+      <h3 class="subtitulo"> Cambiar valor a un ID:</h3>
+      <div class="flex">
+        <div>
+          <u>Antes:</u>
+          <div class="ejemplo" style="width: 200px;">
+            Esto es un div con id "idDemo".
+          </div> <br>
+        </div>
+        <p><h2>➜</h2></p>
+        <div>
+          <u>Despues:</u> <br>
+          <div class="ejemplo" style="width: 200px;"> Hello World! </div>
+        </div>
       </div>
-      <u>Despues:</u> <br>
-      <div class="ejemplo">
-        Hello World!
-      </div> <br>
-      <hr>
+      <div class="codigo">
+        <font class="purp">var</font> elem = document. <font class="blue">getElementById</font>("idDemo"); <br>
+        elem.innerHTML = "<font class="green">Hello World!</font>";
+      </div> <hr>
 
       <!-- cambiar valor a alguna clase -->
-      <h3 class="subtitulo"> Cambiar valor a una CLASS </h3>
-      <u>Antes:</u>
-      <div class="ejemplo"> Esto es un div con class "classDemo" </div> <br>
-      <div class="codigo">
-        <pre>
-                var arr =  document.getElementsByClassName("classDemo");
-                arr[0].innerHTML = "Hiii";
-            </pre>
+      <h3 class="subtitulo"> Cambiar valor a una CLASS: </h3>
+      <div class="flex">
+        <div>
+          <u>Antes:</u>
+          <div class="ejemplo" style="width: 200px;"> Esto es un div con class "classDemo" </div>
+        </div>
+        <p><h2>➜</h2></p>
+        <div>
+          <u>Despues:</u>
+          <div class="ejemplo" style="width: 200px;"> Hiii </div>
+        </div>
       </div>
-      <u>Despues:</u>
-      <div class="ejemplo"> Hiii</div>
-      <hr>
+      <div class="codigo">
+        <font class="purp">var</font> arr =  document.<font class="blue">getElementsByClassName</font>("classDemo"); <br>
+        arr[0].innerHTML = "<font class="green">Hiii</font>";
+      </div> <hr>
 
       <!-- cambiar valor a varios elementos -->
-      <h3 class="subtitulo"> Cambiar valor a los TAGS </h3>
-      <u>Antes:</u>
-      <div class="ejemplo">
-        <p> hi </p>
-        <p> hello </p>
-        <p> hola </p>
+      <h3 class="subtitulo"> Cambiar valor a los TAGS: </h3>
+      <div class="flex">
+        <div>
+          <u>Antes:</u>
+          <div class="ejemplo" style="width: 200px;">
+            <p> hi </p>
+            <p> hello </p>
+          </div>
+        </div>
+        <p><h2>➜</h2></p>
+        <div>
+          <u>Despues:</u> <br>
+          <div class="ejemplo" style="width: 200px;">
+            <p> Hi there! </p>
+            <p> Hi there! </p>
+          </div>
+        </div>
       </div> <br>
       <div class="codigo">
-        <pre>
-                var arr = document.getElementsByTagName("p");
-                for (var x = 0; x < arr.length; x++) {
-                    arr[x].innerHTML = "Hi there!";
-                }
-            </pre>
+        <font class="purp">var</font> arr = document.<font class="blue">getElementsByTagName</font>("p"); <br>
+        <font class="aqua">for</font> (<font class="purp">var</font> x = <font class="orange">0</font>; x &lt;arr.length; x++) { <br>
+          &nbsp; arr[x].innerHTML = "<font class="green">Hi there!</font>"; <br>
+        }
       </div>
-      <u>Despues:</u> <br>
-      <div class="ejemplo">
-        <p> Hi there! </p>
-        <p> Hi there! </p>
-        <p> Hi there! </p>
-      </div>
-    </div>
+    </fieldset>
 
     <!-- Propiedades y metodos -->
-    <div class="borders">
-      <h1 class="subtitulo"> Propiedades y metodos </h1>
+    <fieldset>
+      <legend> <h2> Propiedades y metodos </h2> </legend>
 
       Cambiar valores en determinado tiempo <u>(USANDO CHILDNODES)</u>
       <div class="ejemplo">
@@ -571,16 +577,14 @@
         </div>
       </div> <br>
       <div class="codigo">
-        <pre>
-                function setText() {
-                    var a = document.getElementById("demo2");
-                    var arr = a.<u>childNodes</u>;
-                    for(var x=0;x < arr.length;x++) {
-                        arr[x].innerHTML = "new text";
-                    }
-                }
-                <u>setTimeout(setText, 1000);</u> //(1000 = 1seg)
-            </pre>
+        <font class="purp">function</font> <font class="blue">setText</font>() { <br>
+          &nbsp;<font class="purp">var</font> a = document.getElementById("demo2"); <br>
+          &nbsp;<font class="purp">var</font> arr = a.<u>childNodes</u>; <br>
+          &nbsp;<font class="blue">for</font>(<font class="purp">var</font> x=0;x < arr.length;x++) { <br>
+            &nbsp; arr[x].innerHTML = "<font class="green">new text</font>"; <br>
+          &nbsp;} <br>
+        } <br>
+        <u>setTimeout(setText, 1000);</u> <font class="comentario">//(1000 = 1seg)</font>
       </div>
       <script>
         function setText() {
@@ -595,17 +599,15 @@
 
       <details><!-- Propiedades y metodos -->
         <summary>Propiedades y metodos</summary>
-        <pre>
-                element.childNodes:      returns an array of an element's child nodes.
-                element.firstChild:      returns the first child node of an element.
-                element.lastChild:       returns the last child node of an element.
-                element.hasChildNodes:   returns true if an element has any child nodes, otherwise false.
-                element.nextSibling:     returns the next node at the same tree level.
-                element.previousSibling: returns the previous node at the same tree level.
-                element.parentNode:      returns the parent node of an element.
-                </pre>
+          element.childNodes:      Returns an array of an element's child nodes. <br>
+          element.firstChild:      Returns the first child node of an element. <br>
+          element.lastChild:       Returns the last child node of an element. <br>
+          element.hasChildNodes:   Returns true if an element has any child nodes, otherwise false. <br>
+          element.nextSibling:     Returns the next node at the same tree level. <br>
+          element.previousSibling: Returns the previous node at the same tree level. <br>
+          element.parentNode:      Returns the parent node of an element.
       </details>
-    </div>
+    </fieldset>
 
     <!-- Modificar Atributos -->
     <div class="borders">
