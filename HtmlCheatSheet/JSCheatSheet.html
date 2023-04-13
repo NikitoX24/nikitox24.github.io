@@ -569,22 +569,23 @@
     <fieldset>
       <legend> <h2> Propiedades y metodos </h2> </legend>
 
-      Cambiar valores en determinado tiempo <u>(USANDO CHILDNODES)</u>
+      Cambiar valores <u>(Usando CHILDNODES)</u>
       <div class="ejemplo">
         <div id="demo2">
-          <p>some text</p>
-          <p>some other text</p>
+          <p>Some text</p>
+          <p>Some other text</p>
         </div>
-      </div> <br>
+      </div>
+      <button onclick="setText()"> setText </button>
+      <br><br>
       <div class="codigo">
         <font class="purp">function</font> <font class="blue">setText</font>() { <br>
           &nbsp;<font class="purp">var</font> a = document.getElementById("demo2"); <br>
           &nbsp;<font class="purp">var</font> arr = a.<u>childNodes</u>; <br>
-          &nbsp;<font class="blue">for</font>(<font class="purp">var</font> x=0;x < arr.length;x++) { <br>
+          &nbsp;<font class="aqua">for</font>(<font class="purp">var</font> x=0;x < arr.length;x++) { <br>
             &nbsp; arr[x].innerHTML = "<font class="green">new text</font>"; <br>
           &nbsp;} <br>
-        } <br>
-        <u>setTimeout(setText, 1000);</u> <font class="comentario">//(1000 = 1seg)</font>
+        }
       </div>
       <script>
         function setText() {
@@ -594,7 +595,6 @@
             arr[x].innerHTML = "new text";
           }
         }
-        setTimeout(setText, 1000);
       </script>
 
       <details><!-- Propiedades y metodos -->
@@ -610,156 +610,173 @@
     </fieldset>
 
     <!-- Modificar Atributos -->
-    <div class="borders">
-      <h1 class="subtitulo"> Modificar Atributos: </h1>
+    <fieldset>
+      <legend> <h2> Modificar Atributos </h2> </legend>
 
       <h3 class="subtitulo"> Modificar src a una imagen </h3>
-      <u>Antes:</u> <br>
-      <img id="myimg" src="../Imgs/Orange.png" alt="orange" height="100" /> <br>
+      <img id="myimg" src="../Imgs/Orange.png" alt="orange" height="100" width="100px" /> <br>
+      <button onclick="changeSRC()"> cambiar src </button>
       <div class="codigo">
-        <pre>
-                var el = document.getElementById("myimg");
-                el.src = "../Imgs/Apple.png";
-            </pre>
+        <font class="purp">var</font> srcimg = document.<font class="blue">getElementById</font>("<font class="green">myimg</font>"); <br>
+        srcimg.src = "<font class="green">../Imgs/Apple.png</font>";
       </div>
-      <u>Despues:</u> <br>
-      <img id="myimg" src="../Imgs/Apple.png" alt="orange" height="100" /> <br>
+      <script>
+        function changeSRC(){
+          var srcimg = document.getElementById("myimg");
+          srcimg.src = "../Imgs/Apple.png";
+        }
+      </script>
       <hr>
 
       <h3 class="subtitulo">Modificar el href a un link</h3>
-      <u>Antes:</u>
-      <a href="http://www.example.com">Some link</a> <br><br>
+      <a href="http://www.google.com" id="link">www.google.com</a> <br>
+      <button onclick="changeHREF()"> cambiar href </button> <br>
       <div class="codigo">
-        <pre>
-                window.onload = function(){
-                    var el = document.getElementsByTagName('a');
-                    el[0].href= 'http://www.sololearn.com';
-                };
-            </pre>
+        <font class="purp">var</font> _link = document.<font class="blue">getElementById</font>("link"); <br>
+        _link.textContent= '<font class="green">www.youtube.com</font>'; <br>
+        _link.href= '<font class="green">http://www.youtube.com</font>'; <br>
       </div>
-      <u>Despues:</u>
-      <a href="http://www.sololearn.com">Some link</a> <br><br>
+      <script>
+        function changeHREF(){
+          var _link = document.getElementById("link");
+          _link.textContent= 'www.youtube.com';
+          _link.href= 'http://www.youtube.com';
+        };
+      </script>
       <hr>
 
       <!-- modificar Estilos -->
       <h3 class="subtitulo"> Modificar Estilos </h3>
-      <u>Antes:</u>
-      <div class="ejemplo">Some Text</div> <br>
+      <div class="ejemplo" id="style">Some Text</div>
+      <button onclick="changeSTYLE()"> cambiar style </button> <br>
       <div class="codigo">
-        <pre>
-                var x = document.getElementById("demo3");
-                x.style.color = '#6600FF';
-            </pre>
+        <font class="purp">var</font> _styleText = document.<font class="blue">getElementById</font>("style"); <br>
+        _styleText.style.color = '<font class="green">#0F0</font>';
       </div>
-
-      <u>Despues:</u>
-      <div class="ejemplo" style="color: #e77e06;"> Some Text </div>
-    </div>
+      <script>
+        function changeSTYLE(){
+          var _styleText = document.getElementById("style");
+          _styleText.style.color = '#0F0';
+        }
+      </script>
+    </fieldset>
 
     <!-- Elementos -->
-    <div class="borders">
-      <h1 class="subtitulo"> Elementos: </h1>
+    <fieldset>
+      <legend> <h2>Elementos:</h2> </legend>
 
-      <h2 class="subtitulo"> Crear Elementos </h2>
-      <u> Esto crea un nuevo párrafo y lo agrega al elemento div existente en la página. </u> <br><br>
-      <u>Antes:</u>
-      <div class="ejemplo"> Some content</div> <br>
+      <h3 class="subtitulo"> Crear Elementos </h3>
+      <div class="ejemplo" id="createElem"> Algun Texto </div>
+      <button onclick="createELEMENT()">crear elemento</button>
       <div class="codigo">
-        <pre>
-                //Crear un paragraph.
-                var p = document.createElement("p");
-                var node = document.createTextNode("Some new text");
-                
-                //Agregar un text al paragraph.
-                p.appendChild(node);
-                
-                var div = document.getElementById("demo4");
-                
-                //Agregar el paragraph al div.
-                div.appendChild(p);
-            </pre>
+        <font class="comentario">// Crear un paragraph. y un text.</font> <br>
+        <font class="purp">var</font> p = document.<font class="blue">createElement</font>("<font class="green">p</font>"); <br>
+        <font class="purp">var</font> node = document.<font class="blue">createTextNode</font>("<font class="green">Nuevo Texto Creado!</font>"); <br> <br>
+        
+        <font class="comentario">// Agregar el text al paragraph.</font> <br>
+        p.<font class="blue">appendChild</font>(node); <br> <br>
+        
+        <font class="purp">var</font> div = document.<font class="blue">getElementById</font>("<font class="green">createElem</font>"); <br> <br>
+        
+        <font class="comentario">// Agregar el paragraph al div.</font> <br>
+        div.<font class="blue">appendChild</font>(p);
       </div>
-      <u>Despues:</u>
-      <div class="ejemplo">
-        <p>Some content</p>
-        <p>Some new text</p>
-      </div>
+      <script>
+        function createELEMENT(){
+          // Crear un paragraph. y un text.
+          var p = document.createElement("p");
+          var node = document.createTextNode("Nuevo Texto Creado!");
+          
+          // Agregar el text al paragraph.
+          p.appendChild(node);
+          
+          var div = document.getElementById("createElem");
+          
+          // Agregar el paragraph al div.
+          div.appendChild(p);
+        }
+      </script>
+
       <details>
-        <summary>Crear elem...</summary>
-        element.cloneNode() clones an element and returns the resulting node. <br>
-        document.createElement(element) creates a new element node. <br>
-        document.createTextNode(text) creates a new text node. <br>
+        <summary>Más info Crear elem...</summary>
+        element.cloneNode() <font class="comentario">// Clones an element and returns the resulting node.</font> <br>
+        document.createElement(element) <font class="comentario">// Creates a new element node.</font> <br>
+        document.createTextNode(text) <font class="comentario">// Creates a new text node.</font> <br>
         <br>
         // Systax <br>
-        Crear texto (pero no está asignado) <br>
-        var node = document.createTextNode("Some new text"); <br>
+        var node = document.createTextNode("Some new text"); <font class="comentario">// Crear texto (pero no está asignado)</font> <br>
         <br>
         // Asignar con <br>
-        elemento.appendChild(newNode) // adds a new child node to an element as the last child node. <br>
-        elemento.insertBefore(node1, node2) // inserts node1 as a child before node2. <br>
+        elemento.appendChild(newNode) <font class="comentario">// Adds a new child node to an element as the last child node.</font> <br>
+        elemento.insertBefore(node1, node2) <font class="comentario">// Inserts node1 as a child before node2.</font> <br>
       </details>
       <hr>
 
       <!-- borrando elementos -->
       <h2 class="subtitulo"> Borrar Elementos </h2>
       <u>Antes:</u>
-      <div class="ejemplo">
-        <p>This is a paragraph.</p>
-        <p>This is another paragraph.</p>
-      </div><br>
+      <div class="ejemplo" id="divT">
+        <p id="p1">Este es el primer parrafo.</p>
+        <p>Este es el segundo parrafo.</p>
+      </div>
+      <button onclick="delElem()">borrar elemento</button>
       <div class="codigo">
-        <pre>
-                var parent = document.getElementById("demo5");
-                var child = document.getElementById("p1");
-                parent.removeChild(child);
-            </pre>
+        <font class="purp">var</font> parent = document.<font class="blue">getElementById</font>("<font class="green">divT</font>"); <br>
+        <font class="purp">var</font> child = document.<font class="blue">getElementById</font>("<font class="green">p1</font>"); <br>
+        parent.<font class="blue">removeChild</font>(child);
       </div>
-      <u>Despues:</u>
-      <div class="ejemplo">
-        <p>This is another paragraph.</p>
-      </div>
+      <script>
+        function delElem(){
+          var parent = document.getElementById("divT");
+          var child = document.getElementById("p1");
+          parent.removeChild(child);
+        }
+      </script>
       <hr>
 
       <!-- reemplazando elementos -->
       <h2 class="subtitulo"> Reemplazar Elementos </h2>
       <u>Antes:</u>
-      <div class="ejemplo">
-        <p>This is a paragraph.</p>
+      <div class="ejemplo" id="divP">
+        <p id="p_divP">This is a paragraph.</p>
         <p>This is another paragraph.</p>
-      </div><br>
+      </div>
+      <button onclick="reemplazarElem()">reemplazar elemento</button>
       <div class="codigo">
-        <pre>
-                var varP = document.createElement("p");
-                var node = document.createTextNode("This is new");
-                varP.appendChild(node);
-                
-                var parent = document.getElementById("demo6");
-                var child = document.getElementById("p1");
-                parent.replaceChild(varP, child);
-            </pre>
+        <font class="purp">var</font> varP = document.<font class="blue">createElement</font>("<font class="green">p</font>"); <br>
+        <font class="purp">var</font> node2 = document.<font class="blue">createTextNode</font>("<font class="green">This is new</font>"); <br>
+        varP.appendChild(node2); <br> <br>
+        
+        <font class="purp">var</font> parent2 = document.<font class="blue">getElementById</font>("<font class="green">divP</font>"); <br>
+        <font class="purp">var</font> child2 = document.<font class="blue">getElementById</font>("<font class="green">p_divP</font>"); <br>
+        parent.<font class="blue">replaceChild</font>(varP, child2);
       </div>
-      <u>Despues:</u>
-      <div class="ejemplo">
-        <p>This is new.</p>
-        <p>This is another paragraph.</p>
-      </div>
-      <hr>
-    </div>
+      <script>
+        function reemplazarElem(){
+          var varP = document.createElement("p");
+          var node2 = document.createTextNode("This is new");
+          varP.appendChild(node2);
+
+          var parent2 = document.getElementById("divP");
+          var child2 = document.getElementById("p_divP");
+          parent2.replaceChild(varP, child2);
+        }
+      </script>
+    </fieldset>
 
     <!-- Crear Animaciones -->
-    <div class="borders">
-      <h1 class="subtitulo"> Crear Animaciones </h1>
+    <fieldset>
+      <legend> <h2> Crear Animaciones </h2> </legend>
       <div id="container1">
         <div id="box1"> </div>
       </div>
       <style>
         #container1 {
           width: 200px;
-          height: 200px;
+          height: 50px;
           background: green;
           position: relative;
         }
-
         #box1 {
           width: 50px;
           height: 50px;
@@ -783,23 +800,21 @@
         }
       </script>
       <div class="codigo">
-        <pre>
-                var pos = 0;
-                var box = document.getElementById('box1');
-                var t = setInterval(move, 10);
-                
-                function move() {
-                    if(pos >= 150) {
-                        clearInterval(t);
-                    }
-                    else {
-                        pos += 1;
-                        box.style.left = pos+'px';
-                    }
-                }
-            </pre>
+        <font class="purp">var</font> pos = <font class="orange">0</font>; <br>
+        <font class="purp">var</font> box = document.<font class="blue">getElementById</font>('<font class="green">box1</font>'); <br>
+        <font class="purp">var</font> t = <font class="blue">setInterval</font>(move, <font class="orange">10</font>); <br> <br>
+        
+        <font class="purp">function</font> <font class="blue">move</font>() { <br>
+          &nbsp;if(pos >= <font class="orange">150</font>) { <br>
+            &nbsp; <font class="blue">clearInterval</font>(t); <br>
+          &nbsp;} <br>
+          &nbsp;else { <br>
+            &nbsp; pos += <font class="orange">1</font>; <br>
+            &nbsp; box.style.left = pos+'<font class="green">px</font>'; <br>
+          &nbsp;} <br>
+        }
       </div>
-    </div>
+    </fieldset>
 
     <br><br>
 
