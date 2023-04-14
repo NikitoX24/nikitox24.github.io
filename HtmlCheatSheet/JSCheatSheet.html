@@ -824,100 +824,92 @@
       Cuando un "evento" ocurre en un elemento, una funcion "handler" se ejecuta.
       <details>
         <summary>Eventos: ...</summary>
-        <pre>
-                onclick:
-                onload:
-                onunload:
-                onchange: < input>, < keygen>, < select>, < texarea>.
-                onmouseover:
-                onmouseout:
-                onmousedown:
-                onmouseup:
-                onblur: al perder focus
-                onfocus:
-                </pre>
+          onclick: <br>
+          onload: <br>
+          onunload: <br>
+          onchange: &lt;input>, &lt;keygen>, &lt;select>, &lt;texarea>. <br>
+          onmouseover: <br>
+          onmouseout: <br>
+          onmousedown: <br>
+          onmouseup: <br>
+          onblur: al perder focus <br>
+          onfocus: <br>
       </details>
-      <hr>
 
-      <!-- Alerta en boton -->
-      <h2 class="subtitulo"> Alerta en botón </h2>
-      <button onclick="show();"> Alert Button</button>
-      <div class="codigo">
-        <pre>
-                < button onclick="show();"> Alert Button </ button>
-                function show() { 
-                    alert("Esto es una Alerta!");
-                }
-            </pre>
-      </div>
-      <script>
-        function show() {
-          alert("Esto es una Alerta!");
-        }
-      </script>
-      <hr>
+      <!-- OnClick -->
+      <fieldset>
+        <legend> <h2>OnClick</h2> </legend>
+        <!-- Alerta en boton -->
+        <button onclick="show();"> Alert Button</button> <br>
+        <u> OnClick desde html </u>
+        <div class="codigo">
+          &lt;<span>button</span> <font class="purp">onclick</font>="<font class="blue">show</font>();"> Alert Button &lt;/<span>button</span>> <br><br>
+          <font class="purp">function</font> <font class="blue">show</font>() { <br>
+            &nbsp; <font class="blue">alert</font>("<font class="green">Esto es una Alerta!</font>"); <br>
+          }
+        </div>
+        <script>
+          function show() {
+            alert("Esto es una Alerta!");
+          }
+        </script>
 
-      <!-- hora en boton -->
-      <h2 class="subtitulo"> Hora en botón (alerta) </h2>
-      <button id="demo7"> Hour Button</button> <br>
-      <div class="codigo">
-        <pre>
-                < button id="demo7"> Hour Button </ button>
-                var x = document.getElementById('demo7');
-                x.onclick = function () {
-                    alert(Date());
-                }
-            </pre>
-      </div>
-      <script>
-        var x = document.getElementById('demo7');
-        x.onclick = function () {
-          alert(Date());
-        }
-      </script>
-      <hr>
+        <!-- Fecha en boton -->
+        <button id="demo7"> Date Button</button> <br>
+        <u> OnClick desde js </u>
+        <div class="codigo">
+          &lt;<span>button</span> <font class="purp">id</font>="<font class="green">demo7</font>"> Hour Button &lt;/<span>button</span>> <br><br>
+          <font class="purp">var</font> x = document.<font class="blue">getElementById</font>('<font class="green">demo7</font>'); <br>
+          x.<font class="blue">onclick</font> = <font class="purp">function</font> () { <br>
+            <font class="blue">alert</font>(<font class="blue">Date</font>()); <br>
+          }
+        </div>
+        <script>
+          var x = document.getElementById('demo7');
+          x.onclick = function () {
+            alert(Date());
+          }
+        </script>
+      </fieldset>
 
-      <!-- OnLoad desde html -->
-      <h2 class="subtitulo"> OnLoad desde html </h2>
-      <div class="codigo">
-        <pre>
-                < body onload="doSomething()"> < / body>
-                    function doSomething(){ }
-                }
-            </pre>
-      </div>
-      <hr>
-
-      <!-- OnLoad desde js -->
-      <h2 class="subtitulo"> OnLoad desde js </h2>
-      <div class="codigo">
-        <pre>
-                window.onload = function(){
-                    // Codigo que aplicará luego de q la pag se cargue por completo.
-                }
-            </pre>
-      </div>
-      <hr>
+      <!-- Onload -->
+      <fieldset>
+        <legend> <h2>OnLoad (Al cargar la pag.)</h2> </legend>
+        <!-- OnLoad desde html -->
+        <u> OnLoad desde html </u>
+        <div class="codigo">
+          &lt;<span>body</span> <font class="purp">onload</font>="<font class="blue">doSomething</font>()"> &lt;/<span>body</span>> <br><br>
+            <font class="purp">function</font> <font class="blue">doSomething</font>(){ <br>
+              &nbsp; <font class="comentario">// Codigo que se ejecuta al cargar la pag...</font> <br>
+            }
+        </div>
+        <!-- OnLoad desde js -->
+        <u class="subtitulo"> OnLoad desde js </u>
+        <div class="codigo">
+          window.<font class="blue">onload</font> = <font class="purp">function</font>(){ <br>
+            &nbsp; <font class="comentario">// Codigo que aplicará luego de q la pag se cargue por completo.</font> <br>
+          }
+        </div>
+      </fieldset>
 
       <!-- OnChange -->
-      <h2 class="subtitulo"> OnChange </h2>
-      <u>Convertir texto en Mayustulas.</u> <br>
-      <input type="text" id="name001" onchange="change()" placeholder="Escribe y apreta Enter">
-      <div class="codigo">
-        <pre>
-                function change() {
-                    var x001 = document.getElementById('name001');
-                    x001.value = x001.value.toUpperCase();
-                }
-            </pre>
-      </div>
-      <script>
-        function change() {
-          var x001 = document.getElementById('name001');
-          x001.value = x001.value.toUpperCase();
-        }
-      </script>
-      <hr>
+      <fieldset>
+        <legend> <h2> OnChange </h2> </legend>
+        <u>Convertir texto en Mayustulas.</u> <br>
+        <input type="text" id="name001" onchange="change()" placeholder="Escribe y apreta Enter"> <br> <br>
+        <div class="codigo">
+          <font class="purp">function</font> <font class="blue">change</font>() { <br>
+            &nbsp; <font class="purp">var</font> x001 = document.<font class="blue">getElementById</font>('<font class="green">name001</font>'); <br>
+            &nbsp; x001.value = x001.value.<font class="blue">toUpperCase</font>(); <br>
+          }
+        </div>
+        <script>
+          function change() {
+            var x001 = document.getElementById('name001');
+            x001.value = x001.value.toUpperCase();
+          }
+        </script>
+      </fieldset>
 
       <!-- crear un evento manipulador -->
       <h2 class="subtitulo"> Crear un Evento Manipulador </h2>
