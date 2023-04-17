@@ -173,12 +173,14 @@ font.aqua{
 .flex p{
   padding: 5px;
 }
+.flex .codigo{
+  min-width: 250px;
+}
+.flex .ejemplo{
+  min-width: 200px;
+}
 
 .numbers {
-  /* 
-  font-size: 20px;
-  font-weight: 1000;/
-  */
   text-decoration: underline;
 }
 
@@ -218,3 +220,7 @@ font.aqua{
   border-radius: 3px;
 }
 /* Box */
+
+.flecha{
+  margin: auto;
+}

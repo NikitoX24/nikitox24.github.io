@@ -505,18 +505,18 @@
       <div class="flex">
         <div>
           <u>Antes:</u>
-          <div class="ejemplo" style="width: 200px;">
+          <div class="ejemplo">
             Esto es un div con id "idDemo".
           </div> <br>
         </div>
-        <p><h2>➜</h2></p>
+        <div class="flecha"></div>
         <div>
           <u>Despues:</u> <br>
-          <div class="ejemplo" style="width: 200px;"> Hello World! </div>
+          <div class="ejemplo"> Hello World! </div>
         </div>
       </div>
       <div class="codigo">
-        <font class="purp">var</font> elem = document. <font class="blue">getElementById</font>("idDemo"); <br>
+        <font class="purp">var</font> elem = document.<font class="blue">getElementById</font>("idDemo"); <br>
         elem.innerHTML = "<font class="green">Hello World!</font>";
       </div> <hr>
 
@@ -525,12 +525,12 @@
       <div class="flex">
         <div>
           <u>Antes:</u>
-          <div class="ejemplo" style="width: 200px;"> Esto es un div con class "classDemo" </div>
+          <div class="ejemplo"> Esto es un div con class "classDemo" </div>
         </div>
-        <p><h2>➜</h2></p>
+        <div class="flecha"></div>
         <div>
           <u>Despues:</u>
-          <div class="ejemplo" style="width: 200px;"> Hiii </div>
+          <div class="ejemplo"> Hiii </div>
         </div>
       </div>
       <div class="codigo">
@@ -543,15 +543,15 @@
       <div class="flex">
         <div>
           <u>Antes:</u>
-          <div class="ejemplo" style="width: 200px;">
+          <div class="ejemplo">
             <p> hi </p>
             <p> hello </p>
           </div>
         </div>
-        <p><h2>➜</h2></p>
+        <div class="flecha"></div>
         <div>
           <u>Despues:</u> <br>
-          <div class="ejemplo" style="width: 200px;">
+          <div class="ejemplo">
             <p> Hi there! </p>
             <p> Hi there! </p>
           </div>
@@ -912,175 +912,168 @@
       </fieldset>
 
       <!-- crear un evento manipulador -->
-      <h2 class="subtitulo"> Crear un Evento Manipulador </h2>
-      <button id="demo8"> Evento de un solo uso </button> <br><br>
-      <div class="codigo">
-        <pre>
-                < button id="demo8"> Evento de un solo uso </ button>
+      <fieldset>
+        <legend> <h2> Crear un Evento Manipulador </h2> </legend>
+        <button id="demo8"> Evento de un solo uso </button> <br>
+        <div class="codigo">
+          &lt;<span>button</span> <font class="purp">id</font>="<font class="green">demo8</font>"> Evento de un solo uso &lt;/<span>button</span>> <br><br>
+          <font class="purp">var</font> btn = document.<font class="blue">getElementById</font>("<font class="green">demo8</font>"); <br>
+          btn.<font class="blue">addEventListener</font>("<font class="green">click</font>", myFunction01); <br>
+          <font class="purp">function</font> <font class="blue">myFunction01</font>() { <br>
+            &nbsp; <font class="blue">alert</font>(Math.<font class="blue">random</font>()); <br>
+            &nbsp; btn.<font class="blue">removeEventListener</font>("<font class="green">click</font>", myFunction01); <br>
+          }
+        </div>
+        <script>
+          var btn = document.getElementById("demo8");
+          btn.addEventListener("click", myFunction01);
+          function myFunction01() {
+            alert(Math.random());
+            btn.removeEventListener("click", myFunction01);
+          }
+        </script>
+        <details>
+          <summary>Evento manipulador...</summary>
+          <pre>
+            // Syntax
+              element.<font class="blue">addEventListener</font>(<font class="green"><u>"evento"</u></font>, <font class="purp"><u>function</u></font>, <u>useCapture(opcional)</u>);
 
-                var btn = document.getElementById("demo8");
-                btn.addEventListener("click", myFunction01);
-
-                function myFunction01() {
-                    alert(Math.random());
-                    btn.removeEventListener("click", myFunction01);
-                }
-            </pre>
-      </div>
-      <script>
-        var btn = document.getElementById("demo8");
-        btn.addEventListener("click", myFunction01);
-
-        function myFunction01() {
-          alert(Math.random());
-          btn.removeEventListener("click", myFunction01);
-        }
-      </script>
-      <details>
-        <summary>Evento manipulador...</summary>
-        <pre>
-                // Syntax
-                    // element.addEventListener(evento, funcion, useCapture(opcional));
-                
-                    // El primer parámetro es el tipo de evento (como "clic" o "mousedown").
-                    // El segundo parámetro es la función a la que queremos llamar cuando se produce el evento.
-                    // El tercer parámetro es un valor booleano que especifica si se va a utilizar el burbujeo de eventos o la captura de eventos. Este parámetro es opcional y se describirá en la siguiente lección.
-                // 
-
-                // Ejemplo
-                    // element.addEventListener("click0", myFunction0);
-                    // element.addEventListener("mouseover0", myFunction0);
-
-                    // function myFunction0() {
-                    //   alert("Hello World!");
-                    // }
-
-                    // remover un evento
-                    // element.removeEventListener("mouseover0", myFunction0);
-                // 
-                </pre>
-      </details>
-      <hr>
+              // <font class="green"><u>evento</u></font> ("clic" o "mousedown").
+              // <font class="purp"><u>función</u></font> a la que queremos llamar cuando se produce el evento.
+              // <u>useCapture(opcional)</u>: es un valor booleano que especifica si se va a utilizar
+                                         el burbujeo de eventos o la captura de eventos.
+          
+            // Ejemplo
+              element.<font class="blue">addEventListener</font>("<font class="green">click</font>", myFunction0);
+              element.<font class="blue">addEventListener</font>("<font class="green">mouseover</font>", myFunction0);
+              function <font class="blue">myFunction0</font>() {
+                alert("<font class="green">Hello World!</font>");
+              }
+              // remover un evento
+              element.<font class="blue">removeEventListener</font>("mouseover", myFunction0);
+          </pre>
+        </details>
+      </fieldset>
 
       <!-- Propagacion de eventos - bubbling & capturing -->
-      <h2 class="subtitulo"> Propagacion de eventos - bubbling & capturing</h2>
-      <pre>
-                Hay dos formas de propagación de eventos en HTML DOM: burbujeo y captura.
+      <fieldset>
+        <legend> <h2> Propagacion de eventos - bubbling & capturing</h2> </legend>
 
-                La propagación de eventos da orden en la que se ejecutan las funciones,
-                (ej. Si tiene un elemento < p> dentro de un elemento < div> y el usuario hace clic en el elemento < p>,
-                ¿qué evento de "clic" de elemento debe manejarse primero?)
-
-                <u>Bubbling</u>: primero < p> y luego < div>. (de adentro hacia afuera).
-                <u>Capturing</u>: primero < div> y luego < p>. (de afuera hacia adentro).
-                
-                Esta funcion permite especificar el tipo de propagación, con el parametro "useCapture".
-                <code>addEventListener(event, function, useCapture)</code>
-                
-                
-                <u>BUBBLING</u>: Desde adentro hacia afuera. (Por defecto = FALSE).
-                    <code>elem1.addEventListener("click02", myFunction02, false);</code>
-                
-                <u>CAPTURING</u>: Desde afuera hacia adentro. (TRUE).
-                    <code>elem2.addEventListener("click02", myFunction02, true);</code>
-            </pre>
-      <hr>
+        Hay dos formas de propagación de eventos en HTML DOM: burbujeo y captura. <br><br>
+        La propagación de eventos da orden en la que se ejecutan las funciones, <br>
+        (ej. Si tiene un elemento &lt;p> dentro de un elemento &lt;div> y el usuario hace clic en el elemento &lt;p>, <br>
+        ¿qué evento de "clic" de elemento debe manejarse primero?) <br><br>
+        <u>Bubbling</u>: primero &lt;p> y luego &lt;div>. (de adentro hacia afuera). <br>
+        <u>Capturing</u>: primero &lt;div> y luego &lt;p>. (de afuera hacia adentro). <br><br>
+      
+        <font class="comentario">// Sintax </font> <br>
+        <div class="codigo">addEventListener(event, function, useCapture)</div>
+      
+        <font class="comentario"><u>BUBBLING</u>: Desde adentro hacia afuera. (Por defecto = FALSE).</font> <br>
+          <div class="codigo">elem1.addEventListener("click02", myFunction02, false);</div>
+      
+        <font class="comentario"><u>CAPTURING</u>: Desde afuera hacia adentro. (TRUE).</font> <br>
+          <div class="codigo">elem2.addEventListener("click02", myFunction02, true);</div>
+      </fieldset>
 
       <!-- Image Slider -->
-      <h2 class="subtitulo"> Image Slider </h2>
-      <div>
-        <button onclick="prev()"> Prev </button>
-        <img id="slider" src="https://www.sololearn.com/uploads/slider/1.jpg" width="200px" height="100px" />
-        <button onclick="next()"> Next </button>
-      </div> <br>
-
-      <div class="codigo">
-        <pre>
-                < button onclick="prev()"> Prev </ button>
-                < img id="slider" src="https://www.sololearn.com/uploads/slider/1.jpg" width="200px" height="100px"/>
-                < button onclick="next()"> Next </ button>
-                
-                < _script_ >
-                var images = [
-                    'http://www.sololearn.com/uploads/slider/1.jpg', 
-                    'http://www.sololearn.com/uploads/slider/2.jpg', 
-                    'http://www.sololearn.com/uploads/slider/3.jpg'
-                ];
-
-                var num = 0;
-
-                function next() {
-                    var slider = document.getElementById('slider');
-                    num++;
-                    if(num >= images.length) {
-                        num = 0;
-                    }
-                    slider.src = images[num];
+      <fieldset>
+        <legend> <h2> Image Slider </h2> </legend>
+        <div>
+          <button onclick="prev()"> Prev </button>
+          <img id="slider" src="https://www.sololearn.com/uploads/slider/1.jpg" width="200px" height="100px" />
+          <button onclick="next()"> Next </button>
+        </div>
+        <details>
+          <summary>Codigo...</summary>
+          <div class="codigo">
+            <pre>
+              &lt;button onclick="prev()"> Prev &lt;/button>
+              &lt;img id="slider" src="https://www.sololearn.com/uploads/slider/1.jpg" width="200px" height="100px"/>
+              &lt;button onclick="next()"> Next &lt;/button>
+        
+              &lt;script>
+              var images = [
+                'http://www.sololearn.com/uploads/slider/1.jpg',
+                'http://www.sololearn.com/uploads/slider/2.jpg',
+                'http://www.sololearn.com/uploads/slider/3.jpg'
+              ];
+              var num = 0;
+              function next() {
+                var slider = document.getElementById('slider');
+                num++;
+                if(num >= images.length) {
+                  num = 0;
                 }
-
-                function prev() {
-                    var slider = document.getElementById('slider');
-                    num--;
-                    if(num < 0) {
-                        num = images.length-1;
-                    }
-                    slider.src = images[num];
+                slider.src = images[num];
+              }
+              function prev() {
+                var slider = document.getElementById('slider');
+                num--;
+                if(num < 0) {
+                  num = images.length-1;
                 }
-                < _/script_ >
+                slider.src = images[num];
+              }
+              &lt;/script>
             </pre>
-      </div>
-      <script>
-        var images = [
-          'http://www.sololearn.com/uploads/slider/1.jpg',
-          'http://www.sololearn.com/uploads/slider/2.jpg',
-          'http://www.sololearn.com/uploads/slider/3.jpg'
-        ];
-        var num = 0;
-        function next() {
-          var slider = document.getElementById('slider');
-          num++;
-          if (num >= images.length) {
-            num = 0;
+          </div>
+        </details>
+        <script>
+          var images = [
+            'http://www.sololearn.com/uploads/slider/1.jpg',
+            'http://www.sololearn.com/uploads/slider/2.jpg',
+            'http://www.sololearn.com/uploads/slider/3.jpg'
+          ];
+          var num = 0;
+          function next() {
+            var slider = document.getElementById('slider');
+            num++;
+            if (num >= images.length) {
+              num = 0;
+            }
+            slider.src = images[num];
           }
-          slider.src = images[num];
-        }
-        function prev() {
-          var slider = document.getElementById('slider');
-          num--;
-          if (num < 0) {
-            num = images.length - 1;
+          function prev() {
+            var slider = document.getElementById('slider');
+            num--;
+            if (num < 0) {
+              num = images.length - 1;
+            }
+            slider.src = images[num];
           }
-          slider.src = images[num];
-        }
-      </script>
-      <hr>
+        </script>
+      </fieldset>
 
       <!-- validacion de formularios -->
-      <h2 class="subtitulo"> Validacion de formularios </h2>
-      <div class="codigo">
-        <pre>
-                < form onsubmit="return validate()" method="post">
-                    Number: < input type="text" name="num1" id="num1" />
-                    Repeat: < input type="text" name="num2" id="num2" />
-                    < input type="submit" value="Submit" />
-                < /form>
-                
-                < _script_ >
-                function validate() {
-                    var n1 = document.getElementById('num1');
-                    var n2 = document.getElementById('num2');
-                    if(n1.value != '' && n2.value != '') {
-                        if(n1.value == n2.value) {
-                        return true;
-                        }
-                    }
-                    alert("The values should be equal and not blank");
-                    return false;
+      <fieldset>
+        <legend> <h2> Validacion de formularios </h2> </legend>
+        <div class="codigo">
+          <pre>
+            &lt;<span>form</span> <font class="purp">onsubmit</font>="return validate()" method="post">
+              Number: &lt;input type="text" name="num1" id="num1" />
+              Repeat: &lt;input type="text" name="num2" id="num2" />
+              &lt;input type="submit" value="Submit" />
+            &lt;/<span>form</span>>
+      
+            &lt;<span>script</span>>
+            <font class="purp">function</font> <font class="blue">validate</font>() {
+              <font class="purp">var</font> n1 = document.<font class="blue">getElementById</font>('<font class="green">num1</font>');
+              <font class="purp">var</font> n2 = document.<font class="blue">getElementById</font>('<font class="green">num2</font>');
+              <font class="aqua">if</font>(n1.value <font class="purp">!=</font> '' <font class="purp">&&</font> n2.value <font class="purp">!=</font> '') {
+                <font class="aqua">if</font>(n1.value <font class="purp">==</font> n2.value) {
+                <font class="aqua">return</font> <font class="orange">true</font>;
                 }
-                < _/script_ >
-            </pre>
-      </div>
-    </div>
+              }
+              <font class="blue">alert</font>("<font class="green">The values should be equal and not blank</font>");
+              <font class="aqua">return</font> <font class="orange">false</font>;
+            }
+            &lt;/<span>script</span>>
+          </pre>
+        </div>
+      </fieldset>
+
+    </div> <!-- Eventos -->
   </div>
 
   <!--ECMAScript  -->
@@ -1088,114 +1081,134 @@
     <h2 class="titulo"> ECMAScript </h2>
 
     <!-- Variables y Strings -->
-    <div class="borders">
-      <!-- Var & Let -->
-      <h2 class="subtitulo"> Var & Let</h2>
+    <fieldset>
+      <legend> <h2>Variables y Strings</h2> </legend>
+      <h3> Var & Let</h3>
       <div class="codigo">
-        <pre>
-                <b>var</b> a = 10;         // publica fuera del {}.
-                <b>let</b> b = true;       // privada dentro del {}.
-                <b>const</b> c = 'hello';  // privado y no se puede modificar.
-            </pre>
-      </div>
-      <br>
-      <hr>
-
-      <!-- Literales de plantilla en ES6 -->
-      <h2 class="subtitulo"> Literales de plantilla</h2>
-      <div class="codigo">
-        <pre>
-                let <b>nombre</b> = 'David';
-                let mensaje = `Welcome <u>${<b>nombre</b>}</u>!`;
-            </pre>
-      </div>
-    </div>
-
-    <div class="borders">
-      <!-- bucles For -->
-      <h2 class="subtitulo"> Bucles For en ES6 </h2>
-      <div class="codigo">
-        <pre>
-                <u><b>For In:</b></u>
-                let objsV01 = {a:1, b:2, c:3}; 
-                for (let v in objsV01) {
-                    document.write(v);
-                }
-
-                <u><b>For Of:</b></u>
-                let objsV02 = ["xL", "y", "z"];
-                for (let v of objsV02) { 
-                    document.write(v);
-                } 
-            </pre>
+        <font class="purp">var</font> a <font class="purp">=</font> <font class="orange">10</font>;         <font class="comentario">// publica fuera del {}.</font> <br>
+        <font class="purp">let</font> b <font class="purp">=</font> <font class="orange">true</font>;       <font class="comentario">// privada dentro del {}.</font> <br>
+        <font class="purp">const</font> <span>c</span> <font class="purp">=</font> '<font class="green">hello</font>';  <font class="comentario">// privado y no se puede modificar.</font> <br>
       </div>
       <hr>
 
+      <h3> Literales de plantilla</h3>
+      <div class="codigo">
+        <font class="purp">let</font> <b>nombre</b> <font class="purp">=</font> '<font class="green">David</font>'; <br>
+        <font class="purp">let</font> mensaje <font class="purp">=</font> `<font class="green">Welcome</font> <font class="aqua">${</font><b>nombre</b><font class="aqua">}</font>!`;
+      </div>
+    </fieldset>
+
+    <!-- bucles For -->
+    <fieldset>
+      <legend> <h2> Bucles For en ES6 </h2> </legend>
+      <div class="codigo">
+        <u><b>For In:</b></u> <br>
+        <font class="purp">let</font> objsV01 <font class="purp">=</font> {a:<font class="orange">1</font>, b:<font class="orange">2</font>, c:<font class="orange">3</font>}; <br>
+        <font class="aqua">for</font> (<font class="purp">let</font> v <font class="purp">in</font> objsV01) { <br>
+          &nbsp; document.<font class="blue">write</font>(v); <br>
+        } <br> <br>
+
+        <u><b>For Of:</b></u> <br>
+        <font class="purp">let</font> objsV02 <font class="purp">=</font> ["<font class="green">xL</font>", "<font class="green">y</font>", "<font class="green">z</font>"]; <br>
+        <font class="aqua">for</font> (<font class="purp">let</font> v <font class="purp">of</font> objsV02) { <br>
+          &nbsp; document.<font class="blue">write</font>(v); <br>
+        }
+      </div>
+      </fieldset>
+      
       <!-- Funciones -->
-      <h2 class="subtitulo"> Funciones en ES6</h2>
-      <div class="codigo">
-        <pre>
-                <u><b>Antes:</b></u>
-                function add = (x, y) { 
-                    var sum = x + y; 
-                    console.log(sum); 
-                }
+      <fieldset>
+        <legend> <h2> Funciones en ES6</h2> </legend>
+        <div class="flex">
+          <div>
+            <sub>Antes:</sub>
+            <div class="codigo">
+              <font class="purp">function</font> <font class="blue">add</font> (<span>x</span>, <span>y</span>) { <br>
+                &nbsp; <font class="purp">var</font> sum <font class="purp">=</font> x <font class="purp">+</font> y; <br>
+                &nbsp; console.<font class="blue">log</font>(sum); <br>
+              }
+            </div>
+          </div>
+          <div class="flecha"></div>
+          <div>
+            <sub>Ahora:</sub>
+            <div class="codigo">
+              <font class="purp">const</font> <font class="blue">add</font> <font class="purp">=</font> (<span>x</span>, <span>y</span>) <font class="purp">=></font> { <br>
+                &nbsp; <font class="purp">let</font> sum <font class="purp">=</font> x <font class="purp">+</font> y; <br>
+                &nbsp; console.<font class="blue">log</font>(sum); <br>
+              }
+            </div>
+          </div>
+        </div>
 
-                <u><b>Despues:</b></u>
-                const add = (x, y) => { 
-                    let sum = x + y; 
-                    console.log(sum);
-                }
-            </pre>
-      </div>
+        <div class="codigo">
+          <u><b>Funcion simple SIN argumento:</b></u> <br>
+            <font class="purp">const</font> <font class="blue">funcSinParam</font> <font class="purp">=</font> () <font class="purp">=></font> document.<font class="blue">write</font>("<font class="green">Hola!</font>"); <br>
+            <font class="blue">funcSinParam</font>(); <br>
+            <font class="comentario">// Hola!</font> <br><br>
 
-      <div class="codigo">
-        <pre>
-                <u><b>Funcion simple con un argumento:</b></u>
-                    const saludar = x => "Bienvenido " + x; 
-                    document.write(saludar("Nico") + " (ej func con 1 arg)");  // Bienvenido Nico
+          <u><b>Funcion simple CON argumento:</b></u> <br>
+            <font class="purp">const</font> <font class="blue">saludar</font> <font class="purp">=</font> x <font class="purp">=></font> "<font class="green">Bienvenido</font> " <font class="purp">+</font> x; <br>
+            document.<font class="blue">write</font>(<font class="blue">saludar</font>("<font class="green">Nico</font>")); <br>
+            <font class="comentario">// Bienvenido Nico.</font>
+        </div>
+      </fieldset>
 
-                <u><b>Funcion simple sin argumento:</b></u> 
-                    const funcSinParam = () => document.write("Hola! (ej Func sin arg)");
-                    funcSinParam();
-            </pre>
-      </div>
+      <!-- ForEach -->
+      <fieldset>
+        <legend> <h2>ForEach en ES6 (recorrer Arrays)</h2> </legend>
+        <div class="flex">
+          <div>
+            <u><b>Antes:</b></u>
+            <div class="codigo">
+              <font class="purp">var</font> arrFE <font class="purp">=</font> [2,3,7,8]; <br><br>
+              arrFE.<font class="blue">forEach</font>(<font class="purp">function</font>(<span>el</span>) { <br>
+                &nbsp; document.<font class="blue">write</font>(<span>el</span> <font class="purp">*</font> 2 <font class="purp">+</font> " "); <br>
+              }); <br>
+              <font class="comentario">// 4 6 14 16</font>
+            </div>
+          </div>
+          <div class="flecha"></div>
+          <div>
+            <u><b>Ahora:</b></u>
+            <div class="codigo">
+              <font class="purp">const</font> arrFE2 <font class="purp">=</font> [2,3,7,8];<br><br>
+              arrFE2.<font class="blue">forEach</font>(<span>v</span> <font class="purp">=></font> {<br>
+                &nbsp; document.<font class="blue">write</font>(<span>v</span> <font class="purp">*</font> 2 <font class="purp">+</font> " ");<br>
+              }); <br>
+              <font class="comentario">// 4 6 14 16</font>
+            </div>
+          </div>
+        </div>
+      </fieldset>
 
-      <div class="codigo">
-        <pre>
-                <u><b>ForEach (recorrer Arrays)</b></u> 
-                <u><b>Antes:</b></u> 
-                    var arrFE = [2,3,7,8]; 
 
-                    arrFE.forEach(function(el) { 
-                    document.write(el * 2);
-                    });
-                
-                <u><b>Ahora:</b></u>
-                    const arrFE2 = [2,3,7,8];
-
-                    arrFE2.forEach(v => {
-                    document.write(v * 2);
-                    });
-            </pre>
-      </div>
-
-      <div class="codigo">
-        <pre>
-                <u><b>Parametros predeterminados:</b></u>
-                <u><b>Antes:</b></u>
-                    function testES6(a, b=3, c=42){ 
-                    return a + b + c;
-                    }
-                    document.write(testES6(5); // 50
-
-                <u><b>Ahora:</b></u>
-                    const test0 = (a, b = 3, c = 42) => {
-                    return a + b + c;
-                    }
-                    document.write(test0(5)); //50
-            </pre>
-      </div>
+      <fieldset>
+        <legend> <h2>Parametros predeterminados:</h2> </legend>
+        <div class="flex">
+          <div>
+            <u><b>Antes:</b></u>
+            <div class="codigo">
+              <font class="purp">function</font> <font class="blue">testES6</font>(a, b=3, c=42){ <br>
+                &nbsp; <font class="aqua">return</font> a + b + c; <br>
+              } <br>
+              document.<font class="blue">write</font>(<font class="blue">testES6</font>(5)); <br>
+              <font class="comentario">// 50</font>
+            </div>
+          </div>
+          <div class="flecha"></div>
+          <div>
+            <u><b>Ahora:</b></u>
+            <div class="codigo">
+              <font class="purp">const</font> <font class="blue">test0</font> = (a, b=3, c=42) <font class="purp">=></font> { <br>
+                &nbsp; <font class="aqua">return</font> a + b + c; <br>
+              } <br>
+              document.<font class="blue">write</font>(<font class="blue">test0</font>(5)); <br>
+              <font class="comentario">//50</font>
+            </div>
+          </div>
+        </div>
+      </fieldset>
     </div>
 
 
@@ -1720,7 +1733,13 @@
     </div>
 
   </div>
-
+  <script>
+    // Poner Flechas a las clases "flecha"
+    var flecha = document.getElementsByClassName("flecha");
+    for (var x = 0; x <flecha.length; x++) {
+      flecha[x].innerHTML = "<h2>➜</h2>";
+    }
+  </script>
   <script type="text/javascript" src="../MenuJS.js"></script>
 </main>
 </body>
