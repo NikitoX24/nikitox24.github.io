@@ -816,8 +816,6 @@
       </div>
     </fieldset>
 
-    <br><br>
-
     <!-- Eventos -->
     <div class="borders">
       <h1 class="titulo">Eventos</h1>
@@ -1048,12 +1046,33 @@
       <!-- validacion de formularios -->
       <fieldset>
         <legend> <h2> Validacion de formularios </h2> </legend>
+
+        <form onsubmit="return validate()" method="post">
+          Numero: <input type="text" name="num1" id="num1" /> <br>
+          Repetir: <input type="text" name="num2" id="num2" /> <br>
+          <input type="submit" value="Enviar" />
+        </form>
+  
+        <script>
+        function validate() {
+          var n1 = document.getElementById('num1');
+          var n2 = document.getElementById('num2');
+          if(n1.value != '' && n2.value != '') {
+            if(n1.value == n2.value) {
+              return true;
+            }
+          }
+          alert("Los valores deben ser iguales y no en blanco.");
+          return false;
+        }
+        </script> <br>
+
         <div class="codigo">
           <pre>
             &lt;<span>form</span> <font class="purp">onsubmit</font>="return validate()" method="post">
-              Number: &lt;input type="text" name="num1" id="num1" />
-              Repeat: &lt;input type="text" name="num2" id="num2" />
-              &lt;input type="submit" value="Submit" />
+              Number: &lt;<span>input</span> <font class="purp">type</font>="<font class="green">text</font>" <font class="purp">name</font>="<font class="green">num1</font>" <font class="purp">id</font>="<font class="green">num1</font>" />
+              Repeat: &lt;<span>input</span> <font class="purp">type</font>="<font class="green">text</font>" <font class="purp">name</font>="<font class="green">num2</font>" <font class="purp">id</font>="<font class="green">num2</font>" />
+              &lt;<span>input</span> <font class="purp">type</font>="<font class="green">submit</font>" <font class="purp">value</font>="<font class="green">Submit</font>" />
             &lt;/<span>form</span>>
       
             &lt;<span>script</span>>
@@ -1062,13 +1081,54 @@
               <font class="purp">var</font> n2 = document.<font class="blue">getElementById</font>('<font class="green">num2</font>');
               <font class="aqua">if</font>(n1.value <font class="purp">!=</font> '' <font class="purp">&&</font> n2.value <font class="purp">!=</font> '') {
                 <font class="aqua">if</font>(n1.value <font class="purp">==</font> n2.value) {
-                <font class="aqua">return</font> <font class="orange">true</font>;
+                  <font class="aqua">return</font> <font class="orange">true</font>;
                 }
               }
               <font class="blue">alert</font>("<font class="green">The values should be equal and not blank</font>");
               <font class="aqua">return</font> <font class="orange">false</font>;
             }
             &lt;/<span>script</span>>
+          </pre>
+        </div>
+        <hr>
+
+        <p>Please input a number between 1 and 10:</p>
+        <input id="numb">
+        <button type="button" onclick="myFunction()">Submit</button>
+        <p id="demo"></p>
+        <script>
+        function myFunction() {
+          let x = document.getElementById("numb").value;
+          
+          let text;
+          
+          if (isNaN(x) || x < 1 || x > 10) {
+            text = "Input not valid";
+          } else {
+            text = "Input OK";
+          }
+          document.getElementById("demo").innerHTML = text;
+        }
+        </script>
+        <div class="codigo">
+          <pre>
+            &lt;p>Please input a number between 1 and 10:&lt;/p>
+            &lt;input id="numb">
+            &lt;button type="button" onclick="myFunction()">Submit&lt;/button>
+            &lt;p id="demo"></p>
+
+            function myFunction() {
+              let x = document.getElementById("numb").value;
+            
+              let text;
+            
+              if (isNaN(x) || x < 1 || x > 10) {
+                text = "Input not valid";
+              } else {
+                text = "Input OK";
+              }
+              document.getElementById("demo").innerHTML = text;
+            }
           </pre>
         </div>
       </fieldset>
