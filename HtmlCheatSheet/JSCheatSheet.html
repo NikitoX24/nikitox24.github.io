@@ -34,8 +34,8 @@
   <h1 class="titulo">JavaScript</h1>
   
   <!-- Fundamentos -->
-  <div class="borders">
-    <h2 class="titulo">Fundamentos</h2>
+  <div class="borders"> 
+    <h1 class="titulo">Fundamentos</h1>
 
     <!-- Script -->
     <fieldset>
@@ -89,66 +89,71 @@
   </div>
 
   <!-- Condicionales y Bucles -->
-  <div class="borders">
+  <div class="borders"> 
     <h1 class="titulo">Condicionales y Bucles</h1>
 
-    <h3 class="subtitulo">Declaracion If:</h3>
-    <div class="codigo">
-      <font class="aqua">if</font> (condicion) { <br>
-        &nbsp; <font class="comentario">// Declaraciones si es Verdadero.</font> <br>
-      } <br>
-      <font class="aqua">else</font> { <br>
-        &nbsp; <font class="comentario">// Declaraciones si es Falso.</font> <br>
-      }
-    </div> <hr>
-
-    <h3 class="subtitulo">Declaracion Switch:</h3>
-    <div class="codigo">
-      <font class="aqua">switch</font> ( Expresion ) { <br>
-        &nbsp;<font class="aqua">Case</font> n1: <br>
-          &nbsp; <font class="comentario">// Bloque de Codigo</font> <br>
-        &nbsp; <font class="aqua">breack;</font> <br>
-        &nbsp;<font class="aqua">Case</font> n2: <br>
-          &nbsp; <font class="comentario">// Bloque de Codigo</font> <br>
-        &nbsp; <font class="aqua">breack;</font> <br>
-        &nbsp;<font class="aqua">default:</font> <br>
-          &nbsp; <font class="comentario">// Bloque de Codigo</font> <br>
-        &nbsp; <font class="aqua">breack;</font> <br>
+    <fieldset> <!-- Condicionales -->
+      <legend> <h2>Condicionales</h2> </legend>
+      <div class="codigo">
+        <font class="aqua">if</font> (condicion) { <br>
+          &nbsp; <font class="comentario">// Declaraciones si es Verdadero.</font> <br>
+        } <br>
+        <font class="aqua">else</font> { <br>
+          &nbsp; <font class="comentario">// Declaraciones si es Falso.</font> <br>
         }
-    </div> <hr>
+      </div>
 
-    <h3 class="subtitulo">Bucle For:</h3>
-    <div class="codigo">
-      <font class="aqua">for</font> ( Condicion1; Condicion2; Condicion3 ) { <br>
-        &nbsp; <font class="comentario">// Bloque de Codigo</font> <br>
-      }
-    </div> <hr>
+      <div class="codigo">
+        <font class="aqua">switch</font> ( Expresion ) { <br>
+          &nbsp;<font class="aqua">Case</font> n1: <br>
+            &nbsp; <font class="comentario">// Bloque de Codigo</font> <br>
+          &nbsp; <font class="aqua">breack;</font> <br>
+          &nbsp;<font class="aqua">Case</font> n2: <br>
+            &nbsp; <font class="comentario">// Bloque de Codigo</font> <br>
+          &nbsp; <font class="aqua">breack;</font> <br>
+          &nbsp;<font class="aqua">default:</font> <br>
+            &nbsp; <font class="comentario">// Bloque de Codigo</font> <br>
+          &nbsp; <font class="aqua">breack;</font> <br>
+          }
+      </div>
+    </fieldset>
 
-    <h3 class="subtitulo">Bucle While:</h3>
+    <fieldset> <!-- Bucles -->
+      <legend><h2>Bucles</h2></legend>
+      <h3 class="subtitulo">Bucle For:</h3>
+      <div class="codigo">
+        <font class="aqua">for</font> ( Condicion1; Condicion2; Condicion3 ) { <br>
+          &nbsp; <font class="comentario">// Bloque de Codigo</font> <br>
+        }
+      </div> <hr>
 
-    <div class="codigo">
-      <font class="aqua">while</font>( condicion ) { <br>
-        &nbsp; <font class="comentario">// Bloque de Codigo</font> <br>
-      }
-    </div>
+      <h3 class="subtitulo">Bucle While / Do-While:</h3>
 
-    <h3 class="subtitulo">Bucle Do-While:</h3>
-    <div class="codigo">
-      <font class="aqua">do</font> { <br>
-        &nbsp; <font class="comentario">// Bloque de Codigo</font> <br>
-      } <br>
-      <font class="aqua">while</font> (condicion)
-    </div> <hr>
+      <div class="flex">
+        <div class="codigo">
+          <font class="aqua">while</font> (Condicion ) { <br>
+            &nbsp; <font class="comentario">// Bloque de Codigo</font> <br>
+          }
+        </div>
 
-    <h3 class="subtitulo"> Funciones </h3>
-    <div class="codigo">
-      <font class="purp">function</font> <font class="blue">name</font>( parametro1, parametro2, parametro3 ) { <br>
-        &nbsp; <font class="aqua">return</font> param1 + param2 + param3; <br>
-      }
-    </div>
+        <div class="codigo">
+          <font class="aqua">do</font> { <br>
+            &nbsp; <font class="comentario">// Bloque de Codigo</font> <br>
+          } <br>
+          <font class="aqua">while</font> (Condicion)
+        </div>
+      </div>
+    </fieldset>
 
-    <!-- Alert, Prompt, Confirm. -->
-    <fieldset>
+    <fieldset> <!-- Funcion -->
+      <legend> <h2> Funciones </h2> </legend>
+      <div class="codigo">
+        <font class="purp">function</font> <font class="blue">name</font>( parametro1, parametro2, parametro3 ) { <br>
+          &nbsp; <font class="aqua">return</font> param1 + param2 + param3; <br> }
+      </div>
+    </fieldset>
+
+    <fieldset> <!-- Alert, Prompt, Confirm. -->
       <legend> <h2>Alert, Prompt, Confirm.</h2> </legend>
       <button onclick="botonalerta1();"> Alert </button>
       <script>
@@ -177,43 +182,42 @@
   </div>
 
   <!-- Objetos -->
-  <div class="borders">
+  <div class="borders"> 
     <h1 class="titulo">Objetos</h1>
 
-    <h3 class="subtitulo">Crear Objeto</h3>
-    <div class="codigo">
-      <font class="purp">var</font> person = { <br>
-        &nbsp; name: "john", <br>
-        &nbsp; age: 31, <br>
-        &nbsp; favColor: "green", <br> 
-        &nbsp; height: 183 <br>
-      };
-    </div> <hr>
+    <fieldset>
+      <legend><h2>Crear y Usar Objs</h2></legend>
+      <div class="codigo">
+        <font class="purp">var</font> person = { <br>
+          &nbsp; <b>name:</b> "john", <br>
+          &nbsp; <b>age:</b> 31, <br>
+          &nbsp; <b>favColor:</b> "green", <br> 
+          &nbsp; <b>height:</b> 183 <br>
+        };
+      </div>
 
-    <h3 class="subtitulo">Acceder a las propiedades de los objetos:</h3>
-    <div class="codigo">
+      <div class="codigo">
         person.name; <br>
         person["name"];
-    </div> <hr>
+      </div>
+    </fieldset>
 
-    <h3 class="subtitulo">Constructor de Objetos</h3>
-    <div class="codigo">
-      <font class="purp">function</font> <font class="blue">person</font>(name, age, color) { <br>
-        &nbsp; this.name = name; <br>
-        &nbsp; this.age = age; <br>
-        &nbsp; this.color = color <br>
-      }
-    </div> <hr>
+    <fieldset>
+      <legend><h2>Constructor</h2></legend>
+      <div class="codigo">
+        <font class="purp">function</font> <font class="blue">person</font>(name, age, color) { <br>
+          &nbsp; this.name = name; <br>
+          &nbsp; this.age = age; <br>
+          &nbsp; this.color = color <br>
+        }
+      </div>
 
-    <h3 class="subtitulo">Crear y Usar Objeto del constructor</h3>
-    <div class="codigo">
-      <font class="purp">var</font> p1 = <font class="purp">new</font> <font class="blue">person</font>("John", 42, "green") <br>
-      <font class="purp">var</font> p2 = <font class="purp">new</font> <font class="blue">person</font>("Amy", 21, "red") <br> <br>
-      
-      document.<font class="blue">write</font>(p1.age) <font class="comentario">//42</font> <br>
-      document.<font class="blue">write</font>(p2.name) <font class="comentario">//Amy</font>
-    </div>
-    <hr>
+      <div class="codigo">
+        <font class="purp">var</font> p1 = <font class="purp">new</font> <font class="blue">person</font>("John", 42, "green") <br>
+        
+        document.<font class="blue">write</font>(p1.age) <font class="comentario">//42</font> <br>
+      </div>
+    </fieldset>
 
     <!-- Metodos -->
     <fieldset>

@@ -78,14 +78,14 @@ font.prop{
   color: rgb(114, 125, 122);
   text-shadow: .1px .1px rgb(124, 156, 150);
 }
-font.comentario{
+font.comentario{ /* JS */
   color: rgb(91, 91, 91);
 }
 font.aqua{
   color: rgba(0, 172, 210, 0.62);
   text-shadow: .1px .1px rgb(124, 156, 150);
 }
-font.gray{
+font.gray{ /* CS */
   color: gray;
 }
 .icons {
@@ -113,8 +113,9 @@ font.gray{
   text-transform: uppercase;
   text-decoration: underline;
   text-shadow: 5px 2px 4px grey;
-  line-height: 6px;
+  line-height: 0px;
   font-variant: small-caps;
+  word-spacing: 6px;
 }
 .subtitulo {
   text-decoration: underline;

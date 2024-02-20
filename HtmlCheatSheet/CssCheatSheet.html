@@ -322,13 +322,12 @@
     <!-- text-indent (Sangria) -->
     <fieldset>
       <legend> <h2> Text-Indent (Sangría)</h2> </legend>
-      <p style="text-indent: 30px;">
-        Este es un ejemplo de 
-        <strong>text-indent </strong> (sangría), lo cual deja un poco de espacio antes del texto.
-         Por lo que la primera línea del texto tiene una sangría hacia la derecha de 30px. (voy a repetir el texto)
-         Por lo que la primera línea del texto tiene una sangría hacia la derecha de 30px.
-        <div class="codigo"> <b>text-indent:</b> 30px; </div>
-      </p>
+      <div class="flex">
+        <div class="ej">
+          <p style="text-indent: 30px; text-align: justify;"> Este es un ejemplo de <strong>text-indent </strong> (sangría), lo cual deja un poco de  antes del texto.</p>
+        </div>
+        <div class="cod"> <b>text-indent:</b> 30px; </div>
+      </div>
     </fieldset>
 
     <!-- Text-Sadow -->
@@ -342,7 +341,7 @@
             (Se puede poner más sombras separadas por un "Coma").
           </font>
         </div>
-      </div><hr>
+      </div>
 
       <div class="flex">
         <div class="ej"> <h1 style="text-shadow: rgba(0, 0, 255, 1) -1px -1px 0.3em;"> Text-shadow with blur effect</h1> </div>
@@ -353,39 +352,41 @@
     <!-- Text-Transform -->
     <fieldset>
       <legend> <h2>Text-Transform</h2> </legend> 
-      <p style="text-transform: capitalize;">
-        el valor "capitalize" transforma el primer carácter de cada palabra en mayúsculas;
-        Todos los demás caracteres no se ven afectados. <br>
-      </p>
-      <div class="codigo"> text-transform: capitalize; <br><u>Valores</u>: capitalize, uppercase, lowercase.</div>
+      <div class="flex">
+        <p class="ej" style="text-transform: capitalize;">
+          transformar el primer carácter de cada palabra en mayúsculas.<br>
+        </p>
+        <div class="cod"> <b>text-transform:</b> capitalize;<br> <font class="gray"><b>text-transform:</b> capitalize, uppercase, lowercase.</font></div>
+      </div>
     </fieldset>
 
     <!-- Text-Spacing -->
     <fieldset>
       <legend> <h2>Text-Spacing </h2> </legend>
-      <div>
-        <!-- Letter-Spacing -->
-        <p style="letter-spacing: 4px;">This paragraph is letter-spaced at 4px.</p>
-        <div class="codigo"> letter-spacing: 4px; </div>
-        <hr>
-        <!-- Word-Spacing -->
-        <p style="word-spacing: 30px;">This paragraph is word-spaced at 30px.</p>
-        <div class="codigo"> word-spacing: 30px; </div>
+      <div class="flex">
+        <p class="ej" style="letter-spacing: 4px;">Ejemplo de letter-spacing.</p>
+        <div class="cod"> <b>letter-spacing:</b> 4px; </div>
+      </div>
+      <div class="flex">
+        <p class="ej" style="word-spacing: 30px;">Ejemplo de word-spacing.</p>
+        <div class="cod"> <b>word-spacing:</b> 30px; </div>
       </div>
     </fieldset>
 
     <!-- Wite-Spacing -->
     <fieldset>
       <legend> <h2>Wite-Spacing</h2> </legend>
-      <p style="white-space: nowrap;">
-        Este párrafo     tiene      varios
-        espacios y   un    salto de línea,
-        pero   será ignorado,   ya que usamos el valor
-        nowrap.
-      </p>
-      <div class="codigo">
-        white-space: nowrap; <br>
-        <u>Valores</u>: pre, pre-line, pre-wrap.
+
+      <div class="flex">
+        <p class="ej" style="white-space: nowrap;">
+          Este párrafo     tiene      varios
+          espacios y   un    salto de línea,
+          pero   será ignorado.
+        </p>
+        <div class="cod">
+          <b>white-space:</b> nowrap;
+          <font class="gray">(pre, pre-line, pre-wrap).</font>
+        </div>
       </div>
     </fieldset>
   </div>
@@ -397,111 +398,61 @@
     <!-- Box-Model -->
     <fieldset>
       <legend> <h2> Box-Model </h2> </legend>
-      <div>
-        <!-- Box-Border -->
-        <p style="border: 5px solid green;">This is an example of a solid border.</p>
-        <div class="codigo">
-          <u>border</u>: 5px solid green; <br>
-          /* tamaño, estilo, color */
-        </div><hr>
-
-        <!-- Width & Height -->
+      <div> <!-- Width & Height -->
         <h3 class="numbers">Width & Height</h3>
-        <div class="wh">
-          The total width and height of this element is 100px.
-        </div><br>
-        <style>
-          div.wh {
-            border: 5px solid green;
-            width: 100px;
-            height: 90px;
-          }
-        </style>
-        <div class="codigo">
-          div.wh{
-            border: 5px solid green;
-            width: 100px;
-            height: 90px;
-          }
+        <div class="flex">
+          <div class="wh"> Este div tiene: <br> .Alto (height: 70px) <br> .Ancho (width: 170px) <br> .Borde transparente. </div><br>
+          <style>
+            div.wh {
+              border: 20px solid rgba(8, 95, 0, 0.226);
+              width: 170px;
+              height: 70px;
+            }
+          </style>
+          <div class="codigo">
+            .ejemplodiv{ <br>
+              <b>border:</b> 5px solid rgba(8, 95, 0, 0.226); <br>
+              <b>width:</b> 100px; <br>
+              <b>height:</b> 90px; <br>
+            }
+          </div>
         </div><hr>
 
         <!-- Border-Style -->
         <h2>Border-Style</h2>
         <div class="flex" style="padding: 5px;">
-          <p style="border-style: dotted;">dotted.</p>
-          <p style="border-style: dashed;">dashed.</p>
-          <p style="border-style: double;">double.</p>
-          <p style="border-style: groove;">grooved.</p>
-          <p style="border-style: ridge;">ridged.</p>
-          <p style="border-style: inset;">inset.</p>
-          <p style="border-style: outset;">outset.</p>
+          <p style="border-style: dotted; padding: 5px;">dotted.</p>
+          <p style="border-style: dashed; padding: 5px;">dashed.</p>
+          <p style="border-style: double; padding: 5px;">double.</p>
+          <p style="border-style: groove; padding: 5px;">grooved.</p>
+          <p style="border-style: ridge; padding: 5px;">ridged.</p>
+          <p style="border-style: inset; padding: 5px;">inset.</p>
+          <p style="border-style: outset; padding: 5px;">outset.</p>
         </div>
         <div class="codigo">
-          border-style: dotted/dashed/double/groove/ridge/inset/ouset;
+          <b>border-style:</b> <font class="gray">dotted/dashed/double/groove/ridge/inset/ouset</font>;
         </div>
-      </div> <hr>
-
-      <div class="tbord2"> Transparent borders</div>
-      <style>
-        div.tbord2 {
-          border: 20px solid rgba(77, 131, 72, 0.161);
-          -moz-background-clip: padding-box;
-          -webkit-background-clip: padding-box;
-          background-clip: padding-box;
-          width: 200px;
-          /* position:absolute; */
-          top: 50px;
-          left: 50px;
-          background-color: white;
-        }
-      </style>
-      <details>
-        <summary>Codigo...</summary>
-        <div class="codigo">
-          div.tbord2 { <br>
-            border: 20px solid rgba(77, 131, 72, 0.161); <br>
-            -moz-background-clip: padding-box; <br>
-            -webkit-background-clip: padding-box; <br>
-            background-clip: padding-box; <br>
-            width: 200px; <br>
-            top: 50px; <br>
-            left: 50px; <br>
-            background-color: white; <br>
-          }
-        </div>
-      </details>
+      </div>      
     </fieldset>
-
-    <!-- Background (BODY) -->
-    <!-- 
-      /* Background-Body */
-      body{
-        background-color: beige;
-        background-image: url("../Imgs/TileW.jpg");
-        background-repeat: repeat; /* repeat-x, repeat-y, no-repeat, inherit */
-        background-attachment: fixed; /* fixel, scroll, inherit */
-      }
-    -->
 
     <!-- Background-Image -->
     <fieldset>
       <legend> <h2> Background-Image </h2> </legend>
-      <p class="background-image">Imagen de fondo</p>
-      <style>
-        p.background-image {
-          padding: 15px;
-          background-image: url("../Imgs/banner_orange.png");
-          background-repeat: no-repeat;
-          /* repeat-x, repeat-y, no-repeat, inherit */
-          width: 300px;
-        }
-      </style>
-      <div class="codigo">
-        p.background-image{ <br>
-          background-image: url("../Imgs/banner_orange.png"); <br>
-          background-repeat: no-repeat; <br>
-        } <br>
-        <u>valores</u>: repeat-x, repeat-y, no-repeat, inherit.
+      <div class="flex">
+        <p class="background-image">Imagen de fondo</p>
+        <style>
+          p.background-image {
+            padding: 14px;
+            background-image: url("../Imgs/banner_orange.png");
+            background-repeat: no-repeat;
+            width: 110px;
+            text-align: center;
+          }
+        </style>
+        <div class="codigo">
+          &nbsp; <b>background-image:</b> url("../Imgs/banner_orange.png"); <br>
+          &nbsp; <b>background-repeat:</b> no-repeat; <font class="gray">(repeat-x, repeat-y, no-repeat, inherit).</font> <br>
+        </div>
       </div>
     </fieldset>
 
@@ -515,7 +466,7 @@
             <li>Green</li>
             <li>Blue</li>
           </ol>
-          <code>list-style-type: lower-alpha;</code>
+          <div class="cod">list-style-type: lower-alpha;</div>
         </div>
         <hr>
 
