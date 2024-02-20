@@ -67,7 +67,7 @@ font.green{
   color: green;
 }
 font.orange{
-  color: rgb(214, 139, 0);
+  color: rgb(180, 133, 44);
   text-shadow: .3px .3px rgb(255, 0, 0);
 }
 font.selector{
@@ -85,12 +85,15 @@ font.aqua{
   color: rgba(0, 172, 210, 0.62);
   text-shadow: .1px .1px rgb(124, 156, 150);
 }
-
+font.gray{
+  color: gray;
+}
 .icons {
   height: 85px;
   filter: drop-shadow(3px 3px 5px black);
 }
 .filtrogris {
+  height: 75px;
   filter: blur(2px) grayscale(75%);
 }
 .borders {
@@ -128,7 +131,7 @@ font.aqua{
 
 .ejemplo {
   max-width: 400px;
-  padding: 5px;
+  padding: 8px;
   border: 1px black solid;
   background-color: white;
   box-shadow: inset 4px 4px 4px rgba(128, 128, 128, 0.558), inset -4px -4px 4px rgba(128, 128, 128, 0.706);
@@ -146,7 +149,8 @@ font.aqua{
 .ej {
   border-radius: 7px;
   width: 100%;
-  padding: 3px;
+  padding: 5px;
+  text-align: center;
   margin: 1px;
   margin-right: 4px;
   border: 1px black solid;
@@ -156,7 +160,7 @@ font.aqua{
 .cod {
   border-radius: 7px;
   width: 100%;
-  padding: 3px;
+  padding: 5px 5px 4px 7px;
   margin: 1px;
   margin-left: 4px;
   border: 1px black solid;
@@ -165,13 +169,12 @@ font.aqua{
   /* overflow: auto; */
 }
 
+.iconosFlex{
+  padding-inline: 50%;
+}
 .flex {
   display: flex;
   justify-content: space-around;
-}
-/* Border-Style */
-.flex p{
-  padding: 5px;
 }
 .flex .codigo{
   min-width: 250px;

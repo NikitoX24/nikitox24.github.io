@@ -18,7 +18,7 @@
   <h1 class="titulo">HTML CheatSheet</h1>
 
   <!-- icons -->
-  <div class="flex">
+  <div class="flex iconosFlex">
     <a href="htmlcheatsheet.html"><img src="../Imgs/html.png" alt="html" class="icons filtrogris"></a>
     <a href="CssCheatSheet.html"><img src="../Imgs/css.png" alt="css" class="icons"></a>
     <a href="JSCheatSheet.html"><img src="../Imgs/js.png" alt="js" class="icons filtrogris"></a>
@@ -85,34 +85,36 @@
     <fieldset>
       <legend> <h2> Descendencias del Selector(class) </h2> </legend>
 
-      <div id="idpurple2">
-        (Esto es un div con id "idpurple2").
-        <p class="first">Esto es un parrafo con selector(class)="first" y con un <em>"em"</em>.</p>
-        <p> Esto es otro parrafo con un <em>"em"</em>. </p>
-      </div>
-      <p class="first"> Esto es un parrafo con selector"first" y un <em>"em"</em>. pero fuera del div.</p>
+      <div class="flex">
+        <div class="ejemplo" style="padding: 10px;">
+          <div id="idpurple2">
+            (Esto es un div con id "div").
+            <p class="first">Esto es un <em>"em"</em>. (dentro de "parrafo")</p>
+            <p> Esto es un <em>"em"</em>. (fuera de "parrafo")</p>
+          </div>
+          <p class="first"> Esto es un <em>"em"</em> (Dentro de "parrafo", fuera de "div")</p>
+        </div>
 
-      <!-- Code -->
-      <div class="codigo">
-        #idpurple2{ <br>
-          &nbsp;color:purple; <br>
-          &nbsp;background-color: rgba(128, 128, 128, 0.356); <br>
-        } <br>
-        #idpurple2 .first em{ <br>
-          &nbsp;color:pink; <br>
-          &nbsp;background-color: rgba(100, 95, 95, 0.551); <br>
-        }
+        <!-- Code -->
+        <div class="codigo">
+          #div{ <br>
+            &nbsp;color: purple; <br>
+          } <br> <br>
+          #div .parrafo em{ <br>
+            &nbsp;color: blue; <br>
+          }
+        </div>
+        <style>
+          #idpurple2 {
+            color: purple;
+            background-color: rgba(128, 128, 128, 0.356);
+          }
+          #idpurple2 .first em {
+            color: blue;
+            background-color: rgba(100, 95, 95, 0.551);
+          }
+        </style>
       </div>
-      <style>
-        #idpurple2 {
-          color: purple;
-          background-color: rgba(128, 128, 128, 0.356);
-        }
-        #idpurple2 .first em {
-          color: pink;
-          background-color: rgba(100, 95, 95, 0.551);
-        }
-      </style>
     </fieldset>
   </div>
 
@@ -126,76 +128,58 @@
       
       <!-- Font-Family -->
       <h3 class="numbers"> Font-Family: </h3>
-      <p class="serif">
-        This is a paragraph shown in serif font.
-      </p>
-      <div class="codigo">
-          font-family: "Times New Roman", Times, serif;
+      <div class="flex">
+        <p class="ej" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+          This is a paragraph shown in Segoe UI.
+        </p>
+        <div class="cod">
+          <b>font-family:</b> 'Segoe UI', Tahoma, Geneva, sans-serif;
+        </div>
       </div> <hr>
 
       <!-- Font-Style -->
       <h3 class="numbers"> Font-Style: </h3>
-      <p class="italic">
-        This is a paragraph in italic style.
-      </p>
-      <div class="codigo">
-          font-style: italic; <br> /* normal, italic, oblique */
-      </div> <hr>
+      <div class="flex">
+        <p class="ej" style="font-style: italic;">
+          This is a paragraph in italic style.
+        </p>
+        <div class="cod">
+          <b>font-style:</b> italic; <font class="gray">/* normal, italic, oblique */</font>
+        </div>
+      </div><hr>
 
       <!-- Font-Weight -->
       <h3 class="numbers"> Font-Weight</h3>
-      <p class="weight">
-        This is a paragraph in lighter.
-      </p>
-      <div class="codigo">
-          font-weight: 100; <br> /* 100: finito, 900: grueso */
-      </div> <hr>
+      <div class="flex">
+        <p class="ej" style="font-weight: 900;">
+          This is a paragraph in lighter.
+        </p>
+        <div class="cod">
+          <b>font-weight:</b> 900; <font class="gray">/* 100: finito / 900: grueso */</font>
+        </div>
+      </div><hr>
 
       <!-- Font-Variant -->
       <h3 class="numbers"> Font-Variant</h3>
-      <p class="variant">
-        This is a paragraph in small-caps.
-      </p>
-      <div class="codigo">
-          font-variant: small-caps; <br> /* normal, small-caps, inherit */
-      </div> <hr>
+      <div class="flex">
+        <p class="ej" style="font-variant: small-caps;">
+          This is a paragraph in small-caps.
+        </p>
+        <div class="cod">
+          <b>font-variant:</b> small-caps; <font class="gray">/* normal, small-caps, inherit */</font>
+        </div>
+      </div><hr>
 
       <!-- Font-Color -->
       <h3 class="numbers"> Font-Color</h3>
-      <p class="colored">
-        This is a paragraph in red.
-      </p>
-      <div class="codigo">
-          color: red; <br> /* red, #F00, rgb(255,0,0) */
+      <div class="flex">
+        <p class="ej" style="color: red;">
+          This is a paragraph in red.
+        </p>
+        <div class="cod">
+          <b>color:</b> red; <font class="gray"> /* red, #F00, rgb(255,0,0) */ </font>
+        </div>
       </div>
-
-      <!-- style -->
-      <style>
-        /* Font Family */
-        p.serif {
-          font-family: "Times New Roman", Times, serif;
-        }
-
-        /* Font Style */
-        p.italic {
-          font-style: italic;
-        }
-
-        /* Font Weight (Grosor) */
-        p.weight {
-          font-weight: 100;
-        }
-
-        /* 7) Font Variant */
-        p.variant {
-          font-variant: small-caps;
-        }
-
-        /* 8) Font Color */
-        p.colored {
-          color: red;
-        }
-      </style>
     </fieldset>
 
     <!-- Alineacion de Texto -->
@@ -205,52 +189,68 @@
       <!-- Text-Align (Horizontal)-->
       <div>
         <h3 class="numbers"> Horizontal:</h3>
-        <div style="width: 300px;">
-          <p class="ejemplo" style="text-align: center;">This paragraph is aligned to center</p>
-        </div>
-        <div class="codigo">
-          text-align: center; <br>
-          /* left, right, center, justify */
-        </div> <hr>
+
+        <div class="flex">
+          <div class="ej">
+            <div style="text-align: center;">This paragraph is aligned to center</div>
+          </div>
+          <div class="cod">
+            text-align: center; <br>
+            <font class="gray">/* left, right, center, justify */</font>
+          </div> 
+        </div><hr>
 
         <!-- Text-Align (Vertical) -->
         <h3 class="numbers"> Vertical:</h3>
-        <table border="1" cellpadding="2" cellspacing="0" style="height: 100px;">
-          <tr>
-            <td style="vertical-align: top;">Top</td>
-            <td style="vertical-align: middle;">Middle</td>
-            <td style="vertical-align: bottom;">Bottom</td>
-          </tr>
-        </table>
-        <div class="codigo">
-          vertical-align: top/middle/bottom;
-        </div>
-      </div>
+        <div class="flex">
+          <table border="1" cellpadding="5" cellspacing="1" style="height: 70px;">
+            <tr>
+              <td style="vertical-align: top;">Top</td>
+              <td style="vertical-align: middle;">Middle</td>
+              <td style="vertical-align: bottom;">Bottom</td>
+            </tr>
+          </table>
+          <div class="codigo">
+            <b>vertical-align:</b> top; <br>
+            <b>vertical-align:</b> middle; <br>
+            <b>vertical-align:</b> bottom; <br>
+          </div>
+        </div> <hr>
 
       <!-- Text-Align Property (Vertical) -->
-      <fieldset>
-        <legend> <h2> Text-Align Property (Vertical)</h2> </legend>
+        <h3 class="numbers"> Text-Align Property (Vertical)</h3>
 
-        <p> This is an <span style="vertical-align: baseline;"> <b> inline text </b></span> example.</p>
-        <div class="codigo"> vertical-align: baseline; </div>
-        <hr>
-
-        <p> This is a <span style="vertical-align: sub;"><b>sub line text</b></span> example.</p>
-        <div class="codigo"> vertical-align: sub; </div>
-        <hr>
-
-        <p> This is a <span style="vertical-align: super;"><b>super line text</b></span> example.</p>
-        <div class="codigo"> vertical-align: super; </div>
-        <hr>
-
-        <p> This is a <span style="vertical-align: -10px;"><b>pixel</b></span> example.</p>
-        <div class="codigo"> vertical-align: -10px; <br>
-          /* px(pixels), pt(points), cm(centimeters), %(percentage) */
+        <div class="flex">
+          <div class="ej">
+            This is an <span style="vertical-align: baseline;"> <b> inline text </b></span> example.
+          </div>
+          <div class="cod"> <b>vertical-align:</b> baseline; </div>
         </div>
-      </fieldset><hr>
+
+        <div class="flex">
+          <div class="ej">
+            This is a <span style="vertical-align: sub;"><b>sub line text</b></span> example.
+          </div>
+          <div class="cod"> <b>vertical-align:</b> sub; </div>
+        </div>
+
+        <div class="flex">
+          <div class="ej">
+            This is a <span style="vertical-align: super;"><b>super line text</b></span> example.
+          </div>
+          <div class="cod"> <b>vertical-align:</b> super; </div>
+        </div>
+
+        <div class="flex">
+          <div class="ej">
+            This is a <span style="vertical-align: -10px;"><b>pixel</b></span> example.
+          </div>
+          <div class="cod"> <b>vertical-align:</b> -10px; </div>
+        </div><hr>
 
       <!-- Text-Align Property Div (Vertical) -->
-      <h2> Text-Align Property Div (Vertical)</h2>
+      <h3 class="numbers"> Text-Align Property Div (Vertical)</h3>
+      <div class="flex">
       <div class="main">
         <div class="paragraph">
           Aligned to the middle of div.
@@ -270,14 +270,15 @@
         }
       </style>
       <div class="codigo">
-        .div {
+        <b>.div</b> {
           display: inline-table;
         } <br>
-        .paragraph {
+        <b>.paragraph</b> {
           text-align: center;
           display: table-cell;
           vertical-align: middle;
         }
+      </div>
       </div>
     </fieldset>
     
@@ -285,37 +286,57 @@
     <fieldset>
       <legend> <h2> Text-Decoration </h2> </legend>
 
-      <p style="text-decoration: overline;">This is <b> overlined </b> text. </p>
-        <code> text-decoration: overline; </code>
-      <hr>
+      <div class="flex">
+        <div class="ej">  
+          <font style="text-decoration: overline;">This is <b> overlined </b> text. </font>
+        </div>
+        <div class="cod"> <b>text-decoration:</b> overline; </div>
+      </div>
 
-      <p style="text-decoration: underline;">This is <b> lined-through</b> text. <p>
-        <code> text-decoration: line-through; </code>
-      <hr>
+      <div class="flex">
+        <div class="ej">
+          <font style="text-decoration: underline;">This is <b> lined-through</b> text. </font>
+        </div>
+        <div class="cod"> <b>text-decoration:</b> line-through; </div>
+      </div>
 
-      <p style="text-decoration: line-through;">This is <b> underlined</b> text. <p>
-        <code> text-decoration: underline; </code>
+      <div class="flex">
+        <div class="ej">
+          <font style="text-decoration: line-through;">This is <b> underlined</b> text. </font>
+        </div>
+        <div class="cod"> <b>text-decoration:</b> underline; </div>
+      </div>
     </fieldset>
 
     <!-- text-indent (Sangria) -->
     <fieldset>
-      <legend> <h2> Text-Indent (Sangria)</h2> </legend>
-      <p style="text-indent: 60px;">
-        This is an example of
-        <strong>text-indent </strong> property. <br>
-        La primera línea del texto tiene una sangría hacia la derecha de 60px.
-        <div class="codigo"> text-indent: 60px; </div>
+      <legend> <h2> Text-Indent (Sangría)</h2> </legend>
+      <p style="text-indent: 30px;">
+        Este es un ejemplo de 
+        <strong>text-indent </strong> (sangría), lo cual deja un poco de espacio antes del texto.
+         Por lo que la primera línea del texto tiene una sangría hacia la derecha de 30px. (voy a repetir el texto)
+         Por lo que la primera línea del texto tiene una sangría hacia la derecha de 30px.
+        <div class="codigo"> <b>text-indent:</b> 30px; </div>
       </p>
     </fieldset>
 
     <!-- Text-Sadow -->
     <fieldset>
       <legend> <h2>Text-Sadow</h2> </legend>
-      <h1 style="text-shadow: 5px 2px 2px grey;"> Text-shadow example</h1>
-      <div class="codigo"> text-shadow: 5px 2px 6px grey; <br> (x, y, blur radius, color) Se puede poner mas de una sombra separandola con coma.</div>
+
+      <div class="flex">
+        <div class="ej"> <h1 style="text-shadow: 3px 2px 3px grey;"> Text-shadow example</h1> </div>
+        <div class="cod"> <b>text-shadow:</b> 5px 2px 6px grey; <br> 
+          <font class="gray">/* text-shadow: (x, y, blur radius, color) */ <br>
+            (Se puede poner más sombras separadas por un "Coma").
+          </font>
+        </div>
+      </div>
       <hr>
-      <h1 style="text-shadow: rgba(0, 0, 255, 1) -1px -1px 0.3em;"> Text-shadow with blur effect</h1>
-      <div class="codigo"> text-shadow: rgba(0, 0, 255, 1) -1px -1px 0.3em; </div>
+      <div class="flex">
+        <div class="ej"> <h1 style="text-shadow: rgba(0, 0, 255, 1) -1px -1px 0.3em;"> Text-shadow with blur effect</h1> </div>
+        <div class="cod"> <b>text-shadow:</b> rgba(0, 0, 255, 1) -1px -1px 0.3em; </div>
+      </div>
     </fieldset>
 
     <!-- Text-Transform -->
@@ -395,7 +416,7 @@
 
         <!-- Border-Style -->
         <h2>Border-Style</h2>
-        <div class="flex">
+        <div class="flex" style="padding: 5px;">
           <p style="border-style: dotted;">dotted.</p>
           <p style="border-style: dashed;">dashed.</p>
           <p style="border-style: double;">double.</p>
