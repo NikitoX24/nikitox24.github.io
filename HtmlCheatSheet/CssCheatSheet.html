@@ -84,7 +84,6 @@
     <!-- Descendencias del Selector -->
     <fieldset>
       <legend> <h2> Descendencias del Selector(class) </h2> </legend>
-
       <div class="flex">
         <div class="ejemplo" style="padding: 10px;">
           <div id="idpurple2">
@@ -127,7 +126,6 @@
       <legend> <h2>Fuentes</h2> </legend>
       
       <!-- Font-Family -->
-      <h3 class="numbers"> Font-Family: </h3>
       <div class="flex">
         <p class="ej" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
           This is a paragraph shown in Segoe UI.
@@ -138,7 +136,6 @@
       </div> <hr>
 
       <!-- Font-Style -->
-      <h3 class="numbers"> Font-Style: </h3>
       <div class="flex">
         <p class="ej" style="font-style: italic;">
           This is a paragraph in italic style.
@@ -149,7 +146,6 @@
       </div><hr>
 
       <!-- Font-Weight -->
-      <h3 class="numbers"> Font-Weight</h3>
       <div class="flex">
         <p class="ej" style="font-weight: 900;">
           This is a paragraph in lighter.
@@ -160,7 +156,6 @@
       </div><hr>
 
       <!-- Font-Variant -->
-      <h3 class="numbers"> Font-Variant</h3>
       <div class="flex">
         <p class="ej" style="font-variant: small-caps;">
           This is a paragraph in small-caps.
@@ -171,7 +166,6 @@
       </div><hr>
 
       <!-- Font-Color -->
-      <h3 class="numbers"> Font-Color</h3>
       <div class="flex">
         <p class="ej" style="color: red;">
           This is a paragraph in red.
@@ -186,19 +180,36 @@
     <fieldset>
       <legend><h2>Alineación de Texto</h2></legend>
 
-      <!-- Text-Align (Horizontal)-->
+      <!-- Text-Align (Horizontal) -->
       <div>
         <h3 class="numbers"> Horizontal:</h3>
 
         <div class="flex">
           <div class="ej">
-            <div style="text-align: center;">This paragraph is aligned to center</div>
+            <div style="text-align: left;">This paragraph is aligned to <b>left</b></div>
           </div>
           <div class="cod">
-            text-align: center; <br>
-            <font class="gray">/* left, right, center, justify */</font>
+            <b>text-align:</b> left; <br>
           </div> 
-        </div><hr>
+        </div>
+        
+        <div class="flex">
+          <div class="ej">
+            <div style="text-align: center;">This paragraph is aligned to <b>center</b></div>
+          </div>
+          <div class="cod">
+            <b>text-align:</b> center; <br>
+          </div> 
+        </div>
+        
+        <div class="flex">
+          <div class="ej">
+            <div style="text-align: right;">This paragraph is aligned to <b>right</b></div>
+          </div>
+          <div class="cod">
+            <b>text-align:</b> right; <br>
+          </div> 
+        </div> <hr>
 
         <!-- Text-Align (Vertical) -->
         <h3 class="numbers"> Vertical:</h3>
@@ -331,8 +342,8 @@
             (Se puede poner más sombras separadas por un "Coma").
           </font>
         </div>
-      </div>
-      <hr>
+      </div><hr>
+
       <div class="flex">
         <div class="ej"> <h1 style="text-shadow: rgba(0, 0, 255, 1) -1px -1px 0.3em;"> Text-shadow with blur effect</h1> </div>
         <div class="cod"> <b>text-shadow:</b> rgba(0, 0, 255, 1) -1px -1px 0.3em; </div>
