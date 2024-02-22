@@ -120,26 +120,19 @@
 
     <fieldset> <!-- Bucles -->
       <legend><h2>Bucles</h2></legend>
-      <h3 class="subtitulo">Bucle For:</h3>
-      <div class="codigo">
-        <font class="aqua">for</font> ( Condicion1; Condicion2; Condicion3 ) { <br>
-          &nbsp; <font class="comentario">// Bloque de Codigo</font> <br>
-        }
-      </div> <hr>
-
-      <h3 class="subtitulo">Bucle While / Do-While:</h3>
-
       <div class="flex">
-        <div class="codigo">
+        <div class="cod">
+          <font class="aqua">for</font> ( Condicion1; Condicion2) { <br>
+            &nbsp; <font class="comentario">// Bloque de Codigo</font> <br> }
+        </div>
+        <div class="cod">
           <font class="aqua">while</font> (Condicion ) { <br>
-            &nbsp; <font class="comentario">// Bloque de Codigo</font> <br>
-          }
+            &nbsp; <font class="comentario">// Bloque de Codigo</font> <br> }
         </div>
 
-        <div class="codigo">
+        <div class="cod">
           <font class="aqua">do</font> { <br>
-            &nbsp; <font class="comentario">// Bloque de Codigo</font> <br>
-          } <br>
+            &nbsp; <font class="comentario">// Bloque de Codigo</font> <br> } <br>
           <font class="aqua">while</font> (Condicion)
         </div>
       </div>
@@ -269,35 +262,37 @@
     <!-- Arrays -->
     <fieldset>
       <legend> <h2>Arrays</h2> </legend>
-      <!-- Crear: -->
-      Crear:
-      <div class="codigo">
-        <font class="purp">var</font> courses = <font class="purp">new</font> <font class="blue">Array</font>("HTML", "CSS", "JS");
+      <!-- Crear: --> Crear:
+      <div class="flex">
+        <div class="cod">
+          <font class="purp">var</font> courses = <font class="purp">new</font> <font class="blue">Array</font>("HTML", "CSS", "JS");
+        </div>
+        <div class="cod">
+          <font class="purp">var</font> courses = <font class="purp">new</font> <font class="blue">Array</font>(<font class="orange">3</font>); <br> <br>
+          
+          courses[<font class="orange">0</font>] = "HTML"; <br>
+          courses[<font class="orange">1</font>] = "CSS"; <br>
+          courses[<font class="orange">2</font>] = "JS";
+        </div>
+        <div class="cod">
+          <font class="purp">var</font> courses = ["HTML", "CSS", "JS"]
+        </div>
+      </div><br>
+
+      <!-- Usar --> 
+      Usar y Editar:
+      <div class="flex">
+        <div class="cod">
+          <font class="purp">var</font> couse = courses[<font class="orange">0</font>] <font class="comentario">//HTML</font>
+        </div>
+
+        <!-- Editar -->
+        <div class="cod">
+          couses[<font class="orange">1</font>] = "C++"; <font class="comentario">//"CSS" ahora es "C++"</font>
+        </div> 
       </div>
-      <div class="codigo">
-        <font class="purp">var</font> courses = <font class="purp">new</font> <font class="blue">Array</font>(<font class="orange">3</font>); <br> <br>
-        
-        courses[<font class="orange">0</font>] = "HTML"; <br>
-        courses[<font class="orange">1</font>] = "CSS"; <br>
-        courses[<font class="orange">2</font>] = "JS";
-      </div>
-      <div class="codigo">
-        <font class="purp">var</font> courses = ["HTML", "CSS", "JS"]
-      </div> <hr>
 
-      <!-- Usar -->
-      Usar:
-      <div class="codigo">
-        <font class="purp">var</font> couse = courses[<font class="orange">0</font>] <font class="comentario">//HTML</font>
-      </div> <hr>
-
-      <!-- Editar -->
-      Editar:
-      <div class="codigo">
-        couses[<font class="orange">1</font>] = "C++"; <font class="comentario">//"CSS" ahora es "C++"</font>
-      </div> <hr>
-
-      <!-- Propiedades -->
+      <!-- Propiedades
       <h3>Propiedades:</h3>
       Length:
       <div class="codigo">
@@ -312,8 +307,7 @@
         <font class="purp">var</font> courses = c1.<font class="blue">concat</font>(c2); <br>
         <font class="comentario">// ahora coursees es (HTML, CSS, JS, C++)</font>
       </div> <hr>
-
-      <!-- Arrays asociativos -->
+      
       <h3>Arrays asociativos</h3>
       Los arrays asociativos son listas con indices textuales, por lo cual js no soporta arrays asociativos por lo q
       se convierten en objetos.
@@ -322,15 +316,15 @@
         person["name"] = "Jhon"; <br>
         person["age"] = 46; <br><br>
         document.<font class="blue">write</font>(person["<font class="orange">age</font>"]) <font class="comentario">// 46</font>
-      </div>
+      </div> 
+      -->
     </fieldset>
 
     <!-- Math -->
     <fieldset>
       <legend> <h2>Math:</h2> </legend>
       <div class="codigo">
-        document.write(<u>Math.PI</u>); 
-        <font class="comentario">// 3.14....</font>
+        document.<font class="blue">write</font>(<u>Math.PI</u>); <font class="comentario">// 3.14....</font>
       </div>
       <details>
         <summary>Metodos de Math</summary>
@@ -381,23 +375,24 @@
         <font class="comentario"> // <script> var d = new Date(); document.write(d); </script> </font>
       </div>
 
-      New Date(milliseconds);
-      <div class="codigo">
-        <font class="purp">var</font> d1 = <font class="purp">new</font> <font class="blue">Date</font>(86400000);
-        <font class="comentario"> // Fri Jan 02 1970 00:00:00</font>
-      </div>
-
-      New Date(dateString);
+      Crear fecha;
       <div class="codigo">
         <font class="purp">var</font> d1 = <font class="purp">new</font> <font class="blue">Date</font>("January 2, 2015 10:42:00");
         <font class="comentario"> // Fri Jan 02 2015 10:42:00</font>
       </div>
+      <!-- 
+        New Date(milliseconds);
+        <div class="codigo">
+          <font class="purp">var</font> d1 = <font class="purp">new</font> <font class="blue">Date</font>(86400000);
+          <font class="comentario"> // Fri Jan 02 1970 00:00:00</font>
+        </div>
 
-      New Date(year, month, day, hours, minutes, seconds, milliseconds);
-      <div class="codigo">
-        <font class="purp">var</font> d1 = <font class="purp">new</font> <font class="blue">Date</font>(88,5,11,11,42,0,0);
-        <font class="comentario"> // Sat Jun 11 1988 11:42:00</font>
-      </div>
+        New Date(year, month, day, hours, minutes, seconds, milliseconds);
+        <div class="codigo">
+          <font class="purp">var</font> d1 = <font class="purp">new</font> <font class="blue">Date</font>(88,5,11,11,42,0,0);
+          <font class="comentario"> // Sat Jun 11 1988 11:42:00</font>
+        </div>
+       -->
       <hr>
 
       <h3>Metodos de Date:</h3>
@@ -482,91 +477,25 @@
     <fieldset>
       <legend> <h2>Seleccionar/Buscar Elementos</h2> </legend>
 
-      Buscar <u>Id</u>:
-      <div class="codigo">
-        document.<font class="blue">getElementById</font>("<font class="green">idDelElemento</font>")
-      </div>
-
-      <script>
-        document.getElementById("idDelElemento")
-      </script>
-
-      Buscar <u>Class</u>:
-      <div class="codigo">
-        document.<font class="blue">getElementsByClassName</font>("<font class="green">nombreDeLaClase</font>")
-      </div>
-
-      Buscar <u>Tag</u>:
-      <div class="codigo">
-        document.<font class="blue">getElementsByTagName</font>("<font class="green">TagDelElemento</font>")
-      </div>
-    </fieldset>
-
-    <!-- Modificar Elementos -->
-    <fieldset>
-      <legend> <h2>Modificar Elementos:</h2> </legend>
-      <h3 class="subtitulo"> Cambiar valor a un ID:</h3>
+      Buscar y usar <b>ID</b>:
       <div class="flex">
-        <div>
-          <u>Antes:</u>
-          <div class="ejemplo">
-            Esto es un div con id "idDemo".
-          </div> <br>
-        </div>
-        <div class="flecha"></div>
-        <div>
-          <u>Despues:</u> <br>
-          <div class="ejemplo"> Hello World! </div>
-        </div>
-      </div>
-      <div class="codigo">
-        <font class="purp">var</font> elem = document.<font class="blue">getElementById</font>("idDemo"); <br>
-        elem.innerHTML = "<font class="green">Hello World!</font>";
-      </div> <hr>
-
-      <!-- cambiar valor a alguna clase -->
-      <h3 class="subtitulo"> Cambiar valor a una CLASS: </h3>
-      <div class="flex">
-        <div>
-          <u>Antes:</u>
-          <div class="ejemplo"> Esto es un div con class "classDemo" </div>
-        </div>
-        <div class="flecha"></div>
-        <div>
-          <u>Despues:</u>
-          <div class="ejemplo"> Hiii </div>
-        </div>
-      </div>
-      <div class="codigo">
-        <font class="purp">var</font> arr =  document.<font class="blue">getElementsByClassName</font>("classDemo"); <br>
-        arr[0].innerHTML = "<font class="green">Hiii</font>";
-      </div> <hr>
-
-      <!-- cambiar valor a varios elementos -->
-      <h3 class="subtitulo"> Cambiar valor a los TAGS: </h3>
-      <div class="flex">
-        <div>
-          <u>Antes:</u>
-          <div class="ejemplo">
-            <p> hi </p>
-            <p> hello </p>
-          </div>
-        </div>
-        <div class="flecha"></div>
-        <div>
-          <u>Despues:</u> <br>
-          <div class="ejemplo">
-            <p> Hi there! </p>
-            <p> Hi there! </p>
-          </div>
-        </div>
+        <div class="cod"> <font class="purp">var</font> elem = document.<font class="blue">getElementById</font>("<font class="green">id</font>") </div>
+        <div class="cod"> elem.innerHTML = "<font class="green">Hello World!</font>"; </div>
       </div> <br>
-      <div class="codigo">
-        <font class="purp">var</font> arr = document.<font class="blue">getElementsByTagName</font>("p"); <br>
-        <font class="aqua">for</font> (<font class="purp">var</font> x = <font class="orange">0</font>; x &lt;arr.length; x++) { <br>
-          &nbsp; arr[x].innerHTML = "<font class="green">Hi there!</font>"; <br>
-        }
-      </div>
+
+      Buscar y usar <b>Class</b>:
+      <div class="flex">
+        <div class="cod"> <font class="purp">var</font> arr = document.<font class="blue">getElementsByClassName</font>("<font class="green">clase</font>") </div>
+        <div class="cod"> arr[0].innerHTML = "<font class="green">Hiii</font>"; </div>
+      </div><br>
+
+      Buscar y usar <b>Tag</b>:
+        <div class="cod"> <font class="purp">var</font> arr = document.<font class="blue">getElementsByTagName</font>("<font class="green">tag</font>") </div>
+        <div class="cod"> 
+          <font class="aqua">for</font> (<font class="purp">var</font> x = <font class="orange">0</font>; x &lt;arr.length; x++) { <br>
+            &nbsp; arr[x].innerHTML = "<font class="green">Hi there!</font>"; <br>
+          }
+        </div>
     </fieldset>
 
     <!-- Propiedades y metodos -->
@@ -574,32 +503,15 @@
       <legend> <h2> Propiedades y metodos </h2> </legend>
 
       Cambiar valores <u>(Usando CHILDNODES)</u>
-      <div class="ejemplo">
-        <div id="demo2">
-          <p>Some text</p>
-          <p>Some other text</p>
-        </div>
-      </div>
-      <button onclick="setText()"> setText </button>
-      <br><br>
       <div class="codigo">
         <font class="purp">function</font> <font class="blue">setText</font>() { <br>
           &nbsp;<font class="purp">var</font> a = document.getElementById("demo2"); <br>
           &nbsp;<font class="purp">var</font> arr = a.<u>childNodes</u>; <br>
-          &nbsp;<font class="aqua">for</font>(<font class="purp">var</font> x=0;x < arr.length;x++) { <br>
+          &nbsp;<font class="aqua">for</font> (<font class="purp">var</font> x = 0; x < arr.length; x++) { <br>
             &nbsp; arr[x].innerHTML = "<font class="green">new text</font>"; <br>
           &nbsp;} <br>
         }
       </div>
-      <script>
-        function setText() {
-          var a = document.getElementById("demo2");
-          var arr = a.childNodes;
-          for (var x = 0; x < arr.length; x++) {
-            arr[x].innerHTML = "new text";
-          }
-        }
-      </script>
 
       <details><!-- Propiedades y metodos -->
         <summary>Propiedades y metodos</summary>
@@ -618,7 +530,7 @@
       <legend> <h2> Modificar Atributos </h2> </legend>
 
       <h3 class="subtitulo"> Modificar src a una imagen </h3>
-      <img id="myimg" src="../Imgs/Orange.png" alt="orange" height="100" width="100px" /> <br>
+      <img id="myimg" src="../Imgs/Orange.png" alt="orange" height="60" width="60px" /> <br>
       <button onclick="changeSRC()"> cambiar src </button>
       <div class="codigo">
         <font class="purp">var</font> srcimg = document.<font class="blue">getElementById</font>("<font class="green">myimg</font>"); <br>

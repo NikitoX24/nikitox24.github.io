@@ -35,6 +35,10 @@ iframe {
   height: 50px;
   border-style: none;
 }
+b{
+  /* color: rgb(61, 0, 0); */
+  text-shadow: .5px .5px 12px black;
+}
 
 /* div con nombre */
 fieldset {
@@ -79,14 +83,14 @@ font.prop{
   text-shadow: .1px .1px rgb(124, 156, 150);
 }
 font.comentario{ /* JS */
-  color: rgb(91, 91, 91);
-}
-font.aqua{
-  color: rgba(0, 172, 210, 0.62);
-  text-shadow: .1px .1px rgb(124, 156, 150);
+  color: gray;
 }
 font.gray{ /* CS */
   color: gray;
+}
+font.aqua{
+  color: rgba(0, 115, 141, 0.704);
+  text-shadow: .1px .1px rgb(124, 156, 150);
 }
 .icons {
   height: 85px;
@@ -142,6 +146,7 @@ font.gray{ /* CS */
   padding: 8px;
   margin: 0px 0px 15px 0px;
   overflow: auto;
+  border: 1px black solid;
   background-color: rgba(128, 128, 128, 0.512);
   box-shadow: inset 4px 4px 4px rgba(128, 128, 128, 0.558), inset -4px -4px 4px rgba(128, 128, 128, 0.706);
 }
@@ -160,14 +165,13 @@ font.gray{ /* CS */
 }
 .cod {
   border-radius: 7px;
-  width: 100%;
+  width: 97%;
   padding: 5px 5px 4px 7px;
   margin: 1px;
   margin-left: 4px;
   border: 1px black solid;
-  background-color: rgba(128, 128, 128, 0.053);
+  background-color: rgba(128, 128, 128, 0.512);
   box-shadow: inset 3px 3px 3px rgba(128, 128, 128, 0.558), inset -3px -3px 3px rgba(128, 128, 128, 0.706);
-  /* overflow: auto; */
 }
 
 .iconosFlex{

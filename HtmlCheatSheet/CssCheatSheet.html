@@ -39,7 +39,7 @@
     <h1 class="titulo"> Conceptos Básicos </h1>
 
     <!-- Sintaxis -->
-    <fieldset> 
+    <!-- <fieldset> 
       <legend> <h2>Sintaxis</h2></legend>
       <div class="codigo">
         &lt;<span>style</span>> <br>
@@ -48,37 +48,36 @@
           &nbsp;} <br>
         &lt;<span>/style</span>>
       </div>
-    </fieldset>
+    </fieldset> -->
 
     <!-- Selector -->
     <fieldset>
-      <legend> <h2> Selector (Class)</h2> </legend>
-      <sub>html:</sub>
-      <div class="codigo">
-        &lt;<span>p</span> <u><font class="purp">class</font>="<font class="green">selector</font>"</u> > Parrafo con un selector. &lt;/<span>p</span>>
-      </div>
+      <legend> <h2> Clase & ID </h2> </legend>
+      <div class="flex"> <div>
+        <sub>Clase en html:</sub>
+        <div class="codigo">
+          &lt;<span>p</span> <u><font class="purp">class</font>="<font class="green">selector</font>"</u> > Parrafo con un selector. &lt;/<span>p</span>>
+        </div>
 
-      <sub>css:</sub>
-      <div class="codigo">
-        .<font class="selector">selector</font>{ <br>
-          &nbsp;<font class="prop">color</font>: <font class="orange">darked</font>; <br>
-        }
-      </div>
-    </fieldset>
-
-    <!-- Id -->
-    <fieldset>
-      <legend> <h2> Id </h2> </legend>
-      <sub>html:</sub>
-      <div class="codigo">
-        &lt;<span>p</span> <u><font class="purp">id=</font>"<font color="green">idpurple</font>"</u> >Este es un parrafo con un id.&lt;<span>/p</span>>
-      </div>
-      <sub>css:</sub>
-      <div class="codigo">
-        #<font class="purp">idpurple</font> { <br>
-          &nbsp;<font class="prop">color</font>: <font class="orange">purple</font>; <br>
-        }
-      </div>
+        <sub>Clase en css:</sub>
+        <div class="codigo">
+          .<font class="selector">selector</font>{ <br>
+            &nbsp;<font class="prop">color</font>: <font class="orange">darked</font>; <br>
+          }
+        </div>
+      </div><hr>
+      <div>
+        <sub>ID en html:</sub>
+        <div class="codigo">
+          &lt;<span>p</span> <u><font class="purp">id=</font>"<font color="green">idpurple</font>"</u> >Este es un parrafo con un id.&lt;<span>/p</span>>
+        </div>
+        <sub>ID en css:</sub>
+        <div class="codigo">
+          #<font class="purp">idpurple</font> { <br>
+            &nbsp;<font class="prop">color</font>: <font class="orange">purple</font>; <br>
+          }
+        </div>
+      </div></div>
     </fieldset>
 
     <!-- Descendencias del Selector -->
@@ -466,9 +465,8 @@
             <li>Green</li>
             <li>Blue</li>
           </ol>
-          <div class="cod">list-style-type: lower-alpha;</div>
-        </div>
-        <hr>
+          <div class="codigo" style="min-width: 150px;"><b>list-style-type:</b> lower-alpha;</div>
+        </div><hr>
 
         <div>
           <ul class="a" style="list-style-type: circle;">
@@ -476,9 +474,8 @@
             <li>Green</li>
             <li>Blue</li>
           </ul>
-          <code>list-style-type: circle;</code>
-        </div>
-        <hr>
+          <div class="codigo" style="min-width: 120px;"><b>list-style-type:</b> circle;</div>
+        </div><hr>
 
         <div>
           <ul class="a" style="list-style-type: square;">
@@ -486,24 +483,22 @@
             <li>Green</li>
             <li>Blue</li>
           </ul>
-          <code>list-style-type: square;</code>
-        </div>
-        <hr>
+          <div class="codigo" style="min-width: 120px;"><b>list-style-type:</b> square;</div>
+        </div><hr>
 
         <div>
-          <ul class="uimage a">
+          <ul class="uimage">
             <li>Red</li>
             <li>Green</li>
           </ul>
-          <code>list-style-image: url("Icon.png"); <br></code>
+          <div class="codigo" style="min-width: 120px;"><b>list-style-image:</b> url("Icon.png");</div>
         </div>
       </div>
       <style>
-        ul.a {
+        ul.uimage {
           list-style: square outside none;
           /* list-style-type, list-style-image, list-style-position */
-        }
-        ul.uimage {
+
           list-style-image: url("../Imgs/loguito.png");
           /* list-style-position: outside; insede, outside */
         }
@@ -514,7 +509,6 @@
     <fieldset>
       <legend> <h2>Table</h2> </legend>
       <div class="flex">
-
         <div><!-- Table-Style -->
           <table class="styled" border="1">
             <caption>"Caption-Side Text"</caption>
@@ -524,7 +518,7 @@
             </tr>
             <tr>
               <td>Blue</td>
-              <td>Yellow</td>
+              <td></td>
             </tr>
           </table><br>
           <style>
@@ -532,106 +526,50 @@
               caption-side: top;
               /* top, bottom */
               border-collapse: separate;
-              border-spacing: 30px 10px;
-            }
-          </style>
-        </div>
-        <hr>
-
-        <div><!-- Empty-Cells -->
-          Empty-Cells
-          <table class="styled2" border="1">
-            <tr>
-              <td>HTML</td>
-              <td>CSS</td>
-            </tr>
-            <tr>
-              <td>JavaScript</td>
-              <td></td>
-            </tr>
-          </table>
-          <style>
-            table.styled2 {
-              border-collapse: separate;
+              border-spacing: 20px 5px;
               empty-cells: hide;
             }
           </style>
         </div>
-        <hr>
 
-        <!-- Table-Style -->
-        <div>
-          <p>Table-layout is set to <strong>auto</strong></p>
-          <table id="tablee" class="auto">
-            <tr>
-              <td width=“10%">500.000.000.000.000</td>
-              <td width="90%">20.000</td>
-            </tr>
-          </table>
+        <div class="codigo">
+          table.styled { <br>
+            &nbsp;<b>caption-side:</b> top; <br>
+            &nbsp;<b>border-spacing:</b> 20px 5px; <br>
+            &nbsp;<b>empty-cells:</b> hide; <br>
+          } <br>
         </div>
-        <hr>
-      </div>
-      <hr>
-
-      <!-- Table-layout -->
-      <div>
-        <p>Table-layout is set to <strong>fixed</strong></p>
-
-        <table id="tablee" class="fixed">
-          <tr>
-            <td width="7%" class="tdred">500.000.000.000.000</td>
-            <td width="95%">20.000</td>
-          </tr>
-        </table>
-
-        <style>
-          #tablee {
-            border-collapse: separate;
-            width: 100%;
-            border: 1px solid gray;
-          }
-          td {
-            border: 1px solid gray;
-          }
-          table.auto {
-            table-layout: auto;
-          }
-          table.fixed {
-            table-layout: fixed;
-          }
-          .tdred {
-            color: red;
-          }
-        </style>
       </div>
     </fieldset>
 
     <!-- Links -->
     <fieldset>
-      <legend> <h2> Links </h2> </legend>
+      <legend> <h2> Propiedades de Links </h2> </legend>
       <p>
         <a href="http://www.sololearn.com" target="_blank">
-          Este Link cambia de color cuando pones el mouse por encima.
+          Este Link cambia el color y la linea cuando pones el mouse por encima.
         </a>
       </p>
-      <div class="codigo">
-        a:hover{ <br>
-          color: red; <br>
-        }
+      <div class="flex">
+        <div class="codigo">
+          a:hover { <br>
+            &nbsp; <b>color:</b> red; <br>
+            &nbsp; <b>text-decoration:</b> overline; <br>
+        } <br>
+        </div>
+        <div class="codigo">
+          <font class="gray">
+            a:link (define el estilo de los enlaces normales no visitados) <br>
+            a:visited (define el estilo de los enlaces visitados) <br>
+            a:active (el enlace se activa una vez que hace clic en él) <br>
+            a:hover (un enlace se desplaza cuando el mouse está sobre él) <br>
+          </font>
+        </div>
       </div>
-      <details>
-        <summary>Selectors & Propiedades...</summary>
-        a:link : define el estilo de los enlaces normales no visitados <br>
-        a:visited : define el estilo de los enlaces visitados <br>
-        a:active : a el enlace se activa una vez que hace clic en él <br>
-        a:hover : un enlace se desplaza cuando el mouse está sobre él <br>
-
-        border:none - removes border from images with links <br>
-        outline:none - removes the dotted border on clicked lines in IE <br>
-      </details>
       <style>
         a:hover {
           color: red;
+          text-decoration: overline;
         }
       </style>
     </fieldset>
@@ -667,7 +605,7 @@
       </div>
     </fieldset>
   </div> 
-
+  
   <!-- Positioning And Layout -->
   <div class="borders">
     <h1 class="titulo"> Positioning And Layout </h1>
@@ -675,47 +613,48 @@
     <!-- Display -->
     <fieldset>
       <legend> <h2>Display</h2> </legend>
-      <p>
+      <div class="flex">
+        <p>
         <u>Sin display block:</u><br>
-        <span>First paragraph.</span>
-        <span>Second paragraph.</span>
-        <span>Third paragraph.</span>
-      </p>
+          <span>First paragraph.</span>
+          <span>Second paragraph.</span>
+          <span>Third paragraph.</span>
+        </p>
 
-      <p>
-        <u>Con display block:</u><br>
-        <span class="block">First paragraph.</span>
-        <span class="block">Second paragraph.</span>
-        <span class="block">Third paragraph.</span>
-      </p>
+        <p>
+          <u>Con display block:</u><br>
+          <span class="block">First paragraph.</span>
+          <span class="block">Second paragraph.</span>
+          <span class="block">Third paragraph.</span>
+          <style> span.block { display: block; } </style>
+        </p>
+        
+        <div class="codigo" style="margin-top: 10px;">
+          span.block { <br>
+            &nbsp; <b>display:</b> block; <br>
+          }
+        </div>
+      </div><hr>
 
-      <p><u>InLine</u>
-      <p class="inline">First paragraph.</p>
-      <p class="inline">Second paragraph.</p>
-      <p class="inline">Third paragraph.</p>
-      </p>
-      <style>
-        span.block {
-          display: block;
-        }
-        p.inline {
-          display: inline;
-        }
-      </style>
-      <div class="codigo">
-        span.block{
-          display: block;
-        } <br>
-        p.inline{
-          display: inline;
-        }
+      <div class="flex">
+        <div> <p><u>InLine</u>
+          <p class="inline">First paragraph.</p>
+          <p class="inline">Second paragraph.</p>
+          <p class="inline">Third paragraph.</p>
+          <style> p.inline { display: inline; } </style> </p> 
+        </div>
+        <div class="codigo">
+          p.inline { <br>
+            &nbsp; <b>display:</b> inline; <br>
+          }
+        </div>
       </div>
     </fieldset>
   
     <!-- Visibility -->
     <fieldset>
       <legend> <h2>Visibility</h2> </legend>
-      <div class="ejemplo"> 
+      <div class="ejemplo">
         <p class="dispnone">Este texto se ocultará cuando lo apuntes.</p>
       </div>
       <div class="ejemplo"> 
