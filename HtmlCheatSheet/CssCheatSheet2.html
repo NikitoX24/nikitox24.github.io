@@ -9,52 +9,109 @@
 </head>
 
 <body>
+<!-- Menú -->
 <header>
   <menu-component></menu-component>
+</header>
+
+<main>
   <h1 class="titulo">HTML CheatSheet</h1>
 
-  <!-- iconos Cheatsheet -->
+  <!-- icons -->
   <div class="flex iconosFlex">
     <a href="htmlcheatsheet.html"><img src="../Imgs/html.png" alt="html" class="icons filtrogris"></a>
     <a href="CssCheatSheet.html"><img src="../Imgs/css.png" alt="css" class="icons"></a>
     <a href="JSCheatSheet.html"><img src="../Imgs/js.png" alt="js" class="icons filtrogris"></a>
-    <style>
-      .borders {
-        background-color: rgba(0, 0, 255, .05);
-        box-shadow: inset 0 40px 0 0 rgba(0, 119, 255, 0.164), 
-            4px 4px 15px 5px rgba(0, 0, 255, 0.1);
-      }
-    </style>
   </div>
+  <style>
+    .borders {
+      background-color: rgba(0, 0, 255, .05);
+      box-shadow: inset 0 40px 0 0 rgba(0, 119, 255, 0.164), 
+          4px 4px 15px 5px rgba(0, 0, 255, 0.1);
+    }
+  </style>
   
   <!-- CSS -->
   <h1 class="titulo"> CSS <font class="subText">(Cascading Style Sheets)</font> </h1>
-</header>
 
-<main>
-  <!-- Clase & ID -->
+  <!-- Conceptos Básicos -->
   <div class="borders">
-    <h1 class="titulo"> Clase y ID </h1>
+    <h1 class="titulo"> Conceptos Básicos </h1>
 
-    <!-- clase -->
-    <fieldset class="flex" style="margin-bottom: 0px;">
-      <legend> <h3> Clase </h3> </legend>
-      <div class="cod">
-        &lt;<span>p</span> <u><font class="purp">class</font>="<font class="green">clase</font>"</u>> Parrafo con un selector. &lt;<span>/p</span>>
+    <!-- Sintaxis -->
+    <!-- <fieldset> 
+      <legend> <h2>Sintaxis</h2></legend>
+      <div class="codigo">
+        &lt;<span>style</span>> <br>
+          &nbsp;.<font class="selector">selector</font>{ <br>
+            &nbsp;&nbsp;<font class="prop">prepiedad</font>: <font class="orange">valor</font>; <br>
+          &nbsp;} <br>
+        &lt;<span>/style</span>>
       </div>
-      <div class="cod">
-        .<font class="selector">clase</font> { <font class="prop">color</font>: <font class="orange">darked</font>; }
-      </div>
+    </fieldset> -->
+
+    <!-- Selector -->
+    <fieldset>
+      <legend> <h2> Clase & ID </h2> </legend>
+      <div class="flex"> <div>
+        <sub>Clase en html:</sub>
+        <div class="codigo">
+          &lt;<span>p</span> <u><font class="purp">class</font>="<font class="green">selector</font>"</u> > Parrafo con un selector. &lt;/<span>p</span>>
+        </div>
+
+        <sub>Clase en css:</sub>
+        <div class="codigo">
+          .<font class="selector">selector</font>{ <br>
+            &nbsp;<font class="prop">color</font>: <font class="orange">darked</font>; <br>
+          }
+        </div>
+      </div><hr>
+      <div>
+        <sub>ID en html:</sub>
+        <div class="codigo">
+          &lt;<span>p</span> <u><font class="purp">id=</font>"<font color="green">idpurple</font>"</u> >Este es un parrafo con un id.&lt;<span>/p</span>>
+        </div>
+        <sub>ID en css:</sub>
+        <div class="codigo">
+          #<font class="purp">idpurple</font> { <br>
+            &nbsp;<font class="prop">color</font>: <font class="orange">purple</font>; <br>
+          }
+        </div>
+      </div></div>
     </fieldset>
-    
-    <!-- ID -->
-    <fieldset class="flex">
-      <legend> <h3> ID </h3> </legend>
-      <div class="cod">
-        &lt;<span>p</span> <u><font class="purp">id</font>="<font color="green">idpurple</font>"</u>> Este es un parrafo con un id. &lt;<span>/p</span>>
-      </div>
-      <div class="cod">
-        #<font class="purp">idpurple</font> { <font class="prop">color</font>: <font class="orange">purple</font>; }
+
+    <!-- Descendencias del Selector -->
+    <fieldset>
+      <legend> <h2> Descendencias del Selector(class) </h2> </legend>
+      <div class="flex">
+        <div class="ejemplo" style="padding: 10px;">
+          <div id="idpurple2">
+            (Esto es un div con id "div").
+            <p class="first">Esto es un <em>"em"</em>. (dentro de "parrafo")</p>
+            <p> Esto es un <em>"em"</em>. (fuera de "parrafo")</p>
+          </div>
+          <p class="first"> Esto es un <em>"em"</em> (Dentro de "parrafo", fuera de "div")</p>
+        </div>
+
+        <!-- Code -->
+        <div class="codigo">
+          #div{ <br>
+            &nbsp;color: purple; <br>
+          } <br> <br>
+          #div .parrafo em{ <br>
+            &nbsp;color: blue; <br>
+          }
+        </div>
+        <style>
+          #idpurple2 {
+            color: purple;
+            background-color: rgba(128, 128, 128, 0.356);
+          }
+          #idpurple2 .first em {
+            color: blue;
+            background-color: rgba(100, 95, 95, 0.551);
+          }
+        </style>
       </div>
     </fieldset>
   </div>
@@ -339,19 +396,42 @@
 
     <!-- Box-Model -->
     <fieldset>
-      <legend> <h2>Border-Style</h2> </legend>
-      <div class="flex" style="padding: 5px;">
-        <p style="border-style: dotted; padding: 5px;">dotted.</p>
-        <p style="border-style: dashed; padding: 5px;">dashed.</p>
-        <p style="border-style: double; padding: 5px;">double.</p>
-        <p style="border-style: groove; padding: 5px;">grooved.</p>
-        <p style="border-style: ridge; padding: 5px;">ridged.</p>
-        <p style="border-style: inset; padding: 5px;">inset.</p>
-        <p style="border-style: outset; padding: 5px;">outset.</p>
-      </div>
-      <div class="cod">
-        <b>border-style:</b> <font class="gray">dotted/dashed/double/groove/ridge/inset/ouset</font>;
-      </div>
+      <legend> <h2> Box-Model </h2> </legend>
+      <div> <!-- Width & Height -->
+        <h3 class="numbers">Width & Height</h3>
+        <div class="flex">
+          <div class="wh"> Este div tiene: <br> .Alto (height: 70px) <br> .Ancho (width: 170px) <br> .Borde transparente. </div><br>
+          <style>
+            div.wh {
+              border: 20px solid rgba(8, 95, 0, 0.226);
+              width: 170px;
+              height: 70px;
+            }
+          </style>
+          <div class="codigo">
+            .ejemplodiv{ <br>
+              <b>border:</b> 5px solid rgba(8, 95, 0, 0.226); <br>
+              <b>width:</b> 100px; <br>
+              <b>height:</b> 90px; <br>
+            }
+          </div>
+        </div><hr>
+
+        <!-- Border-Style -->
+        <h2>Border-Style</h2>
+        <div class="flex" style="padding: 5px;">
+          <p style="border-style: dotted; padding: 5px;">dotted.</p>
+          <p style="border-style: dashed; padding: 5px;">dashed.</p>
+          <p style="border-style: double; padding: 5px;">double.</p>
+          <p style="border-style: groove; padding: 5px;">grooved.</p>
+          <p style="border-style: ridge; padding: 5px;">ridged.</p>
+          <p style="border-style: inset; padding: 5px;">inset.</p>
+          <p style="border-style: outset; padding: 5px;">outset.</p>
+        </div>
+        <div class="codigo">
+          <b>border-style:</b> <font class="gray">dotted/dashed/double/groove/ridge/inset/ouset</font>;
+        </div>
+      </div>      
     </fieldset>
 
     <!-- Background-Image -->
@@ -381,35 +461,48 @@
       <div class="flex">
         <div>
           <ol start="list-style-type: lower-alpha;">
-            <li>lower-alpha;</li>
+            <li>Red</li>
+            <li>Green</li>
+            <li>Blue</li>
           </ol>
-          <ul style="list-style-type: circle;">
-            <li>circle;</li>
+          <div class="codigo" style="min-width: 150px;"><b>list-style-type:</b> lower-alpha;</div>
+        </div><hr>
+
+        <div>
+          <ul class="a" style="list-style-type: circle;">
+            <li>Red</li>
+            <li>Green</li>
+            <li>Blue</li>
           </ul>
-          <ul style="list-style-type: square;">
-            <li>square;</li>
+          <div class="codigo" style="min-width: 120px;"><b>list-style-type:</b> circle;</div>
+        </div><hr>
+
+        <div>
+          <ul class="a" style="list-style-type: square;">
+            <li>Red</li>
+            <li>Green</li>
+            <li>Blue</li>
           </ul>
+          <div class="codigo" style="min-width: 120px;"><b>list-style-type:</b> square;</div>
+        </div><hr>
+
+        <div>
           <ul class="uimage">
             <li>Red</li>
+            <li>Green</li>
           </ul>
+          <div class="codigo" style="min-width: 120px;"><b>list-style-image:</b> url("Icon.png");</div>
         </div>
-          
-        <div style="margin: 15px;">
-          <div class="cod"><b>list-style-type:</b> lower-alpha;</div>
-          <div class="cod"><b>list-style-type:</b> circle;</div>
-          <div class="cod"><b>list-style-type:</b> square;</div>
-          <div class="cod" style="min-width: 120px;"><b>list-style-image:</b> url("Icon.png");</div>
-        </div>
-        <style>
-          ul.uimage {
-            list-style: square outside none;
-            /* list-style-type, list-style-image, list-style-position */
-
-            list-style-image: url("../Imgs/loguito.png");
-            /* list-style-position: outside; insede, outside */
-          }
-        </style>
       </div>
+      <style>
+        ul.uimage {
+          list-style: square outside none;
+          /* list-style-type, list-style-image, list-style-position */
+
+          list-style-image: url("../Imgs/loguito.png");
+          /* list-style-position: outside; insede, outside */
+        }
+      </style>
     </fieldset>
 
     <!-- Table -->
@@ -524,13 +617,15 @@
         <p>
         <u>Sin display block:</u><br>
           <span>First paragraph.</span>
-          <span>Second paragraph.</span
+          <span>Second paragraph.</span>
+          <span>Third paragraph.</span>
         </p>
 
         <p>
           <u>Con display block:</u><br>
           <span class="block">First paragraph.</span>
           <span class="block">Second paragraph.</span>
+          <span class="block">Third paragraph.</span>
           <style> span.block { display: block; } </style>
         </p>
         
@@ -559,15 +654,29 @@
     <!-- Visibility -->
     <fieldset>
       <legend> <h2>Visibility</h2> </legend>
-      <div class="flex">
-        <div class="ej"> <p class="dispnone">Este texto se ocultará cuando lo apuntes.</p> </div>
-        <div class="cod"> .none{ <br> &nbsp; <b>display:</b> none; <br> } </div>
-        <style> .dispnone:hover{ display: none; } </style>
+      <div class="ejemplo">
+        <p class="dispnone">Este texto se ocultará cuando lo apuntes.</p>
       </div>
-      <div class="flex">
-        <div class="ej"> <p class="vishidden">Y esto también se ocultará cuando lo apuntes.</p> </div>
-        <div class="cod"> .hidden{ <br> &nbsp; <b>visibility:</b> hidden; <br> } </div>
-        <style> .vishidden:hover{ visibility: hidden; } </style>
+      <div class="ejemplo"> 
+        <p class="vishidden">Y esto también se ocultará cuando lo apuntes.</p>
+      </div>
+     
+      <style>
+        .dispnone:hover{
+          display: none;
+        }
+        .vishidden:hover{
+          visibility: hidden;
+        }
+      </style> <br>
+      <u>Code:</u>
+      <div class="codigo">
+        .none{
+          display: none;
+        } <br>
+        .hidden{
+          visibility: hidden;
+        }
       </div>
     </fieldset>
 
@@ -575,16 +684,17 @@
     <fieldset>
       <legend> <h2> Posicionamiento </h2> </legend>
 
+      <!-- estatico -->
+      <u>Estatico:</u>
+      <div class="ejemplo">
+        <p class="position_static">This paragraph has a <u>static</u> position.</p>
+      </div><br>
+
       <!-- fijo -->
-      <u>Fijo:</u> <br>
-      <button onclick="fixed()">Fixed (fijo)</button>
-      <h1 class="position_fixed"></h1><br>
-      <script>
-        function fixed(){
-          var fixedText = document.getElementsByClassName("position_fixed");
-          fixedText[0].innerHTML = "Texto Fijado con Fixed";
-        }
-      </script>
+      <u>Fijo: (Arriba a la derecha)</u> <br>
+      <div class="ejemplo">
+        <p class="position_fixed">Fixed position.</p><br>
+      </div><br>
 
       <!-- relativo -->
       <u>Relativo:</u> <br>
@@ -593,11 +703,16 @@
       </div>
 
       <style>
+        p.position_static {
+          position: static;
+          top: 130px;
+          right: 115px;
+        }
         /* fijo */
-        h1.position_fixed {
+        p.position_fixed {
           position: fixed;
-          top: 230px;
-          text-shadow: rgba(0, 0, 255, 1) -1px -1px 0.3em;
+          top: 30px;
+          right: 15px;
         }
         /* relativo */
         .spann {
@@ -612,102 +727,126 @@
     <!-- Floating -->
     <fieldset>
       <legend> <h2>Floating</h2> </legend>
-
-      <div class="flex">
-        <div class="ejemplo" style="text-align: justify;">
-          Este texto está antes del elemento img (imagen) y no se ve afectado.<br><br>
-          <img src="../Imgs/cat1.png" height="85px" style="float: right; margin-left: 4px;" />
-          Este párrafo viene después del elemento div y se ve afectado por la propiedad float right.<br><br>
-          <p id="setCB">Este párrafo también viene después del elemento div y también se ve afectado.</p>
-        </div>
-        <div><div class="codigo">
-          img{ <b>float:</b> right; }
-        </div>
-        <button onclick="setClearBoth();"> Poner Clear-both </button> <br>      
-        <div class="codigo">
-          .clearing{ <br> &nbsp; <b>clear:</b> both; <font class="gray">/* both, right, left */</font> <br> }
-        </div></div>
-      </div>
-
-      <script>
-        function setClearBoth() {
-          var textoCB = document.getElementById("setCB");
-          textoCB.style.clear='both';
+      <p style="font-size: large; width: 50%; text-align: justify; "><img src="../Imgs/css_logo.png"
+          class="imgfloatr" />
+        Este párrafo tiene una imagen que flota a la <b>derecha.</b>
+        Es muy recomendable añadir un margen a las imágenes para que el texto no se acerque demasiado a la imagen.
+      </p>
+      <style>
+        img.imgfloatr {
+          height: 40px;
+          float: left;
         }
-      </script>
+      </style>
+      <div class="codigo">
+        img.imgfloatr{       
+          float: left;
+        }
+      </div>
+      <hr>
 
+      <!-- Clearing the Float -->
+      <h2 class="numbers">Clearing the Float</h2>
+      <sub>Floating:</sub>
+      <div class="ejemplo" style="text-align: justify;">
+        Este párrafo está por encima del elemento div y no se ve afectado por la propiedad float right de la imagen, por lo que no afecta al texto.
+        <br><br>
+        <div style="float: right;">
+          <img src="../Imgs/cat1.png" height="100px" style="margin-left: 4px;" />
+        </div>
+        Este párrafo viene después del elemento div y se ve afectado por la propiedad float right.
+        <br> <br>
+        Este párrafo también viene después del elemento div y se ve afectado por la propiedad float right.
+      </div>
+      <div class="codigo">
+        .floating{
+          float: right;
+        }
+      </div> <hr>
+
+      <sub>Clearing:</sub>
+      <div class="ejemplo" style="text-align: justify;">
+        Este párrafo está encima del elemento div y no se ve afectado por la propiedad float right de la imagen, por lo que no afecta al texto.
+        <br><br>
+        <div style="float: right;">
+          <img src="../Imgs/cat1.png" height="50px" style="margin-left: 4px;" />
+        </div>
+        Este párrafo viene después del elemento div y se ve afectado todo este texto por la propiedad float right, como se puede ver.
+        <br style="clear: both;" />
+        Este párrafo también viene después del elemento div y ya no se ve afectado por la propiedad float right.
+      </div>
+      <div class="codigo">
+        .clearing{
+          clear: both; <br> /* both, right, left */
+        }
+      </div>
     </fieldset>
 
     <!-- Z-Index -->
     <fieldset>
       <legend> <h2> Z-Index</h2> </legend>
-      <div class="flex">
-        <div style="margin: 0 70px 0 70px;">
-          <div class="boxi bluee">Blue</div>
-          <div class="boxi redd">Red</div>
-        </div>
-        <style>
-          .boxi{
-            position: relative;
-            width: 60px;
-            height: 60px;
-            color: #FFF;
-          }
-          .bluee {
-            z-index: 3;
-            background-color: blue;
-            margin-bottom: 15px;
-          }
-          .redd {
-            z-index: 2;
-            background-color: red;
-            margin: -50px 0 0 50px;
-          }
-        </style>
-        <!-- <div class="flex"> -->
-          <div class="cod">
-            .bluee { <br>
-              &nbsp; <b>z-index:</b> 3; <br>
-              &nbsp; <b>position:</b> relative; <br>
-            }
-          </div>
-          <div class="cod">
-            .redd { <br>
-              &nbsp; <b>z-index:</b> 2; <br>
-              &nbsp; <b>position:</b> relative; <br>
-              &nbsp; <b>margin:</b> -50px 0 0 50px; <br>
-            }
-          </div>
-        <!-- </div> -->
+      <div class="boxi bluee">Blue</div>
+      <div class="boxi redd">Red</div>
+      <style>
+        .boxi{
+          position: relative;
+          width: 60px;
+          height: 60px;
+          color: #FFF;
+        }
+        .bluee {
+          z-index: 3;
+          background-color: blue;
+          margin-bottom: 15px;
+        }
+
+        .redd {
+          z-index: 2;
+          background-color: red;
+          margin-top: -50px;
+          margin-left: 50px;
+        }
+      </style>
+      <div class="codigo">
+        .bluee { 
+          z-index: 3;
+          position: relative;
+        } <br>
+        .redd {
+          z-index: 2;
+          position: relative;
+          margin-top: -50px;
+          margin-left: 50px;
+        }
       </div>
     </fieldset>
     
     <!-- OverFlow -->
     <fieldset>
       <legend> <h2>OverFlow</h2> </legend>
-      <div class="flex">
-        <div class="overflow">
-          This text is inside the div element, which has a blue
-          background color and is floated to the left. We set a specific
-          height and width for the div element, and as you can see,
-          the content cannot fit.
-        </div>
-        <style>
-          div.overflow {
-            width: 200px;
-            height: 100px;
-            background-color: lightblue;
-            overflow: auto;
-            /* visible, scroll, hidden, auto */
-          }
-        </style>
-        <div class="cod">
-          div.overflow { <br>
-            &nbsp; <b>width:</b> 150px; <br>
-            &nbsp; <b>height:</b> 150px; <br>
-            &nbsp; <b>overflow:</b> auto; <font class="gray">/* visible, scroll, hidden, auto */ </font> <br>
-          }
-        </div>
+      <div class="overflow">
+        This text is inside the div element, which has a blue
+        background color and is floated to the left. We set a specific
+        height and width for the div element, and as you can see,
+        the content cannot fit.
+      </div>
+      <style>
+        div.overflow {
+          width: 130px;
+          height: 130px;
+          background-color: lightblue;
+          overflow: scroll;
+          /* visible, scroll, hidden, auto */
+        }
+      </style>
+      <div class="codigo">
+        div.overflow{
+          width: 150px;
+          height: 150px;
+          background-color: lightblue;
+          overflow: scroll; 
+          /* visible, scroll, hidden, auto */ 
+        }
       </div>
     </fieldset>
   </div>
@@ -716,12 +855,43 @@
   <div class="borders">
     <h2 class="titulo"> Bacics CSS3 </h2>
 
-    <!-- Border-Radius -->
+    <!-- Prefijos de provedores css -->
     <fieldset>
+      <legend> <h3 class="numbers">Prefijos de provedores/navegadores css:</h3> </legend>
+
+      FireFox = -moz- <br>
+      Safari = -webkit- <br>
+      Chrome = -webkit- <br>
+      Opera = -o- <br>
+      Explorer = -ms <br><br>
+    
+      <div class="roundd">
+        -webkit-border-radius: 24px; <br>
+        border-radius: 24px;
+      </div>
+      <style>
+        .roundd {
+          -webkit-border-radius: 24px;
+          border-radius: 24px;
+          border: 1px solid green;
+          width: 200px;
+          padding: 20px;
+        }
+      </style>
+    </fieldset>
+
+    <!-- Border-Radius -->
+    <fieldset style="height: 100px;">
       <legend> <h2> Border-Radius </h2> </legend>
-      <div class="flex">
-        <div class="divBorderRadius boxsh" style="margin-top: 15px;"> border-radius: 0 10px 20px 30px; </div>
-        <div class="divCirculo boxsh"> border-radius: 50%; </div>
+      <div class="boxizq">
+        <div class="divBorderRadius boxsh">
+          border-radius: 0 10px 20px 30px;
+        </div>
+      </div>
+      <div class="boxder">
+        <div class="boxsh divCirculo">
+          border-radius: 50%;
+        </div>
       </div>
       <style>
         .boxsh {
@@ -732,6 +902,10 @@
           text-align: center;
           display: table-cell;
           vertical-align: middle;
+        }
+
+        .backgw {
+          background-color: #fff;
         }
 
         /* Border-Radius */
@@ -757,48 +931,57 @@
     <!-- Box-Shadow -->
     <fieldset>
       <legend> <h2> Box-Shadow </h2> </legend>
-      <div class="flex" style="margin-top: 15px;">
-        <!-- Shadow -->
-        <div class="backgw boxsh" style="box-shadow: 10px 10px 10px 5px grey;">
-          <b>box-shadow:</b> 10px 10px 10px 5px #888; <br>
-          <font color="grey">box-shadow: Hriz, Vert, blur, spread, color</font>
-        </div>
-
-        <!-- Shadow Inside -->
-        <div class="backgw boxsh" style="box-shadow: inset 5px 5px 15px grey, inset -5px -5px 15px grey;">
-          <b>box-shadow:</b> inset 10px 10px 5px green, <br> inset -10px -10px 5px grey ;
-        </div>
+      <div class="backgw boxsh" style="box-shadow: 10px 10px 10px 5px grey;">
+        box-shadow: 10px 10px 10px 5px #888; <br>
+        <font color="grey">box-shadow: Hriz, Vert, blur, spread, color</font>
       </div>
 
-      <div class="flex">
-        <!-- Box-Triple Shadow -->
-        <div class="BoxTrilpeShadow">
-          <b>box-shadow:</b> 0 0 10px 30px rgba(255, 191, 136, 0.742), <br> 30px 0 20px 30px #B0E0E6;
-        </div>
-        <!-- Transparent -->
-        <div class="BoxTransparencia">
-          <b>background-color:</b> #9ACD32; <br>
-          <b>background: linear-gradient</b>(90deg, <br>
-          &nbsp; rgba(38, 23, 179, 0.515) 0%, rgba(16, 129, 133, 0.549) 25%, <br>
-          &nbsp; rgba(167, 201, 17, 0.433) 75%, rgba(72, 0, 56, 0.419) 100%); <br>
-        </div>
+      <!-- Box-Triple Shadow -->
+      <div class="BoxTrilpeShadow">
+        box-shadow: 0 0 10px 4px #FF6347, <br> 0 0 10px 30px #FFDAB9, <br> 30px 0 20px 30px #B0E0E6;
       </div>
       <style>
-        .backgw { background-color: #fff; }
         .BoxTrilpeShadow {
           text-align: center;
           vertical-align: middle;
           width: 220px;
           height: 50px;
-          margin: 50px 0 50px 20px;
+          margin-left: 20px;
+          margin-top: 50px;
+          margin-bottom: 50px;
           background-color: #fff;
-          box-shadow: 0 0 5px 5px #ff6347, 0 0 8px 20px rgba(255, 191, 136, 0.742), 15px 15px 10px 15px #004048;
+          box-shadow: 0 0 5px 5px #FF6347, 0 0 8px 20px #ffbf88, 15px 15px 10px 15px #004048;
         }
+      </style>
+
+      <!-- Box-Inside Shadow -->
+      <div class="backgw boxsh" style="box-shadow: inset 10px 10px 10px 5px grey;">
+        box-shadow: inset 10px 10px 10px 5px grey ;
+      </div>
+
+      <!-- Box-Double Inside Shadow -->
+      <div class="backgw boxsh" style="box-shadow: inset 5px 5px 15px grey, inset -5px -5px 15px grey;">
+        box-shadow: inset 10px 10px 5px green, <br> inset -10px -10px 5px grey ;
+      </div> <br>
+    </fieldset>
+
+    <!-- BoxTransparencia -->
+    <fieldset>
+      <legend> <h2> Transparencia </h2> </legend>
+      <div class="BoxTransparencia">
+        background-color: #9ACD32; <br>
+        background: linear-gradient(90deg, <br>
+        &nbsp; rgba(38, 23, 179, 0.515) 0%, rgba(16, 129, 133, 0.549) 25%, <br>
+        &nbsp; rgba(167, 201, 17, 0.433) 75%, rgba(72, 0, 56, 0.419) 100%); <br>
+        box-shadow: 0 0 25px rgba(19, 8, 80, 0.486), inset 0 0 1px rgba(0, 189, 85, 0.829); <br>
+      </div>
+
+      <style>
         .BoxTransparencia {
-          width: 50%;
-          height: 60px;
-          padding: 15px;          
-          margin: 35px 0 0 20px;
+          width: 80%;
+          height: auto;
+          padding: 15px;
+          margin: 8px;
           background-color: #9ACD32;
           background: linear-gradient(90deg,
             rgba(38, 23, 179, 0.515) 0%,
@@ -814,25 +997,23 @@
     <!-- Pseudo-Clases -->
     <fieldset>
       <legend> <h2>Pseudo-Clases</h2> </legend>
-      <div class="flex">
-        <div id="parent" class="ej">
-          <p>First paragraph</p>
-          <p>Second paragraph</p>
-          <p>Third paragraph</p>
-        </div>
-        <style>
-          #parent p:first-child {
-            color: green;
-            text-decoration: underline;
-          }
-        </style>
-        <div class="cod">
-          <font class="gray">/* first-last */</font> <br>
-          #<font class="orange">parent</font>:<font class="purp"><ins>first-child</ins></font> { <br>
-            &nbsp; <b>color:</b> green; <br>
-            &nbsp; <b>text-decoration:</b> underline; <br>
-          }
-        </div>
+      <div id="parent" class="ejemplo">
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <p>Third paragraph</p>
+      </div>
+      <style>
+        #parent p:first-child {
+          color: green;
+          text-decoration: underline;
+        }
+      </style>
+      <div class="codigo">
+        /* first-last */ <br>
+        #parent p:first-child { <br>
+          &nbsp; color: green; <br>
+          &nbsp; text-decoration: underline; <br>
+        }
       </div>
     </fieldset>
 
@@ -840,85 +1021,131 @@
     <fieldset>
       <legend> <h2> Pseudo-Elemento</h2> </legend>
 
-      <h3 class="subtitulo"> Primera Linea </h3>
-      <div class="flex">
-        <div class="ej">
-          <p class="textfirstline">
-            El siguiente ejemplo demuestra cómo usar el elemento ::first-line 
-            para agregar un efecto especial a la primera línea de elementos en el documento.
-          </p>
-        </div>
-        <div class="cod">
-          .<font class="yellow">texto</font>::<font class="purp">first-line</font> { <br>
-            &nbsp; <b>color:</b> green; <br>
-          }
-          <style>.textfirstline::first-line { color: green; }</style>
-        </div>
-      </div><hr>
-
-      <h3 class="subtitulo"> Primera Letra </h3>
-      <div class="flex">
-        <div class="ej">
-          <p class="firstletter"> La primera letra es de otro color</p>
-        </div>
-        <div class="cod">
-          .<font class="yellow">texto</font>::<font class="purp">first-letter</font> { <br>
-            &nbsp; <b>background-color:</b> green; <br> }
-          <style> .firstletter::first-letter { background-color: green; } </style>
-        </div>
-      </div><hr>
-
-      <h3 class="subtitulo"> Seleccion </h3>
-      <div class="flex">
-        <div class="ej">
-          <p class="seleccioname">Selecciona una parte del texto para marcarlo de otro color</p>
-        </div>
-        <div class="cod">
-          .<font class="yellow">texto</font>::<font class="purp">selection</font> { <br>
-            &nbsp; <b>background-color:</b> green; <br> }
-          <style>.seleccioname::selection { background-color: #589432; color: #FF6347; }</style>
-        </div>
-      </div><hr>
-
-      <h3 class="subtitulo"> Before (Antes) </h3>
-      <div class="flex">
-        <div class="ej">
-          <p class="insertImageBeforeText">Insertar Imagen antes del Texto. </p>
-        </div>
-        <div class="cod">
-          .<font class="yellow">texto</font>::<font class="purp">before</font> { <br>
-            &nbsp; <b>content:</b> url("<font class="string">../Imgs/loguito.png</font>"); <br> }
-          <style> .insertImageBeforeText::before { content: url("../Imgs/loguito.png"); } </style>
-        </div>
+      <h3 class="subtitulo"> ::First-Line</h3>
+      
+      <div class="ejemplo">
+        <h4 class="textfirstline">
+          El siguiente ejemplo demuestra cómo usar el elemento ::first-line 
+          para agregar un efecto especial a la primera línea de elementos en el documento.
+        </h4>
       </div>
+      <div class="codigo">
+        .textfirstline::first-line { <br>
+          &nbsp; color: #589432; <br>
+        }
+      </div> <hr>
+
+      <h3 class="subtitulo"> ::First-Letter</h3>
+      <div class="ejemplo">
+        <h4 class="firstletter"> La primera letra es de otro color</h4>
+      </div>
+      <div class="codigo">
+        .firstletter::first-letter{ <br>
+          &nbsp; background-color: #589432; <br>
+        }
+      </div> <hr>
+
+      <h3 class="subtitulo"> ::Selection</h3>
+      <div class="ejemplo">
+        <h4 class="seleccioname">Selecciona una parte de este texto para marcarlo de otro color</h4>
+      </div>
+      <div class="codigo">
+        /* h5::-moz-selection (para mozillaFirefox)*/ <br>
+        .seleccioname::first-letter{ <br>
+          &nbsp; background-color: #589432; <br>
+        }
+      </div> <hr>
+
+      <h3 class="subtitulo"> ::Before</h3>
+      <div class="ejemplo">
+        <h3 class="insertImageBeforeText">insert Image Before Text</h3>
+      </div>
+      <div class="codigo">
+        .insertImageBeforeText::before{ <br>
+          &nbsp; content: url("../Imgs/loguito.png"); <br>
+        }
+      </div>
+      <style>
+        .textfirstline::first-line {
+          color: #589432;
+        }
+        .firstletter::first-letter {
+          background-color: #589432;
+        }
+        .seleccioname::selection {
+          background-color: #589432;
+          color: #FF6347;
+        }
+        .insertImageBeforeText::before {
+          content: url("../Imgs/loguito.png");
+        }
+      </style>
     </fieldset>
 
     <!-- Word-Wrap -->
     <fieldset>
       <legend> <h2>Word-Wrap</h2> </legend>
-      <div class="flex">
-        <p class="wordwrap" style="word-wrap: normal;">
-          NormalNormalNormalNormalNormalNormal.
-          NormalNormalNormalNormalNormalNormal.
-        </p>
-        <div class="codigo">
-          .texto{ <br>
-            &nbsp; <b>word-wrap:</b> normal; <br>
-          } <br>
-        </div>
+      <p class="wordwrap" style="word-wrap: normal;">
+        NormalNormalNormalNormalNormalNormal.
+        NormalNormalNormalNormalNormalNormal.
+      </p>
+      <p class="wordwrap" style="word-wrap: break-word;">
+        BreakWord.BreakWord.BreakWord.BreakWord.BreakWord.
+      </p>
+      <div class="codigo">
+        .wordwrapnormal{ <br>
+          word-wrap: normal; <br>
+        } <br>
+        .wordwrapbreak{ <br>
+          word-wrap: break-word; <br>
+        }
       </div>
+      <style>
+        .wordwrap{
+          border: 1px solid black;
+          width: 100px;
+          height: 80px;
+        }
+      </style>
+    </fieldset>
 
-      <div class="flex">
-        <p class="wordwrap" style="word-wrap: break-word;">
-          BreakWord.BreakWord.BreakWord.BreakWord.BreakWord.
-        </p>
-        <div class="codigo">
-          .texto{ <br>
-            &nbsp; <b>word-wrap:</b> break-word; <br>
+    <!-- Font-Face -->
+    <fieldset>
+      <legend> <h2>Font-Face</h2> </legend>
+      <h1 class="custfont">This is Delicious Font</h1>
+      <details>
+        <summary>Code...</summary>
+        <code>
+          @font-face { <br>
+            font-family: Delicious;  <br>
+            src: url('../Imgs/Delicious-Roman.otf');  <br>
+          }  <br>
+          @font-face {  <br>
+            font-family: Delicious;  <br>
+            font-weight: bold;  <br>
+            src: url('../Imgs/Delicious-Bold.otf');  <br>
+          } <br>
+          h1.custfont{ <br>
+            font-family: Delicious, sans-serif;  <br>
           }
-        </div>
-      </div>
-      <style> .wordwrap{ border: 1px solid black; width: 100px; height: 70px; } </style>
+        </code>
+      </details>
+      <style>
+        @font-face {
+          font-family: Delicious;
+          src: url('../Imgs/Delicious-Roman.otf');
+        }
+
+        @font-face {
+          font-family: Delicious;
+          font-weight: bold;
+          src: url('../Imgs/Delicious-Bold.otf');
+        }
+
+        h1.custfont {
+          font-family: Delicious, sans-serif;
+        }
+      </style>
     </fieldset>
   </div>
 
@@ -1162,97 +1389,101 @@
 
       <!-- Transition -->
       Apuntar el sig cuadro...
-      <div class="flex">
-        <div class="ej">
-          <div class="transit"> </div>
-        </div>
-        <div class="cod">
-          .div { <br>
-            &nbsp; <b>transition:</b> <ins>width 2s;</ins> <br>
-          } <br>
-          .div:<font class="purp">hover</font> { <br>
-            &nbsp; <b>width:</b> 350px; <br>
-          }
-        </div>
-        <style>
-          div.transit {
-            width: 100px;
-            height: 100px;
-            background: #32CD32;
-            transition: width 2s;
-          }
-          div.transit:hover {
-            width: 300px;
-          }
-        </style> 
+      <div class="transit"> 
+        div.transit { 
+          transition: width 2s;
+        } <br>
+        div.transit:hover {
+          width: 350px;
+        }
       </div>
+      <style>
+        div.transit {
+          width: 200px;
+          height: 60px;
+          background: #32CD32;
+          transition: width 2s;
+          -webkit-transition: width 2s;
+        }
+        div.transit:hover {
+          width: 350px;
+        }
+      </style> <hr>
 
-      <h3>Rotation</h3>
       <!-- Rotation -->
-      <div class="flex">
-        <div class="ej"><div class="rotate"></div></div>
-        <div class="cod"> .div{ <br> &nbsp; <b>transform:</b> rotate(10deg); <br> }</div>
-        <style>
-          div.rotate {
-            width: 50px;
-            height: 50px;
-            margin: 5px;
-            background-color: #32CD32;
-            transform: rotate(20deg);
-          }
-          div.rotate:hover{
-            transform: rotate(0deg);
-          }
-        </style>
-      </div>
+      <table>
+        <td>
+          <div class="rotate">transform: rotate(10deg);</div>
+        </td>
+      </table>
+      <style>
+        div.rotate {
+          width: 150px;
+          height: 50px;
+          background-color: #32CD32;
+          transform: rotate(10deg);
+          -webkit-transform: rotate(10deg);
+        }
+      </style> <hr>
 
       <!-- Rot Bot-Centr. -->
-      <div class="flex">
-        <div class="ej"> <div class="greendivrot"></div> </div>
-        <div class="cod"> .div{ <br> &nbsp; <b>transform:</b> rotate(10deg); <br> &nbsp; <b>transform-origin:</b>  bottom center; <br>} </div>
-        <style>
-          .greendivrot {
-            width: 50px;
-            height: 50px;
-            margin: 5px;
-            background-color: #32CD32;
-            transform: rotate(20deg);
-            transform-origin: bottom center;
-          }
-          .greendivrot:hover{
-            transform: rotate(0deg);
-          }
-        </style> 
-      </div>
+      <table>
+        <td>  
+          <div class="greendivrot">
+            margin-top: 10px; <br>
+            transform: rotate(10deg); <br>
+            transform-origin: bottom center; <br>
+          </div>
+        </td>
+      </table>
+      <style>
+        div.empty-div {
+          width: 180px;
+          height: 50px;
+          border: 1px solid black;
+        }
+        .greendivrot {
+          font-size: 12px;
+          width: 180px;
+          height: 50px;
+          margin-top: 11px;
+          background-color: #32CD32;
+          transform: rotate(10deg);
+          transform-origin: bottom center;
+        }
+      </style> <br><hr>
 
-      <!-- Translate -->
-      <h3>Translate (Mover)</h3>
-      <div class="flex">
-        <div class="ej"><div class="torig"></div></div>
-        <div class="cod"> .div{ <br> &nbsp; <b>transform:</b> translate(20px, 20px); <br> } </div>
-        <style>
-          div.torig {
-            width: 50px;
-            height: 50px;
-            background-color: #32CD32;
-            transform: translate(250px, 10px);
-          }
-        </style>
-      </div> <hr>
+      <h3 class="numbers">Translate() Method</h3>
+      <table>
+        <td>
+          <div class="torig">transform: translate(20px, 20px);</div>
+        </td>
+      </table>
+      <style>
+        div.torig {
+          width: 100px;
+          height: 50px;
+          background-color: #32CD32;
+          transform: translate(10px, 10px);
+          /* -webkit-transform: translate(20px, 20px); */
+        }
+      </style> <br><hr>
 
-      <h3>Skew (Torcer)</h3>
-      <div class="flex">
-        <div class="ej"> <div class="skew"></div> </div>
-        <div class="cod"> .div{ <br> &nbsp; <b>transform:</b> skew(30deg); <br> } </div>
-        <style>
-          div.skew {
-            width: 50px;
-            height: 50px;
-            background-color: #32CD32;
-            transform: skew(25deg);
-          }
-          </style>
-      </div> <hr>
+      <h3 class="numbers">Skew() Method</h3>
+      <table>
+        <td>
+          <div class="skew">transform: skew(30deg);</div>
+        </td>
+      </table>
+      <style>
+        div.skew {
+          width: 100px;
+          height: 40px;
+          background-color: #32CD32;
+          transform: skew(30deg);
+          -webkit-transform: skew(30deg);
+        }
+      </style> <hr>
 
       <h3 class="numbers">Scale y rotate</h3>
       <table>

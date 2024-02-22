@@ -88,9 +88,16 @@ font.comentario{ /* JS */
 font.gray{ /* CS */
   color: gray;
 }
+font.string{
+  color: rgb(101, 101, 101);
+}
 font.aqua{
   color: rgba(0, 115, 141, 0.704);
   text-shadow: .1px .1px rgb(124, 156, 150);
+}
+font.yellow{
+  color: rgb(255, 230, 0);
+  text-shadow: .5px 1px rgba(166, 69, 0, 0.461);
 }
 .icons {
   height: 85px;
