@@ -122,53 +122,59 @@
     <fieldset>
       <legend><h2>Alineación de Texto</h2></legend>
 
-      <!-- Text-Align (Horizontal) -->
-      <div>
-        <h3 class="numbers"> Horizontal:</h3>
-
-        <div class="flex">
-          <div class="ej">
-            <div style="text-align: left;">This paragraph is aligned to <b>left</b></div>
+      <h3 class="numbers"> Horizontal / Vertical</h3>
+      
+      <div style="height: 100px;">
+        <div class="boxizq" style="width: 50%;"> <!-- Text-Align (Horizontal) -->
+          <div class="flex">
+            <div class="ej">
+              <div style="text-align: left;">Aligned to <b>Left</b></div>
+            </div>
+            <div class="cod">
+              <b>text-align:</b> left; <br>
+            </div>
           </div>
-          <div class="cod">
-            <b>text-align:</b> left; <br>
-          </div> 
-        </div>
         
-        <div class="flex">
-          <div class="ej">
-            <div style="text-align: center;">This paragraph is aligned to <b>center</b></div>
+          <div class="flex">
+            <div class="ej">
+              <div style="text-align: center;">Aligned to <b>Center</b></div>
+            </div>
+            <div class="cod">
+              <b>text-align:</b> center; <br>
+            </div>
           </div>
-          <div class="cod">
-            <b>text-align:</b> center; <br>
-          </div> 
-        </div>
         
-        <div class="flex">
-          <div class="ej">
-            <div style="text-align: right;">This paragraph is aligned to <b>right</b></div>
+          <div class="flex">
+            <div class="ej">
+              <div style="text-align: right;">Aligned to <b>Right</b></div>
+            </div>
+            <div class="cod">
+              <b>text-align:</b> right; <br>
+            </div>
           </div>
-          <div class="cod">
-            <b>text-align:</b> right; <br>
-          </div> 
-        </div> <hr>
+        </div>
 
-        <!-- Text-Align (Vertical) -->
-        <h3 class="numbers"> Vertical:</h3>
-        <div class="flex">
-          <table border="1" cellpadding="5" cellspacing="1" style="height: 70px;">
-            <tr>
-              <td style="vertical-align: top;">Top</td>
-              <td style="vertical-align: middle;">Middle</td>
-              <td style="vertical-align: bottom;">Bottom</td>
-            </tr>
-          </table>
-          <div class="codigo">
-            <b>vertical-align:</b> top; <br>
-            <b>vertical-align:</b> middle; <br>
-            <b>vertical-align:</b> bottom; <br>
+        <div class="boxder" style="width: 50%;"><!-- Text-Align (Vertical) -->
+          <div class="flex" style="height: 90px;">
+            <div class="flex">
+              <div class="ej" style="display: inline-table; vertical-align: top;"><div style="vertical-align: top; display: table-cell;">Top</div></div>
+              <div class="ej" style="display: inline-table;"><div style="vertical-align: middle; display: table-cell;">Middle</div></div>
+              <div class="ej" style="display: inline-table; vertical-align: bottom;"><div style="vertical-align: bottom; display: table-cell;">Bottom</div></div>
+            </div>
+            <div>
+              <div class="cod">
+                <b>vertical-align:</b> top; <br>
+              </div>
+              <div class="cod">
+                <b>vertical-align:</b> middle; <br>
+              </div>
+              <div class="cod">
+                <b>vertical-align:</b> bottom; <br>
+              </div>
+            </div>
           </div>
-        </div> <hr>
+        </div>
+      </div><hr>
 
       <!-- Text-Align Property (Vertical) -->
         <h3 class="numbers"> Text-Align Property (Vertical)</h3>
@@ -925,151 +931,73 @@
   <!-- Degradados y Fondos -->
   <div class="borders">
     <h2 class="titulo"> Degradados y Fondos </h2>
-    <style>
-      .deg {
-        width: 250px;
-        height: 70px;
-        margin: 4px;
-        text-align: center;
-        display: table-cell;
-        vertical-align: middle;
-      }
-    </style>
+    <style> .deg { width: 50px; height: 50px; } </style>
 
     <!-- Dergadados Lineales -->
     <fieldset>
       <legend> <h2>Dergadados Lineales</h2> </legend>
-      <p>(Si no se usa rgb usar "-webkit-linear-gradient(#fff, #000)"</p>
-      <table>lineal gradient
-        <td>
-          <div class="degradados deg">
-            background: linear-gradient(<br> #00d4ff, #090979);
+      <!-- <p>(Si no se usa rgb usar "-webkit-linear-gradient(#fff, #000)")</p> -->
+      lineal gradient
+      <div class="flex">
+        <div class="flex">
+          <div class="ej wAuto"><div class="degradados deg"></div></div>
+          <div class="cod"> <b>background:</b><br> linear-gradient(red, black); </div>
+          <style> div.degradados { background: linear-gradient(red, black); } </style>
+        </div>
+        <div class="flex">
+          <div class="ej wAuto"><div class="degradadosmulticolor deg"></div></div>
+          <div class="cod"> <b>background:</b> linear-gradient <br>(blue 0%, red 30%, black 80%); </div>
+          <style> div.degradadosmulticolor { background: linear-gradient(blue 0%, red 40%, black 80%); } </style>
+        </div>
+      </div><br>
+
+      bottom-left & 100deg
+      <div class="flex">
+        <div class="flex">
+          <div class="ej wAuto"><div class="second deg"></div></div>
+          <div class="cod"> 
+            <b>background:</b> linear-gradient <br>(<u>45deg</u>, black, red, green); <br> <font class="gray">(<u>bottom left</u>, black, red, green)</font> 
           </div>
-        </td>
-        <td>
-          <div class="degradadosmulticolor deg">
-            background: linear-gradient(<br> blue 0%,<br> #00bfff 30%,<br> #fff 80%);
-          </div>
-        </td>
-      </table>
-      <style>
-        div.degradados {
-          background: linear-gradient(#00d4ff, #090979);
-        }
-        div.degradadosmulticolor {
-          background: linear-gradient(blue 0%, #00bfff 30%, #fff 80%);
-        }
-      </style><br>
-
-      <table>left & bottom
-        <td>
-          <div class="first deg">background: linear-gradient(left, blue, 00bfff, white);</div>
-        </td>
-        <td>
-          <div class="second deg">background: linear-gradient(bottom, blue, 00bfff, white);</div>
-        </td>
-      </table>
-
-      <style>
-        div.first {
-          background: -webkit-linear-gradient(left, blue, #00bfff, white);
-          background: -moz-linear-gradient(left, blue, #00bfff, white);
-          background: -ms-linear-gradient(left, blue, #00bfff, white);
-        }
-
-        div.second {
-          background: -webkit-linear-gradient(bottom, blue, #00bfff, white);
-          background: -moz-linear-gradient(bottom, blue, #00bfff, white);
-          background: -ms-linear-gradient(bottom, blue, #00bfff, white);
-        }
-      </style><br>
-
-      <table>bottom left & 100deg
-        <td>
-          <div class="first2 deg">background: linear-gradient(bottom left, blue, #00bfff, white);</div>
-        </td>
-        <td>
-          <div class="second2 deg">background: linear-gradient(100deg, blue, #00bfff, white);</div>
-        </td>
-      </table>
-      <style>
-        div.first2 {
-          background: -webkit-linear-gradient(bottom left, blue, #00bfff, white);
-          background: -moz-linear-gradient(bottom left, blue, #00bfff, white);
-          background: -ms-linear-gradient(bottom left, blue, #00bfff, white);
-        }
-
-        div.second2 {
-          background: -webkit-linear-gradient(100deg, blue, #00bfff, white);
-          background: -moz-linear-gradient(100deg, blue, #00bfff, white);
-          background: -ms-linear-gradient(100deg, blue, #00bfff, white);
-        }
-      </style><br>
-
-      <table>Repeating Gradient
-        <td>
-          <div class="repeating deg">background: repeating-linear-gradient(rgb(0, 21, 255), rgb(0, 255, 238)
-            20px);</div>
-        </td>
-      </table>
-      <style>
-        div.repeating {
-          float: left;
-          background: repeating-linear-gradient(rgb(0, 21, 255), rgb(0, 255, 238) 20px);
-        }
-      </style>
+          <style> div.second { background: -webkit-linear-gradient(45deg, black, red, green); } </style>
+        </div>
+        <div class="flex">
+          <div class="ej wAuto"> <div class="repeating deg"></div> </div>
+          <div class="cod"> <b>background:</b> repeating-linear-gradient <br> (red, black 17px); </div>
+          <style> div.repeating { background: repeating-linear-gradient(red, black 17px); } </style>
+        </div>
+      </div>
     </fieldset>
 
     <!-- Degradados Radiales -->
     <fieldset>
       <legend> <h2>Degradados Radiales</h2> </legend>
       
-      <div class="first48 degrad">Ellipse (Default)</div>
-      <div class="second48 degrad">Circle</div>
-      <div class="first49 degrad">Top Left</div>
-      <div class="second49 degrad">In Percentages</div>
-      <div class="colorstop degrad">Color Stops</div>
-
+      <div>
+        <div class="first48 degrad">Ellipse (Default)</div>
+        <div class="second48 degrad">Circle</div>
+        <div class="first49 degrad">Top Left</div>
+        <div class="second49 degrad">In Percentages</div>
+        <div class="colorstop degrad">Color Stops</div>
+      </div>
       <div class="codigo">
-        background: radial-gradient(position, shape or size, color-stops); <br>
-        position: top, left.. 0% 0%(sup izq), 50% 50%(medio)
+        <b>background:</b> -webkit-radial-gradient(<u>position</u>, shape or size, color-stops); <br>
+        <div class="gray"><b>position:</b> top, left.. 0% 0%(sup izq), 50% 50%(medio)</div>
       </div>
 
       <style>
         .degrad {
-          height: 80px;
-          width: 100px;
-          border: 1px solid;
+          height: 80px; width: 100px;
+          border: 1px solid black;
           color: #FFF;
           text-align: center;
           display: table-cell;
           vertical-align: middle;
         }
-        div.first48 {
-          background: -webkit-radial-gradient(red, yellow, blue);
-          background: -moz-radial-gradient(green, yellow, blue);
-          background: -ms-radial-gradient(green, yellow, blue);
-        }
-        div.second48 {
-          background: -webkit-radial-gradient(circle, red, yellow, blue);
-          background: -moz-radial-gradient(circle, green, yellow, blue);
-          background: -ms-radial-gradient(circle, green, yellow, blue);
-        }
-        div.first49 {
-          background: -moz-radial-gradient(top left, red, yellow, blue);
-          background: -webkit-radial-gradient(top left, red, yellow, blue);
-          background: -ms-radial-gradient(top left, green, yellow, blue);
-        }
-        div.second49 {
-          background: -moz-radial-gradient(green 5%, yellow 15%, blue 60%);
-          background: -webkit-radial-gradient(red 5%, yellow 15%, blue 60%);
-          background: -ms-radial-gradient(green 5%, yellow 15%, blue 60%);
-        }
-        div.colorstop {
-          background: -moz-radial-gradient(circle, green 40%, yellow 50%, blue 70%);
-          background: -webkit-radial-gradient(circle, red 40%, yellow 50%, blue 70%);
-          background: -ms-radial-gradient(circle, green 40%, yellow 50%, blue 70%);
-        }
+        div.first48 { background: -webkit-radial-gradient(red, yellow, blue); }
+        div.second48 { background: -webkit-radial-gradient(circle, red, yellow, blue); }
+        div.first49 { background: -webkit-radial-gradient(top left, red, yellow, blue); }
+        div.second49 { background: -webkit-radial-gradient(red 5%, yellow 15%, blue 60%); }
+        div.colorstop { background: -webkit-radial-gradient(circle, red 40%, yellow 50%, blue 70%); }
       </style>
     </fieldset>
 
@@ -1077,84 +1005,58 @@
     <fieldset>
       <legend> <h2>Backgrounds</h2> </legend>
       <!-- Background size -->
-      <h3>Background size</h3>
-      <table>
-        <td>
-          <div class="backsize" style="background-size: 75px 75px;">background-size: 75px</div>
-        </td>
-        <td>
-          <div class="backsize" style="background-size: 50px 50px;">background-size: 50px</div>
-        </td>
-        <td>
-          <div class="backsize" style="background-size: contain;">bs: contain</div>
-        </td>
-        <td>
-          <div class="backsize" style="background-size: cover;">bs: cover</div>
-        </td>
-      </table>
+      <h3>Background Size / Clip</h3>
+        <div class="flex">
+          <div class="backsize" style="background-size: 75px 75px;"><b>background-size:</b> 75px</div>
+          <div class="backsize" style="background-size: contain;"><b>background-size:</b> contain</div>
+          <div class="backsize" style="background-size: cover;"><b>background-size:</b> cover</div>
+          <div>
+          <div class="backclip" style="background-clip: padding-box;"> <b>background-clip:</b> padding-box</div>
+          <div class="backclip" style="background-clip: content-box;"> <b>background-clip:</b> content-box</div>
+          </div>
+        </div>
       <style>
         .backsize {
-          height: 100px;
-          width: 120px;
+          height: 115px; width: 150px;
           border: 1px solid #000;
           background: url("http://www.sololearn.com/uploads/css_logo.png") no-repeat 50% 50%;
         }
-      </style> <hr>
-
-      <!-- Background Clip -->
-      <h3>Background Clip</h3>
-      <table>
-        <td>
-          <div class="backclip" style="background-clip: padding-box;">background-clip: padding-box</div>
-        </td>
-        <td>
-          <div class="backclip" style="background-clip: content-box;">background-clip: content-box</div>
-        </td>
-        <td>
-          <div class="bcimg backclip">background-clip: content-box</div>
-        </td>
-      </table>
-      <style>
         .backclip {
-          border: 2px dotted black;
-          padding: 20px;
-          background: LightBlue;
-        }
-        div.bcimg {
-          background: none;
-          background-clip: content-box;
+          border: 1px solid black;
+          padding: 20px; margin: 1px;
+          text-align: center;
           background-image: url("http://www.sololearn.com/uploads/css_logo.png");
-        }
-      </style> <hr>
-
-      <!-- Multiple background -->
-      <h3>Multiple-background</h3>
-      <div class="multbg"></div>
-      <style>
-        div.multbg {
-          width: 200px;
-          height: 100px;
-          background-image: url("http://www.sololearn.com/uploads/css_logo.png"), url("http://www.sololearn.com/uploads/better-code.jpg");
-          background-position: right bottom, left top;
-          background-repeat: no-repeat;
         }
       </style>
 
-      <!-- Opacity -->
-      <h3>Opacity</h3>
-      <table>
-        <td><img style="opacity: 1;" src="http://www.sololearn.com/uploads/css_logo.png" />opacity: 1</td>
-        <td><img style="opacity: 0.5;" src="http://www.sololearn.com/uploads/css_logo.png" />opacity: 0.5</td>
-        <td><img style="opacity: 0.25;" src="http://www.sololearn.com/uploads/css_logo.png" />opacity: 0.25</td>
-        <td><img style="opacity: 0.5; filter: alpha(opacity=50);" src="http://www.sololearn.com/uploads/css_logo.png" />op 0.5 + alpha(op 50)</td>
-      </table>
+      <!-- Multiple background -->
+      <h3>Multiple-background</h3>
+      <div class="flex">
+        <div class="ej wAuto"><div class="multbg"></div></div>
+        <div class="cod">
+          div.multbg { <br>
+            &nbsp; <b>background-image:</b> url("css_logo.png"), url("fondo.jpg"); <br>
+            &nbsp; <b>background-position:</b> right bottom, left top; <br>
+            &nbsp; <b>background-size:</b> 50px, 150px; <br>
+            &nbsp; <b>background-repeat:</b> no-repeat; <br>
+          }
+        </div>
+        <style>
+          div.multbg {
+            width: 200px; height: 100px;
+            background-image: url("http://www.sololearn.com/uploads/css_logo.png"), url("http://www.sololearn.com/uploads/better-code.jpg");
+            background-position: right bottom, left top;
+            background-size: 80px, 200px;
+            background-repeat: no-repeat;
+          }
+        </style>
+      </div>
     </fieldset>
   </div>
 
   <!-- transiciones y Transparencia -->
   <div class="borders">
     <h1 class="titulo"> transformación y transicion </h1>
-    <!-- https://code.sololearn.com/WhEb9aoMSiUB/ -->
 
     <!-- Transition -->
     <fieldset>
@@ -1252,10 +1154,10 @@
       </details> <hr>
 
       <!-- Transition -->
-      Apuntar el sig cuadro...
+      Transition (transicion)
       <div class="flex">
         <div class="ej">
-          <div class="box3d transit"> </div>
+          <div class="box3d transit"> <font style="font-size: smaller;">Apuntame.</font> </div>
         </div>
         <div class="cod">
           .div { <br> &nbsp; <b>transition:</b> 2s;<br> } 
@@ -1272,68 +1174,72 @@
       <!-- Scale -->
       Scale (Tamaño)
       <div class="flex">
-        <div class="ej"> <div class="box3d scalerot"></div> </div>
-        <div class="cod"> .div { <br> &nbsp; <b>transform:</b> scale(0.7, 0.7); <br> } <font class="gray">transform: none; (Desactivar)</font> </div>
-        <style>
-          .scalerot { animation: scaleAnim 1s infinite; }
-          @keyframes scaleAnim {
-            from { transform: none; }
-            to { transform: scale(0.7, 0.7); }
-          }
-        </style>
-      </div> <br>
+        <div class="flex">
+          <div class="ej wAuto"> <div class="box3d scalerot"></div> </div>
+          <div class="cod"> .div { <br> &nbsp; <b>transform:</b> scale(0.5, 0.5); <br> } <font class="gray">transform: none; (Desactivar)</font> </div>
+          <style>
+            .scalerot { animation: scaleAnim 2s infinite; }
+            @keyframes scaleAnim {
+              0% { transform: none; }
+              50% { transform: scale(0.5, 0.5); }
+              100% { transform: none; }
+            }
+          </style>
+        </div>
 
-      <!-- Translate -->
-      Translate (Mover)
+        <!-- Translate (Mover) -->
+        <div class="flex">
+          <div class="ej wAuto" style="width: 100px;"><div class="box3d torig"></div></div>
+          <div class="cod"> .div{ <br> &nbsp; <b>transform:</b> translate(10px); <br> } </div>
+          <style>
+            .torig { animation: translateAnim 2s infinite; }
+            @keyframes translateAnim {
+              0% { transform: none; }
+              50% { transform: translate(20px); }
+              100% { transform: none }
+            }
+          </style>
+        </div>
+      </div><br>
+
+      <!-- Skew (Torcer) -->
+      Skew (Torcer) y Rotate (Rotar)
       <div class="flex">
-        <div class="ej"><div class="box3d torig"></div></div>
-        <div class="cod"> .div{ <br> &nbsp; <b>transform:</b> translate(10px); <br> } </div>
-        <style>
-          .torig { animation: translateAnim 1s infinite; }
-
-          @keyframes translateAnim {
-            from { transform: none; }
-            to { transform: translate(20px); }
-          }
-        </style>
-      </div> <br>
-
-      <!-- Skew -->
-      Skew (Torcer)
-      <div class="flex">
-        <div class="ej"> <div class="box3d skew"></div> </div>
-        <div class="cod"> .div{ <br> &nbsp; <b>transform:</b> skew(30deg); <br> } </div>
-        <style>
-          div.skew {
-            margin-left: 10px;
-            animation: skewAnim 1s infinite;
-          }
-          @keyframes skewAnim {
-            from { transform: none; }
-            to { transform: skew(-25deg); }
-          }
-        </style>
-      </div> <hr>
-
-      <!-- Rotar. -->
-      Rotate (Rotar)
-      <div class="flex">
-        <div class="ej"> <div class="box3d greendivrot"></div> </div>
-        <div class="cod"> .div{ <br> &nbsp; <b>transform:</b> rotate(10deg); <br> &nbsp; <b>transform-origin:</b> top center; <br>} </div>
-        <style>
-          .greendivrot {
-            margin: 5px;
-            animation: rotAnim 1.5s infinite;
-            transform-origin: top center;
-          }
-          @keyframes rotAnim {
-            0% { transform: none; }
-            33% { transform: rotate(-20deg); }
-            66% { transform: rotate(20deg); }
-            100% { transform: none; }
-          }
-        </style>
-      </div> <br>
+        <div class="flex">
+          <div class="ej wAuto"> <div class="box3d skew"></div> </div>
+          <div class="cod"> .div{ <br> &nbsp; <b>transform:</b> skew(30deg); <br> } </div>
+          <style>
+            div.skew {
+              margin: 5px;
+              animation: skewAnim 2s infinite;
+            }
+            @keyframes skewAnim {
+              0% { transform: none; }
+              50% { transform: skew(-25deg); }
+              100% { transform: none; }
+            }
+          </style>
+        </div>
+  
+        <!-- Rotate (Rotar) -->
+        <div class="flex">
+          <div class="ej wAuto"> <div class="box3d greendivrot"></div> </div>
+          <div class="cod"> .div{ <br> &nbsp; <b>transform:</b> rotate(10deg); <br> &nbsp; <b>transform-origin:</b> top center; <br>} </div>
+          <style>
+            .greendivrot {
+              margin: 5px;
+              animation: rotAnim 1.5s infinite linear;
+              transform-origin: top center;
+            }
+            @keyframes rotAnim {
+              0% { transform: none; }
+              25% { transform: rotate(-20deg); }
+              75% { transform: rotate(20deg); }
+              100% { transform: none; }
+            }
+          </style>
+        </div>
+      </div><br>
 
       <!-- 3D Rotation -->
       3D Rotation

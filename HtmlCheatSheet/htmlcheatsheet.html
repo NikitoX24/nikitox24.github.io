@@ -120,7 +120,7 @@
           <ins>Subrayado</ins>
         </div>
         <div class="cod">
-          <span>&lt;ins></span> Subrayado <span>&lt;/ins></span>
+          <span>&lt;u></span> Subrayado <span>&lt;/u></span> &lt;ins>
         </div>
       </div>
 
@@ -210,7 +210,7 @@
           </div>
           <!-- Codigo -->
           <div class="cod">
-            <span>&lt;a</span> <font color="purple">href</font> ="<font color="green">../Apple.png</font>" <span>>&lt;img</span> <font color="purple">src</font>="<font color="green">../Apple.png</font>" <font color="purple">alt</font>="apple"<span>></span></a>
+            <span>&lt;a</span> <font color="purple">href</font> ="<font color="green">../Apple.png</font>" <span>>&lt;img</span> <font color="purple">src</font>="<font color="green">../Apple.png</font>" <font color="purple">alt</font>="apple" <font color="purple">title</font>="Texto descripción"<span>>< /a></span>
           </div>
         </div>
       <hr>
@@ -310,11 +310,10 @@
     <!-- Tabla -->
     <fieldset class="flex">
       <legend> <h2> Tabla</h2> </legend>
-
-      <div>
-        <br>
+      <div><br>
         <table border="2" style="width: 300px; height: 100px;">
-          <caption>Colores</caption>
+          <caption> Título </caption>
+          <tr><th colspan="4">Colores</th></tr>
           <tr>
             <td bgcolor="red">Rojo</td>
             <td>Azul</td>
@@ -336,7 +335,8 @@
 
       <div class="codigo">
         &lt;table border="2">  <br>
-          &nbsp; &lt;caption> Colores &lt;/caption> <br>
+          &nbsp; &lt;caption> Título &lt;/caption> <br>
+          &nbsp;< tr>< th colspan="4"> Colores< /th>< /tr><br>
           &nbsp; &lt;tr> <br>
             &nbsp; &nbsp; &lt;td bgcolor="red">Rojo &lt;/td> <br>
             &nbsp; &nbsp; &lt;td>Azul &lt;/td> <br>
