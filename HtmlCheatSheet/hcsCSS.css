@@ -207,6 +207,10 @@ font.yellow{
   padding: 7px;
 }
 
+.hr{
+  width: 30px;
+}
+
 /* CSS Transform */
 .box3d {
   width: 50px; height: 50px;

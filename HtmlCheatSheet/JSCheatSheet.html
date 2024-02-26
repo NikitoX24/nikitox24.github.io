@@ -451,6 +451,51 @@
         setInterval(printTime, 1000);
       </script>
     </fieldset>
+
+    
+    <!-- Almacenamiento -->
+    <fieldset>
+      <legend> <h2> Almacenamiento (API) </h2> </legend>
+      <div class="codigo">
+        <span>sessionStorage():</span> Se borra al cerrar el navegador del usuario <br>
+        <span>localStorage():</span> Permanece en el disco del usuario sin expirar <br> <br>
+
+        &lt;<span>script</span>> <br>
+          &nbsp; localStorage.<font class="blue">setItem</font>("<font class="green">Clave1</font>", "<font class="green">Valor1</font>"); <font class="gray">(Guardar)</font><br>
+          &nbsp; localStorage.<font class="blue">getItem</font>("<font class="green">Clave1</font>"); <font class="gray">(Cargar)</font> <br>
+          &nbsp; localStorage.<font class="blue">removeItem</font>("<font class="green">Clave1</font>"); <font class="gray">(Borrar)</font> <br>
+          &nbsp; localStorage.<font class="blue">clear</font>(); <font class="gray">(Limpiar)</font> <br>
+        &lt;<span>/script</span>>
+      </div>
+    </fieldset>
+    
+    <!-- Dragg & Drop -->
+    <fieldset>
+      <legend> <h2> Dragg & Drop (API) </h2> </legend>
+      <div class="flex">
+        <div id="box" ondrop="drop(event)" ondragover="allowDrop(event)" style="border:1px solid black; 
+          width:150px; height:150px; text-align: center; 
+          color: grey; background-color: #b9bebe;">
+        </div>
+        <img id="image" src="../Imgs/cat1.png" draggable="true" ondragstart="drag(event)" width="150" height="150" alt="" style="cursor: move;"/>
+
+        <script>
+          function allowDrop(ev) {
+            ev.preventDefault();
+          }
+
+          function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+          }
+
+          function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+          }
+        </script>
+      </div>
+    </fieldset>
   </div>
 
   <!-- DOM -->

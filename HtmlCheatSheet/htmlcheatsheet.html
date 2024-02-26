@@ -20,153 +20,101 @@
     <a href="htmlcheatsheet.html"><img src="../Imgs/html.png" alt="html" class="icons"></a>
     <a href="CssCheatSheet.html"><img src="../Imgs/css.png" alt="css" class="icons filtrogris"></a>
     <a href="JSCheatSheet.html"><img src="../Imgs/js.png" alt="js" class="icons filtrogris"></a>
+    <style>
+      .borders {
+        background-color: rgba(255, 123, 0, 0.204);
+        box-shadow: inset 0 40px 0 0 rgba(141, 0, 0, 0.161);
+      }
+      .xd { line-height: 6px; }
+    </style>
   </div>
-  <style>
-    .borders {
-      background-color: rgba(255, 123, 0, 0.204);
-      box-shadow: inset 0 40px 0 0 rgba(141, 0, 0, 0.161);
-    }
-    
-    .xd {
-      line-height: 6px;
-    }
-  </style>
 
   <!-- HTML -->
   <div class="borders">
     <h1 class="titulo">HTML</h1>
+
+    <!-- Estructura de Pag -->
+    <fieldset>
+      <legend> <h2> Estructura de Pag </h2> </legend>
+      <div class="flex"><img src="https://api.sololearn.com/DownloadFile?id=2471" alt="Estructura de una pag." height="250px"></div>
+    </fieldset>
 
     <!-- Tipos de textos -->
     <fieldset>
       <legend> <h2>Tipos de textos</h2> </legend>
 
       <div class="flex"> <!-- PREformado -->
-        <div class="ej">
-          <pre>            Texto  con      mucho       espacio. </pre>
-        </div>
-        <div class="cod">
-          <p><span>&lt;pre></span> PREformado <span>&lt;/pre></p>
-        </div>
+        <div class="ej"> <pre>            Texto   con       espacio. </pre> </div>
+        <div class="cod"> <p><span>&lt;pre></span> PREformado <span>&lt;/pre></p> </div>
       </div>
 
       <div class="flex"> <!-- Parrafo -->
-        <div class="ej">
-          <p style="line-height: 0;">Parrafo</p>
-        </div>
-        <div class="cod">
-          <p><span>&lt;p></span> Parrafo <span>&lt;/p></span> </p>
-        </div>
-      </div>
-
-      <div class="flex"> <!-- Negrita -->
-        <div class="ej">
-          <b>Negrita</b>
-        </div>
-        <div class="cod"><span>&lt;b></span> Negrita <span>&lt;/b></span></div>
-      </div>
-
-      <div class="flex"> <!-- Reforzado -->
-        <div class="ej"> <strong> Importante </strong> </div>
-        <div class="cod"> <span>&lt;strong></span> reforzado <span>&lt;/strong> </span> </div>
-      </div>
-
-      <div class="flex"> <!-- Grande -->
-        <div class="ej">
-          <big> grande </big>
-        </div>
-        <div class="cod">
-          <span>&lt;big></span> Grande <span>&lt;/big></span>
-        </div>
-      </div>
-
-      <div class="flex"> <!-- Pequeño -->
-        <div class="ej">
-          <small> Pequeño </small>
-        </div>
-        <div class="cod">
-          <small> <span>&lt;small></span> Pequeño <span>&lt;/small></span></small>
-        </div>
-      </div>
-
-      <div class="flex"> <!-- Cursiva -->
-        <div class="ej">
-          <i> Cursiva </i>
-        </div>
-        <div class="cod">
-          <span>&lt;i></span> Cursiva <span>&lt;/i></span>
-        </div>
-      </div>
-
-      <div class="flex"> <!-- SubIndice -->
-        <div class="ej">
-          Texto <sub> SubIndice </sub>
-        </div>
-        <div class="cod">
-          <span>&lt;sub></span> SubIndice <span>&lt;/sub></span>
-        </div>
-      </div>
-
-      <div class="flex"> <!-- SupIndice -->
-        <div class="ej">
-          Texto <Sup> SupIndice </Sup>
-        </div>
-        <div class="cod">
-          <span>&lt;sup></span> SupIndice <span>&lt;/sup></span>
-        </div>
-      </div>
-
-      <div class="flex"> <!-- Subrayado -->
-        <div class="ej">
-          <ins>Subrayado</ins>
-        </div>
-        <div class="cod">
-          <span>&lt;u></span> Subrayado <span>&lt;/u></span> &lt;ins>
-        </div>
-      </div>
-
-      <div class="flex"> <!-- Borrado -->
-        <div class="ej">
-          <del> Borrado </del>
-        </div>
-        <div class="cod">
-          <span>&lt;del></span> Borrado <span>&lt;/del></span>
-        </div>
-      </div>
-
-      <div class="flex"> <!-- Remarcado -->
-        <div class="ej">
-          <mark> Remarcado</mark>
-        </div>
-        <div class="cod">
-          <span>&lt;mark></span> Remarcado <span>&lt;/mark></span>
-        </div>
+        <div class="ej"> <p style="line-height: 0;">Parrafo</p> </div>
+        <div class="cod"> <span>&lt;p></span> Parrafo <span>&lt;/p></span> </div>
       </div>
 
       <div class="flex"> <!-- Marquee -->
-        <div class="ej">
-          <marquee> Texto que se desplaza de un lado al otro. </marquee>
-        </div>
-        <div class="cod">
-          <span>&lt;marquee></span> Marquee <span>&lt;/marquee></span>
+        <div class="ej"> <marquee> Texto que se desplaza de un lado al otro. </marquee> </div>
+        <div class="cod"> <span>&lt;marquee></span> Marquee <span>&lt;/marquee></span> </div>
+      </div>
+
+      <div class="flex"> <!-- Font -->
+        <div class="ej"> <font> Texto <font color="aqua">Font</font> que se puede modificar. </font> </div>
+        <div class="cod"> <span>&lt;font <font color="purple""> color="red"</font>></span> Fuente <span>&lt;/font></span> </div>
+      </div>
+
+      <div class="flex">
+        <div class="flex"> <!-- Negrita -->
+          <div class="ej"> <b style="text-shadow: none;">Negrita</b> </div>
+          <div class="cod"><span>&lt;b></span> b <span>&lt;/b></span></div>
+        </div> <div class="hr"></div>
+        <div class="flex"> <!-- Reforzado -->
+          <div class="ej"> <strong> Importante </strong> </div>
+          <div class="cod"> <span>&lt;strong></span> Strong <span>&lt;/strong></span></div>
         </div>
       </div>
 
-      Atributos:
-      <div class="flex"> <!-- Font -->
-        <div class="ej">
-          <font> Texto <font color="red">Fuente</font> que se puede modificar. </font>
-        </div>
-        <div class="cod">
-          <span>&lt;font <font color="purple""> color="red"</font>></span> Fuente <span>&lt;/font></span>
+      <div class="flex">
+        <div class="flex"> <!-- Grande -->
+          <div class="ej"> <big> grande </big> </div>
+          <div class="cod"> <span>&lt;big></span> big <span>&lt;/big></span> </div>
+        </div> <div class="hr"></div>
+        <div class="flex"> <!-- Pequeño -->
+          <div class="ej"> <small> Pequeño </small> </div>
+          <div class="cod"> <span>&lt;small></span> Small <span>&lt;/small></span> </div>
         </div>
       </div>
-      
-      <div class="flex"> <!-- Style -->
-        <div class="ej">
-          <p style="color: red;">Parrafo con Style color red</p>
+
+      <div class="flex">
+        <div class="flex"> <!-- SubIndice -->
+          <div class="ej"> Texto <sub> SubIndice </sub> </div>
+          <div class="cod"> <span>&lt;sub></span> SubIndice <span>&lt;/sub></span> </div>
+        </div> <div class="hr"></div>
+        <div class="flex"> <!-- SupIndice -->
+          <div class="ej"> Texto <Sup> SupIndice </Sup> </div>
+          <div class="cod"> <span>&lt;sup></span> SupIndice <span>&lt;/sup></span> </div>
         </div>
-        <div class="cod">
-          <span>&lt;p <font color="purple"">style</font> ="<font color="green">color: red;</font>"></span> Parrafo <span>&lt;/p></span>
+      </div>
+
+      <div class="flex">
+        <div class="flex"> <!-- Subrayado -->
+          <div class="ej"> <ins>Subrayado</ins> </div>
+          <div class="cod"> <span>&lt;u></span> Subr <span>&lt;/ins></span> </div>
+        </div> <div class="hr"></div>
+        <div class="flex"> <!-- Borrado -->
+          <div class="ej"> <del> Borrado </del> </div>
+          <div class="cod"> <span>&lt;del></span> Borrado <span>&lt;/del></span> </div>
+        </div>
+      </div>
+
+      <div class="flex">
+        <div class="flex"> <!-- Cursiva -->
+          <div class="ej"> <i> Cursiva </i> </div>
+          <div class="cod"> <span>&lt;i></span> Cursiva <span>&lt;/i></span> </div>
+        </div> <div class="hr"></div>
+        <div class="flex"> <!-- Remarcado -->
+          <div class="ej"> <mark> Remarcado</mark> </div>
+          <div class="cod"> <span>&lt;mark></span> Mark <span>&lt;/mark></span> </div>
         </div>
       </div>
     </fieldset>
@@ -176,75 +124,78 @@
       <legend> <h2> Imagen </h2> </legend>
     
       <!-- Imagen con texto alternativo: -->
-      <h3>Imagen con texto alternativo:</h3>
-        <div class="flex">
-          <div class="ej">
-            <img src="../Imagen.png" alt="Texto por si no carga imagen"> <br>
-          </div>
-          <!-- Código -->
-          <div class="cod">
-            <span>&lt;img</span> <font color="purple">src=</font> "<font color="green">../Imagen.png</font>" <font color="purple">alt=</font>"Texto alternativo"<span>></span>
-          </div>
-        </div>
-
-        <!-- Detalles -->
-        <details>
-          <summary>Atributos...</summary>
-          <pre>
-            Atributos de img...
-              height, width, border.
-              align=""    (posicion del texto)
-              style=""    (color, font, size, etc)
-              href=""     (hipervinculo, link para redirigirse)
-              src=""      (ruta de acceso de un link para poner una imagen)
-              alt=""      (texto por si la imagen no carga)
-          </pre>
-        </details>
-      <hr>
-
-      <!-- Imagen con Link: -->
       <h3>Imagen con Link:</h3>
-        <div class="flex">
-          <div class="ej">
-            <a href="../Imgs/Apple.png"><img src="../Imgs/Apple.png" alt="apple" width="40px"></a> <br>
-          </div>
-          <!-- Codigo -->
-          <div class="cod">
-            <span>&lt;a</span> <font color="purple">href</font> ="<font color="green">../Apple.png</font>" <span>>&lt;img</span> <font color="purple">src</font>="<font color="green">../Apple.png</font>" <font color="purple">alt</font>="apple" <font color="purple">title</font>="Texto descripción"<span>>< /a></span>
-          </div>
+      <div class="flex">
+        <div class="ej wAuto"> 
+          <a href="../Imgs/Apple.png" target="_blank"> <img src="../Imgs/Apple.png" alt="Apple" height="100px" title="Apple"> </a>
         </div>
-      <hr>
+        <div class="cod">
+          <span>&lt;a</span> <font color="purple">href</font> ="<font color="green">../Apple.png</font>"<span>></span> 
+          <span>&lt;img</span> <font color="purple">src=</font> "<font color="green">../Imagen.png</font>" <font color="purple">alt=</font>"Texto alternativo" <font color="purple">title=</font>"descripción"<span>>< /a></span> <br>
+          <font class="gray"> align="" (posicion del texto) <br> target="_blank" (abrir en nueva pestaña) </font>
+        </div>
+      </div>
 
       <!-- Mapa -->
-      <h3>Igamen con Mapa:</h3>
-        <div class="flex">
-          <div class="ej">
-            <img src="../Imgs/imgMap.png" usemap="htmlcheatsheet.html#ejemplo_mapa" height="163px">
-            
-            <map name="ejemplo_mapa">
-              <area shape="rect" coords="18,16,171,73" href="../Imgs/Apple.png" alt="rectangulo">
-              <area shape="circle" coords="263,55,36" href="../Imgs/css_logo.png" alt="circulo">
-              <area shape="poly" coords="163,91,213,141,127,141" href="../Imgs/Orange.png" alt="poligono">
-            </map>
-          </div>
+      <h3>Imagen con Mapa:</h3>
+      <div class="flex">
+        <div class="ej">
+          <img src="../Imgs/imgMap.png" usemap="htmlcheatsheet.html#ejemplo_mapa" height="163px">
           
-          <div class="cod" style="font-size:smaller;">
-              &lt;img src="../imgs/imgMap.png" usemap="htmlcheatsheet.html#ejemplo_mapa" height="163px"> <br>
-              <br>
-              &lt;map name="ejemplo_mapa"> <br>
-              &nbsp; &lt;area shape="rect" coords="18,16,171,73" href="../Imgs/Apple.png" alt="rectangulo"> <br>
-              &nbsp; &lt;area shape="circle" coords="263,55,36" href="../Imgs/css_logo.png" alt="circulo"> <br>
-              &nbsp; &lt;area shape="poly" coords="163,91,213,141,127,141" href="../Imgs/Orange.png" alt="poligono"> <br>
-              &lt;/map> <br>
-          </div>
+          <map name="ejemplo_mapa">
+            <area shape="rect" coords="18,16,171,73" href="../Imgs/Apple.png" alt="rectangulo">
+            <area shape="circle" coords="263,55,36" href="../Imgs/css_logo.png" alt="circulo">
+            <area shape="poly" coords="163,91,213,141,127,141" href="../Imgs/Orange.png" alt="poligono">
+          </map>
+        </div>
+        
+        <div class="cod" style="font-size:smaller;">
+          <span>&lt;img</span> src="../imgs/imgMap.png" usemap="htmlcheatsheet.html#ejemplo_mapa" height="163px"<span>></span> <br><br>
+          <span>&lt;map</span> name="ejemplo_mapa"<span>></span> <br>
+            &nbsp; <span>&lt;area</span> shape="rect" coords="18,16,171,73" href="Apple.png" alt="rectangulo"> 
+              <font class="gray">(izq, sup, der, inf)</font> <br>
+            &nbsp; <span>&lt;area</span> shape="circle" coords="263,55,36" href="css_logo.png" alt="circulo"> 
+              <font class="gray">(centro-x, centro-y, redia)</font> <br>
+            &nbsp; <span>&lt;area</span> shape="poly" coords="163,91,213,141,127,141" href="Orange.png" alt="poligono"> 
+              <font class="gray">(x1, y1, x2, y2, ..., xN, yN)</font> <br>
+            <span>&lt;/map></span> <br><br>
+          <font class="gray"> nohref=""(indica q este area no tiene enlace) </font>
+        </div>
       </div>
       <details> <!-- Atributos -->
         <summary>Atributos...</summary>
-          shape=""    (RECT, CIRCLE, POLY) <br>
-          coords=""   (RECT(izq, sup, der, inf), CIRCLE(centro-x, centro-y, redia), POLY(x1, y1, x2, y2, ..., xN, yN)) <br>
-          href=""     (URL al apuntar) <br>
-          nohref=""   (indica q este area no tiene enlace) <br>
       </details>
+    </fieldset>
+
+    <!-- Audio & Video -->
+    <fieldset>
+      <legend> <h2>Audio & Video</h2> </legend>
+      <div class="flex">
+        <div>
+          <audio src="audio.mp3" controls style="height: 50px; width: 240px;">
+            Texto por si el navegador no soporta audio.
+          </audio>
+          <div class="cod">&lt;<span>audio <font class="purp"> src="<font class="green">audio.mp3</font>" controls autoplay loop </font>> &lt; /audio</span>> <br></div>
+        </div>
+        <br><hr>
+        <div>
+          <video controls autoplay loop>
+            <source src="video.mp4" type="video/mp4">Este navegador no soporta audio.
+          </video>
+          <div class="cod">&lt;<span>video <font class="purp"> src="<font class="green">video.mp4</font>" controls autoplay loop</font>> &lt;/video</span>> <br></div>
+        </div>
+      </div>
+    </fieldset>
+    
+    <!-- Barra de Progreso -->
+    <fieldset>
+      <legend> <h2> Barra de Progreso </h2> </legend>
+      <div class="flex">
+        <progress min="0" max="100" value="75" style="height: 24px; width: 300px;"></progress>
+        <div class="cod">
+          &lt;<span>progress <font class="purp"> min="<font class="green">0</font>" max="<font class="green">100</font>"value="<font class="green">75</font>>  </font> /progress</span>>
+        </div>
+      </div>
     </fieldset>
 
     <!-- Listas -->
@@ -311,7 +262,7 @@
     <fieldset class="flex">
       <legend> <h2> Tabla</h2> </legend>
       <div><br>
-        <table border="2" style="width: 300px; height: 100px;">
+        <table border="2" style="width: 300px; height: 100px; background-color: white;">
           <caption> Título </caption>
           <tr><th colspan="4">Colores</th></tr>
           <tr>
@@ -356,45 +307,24 @@
       <legend> <h2> Links </h2> </legend>
 
       <!-- Link Externo: -->
-      <dt> <h3>Link Externo:</h3> </dt>
-      <dd>
-        <a href="https://nikitox24.github.io/Main/" target="_blank"> Mi Pag Web... </a> <br>
-        <!-- Código -->
-        <code>
-          <span>&lt;a</span> <font color="purple">href=</font>"<u>https://ejemplo.com/#section</u>" <font color="purple">target=</font>"_blank"<span>></span>
-          Texto del link
-          <span>&lt;/a></span>
-        </code>
-      </dd> 
-      <br> <hr>
-
+      <h3>Link Externo:</h3>
+      <div class="flex">
+        <div class="ejemplo"><a href="#" target="_blank"> Mi Pag Web... </a></div>
+        <div class="cod">
+          <span>&lt;a</span> <font color="purple">href=</font>"<u>https://ejemplo.com</u>" <font color="purple">target=</font>"_blank"<span>></span>
+          Texto del link <span>&lt;/a></span>
+        </div>
+      </div>
 
       <!-- Link Interno: -->
-      <dt> <h3>Link Interno:</h3> </dt>
-      <dd>
-        <a href="../index.html">ir a index</a> <br>
-        <!-- Código -->
-        <code>
-          <span>&lt;a</span> <font color="purple">href=</font>"<u>../index.html</u>"<span>></span> ir a index<span>&lt;/a></span>
-        </code>
-
-        <br><br>
-        <a name="inicio"> ("Este es el principio del documento") </a> <br>
-        Crear: <code> &lt;a name="principio"> Este es el principio del documento &lt;/a> </code> <br><br>
-
-        <a href="#principio"> Ir al Principio </a><br>
-        Acceder: <code> &lt;a href="#principio" &lt;/a></code>
-      </dd>
-
-      <br> <hr>
-      
-      <!-- Colores -->
-      <dt><h3> Colores en &#60body>:</h3></dt>
-      <dd>
-        <u>link:</u> no visitados. <br>
-        <u>vlink:</u> visitados. <br>
-        <u>alink:</u> al activarlos. <br>
-      </dd> <br>
+      <h3>Link Interno:</h3>
+      <div class="flex">
+        <div class="ejemplo"><a href="../index.html">ir a index</a></div>
+        <div class="cod">
+          <span>&lt;a</span> <font color="purple">name=</font>"principio"<span>>&lt;/a></span>  <br>
+          <span>&lt;a</span> <font color="purple">href=</font>"<u>#principio</u>"<span>></span> ir a index <span>&lt;/a></span> 
+        </div>
+      </div>
     </fieldset>
 
     <!-- Tipos de Entradas -->
@@ -542,102 +472,6 @@
       </div>
 
     </fieldset>
-  
-  </div> <br>
-
-  <!-- HTML5 -->
-  <div class="borders">
-    <h1 class="titulo">HTML5</h1>
-
-    <!-- Estructura de Pag -->
-    <fieldset>
-      <legend> <h2> Estructura de Pag </h2> </legend>
-      <img src="https://api.sololearn.com/DownloadFile?id=2471" alt="" height="250px">
-    </fieldset>
-
-    <!-- Audio & Video -->
-    <fieldset>
-      <legend> <h2>Audio & Video</h2> </legend>
-      <h3> Audio </h3>
-        &lt;<span>audio <font class="purp"> src="<font class="green">audio.mp3</font>" controls autoplay loop</font> > &lt;/audio</span>> <br>
-        <audio src="audio.mp3" controls style="height: 50px; width: 240px;">
-          Texto por si el navegador no soporta audio.
-        </audio>
-        <br>
-      <hr>
-      <h3> Video </h3>
-        &lt;<span>video <font class="purp"> src="<font class="green">video.mp4</font>" controls autoplay loop</font>> &lt;/video</span>> <br>
-      <video controls autoplay loop>
-          <source src="video.mp4" type="video/mp4">
-          Este navegador no soporta audio.
-        </video>
-    </fieldset>
-    
-    <!-- Barra de Progreso -->
-    <fieldset>
-      <legend> <h2> Barra de Progreso </h2> </legend>
-      &lt;<span>progress <font class="purp"> min="<font class="green">0</font>" max="<font class="green">100</font>"value="<font class="green">35</font>>  </font> /progress</span>><br>
-      <progress min="0" max="100" value="75" style="height: 24px; width: 300px;"></progress>
-    </fieldset>
-
-    <!-- Almacenamiento -->
-    <fieldset>
-      <legend> <h2> Almacenamiento (API) </h2> </legend>
-      <span>sessionStorage():</span> Se borra al cerrar el navegador del usuario <br>
-      <span>localStorage():</span> Permanece en el disco del usuario sin expirar <br> <br>
-
-      &lt;<span>script</span>> <br>
-        &nbsp; <font class="blue">Guardar=</font>&nbsp;localStorage.SetItem("Clave1", "Valor1");<br>
-        &nbsp; <font class="blue">Cargar=</font>&nbsp;localStorage.GetItem("Clave1");<br>
-        &nbsp; <font class="blue">Borrar=</font>&nbsp;localStorage.removeItem("Clave1");<br>
-        &nbsp; <font class="blue">Limpiar=</font>&nbsp;localStorage.clear();<br>
-      &lt;<span>/script</span>>
-
-      <script>
-        localStorage.setItem("Clave1", "Valor1");
-      </script>
-    </fieldset>
-
-    <!-- Geo-Localizacion 
-    <fieldset> 
-      <legend> <h2> Geo-Localizacion (API) </h2> </legend>
-      &lt;<span>script</span>> <br>
-        &nbsp; navigator.geolocation.getCurrentPosition();<br>
-      &lt;<span>/script</span>>
-    </fieldset>
-    -->
-    
-    <!-- Dragg & Drop -->
-    <fieldset>
-      <legend> <h2> Dragg & Drop (API) </h2> </legend>
-        <!-- <img draggable="true" src="../Imgs/cat1.png" alt="" height="100px"/> -->
-        <!-- https://www.sololearn.com/learning/1014/2214/4405/1 -->
-
-        <script>
-          function allowDrop(ev) {
-            ev.preventDefault();
-          }
-
-          function drag(ev) {
-            ev.dataTransfer.setData("text", ev.target.id);
-          }
-
-          function drop(ev) {
-            ev.preventDefault();
-            var data = ev.dataTransfer.getData("text");
-            ev.target.appendChild(document.getElementById(data));
-          }
-        </script>
-
-        <div class="flex">
-          <div id="box" ondrop="drop(event)" ondragover="allowDrop(event)" style="border:1px solid black; 
-            width:150px; height:150px; text-align: center; 
-            color: grey; background-color: #b9bebe;">
-          </div>
-
-          <img id="image" src="../Imgs/cat1.png" draggable="true" ondragstart="drag(event)" width="150" height="150" alt="" style="cursor: move;"/>
-        </div>
-    </fieldset>
   </div>
 
   <!-- Canvas -->
@@ -648,6 +482,7 @@
     <fieldset>
       <legend> <h2> Concepto Básico </h2> </legend>
 
+      <!-- Mas Info -->
       <details>
         <summary>Canvas...(más info)...</summary>
         - Los elementos se dibujan programáticamente <br>
@@ -660,68 +495,30 @@
         - Muy adecuado para los juegos de gráficos intensivos <br> <br>
       </details>
 
-      Canvas es solo contenedor grafico (para mostrar requiere JavaScript) <br>
-      x0 y0: comienza arriba izq. <br><br>
-
-      <sub>html:</sub>
-      <div class="codigo">
-        <span> &lt;canvas</span> <font class="purp">id=</font>"canvas1" <font class="purp">width=</font>"200" <font class="purp">height=</font>"100"<span>></span>
-        <br>(El Id es necesario para identificarlo en JS).
-      </div>
-      <sub>javascript:</sub>
-      <div class="codigo">
-        <font class="purp">var</font> can = document.<font class="blue">getElementById</font>("<font class="green">canvas1</font>"); <br>
-        <font class="purp">var</font> ctx = can.<font class="blue">getContext</font>("<font class="green">2d</font>"); <br>
-      </div>
-      <hr>
-
-      <!-- FillRect(x, y, w, h) -->
-      <h3 class="subtitulo"> FillRect(x, y, w, h) </h3>
-      <div class="boxizq" style="margin-right: 20px;">
-        <canvas id="canvas2" width="80" height="80"> </canvas>
+      <!-- Canvas simple -->
+      Canvas es solo contenedor grafico (para mostrar requiere JavaScript).
+      <div class="flex">
+        <div class="ej wAuto">
+          <canvas id="canvas2" width="80" height="80"> </canvas>
+        </div>
+        <div class="cod">
+          <span> &lt;canvas</span> <font class="purp">id=</font>"<font class="green">canvas1</font>" 
+            <font class="purp">width=</font>"<font class="green">200</font>" <font class="purp">height=</font>"<font class="green">100</font>"<span>></span><br>
+          <font class="gray">(El Id es necesario para identificarlo en JS).</font>
+        </div>
+        <div class="cod">
+          <font class="purp">var</font> c = document.<font class="blue">getElementById</font> ("<font class="green">canvas1</font>"); <br>
+          <font class="purp">var</font> ctx2 = c.<font class="blue">getContext</font>("<font class="green">2d</font>"); <br><br>
+          ctx2.fillStyle = "<font class="green">rgba(0, 200, 0, 1)</font>"; <font class="gray">// #0f0</font> <br>
+          ctx2.<font class="blue">fillRect</font>(10, 10, 60, 60); <font class="gray">// x, y, width, height</font> <br>
+        </div>
         <script>
           var c = document.getElementById("canvas2");
           var ctx2 = c.getContext("2d");
+          ctx2.fillStyle = "rgba(0, 200, 0, 1)";
           ctx2.fillRect(10, 10, 60, 60); // x, y, w, h 
         </script>
-      </div>
-      <sub>html:</sub>
-      <div class="codigo">
-        &lt;canvas id="canvas2" width="70" height="70"> &lt;/canvas> 
-      </div>
-      <sub>javascript:</sub>
-      <div class="codigo">
-        var c = document.getElementById ("canvas2"); <br>
-        var ctx2 = c.getContext("2d"); <br>
-        ctx2.fillRect(10,10,60,60); // x, y, w, h  <br>
-      </div>
-      
-      <br>
-      <hr>
-
-      <!-- FillStyle(rbga) Gradiante -->
-      <h3 class="subtitulo"> FillStyle(rbga) Gradiante </h3>
-      <sub>html:</sub>
-      <div class="boxizq" style="margin-right: 20px;">
-        <canvas id="canvas3" width="80" height="80"> </canvas>
-        <script>
-          var canvas = document.getElementById("canvas3");
-          var ctx3 = canvas.getContext("2d");
-          ctx3.fillStyle = "rgba(0, 200, 0, 1)";
-          ctx3.fillRect(10, 10, 60, 60);
-        </script>
-      </div>
-      <div class="codigo">
-        &lt;canvas id="canvas3" width="70" height="70"> &lt;/canvas> <br>
-      </div>
-      <sub>javascript:</sub>
-      <div class="codigo">
-        var canvas = document.getElementById("canvas3"); <br>
-        var ctx3 = canvas.getContext("2d"); <br>
-        ctx3.fillStyle = "rgba(0, 200, 0, 1)"; <br>
-        ctx3.fillRect (10, 10, 60, 60);
-      </div>
-      <hr>
+      </div> <br>
 
       <!-- Otros... -->
       <h3 class="subtitulo"> OTROS: Line, Circle, Gradients, Text. </h3>
@@ -751,77 +548,80 @@
 
     <!-- Canvas Transform JS: -->
     <fieldset>
-      <legend> <h1 class="subtitulo"> Canvas Transform JS: </h1> </legend>
-        <!-- Texto script -->
-        <h3 class="subtitles"> Texto (script) </h3>
-      <sub>html:</sub>
-      <div class="codigo">
-          < canvas id="canvas4" width="100" height="50"> </canvas> <br>
-        </div>
-        <div class="ejemplo">
+      <legend> <h2> Canvas Transform JS: </h2> </legend>
+      <!-- Texto script -->
+      Texto (script)
+      <div class="flex">
+        <div class="ej">
           <canvas id="canvas4" width="100" height="50"> </canvas>
-          <script>
-            var c = document.getElementById("canvas4");
-            var ctx = c.getContext("2d");
-            ctx.font = "bold 22px Tahoma";
-            ctx.textAlign = "texto";
-            ctx.fillText("texto", 10, 35);
-          </script>
         </div>
-      <sub>javascript:</sub>
-      <div class="codigo">
-        var c = document.getElementById("canvas4"); <br>
-          var ctx = c.getContext("2d"); <br>
-          ctx.font = "bold 22px Tahoma"; <br>
-          ctx.textAlign = "texto"; <br>
-          ctx.fillText("texto", 10, 35); <br>
-        < /script>
+        <div class="cod">
+          <font class="purp">var</font> c = document.<font class="blue">getElementById</font> ("<font class="green">canvas1</font>"); <br>
+          <font class="purp">var</font> cText = c.<font class="blue">getContext</font>("<font class="green">2d</font>"); <br><br>
+          cText.font = "<font class="green">bold 22px Tahoma</font>"; <br>
+          cText.fillText("<font class="green">texto</font>", 10, 35); <font class="gray">// Coords (x, y)</font> <br>
+        </div>
+        <script>
+          var c = document.getElementById("canvas4");
+          var ctx = c.getContext("2d");
+          ctx.font = "bold 22px Tahoma";
+          ctx.fillText("texto", 10, 35);
+        </script>
       </div>
       <hr>
 
       <!-- Translate script -->
       <h3 class="subtitle"> Translate (script) </h3>
-      <div class="ejemplo">
-        <canvas id="canvas5" width="400" height="100"> </canvas>
-        <script>
-          var c = document.getElementById("canvas5");
-          var ctx = c.getContext("2d");
-          ctx.font = "bold 22px Tahoma";
-          ctx.textAlign = "texto2";
-          ctx.fillText("texto2", 10, 30);
-          ctx.translate(100, 50);
-          ctx.fillText("texto2 translated", 10, 30);
-        </script>
+      <div class="flex">
+        <div class="ej">
+          <canvas id="canvas5" width="300" height="70"> </canvas>
+        </div>
+        <div class="cod">
+          <font class="purp">var</font> c = document.<font class="blue">getElementById</font> ("<font class="green">canvas1</font>"); <br>
+          <font class="purp">var</font> cText = c.<font class="blue">getContext</font>("<font class="green">2d</font>"); <br><br>
+          cText.font = "<font class="green">bold 22px Tahoma</font>"; <br>
+          <u>cText.<font class="blue">translate</font>(100, 60);</u> <font class="gray">// Coords (x, y)</font> <br>
+          cText.fillText("<font class="green">texto</font>", 0, 0); <br>
+          <script>
+            var c = document.getElementById("canvas5");
+            var ctx = c.getContext("2d");
+            ctx.font = "bold 22px Tahoma";
+            ctx.fillStyle = "rgba(0, 0, 0, .1)"; 
+            ctx.fillText("(antes)", 0, 30);
+            ctx.translate(100, 60);
+            ctx.fillStyle = "#000"; 
+            ctx.fillText("(translate)", 0, 0);
+          </script>
+        </div>
       </div>
-      <hr>
 
-      <!-- Rotate script -->
-      <h3 class="subtitle"> Rotate (script) </h3>
-      <div class="ejemplo">
-        <canvas id="canvas6" width="400" height="150"> </canvas>
-        <script>
-          var c = document.getElementById("canvas6");
-          var ctx = c.getContext("2d");
-          ctx.fillStyle = "#FF0000";
-          ctx.fillRect(10, 10, 100, 100);
-          ctx.rotate((Math.PI / 180) * 25);  //rotate 25 degrees. (usa radianes, no grados)
-          ctx.fillStyle = "#0000FF";
-          ctx.fillRect(10, 10, 100, 100);
-        </script>
-      </div>
-      <hr>
-
-      <!-- Scale script -->
-      <h3 class="subtitle"> Scale (script) </h3>
-      <div class="ejemplo">
-        <canvas id="canvas7" width="400" height="100"> </canvas>
-        <script>
-          var c = document.getElementById("canvas7");
-          var ctx = c.getContext("2d");
-          ctx.font = "bold 22px Tahoma";
-          ctx.scale(1.5, 4);
-          ctx.fillText("after scale", 0, 20);
-        </script>
+      <!-- Rotate Scale -->
+      <h3 class="subtitle"> Rotate / Scale </h3>
+      <div class="flex">
+        <div class="ej">
+          <canvas id="canvas6" width="300" height="150"> </canvas>
+        </div>
+        <div class="cod">
+          <font class="purp">var</font> c = document.<font class="blue">getElementById</font> ("<font class="green">canvas1</font>"); <br>
+          <font class="purp">var</font> cText = c.<font class="blue">getContext</font>("<font class="green">2d</font>"); <br><br>
+          cText.font = "<font class="green">bold 22px Tahoma</font>"; <br>
+          <u>ctx.<font class="blue">rotate</font>((Math.PI / 180) * 25);</u> <br>
+          <u>ctx.<font class="blue">scale</font>(<font class="orange">1.8, 1.8</font>);</u> <br>
+          cText.fillText("<font class="green">texto</font>", 10, 35); <br>
+        
+          <script>
+            var c = document.getElementById("canvas6");
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = "#F00";
+            ctx.font = "bold 22px Tahoma";
+            ctx.fillStyle = "rgba(0, 0, 0, .1)";
+            ctx.fillText("(antes)", 0, 30);
+            ctx.fillStyle = "#000";
+            ctx.rotate((Math.PI / 180) * 25);
+            ctx.scale(1.8, 1.8);
+            ctx.fillText("(despues)", 15, 30);
+          </script>
+        </div>
       </div>
     </fieldset>
   </div> <br>
@@ -846,175 +646,138 @@
     </details> <br>
 
     SVG define imgs basadas en vectores en formato XML. <br>
+    <div class="flex">
+      <div class="ej" style="width: 25%;">
+        <!-- Imagen --> <img src="image.svg" alt="(image.svg)" height="1"> <br>
+        <!-- Objeto --> <svg width="1" height="1"></svg> (svg) <br><br>
+      </div>
+      <div style="width: 70%;">
+        <div class="cod">
+          <span>&lt;img</span> <font class="purp">src</font>="image.svg" <font class="purp">alt</font>="(image.svg)" <font class="purp">height</font>="1"<span>></span> <br>
+        </div>
+        <div class="cod">
+          <span>&lt;svg</span> <font class="purp">width</font>="1" <font class="purp">height</font>="1"<span>>&lt;/svg></span> <br>
+        </div>
+      </div>
+    </div> <hr><br>
 
-    <!-- Imagen -->
-    <img src="image.svg" alt="(image.svg)" height="1">
-    <!-- Objeto -->
-    <svg width="1" height="1"></svg> <br><br>
+    <!-- Circulo y Cuadrado -->
+    <div class="flex">
+      <div class="ej" style="width: 300px;">
+        <svg width="60" height="60">
+          <circle cx="30" cy="30" r="20" fill="green" /><!-- stoke= marco -->
+        </svg>
+        <svg width="60" height="60">
+          <rect width="40" height="40" x="10" y="10" fill="red" />
+        </svg>
+      </div>
+      <div class="cod">
+        <span>&lt;svg</span> <font class="purp">width</font>="60" <font class="purp">height</font>="60"<span>>&lt;/svg></span> <br>
+          &nbsp; <span>&lt;circle</span> cx="30" cy="30" r="20" fill="green" <span>/></span> <br>
+          &nbsp; <span>&lt;rect</span> width="40" height="40" x="10" y="10" fill="red"<span>/></span> <br>
+        <span>&lt;/svg></span>
+      </div>
+    </div> <hr><br>
 
-    <sub>Imagen:</sub>
-    <div class="codigo">
-      <span>&lt;img</span> <font class="purp">src</font>="image.svg" <font class="purp">alt</font>="(image.svg)" <font class="purp">height</font>="1"<span>></span> <br>
-    </div>
-    <sub>Objeto:</sub>
-    <div class="codigo">
-      <span>&lt;svg</span> <font class="purp">width</font>="1" <font class="purp">height</font>="1"<span>>&lt;/svg></span> <br>
-    </div>
-    <hr>
+    <!-- Linea y Poly-->
+    <div class="flex">
+      <div class="ej wAuto">
+        <svg width="80" height="70">
+          <line x1="10" y1="10" x2="50" y2="40" style="stroke:#000; stroke-linecap:round; stroke-width:7">
+        </svg>
+        <svg width="80" height="40">
+          <polyline style="stroke-linejoin:miter; stroke:black; stroke-width:5; fill: none;" points="0 0, 40 30, 80 0"> </polyline>
+        </svg>
+      </div>
+      <div>
+        <div class="cod">
+          &lt;svg width="80" height="90"> <br>
+          &nbsp; &lt;line x1="10" y1="10" x2="50" y2="40"
+            style="stroke:#000; stroke-linecap:round;
+            stroke-width:7"> <br>
+          &lt;/svg>
+        </div>
+        <div class="cod">
+          &lt;svg width="80" height="90"> <br>
+          &nbsp; &lt;polyline style="stroke-linejoin: miter; stroke: black; stroke-width: 5; fill: none;" points="0 0, 40 30, 80 0" > &lt;/polyline> <br>
+          &lt;/svg>
+        </div>
+      </div>
+    </div> <hr><br>
 
-    <!-- Circulo -->
-    <div class="boxizq">
-      <svg width="60" height="60">
-        <circle cx="30" cy="30" r="20" fill="green" /><!-- stoke= marco -->
-      </svg>
-    </div>
-    <div class="codigo">
-      &lt;svg width="70" height="60"> <br>
-       &nbsp;&lt;circle cx="30" cy="30" r="20" fill="green" /> <br>
-      &lt;/svg>
-    </div> <hr>
-
-    <!-- Rectangulo -->
-    <div class="boxizq">
-      <svg width="60" height="60">
-        <rect width="40" height="40" x="10" y="10" fill="green" />
-      </svg>
-    </div>
-    <div class="codigo">
-      &lt;svg width="60" height="60"> <br>
-        &nbsp;&lt;rect width="40" height="40" x="10" y="10" fill="green"/> <br>
-      &lt;/svg>
-    </div> <hr>
-
-    <!-- Linea -->
-    <div class="boxizq">
-      <svg width="60" height="70">
-        <line x1="10" y1="10" x2="50" y2="60" style="stroke:#000; 
-        stroke-linecap:round; stroke-width:7">
-      </svg>
-    </div>
-    <div class="codigo">
-      &lt;svg width="60" height="70"> <br>
-        &nbsp;&lt;line x1="10" y1="10" x2="50" y2="60"
-          style="stroke:#000; stroke-linecap:round;
-          stroke-width:7"> <br>
-      &lt;/svg>
-    </div> <hr>
-
-    <!-- PolyLine -->
-    <div class="boxizq">
-      <svg width="60" height="100">
-        <polyline style="stroke-linejoin:miter;
-                  stroke:black;
-                  stroke-width:5; fill: none;" points="25 25, 37 37, 50 25">
-        </polyline>
-      </svg>
-    </div>
-    <div class="codigo">
-      &lt;svg width="60" height="100"> <br>
-        &lt;polyline style="stroke-linejoin:miter; <br>
-          stroke:black; <br>
-          stroke-width:5; fill: none;" <br>
-          points="25 25, 37 37, 50 25" > <br>
-        &lt;/polyline> <br>
-      &lt;/svg>
-    </div> <hr>
-
-    <!-- Elipse -->
-    <div class="boxizq">
-      <svg width="70" height="40">
-        <ellipse cx="35" cy="25" rx="35" ry="10" style="fill:green" />
-      </svg>
-    </div>
-    <div class="codigo">
-      &lt;svg width="60" height="60"> <br>
-        &lt;ellipse cx="30" cy="30" rx="30" ry="10" style="fill:green" /> <br>
-      &lt;/svg>
-    </div> <hr>
-
-    <!-- PolyGon -->
-    <div class="boxizq">
-      <svg width="60" height="60">
-        <polygon points="10 10, 60 40, 50 0" style="fill: green; stroke:black;" />
-      </svg>
-    </div>
-    <div class="codigo">
-      &lt;svg width="60" height="60"> <br>
-        &lt;polygon points="10 10, 60 40, 50 0" <br>
-          style="fill: green; stroke:black;" /> <br>
-      &lt;/svg>
-    </div> <hr>
+    <!-- Elipse y Poly -->
+    <div class="flex">
+      <div class="ej wAuto">
+        <svg width="100" height="55">
+          <ellipse cx="35" cy="25" rx="35" ry="10" style="fill:green" />
+        </svg>
+        <svg width="100" height="40">
+          <polygon points="10 10, 60 40, 50 2" style="fill: green; stroke:black;" />
+        </svg>
+      </div>
+      <div style="width: 80%;">
+        <div class="cod">
+          &lt;svg width="60" height="60"> <br>
+            &nbsp; &lt;ellipse cx="30" cy="30" rx="30" ry="10" style="fill:green" /> <br>
+          &lt;/svg>
+        </div>
+        <div class="cod">
+          &lt;svg width="60" height="60"> <br>
+            &nbsp; &lt;polygon points="10 10, 60 40, 50 0" style="fill: green; stroke:black;" /> <br>
+          &lt;/svg>
+        </div>
+      </div>
+    </div> <hr><br>
 
     <!-- Animaciones  <animate> -->
-    <div class="boxizq">
-      <svg width="120" height="70">
-        <rect width="20" height="20" fill="orange">
-          <animate attributeName="x" from="0" to="100" dur="1s" fill="freeze" repeatCount="1000" />
-        </rect>
-      </svg>
-    </div>
-    <div class="codigo">
-      &lt;svg width="120" height="50"> <br>
-        &lt;rect width="20" height="20" fill="orange"> <br>
-          &lt;animate attributeName="x" from="0" to="100" <br>
-              dur="1s" fill="freeze" repeatCount="1000"/>  <br>
-        &lt;/rect> <br>
-      &lt;/svg>
-    </div>
-    <details>
-      <summary style="font-size: 20px;">Info...</summary>
-      <pre>
-              attributeName: el atributo q se va animar.
-              from: valor al comenzar.
-              to: valor al terminar.
-              dur: duracion.
-              fill: valor del atributo al finalzar (remove: resetea valor, freeze: conserva el valor "to").
-              repeatCount: repeticiones, undefined: infinito.
-          </pre>
-    </details>
-    <hr>
-
-    <!-- Trazos <path> -->
+    <div class="flex">
+      <div class="ej wAuto">
+        <svg width="120" height="70">
+          <rect width="20" height="20" fill="orange">
+            <animate attributeName="x" from="0" to="100" dur="1s" fill="freeze" repeatCount="indefinite" />
+          </rect>
+        </svg>
+      </div>
+      <div class="cod">
+        &lt;svg width="120" height="50"> <br>
+          &nbsp; &lt;rect width="20" height="20" fill="orange"> <br>
+          &nbsp; &nbsp; &lt;animate attributeName="x" from="0" to="100" dur="1s" fill="freeze" repeatCount="indefinite"/>  <br>
+          &nbsp; &lt;/rect> <br>
+          &lt;/svg> <br>
+          <font class="gray">fill= valor al finalzar (remove(resetea valor), freeze(conserva el valor "to")).</font>
+      </div>
+    </div> <hr><br>
 
     <!-- triangulo hipot -->
-    <div class="boxizq">
-      <svg width="60" height="60">
-        <path d="M 0 0 L50 50 L50 0 Z" style="stroke:#000;  fill:none;" />
-      </svg>
+    <div class="flex">
+      <div class="ej wAuto">
+        <svg width="100" height="50">
+          <path d="M 0 0 L50 40 L50 0 Z" style="stroke:#000;  fill:none;" />
+        </svg>
+        <svg width="100" height="40">
+          <path d="M0 0 L0 25 L25 25 L25 0 Z" style="stroke:#000;  fill:none;" />
+        </svg>
+      </div>
+      <div style="width: 90%;">
+        <div class="cod">
+          &lt;svg width="50" height="60"> <br>
+            &nbsp; &lt;path d="M 0 0 L50 50 L50 0 Z" style="stroke:#000;  fill:none;" /> <br>
+          &lt;/svg>
+        </div>
+        <div class="cod">
+          &lt;svg width="60" height="60"> <br>
+            &nbsp; &lt;path d="M0 0 L0 25 L25 25 L25 0 Z" style="stroke:#000;  fill:none;" /> <br>
+          &lt;/svg>
+        </div>
+      </div>
     </div>
     <div class="codigo">
-      &lt;svg width="50" height="60">
-        &lt;path d="M 0 0 L50 50 L50 0 Z" style="stroke:#000;  fill:none;" />
-      &lt;/svg>
-    </div>
-    <details>
-      <summary style="font-size: 20px;">Info...</summary>
-      <pre>
-              Usar letras Mayusculas para valores absolutos, y minusculas para pos relativa.
-              M: mover hacia.
-              L: linea hacia.
-              H: linea horiz. hacia.
-              V: linea vert. hacia.
-              C: curva hacia.
-              S: curva suave hacia.
-              Q: curva Bézier cuadrática.
-              T: curva Bézier cuadrática suave.
-              A: arco elíptico.
-              Z: closepath, cerrar trazado.
-          </pre>
-    </details>
-    <hr>
-
-    <!-- cuadrado -->
-    <div class="boxizq">
-      <svg width="60" height="60">
-        <path d="M0 0 L0 25 L25 25 L25 0 Z" style="stroke:#000;  fill:none;" />
-      </svg>
-    </div>
-    <div class="codigo">
-      &lt;svg width="60" height="60">
-        &lt;path d="M0 0 L0 25 L25 25 L25 0 Z" style="stroke:#000;  fill:none;" />
-      &lt;/svg>
+      (Usar letras Mayusculas para valores absolutos, y minusculas para pos relativa) <br>
+      M: mover hacia. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; L: linea hacia. <br>
+      H: linea horiz. hacia. &nbsp; &nbsp; V: linea vert. hacia. <br>
+      C: curva hacia. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; S: curva suave hacia. <br>
+      Q: curv Bézir cuadráti. &nbsp; T: curva Bézier cuadrática suave. <br>
+      A: arco elíptico. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Z: cerrar trazado.
     </div>
   </div>
 
