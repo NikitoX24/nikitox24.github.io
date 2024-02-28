@@ -74,6 +74,9 @@ font.orange{
   color: rgb(180, 133, 44);
   text-shadow: .3px .3px rgb(255, 0, 0);
 }
+font.red{
+  color: rgb(175, 62, 62);
+}
 font.selector{
   color: rgb(146, 146, 0);
   text-shadow: .1px .1px rgb(94, 94, 0);
@@ -82,10 +85,7 @@ font.prop{
   color: rgb(114, 125, 122);
   text-shadow: .1px .1px rgb(124, 156, 150);
 }
-font.comentario{ /* JS */
-  color: gray;
-}
-font.gray{ /* CS */
+font.comentario, font.gray{
   color: gray;
 }
 font.string{
@@ -196,6 +196,12 @@ font.yellow{
 }
 .flex .ejemplo{
   min-width: 200px;
+}
+div .marg0{
+  margin: 0;
+}
+div .width100{
+  width: 100%;
 }
 
 .numbers {

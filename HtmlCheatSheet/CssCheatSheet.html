@@ -70,11 +70,27 @@
       <!-- Font-Family -->
       <div class="flex">
         <p class="ej" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-          This is a paragraph shown in Segoe UI.
+          This is a paragraph shown in <strong>Segoe UI</strong>. <br>
+          <font class="textFam">This is a paragraph shown in Oters.</font>
         </p>
         <div class="cod">
-          <b>font-family:</b> 'Segoe UI', Tahoma, Geneva, sans-serif;
+          <b>font-family:</b> 'Segoe UI', Tahoma, Geneva, sans-serif; <br>
+          <font class="gray">Arial, Courier New, Georgia, Times New Roman, Trebuchet MS, Verdana.</font>
         </div>
+        <style>
+          .textFam{
+            font-family: Arial;
+            animation: textFamily 5s infinite;
+          }
+          @keyframes textFamily {
+            0% { font-family: Arial; }
+            20% { font-family: Corier New; }
+            40% { font-family: Georgia; }
+            60% { font-family: Times New Roman; }
+            80% { font-family: Trebuchet MS; }
+            100% { font-family: Verdana; }
+          }
+        </style>
       </div> <hr>
 
       <!-- Font-Style -->
@@ -301,10 +317,8 @@
     <fieldset>
       <legend> <h2>Text-Transform</h2> </legend> 
       <div class="flex">
-        <p class="ej" style="text-transform: capitalize;">
-          transformar el primer carácter de cada palabra en mayúsculas.<br>
-        </p>
-        <div class="cod"> <b>text-transform:</b> capitalize;<br> <font class="gray"><b>text-transform:</b> capitalize, uppercase, lowercase.</font></div>
+        <p class="ej" style="text-transform: capitalize;"> transformar la primera letra de cada palabra en mayúsc.</p>
+        <div class="cod"> <b>text-transform:</b> capitalize; <font class="gray"> uppercase, lowercase.</font></div>
       </div>
     </fieldset>
 
@@ -319,17 +333,11 @@
         <p class="ej" style="word-spacing: 30px;">Ejemplo de word-spacing.</p>
         <div class="cod"> <b>word-spacing:</b> 30px; </div>
       </div>
-    </fieldset>
-
-    <!-- Wite-Spacing -->
-    <fieldset>
-      <legend> <h2>Wite-Spacing</h2> </legend>
-
       <div class="flex">
         <p class="ej" style="white-space: nowrap;">
-          Este párrafo     tiene      varios
-          espacios y   un    salto de línea,
-          pero   será ignorado.
+          Este párrafo     tiene      
+          espacios y   saltos de línea,
+          pero   son ignorados.
         </p>
         <div class="cod">
           <b>white-space:</b> nowrap;
@@ -451,6 +459,14 @@
             &nbsp;<b>border-spacing:</b> 20px 5px; <br>
             &nbsp;<b>empty-cells:</b> hide; <br>
           } <br>
+        </div>
+        <div class="cod">
+          tr:nth-child(even) { <br>
+            background-color: #b0d1e4; <br>
+          }<br>
+          tr:nth-child(odd) { <br>
+            background-color: #b0d1e4; <br>
+          }
         </div>
       </div>
     </fieldset>
@@ -718,9 +734,9 @@
     </fieldset>
   </div>
 
-  <!-- Bacics CSS3 -->
+  <!-- Basics CSS3 -->
   <div class="borders">
-    <h2 class="titulo"> Bacics CSS3 </h2>
+    <h1 class="titulo"> Basics CSS3 </h1>
 
     <!-- Border-Radius -->
     <fieldset>
@@ -930,7 +946,7 @@
 
   <!-- Degradados y Fondos -->
   <div class="borders">
-    <h2 class="titulo"> Degradados y Fondos </h2>
+    <h1 class="titulo"> Degradados y Fondos </h1>
     <style> .deg { width: 50px; height: 50px; } </style>
 
     <!-- Dergadados Lineales -->
@@ -1323,7 +1339,7 @@
 
   <!-- Filtros de CSS -->
   <div class="borders">
-    <h2 class="titulo"> Filtros de CSS </h2>
+    <h1 class="titulo"> Filtros de CSS </h1>
 
     <!-- Filter Functions -->
     <fieldset>
