@@ -9,26 +9,26 @@
 </head>
 
 <body>
-  <header> 
-    <menu-component></menu-component> 
-    <h1 class="titulo">HTML CheatSheet</h1>
+<header> 
+  <menu-component></menu-component> 
+  <h1 class="titulo">HTML CheatSheet</h1>
 
-    <!-- icons -->
-    <div class="flex iconosFlex">
-      <a href="htmlcheatsheet.html"><img src="../Imgs/html.png" alt="html" class="icons filtrogris"></a>
-      <a href="CssCheatSheet.html"><img src="../Imgs/css.png" alt="css" class="icons filtrogris"></a>
-      <a href="JSCheatSheet.html"><img src="../Imgs/js.png" alt="js" class="icons"></a>
-      <style>
-        .borders {
-          background-color: rgba(0, 255, 0, .03);
-          box-shadow: inset 0 40px 0 0 rgba(0, 159, 0, 0.3);
-        }
-      </style>
-    </div>
-  
-    <!-- Texto JavaScript -->
-    <h1 class="titulo">JavaScript</h1>
-  </header>
+  <!-- icons -->
+  <div class="flex iconosFlex">
+    <a href="htmlcheatsheet.html"><img src="../Imgs/html.png" alt="html" class="icons filtrogris"></a>
+    <a href="CssCheatSheet.html"><img src="../Imgs/css.png" alt="css" class="icons filtrogris"></a>
+    <a href="JSCheatSheet.html"><img src="../Imgs/js.png" alt="js" class="icons"></a>
+    <style>
+      .borders {
+        background-color: rgba(0, 255, 0, .03);
+        box-shadow: inset 0 40px 0 0 rgba(0, 159, 0, 0.3);
+      }
+    </style>
+  </div>
+
+  <!-- Texto JavaScript -->
+  <h1 class="titulo">JavaScript</h1>
+</header>
 
 <main>
   <!-- Fundamentos -->
@@ -132,10 +132,10 @@
     <fieldset> <!-- SetInterval -->
       <legend><h2>SetInterval (Update)</h2></legend>
       <div class="codigo">
-        function myAlert() { <br>
-          &nbsp; alert("Hi"); <br>
+        var x = <font class="blue">setInterval</font>(<font class="blue">funcion</font>, <font class="orange">1000</font>) <font class="comentario">(1seg)</font> <br>
+        function <font class="blue">funcion</font>() { <br>
+          &nbsp; <font class="blue">clearInterval</font>(x); <br>
         } <br>
-        setInterval(myAlert, 3000) <font class="comentario">(1000ms = 1seg)</font>
       </div>
     </fieldset>
 
@@ -150,7 +150,7 @@
             &nbsp; <font class="comentario">// Declaraciones si es Falso.</font> <br>
           }
         </div>
-        <div class="cod">
+        <div class="cod" style="font-size: smaller;">
           <font class="aqua">switch</font> ( Expresion ) { <br>
             &nbsp;<font class="aqua">Case</font> n1: <br>
               &nbsp; <font class="comentario">// Bloque de Codigo</font> <br>
@@ -192,7 +192,7 @@
     <fieldset>
       <legend> <h2>Math:</h2> </legend>
       <div class="codigo">
-        document.<font class="blue">write</font>(<u>Math.PI</u>); <font class="comentario">// 3.14....</font>
+        document.<font class="blue">write</font>(<u>Math.PI</u>); <font class="gray">// 3.14....</font>
       </div>
       <details>
         <summary>Metodos de Math</summary>
@@ -233,48 +233,54 @@
       Guardar fecha actual:
       <div class="codigo">
         <font class="purp">var</font> d = <font class="purp">new</font> <font class="blue">Date</font>();
-        <font class="comentario"> // <script> var d = new Date(); document.write(d); </script> </font>
+        <font class="gray"> // <script> var d = new Date(); document.write(d); </script> </font>
       </div>
 
       Crear fecha;
       <div class="codigo">
         <font class="purp">var</font> d1 = <font class="purp">new</font> <font class="blue">Date</font>("January 2, 2015 10:42:00");
-        <font class="comentario"> // Fri Jan 02 2015 10:42:00</font>
+        <font class="gray"> // Fri Jan 02 2015 10:42:00</font>
       </div><hr>
 
       <h3>Metodos de Date:</h3>
-      <div class="codigo">
-        getFullYer()    = año. <br>
-        getMonth()      = mes. <br>
-        getDate()       = dia(num). <br>
-        getDay()        = dia(semana). <br>
-        getHours()      = hora. <br>
-        getMinutes()    = min. <br>
-        getSeconds()    = seg. <br>
-        getMilliseconds()= ms.
-      </div>
-
-      Ej:
-      <div class="codigo">
-        <font class="purp">var</font> date1 = <font class="purp">new</font> <font class="blue">Date</font>(); <br>
-        <font class="purp">var</font> hours = date1.<font class="blue">getHours</font>(); <br>
-        <font class="comentario">// Muestra solo la hora actual, sin min-seg.</font>
+      <div class="flex">
+        <div class="codigo flex width100 marg0">
+          <div class="width100">
+            getFullYer()      <font class="gray">// año.</font> <br>
+            getMonth()        <font class="gray">// mes.</font> <br>
+            getDate()         <font class="gray">// dia(num).</font> <br>
+            getDay()          <font class="gray">// dia(sem).</font> <br>
+          </div>
+          <div class="width100">
+            getHours()        <font class="gray">// hora.</font> <br>
+            getMinutes()      <font class="gray">// min.</font> <br>
+            getSeconds()      <font class="gray">// seg.</font> <br>
+            getMilliseconds() <font class="gray">// ms.</font>
+          </div>
+        </div>
+        <div class="cod width100">
+          <font class="purp">var</font> date1 = <font class="purp">new</font> <font class="blue">Date</font>(); <br>
+          <font class="purp">var</font> hours = date1.<font class="blue">getHours</font>(); <br>
+          document.<font class="blue">write</font>(<u>hours</u>); <br>
+          <font class="gray">// Muestra solo la hora actual, sin min/seg.</font>
+        </div>
       </div>
     </fieldset>
 
     <!-- Almacenamiento -->
     <fieldset>
       <legend> <h2> Almacenamiento (API) </h2> </legend>
-      <div class="codigo">
-        <span>sessionStorage():</span> Se borra al cerrar el navegador del usuario <br>
-        <span>localStorage():</span> Permanece en el disco del usuario sin expirar <br> <br>
-
-        &lt;<span>script</span>> <br>
-          &nbsp; localStorage.<font class="blue">setItem</font>("<font class="green">Clave1</font>", "<font class="green">Valor1</font>"); <font class="gray">(Guardar)</font><br>
-          &nbsp; localStorage.<font class="blue">getItem</font>("<font class="green">Clave1</font>"); <font class="gray">(Cargar)</font> <br>
-          &nbsp; localStorage.<font class="blue">removeItem</font>("<font class="green">Clave1</font>"); <font class="gray">(Borrar)</font> <br>
-          &nbsp; localStorage.<font class="blue">clear</font>(); <font class="gray">(Limpiar)</font> <br>
-        &lt;<span>/script</span>>
+      <div class="flex">
+        <div class="codigo marg0">
+          sessionStorage(); <font class="gray"> //Temporal.</font> <br>
+          localStorage(); <font class="gray"> //Permanente.</font> <br>
+          localStorage.<font class="blue">clear</font>(); <font class="gray">(Limpiar)</font>
+        </div>
+        <div class="cod">
+          localStorage.<font class="blue">setItem</font>("<font class="green">Clave1</font>", "<font class="green">Valor1</font>"); <font class="gray">(Guardar)</font><br>
+          localStorage.<font class="blue">getItem</font>("<font class="green">Clave1</font>"); <font class="gray">(Cargar)</font> <br>
+          localStorage.<font class="blue">removeItem</font>("<font class="green">Clave1</font>"); <font class="gray">(Borrar)</font>
+        </div>
       </div>
     </fieldset>
     
@@ -282,28 +288,48 @@
     <fieldset>
       <legend> <h2> Dragg & Drop (API) </h2> </legend>
       <div class="flex">
-        <div id="box" ondrop="drop(event)" ondragover="allowDrop(event)" style="border:1px solid black; 
-          width:150px; height:150px; text-align: center; 
-          color: grey; background-color: #b9bebe;">
+        <div class="flex width100" style="margin: auto;">
+          <div id="box" ondrop="drop(event)" ondragover="allowDrop(event)" style="border:1px solid black;
+            width:150px; height:150px; background-color: #b9bebe;">
+          </div>
+          <img id="image" src="../Imgs/cat1.png" draggable="true" ondragstart="drag(event)" width="150" height="150" alt="" style="cursor: move;"/>
         </div>
-        <img id="image" src="../Imgs/cat1.png" draggable="true" ondragstart="drag(event)" width="150" height="150" alt="" style="cursor: move;"/>
-
-        <script>
-          function allowDrop(ev) {
-            ev.preventDefault();
+        <div class="cod wAuto" style="font-size: smaller;">
+          function allowDrop(ev) { <br>
+            &nbsp; ev.preventDefault(); <br>
+          } <br> <br>
+  
+          function drag(ev) { <br>
+            &nbsp; ev.dataTransfer.setData("text", ev.target.id); <br>
+          } <br> <br>
+  
+          function drop(ev) { <br>
+            &nbsp; ev.preventDefault(); <br>
+            &nbsp; var data = ev.dataTransfer.getData("text"); <br>
+            &nbsp; ev.target.appendChild(document.getElementById(data)); <br>
           }
-
-          function drag(ev) {
-            ev.dataTransfer.setData("text", ev.target.id);
-          }
-
-          function drop(ev) {
-            ev.preventDefault();
-            var data = ev.dataTransfer.getData("text");
-            ev.target.appendChild(document.getElementById(data));
-          }
-        </script>
+        </div>
       </div>
+      <div class="cod">
+        &lt;div id="box" ondrop="drop(event)"  ondragover="allowDrop(event)" &lt;/div> <br>
+        &lt;img id="image" src="cat1.png" draggable="true" ondragstart="drag(event)" style="cursor: move;"/>
+      </div>
+
+      <script>
+        function allowDrop(ev) {
+          ev.preventDefault();
+        }
+
+        function drag(ev) {
+          ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+          ev.preventDefault();
+          var data = ev.dataTransfer.getData("text");
+          ev.target.appendChild(document.getElementById(data));
+        }
+      </script>
     </fieldset>
   </div>
 
@@ -311,79 +337,76 @@
   <div class="borders"> 
     <h1 class="titulo">Objetos</h1>
 
-    <!-- Obj -->
-    <fieldset>
-      <legend><h2>Crear y Usar Objs</h2></legend>
-      <div class="codigo">
-        <font class="purp">var</font> person = { <br>
-          &nbsp; <strong>name:</strong> "john", <br>
-          &nbsp; <strong>age:</strong> 31, <br>
-        };
-      </div>
+    <!-- Obj y Constructor -->
+    <div class="flex">
+      <fieldset class="width100">
+        <legend><h2>Crear y Usar Objs</h2></legend>
+        <div class="codigo">
+          <font class="purp">var</font> person = { <br>
+            &nbsp; <strong>name:</strong> "john", <br>
+            &nbsp; <strong>age:</strong> 31, <br>
+          };
+        </div>
+        <div class="codigo">
+          person.name; <br>
+          person["name"];
+        </div>
+      </fieldset>
 
-      <div class="codigo">
-        person.name; <br>
-        person["name"];
-      </div>
-    </fieldset>
-
-    <!-- Constructor -->
-    <fieldset>
-      <legend><h2>Constructor</h2></legend>
-      <div class="codigo">
-        <font class="purp">function</font> <font class="blue">person</font>(name, age, color) { <br>
-          &nbsp; this.name = name; <br>
-          &nbsp; this.age = age; <br>
-          &nbsp; this.color = color <br>
-        }
-      </div>
-
-      <div class="codigo">
-        <font class="purp">var</font> p1 = <font class="purp">new</font> <font class="blue">person</font>("John", 42, "green") <br>
-        
-        document.<font class="blue">write</font>(p1.age) <font class="comentario">//42</font> <br>
-      </div>
-    </fieldset>
+      <!-- Constructor -->
+      <fieldset class="width100">
+        <legend><h2>Constructor</h2></legend>
+        <div class="codigo">
+          <font class="purp">function</font> <font class="blue">person</font>(name, age, color) { <br>
+            &nbsp; this.name = name; <br>
+            &nbsp; this.age = age; <br>
+            &nbsp; this.color = color <br>
+          }
+        </div>
+        <div class="codigo">
+          <font class="purp">var</font> p1 = <font class="purp">new</font> <font class="blue">person</font>("John", 42, "green") <br>
+      
+          document.<font class="blue">write</font>(p1.age) <font class="comentario">//42</font> <br>
+        </div>
+      </fieldset>
+    </div>
 
     <!-- Metodos -->
     <fieldset>
       <legend> <h2>Metodos</h2> </legend>
-      <h3 class="subtitulo">Metodos en los Objetos</h3>
-      <div class="codigo">
-        <font class="purp">function</font> <font class="blue">person</font>(name, age) { <br>
-          &nbsp;this.name = name; <br>
-          &nbsp;this.age = age; <br>
-          <div style="background-color: rgb(124, 124, 124);">
-            &nbsp;this.<u>changeName</u> = funcion (name) { <br>
-              &nbsp; this.name = name; <br>
-              &nbsp;} <br>
+      <div class="flex">
+        <div class="codigo width100">
+          <legend><font class="gray">//Metodo en los Objetos</font></legend><br>
+          <font class="purp">function</font> <font class="blue">person</font>(name, age) { <br>
+            &nbsp;this.name = name; <br>
+            &nbsp;this.age = age; <br>
+            <div style="background-color: rgba(124, 124, 124, 0.642);">
+              &nbsp;this.<u>changeName</u> = funcion (name) { <br>
+                &nbsp; this.name = name; <br>
+                &nbsp;} <br>
+            </div> } <br><br>
+          <font class="purp">var</font> p = <font class="purp">new</font> <font class="blue">person</font>("David", 21) <br>
+          <div style="background-color: rgba(124, 124, 124, 0.642);">
+            p.<font class="blue"><u>changeName</u></font>("Jhon"); <br>
           </div>
-        } <br> <br>
-        <font class="purp">var</font> p = <font class="purp">new</font> <font class="blue">person</font>("David", 21) <br>
-        <div style="background-color: rgb(124, 124, 124);">
-          p.<font class="blue"><u>changeName</u></font>("Jhon"); <br>
-        </div>
-        <font class="comentario">// Ahora (p.name) es Jhon.</font>
-      </div> <br>
-
-      <h3 class="subtitulo">Metodo fuera del constructor</h3>
-      <div class="codigo">
-        <font class="purp">function</font> <font class="blue">person</font>(name, age) { <br>
-          &nbsp; this.name = name; <br>
-          &nbsp; this.age = age; <br>
-          <div style="background-color: rgb(124, 124, 124);">
-            &nbsp; this.yearOfBirth = bornYear; <br>
-          </div>
-        } <br>
-        <div style="background-color: rgb(124, 124, 124);">
-          function bornYear() { <br>
-          &nbsp; return 2023 - this.age; <br>
-        }
+          <font class="comentario">// Ahora (p.name) es Jhon.</font>
         </div> <br>
-        
-        <font class="purp">var</font> p = <font class="purp">new</font> <font class="blue">person</font>("Nick", 24) <br>
-        document.<font class="blue"><u>write</u></font>(p.yearOfBirth()); <br>
-        <font class="comentario">// 1999</font>
+        <div class="codigo width100">
+          <legend><font class="gray">//Metodo fuera del Constructor</font></legend><br>
+          <font class="purp">function</font> <font class="blue">person</font>(name, age) { <br>
+            &nbsp; this.name = name; <br>
+            &nbsp; this.age = age; <br>
+            <div style="background-color: rgba(124, 124, 124, 0.642);">
+              &nbsp; this.yearOfBirth = bornYear; <br>
+            </div>} <br>
+          <div style="background-color: rgba(124, 124, 124, 0.642);">
+            function bornYear() { <br>
+            &nbsp; return 2023 - this.age; <br> }
+          </div> <br>
+          <font class="purp">var</font> p = <font class="purp">new</font> <font class="blue">person</font>("Nick", 24) <br>
+          document.<font class="blue"><u>write</u></font>(p.yearOfBirth()); <br>
+          <font class="comentario">// 1999</font>
+        </div>
       </div>
     </fieldset>
   </div>
@@ -395,14 +418,8 @@
     <!-- DOM -->
     <fieldset>
       <legend> <h2>DOM</h2> </legend>
-      Usada para añadir, borrar y modificar elementos. <br>
-      <details>
-        <summary>Imagen mapa DOM</summary>
-        <img src="../Imgs/DOM.png" alt="Arbol de DOM"> <br>
-      </details> <br>
-
       El objeto <font class="blue"><u>document</u></font> es la raiz de todos los otros objs de la pag. <br>
-      <div class="codigo">
+      <div class="codigo marg0">
         <font class="blue"><u>document</u></font>.body.<font class="purp">innerHTML</font> = "Algun Texto";
       </div>
       (La propiedad <font class="purp">innerHTML</font> se usa para modificar el contenido de un elemento.)
@@ -439,26 +456,25 @@
       <legend> <h2> Propiedades y metodos </h2> </legend>
 
       Cambiar valores <u>(Usando CHILDNODES)</u>
-      <div class="codigo">
-        <font class="purp">function</font> <font class="blue">setText</font>() { <br>
-          &nbsp;<font class="purp">var</font> a = document.getElementById("demo2"); <br>
-          &nbsp;<font class="purp">var</font> arr = a.<u>childNodes</u>; <br>
-          &nbsp;<font class="aqua">for</font> (<font class="purp">var</font> x = 0; x < arr.length; x++) { <br>
-            &nbsp; arr[x].innerHTML = "<font class="green">new text</font>"; <br>
-          &nbsp;} <br>
-        }
+      <div class="flex">
+        <div class="codigo marg0">
+          element.childNodes: <br>
+          element.firstChild: <br>
+          element.lastChild: <br>
+          element.hasChildNodes: <br>
+          element.nextSibling: <br>
+          element.previousSibling: <br>
+          element.parentNode:
+        </div>
+        <div class="cod">
+          <font class="purp">function</font> <font class="blue">setText</font>() { <br>
+            &nbsp;<font class="purp">var</font> a = document.getElementById("demo2"); <br>
+            &nbsp;<font class="purp">var</font> arr = a.<u>childNodes</u>; <br>
+            &nbsp;<font class="aqua">for</font> (<font class="purp">var</font> x = 0; x < arr.length; x++) { <br>
+              &nbsp; arr[x].innerHTML = "<font class="green">new text</font>"; <br>
+            &nbsp;} <br> }
+        </div>
       </div>
-
-      <details><!-- Propiedades y metodos -->
-        <summary>Propiedades y metodos</summary>
-          element.childNodes:      Returns an array of an element's child nodes. <br>
-          element.firstChild:      Returns the first child node of an element. <br>
-          element.lastChild:       Returns the last child node of an element. <br>
-          element.hasChildNodes:   Returns true if an element has any child nodes, otherwise false. <br>
-          element.nextSibling:     Returns the next node at the same tree level. <br>
-          element.previousSibling: Returns the previous node at the same tree level. <br>
-          element.parentNode:      Returns the parent node of an element.
-      </details>
     </fieldset>
 
     <!-- Modificar Atributos -->
@@ -508,100 +524,87 @@
     <fieldset>
       <legend> <h2>Elementos:</h2> </legend>
 
-      <h3 class="subtitulo"> Crear Elementos </h3>
-      <div class="ejemplo" id="createElem"> Algun Texto </div>
-      <button onclick="createELEMENT()">crear elemento</button>
-
-      <div class="codigo">
-        <font class="purp">var</font> p = document.<font class="blue">createElement</font>("<font class="green">p</font>"); 
-        <font class="gray">// Crear un parrafo.</font> <br>
-        <font class="purp">var</font> text = document.<font class="blue">createTextNode</font>("<font class="green">Nuevo Texto</font>"); <font class="gray">// Crear un Texto</font> <br><br>
+      <div class="flex">
+        <div>
+          <h2 class="subtitulo"> Crear y borrar Elementos </h2>
+          <div class="ejemplo" id="divElement"> Texto. </div>
+          <button onclick="createELEMENT()">Crear</button>
+          <button onclick="delElem()">Borrar</button>
+          <div class="codigo">
+            <font class="purp">var</font> parent = document.<font class="blue">getElementById</font>("<font class="green">div</font>"); <br>
+            parent.<font class="blue">removeChild</font>(parent.lastChild); <font class="gray">// Borrar</font>
+          </div>
+        </div>
+        <div>
+          <div class="codigo">
+            <font class="purp">var</font> p = document.<font class="blue">createElement</font>("<font class="green">p</font>");
+            <font class="gray">// Crear un parrafo.</font> <br>
+            <font class="purp">var</font> text = document.<font class="blue">createTextNode</font>("<font class="green">Nuevo Texto</font>"); <font class="gray">// Crear un Texto</font> <br>
+            p.<font class="blue">appendChild</font>(text); <font class="gray">// Agregar el text al parrafo.</font> <br><br>
         
-        p.<font class="blue">appendChild</font>(text); <font class="gray">// Agregar el text al paragraph.</font> <br><br>
-        
-        <font class="purp">var</font> div = document.<font class="blue">getElementById</font>("<font class="green">div</font>"); <br>
-        div.<font class="blue">appendChild</font>(p); <font class="gray">// Agregar el parrafo al div.</font> <br><br>
+            <font class="purp">var</font> div = document.<font class="blue">getElementById</font>("<font class="green">div</font>"); <br>
+            div.<font class="blue">appendChild</font>(p); <font class="gray">// Agregar el parrafo al div.</font> <br><br>
+            <font class="gray"> elem.cloneNode(); // Clonear.</font><br>
+            <font class="gray">div.replaceChild(esteElem, porEsteElem); // Reemplazar</font>
+          </div>
+          <script>
+            var parent = document.getElementById("divElement");
 
-        <font class="gray"> elem.cloneNode(); // Clones an element and returns the resulting node.</font>
-      </div>
-      <script>
-        function createELEMENT(){
-          var p = document.createElement("p"); // Crear un paragraph
-          var text = document.createTextNode("Nuevo Texto Creado!"); // Crear un texto
-          
-          p.appendChild(text); // Agregar el text al paragraph.
-          
-          var div = document.getElementById("createElem");
-          div.appendChild(p); // Agregar el paragraph al div.
-        }
-      </script><hr>
+            function createELEMENT(){
+              getParent();
+              var p = document.createElement("p"); // Crear un paragraph
+              var text = document.createTextNode("Nuevo Texto Creado!"); // Crear un texto
+              p.appendChild(text); // Agregar el text al paragraph.
+              parent.appendChild(p); // Agregar el paragraph al div.
+            }
 
-      <!-- borrando elementos -->
-      <h2 class="subtitulo"> Borrar Elementos </h2>
-      <div class="ejemplo" id="divT">
-        <p id="p1">Este es el primer parrafo.</p>
-        <p>Este es el segundo parrafo.</p>
-      </div>
-      <button onclick="delElem()">borrar elemento</button>
-      <div class="codigo">
-        <font class="purp">var</font> parent = document.<font class="blue">getElementById</font>("<font class="green">div</font>"); <br>
-        <font class="purp">var</font> child = document.<font class="blue">getElementById</font>("<font class="green">p</font>"); <br>
-        parent.<font class="blue">removeChild</font>(child);
-      </div>
-      <script>
-        function delElem(){
-          var parent = document.getElementById("divT");
-          var child = document.getElementById("p1");
-          parent.removeChild(child);
-        }
-      </script>
-      <hr>
+            function delElem(){
+              getParent();
+              parent.removeChild(parent.lastChild);
+            }
 
-      <!-- reemplazando elementos -->
-      <h2 class="subtitulo"> Reemplazar Elementos </h2>
-      <div class="ejemplo" id="divP">
-        <p id="p_divP">This is a paragraph.</p>
-        <p>This is another paragraph.</p>
+            function getParent(){
+              parent = document.getElementById("divElement");
+            }
+          </script>
+        </div>
       </div>
-      <button onclick="reemplazarElem()">reemplazar elemento</button>
-      <div class="codigo">
-        <font class="purp">var</font> varP = document.<font class="blue">createElement</font>("<font class="green">p</font>"); <br>
-        <font class="purp">var</font> node2 = document.<font class="blue">createTextNode</font>("<font class="green">This is new</font>"); <br>
-        varP.appendChild(node2); <br> <br>
-        
-        <font class="purp">var</font> parent2 = document.<font class="blue">getElementById</font>("<font class="green">divP</font>"); <br>
-        <font class="purp">var</font> child2 = document.<font class="blue">getElementById</font>("<font class="green">p_divP</font>"); <br>
-        parent.<font class="blue">replaceChild</font>(varP, child2);
-      </div>
-      <script>
-        function reemplazarElem(){
-          var varP = document.createElement("p");
-          var node2 = document.createTextNode("This is new");
-          varP.appendChild(node2);
-
-          var parent2 = document.getElementById("divP");
-          var child2 = document.getElementById("p_divP");
-          parent2.replaceChild(varP, child2);
-        }
-      </script>
     </fieldset>
 
     <!-- Crear Animaciones -->
     <fieldset>
       <legend> <h2> Crear Animaciones </h2> </legend>
-      <div id="container1">
-        <div id="box1"> </div>
+      <div class="flex">
+        <div class="width100">
+          <div id="container1">
+            <div id="box1"> </div>
+          </div>
+          <div class="cod marg0 wAuto">
+            <font class="purp">var</font> pos = <font class="orange">0</font>; <br>
+            <font class="purp">var</font> box = document.<font class="blue">getElementById</font>('<font class="green">box1</font>'); <br>
+            <font class="purp">var</font> t = <font class="blue">setInterval</font>(move, <font class="orange">10</font>); <br> <br>
+          </div>
+        </div>
+        <div class="cod">
+          <font class="purp">function</font> <font class="blue">move</font>() { <br>
+            &nbsp;<font class="aqua">if</font>(pos >= <font class="orange">150</font>) { <br>
+              &nbsp; pos = 0; <br>
+            &nbsp;} <font class="aqua">else</font> { <br>
+              &nbsp; pos += <font class="orange">1</font>; <br>
+              &nbsp; box.style.left = pos+'<font class="green">px</font>'; <br>
+            &nbsp;} <br> }
+        </div>
       </div>
       <style>
         #container1 {
-          width: 200px;
-          height: 50px;
+          width: 200px; height: 50px;
           background: green;
           position: relative;
+          margin: 5px;
         }
         #box1 {
-          width: 50px;
-          height: 50px;
+          width: 40px; height: 40px;
+          margin: 5px;
           background: red;
           position: absolute;
         }
@@ -613,7 +616,7 @@
 
         function move() {
           if (pos >= 150) {
-            clearInterval(t);
+            pos = 0;
           }
           else {
             pos += 1;
@@ -621,21 +624,6 @@
           }
         }
       </script>
-      <div class="codigo">
-        <font class="purp">var</font> pos = <font class="orange">0</font>; <br>
-        <font class="purp">var</font> box = document.<font class="blue">getElementById</font>('<font class="green">box1</font>'); <br>
-        <font class="purp">var</font> t = <font class="blue">setInterval</font>(move, <font class="orange">10</font>); <br> <br>
-        
-        <font class="purp">function</font> <font class="blue">move</font>() { <br>
-          &nbsp;if(pos >= <font class="orange">150</font>) { <br>
-            &nbsp; <font class="blue">clearInterval</font>(t); <br>
-          &nbsp;} <br>
-          &nbsp;else { <br>
-            &nbsp; pos += <font class="orange">1</font>; <br>
-            &nbsp; box.style.left = pos+'<font class="green">px</font>'; <br>
-          &nbsp;} <br>
-        }
-      </div>
     </fieldset>
   </div>
 
@@ -800,51 +788,46 @@
     <!-- Image Slider -->
     <fieldset>
       <legend> <h2> Image Slider </h2> </legend>
-      <div>
-        <button onclick="prev()"> Prev </button>
-        <img id="slider" src="https://www.sololearn.com/uploads/slider/1.jpg" width="200px" height="100px" />
-        <button onclick="next()"> Next </button>
-      </div>
-      <details>
-        <summary>Codigo...</summary>
-        <div class="codigo">
+      <div class="flex">
+        <div>
+          <img id="slider" src="../Imgs/1.jpg" height="100px" /> <br>
+          <button onclick="prev()"> Prev </button>
+          <button onclick="next()"> Next </button>
+          <div class="codigo">
+            var images = [ <br>
+              &nbsp; '../Imgs/1.jpg', <br>
+              &nbsp; '../Imgs/2.jpg', <br>
+              &nbsp; '../Imgs/3.jpg' <br>
+            ]; <br>
+            var num = 0; <br>
+          </div>
+        </div>
+        <div class="cod width100">
           <pre>
-            &lt;button onclick="prev()"> Prev &lt;/button>
-            &lt;img id="slider" src="https://www.sololearn.com/uploads/slider/1.jpg" width="200px" height="100px"/>
-            &lt;button onclick="next()"> Next &lt;/button>
-      
-            &lt;script>
-            var images = [
-              'http://www.sololearn.com/uploads/slider/1.jpg',
-              'http://www.sololearn.com/uploads/slider/2.jpg',
-              'http://www.sololearn.com/uploads/slider/3.jpg'
-            ];
-            var num = 0;
-            function next() {
-              var slider = document.getElementById('slider');
-              num++;
-              if(num >= images.length) {
-                num = 0;
+              function next() {
+                var slider = document.getElementById('slider');
+                num++;
+                if(num >= images.length) {
+                  num = 0;
+                }
+                slider.src = images[num];
               }
-              slider.src = images[num];
-            }
-            function prev() {
-              var slider = document.getElementById('slider');
-              num--;
-              if(num < 0) {
-                num = images.length-1;
+              function prev() {
+                var slider = document.getElementById('slider');
+                num--;
+                if(num < 0) {
+                  num = images.length-1;
+                }
+                slider.src = images[num];
               }
-              slider.src = images[num];
-            }
-            &lt;/script>
           </pre>
         </div>
-      </details>
+      </div>
       <script>
         var images = [
-          'http://www.sololearn.com/uploads/slider/1.jpg',
-          'http://www.sololearn.com/uploads/slider/2.jpg',
-          'http://www.sololearn.com/uploads/slider/3.jpg'
+          '../Imgs/1.jpg',
+          '../Imgs/2.jpg',
+          '../Imgs/3.jpg'
         ];
         var num = 0;
         function next() {
@@ -979,646 +962,639 @@
       </div>
     </fieldset>
     
-    <!-- Bucles For -->
-    <fieldset>
-      <legend> <h2> Bucles For en ES6 </h2> </legend>
-      <details>
-        <div class="flex">
-          <div class="codigo width100">
-            <u><b>For In:</b></u> <br>
-            <font class="purp">let</font> objsV01 <font class="purp">=</font> {a:<font class="orange">1</font>, b:<font class="orange">2</font>, c:<font class="orange">3</font>}; <br>
-            <font class="aqua">for</font> (<font class="purp">let</font> v <font class="purp">in</font> objsV01) { <br>
-              &nbsp; document.<font class="blue">write</font>(v); <br> }
+    <details>
+      <summary>Otros...</summary>
+      <!-- Bucles For -->
+      <fieldset>
+        <legend> <h2> Bucles For en ES6 </h2> </legend>
+        <details>
+          <div class="flex">
+            <div class="codigo width100">
+              <u><b>For In:</b></u> <br>
+              <font class="purp">let</font> objsV01 <font class="purp">=</font> {a:<font class="orange">1</font>, b:<font class="orange">2</font>, c:<font class="orange">3</font>}; <br>
+              <font class="aqua">for</font> (<font class="purp">let</font> v <font class="purp">in</font> objsV01) { <br>
+                &nbsp; document.<font class="blue">write</font>(v); <br> }
+            </div>
+            <div class="codigo width100">
+              <u><b>For Of:</b></u> <br>
+              <font class="purp">let</font> objsV02 <font class="purp">=</font> ["<font class="green">xL</font>", "<font class="green">y</font>", "<font class="green">z</font>"]; <br>
+              <font class="aqua">for</font> (<font class="purp">let</font> v <font class="purp">of</font> objsV02) { <br>
+                &nbsp; document.<font class="blue">write</font>(v); <br> }
+            </div>
           </div>
-  
-          <div class="codigo width100">
-            <u><b>For Of:</b></u> <br>
-            <font class="purp">let</font> objsV02 <font class="purp">=</font> ["<font class="green">xL</font>", "<font class="green">y</font>", "<font class="green">z</font>"]; <br>
-            <font class="aqua">for</font> (<font class="purp">let</font> v <font class="purp">of</font> objsV02) { <br>
-              &nbsp; document.<font class="blue">write</font>(v); <br> }
+        </details>
+      </fieldset>
+      <!-- ForEach -->
+      <fieldset>
+        <legend> <h2>ForEach en ES6 (recorrer Arrays)</h2> </legend>
+          <details>
+            <div class="flex">
+              <div class="width100">
+                <u><b>Antes:</b></u>
+                <div class="codigo">
+                  <font class="purp">var</font> arrFE <font class="purp">=</font> [2,3,7,8]; <br><br>
+                  arrFE.<font class="blue">forEach</font>(<font class="purp">function</font>(<span>el</span>) { <br>
+                    &nbsp; document.<font class="blue">write</font>(<span>el</span> <font class="purp">*</font> 2 <font class="purp">+</font> " "); <br>
+                  }); <br>
+                  <font class="comentario">// 4 6 14 16</font>
+                </div>
+              </div>
+              <div class="flecha wAuto"></div>
+              <div class="width100">
+                <u><b>Ahora:</b></u>
+                <div class="codigo">
+                  <font class="purp">const</font> arrFE2 <font class="purp">=</font> [2,3,7,8];<br><br>
+                  arrFE2.<font class="blue">forEach</font>(<span>v</span> <font class="purp">=></font> {<br>
+                    &nbsp; document.<font class="blue">write</font>(<span>v</span> <font class="purp">*</font> 2 <font class="purp">+</font> " ");<br>
+                  }); <br>
+                  <font class="comentario">// 4 6 14 16</font>
+                </div>
+              </div>
+            </div>
+          </details>
+      </fieldset>
+      <!-- Funciones -->
+      <fieldset>
+        <legend> <h2> Funciones en ES6</h2> </legend>
+        <details>
+          <div class="flex">
+            <div class="width100">
+              <sub>Antes:</sub>
+              <div class="codigo">
+                <font class="purp">function</font> <font class="blue">add</font> (<span>x</span>, <span>y</span>) { <br>
+                  &nbsp; <font class="purp">var</font> sum <font class="purp">=</font> x <font class="purp">+</font> y; <br>
+                  &nbsp; console.<font class="blue">log</font>(sum); <br> }
+              </div>
+            </div>
+            <div class="flecha wAuto"></div>
+            <div class="width100">
+              <sub>Ahora:</sub>
+              <div class="codigo">
+                <font class="purp">const</font> <font class="blue">add</font> <font class="purp">=</font> (<span>x</span>, <span>y</span>) <font class="purp">=></font> { <br>
+                  &nbsp; <font class="purp">let</font> sum <font class="purp">=</font> x <font class="purp">+</font> y; <br>
+                  &nbsp; console.<font class="blue">log</font>(sum); <br> }
+              </div>
+            </div>
+          </div><br>
+          <div class="flex">
+            <div class="codigo width100">
+              <u><b>Funcion simple SIN argumento:</b></u> <br>
+              <font class="purp">const</font> <font class="blue">funcSinParam</font> <font class="purp">=</font> () <font class="purp">=></font> document.<font class="blue">write</font>("<font class="green">Hola!</font>"); <br>
+              <font class="blue">funcSinParam</font>(); <br>
+              <font class="comentario">// Hola!</font>
+            </div>
+            <div class="codigo width100">
+              <u><b>Funcion simple CON argumento:</b></u> <br>
+              <font class="purp">const</font> <font class="blue">saludar</font> <font class="purp">=</font> x <font class="purp">=></font> "<font class="green">Bienvenido</font> " <font class="purp">+</font> x; <br>
+              document.<font class="blue">write</font>(<font class="blue">saludar</font>("<font class="green">Nico</font>")); <br>
+              <font class="comentario">// Bienvenido Nico.</font>
+            </div>
           </div>
-        </div>
-      </details>
-    </fieldset>
-  
-    <!-- ForEach -->
-    <fieldset>
-      <legend> <h2>ForEach en ES6 (recorrer Arrays)</h2> </legend>
+        </details>
+      </fieldset>
+      <!-- Parametros -->
+      <fieldset>
+        <legend> <h2>Parametros predeterminados:</h2> </legend>
         <details>
           <div class="flex">
             <div class="width100">
               <u><b>Antes:</b></u>
               <div class="codigo">
-                <font class="purp">var</font> arrFE <font class="purp">=</font> [2,3,7,8]; <br><br>
-                arrFE.<font class="blue">forEach</font>(<font class="purp">function</font>(<span>el</span>) { <br>
-                  &nbsp; document.<font class="blue">write</font>(<span>el</span> <font class="purp">*</font> 2 <font class="purp">+</font> " "); <br>
-                }); <br>
-                <font class="comentario">// 4 6 14 16</font>
+                <font class="purp">function</font> <font class="blue">testES6</font>(a, b=3, c=42){ <br>
+                  &nbsp; <font class="aqua">return</font> a + b + c; <br>
+                } <br>
+                document.<font class="blue">write</font>(<font class="blue">testES6</font>(5)); <br>
+                <font class="comentario">// 50</font>
               </div>
             </div>
             <div class="flecha wAuto"></div>
             <div class="width100">
               <u><b>Ahora:</b></u>
               <div class="codigo">
-                <font class="purp">const</font> arrFE2 <font class="purp">=</font> [2,3,7,8];<br><br>
-                arrFE2.<font class="blue">forEach</font>(<span>v</span> <font class="purp">=></font> {<br>
-                  &nbsp; document.<font class="blue">write</font>(<span>v</span> <font class="purp">*</font> 2 <font class="purp">+</font> " ");<br>
-                }); <br>
-                <font class="comentario">// 4 6 14 16</font>
+                <font class="purp">const</font> <font class="blue">test0</font> = (a, b=3, c=42) <font class="purp">=></font> { <br>
+                  &nbsp; <font class="aqua">return</font> a + b + c; <br>
+                } <br>
+                document.<font class="blue">write</font>(<font class="blue">test0</font>(5)); <br>
+                <font class="comentario">//50</font>
               </div>
             </div>
           </div>
         </details>
-    </fieldset>
-  
-    <!-- Funciones -->
-    <fieldset>
-      <legend> <h2> Funciones en ES6</h2> </legend>
-      <details>
-        <div class="flex">
-          <div class="width100">
-            <sub>Antes:</sub>
-            <div class="codigo">
-              <font class="purp">function</font> <font class="blue">add</font> (<span>x</span>, <span>y</span>) { <br>
-                &nbsp; <font class="purp">var</font> sum <font class="purp">=</font> x <font class="purp">+</font> y; <br>
-                &nbsp; console.<font class="blue">log</font>(sum); <br> }
-            </div>
-          </div>
-          <div class="flecha wAuto"></div>
-          <div class="width100">
-            <sub>Ahora:</sub>
-            <div class="codigo">
-              <font class="purp">const</font> <font class="blue">add</font> <font class="purp">=</font> (<span>x</span>, <span>y</span>) <font class="purp">=></font> { <br>
-                &nbsp; <font class="purp">let</font> sum <font class="purp">=</font> x <font class="purp">+</font> y; <br>
-                &nbsp; console.<font class="blue">log</font>(sum); <br> }
-            </div>
-          </div>
-        </div><br>
-        <div class="flex">
-          <div class="codigo width100">
-            <u><b>Funcion simple SIN argumento:</b></u> <br>
-            <font class="purp">const</font> <font class="blue">funcSinParam</font> <font class="purp">=</font> () <font class="purp">=></font> document.<font class="blue">write</font>("<font class="green">Hola!</font>"); <br>
-            <font class="blue">funcSinParam</font>(); <br>
-            <font class="comentario">// Hola!</font>
-          </div>
-          <div class="codigo width100">
-            <u><b>Funcion simple CON argumento:</b></u> <br>
-            <font class="purp">const</font> <font class="blue">saludar</font> <font class="purp">=</font> x <font class="purp">=></font> "<font class="green">Bienvenido</font> " <font class="purp">+</font> x; <br>
-            document.<font class="blue">write</font>(<font class="blue">saludar</font>("<font class="green">Nico</font>")); <br>
-            <font class="comentario">// Bienvenido Nico.</font>
-          </div>
-        </div>
-      </details>
-    </fieldset>
-  
-    <!-- Parametros -->
-    <fieldset>
-      <legend> <h2>Parametros predeterminados:</h2> </legend>
-      <details>
-        <div class="flex">
-          <div class="width100">
-            <u><b>Antes:</b></u>
-            <div class="codigo">
-              <font class="purp">function</font> <font class="blue">testES6</font>(a, b=3, c=42){ <br>
-                &nbsp; <font class="aqua">return</font> a + b + c; <br>
-              } <br>
-              document.<font class="blue">write</font>(<font class="blue">testES6</font>(5)); <br>
-              <font class="comentario">// 50</font>
-            </div>
-          </div>
-          <div class="flecha wAuto"></div>
-          <div class="width100">
-            <u><b>Ahora:</b></u>
-            <div class="codigo">
-              <font class="purp">const</font> <font class="blue">test0</font> = (a, b=3, c=42) <font class="purp">=></font> { <br>
-                &nbsp; <font class="aqua">return</font> a + b + c; <br>
-              } <br>
-              document.<font class="blue">write</font>(<font class="blue">test0</font>(5)); <br>
-              <font class="comentario">//50</font>
-            </div>
-          </div>
-        </div>
-      </details>
-    </fieldset>
-
-    <!-- Objetos -->
-    <fieldset>
-      <legend> <h2 class="subtitulo"> Objetos en ES6</h2> </legend>
-      <details>
-        Objeto
-        <div class="codigo">
-          <font class="purp">let</font> height = <font class="orange">5</font>; <br>
-          <font class="purp">let</font> health = <font class="orange">100</font>; <br><br>
-        
-          <font class="purp">let</font> persona = { <br>
-            height, <br>
-            health <br>
-          }; <br><br>
-          document.<font class="blue">write</font>(persona.height); <br>
-          <font class="comentario">// 5</font>
-        </div>
-        
-        Funcion en Objeto
-        <div class="codigo">
-          <font class="purp">let</font> tree = { <br>
-            &nbsp; height: <font class="orange">10</font>, <br>
-            &nbsp; color: '<font class="green">green</font>', <br>
-            &nbsp; <font class="blue">grow</font>() { <br>
-              &nbsp;&nbsp; <span>this</span>.height += <font class="orange">2</font>; <br>
-              &nbsp;&nbsp; } <br>
-          }; <br><br>
-        
-          tree.<font class="blue">grow</font>(); <br>
-          document.<font class="blue">write</font>(tree.height); <br>
-          <font class="comentario">// 12</font>
-        </div>
-        <hr>
-        <h3> Nombres de propiedad calculados: </h3>
+      </fieldset>
+      <!-- Objetos -->
+      <fieldset>
+        <legend> <h2 class="subtitulo"> Objetos en ES6</h2> </legend>
         <details>
-          <summary>Codigo/Ejemplo...</summary>
+          Objeto
+          <div class="codigo">
+            <font class="purp">let</font> height = <font class="orange">5</font>; <br>
+            <font class="purp">let</font> health = <font class="orange">100</font>; <br><br>
+      
+            <font class="purp">let</font> persona = { <br>
+              height, <br>
+              health <br>
+            }; <br><br>
+            document.<font class="blue">write</font>(persona.height); <br>
+            <font class="comentario">// 5</font>
+          </div>
+      
+          Funcion en Objeto
+          <div class="codigo">
+            <font class="purp">let</font> tree = { <br>
+              &nbsp; height: <font class="orange">10</font>, <br>
+              &nbsp; color: '<font class="green">green</font>', <br>
+              &nbsp; <font class="blue">grow</font>() { <br>
+                &nbsp;&nbsp; <span>this</span>.height += <font class="orange">2</font>; <br>
+                &nbsp;&nbsp; } <br>
+            }; <br><br>
+      
+            tree.<font class="blue">grow</font>(); <br>
+            document.<font class="blue">write</font>(tree.height); <br>
+            <font class="comentario">// 12</font>
+          </div>
+          <hr>
+          <h3> Nombres de propiedad calculados: </h3>
+          <details>
+            <summary>Codigo/Ejemplo...</summary>
+            <div class="codigo">
+              <pre>
+                  // Ej.1
+                  let prop = 'name';
+                  let id = '1234';
+                  let mobile = '08923';
+                  let user = {
+                    [prop]: 'Jack',
+                    [`user_${id}`]: `${mobile}`
+                  };
+                  // Ej.2
+                  var i = 0;
+                  var a = {
+                    ['foo' + ++i]: i,
+                    ['foo' + ++i]: i,
+                    ['foo' + ++i]: i
+                  };
+                  // Ej. 3
+                  var param = 'size';
+                  var config = {
+                    [param]: 12,
+                    ['mobile' + param.charAt(0).toUpperCase() + param.slice(1)]: 4
+                  };
+              </pre>
+            </div>
+          </details>
+          <hr>
+          <h3> Object.assign(): </h3>
+          <details>
+            <summary>Codigo/Ejemplo...</summary>
+            <div class="codigo">
+              <pre>
+                  //
+                  let person00 = {
+                    name: 'Jack',
+                    age: 18,
+                    sex: 'male'
+                  };
+                  let student00 = {
+                    name: 'Bob',
+                    age: 20,
+                    xp: '2'
+                  };
+      
+                  let newStudent = Object.assign({}, person00, student00);
+      
+                  document.write(newStudent.name); // Bob
+                  document.write(newStudent.age); // 20
+                  document.write(newStudent.sex); // male
+                  document.write(newStudent.xp); // 2
+                  <hr>
+                  //
+                  let person01 = {
+                    name: 'Jack',
+                    age: 18
+                  };
+      
+                  let newPerson01 = person01;
+                  newPerson01.name = 'Bob';
+      
+                  document.write(person.name); // Bob
+                  document.write(newPerson.name); // Bob
+                  <hr>
+                  //
+                  let person02 = {
+                    name: 'Jack',
+                    age: 18
+                  };
+      
+                  let newPerson02 = Object.assign({}, person02);
+                  newPerson02.name = 'Bob';
+      
+                  document.write(person.name); // Jack
+                  document.write(newPerson.name); // Bob
+                  <hr>
+                  //
+                  let person03 = {
+                    name: 'Jack',
+                    age: 18
+                  };
+      
+                  let newPerson03 = Object.assign({}, person03, {name: 'Bob'});
+      
+                  document.write(newPerson.name); // Bob
+              </pre>
+            </div>
+          </details>
+        </details>
+      </fieldset>
+      <!-- Destructuracion en ES6 -->
+      <div class="borders">
+        <h2 class="subtitulo"> Destructuracion en ES6 </h2>
+        <details>
+          <u><b>Destructurar Arrays:</b></u>
           <div class="codigo">
             <pre>
-                // Ej.1
-                let prop = 'name';
-                let id = '1234';
-                let mobile = '08923';
-                let user = {
-                  [prop]: 'Jack',
-                  [`user_${id}`]: `${mobile}`
-                };
-                // Ej.2
-                var i = 0;
-                var a = {
-                  ['foo' + ++i]: i,
-                  ['foo' + ++i]: i,
-                  ['foo' + ++i]: i
-                };
-                // Ej. 3
-                var param = 'size';
-                var config = {
-                  [param]: 12,
-                  ['mobile' + param.charAt(0).toUpperCase() + param.slice(1)]: 4
-                };
-            </pre>
+                    // Ej 1
+                        let arrDes = ['1', '2', '3'];
+                        let [one, two, three] = arrDes;
+      
+                        // console.log(one); // 1
+                        // console.log(two); // 2
+                        // console.log(three); // 3
+      
+                    // Ej 2
+                        let aDes = () => {
+                        return [1, 3, 2];
+                        };
+      
+                        [one, ,two] = aDes();
+      
+                        // console.log(one); // 1
+                        // console.log(two); // 2
+                    // Ej 3
+                        let _a, _b, _c = 4, _d = 8;
+                        [_a, _b = 6] = [2]; // a=2, b=6.
+                        // console.log(a); // 2
+                        // console.log(b); // 6
+                        [_c, _d] = [_d, _c]; // c=8, d=4.
+                        // console.log(c); // 8
+                        // console.log(d); // 4
+                </pre>
           </div>
-        </details>
-        <hr>
-        <h3> Object.assign(): </h3>
-        <details>
-          <summary>Codigo/Ejemplo...</summary>
+          <u><b>Destructurar Objetos:</b></u>
           <div class="codigo">
             <pre>
-                //
-                let person00 = {
-                  name: 'Jack',
-                  age: 18,
-                  sex: 'male'
-                };
-                let student00 = {
-                  name: 'Bob',
-                  age: 20,
-                  xp: '2'
-                };
-        
-                let newStudent = Object.assign({}, person00, student00);
-        
-                document.write(newStudent.name); // Bob
-                document.write(newStudent.age); // 20
-                document.write(newStudent.sex); // male
-                document.write(newStudent.xp); // 2
-                <hr>
-                //
-                let person01 = {
-                  name: 'Jack',
-                  age: 18
-                };
-        
-                let newPerson01 = person01;
-                newPerson01.name = 'Bob';
-        
-                document.write(person.name); // Bob
-                document.write(newPerson.name); // Bob
-                <hr>
-                //
-                let person02 = {
-                  name: 'Jack',
-                  age: 18
-                };
-        
-                let newPerson02 = Object.assign({}, person02);
-                newPerson02.name = 'Bob';
-        
-                document.write(person.name); // Jack
-                document.write(newPerson.name); // Bob
-                <hr>
-                //
-                let person03 = {
-                  name: 'Jack',
-                  age: 18
-                };
-        
-                let newPerson03 = Object.assign({}, person03, {name: 'Bob'});
-        
-                document.write(newPerson.name); // Bob
-            </pre>
+                    // Ej 1
+                        let obj = {h:100, s: true};
+                        let {h, s} = obj;
+                        // console.log(h);
+                        // console.log(s);
+      
+                    // Ej 2
+                        let j0, k0;
+                        ({j0, k0} = {j0: 'Hello ', k0: 'Jack'});
+                        // console.log(a + b);
+                    // Ej 3
+                        let {u0, i0} = {u0: 'Hello ', i0: 'Jack'};
+                        // console.log(a + b);
+                    // Ej 4
+                        var o0 = {_h: 42, _s: true};
+                        var {_h: foo, _s: bar} = o0;
+                        //console.log(h); // Error
+                        // console.log(foo); // 42
+                    // Ej 5
+                        var obj_0 = {_id: 42, name: "Jack"};
+                        let {_id = 10, _age = 20} = obj_0;
+                        // console.log(id); // 42
+                        // console.log(age); // 20
+                    </pre>
           </div>
         </details>
-      </details>
-    </fieldset>
-
-    <!-- Destructuracion en ES6 -->
-    <div class="borders">
-      <h2 class="subtitulo"> Destructuracion en ES6 </h2>
-      <details>
-        <u><b>Destructurar Arrays:</b></u>
-        <div class="codigo">
-          <pre>
-                  // Ej 1
-                      let arrDes = ['1', '2', '3'];
-                      let [one, two, three] = arrDes;
-        
-                      // console.log(one); // 1
-                      // console.log(two); // 2
-                      // console.log(three); // 3
-        
-                  // Ej 2
-                      let aDes = () => {
-                      return [1, 3, 2];
-                      };
-        
-                      [one, ,two] = aDes();
-        
-                      // console.log(one); // 1
-                      // console.log(two); // 2
-                  // Ej 3
-                      let _a, _b, _c = 4, _d = 8;
-                      [_a, _b = 6] = [2]; // a=2, b=6.
-                      // console.log(a); // 2
-                      // console.log(b); // 6
-                      [_c, _d] = [_d, _c]; // c=8, d=4.
-                      // console.log(c); // 8
-                      // console.log(d); // 4
-              </pre>
-        </div>
-        <u><b>Destructurar Objetos:</b></u>
-        <div class="codigo">
-          <pre>
-                  // Ej 1
-                      let obj = {h:100, s: true};
-                      let {h, s} = obj;
-                      // console.log(h);
-                      // console.log(s);
-        
-                  // Ej 2
-                      let j0, k0;
-                      ({j0, k0} = {j0: 'Hello ', k0: 'Jack'});
-                      // console.log(a + b);
-                  // Ej 3
-                      let {u0, i0} = {u0: 'Hello ', i0: 'Jack'};
-                      // console.log(a + b);
-                  // Ej 4
-                      var o0 = {_h: 42, _s: true};
-                      var {_h: foo, _s: bar} = o0;
-                      //console.log(h); // Error
-                      // console.log(foo); // 42
-                  // Ej 5
-                      var obj_0 = {_id: 42, name: "Jack"};
-                      let {_id = 10, _age = 20} = obj_0;
-                      // console.log(id); // 42
-                      // console.log(age); // 20
-                  </pre>
-        </div>
-      </details>
-    </div>
-
-    <!-- Rest y Spread -->
-    <div class="borders">
-      <h2 class="subtitulo"> REST & SPREAD </h2>
-      <details>
-        <u><b>Parámetros de REST (descanso):</b></u>
-        <div class="codigo">
-          <pre>
-                  function containsAll(arr) {
-                  for (let k = 1; k < arguments.length; k++) {
-                      let num = arguments[k];
-                      if (arr.indexOf(num) === -1) {
-                          return false;
-                      }
-                  }
-                  return true;
-                  }
-                  let x0_ = [2, 4, 6, 7];
-                  console.log(containsAll(x0_, 2, 4, 7));
-                  console.log(containsAll(x0_, 6, 4, 9));
-                  //
-                  function containsAll2(arr, ...nums) {
-                  for (let num of nums) {
-                      if (arr.indexOf(num) === -1) {
-                          return false;
-                      }
-                  }
-                  return true;
-                  }
-        
-                  let x1_ = [2, 4, 6, 7];
-                  console.log(containsAll2(x1_, 2, 4, 7));
-                  console.log(containsAll2(x1_, 6, 4, 9));
-        
-              </pre>
-        </div>
-        <u><b>Parámetros de SPREAD(propagación):</b></u>
-        <div class="codigo">
-          <pre>
-                  function myFunction(w, x, y, z) {
-                      console.log(w + x + y + z);
-                  }
-                  var args = [1, 2, 3];
-                  myFunction.apply(null, args.concat(4));
-        
-        
-                  const myFunction = (w, x, y, z) => {
-                      console.log(w + x + y + z);
-                  };
-                  let args = [1, 2, 3];
-                  myFunction(...args, 4);
-        
-        
-                  var dateFields = [1970, 0, 1];  // 1 Jan 1970
-                  var date = new Date(...dateFields);
-                  console.log(date);
-        
-        
-                  var arr = ["One", "Two", "Five"];
-                  arr.splice(2, 0, "Three");
-                  arr.splice(3, 0, "Four");
-                  console.log(arr);
-        
-        
-                  let newArr = ['Three', 'Four'];
-                  let arr = ['One', 'Two', ...newArr, 'Five'];
-                  console.log(arr);
-        
-        
-                  const obj1 = { foo: 'bar', x: 42 };
-                  const obj2 = { foo: 'baz', y: 5 };
-                  const clonedObj = { ...obj1 }; // { foo: "bar", x: 42 }
-                  const mergedObj = { ...obj1, ...obj2 }; // { foo: "baz", x: 42, y: 5 }
-        
-        
-                  const obj1 = { foo: 'bar', x: 42 };
-                  const obj2 = { foo: 'baz', y: 5 };
-                  const merge = (...objects) => ({ ...objects });
-        
-                  let mergedObj = merge (obj1, obj2);
-                  // { 0: { foo: 'bar', x: 42 }, 1: { foo: 'baz', y: 5 } }
-        
-                  let mergedObj2 = merge ({}, obj1, obj2);
-                  // { 0: {}, 1: { foo: 'bar', x: 42 }, 2: { foo: 'baz', y: 5 } }
-              </pre>
-        </div>
-      </details>
-    </div>
-
-    <!-- Clases -->
-    <div class="borders">
-      <h2 class="subtitulo"> Clases en ES6</h2>
-      <details>
-        <u><b>Constructor - (al iniciar):</b></u>
-        <div class="codigo">
-          <pre>
-                  class Rectangle0 {
-                      constructor(height, width)
-                      {
-                      this.height = height;
-                      this.width = width;
-                      }
-                  }
-                  const square0 = new Rectangle0(5, 5);
-                  const poster0 = new Rectangle0(2, 3);
-                  console.log(square0.height);
-              </pre>
-        </div>
-        <u><b>Clase nombrada:</b></u>
-        <div class="codigo">
-          <pre>
-                  var Square0 = class Rectangle0
-                  {
-                      constructor(height, width) {
-                      this.height = height;
-                      this.width = width;
-                      }
-                  };
-        
-                  const square00 = new Square0(5, 5);
-                  const poster00 = new Square0(2, 3);
-                  console.log(square00.height);
-        
-              </pre>
-        </div>
-        <u><b>Clase no nombrada:</b></u>
-        <div class="codigo">
-          <pre>
-                  var Square1 = class
-                  {
-                  constructor(height, width) {
-                      this.height = height;
-                      this.width = width;
-                  }
-                  };
-                  const square1 = new Square1(5, 5);
-                  const poster1 = new Square1(2, 3);
-                  console.log(square1.height);
-              </pre>
-        </div>
-        <u><b>Metodo/Func</b></u>
-        <div class="codigo">
-          <pre>
-                  class Rectangle1 {
-                  constructor(height, width) {
-                      this.height = height;
-                      this.width = width;
-                  }
-        
-                  get area() {
-                      return this.calcArea();
-                  }
-        
-                  calcArea() {
-                      return this.height * this.width;
-                  }
-                  }
-                  const square01 = new Rectangle1(5, 5);
-                  console.log(square01.area); // 25
-        
-              </pre>
-        </div>
-        <u><b>Herencia</b></u>
-        <div class="codigo">
-          <pre>
-                  class Animal0 {
-                  constructor(name) {
-                      this.name = name;
-                  }
-                  speak() {
-                      console.log(this.name + ' makes a noise.');
-                  }
-                  }
-        
-                  class Dog0 extends Animal0 {
-                  speak() {
-                      console.log(this.name + ' barks.');
-                  }
-                  }
-                  let dog0 = new Dog0('Rex');
-                  dog0.speak(); // Rex barks.
-                  //
-                  class Animal1 {
-                  constructor(name) {
-                      this.name = name;
-                  }
-                  speak() {
-                      console.log(this.name + ' makes a noise.');
-                  }
-                  }
-        
-                  class Dog1 extends Animal1 {
-                  speak() {
-                      super.speak(); // Rex barks.
-                      console.log(this.name + ' barks.');
-                  }
-                  }
-                  let dog1 = new Dog1('Rex');
-                  dog1.speak(); // Rex makes a noise.
-              </pre>
-        </div>
-      </details>
-    </div>
-
-    <!-- Map y Set -->
-    <div class="borders">
-      <h2 class="subtitulo"> Map & Set</h2>
-      <details>
-        <div class="codigo">
-          <pre>
-                  let map00 = new Map([["k1","v1"], ["k2", "v2"]]);
-                      console.log(map00.size); // 2
-        
-                      // Metodos
-                      // set(key, value)
-                      // get(key)
-                      // has(key)
-                      // delete(key)
-                      // clear()
-                      // keys()    : Arr de k
-                      // value()   : Arr de v
-                      // entries() : Arr de [k, v]
-        
-                      let map2 = new Map();
-                      map2.set("k1", "v1").set("k2", "v2");
-                      console.log(map2.get("k1")); // v1
-                      console.log(map2.has("k2")); // true
-                      for (let kv of map2.entries())
-                      console.log(kv[0] + " : " + kv[1]); // k1:v1  // k2:v2
-                  //
-        
-                  // SET (obj)
-                  let set = new Set([1, 2, 4, 2, 59, 9, 4, 9, 1]);
-                  console.log(set.size); // 5 (size devuelve la cant de valores diferentes)
-                  // Metodos= Add, delete, has, clear, values.
-              </pre>
-        </div>
-      </details>
-    </div>
-
-    <!-- Otros -->
-    <div class="borders">
-      <h2 class="subtitulo"> Otros </h2>
-      <details>
-        <h3>PROMISES (por tiempo):</h3>
-        <div class="flex">
-          <div>
-            Antes js:
-            <div class="codigo">
-              <font class="blue">setTimeout</font>(<font class="purp">function</font>() { <br>
-              &nbsp; console.<font class="blue">log</font>("<font class="green">Work 1</font>"); <br>
-              &nbsp; <font class="blue">setTimeout</font>(<font class="purp">function</font>() { <br>
-                &nbsp; &nbsp; console.<font class="blue">log</font>("<font class="green">Work 2</font>"); <br>
-              &nbsp; }, <font class="orange">1000</font>); <br>
-              }, <font class="orange">1000</font>); <br>
-              console.log("<font class="green">End</font>"); <br>
-            </div>
+      </div>
+      <!-- Rest y Spread -->
+      <div class="borders">
+        <h2 class="subtitulo"> REST & SPREAD </h2>
+        <details>
+          <u><b>Parámetros de REST (descanso):</b></u>
+          <div class="codigo">
+            <pre>
+                    function containsAll(arr) {
+                    for (let k = 1; k < arguments.length; k++) {
+                        let num = arguments[k];
+                        if (arr.indexOf(num) === -1) {
+                            return false;
+                        }
+                    }
+                    return true;
+                    }
+                    let x0_ = [2, 4, 6, 7];
+                    console.log(containsAll(x0_, 2, 4, 7));
+                    console.log(containsAll(x0_, 6, 4, 9));
+                    //
+                    function containsAll2(arr, ...nums) {
+                    for (let num of nums) {
+                        if (arr.indexOf(num) === -1) {
+                            return false;
+                        }
+                    }
+                    return true;
+                    }
+      
+                    let x1_ = [2, 4, 6, 7];
+                    console.log(containsAll2(x1_, 2, 4, 7));
+                    console.log(containsAll2(x1_, 6, 4, 9));
+      
+                </pre>
           </div>
-          <div class="flecha"></div>
-          <div>
-            Ahora ES6:
-            <div class="codigo">
-              <font class="purp">new</font> <font class="selector">Promise</font>(<font class="purp">function</font>(<span>resolve</span>, <span>reject</span>) { <br>
-                &nbsp; <font class="aqua">if</font> (success) <br>
-                  &nbsp; &nbsp; <font class="blue">resolve</font>(result); <br>
-                &nbsp; <font class="aqua">else</font> <br>
-                  &nbsp; &nbsp; <font class="blue">reject</font>(<font class="blue">Error</font>("<font class="green">failure</font>")); <br>
-              });
-            </div>
+          <u><b>Parámetros de SPREAD(propagación):</b></u>
+          <div class="codigo">
+            <pre>
+                    function myFunction(w, x, y, z) {
+                        console.log(w + x + y + z);
+                    }
+                    var args = [1, 2, 3];
+                    myFunction.apply(null, args.concat(4));
+      
+      
+                    const myFunction = (w, x, y, z) => {
+                        console.log(w + x + y + z);
+                    };
+                    let args = [1, 2, 3];
+                    myFunction(...args, 4);
+      
+      
+                    var dateFields = [1970, 0, 1];  // 1 Jan 1970
+                    var date = new Date(...dateFields);
+                    console.log(date);
+      
+      
+                    var arr = ["One", "Two", "Five"];
+                    arr.splice(2, 0, "Three");
+                    arr.splice(3, 0, "Four");
+                    console.log(arr);
+      
+      
+                    let newArr = ['Three', 'Four'];
+                    let arr = ['One', 'Two', ...newArr, 'Five'];
+                    console.log(arr);
+      
+      
+                    const obj1 = { foo: 'bar', x: 42 };
+                    const obj2 = { foo: 'baz', y: 5 };
+                    const clonedObj = { ...obj1 }; // { foo: "bar", x: 42 }
+                    const mergedObj = { ...obj1, ...obj2 }; // { foo: "baz", x: 42, y: 5 }
+      
+      
+                    const obj1 = { foo: 'bar', x: 42 };
+                    const obj2 = { foo: 'baz', y: 5 };
+                    const merge = (...objects) => ({ ...objects });
+      
+                    let mergedObj = merge (obj1, obj2);
+                    // { 0: { foo: 'bar', x: 42 }, 1: { foo: 'baz', y: 5 } }
+      
+                    let mergedObj2 = merge ({}, obj1, obj2);
+                    // { 0: {}, 1: { foo: 'bar', x: 42 }, 2: { foo: 'baz', y: 5 } }
+                </pre>
           </div>
-        </div>
-        <hr>
-        <h3>Iteradores y Generadores:</h3>
+        </details>
+      </div>
+      <!-- Clases -->
+      <div class="borders">
+        <h2 class="subtitulo"> Clases en ES6</h2>
+        <details>
+          <u><b>Constructor - (al iniciar):</b></u>
+          <div class="codigo">
+            <pre>
+                    class Rectangle0 {
+                        constructor(height, width)
+                        {
+                        this.height = height;
+                        this.width = width;
+                        }
+                    }
+                    const square0 = new Rectangle0(5, 5);
+                    const poster0 = new Rectangle0(2, 3);
+                    console.log(square0.height);
+                </pre>
+          </div>
+          <u><b>Clase nombrada:</b></u>
+          <div class="codigo">
+            <pre>
+                    var Square0 = class Rectangle0
+                    {
+                        constructor(height, width) {
+                        this.height = height;
+                        this.width = width;
+                        }
+                    };
+      
+                    const square00 = new Square0(5, 5);
+                    const poster00 = new Square0(2, 3);
+                    console.log(square00.height);
+      
+                </pre>
+          </div>
+          <u><b>Clase no nombrada:</b></u>
+          <div class="codigo">
+            <pre>
+                    var Square1 = class
+                    {
+                    constructor(height, width) {
+                        this.height = height;
+                        this.width = width;
+                    }
+                    };
+                    const square1 = new Square1(5, 5);
+                    const poster1 = new Square1(2, 3);
+                    console.log(square1.height);
+                </pre>
+          </div>
+          <u><b>Metodo/Func</b></u>
+          <div class="codigo">
+            <pre>
+                    class Rectangle1 {
+                    constructor(height, width) {
+                        this.height = height;
+                        this.width = width;
+                    }
+      
+                    get area() {
+                        return this.calcArea();
+                    }
+      
+                    calcArea() {
+                        return this.height * this.width;
+                    }
+                    }
+                    const square01 = new Rectangle1(5, 5);
+                    console.log(square01.area); // 25
+      
+                </pre>
+          </div>
+          <u><b>Herencia</b></u>
+          <div class="codigo">
+            <pre>
+                    class Animal0 {
+                    constructor(name) {
+                        this.name = name;
+                    }
+                    speak() {
+                        console.log(this.name + ' makes a noise.');
+                    }
+                    }
+      
+                    class Dog0 extends Animal0 {
+                    speak() {
+                        console.log(this.name + ' barks.');
+                    }
+                    }
+                    let dog0 = new Dog0('Rex');
+                    dog0.speak(); // Rex barks.
+                    //
+                    class Animal1 {
+                    constructor(name) {
+                        this.name = name;
+                    }
+                    speak() {
+                        console.log(this.name + ' makes a noise.');
+                    }
+                    }
+      
+                    class Dog1 extends Animal1 {
+                    speak() {
+                        super.speak(); // Rex barks.
+                        console.log(this.name + ' barks.');
+                    }
+                    }
+                    let dog1 = new Dog1('Rex');
+                    dog1.speak(); // Rex makes a noise.
+                </pre>
+          </div>
+        </details>
+      </div>
+      <!-- Map y Set -->
+      <div class="borders">
+        <h2 class="subtitulo"> Map & Set</h2>
         <details>
           <div class="codigo">
             <pre>
-                  let myIterableObj = {
-                    [Symbol.iterator] : function* () {
-                    yield 1; yield 2; yield 3;
-                    }
-                  };
-                  console.log([...myIterableObj]); // [ 1, 2, 3 ]
-                  //
-                  function* idMaker() {
-                  let index = 0;
-                  while (index < 5)
-                    yield index++;
-                  }
-                  var gen = idMaker();
-                  console.log(gen.next().value);
-                  console.log(gen.next().value);
-                  console.log(gen.next().value);
-                  console.log(gen.next().value);
-                  console.log(gen.next().value);
-                  // Try to add one more console.log, just like the above see what happens.
-                  //
-                  const arr_ = ['0', '1', '4', 'a', '9', 'c', '16'];
-                  const my_obj = {
-                    [Symbol.iterator]: function*() {
-                    for(let index of arr_) {
-                      yield `${index}`;
-                    }
-                    }
-                  };
-                  const all = [...my_obj] // Here you can replace the '[...my_obj]' with 'arr'.
-                    .map(i => parseInt(i, 10))
-                    .map(Math.sqrt)
-                    .filter((i) => i < 5) // try changing the value of 5 to 4 see what happens.
-                    .reduce((i, d) => i + d); // comment this line while you are changing the value of the line above
-                  console.log(all);
-            </pre>
+                    let map00 = new Map([["k1","v1"], ["k2", "v2"]]);
+                        console.log(map00.size); // 2
+      
+                        // Metodos
+                        // set(key, value)
+                        // get(key)
+                        // has(key)
+                        // delete(key)
+                        // clear()
+                        // keys()    : Arr de k
+                        // value()   : Arr de v
+                        // entries() : Arr de [k, v]
+      
+                        let map2 = new Map();
+                        map2.set("k1", "v1").set("k2", "v2");
+                        console.log(map2.get("k1")); // v1
+                        console.log(map2.has("k2")); // true
+                        for (let kv of map2.entries())
+                        console.log(kv[0] + " : " + kv[1]); // k1:v1  // k2:v2
+                    //
+      
+                    // SET (obj)
+                    let set = new Set([1, 2, 4, 2, 59, 9, 4, 9, 1]);
+                    console.log(set.size); // 5 (size devuelve la cant de valores diferentes)
+                    // Metodos= Add, delete, has, clear, values.
+                </pre>
           </div>
         </details>
-        <hr>
-        <u><b>Módulos:</b></u> <br>
-        <u><b>Métodos integrados:</b></u>
-      </details>
-    </div>
+      </div>
+      <!-- Otros -->
+      <div class="borders">
+        <h2 class="subtitulo"> Otros </h2>
+        <details>
+          <h3>PROMISES (por tiempo):</h3>
+          <div class="flex">
+            <div>
+              Antes js:
+              <div class="codigo">
+                <font class="blue">setTimeout</font>(<font class="purp">function</font>() { <br>
+                &nbsp; console.<font class="blue">log</font>("<font class="green">Work 1</font>"); <br>
+                &nbsp; <font class="blue">setTimeout</font>(<font class="purp">function</font>() { <br>
+                  &nbsp; &nbsp; console.<font class="blue">log</font>("<font class="green">Work 2</font>"); <br>
+                &nbsp; }, <font class="orange">1000</font>); <br>
+                }, <font class="orange">1000</font>); <br>
+                console.log("<font class="green">End</font>"); <br>
+              </div>
+            </div>
+            <div class="flecha"></div>
+            <div>
+              Ahora ES6:
+              <div class="codigo">
+                <font class="purp">new</font> <font class="selector">Promise</font>(<font class="purp">function</font>(<span>resolve</span>, <span>reject</span>) { <br>
+                  &nbsp; <font class="aqua">if</font> (success) <br>
+                    &nbsp; &nbsp; <font class="blue">resolve</font>(result); <br>
+                  &nbsp; <font class="aqua">else</font> <br>
+                    &nbsp; &nbsp; <font class="blue">reject</font>(<font class="blue">Error</font>("<font class="green">failure</font>")); <br>
+                });
+              </div>
+            </div>
+          </div>
+          <hr>
+          <h3>Iteradores y Generadores:</h3>
+          <details>
+            <div class="codigo">
+              <pre>
+                    let myIterableObj = {
+                      [Symbol.iterator] : function* () {
+                      yield 1; yield 2; yield 3;
+                      }
+                    };
+                    console.log([...myIterableObj]); // [ 1, 2, 3 ]
+                    //
+                    function* idMaker() {
+                    let index = 0;
+                    while (index < 5)
+                      yield index++;
+                    }
+                    var gen = idMaker();
+                    console.log(gen.next().value);
+                    console.log(gen.next().value);
+                    console.log(gen.next().value);
+                    console.log(gen.next().value);
+                    console.log(gen.next().value);
+                    // Try to add one more console.log, just like the above see what happens.
+                    //
+                    const arr_ = ['0', '1', '4', 'a', '9', 'c', '16'];
+                    const my_obj = {
+                      [Symbol.iterator]: function*() {
+                      for(let index of arr_) {
+                        yield `${index}`;
+                      }
+                      }
+                    };
+                    const all = [...my_obj] // Here you can replace the '[...my_obj]' with 'arr'.
+                      .map(i => parseInt(i, 10))
+                      .map(Math.sqrt)
+                      .filter((i) => i < 5) // try changing the value of 5 to 4 see what happens.
+                      .reduce((i, d) => i + d); // comment this line while you are changing the value of the line above
+                    console.log(all);
+              </pre>
+            </div>
+          </details>
+          <hr>
+          <u><b>Módulos:</b></u> <br>
+          <u><b>Métodos integrados:</b></u>
+        </details>
+      </div>
+    </details>
   </div>
 
-  <!-- // Poner Flechas a las clases "flecha" -->
-  <script>
-    var flecha = document.getElementsByClassName("flecha");
-    for (var x = 0; x <flecha.length; x++) {
-      flecha[x].innerHTML = "<h2>➜</h2>";
-    }
-  </script>
-  <script type="text/javascript" src="../MenuJS.js"></script>
-
+<!-- // Poner Flechas a las clases "flecha" -->
+<script>
+  var flecha = document.getElementsByClassName("flecha");
+  for (var x = 0; x <flecha.length; x++) {
+    flecha[x].innerHTML = "<h2>➜</h2>";
+  }
+</script>
+<script type="text/javascript" src="../MenuJS.js"></script>
 </main>
+
 </body>
 </html>
