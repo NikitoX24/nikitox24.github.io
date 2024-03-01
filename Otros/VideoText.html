@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test2</title>
+</head>
+
+<body>
+
+
+
+
+<input class="form" id="inputText" onchange="textoVid()" type="text" placeholder="Texto">
+
+<video class="videoV" autoplay loop muted preload height="500px" src="../Imgs/BobSponja.mp4"> </video>
+<h1 id="textoV">Hora</h1>
+
+
+
+
+
+
+
+<script>
+  var inputT = document.getElementById("inputText");
+  var textoVideo = document.getElementById("textoV");
+
+  function textoVid(){
+    textoVideo.innerHTML = inputT.value;
+  }
+
+  function printTime() {
+    var d = new Date();
+    var hours = d.getHours();
+    var mins = d.getMinutes();
+    if(mins < 10) { mins = `0${mins}` }
+    var secs = d.getSeconds();
+    if(secs < 10) { secs = `0${secs}` }
+
+    textoVideo.innerHTML = hours+":"+mins+":"+secs;
+  }
+  setInterval(printTime, 1000);
+
+</script>
+
+<style>
+  .form{
+    position: absolute;
+    z-index: 1;
+  }
+  .videoV , #textoV , #textoV2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  video.videoV {
+    object-fit: cover;
+  }
+  h1#textoV {
+    text-transform: uppercase;
+    font-family: Segoe UI;
+    font-size: 150px;
+    font-weight: 900;
+    line-height: 100vh;
+    text-align: center;
+    background: white;
+    mix-blend-mode: screen;
+  }
+</style>
+
+
+
+
+<!-- Texto con video
+<video autoplay loop muted preload height="500px" src="../Imgs/BobSponja.mp4"> </video>
+<h1>Texto</h1>
+
+<style>
+  video , h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  video {
+    object-fit: cover;
+  }
+  h1 {
+    font-size: 150px;
+    font-weight: 900;
+    line-height: 100vh;
+    text-align: center;
+    background: white;
+    mix-blend-mode: screen;
+    text-transform: uppercase;
+  }
+</style>
+ -->
+
+</body>
+
+</html>

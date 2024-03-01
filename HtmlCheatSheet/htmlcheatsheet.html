@@ -48,73 +48,63 @@
         <div class="cod"> <p><span>&lt;pre></span> PREformado <span>&lt;/pre></p> </div>
       </div>
 
-      <div class="flex"> <!-- Parrafo -->
-        <div class="ej"> <p style="line-height: 0;">Parrafo</p> </div>
-        <div class="cod"> <span>&lt;p></span> Parrafo <span>&lt;/p></span> </div>
-      </div>
-
       <div class="flex"> <!-- Marquee -->
         <div class="ej"> <marquee> Texto que se desplaza de un lado al otro. </marquee> </div>
         <div class="cod"> <span>&lt;marquee></span> Marquee <span>&lt;/marquee></span> </div>
       </div>
 
-      <div class="flex"> <!-- Font -->
-        <div class="ej"> <font> Texto <font color="aqua">Font</font> que se puede modificar. </font> </div>
-        <div class="cod"> <span>&lt;font <font color="purple""> color="red"</font>></span> Fuente <span>&lt;/font></span> </div>
-      </div>
-
       <div class="flex">
-        <div class="flex"> <!-- Negrita -->
-          <div class="ej"> <b style="text-shadow: none;">Negrita</b> </div>
-          <div class="cod"><span>&lt;b></span> b <span>&lt;/b></span></div>
+        <div class="flex"> <!-- Span -->
+          <div class="ej"> <span>span</span> </div>
+          <div class="cod"> <span>&lt;span></span> s <span>&lt;/span></span> </div>
         </div> <div class="hr"></div>
         <div class="flex"> <!-- Reforzado -->
           <div class="ej"> <strong> Importante </strong> </div>
-          <div class="cod"> <span>&lt;strong></span> Strong <span>&lt;/strong></span></div>
+          <div class="cod"> <span>&lt;b></span> b <span>&lt;/strong></span></div>
         </div>
       </div>
 
       <div class="flex">
         <div class="flex"> <!-- Grande -->
           <div class="ej"> <big> grande </big> </div>
-          <div class="cod"> <span>&lt;big></span> big <span>&lt;/big></span> </div>
+          <div class="cod"> <span>&lt;big></span> b <span>&lt;/big></span> </div>
         </div> <div class="hr"></div>
         <div class="flex"> <!-- Pequeño -->
           <div class="ej"> <small> Pequeño </small> </div>
-          <div class="cod"> <span>&lt;small></span> Small <span>&lt;/small></span> </div>
+          <div class="cod"> <span>&lt;small></span> S <span>&lt;/small></span> </div>
         </div>
       </div>
 
       <div class="flex">
         <div class="flex"> <!-- SubIndice -->
           <div class="ej"> Texto <sub> SubIndice </sub> </div>
-          <div class="cod"> <span>&lt;sub></span> SubIndice <span>&lt;/sub></span> </div>
+          <div class="cod"> <span>&lt;sub></span> SI <span>&lt;/sub></span> </div>
         </div> <div class="hr"></div>
         <div class="flex"> <!-- SupIndice -->
           <div class="ej"> Texto <Sup> SupIndice </Sup> </div>
-          <div class="cod"> <span>&lt;sup></span> SupIndice <span>&lt;/sup></span> </div>
+          <div class="cod"> <span>&lt;sup></span> SI <span>&lt;/sup></span> </div>
         </div>
       </div>
 
       <div class="flex">
         <div class="flex"> <!-- Subrayado -->
           <div class="ej"> <ins>Subrayado</ins> </div>
-          <div class="cod"> <span>&lt;u></span> Subr <span>&lt;/ins></span> </div>
+          <div class="cod"> <span>&lt;u></span> S <span>&lt;/ins></span> </div>
         </div> <div class="hr"></div>
         <div class="flex"> <!-- Borrado -->
           <div class="ej"> <del> Borrado </del> </div>
-          <div class="cod"> <span>&lt;del></span> Borrado <span>&lt;/del></span> </div>
+          <div class="cod"> <span>&lt;del></span> d <span>&lt;/del></span> </div>
         </div>
       </div>
 
       <div class="flex">
         <div class="flex"> <!-- Cursiva -->
           <div class="ej"> <i> Cursiva </i> </div>
-          <div class="cod"> <span>&lt;i></span> Cursiva <span>&lt;/i></span> </div>
+          <div class="cod"> <span>&lt;i></span> I <span>&lt;/i></span> </div>
         </div> <div class="hr"></div>
         <div class="flex"> <!-- Remarcado -->
           <div class="ej"> <mark> Remarcado</mark> </div>
-          <div class="cod"> <span>&lt;mark></span> Mark <span>&lt;/mark></span> </div>
+          <div class="cod"> <span>&lt;mark></span> Ma <span>&lt;/mark></span> </div>
         </div>
       </div>
     </fieldset>
@@ -127,11 +117,11 @@
       <h3>Imagen con Link:</h3>
       <div class="flex">
         <div class="ej wAuto"> 
-          <a href="../Imgs/Apple.png" target="_blank"> <img src="../Imgs/Apple.png" alt="Apple" height="100px" title="Apple"> </a>
+          <a href="../Imgs/Apple.png" target="_blank"> <img src="../Imgs/Apple.png" alt="Apple" height="75px" title="Apple"> </a>
         </div>
         <div class="cod">
-          <span>&lt;a</span> <font color="purple">href</font> ="<font color="green">../Apple.png</font>"<span>></span> 
-          <span>&lt;img</span> <font color="purple">src=</font> "<font color="green">../Imagen.png</font>" <font color="purple">alt=</font>"Texto alternativo" <font color="purple">title=</font>"descripción"<span>>< /a></span> <br>
+          <span>&lt;a</span> <font color="purple">href</font> ="<font color="green">../Apple.png</font>"<span>></span> <br>
+          &nbsp; <span>&lt;img</span> <font color="purple">src=</font> "<font color="green">../Imagen.png</font>" <font color="purple">alt=</font>"Texto alternativo" <font color="purple">title=</font>"descripción"<span>> <br> &lt;/a></span> <br>
           <font class="gray"> align="" (posicion del texto) <br> target="_blank" (abrir en nueva pestaña) </font>
         </div>
       </div>
@@ -167,37 +157,33 @@
       </details>
     </fieldset>
 
-    <!-- Audio & Video -->
+    <!-- Audio, Video, Progress, Iframe -->
     <fieldset>
-      <legend> <h2>Audio & Video</h2> </legend>
+      <legend> <h2>Audio, Video, Progreso, Iframe</h2> </legend>
       <div class="flex">
         <div>
-          <audio src="audio.mp3" controls style="height: 50px; width: 240px;">
-            Texto por si el navegador no soporta audio.
-          </audio>
-          <div class="cod">&lt;<span>audio <font class="purp"> src="<font class="green">audio.mp3</font>" controls autoplay loop </font>> &lt; /audio</span>> <br></div>
+          <audio src="audio.mp3" controls style="height: 50px; width: 240px;"> Texto por si el navegador no soporta audio. </audio>
+          <div class="cod">&lt;<span>audio<font class="purp"> src="<font class="green">aud.mp3</font>" controls autoplay loop</font>> &lt; /audio</span>></div>
         </div>
-        <br><hr>
-        <div>
-          <video controls autoplay loop>
-            <source src="video.mp4" type="video/mp4">Este navegador no soporta audio.
-          </video>
-          <div class="cod">&lt;<span>video <font class="purp"> src="<font class="green">video.mp4</font>" controls autoplay loop</font>> &lt;/video</span>> <br></div>
+        <div class="wAuto"> <br>
+          <progress min="0" max="100" value="75" style="height: 24px; width: 300px;"></progress> <br>
+          <div class="cod">
+            &lt;<span>progress <font class="purp"> min="<font class="green">0</font>" max="<font class="green">100</font>"value="<font class="green">75</font>>  </font> /progress</span>>
+          </div>
+        </div>
+      </div> <hr><br>
+      <div class="flex">
+        <div class="width100">
+          <iframe width="300" height="150" src="https://www.youtube.com/embed/o8kT5c_4PAc" frameborder="0" allowfullscreen></iframe>
+          <div class="cod"> &lt;<span>iframe</span> <font class="purp">src</font>="<font class="green">link</font>" <font class="purp">frameborder</font>="0" <font class="purp">allowfullscreen</font>> &lt;/<span>iframe</span>> </div>
+        </div>
+        <div class="width100">
+          <video controls autoplay loop> <source src="video.mp4" type="video/mp4">Este navegador no soporta audio. </video>
+          <div class="cod">&lt;<span>video <font class="purp">src="<font class="green">video.mp4</font>" controls autoplay loop</font>> &lt;/video</span>> <br></div>
         </div>
       </div>
     </fieldset>
     
-    <!-- Barra de Progreso -->
-    <fieldset>
-      <legend> <h2> Barra de Progreso </h2> </legend>
-      <div class="flex">
-        <progress min="0" max="100" value="75" style="height: 24px; width: 300px;"></progress>
-        <div class="cod">
-          &lt;<span>progress <font class="purp"> min="<font class="green">0</font>" max="<font class="green">100</font>"value="<font class="green">75</font>>  </font> /progress</span>>
-        </div>
-      </div>
-    </fieldset>
-
     <!-- Listas -->
     <fieldset class="flex">
       <legend> <h2>Listas</h2> </legend>
@@ -307,17 +293,17 @@
       <legend> <h2> Links </h2> </legend>
 
       <!-- Link Externo: -->
-      <h3>Link Externo:</h3>
+      Link Externo:
       <div class="flex">
         <div class="ejemplo"><a href="#" target="_blank"> Mi Pag Web... </a></div>
         <div class="cod">
           <span>&lt;a</span> <font color="purple">href=</font>"<u>https://ejemplo.com</u>" <font color="purple">target=</font>"_blank"<span>></span>
           Texto del link <span>&lt;/a></span>
         </div>
-      </div>
+      </div> <br>
 
       <!-- Link Interno: -->
-      <h3>Link Interno:</h3>
+      Link Interno:
       <div class="flex">
         <div class="ejemplo"><a href="../index.html">ir a index</a></div>
         <div class="cod">
@@ -333,10 +319,10 @@
 
       <!-- Text / number -->
       <div class="div">
-        <div class="box boxizq">
+        <div class="box boxder">
           &lt; input type="<span>text</span> / <span>number</span>">
         </div>
-        <div class="box boxder">
+        <div class="box boxizq">
           <input type="text" placeholder="Texto">
           <input type="number" name="" id="" placeholder="123">
         </div>
@@ -344,16 +330,16 @@
 
       <!-- Radio / Checkbox -->
       <div class="div">
-        <div class="box boxizq">
+        <div class="box boxder">
           &lt; input type="<span>radio</span> / <span>checkbox</span>">
         </div>
-        <div class="boxder">
+        <div class="boxizq">
           <div class="box boxder">
             <input type="checkbox" />
             <input type="checkbox" checked />
             <input type="checkbox" />
           </div>
-          <div class="box boxizq">
+          <div class="box boxder">
             <input type="radio" name="siono" value="no" />NO
             <input type="radio" name="siono" value="yes" checked />YES
           </div>
@@ -362,11 +348,11 @@
 
       <!-- Button / Color -->
       <div class="div">
-        <div class="box boxizq">
+        <div class="box boxder">
           &lt; input type="<span>button</span> / <span>image</span> / <span>color</span>">
         </div>
-        <div class="boxder">
-          <div class="box boxizq">
+        <div class="boxizq">
+          <div class="box boxder">
             <input type="button" value="Botón">
           </div>
           <div class="box boxder">
@@ -378,10 +364,10 @@
 
       <!-- Email / Password -->
       <div class="div">
-        <div class="box boxizq">
+        <div class="box boxder">
           &lt; input type="<span>email</span> / <span>password</span>">
         </div>
-        <div class="box boxder">
+        <div class="box boxizq">
           <input type="email" name="" id="" placeholder="ejemplo@hotmail.com">
           <input type="password" placeholder="********">
         </div>
@@ -389,50 +375,50 @@
 
       <!-- File -->
       <div class="div">
-        <div class="box boxizq">
+        <div class="box boxder">
           &lt; input type="<span>file</span>">
         </div>
-        <div class="box boxder">
+        <div class="box boxizq">
           <input type="file" name="" id="">
         </div>
       </div>
 
       <!-- Range -->
       <div class="div">
-        <div class="box boxizq">
+        <div class="box boxder">
           &lt; input type="<span>range</span>">
         </div>
-        <div class="box boxder">
+        <div class="box boxizq">
           <input type="range" name="" id="">
         </div>
       </div>
 
       <!-- Search -->
       <div class="div">
-        <div class="box boxizq">
+        <div class="box boxder">
           &lt; input type="<span>search</span>">
         </div>
-        <div class="box boxder">
+        <div class="box boxizq">
           <input type="search" name="" id="" placeholder="Buscar">
         </div>
       </div>
 
       <!-- Tel -->
       <div class="div">
-        <div class="box boxizq">
+        <div class="box boxder">
           &lt; input type="<span>tel</span>">
         </div>
-        <div class="box boxder">
+        <div class="box boxizq">
           <input type="tel" name="" id="" placeholder="123-456-789">
         </div>
       </div>
 
       <!-- Time / Date / Datetime-local -->
       <div class="div">
-        <div class="box boxizq">
+        <div class="box boxder">
           &lt; input type="<span>time</span>/<span>date</span>/<span>datetime-local</span>">
         </div>
-        <div class="box boxder">
+        <div class="box boxizq">
           <input type="time" name="" id="">
           <input type="date" name="" id="">
           <input type="datetime-local" name="" id="">
@@ -441,10 +427,10 @@
 
       <!-- Week / Month -->
       <div class="div">
-        <div class="box boxizq">
+        <div class="box boxder">
           &lt; input type="<span>week</span> / <span>month</span>">
         </div>
-        <div class="box boxder">
+        <div class="box boxizq">
           <input type="week" name="" id="">
           <input type="month" name="" id="">
         </div>
@@ -452,20 +438,20 @@
 
       <!-- Url -->
       <div class="div">
-        <div class="box boxizq">
+        <div class="box boxder">
           &lt; input type="<span>url</span>">
         </div>
-        <div class="box boxder">
+        <div class="box boxizq">
           <input type="url" name="" id="" placeholder="https://www.google.com">
         </div>
       </div>
 
       <!-- Submit / Reset -->
       <div class="div">
-        <div class="box boxizq">
+        <div class="box boxder">
           &lt; input type="<span>submit</span> / <span>reset</span>">
         </div>
-        <div class="box boxder">
+        <div class="box boxizq">
           <input type="submit" name="" id="">
           <input type="reset" name="" id="">
         </div>
@@ -521,7 +507,7 @@
       </div> <br>
 
       <!-- Otros... -->
-      <h3 class="subtitulo"> OTROS: Line, Circle, Gradients, Text. </h3>
+      <h3> OTROS: Line, Circle, Gradients, Text. </h3>
       <details>
         <summary>Leer más...</summary>
         <pre>

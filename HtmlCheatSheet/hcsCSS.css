@@ -15,7 +15,7 @@ span {
   color: rgb(212, 0, 0);
   text-shadow: .2px .2px black;
 }
-.noColor span{
+.noColor span{ /* Mouse cursor CSS */
   color: rgb(198, 0, 195);
   text-shadow: none;
 }
@@ -26,17 +26,7 @@ summary {
   color: rgb(0, 77, 155);
   font-size: 17px;
 }
-summary.hcj {
-  color: lightslategray;
-  font-size: 30px;
-}
-iframe {
-  width: 100%;
-  height: 50px;
-  border-style: none;
-}
 b{
-  /* color: rgb(61, 0, 0); */
   text-shadow: .5px .5px 12px black;
 }
 
@@ -61,6 +51,7 @@ button{
 h3{
   text-decoration: underline;
 }
+
 font.blue{
   color: rgb(0, 62, 219);
 }
@@ -77,7 +68,7 @@ font.orange{
 font.red{
   color: rgb(175, 62, 62);
 }
-font.selector{
+font.selector{ /* clase */
   color: rgb(146, 146, 0);
   text-shadow: .1px .1px rgb(94, 94, 0);
 }
@@ -88,9 +79,6 @@ font.prop{
 font.comentario, font.gray{
   color: gray;
 }
-font.string{
-  color: rgb(101, 101, 101);
-}
 font.aqua{
   color: rgba(0, 115, 141, 0.704);
   text-shadow: .1px .1px rgb(124, 156, 150);
@@ -99,6 +87,7 @@ font.yellow{
   color: rgb(255, 230, 0);
   text-shadow: .5px 1px rgba(166, 69, 0, 0.461);
 }
+
 .icons {
   height: 85px;
   filter: drop-shadow(3px 3px 5px black);
@@ -107,6 +96,10 @@ font.yellow{
   height: 75px;
   filter: blur(2px) grayscale(75%);
 }
+.iconosFlex{
+  padding-inline: 50%;
+}
+
 .borders {
   border-radius: 12px;
   padding: 2px 5px 5px 5px;
@@ -128,17 +121,9 @@ font.yellow{
   font-variant: small-caps;
   word-spacing: 6px;
 }
-.subtitulo {
-  text-decoration: underline;
-  line-height: 6px;
-}
-.subText{
+h1.subText{
   font-size: smaller; 
   text-transform: none;
-}
-.ejoverflow {
-  height: 110px;
-  overflow: auto;
 }
 
 .ejemplo {
@@ -158,7 +143,6 @@ font.yellow{
   box-shadow: inset 4px 4px 4px rgba(128, 128, 128, 0.558), inset -4px -4px 4px rgba(128, 128, 128, 0.706);
 }
 
-/* Tipos de Textos */
 .ej {
   border-radius: 7px;
   width: 100%;
@@ -181,9 +165,6 @@ font.yellow{
   box-shadow: inset 3px 3px 3px rgba(128, 128, 128, 0.558), inset -3px -3px 3px rgba(128, 128, 128, 0.706);
 }
 
-.iconosFlex{
-  padding-inline: 50%;
-}
 .flex {
   display: flex;
   justify-content: space-around;
@@ -204,15 +185,10 @@ div .width100{
   width: 100%;
 }
 
-.numbers {
-  text-decoration: underline;
-}
-
 .wAuto {
   width: auto;
   padding: 7px;
 }
-
 .hr{
   width: 30px;
 }
@@ -221,15 +197,14 @@ div .width100{
 .box3d {
   width: 50px; height: 50px;
   background-color: #32CD32;
-  /* border: 1px solid rgb(0, 0, 0); */
 }
 
-/* Tipos de entrada */
+/* Tipos de entrada HTML */
 .div {
   min-height: 35px;
 }
 
-/* Box */
+/* Box Tipo de entrada HTML*/
 .round {
   width: 60%;
   padding: 10px;
@@ -253,13 +228,12 @@ div .width100{
 }
 .boxizq {
   float: left;
-  border-radius: 10px;
+  border-radius: 3px;
 }
 .boxder {
   float: right;
-  border-radius: 3px;
+  border-radius: 10px;
 }
-/* Box */
 
 .flecha{
   margin: auto;

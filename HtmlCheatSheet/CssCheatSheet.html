@@ -138,7 +138,7 @@
     <fieldset>
       <legend><h2>Alineación de Texto</h2></legend>
 
-      <h3 class="numbers"> Horizontal / Vertical</h3>
+      <h3> Horizontal / Vertical</h3>
       
       <div style="height: 100px;">
         <div class="boxizq" style="width: 50%;"> <!-- Text-Align (Horizontal) -->
@@ -193,38 +193,37 @@
       </div><hr>
 
       <!-- Text-Align Property (Vertical) -->
-        <h3 class="numbers"> Text-Align Property (Vertical)</h3>
-
-        <div class="flex">
-          <div class="ej">
-            This is an <span style="vertical-align: baseline;"> <b> inline text </b></span> example.
-          </div>
-          <div class="cod"> <b>vertical-align:</b> baseline; </div>
+      <h3> Text-Align Property (Vertical)</h3>
+      <div class="flex">
+        <div class="ej">
+          This is an <span style="vertical-align: baseline;"> <b> inline text </b></span> example.
         </div>
+        <div class="cod"> <b>vertical-align:</b> baseline; </div>
+      </div>
 
-        <div class="flex">
-          <div class="ej">
-            This is a <span style="vertical-align: sub;"><b>sub line text</b></span> example.
-          </div>
-          <div class="cod"> <b>vertical-align:</b> sub; </div>
+      <div class="flex">
+        <div class="ej">
+          This is a <span style="vertical-align: sub;"><b>sub line text</b></span> example.
         </div>
+        <div class="cod"> <b>vertical-align:</b> sub; </div>
+      </div>
 
-        <div class="flex">
-          <div class="ej">
-            This is a <span style="vertical-align: super;"><b>super line text</b></span> example.
-          </div>
-          <div class="cod"> <b>vertical-align:</b> super; </div>
+      <div class="flex">
+        <div class="ej">
+          This is a <span style="vertical-align: super;"><b>super line text</b></span> example.
         </div>
+        <div class="cod"> <b>vertical-align:</b> super; </div>
+      </div>
 
-        <div class="flex">
-          <div class="ej">
-            This is a <span style="vertical-align: -10px;"><b>pixel</b></span> example.
-          </div>
-          <div class="cod"> <b>vertical-align:</b> -10px; </div>
-        </div><hr>
+      <div class="flex">
+        <div class="ej">
+          This is a <span style="vertical-align: -10px;"><b>pixel</b></span> example.
+        </div>
+        <div class="cod"> <b>vertical-align:</b> -10px; </div>
+      </div><hr>
 
       <!-- Text-Align Property Div (Vertical) -->
-      <h3 class="numbers"> Text-Align Property Div (Vertical)</h3>
+      <h3> Text-Align Property Div (Vertical)</h3>
       <div class="flex">
       <div class="main">
         <div class="paragraph">
@@ -460,7 +459,7 @@
             &nbsp;<b>empty-cells:</b> hide; <br>
           } <br>
         </div>
-        <div class="cod">
+        <div class="cod wAuto">
           tr:nth-child(even) { <br>
             background-color: #b0d1e4; <br>
           }<br>
@@ -530,7 +529,7 @@
         <span style="cursor: row-resize;">row-resize</span>.
       </div>
       <div class="codigo">
-        cursor: default;
+        <b>cursor</b>: default;
       </div>
     </fieldset>
   </div> 
@@ -862,7 +861,7 @@
     <fieldset>
       <legend> <h2> Pseudo-Elemento</h2> </legend>
 
-      <h3 class="subtitulo"> Primera Linea </h3>
+      <h3> Primera Linea </h3>
       <div class="flex">
         <div class="ej">
           <p class="textfirstline">
@@ -878,7 +877,7 @@
         </div>
       </div><hr>
 
-      <h3 class="subtitulo"> Primera Letra </h3>
+      <h3> Primera Letra </h3>
       <div class="flex">
         <div class="ej">
           <p class="firstletter"> La primera letra es de otro color</p>
@@ -890,7 +889,7 @@
         </div>
       </div><hr>
 
-      <h3 class="subtitulo"> Seleccion </h3>
+      <h3> Seleccion </h3>
       <div class="flex">
         <div class="ej">
           <p class="seleccioname">Selecciona una parte del texto para marcarlo de otro color</p>
@@ -902,14 +901,14 @@
         </div>
       </div><hr>
 
-      <h3 class="subtitulo"> Before (Antes) </h3>
+      <h3> Before (Antes) </h3>
       <div class="flex">
         <div class="ej">
           <p class="insertImageBeforeText">Insertar Imagen antes del Texto. </p>
         </div>
         <div class="cod">
           .<font class="yellow">texto</font>::<font class="purp">before</font> { <br>
-            &nbsp; <b>content:</b> url("<font class="string">../Imgs/loguito.png</font>"); <br> }
+            &nbsp; <b>content:</b> url("<font class="green">../Imgs/loguito.png</font>"); <br> }
           <style> .insertImageBeforeText::before { content: url("../Imgs/loguito.png"); } </style>
         </div>
       </div>
@@ -1344,55 +1343,64 @@
     <!-- Filter Functions -->
     <fieldset>
       <legend> <h2> Filter Functions</h2> </legend>
-      <table>
-        <td>Drop-Shadow() <br>
-          <img class="fltr" style="filter: drop-shadow(5px 5px 2px green);" src="http://www.sololearn.com/images/tree.jpg" />
-        </td>
-        <td>Gray Scale() <br>
-          <img class="fltr" style="filter: grayscale(100%);" src="http://www.sololearn.com/images/tree.jpg" />
-        </td>
-        <td>Sepia() <br>
-          <img class="fltr" style="filter: sepia(100%);" src="http://www.sololearn.com/images/tree.jpg" />
-        </td>
-        <td>Saturate() <br>
-          <img class="fltr" style="filter: saturate(300%);" src="http://www.sololearn.com/images/tree.jpg" />
-        </td>
-        <td>Hue-Rotate() <br>
-          <img class="fltr" style="filter: hue-rotate(180deg);" src="http://www.sololearn.com/images/tree.jpg" />
-        </td>
-        <td>Invert() <br>
-          <img class="fltr" style="filter: invert(70%);" src="http://www.sololearn.com/images/tree.jpg" />
-        </td>
-      </table>
+      <div class="flex">
+        <div>Drop-Shadow() <br>
+          <img class="fltr" style="filter: drop-shadow(5px 5px 2px green);" src="../Imgs/n.png" />
+        </div>
+        <div>Gray Scale() <br>
+          <img class="fltr" style="filter: grayscale(100%);" src="../Imgs/tree.jpg" />
+        </div>
+        <div>Sepia() <br>
+          <img class="fltr" style="filter: sepia(100%);" src="../Imgs/tree.jpg" />
+        </div>
+        <div>Saturate() <br>
+          <img class="fltr" style="filter: saturate(300%);" src="../Imgs/tree.jpg" />
+        </div>
+        <div>Hue-Rotate() <br>
+          <img class="fltr" style="filter: hue-rotate(180deg);" src="../Imgs/tree.jpg" />
+        </div>
+        <div>Invert() <br>
+          <img class="fltr" style="filter: invert(70%);" src="../Imgs/tree.jpg" />
+        </div>
+      </div>
     </fieldset>
 
     <!-- Opacity & Brightness -->
     <fieldset>
       <legend> <h2> Opacity & Brightness</h2> </legend>
-      <table>
-        <td>Opacity 70%<br>
-          <img class="fltr" style="filter: opacity(70%);" src="http://www.sololearn.com/images/tree.jpg" />
-        </td>
-        <td>Brightness 70% <br>
-          <img class="fltr" style="filter: Brightness(70%);" src="http://www.sololearn.com/images/tree.jpg" />
-        </td>
-        <td>Brightness 1.9 <br>
-          <img class="fltr" style="filter: brightness(1.9);" src="http://www.sololearn.com/images/tree.jpg" />
-        </td>
-        <td>Contrast 140% <br>
-          <img class="fltr" style="filter: contrast(140%);" src="http://www.sololearn.com/images/tree.jpg" />
-        </td>
-        <td>blur 5px <br>
-          <img class="fltr" style="filter: blur(5px);" src="http://www.sololearn.com/images/tree.jpg" />
-        </td>
-        <td>Multi-filters (blur+hue-rot)<br>
-          <img class="fltr" style="filter: blur(5px) hue-rotate(180deg);" src="http://www.sololearn.com/images/tree.jpg" />
-        </td>
-      </table>
+      <div class="flex">
+        <div>
+          Opacity 70%<br>
+          <img class="fltr" style="filter: opacity(70%);" src="../Imgs/tree.jpg" />
+        </div>
+        <div>
+          Brightness 70% <br>
+          <img class="fltr" style="filter: Brightness(70%);" src="../Imgs/tree.jpg" />
+        </div>
+        <div>
+          Brightness 1.9 <br>
+          <img class="fltr" style="filter: brightness(1.9);" src="../Imgs/tree.jpg" />
+        </div>
+        <div>
+          Contrast 140% <br>
+          <img class="fltr" style="filter: contrast(140%);" src="../Imgs/tree.jpg" />
+        </div>
+        <div>
+          blur 5px <br>
+          <img class="fltr" style="filter: blur(5px);" src="../Imgs/tree.jpg" />
+        </div>
+        <div>
+          mult-filtrs (blr+hrot)<br>
+          <img class="fltr" style="filter: blur(5px) hue-rotate(180deg);" src="../Imgs/tree.jpg" />
+        </div>
+      </div>
     </fieldset>
     <style>
       .fltr {
         height: 100px;
+      }
+      .fltr:hover{
+        filter: none !important;
       }
     </style>
   </div>

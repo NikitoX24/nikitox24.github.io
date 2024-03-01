@@ -31,23 +31,19 @@
     <a href="HtmlCheatSheet\JSCheatSheet.html"><img src="Imgs/js.png" alt="js" class="icons"></a>
     <hr>
 
-    <!-- FCC -->
-    <h3 class="centred"><u>FreeCodeCamp</u></h3>
-    <form action="Apuntes/html (FreeCodeCamp).html">
-      <input type="submit" value="Fcc/html" />
-    </form>
-    <form action="Apuntes/Curso FreeCodeCamp/FCC-html.html">
-      <input type="submit" value="Fcc/html 2" />
-    </form>
-    <form action="Apuntes/Curso FreeCodeCamp/FCC-html5-CSS.html">
-      <input type="submit" value="Fcc/css" />
-    </form>
-    <hr>
-
     <!-- Otros -->
     <h3 class="centred"><u>Otros</u></h3>
     <form action="Otros/Test.html">
       <input type="submit" value="Test" />
+    </form>
+    <form action="Otros/Cubo MC.html">
+      <input type="submit" value="MC" />
+    </form>
+    <form action="Otros/VideoText.html">
+      <input type="submit" value="HoraVideo" />
+    </form>
+    <form action="Otros/VideoText.html">
+      <input type="submit" value="textoVideo" />
     </form>
     <br>
 
@@ -120,15 +116,28 @@
     <hr>
 
     <!-- Elejir opciones -->
-    <label>
-      elije:
-      <input list="Lista">
-    </label>
+    <input placeholder="Elije:" list="Lista">
     <datalist id="Lista">
       <option value="uno"></option>
       <option value="dos"></option>
       <option value="tres"></option>
     </datalist>
+    <hr>
+
+    <label for="escojerUno">
+      Escoje uno:
+    </label>
+    <select>
+      <option>Seleccionar: </option>
+        <optgroup label="Color">
+          <option>Red</option>
+          <option>Blue</option>
+        </optgroup>
+        <optgroup label="Numero">
+          <option>1</option>
+          <option>2</option>
+        </optgroup>
+    </select>
     <hr>
 
     <!-- Busqueda -->
@@ -193,6 +202,7 @@
     <hr>
 
     <!-- Loader Circle -->
+    <div class="loader"></div>
     <style>
       .loader {
         width: 100px;
@@ -207,18 +217,15 @@
           transform: scale(0);
           opacity: 1;
         }
-
         100% {
           transform: scale(1);
           opacity: 0;
         }
       }
     </style>
-    <div class="loader"></div>
     <hr>
 
     <!-- Bar -->
-      
     <style>
       .barra {
         /* margin: 0 auto;  */
@@ -257,21 +264,7 @@
         }
       }, 30)
     </script>
-    <br> <hr>
 
-    <!-- Mapa Google -->
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0140467050082!2d-58.38153846050341!3d-34.60380631035785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca8c901cefa7%3A0x2bf1c86478d6f525!2sObelisco!5e0!3m2!1ses-419!2sar!4v1679357073003!5m2!1ses-419!2sar"
-      width="320" height="120" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-    <br> <hr>
-
-
-
-
-
-    
 
 
   </div>
