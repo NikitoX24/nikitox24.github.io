@@ -26,20 +26,23 @@
 <script>
   var inputT = document.getElementById("inputText");
   var textoVideo = document.getElementById("textoV");
+  printTime();
 
   function textoVid(){
     textoVideo.innerHTML = inputT.value;
   }
 
   function printTime() {
-    var d = new Date();
-    var hours = d.getHours();
-    var mins = d.getMinutes();
-    if(mins < 10) { mins = `0${mins}` }
-    var secs = d.getSeconds();
-    if(secs < 10) { secs = `0${secs}` }
+    if(inputT.value == "") {
+      var d = new Date();
+      var hours = d.getHours();
+      var mins = d.getMinutes();
+      if(mins < 10) { mins = `0${mins}` }
+      var secs = d.getSeconds();
+      if(secs < 10) { secs = `0${secs}` }
 
-    textoVideo.innerHTML = hours+":"+mins+":"+secs;
+      textoVideo.innerHTML = hours+":"+mins+":"+secs;
+    }
   }
   setInterval(printTime, 1000);
 

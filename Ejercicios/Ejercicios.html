@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<!-- https://www.freecodecamp.org/espanol/news/practica-html-css-y-javascript-en-espanol-creando-7-proyectos/ -->
+
+  <canvas id="canvas">
+
+
+
+
+
+  <style>
+  </style>
+
+
+  <script>
+    const w = 720;
+    const h = 360;
+
+    // Base
+    let baseS = 5;
+    let basex = 80;
+    let basey = 200;
+    let cabezaX = 207;
+    let cabezaY = 85;
+
+    var canvas = document.getElementById("canvas");
+    var ctx2 = canvas.getContext("2d");
+    canvas.width = w;
+    canvas.height = h;
+
+    ctx2.fillStyle = "rgba(100, 180, 100, 1)";
+    ctx2.fillRect(0, 0, w, h); // x, y, width, height
+
+    // Base
+    ctx2.moveTo(basex, basey);
+    ctx2.lineTo(basex*2, basey);
+    ctx2.stroke();
+
+    // Palo
+    ctx2.lineWidth = baseS;
+    ctx2.moveTo(basex*1.5, basey);
+    ctx2.lineTo(basex*1.5, basey-150);
+    
+    ctx2.moveTo(basex*1.45, basey-150);
+    ctx2.lineTo(basex*2.7, basey-150);
+    ctx2.stroke();
+    
+    ctx2.lineWidth = baseS-2;
+    ctx2.moveTo(basex*2.6, basey-120);
+    ctx2.lineTo(basex*2.6, basey-150);
+    ctx2.stroke();
+
+    // function cabeza(){
+      ctx2.beginPath();
+      ctx2.arc(cabezaX, cabezaY, 15, 0, 2 * Math.PI);
+      ctx2.stroke();
+    // }
+    // function cuerpo(){
+      ctx2.moveTo(basex*2.5, basey-100);
+      ctx2.lineTo(basex*2, basey-150);
+      ctx2.stroke();
+    // }
+
+    // ctx2.font = "1em Arial";
+    // ctx2.fillStyle = "rgba(0, 0, 0, 1)"; // #0f0
+    // ctx2.fillText("Juego", 0, 10);
+
+
+  </script>
+
+
+
+</body>
+</html>

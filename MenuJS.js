@@ -4,7 +4,7 @@ class Menu extends HTMLElement {
     this.innerHTML = `
     <div>
       <nav><ul>
-        <li><a href="../index.html"> INICIO(Local) </a></li>
+        <li><a href="../index.html"> <img src="../Imgs/n.png" alt="n" height="20px" style="transform: scale(1.5);"></a></li>
         <li><a href="https://nikitox24.github.io/Main/"> INICIO(GitHub) </a></li>
         <li><a href="https://github.com/NikitoX24/Main"> GITHUB </a></li>
         <li><a href="https://github.com/NikitoX24?tab=repositories"> REPOSITORIOS </a></li>
@@ -42,6 +42,7 @@ class Menu extends HTMLElement {
       }
       a:hover{
         color: red;
+        transform: scale(1.1)
       }
     </style>
     `

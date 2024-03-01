@@ -485,7 +485,7 @@
       Canvas es solo contenedor grafico (para mostrar requiere JavaScript).
       <div class="flex">
         <div class="ej wAuto">
-          <canvas id="canvas2" width="80" height="80"> </canvas>
+          <canvas id="canvas2" width="80" height="80" style="margin: auto;"> </canvas>
         </div>
         <div class="cod">
           <span> &lt;canvas</span> <font class="purp">id=</font>"<font class="green">canvas1</font>" 
@@ -498,38 +498,75 @@
           ctx2.fillStyle = "<font class="green">rgba(0, 200, 0, 1)</font>"; <font class="gray">// #0f0</font> <br>
           ctx2.<font class="blue">fillRect</font>(10, 10, 60, 60); <font class="gray">// x, y, width, height</font> <br>
         </div>
-        <script>
-          var c = document.getElementById("canvas2");
-          var ctx2 = c.getContext("2d");
-          ctx2.fillStyle = "rgba(0, 200, 0, 1)";
-          ctx2.fillRect(10, 10, 60, 60); // x, y, w, h 
-        </script>
-      </div> <br>
+      </div>
+      <div class="flex">
+        <div class="cod">
+          <font class="gray">// Linea</font> <br>
+          ctx2.lineWidth = 2; <font class="gray">// Tamaño</font>
+          ctx2.moveTo(20,20); <font class="gray">// Start</font> <br>
+          ctx2.lineTo(60,60); <font class="gray">// End</font> <br>
+          ctx2.stroke(); <font class="gray">// finalizar</font>
+        </div>
+        <div class="cod">
+          <font class="gray">// Circulo y Cuadrado</font> <br>
+          ctx2.beginPath(); <br>
+          ctx2.arc(40, 40, 25, 0, 2 * Math.PI); <br>
+          ctx2.rect(20, 20, 40, 40); <br>
+          ctx2.stroke();
+        </div>
+        <div class="cod">
+          <font class="gray">// Texto </font> <br>
+          ctx2.font = "1em Arial"; <br>
+          ctx2.fillStyle = "rgba(0, 0, 0, 1)"; <br>
+          ctx2.fillText("Hello World", 15, 10); <br>
+          ctx2.stroketext("sin relleno", 10, 10);
+        </div>
+      </div>
+      <script>
+        var c = document.getElementById("canvas2");
+        var ctx2 = c.getContext("2d");        
+        
+        // Fondo
+        ctx2.fillStyle = "rgba(0, 200, 0, 1)";
+        ctx2.fillRect(0, 0, 80, 80); // x, y, w, h
+        
+        // Linea
+        ctx2.lineWidth = 2; // Espresor
+        ctx2.moveTo(20,20); // Start
+        ctx2.lineTo(60,60); // End
+        ctx2.stroke(); // finalizar
 
-      <!-- Otros... -->
-      <h3> OTROS: Line, Circle, Gradients, Text. </h3>
+        // Circulo y Cuadrado
+        ctx2.beginPath();
+        ctx2.arc(40, 40, 25, 0, 2 * Math.PI); // (x,y,r,start,stop)
+        ctx2.rect(20, 20, 40, 40);
+        ctx2.stroke();
+
+        // Texto
+        ctx2.font = "Arial";
+        ctx2.fillStyle = "rgba(0, 0, 0, 1)";
+        ctx2.fillText("Hello World", 15, 10);
+        // ctx2.stroketext("Sin relleno", 50, 10);
+      </script><br>
+
+      <!-- Gradient... -->
       <details>
-        <summary>Leer más...</summary>
-        <pre>
-            Draw a Line
-            moveTo(x,y): Defines the starting point of the line.
-            lineTo(x,y): Defines the ending point of the line.
-            
-            Draw a Circle
-            beginPath(): Starts the drawing.
-            arc(x,y,r,start,stop): Sets the parameters of the circle.
-            stroke(): Ends the drawing.
-            
-            Gradients
-            createLinearGradient(x,y,x1,y1): Creates a linear gradient.
-            createRadialGradient(x,y,r,x1,y1,r1): Creates a radial/circular gradient.
-            
-            Drawing Text on the Canvas
-            Font: Defines the font properties for the text.
-            fillText(text,x,y): Draws "filled" text on the canvas.
-            strokeText(text,x,y): Draws text on the canvas (no fill).
-        </pre>
-      </details><br>
+        <summary>Gradient y Img</summary>
+          <pre>
+            // Create gradient
+            var grd = ctx2.createRadialGradient(75, 50, 5, 90, 60, 100);
+            grd.addColorStop(0, "red");
+            grd.addColorStop(1, "white");
+
+            // Fill with gradient
+            ctx2.fillStyle = grd;
+            ctx2.fillRect(0, 0, 10, 80);
+
+            // IMG
+            var img = document.getElementById("scream");
+            ctx.drawImage(img, 10, 10);
+          </pre>
+      </details>
     </fieldset>
 
     <!-- Canvas Transform JS: -->
