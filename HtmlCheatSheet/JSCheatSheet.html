@@ -62,18 +62,18 @@
 
     <!-- Variables y Funciones -->
     <div class="flex">
-      <fieldset class="width100"> <!-- Variables -->
+      <fieldset class="width100 "> <!-- Variables -->
         <legend> <h2>Variables</h2> </legend>
-        <div class="cod">
+        <div class="cod  marg0">
           <font class="purp">var</font> a <font class="purp">=</font> <font class="orange">10</font>; <font class="comentario"> // publica.</font> <br>
           <font class="purp">let</font> b <font class="purp">=</font> <font class="orange">true</font>; <font class="comentario"> // privada.</font> <br>
-          <font class="purp">const</font> c <font class="purp">=</font> '<font class="green">hello</font>'; <font class="comentario">// privado y no se puede modificar.</font> <br>
+          <font class="purp">const</font> c <font class="purp">=</font> '<font class="green">hello</font>'; <font class="comentario">// privado y no se puede modificar.</font>
         </div>
       </fieldset>
       
       <fieldset class="width100"> <!-- Funcion -->
         <legend> <h2> Funciones </h2> </legend>
-        <div class="codigo">
+        <div class="codigo  marg0">
           <font class="purp">function</font> <font class="blue">name</font>( parametro1, parametro2 ) { <br>
             &nbsp; <font class="aqua">return</font> parametro1 + parametro2; <br> }
         </div>
@@ -106,6 +106,12 @@
           couses[<font class="orange">1</font>] = "C++"; <font class="comentario">//"CSS" ahora es "C++"</font>
         </div> 
       </div>
+      <details open>
+        <summary>Propiedades...</summary>
+        palabra.includes("A"); // true <br>
+        palabra.indexOf("A"); // 1 <br>
+
+      </details>
     </fieldset>
 
     <fieldset> <!-- Alert, Prompt, Confirm. -->
@@ -193,6 +199,10 @@
       <legend> <h2>Math:</h2> </legend>
       <div class="codigo">
         document.<font class="blue">write</font>(<u>Math.PI</u>); <font class="gray">// 3.14....</font>
+      </div>
+      <div class="cod">
+        function randomNumber(min, max) { <br>
+          &nbsp; return Math.floor(Math.random() * (max - min)) + min; <br> }
       </div>
       <details>
         <summary>Metodos de Math</summary>
