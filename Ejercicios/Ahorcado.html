@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio</title>
+</head>
+<body>
+
+<!-- https://www.freecodecamp.org/espanol/news/practica-html-css-y-javascript-en-espanol-creando-7-proyectos/ -->
+
+
+<div class="slots">
+  <div class="letra"></div>
+  <div class="letra"></div>
+  <div class="letra"></div>
+  <div class="letra"></div>
+  <div class="letra"></div>
+  <div class="letra"></div>
+  <div class="letra"></div>
+</div>
+
+
+
+
+
+
+<canvas id="canvas"> </canvas>
+
+<style>
+  body{ background-color: beige; }
+  #canvas{ 
+    background-color: rgb(215, 255, 223);
+  }
+  .slots{
+    background-color: rgba(22, 134, 0, 0.142);
+    margin: auto;
+    width: 600px;
+    height: 100px;
+    left: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 250px;
+    position: absolute;
+    z-index: 1;
+  }
+  .slots .letra{
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+    background-color: rgba(128, 128, 128, 0.452);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    display: none;
+  }
+</style>
+
+<script>
+  const w = 700;
+  const h = 400;
+
+  // Base
+  let baseS = 5;
+  let basex = 80;
+  let basey = 200;
+  let cabezaX = basex*2.6;
+  let cabezaY = basey-115;
+  let letrasX = 100;
+  let letrasY = 300;
+
+  var ABC = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+  var palabras = ["ARBOL", "MANZANA", "PIEDRA"]; // Max 7 letras
+  var palabra = palabras[randomNumber(0,palabras.length)];
+  var slots = new Array(7);
+  let errores = 0;
+  var letrasOk = [];
+  let completos = 0;
+
+  // Canvas
+  var canvas = document.getElementById("canvas");
+  var ctx2 = canvas.getContext("2d");
+  canvas.width = w; canvas.height = h;
+
+  // Slots
+  slots = document.getElementsByClassName("letra");
+  showSlots();
+  base();
+
+  // Entradas
+  document.addEventListener('keydown', function(event) {
+    let l = ABC[event.keyCode-65]; // (65="A", 90="Z")
+    if(ABC.indexOf(l) != -1) // si es del Abcedario..
+      CheckLetra(l);
+  });
+
+  // Mostrar letras pulsadas
+  function CheckLetra(letr){
+    if(palabra.includes(letr)){
+      for(let i = 0; i<palabra.length; i++){
+        if(palabra[i] == letr){
+          slots[i].innerHTML = letr;
+          completos++;
+        }
+      }
+    } else {
+      errores++;
+      cuerpo();
+    }
+    CheckGameOver();
+  }
+
+
+
+
+
+  //#region Funciones
+  function base(){
+  // Base
+  ctx2.moveTo(basex, basey);
+  ctx2.lineTo(basex*2, basey);
+  ctx2.stroke();
+
+  // Palo
+  ctx2.lineWidth = baseS;
+  ctx2.moveTo(basex*1.5, basey);
+  ctx2.lineTo(basex*1.5, basey-150);
+  
+  ctx2.moveTo(basex*1.45, basey-150);
+  ctx2.lineTo(basex*2.7, basey-150);
+  ctx2.stroke();
+  
+  // Cuerda
+  ctx2.lineWidth = baseS-2.5;
+  ctx2.moveTo(basex*2.6, basey-120);
+  ctx2.lineTo(basex*2.6, basey-150);
+  ctx2.stroke();
+}
+
+  function cuerpo(){
+  ctx2.lineWidth = 1.5;
+
+  // cabeza
+  if(errores == 1){
+    ctx2.beginPath();
+    ctx2.arc(cabezaX, cabezaY, 15, 0, 2 * Math.PI);
+    ctx2.stroke();
+  }
+    
+    // cuerpo
+  if(errores == 2){
+    ctx2.moveTo(cabezaX, cabezaY+15);
+    ctx2.lineTo(cabezaX, cabezaY+60);
+    ctx2.stroke();
+  }
+    
+    // Brazo Der
+  if(errores == 3){
+    ctx2.moveTo(cabezaX, cabezaY+15);
+    ctx2.lineTo(cabezaX+25, cabezaY+50);
+    ctx2.stroke();
+  }
+    
+    // Brazo Izq
+  if(errores == 4){
+    ctx2.moveTo(cabezaX, cabezaY+15);
+    ctx2.lineTo(cabezaX-25, cabezaY+50);
+    ctx2.stroke();
+  }
+    
+    // Pie Der
+  if(errores == 5){
+    ctx2.moveTo(cabezaX, cabezaY+60);
+    ctx2.lineTo(cabezaX+10, cabezaY+90);
+    ctx2.stroke();
+    
+  }
+    // Pie Iqz
+  if(errores == 6){
+    ctx2.moveTo(cabezaX, cabezaY+60);
+    ctx2.lineTo(cabezaX-10, cabezaY+90);
+    ctx2.stroke();
+  }
+}
+
+  function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+  
+  function showSlots(){
+    var Slots = document.getElementsByClassName("letra");
+    for (let i = 0; i < palabra.length; i++) {
+      Slots[i].style.display = "flex";
+    }
+  }
+  
+  function CheckGameOver(){
+    if(errores == 6){
+      alert("Perdiste :C");
+    }
+    if(completos == palabra.length)
+      alert("Ganaste!!! :D");
+  }
+  //#endregion
+</script>
+
+
+</body>
+</html>

@@ -570,12 +570,12 @@
       <legend> <h2>Visibility</h2> </legend>
       <div class="flex">
         <div class="ej"> <p class="dispnone">Este texto se ocultará cuando lo apuntes.</p> </div>
-        <div class="cod"> .none{ <br> &nbsp; <b>display:</b> none; <br> } </div>
+        <div class="cod"> .none{ <br> &nbsp; <b>display:</b> none/inline; <font class="gray">// No ocupa lugar</font> <br> } </div>
         <style> .dispnone:hover{ display: none; } </style>
       </div>
       <div class="flex">
         <div class="ej"> <p class="vishidden">Y esto también se ocultará cuando lo apuntes.</p> </div>
-        <div class="cod"> .hidden{ <br> &nbsp; <b>visibility:</b> hidden; <br> } </div>
+        <div class="cod"> .hidden{ <br> &nbsp; <b>visibility:</b> hidden/visible; <font class="gray">// Ocupa lugar</font> <br> } </div>
         <style> .vishidden:hover{ visibility: hidden; } </style>
       </div>
     </fieldset>
