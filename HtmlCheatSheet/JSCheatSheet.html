@@ -151,10 +151,9 @@
         <div class="cod">
           <font class="aqua">if</font> (condicion) { <br>
             &nbsp; <font class="comentario">// Declaraciones si es Verdadero.</font> <br>
-          } <br>
-          <font class="aqua">else</font> { <br>
-            &nbsp; <font class="comentario">// Declaraciones si es Falso.</font> <br>
-          }
+          } <font class="aqua">else</font> { <br>
+            &nbsp; <font class="comentario">// Declaraciones si es Falso.</font> <br> } <br>
+          Variable = (condicion) ? True : False;
         </div>
         <div class="cod" style="font-size: smaller;">
           <font class="aqua">switch</font> ( Expresion ) { <br>
@@ -660,10 +659,10 @@
       <!-- Html -->
       <div class="flex">
         <div style="width: 45%;">
-          <button onclick="show();"> Alert Button </button> <br>
+          <button onclick="show()"> Alert Button </button> <br>
           <u> OnClick desde html </u>
           <div class="codigo marg0">
-            &lt;<span>button</span> <u><font class="purp">onclick</font>="<font class="blue">show</font>();"</u>> Alert Button &lt;/<span>button</span>>
+            &lt;<span>button</span> <u><font class="purp">onclick</font>="<font class="blue">show</font>()"</u>> Alert Button &lt;/<span>button</span>>
           </div>
           <div class="cod marg0">
             <font class="purp">function</font> <font class="blue">show</font>() { <br>

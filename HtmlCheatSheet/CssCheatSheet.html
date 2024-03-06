@@ -529,6 +529,7 @@
     <!-- Display -->
     <fieldset>
       <legend> <h2>Display</h2> </legend>
+      <!-- Display: Block -->
       <div class="flex">
         <p>
         <u>Sin display block:</u><br>
@@ -550,6 +551,7 @@
         </div>
       </div><hr>
 
+      <!-- Display: Inline -->
       <div class="flex">
         <div> <p><u>InLine</u>
           <p class="inline">First paragraph.</p>
@@ -561,6 +563,42 @@
           p.inline { <br>
             &nbsp; <b>display:</b> inline; <br>
           }
+        </div>
+      </div>
+
+      <!-- Display: Flex -->
+      <div class="flex">
+        <div class="ej">
+          <div class="buxer">
+            <div class="bux"></div>
+            <div class="bux"></div>
+            <div class="bux"></div>
+            <div class="bux"></div>
+          </div>
+          <style>
+            .buxer{
+              background-color: rgb(49, 43, 43);
+              width: 100px;
+              height: 100px;
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+              align-items: center;
+              margin: auto;
+            }
+            .bux{
+              width: 40px;
+              height: 40px;
+              margin: auto;
+              background-color: rgb(60, 82, 57);
+            }
+          </style>
+        </div>
+        <div class="cod">
+          <b>display:</b> flex; <br>
+          <b>flex-wrap:</b> wrap; <br>
+          <b>justify-content:</b> center; <br>
+          <b>align-items:</b> center;
         </div>
       </div>
     </fieldset>

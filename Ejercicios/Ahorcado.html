@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ejercicio</title>
+  <title>Ahorcado</title>
 </head>
 <body>
 
@@ -19,6 +19,7 @@
   <div class="letra"></div>
   <div class="letra"></div>
 </div>
+<h2 id="letrasU">Letras pulsadas:</h2>
 
 
 
@@ -31,6 +32,11 @@
   body{ background-color: beige; }
   #canvas{ 
     background-color: rgb(215, 255, 223);
+  }
+  #letrasU{
+    position: absolute;
+    z-index: 1;
+    top: 350px;
   }
   .slots{
     background-color: rgba(22, 134, 0, 0.142);
@@ -72,11 +78,12 @@
   let letrasY = 300;
 
   var ABC = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-  var palabras = ["ARBOL", "MANZANA", "PIEDRA"]; // Max 7 letras
-  var palabra = palabras[randomNumber(0,palabras.length)];
+  var palabras = ["ciervo", "koala", "conejo", "alpaca", "tigre", "canario"]; // Max 7 letras
+  var palabra = palabras[randomNumber(0,palabras.length)].toUpperCase();
   var slots = new Array(7);
   let errores = 0;
-  var letrasOk = [];
+  var letrasUText = document.getElementById("letrasU");
+  var letrasUser = [];
   let completos = 0;
 
   // Canvas
@@ -98,6 +105,8 @@
 
   // Mostrar letras pulsadas
   function CheckLetra(letr){
+    if(letrasUser.includes(letr))
+      return;
     if(palabra.includes(letr)){
       for(let i = 0; i<palabra.length; i++){
         if(palabra[i] == letr){
@@ -105,14 +114,17 @@
           completos++;
         }
       }
+      letrasUser.push(letr);
     } else {
       errores++;
       cuerpo();
     }
     CheckGameOver();
+    letrasUText.innerHTML = "Letras Pulsadas: " + letrasUser;
   }
 
-
+  ctx2.font = "1em Arial";
+  ctx2.fillText("Animales", 12, 12);
 
 
 
