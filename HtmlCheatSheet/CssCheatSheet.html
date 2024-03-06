@@ -570,10 +570,10 @@
       <div class="flex">
         <div class="ej">
           <div class="buxer">
-            <div class="bux"></div>
-            <div class="bux"></div>
-            <div class="bux"></div>
-            <div class="bux"></div>
+            <div class="bux">a</div>
+            <div class="bux">b</div>
+            <div class="bux">c</div>
+            <div class="bux">d</div>
           </div>
           <style>
             .buxer{
@@ -582,14 +582,13 @@
               height: 100px;
               display: flex;
               flex-wrap: wrap;
-              justify-content: center;
+              justify-content: space-around;
               align-items: center;
               margin: auto;
             }
             .bux{
               width: 40px;
               height: 40px;
-              margin: auto;
               background-color: rgb(60, 82, 57);
             }
           </style>
@@ -597,9 +596,12 @@
         <div class="cod">
           <b>display:</b> flex; <br>
           <b>flex-wrap:</b> wrap; <br>
-          <b>justify-content:</b> center; <br>
+          <b>justify-content:</b> space-around; <br>
           <b>align-items:</b> center;
         </div>
+          <!-- <button>space-evenly</button>
+          <button>space-around</button>
+          <button>space-between</button> -->
       </div>
     </fieldset>
   
@@ -638,6 +640,20 @@
       <div class="ejemplo">
         <enum class="spann"> relative text </enum><br>
       </div>
+
+      <!-- 
+        Centrar absolute
+
+        .parent{
+          position: relative;
+        }
+        .child{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+       -->
 
       <style>
         /* fijo */
@@ -1368,65 +1384,82 @@
 
     <!-- Filter Functions -->
     <fieldset>
-      <legend> <h2> Filter Functions</h2> </legend>
-      <div class="flex">
-        <div>Drop-Shadow() <br>
+      <legend> <h2> Filter: </h2> </legend>
+      <div class="flex fltAuto">
+        <div> Drop-Shadow() <br>
           <img class="fltr" style="filter: drop-shadow(5px 5px 2px green);" src="../Imgs/n.png" />
         </div>
-        <div>Gray Scale() <br>
+        <div> Gray Scale() <br>
           <img class="fltr" style="filter: grayscale(100%);" src="../Imgs/tree.jpg" />
         </div>
-        <div>Sepia() <br>
+        <div> Sepia() <br>
           <img class="fltr" style="filter: sepia(100%);" src="../Imgs/tree.jpg" />
         </div>
-        <div>Saturate() <br>
+        <div> Saturate() <br>
           <img class="fltr" style="filter: saturate(300%);" src="../Imgs/tree.jpg" />
         </div>
-        <div>Hue-Rotate() <br>
+        <div> Hue-Rotate() <br>
           <img class="fltr" style="filter: hue-rotate(180deg);" src="../Imgs/tree.jpg" />
         </div>
-        <div>Invert() <br>
+        <div> Invert() <br>
           <img class="fltr" style="filter: invert(70%);" src="../Imgs/tree.jpg" />
         </div>
-      </div>
-    </fieldset>
 
-    <!-- Opacity & Brightness -->
-    <fieldset>
-      <legend> <h2> Opacity & Brightness</h2> </legend>
-      <div class="flex">
-        <div>
-          Opacity 70%<br>
+        <div> Opacity 70%<br>
           <img class="fltr" style="filter: opacity(70%);" src="../Imgs/tree.jpg" />
         </div>
-        <div>
-          Brightness 70% <br>
+        <div> Brightness 70% <br>
           <img class="fltr" style="filter: Brightness(70%);" src="../Imgs/tree.jpg" />
         </div>
-        <div>
-          Brightness 1.9 <br>
+        <div> Brightness 1.9 <br>
           <img class="fltr" style="filter: brightness(1.9);" src="../Imgs/tree.jpg" />
         </div>
-        <div>
-          Contrast 140% <br>
+        <div> Contrast 140% <br>
           <img class="fltr" style="filter: contrast(140%);" src="../Imgs/tree.jpg" />
         </div>
-        <div>
-          blur 5px <br>
+        <div> blur 5px <br>
           <img class="fltr" style="filter: blur(5px);" src="../Imgs/tree.jpg" />
         </div>
-        <div>
-          mult-filtrs (blr+hrot)<br>
+        <div> mult-filtrs (blr+hrot)<br>
           <img class="fltr" style="filter: blur(5px) hue-rotate(180deg);" src="../Imgs/tree.jpg" />
+        </div>
+        <div style="position: relative;"> <b>backdrop-filter:</b> blur(5px) <br>
+          <img height="150px" src="../Imgs/tree.jpg" />
+          <div class="bkdrp"></div>
+          <details>
+            .fondo{ <br>
+              &nbsp; position: relative; <br>} <br>
+            .Transparent{ <br>
+              <b>&nbsp; backdrop-filter: blur(5px);</b> <br>
+              &nbsp; position: absolute; <br>
+              &nbsp; top: 50%; left: 50%; <br>
+              &nbsp; transform: translate(-50%, -50%); <br> }
+          </details>
         </div>
       </div>
     </fieldset>
     <style>
+      .fltAuto{
+        margin: auto;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+      }
       .fltr {
         height: 100px;
       }
       .fltr:hover{
         filter: none !important;
+      }
+      .bkdrp{
+        width: 90px;
+        height: 90px;
+        background-color: #ffffff26;
+        backdrop-filter: blur(5px);
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
       }
     </style>
   </div>
