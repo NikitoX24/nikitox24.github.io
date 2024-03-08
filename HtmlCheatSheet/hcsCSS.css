@@ -105,6 +105,9 @@ font.yellow{
 .iconosFlex{
   padding-inline: 50%;
 }
+.iconosFlex a:hover{
+  transform: scale(1.1);
+}
 
 .borders {
   border-radius: 12px;
@@ -131,6 +134,7 @@ h1.subText{
   font-size: smaller; 
   text-transform: none;
 }
+
 
 .ejemplo {
   max-width: 400px;

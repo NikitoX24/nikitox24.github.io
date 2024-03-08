@@ -40,7 +40,7 @@ class Menu extends HTMLElement {
         text-decoration: none;
         display: block;
       }
-      a:hover{
+      li a:hover{
         color: red;
         transform: scale(1.1)
       }

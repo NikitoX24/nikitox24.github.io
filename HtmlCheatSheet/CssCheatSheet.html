@@ -32,32 +32,6 @@
 </header>
 
 <main>
-  <!-- Clase & ID -->
-  <div class="borders">
-    <h1 class="titulo"> Clase y ID </h1>
-
-    <!-- clase -->
-    <fieldset class="flex" style="margin-bottom: 0px;">
-      <legend> <h3> Clase </h3> </legend>
-      <div class="cod">
-        &lt;<span>p</span> <u><font class="purp">class</font>="<font class="green">clase</font>"</u>> Parrafo con un selector. &lt;<span>/p</span>>
-      </div>
-      <div class="cod">
-        .<font class="selector">clase</font> { <font class="prop">color</font>: <font class="orange">darked</font>; }
-      </div>
-    </fieldset>
-    
-    <!-- ID -->
-    <fieldset class="flex">
-      <legend> <h3> ID </h3> </legend>
-      <div class="cod">
-        &lt;<span>p</span> <u><font class="purp">id</font>="<font color="green">idpurple</font>"</u>> Este es un parrafo con un id. &lt;<span>/p</span>>
-      </div>
-      <div class="cod">
-        #<font class="purp">idpurple</font> { <font class="prop">color</font>: <font class="orange">purple</font>; }
-      </div>
-    </fieldset>
-  </div>
 
   <!-- Text -->
   <div class="borders">
@@ -91,7 +65,7 @@
             100% { font-family: Verdana; }
           }
         </style>
-      </div> <hr>
+      </div>
 
       <!-- Font-Style -->
       <div class="flex">
@@ -101,7 +75,7 @@
         <div class="cod">
           <b>font-style:</b> italic; <font class="gray">/* normal, italic, oblique */</font>
         </div>
-      </div><hr>
+      </div>
 
       <!-- Font-Weight -->
       <div class="flex">
@@ -111,7 +85,7 @@
         <div class="cod">
           <b>font-weight:</b> 900; <font class="gray">/* 100: finito / 900: grueso */</font>
         </div>
-      </div><hr>
+      </div>
 
       <!-- Font-Variant -->
       <div class="flex">
@@ -121,12 +95,12 @@
         <div class="cod">
           <b>font-variant:</b> small-caps; <font class="gray">/* normal, small-caps, inherit */</font>
         </div>
-      </div><hr>
+      </div>
 
       <!-- Font-Color -->
       <div class="flex">
-        <p class="ej" style="color: red;">
-          This is a paragraph in red.
+        <p class="ej" style="color: rgb(255, 0, 217);">
+          This is a paragraph in pink.
         </p>
         <div class="cod">
           <b>color:</b> red; <font class="gray"> /* red, #F00, rgb(255,0,0) */ </font>
@@ -137,63 +111,40 @@
     <!-- Alineacion de Texto -->
     <fieldset>
       <legend><h2>Alineación de Texto</h2></legend>
-
-      <h3> Horizontal / Vertical</h3>
       
       <div style="height: 100px;">
         <div class="boxizq" style="width: 50%;"> <!-- Text-Align (Horizontal) -->
           <div class="flex">
-            <div class="ej">
-              <div style="text-align: left;">Aligned to <b>Left</b></div>
-            </div>
-            <div class="cod">
-              <b>text-align:</b> left; <br>
-            </div>
+            <div class="ej"> <div style="text-align: left;">Aligned to <b>Left</b></div> </div>
+            <div class="cod"> <b>text-align:</b> left; </div>
           </div>
-        
           <div class="flex">
-            <div class="ej">
-              <div style="text-align: center;">Aligned to <b>Center</b></div>
-            </div>
-            <div class="cod">
-              <b>text-align:</b> center; <br>
-            </div>
+            <div class="ej"> <div style="text-align: center;">Aligned to <b>Center</b></div> </div>
+            <div class="cod"> <b>text-align:</b> center; </div>
           </div>
-        
           <div class="flex">
-            <div class="ej">
-              <div style="text-align: right;">Aligned to <b>Right</b></div>
-            </div>
-            <div class="cod">
-              <b>text-align:</b> right; <br>
-            </div>
+            <div class="ej"> <div style="text-align: right;">Aligned to <b>Right</b></div> </div>
+            <div class="cod"> <b>text-align:</b> right; </div>
           </div>
         </div>
 
         <div class="boxder" style="width: 50%;"><!-- Text-Align (Vertical) -->
-          <div class="flex" style="height: 90px;">
+          <div class="flex">
             <div class="flex">
               <div class="ej" style="display: inline-table; vertical-align: top;"><div style="vertical-align: top; display: table-cell;">Top</div></div>
               <div class="ej" style="display: inline-table;"><div style="vertical-align: middle; display: table-cell;">Middle</div></div>
               <div class="ej" style="display: inline-table; vertical-align: bottom;"><div style="vertical-align: bottom; display: table-cell;">Bottom</div></div>
             </div>
             <div>
-              <div class="cod">
-                <b>vertical-align:</b> top; <br>
-              </div>
-              <div class="cod">
-                <b>vertical-align:</b> middle; <br>
-              </div>
-              <div class="cod">
-                <b>vertical-align:</b> bottom; <br>
-              </div>
+              <div class="cod"> <b>vertical-align:</b> top; </div>
+              <div class="cod"> <b>vertical-align:</b> middle; </div>
+              <div class="cod"> <b>vertical-align:</b> bottom; </div>
             </div>
           </div>
         </div>
       </div><hr>
 
       <!-- Text-Align Property (Vertical) -->
-      <h3> Text-Align Property (Vertical)</h3>
       <div class="flex">
         <div class="ej"> This is an <span style="vertical-align: baseline;"> <b> inline text </b></span> example. </div>
         <div class="cod"> <b>vertical-align:</b> baseline; </div>
@@ -214,8 +165,28 @@
         <div class="cod"> <b>vertical-align:</b> -10px; </div>
       </div><hr>
 
+      <div class="flex">
+        <div class="ej">
+          <font style="text-decoration: overline;">This is <span> overlined </span> text. </font>
+        </div>
+        <div class="cod"> <b>text-decoration:</b> overline; </div>
+      </div>
+
+      <div class="flex">
+        <div class="ej">
+          <font style="text-decoration: underline;">This is <span> lined-through</span> text. </font>
+        </div>
+        <div class="cod"> <b>text-decoration:</b> line-through; </div>
+      </div>
+
+      <div class="flex">
+        <div class="ej">
+          <font style="text-decoration: line-through;">This is <span> underlined</span> text. </font>
+        </div>
+        <div class="cod"> <b>text-decoration:</b> underline; </div>
+      </div> <hr>
+
       <!-- Text-Align Property Div (Vertical) -->
-      <h3> Text-Align Property Div (Vertical)</h3>
       <div class="flex">
       <div class="main">
         <div class="paragraph">
@@ -236,49 +207,11 @@
         }
       </style>
       <div class="codigo">
-        <b>.div</b> { <br>
         &nbsp; <b>display:</b> flex; <br>
         &nbsp; <b>align-items:</b> center; <br>
-        &nbsp; <b>justify-content:</b> center; <br> }
+        &nbsp; <b>justify-content:</b> center;
       </div>
     </div>
-    </fieldset>
-    
-    <!-- Text-decoration -->
-    <fieldset>
-      <legend> <h2> Text-Decoration </h2> </legend>
-
-      <div class="flex">
-        <div class="ej">  
-          <font style="text-decoration: overline;">This is <b> overlined </b> text. </font>
-        </div>
-        <div class="cod"> <b>text-decoration:</b> overline; </div>
-      </div>
-
-      <div class="flex">
-        <div class="ej">
-          <font style="text-decoration: underline;">This is <b> lined-through</b> text. </font>
-        </div>
-        <div class="cod"> <b>text-decoration:</b> line-through; </div>
-      </div>
-
-      <div class="flex">
-        <div class="ej">
-          <font style="text-decoration: line-through;">This is <b> underlined</b> text. </font>
-        </div>
-        <div class="cod"> <b>text-decoration:</b> underline; </div>
-      </div>
-    </fieldset>
-
-    <!-- text-indent (Sangria) -->
-    <fieldset>
-      <legend> <h2> Text-Indent (Sangría)</h2> </legend>
-      <div class="flex">
-        <div class="ej">
-          <p style="text-indent: 30px; text-align: justify;"> Este es un ejemplo de <strong>text-indent </strong> (sangría), lo cual deja un poco de  antes del texto.</p>
-        </div>
-        <div class="cod"> <b>text-indent:</b> 30px; </div>
-      </div>
     </fieldset>
 
     <!-- Text-Sadow -->
@@ -286,17 +219,16 @@
       <legend> <h2>Text-Sadow</h2> </legend>
 
       <div class="flex">
-        <div class="ej"> <h1 style="text-shadow: 3px 2px 3px grey;"> Text-shadow example</h1> </div>
-        <div class="cod"> <b>text-shadow:</b> 5px 2px 6px grey; <br> 
-          <font class="gray">/* text-shadow: (x, y, blur radius, color) */ <br>
-            (Se puede poner más sombras separadas por un "Coma").
-          </font>
+        <div class="ej"> 
+          <h2 style="text-shadow: rgba(0, 0, 255, 1) -1px -1px 0.3em;"> Text-shadow with blur effect</h2>
+        </div>
+        <div class="cod">
+          <b> text-shadow:</b> rgba(0, 0, 255, 1) -1px -1px 0.3em; <br>
+          <font class="gray">/* text-shadow: (x, y, blur radius, color) */ <br> (Más sombras usando "Coma"). </font>
         </div>
       </div>
 
       <div class="flex">
-        <div class="ej"> <h1 style="text-shadow: rgba(0, 0, 255, 1) -1px -1px 0.3em;"> Text-shadow with blur effect</h1> </div>
-        <div class="cod"> <b>text-shadow:</b> rgba(0, 0, 255, 1) -1px -1px 0.3em; </div>
       </div>
     </fieldset>
 
@@ -322,14 +254,18 @@
       </div>
       <div class="flex">
         <p class="ej" style="white-space: nowrap;">
-          Este párrafo     tiene      
+          Este ej     tiene      varios
           espacios y   saltos de línea,
-          pero   son ignorados.
+          pero   se ignoran.
         </p>
         <div class="cod">
           <b>white-space:</b> nowrap;
           <font class="gray">(pre, pre-line, pre-wrap).</font>
         </div>
+      </div>
+      <div class="flex">
+        <div class="ej"> <p style="text-indent: 30px; text-align: justify; display: inline;"> Este es un ejemplo de <b>sangría</b>.</p> </div>
+        <div class="cod"> <b>text-indent:</b> 30px; </div>
       </div>
     </fieldset>
   </div>
@@ -338,79 +274,26 @@
   <div class="borders">
     <h1 class="titulo"> Propiedades </h1>
 
-    <!-- Box-Model -->
-    <fieldset>
-      <legend> <h2>Border-Style</h2> </legend>
-      <div class="flex" style="padding: 5px;">
-        <p style="border-style: dotted; padding: 5px;">dotted.</p>
-        <p style="border-style: dashed; padding: 5px;">dashed.</p>
-        <p style="border-style: double; padding: 5px;">double.</p>
-        <p style="border-style: groove; padding: 5px;">grooved.</p>
-        <p style="border-style: ridge; padding: 5px;">ridged.</p>
-        <p style="border-style: inset; padding: 5px;">inset.</p>
-        <p style="border-style: outset; padding: 5px;">outset.</p>
-      </div>
-      <div class="cod">
-        <b>border-style:</b> <font class="gray">dotted/dashed/double/groove/ridge/inset/ouset</font>;
-      </div>
-    </fieldset>
-
-    <!-- Background-Image -->
-    <fieldset>
-      <legend> <h2> Background-Image </h2> </legend>
-      <div class="flex">
-        <p class="background-image">Imagen de fondo</p>
-        <style>
-          p.background-image {
-            padding: 14px;
-            background-image: url("../Imgs/banner_orange.png");
-            background-repeat: no-repeat;
-            width: 110px;
-            text-align: center;
-          }
-        </style>
-        <div class="codigo">
-          &nbsp; <b>background-image:</b> url("../Imgs/banner_orange.png"); <br>
-          &nbsp; <b>background-repeat:</b> no-repeat; <font class="gray">(repeat-x, repeat-y, no-repeat, inherit).</font> <br>
-        </div>
-      </div>
-    </fieldset>
-
     <!-- List-Style-Type -->
     <fieldset>
       <legend> <h2> List-Style-Type </h2> </legend>
       <div class="flex">
-        <div>
-          <ol start="list-style-type: lower-alpha;">
-            <li>lower-alpha;</li>
-          </ol>
-          <ul style="list-style-type: circle;">
-            <li>circle;</li>
-          </ul>
-          <ul style="list-style-type: square;">
-            <li>square;</li>
-          </ul>
-          <ul class="uimage">
-            <li>Red</li>
-          </ul>
-        </div>
-          
-        <div style="margin: 15px;">
-          <div class="cod"><b>list-style-type:</b> lower-alpha;</div>
-          <div class="cod"><b>list-style-type:</b> circle;</div>
-          <div class="cod"><b>list-style-type:</b> square;</div>
-          <div class="cod" style="min-width: 120px;"><b>list-style-image:</b> url("Icon.png");</div>
-        </div>
-        <style>
-          ul.uimage {
-            list-style: square outside none;
-            /* list-style-type, list-style-image, list-style-position */
-
-            list-style-image: url("../Imgs/loguito.png");
-            /* list-style-position: outside; insede, outside */
-          }
-        </style>
+        <div class="ej"> 1- lower-alpha;</div>
+        <div class="cod"><b>list-style-type:</b> lower-alpha;</div>
       </div>
+      <div class="flex">
+        <div class="ej"> ○ circle;</div>
+        <div class="cod"><b>list-style-type:</b> circle;</div>
+      </div>
+      <div class="flex">
+        <div class="ej"> 𝅇 square;</div>
+        <div class="cod"><b>list-style-type:</b> square;</div>
+      </div>
+      <div class="flex">
+        <div class="ej"> <font id="imgL">url("img.png");</font> </div>
+        <div class="cod" style="min-width: 120px;"><b>list-style-image:</b> url("");</div>
+      </div>
+      <style>#imgL::before { content: url("../Imgs/loguito.png"); }</style>
     </fieldset>
 
     <!-- Table -->
@@ -431,8 +314,8 @@
           </table><br>
           <style>
             table.styled {
+              margin-inline: 10px;
               caption-side: top;
-              /* top, bottom */
               border-collapse: separate;
               border-spacing: 20px 5px;
               empty-cells: hide;
@@ -447,59 +330,37 @@
             &nbsp;<b>empty-cells:</b> hide; <br>
           } <br>
         </div>
-        <div class="cod wAuto">
-          tr:nth-child(even) { <br>
-            background-color: #b0d1e4; <br>
-          }<br>
-          tr:nth-child(odd) { <br>
-            background-color: #b0d1e4; <br>
-          }
+        <div class="cod flex"> <br>
+          <div>
+            <font class="gray">Filas por colores:</font> <br>
+            tr:<font class="purp">nth-child</font>(even) { <br>
+              &nbsp; <b>background-color:</b> gray; <br> }<br>
+          </div>
+          <div> <br>
+            tr:<font class="purp">nth-child</font>(odd) { <br>
+              &nbsp; <b>background-color:</b> black; <br> }
+          </div>
         </div>
       </div>
-    </fieldset>
-
-    <!-- Links -->
-    <fieldset>
-      <legend> <h2> Propiedades de Links </h2> </legend>
-      <p>
-        <a href="http://www.sololearn.com" target="_blank">
-          Este Link cambia el color y la linea cuando pones el mouse por encima.
-        </a>
-      </p>
-      <div class="flex">
-        <div class="codigo">
-          a:hover { <br>
-            &nbsp; <b>color:</b> red; <br>
-            &nbsp; <b>text-decoration:</b> overline; <br>
-        } <br>
-        </div>
-        <div class="codigo">
-          <font class="gray">
-            a:link (define el estilo de los enlaces normales no visitados) <br>
-            a:visited (define el estilo de los enlaces visitados) <br>
-            a:active (el enlace se activa una vez que hace clic en él) <br>
-            a:hover (un enlace se desplaza cuando el mouse está sobre él) <br>
-          </font>
-        </div>
-      </div>
-      <style>
-        a:hover {
-          color: red;
-          text-decoration: overline;
-        }
-      </style>
     </fieldset>
 
     <!-- Mouse-Cursor -->
     <fieldset>
       <legend> <h2> Mouse-Cursor</h2> </legend>
       <div class="noColor">
+        <div class="cod">
+          <b>cursor</b>: 
         <span style="cursor: default;">default</span>,
         <span style="cursor: crosshair;">crosshair</span>,
         <span style="cursor: help;">Help</span>,
         <span style="cursor: move;">move</span>,
         <span style="cursor: text;">text</span>,
         <span style="cursor: wait;">wait</span>,
+        <span style="cursor: pointer;">pointer</span>,
+        <span style="cursor: progress;">progress</span>,
+        <span style="cursor: not-allowed;">not-allowed</span>,
+        <span style="cursor: no-drop;">no-drop</span>.
+        <br>
         <span style="cursor: n-resize;">n-resize</span>,
         <span style="cursor: s-resize;">s-resize</span>,
         <span style="cursor: ne-resize;">ne-resize</span>,
@@ -507,17 +368,93 @@
         <span style="cursor: se-resize;">se-resize</span>,
         <span style="cursor: e-resize;">e-resize</span>,
         <span style="cursor: w-resize;">w-resize</span>,
-        <span style="cursor: pointer;">pointer</span>,
-        <span style="cursor: progress;">progress</span>,
-        <span style="cursor: not-allowed;">not-allowed</span>,
-        <span style="cursor: no-drop;">no-drop</span>,
         <span style="cursor: vertical-text;">vertical-text</span>,
         <span style="cursor: all-scroll;">all-scroll</span>,
         <span style="cursor: col-resize;">col-resize</span>,
         <span style="cursor: row-resize;">row-resize</span>.
       </div>
-      <div class="codigo">
-        <b>cursor</b>: default;
+    </fieldset>
+
+    <!-- Pseudo-Clases -->
+    <fieldset>
+      <legend> <h2>Pseudo-Clases</h2> </legend>
+      <div class="flex">
+        <div id="parent" class="ej">
+          <font>Primer Hijo</font> <br>
+          <font>Segundo Hijo</font> <br>
+          <font>Ultimo Hijo</font>
+        </div>
+        <style>
+          #parent font:first-child {
+            color: green;
+            text-decoration: underline;
+          }
+          #parent font:last-child {
+            color: red;
+            text-decoration: underline;
+          }
+        </style>
+        <div class="cod">
+          #<font class="orange">parent</font>:<font class="purp"><ins>first-child</ins></font> { <br>
+            &nbsp; <b>color:</b> green; <br> }
+        </div>
+        <div class="cod">
+          #<font class="orange">parent</font>:<font class="purp"><ins>last-child</ins></font> { <br>
+            &nbsp; <b>color:</b> red; <br> }
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- Pseudo-Elemento -->
+    <fieldset>
+      <legend> <h2> Pseudo-Elemento</h2> </legend>
+
+      <div class="flex">
+        <div class="ej">
+          <p class="textfirstline">
+            El siguiente ejemplo demuestra cómo usar el elemento ::first-line 
+            para agregar un efecto especial a la primera línea.
+          </p>
+        </div>
+        <div class="cod">
+          .<font class="yellow">texto</font>::<font class="purp">first-line</font> { <br>
+            &nbsp; <b>color:</b> green; <br>
+          }
+          <style>.textfirstline::first-line { color: green; }</style>
+        </div>
+      </div>
+
+      <div class="flex">
+        <div class="ej">
+          <p class="firstletter"> La primera letra es de otro color</p>
+        </div>
+        <div class="cod">
+          .<font class="yellow">texto</font>::<font class="purp">first-letter</font> { <br>
+            &nbsp; <b>background-color:</b> green; <br> }
+          <style> .firstletter::first-letter { background-color: green; } </style>
+        </div>
+      </div>
+
+      <div class="flex">
+        <div class="ej">
+          <p class="seleccioname">Selecciona una parte del texto para marcarlo de otro color</p>
+        </div>
+        <div class="cod">
+          .<font class="yellow">texto</font>::<font class="purp">selection</font> { <br>
+            &nbsp; <b>background-color:</b> green; <br> }
+          <style>.seleccioname::selection { background-color: #589432; color: #FF6347; }</style>
+        </div>
+      </div>
+
+      <div class="flex">
+        <div class="ej">
+          <p class="insertImageBeforeText">Insertar Imagen antes del Texto. </p>
+        </div>
+        <div class="cod">
+          .<font class="yellow">texto</font>::<font class="purp">before</font> { <br>
+            &nbsp; <b>content:</b> url("<font class="green">../Imgs/loguito.png</font>"); <br> }
+          <style> .insertImageBeforeText::before { content: url("../Imgs/loguito.png"); } </style>
+        </div>
       </div>
     </fieldset>
   </div> 
@@ -531,41 +468,25 @@
       <legend> <h2>Display</h2> </legend>
       <!-- Display: Block -->
       <div class="flex">
-        <p>
-        <u>Sin display block:</u><br>
-          <span>First paragraph.</span>
-          <span>Second paragraph.</span
-        </p>
-
-        <p>
-          <u>Con display block:</u><br>
+        <div class="ej">
           <span class="block">First paragraph.</span>
           <span class="block">Second paragraph.</span>
           <style> span.block { display: block; } </style>
-        </p>
-        
-        <div class="codigo" style="margin-top: 10px;">
-          span.block { <br>
-            &nbsp; <b>display:</b> block; <br>
-          }
         </div>
-      </div><hr>
+        <div class="cod"> <b>display:</b> block; </div>
+      </div>
 
       <!-- Display: Inline -->
       <div class="flex">
-        <div> <p><u>InLine</u>
-          <p class="inline">First paragraph.</p>
-          <p class="inline">Second paragraph.</p>
-          <p class="inline">Third paragraph.</p>
-          <style> p.inline { display: inline; } </style> </p> 
+        <div class="ej">
+          <p class="inline"> 1er Parrafo. </p> &nbsp;
+          <p class="inline"> 2do Parrafo. </p> &nbsp;
+          <p class="inline"> 3er Parrafo. </p>
+          <style> p.inline { display: inline; } </style> 
         </div>
-        <div class="codigo">
-          p.inline { <br>
-            &nbsp; <b>display:</b> inline; <br>
-          }
-        </div>
-      </div>
-
+        <div class="cod"> <b>display:</b> inline; </div>
+      </div> <hr>
+      
       <!-- Display: Flex -->
       <div class="flex">
         <div class="ej">
@@ -595,7 +516,7 @@
         </div>
         <div class="cod">
           <b>display:</b> flex; <br>
-          <b>flex-wrap:</b> wrap; <br>
+          <b>flex-wrap:</b> wrap; <font class="gray">(acomodar)</font> <br>
           <b>justify-content:</b> space-around; <br>
           <b>align-items:</b> center;
         </div>
@@ -609,13 +530,13 @@
     <fieldset>
       <legend> <h2>Visibility</h2> </legend>
       <div class="flex">
-        <div class="ej"> <p class="dispnone">Este texto se ocultará cuando lo apuntes.</p> </div>
-        <div class="cod"> .none{ <br> &nbsp; <b>display:</b> none/inline; <font class="gray">// No ocupa lugar</font> <br> } </div>
+        <div class="ej"> <font class="dispnone">Este texto desaparecerá cuando lo apuntes.</font> </div>
+        <div class="cod"> <b>display:</b> none/inline; <font class="gray">// No ocupa lugar</font> </div>
         <style> .dispnone:hover{ display: none; } </style>
       </div>
       <div class="flex">
-        <div class="ej"> <p class="vishidden">Y esto también se ocultará cuando lo apuntes.</p> </div>
-        <div class="cod"> .hidden{ <br> &nbsp; <b>visibility:</b> hidden/visible; <font class="gray">// Ocupa lugar</font> <br> } </div>
+        <div class="ej"> <font class="vishidden">Este texto se ocultará cuando lo apuntes.</font> </div>
+        <div class="cod"> <b>visibility:</b> hidden/visible; <font class="gray">// Ocupa lugar</font> </div>
         <style> .vishidden:hover{ visibility: hidden; } </style>
       </div>
     </fieldset>
@@ -623,53 +544,7 @@
     <!-- Posicionamiento -->
     <fieldset>
       <legend> <h2> Posicionamiento </h2> </legend>
-
-      <!-- fijo -->
-      <u>Fijo:</u> <br>
-      <button onclick="fixed()">Fixed (fijo)</button>
-      <h1 class="position_fixed"></h1><br>
-      <script>
-        function fixed(){
-          var fixedText = document.getElementsByClassName("position_fixed");
-          fixedText[0].innerHTML = "Texto Fijado con Fixed";
-        }
-      </script>
-
-      <!-- relativo -->
-      <u>Relativo:</u> <br>
-      <div class="ejemplo">
-        <enum class="spann"> relative text </enum><br>
-      </div>
-
-      <!-- 
-        Centrar absolute
-
-        .parent{
-          position: relative;
-        }
-        .child{
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        }
-       -->
-
-      <style>
-        /* fijo */
-        h1.position_fixed {
-          position: fixed;
-          top: 230px;
-          text-shadow: rgba(0, 0, 255, 1) -1px -1px 0.3em;
-        }
-        /* relativo */
-        .spann {
-          position: relative;
-          top: -10px;
-          left: 50px;
-          color: red;
-        }
-      </style> <br>
+      <img src="../Imgs/css-position-all.png" alt="" height="300px">
     </fieldset>
 
     <!-- Floating -->
@@ -749,59 +624,92 @@
     <fieldset>
       <legend> <h2>OverFlow</h2> </legend>
       <div class="flex">
-        <div class="overflow">
-          This text is inside the div element, which has a blue
-          background color and is floated to the left. We set a specific
-          height and width for the div element, and as you can see,
-          the content cannot fit.
+        <div class="flex" style="width: 300px;">
+          <div class="overflow">
+            This text is inside the div element, which has a blue
+            background color and is floated to the left. We set a specific
+            height and width for the div element, and as you can see,
+            the content cannot fit.
+          </div>
+          <div class="cod" style="width: 140px;">
+            .overflow { <br>
+              &nbsp; <b>width:</b> 150px; <br>
+              &nbsp; <b>height:</b> 150px; <br>
+              &nbsp; <b>overflow:</b> auto; <br>
+              <font class="gray"> visible, scroll, hidden</font> <br>
+            }
+          </div>
         </div>
-        <style>
-          div.overflow {
-            width: 200px;
-            height: 100px;
-            background-color: lightblue;
-            overflow: auto;
-            /* visible, scroll, hidden, auto */
-          }
-        </style>
-        <div class="cod">
-          div.overflow { <br>
-            &nbsp; <b>width:</b> 150px; <br>
-            &nbsp; <b>height:</b> 150px; <br>
-            &nbsp; <b>overflow:</b> auto; <font class="gray">/* visible, scroll, hidden, auto */ </font> <br>
-          }
+        <!-- Word-Wrap -->  
+        <div>
+          <div class="flex" style="width: 380px;">
+            <div class="wordwrap" style="word-wrap: normal;"> ABCDEFGHIJKLMNÑOPQRSTUVWXYZ. </div>
+            <div class="cod marg0 wAuto"> .texto{ <u><b>word-wrap:</b> normal;</u> } </div>
+          </div> <br>
+          <div class="flex" style="width: 380px;">
+            <div class="wordwrap" style="word-wrap: break-word;"> ABCDEFGHIJKLMNÑOPQRSTUVWXYZ. </div>
+            <div class="cod marg0 wAuto"> .texto{ <u><b>word-wrap:</b> break-word;</u> } </div>
+          </div>
         </div>
       </div>
+      <style>
+        div.overflow {
+          width: 120px;
+          height: 100px;
+          background-color: lightblue;
+          overflow: auto;
+          padding: 3px;
+          border: solid 1px black;
+        }
+        .wordwrap{ 
+          border: 1px solid black;
+          width: 135px; height: 30px;
+          background-color: lightblue;
+          text-transform: lowercase;
+          /* margin: 0; */
+        }
+      </style>
     </fieldset>
-  </div>
 
-  <!-- Basics CSS3 -->
+  <!-- Border y Box-Shadow -->
   <div class="borders">
-    <h1 class="titulo"> Basics CSS3 </h1>
+    <h1 class="titulo"> Border y Box-Shadow </h1>
 
     <!-- Border-Radius -->
     <fieldset>
-      <legend> <h2> Border-Radius </h2> </legend>
+      <legend> <h2> Border-Radius/Style </h2> </legend>
       <div class="flex">
-        <div class="divBorderRadius boxsh" style="margin-top: 15px;"> border-radius: 0 10px 20px 30px; </div>
-        <div class="divCirculo boxsh"> border-radius: 50%; </div>
+        <div class="flex" style="width: 300px;">
+          <div class="boxsh divBorderRadius" style="margin-top: 15px;"> border-radius: 0 10px 20px 30px; </div>
+          <div class="boxsh divCirculo"> border-radius: 50%; </div>
+        </div>
+        <div class="flex" style="padding: 5px; flex-wrap: wrap; width: 220px;">
+          <font style="border-style: dotted; padding: 5px;">dotted.</font>
+          <font style="border-style: dashed; padding: 5px;">dashed.</font>
+          <font style="border-style: double; padding: 5px;">double.</font>
+          <font style="border-style: groove; padding: 5px;">grooved.</font>
+          <font style="border-style: ridge; padding: 5px;">ridged.</font>
+          <font style="border-style: inset; padding: 5px;">inset.</font>
+          <font style="border-style: outset; padding: 5px;">outset.</font>
+          <div class="cod"> <b>border-style:</b> <font class="gray">dotted...</font>; </div>
+        </div>
       </div>
       <style>
         .boxsh {
           width: 245px;
           height: 40px;
           padding: 7px;
-          border: 1px solid;
+          border: 1px solid black;
           text-align: center;
           display: table-cell;
           vertical-align: middle;
+          background-color: green;
+          color: white;
         }
 
         /* Border-Radius */
         .divBorderRadius {
           border-radius: 0 10px 20px 30px;
-          background-color: green;
-          color: white;
           width: 200px;
           height: 25px;
         }
@@ -811,8 +719,6 @@
           width: 60px;
           height: 60px;
           border-radius: 50%;
-          color: white;
-          background-color: green;
         }
       </style>
     </fieldset>
@@ -822,14 +728,14 @@
       <legend> <h2> Box-Shadow </h2> </legend>
       <div class="flex" style="margin-top: 15px;">
         <!-- Shadow -->
-        <div class="backgw boxsh" style="box-shadow: 10px 10px 10px 5px grey;">
+        <div class="backgw boxsh" style="box-shadow: 10px 10px 10px 5px grey; color: black;">
           <b>box-shadow:</b> 10px 10px 10px 5px #888; <br>
           <font color="grey">box-shadow: Hriz, Vert, blur, spread, color</font>
         </div>
 
         <!-- Shadow Inside -->
-        <div class="backgw boxsh" style="box-shadow: inset 5px 5px 15px grey, inset -5px -5px 15px grey;">
-          <b>box-shadow:</b> inset 10px 10px 5px green, <br> inset -10px -10px 5px grey ;
+        <div class="backgw boxsh" style="box-shadow: inset 5px 5px 15px grey, inset -5px -5px 15px grey; color: black">
+          <b>box-shadow:</b> inset 5px 5px 15px grey, <br> inset -5px -5px 15px black ;
         </div>
       </div>
 
@@ -873,142 +779,29 @@
         }
       </style>
     </fieldset>
-
-    <!-- Pseudo-Clases -->
-    <fieldset>
-      <legend> <h2>Pseudo-Clases</h2> </legend>
-      <div class="flex">
-        <div id="parent" class="ej">
-          <p>First paragraph</p>
-          <p>Second paragraph</p>
-          <p>Third paragraph</p>
-        </div>
-        <style>
-          #parent p:first-child {
-            color: green;
-            text-decoration: underline;
-          }
-        </style>
-        <div class="cod">
-          <font class="gray">/* first-last */</font> <br>
-          #<font class="orange">parent</font>:<font class="purp"><ins>first-child</ins></font> { <br>
-            &nbsp; <b>color:</b> green; <br>
-            &nbsp; <b>text-decoration:</b> underline; <br>
-          }
-        </div>
-      </div>
-    </fieldset>
-
-    <!-- Pseudo-Elemento -->
-    <fieldset>
-      <legend> <h2> Pseudo-Elemento</h2> </legend>
-
-      <h3> Primera Linea </h3>
-      <div class="flex">
-        <div class="ej">
-          <p class="textfirstline">
-            El siguiente ejemplo demuestra cómo usar el elemento ::first-line 
-            para agregar un efecto especial a la primera línea de elementos en el documento.
-          </p>
-        </div>
-        <div class="cod">
-          .<font class="yellow">texto</font>::<font class="purp">first-line</font> { <br>
-            &nbsp; <b>color:</b> green; <br>
-          }
-          <style>.textfirstline::first-line { color: green; }</style>
-        </div>
-      </div><hr>
-
-      <h3> Primera Letra </h3>
-      <div class="flex">
-        <div class="ej">
-          <p class="firstletter"> La primera letra es de otro color</p>
-        </div>
-        <div class="cod">
-          .<font class="yellow">texto</font>::<font class="purp">first-letter</font> { <br>
-            &nbsp; <b>background-color:</b> green; <br> }
-          <style> .firstletter::first-letter { background-color: green; } </style>
-        </div>
-      </div><hr>
-
-      <h3> Seleccion </h3>
-      <div class="flex">
-        <div class="ej">
-          <p class="seleccioname">Selecciona una parte del texto para marcarlo de otro color</p>
-        </div>
-        <div class="cod">
-          .<font class="yellow">texto</font>::<font class="purp">selection</font> { <br>
-            &nbsp; <b>background-color:</b> green; <br> }
-          <style>.seleccioname::selection { background-color: #589432; color: #FF6347; }</style>
-        </div>
-      </div><hr>
-
-      <h3> Before (Antes) </h3>
-      <div class="flex">
-        <div class="ej">
-          <p class="insertImageBeforeText">Insertar Imagen antes del Texto. </p>
-        </div>
-        <div class="cod">
-          .<font class="yellow">texto</font>::<font class="purp">before</font> { <br>
-            &nbsp; <b>content:</b> url("<font class="green">../Imgs/loguito.png</font>"); <br> }
-          <style> .insertImageBeforeText::before { content: url("../Imgs/loguito.png"); } </style>
-        </div>
-      </div>
-    </fieldset>
-
-    <!-- Word-Wrap -->
-    <fieldset>
-      <legend> <h2>Word-Wrap</h2> </legend>
-      <div class="flex">
-        <p class="wordwrap" style="word-wrap: normal;">
-          NormalNormalNormalNormalNormalNormal.
-          NormalNormalNormalNormalNormalNormal.
-        </p>
-        <div class="codigo">
-          .texto{ <br>
-            &nbsp; <b>word-wrap:</b> normal; <br>
-          } <br>
-        </div>
-      </div>
-
-      <div class="flex">
-        <p class="wordwrap" style="word-wrap: break-word;">
-          BreakWord.BreakWord.BreakWord.BreakWord.BreakWord.
-        </p>
-        <div class="codigo">
-          .texto{ <br>
-            &nbsp; <b>word-wrap:</b> break-word; <br>
-          }
-        </div>
-      </div>
-      <style> .wordwrap{ border: 1px solid black; width: 100px; height: 70px; } </style>
-    </fieldset>
   </div>
 
-  <!-- Degradados y Fondos -->
+  <!-- Backgroud -->
   <div class="borders">
-    <h1 class="titulo"> Degradados y Fondos </h1>
+    <h1 class="titulo"> Backgroud </h1>
     <style> .deg { width: 50px; height: 50px; } </style>
 
     <!-- Dergadados Lineales -->
     <fieldset>
       <legend> <h2>Dergadados Lineales</h2> </legend>
-      <!-- <p>(Si no se usa rgb usar "-webkit-linear-gradient(#fff, #000)")</p> -->
-      lineal gradient
       <div class="flex">
         <div class="flex">
           <div class="ej wAuto"><div class="degradados deg"></div></div>
           <div class="cod"> <b>background:</b><br> linear-gradient(red, black); </div>
-          <style> div.degradados { background: linear-gradient(red, black); } </style>
-        </div>
+          <style> div.degradados { background: linear-gradient(pink, blue); } </style>
+        </div> <div class="hr"></div>
         <div class="flex">
           <div class="ej wAuto"><div class="degradadosmulticolor deg"></div></div>
           <div class="cod"> <b>background:</b> linear-gradient <br>(blue 0%, red 30%, black 80%); </div>
-          <style> div.degradadosmulticolor { background: linear-gradient(blue 0%, red 40%, black 80%); } </style>
+          <style> div.degradadosmulticolor { background: linear-gradient(yellow 0%, blue 40%, red 80%); } </style>
         </div>
       </div><br>
 
-      bottom-left & 100deg
       <div class="flex">
         <div class="flex">
           <div class="ej wAuto"><div class="second deg"></div></div>
@@ -1016,7 +809,7 @@
             <b>background:</b> linear-gradient <br>(<u>45deg</u>, black, red, green); <br> <font class="gray">(<u>bottom left</u>, black, red, green)</font> 
           </div>
           <style> div.second { background: -webkit-linear-gradient(45deg, black, red, green); } </style>
-        </div>
+        </div> <div class="hr"></div>
         <div class="flex">
           <div class="ej wAuto"> <div class="repeating deg"></div> </div>
           <div class="cod"> <b>background:</b> repeating-linear-gradient <br> (red, black 17px); </div>
@@ -1029,14 +822,14 @@
     <fieldset>
       <legend> <h2>Degradados Radiales</h2> </legend>
       
-      <div>
+      <div class="flex">
         <div class="first48 degrad">Ellipse (Default)</div>
         <div class="second48 degrad">Circle</div>
         <div class="first49 degrad">Top Left</div>
         <div class="second49 degrad">In Percentages</div>
         <div class="colorstop degrad">Color Stops</div>
       </div>
-      <div class="codigo">
+      <div class="cod">
         <b>background:</b> -webkit-radial-gradient(<u>position</u>, shape or size, color-stops); <br>
         <div class="gray"><b>position:</b> top, left.. 0% 0%(sup izq), 50% 50%(medio)</div>
       </div>
@@ -1111,83 +904,53 @@
     </fieldset>
   </div>
 
-  <!-- transiciones y Transparencia -->
+  <!-- transiciones y Transferencia -->
   <div class="borders">
     <h1 class="titulo"> transformación y transicion </h1>
 
     <!-- Transition -->
     <fieldset>
       <legend> <h2>Transition</h2> </legend>
-
-      <!-- The @keyframes Rule -->
-      @keyframes (Animación)
-      <div class="flex">
-        <div class="ej" style="width: 50%;"> <div class="colorforcc"></div> </div>
-        <div class="cod">
-          .div { <br>
-            &nbsp; <b>animation-name:</b> colorchange; <br>
-            &nbsp; <b>animation-duration:</b> 1s; <br>
-            &nbsp; <b>animation-iteration-count:</b> infinite; <br>
-          } <font class="gray">animation: colorchange2 2s infinite;</font>
-        </div>
-        <div class="cod">
-          <font class="aqua">@keyframes</font> colorchange { <br>
-            &nbsp; <font class="yellow">0%</font> { <b>background-color:</b> red; } <br>
-            &nbsp; <font class="yellow">50%</font> { <b>background-color:</b> green; } <br>
-            &nbsp; <font class="yellow">100%</font> { <b>background-color:</b> blue; } <br>
-          } <br>
-        </div>
-        <style>
-          div.colorforcc {
-            width: 75px;
-            height: 75px;
-            background-color: red;
-            animation-name: colorchange;
-            animation-duration: 1s;
-            animation-iteration-count: infinite;
-          }
-
-          @keyframes colorchange {
-            0% { background-color: red; }
-            50% { background-color: green; }
-            100% { background-color: blue; }
-          }
-        </style>
-      </div> <br>
+      <style>
+        div.colorforcc {
+          width: 75px;
+          height: 75px;
+          background-color: red;
+          animation-name: colorchange;
+          animation-duration: 1s;
+          animation-iteration-count: infinite;
+        }
+      </style>
 
       <!-- Anim Prop -->
-      Propiedades
       <div class="flex">
         <div class="ej"> <div class="animdurat"></div> </div>
         <div class="cod">
           .div { <br>
-            &nbsp; <b>animation-name:</b> widthChange; <br>
-            &nbsp; <b>animation-duration:</b> 1s; <br>
-            &nbsp; <b>animation-iteration-count:</b> infinite; <br> 
-          } <font class="gray">animation: colorchange2 2s infinite;</font>
+            &nbsp; <b>animation:</b> widthChange 2s infinite; <br> }
         </div>
         <div class="cod">
           <font class="aqua">@keyframes</font> widthChange { <br>
-            &nbsp; <font class="yellow">from</font> { width: 0px; } <br>
-            &nbsp; <font class="yellow">to</font> { width: 250px; } <br> }
+            &nbsp; <font class="yellow">from</font> { width: 0px; } <font class="gray">0%</font> <br>
+            &nbsp; <font class="yellow">to</font> { width: 250px; } <font class="gray">100%</font>  }
         </div>
         <style>
           div.animdurat {
-            height: 75px;
+            height: 50px;
             background-color: green;
-            animation: colorchange2 2s infinite;
+            animation: colorchange2 1.2s infinite;
           }
 
           @keyframes colorchange2 {
-            from { width: 50px; }
-            to { width: 200px; }
+            from { width: 50px; } 
+            to { width: 150px; }
           }
         </style>
       </div>
       <details>
         <summary>Info...</summary>
         <pre class="cod">
-        (animation-timing-function: *)
+        (timing-function: *)
           ease (default) - slow start, then fast, then end slowly 
           linear - same speed from start to end
           ease-in - slow start
@@ -1195,23 +958,18 @@
           ease-in-out - slow start and end
           cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier Function
 
-        (animation-direction: *)
+        (direction: *)
           normal - the default value, which means it plays forward from 0 % to 100%.
           reverse - plays the keyframe in an opposite direction from 100 % to 0%
           alternate - the animation first runs forward, then backward, then forward.
           alternate-reverse - the animation first runs backward, then forward, then backward.
 
-          animation-name: colorchange2;
-          animation-duration: 3s;
-          animation-timing-function: ease-in;
           animation-delay: 1s;
-          animation-iteration-count: infinite;
           animation-direction: reverse; 
         </pre>
       </details> <hr>
 
       <!-- Transition -->
-      Transition (transicion)
       <div class="flex">
         <div class="ej">
           <div class="box3d transit"> <font style="font-size: smaller;">Apuntame.</font> </div>
@@ -1229,7 +987,6 @@
       </div> <br>
 
       <!-- Scale -->
-      Scale (Tamaño)
       <div class="flex">
         <div class="flex">
           <div class="ej wAuto"> <div class="box3d scalerot"></div> </div>
@@ -1257,10 +1014,9 @@
             }
           </style>
         </div>
-      </div><br>
+      </div>
 
       <!-- Skew (Torcer) -->
-      Skew (Torcer) y Rotate (Rotar)
       <div class="flex">
         <div class="flex">
           <div class="ej wAuto"> <div class="box3d skew"></div> </div>
@@ -1296,10 +1052,9 @@
             }
           </style>
         </div>
-      </div><br>
+      </div> <br>
 
       <!-- 3D Rotation -->
-      3D Rotation
       <div class="flex">
         <div class="ej flex"> 
           <div class="box3d rot3d1">Texto</div>
@@ -1331,7 +1086,6 @@
       </div> <br>
 
       <!-- 3D Translate -->
-      3D Translate
       <div class="flex">
         <div class="ej" style="width: auto;"> <div class="empty"> <div class="box3d translate3d"></div> </div> </div>
         <div class="cod" style="width: 30%;"> .fondoGris { <br> &nbsp; <b>perspective:</b> 60px; <br> } </div>
@@ -1355,10 +1109,9 @@
             100% { transform: none }
           }
         </style>
-      </div> <br>
+      </div>
 
       <!-- 3D Persp -->
-      3D Perspective
       <div class="flex">
         <div class="ej" style="width: auto;"> <div class="empty"> <div class="box3d persp3d"></div> </div> </div>
         <div class="cod" style="width: 30%;"> .fondoGris { <br> &nbsp; <b>perspective:</b> 60px; <br> } </div>
@@ -1420,11 +1173,8 @@
         <div> blur 5px <br>
           <img class="fltr" style="filter: blur(5px);" src="../Imgs/tree.jpg" />
         </div>
-        <div> mult-filtrs (blr+hrot)<br>
-          <img class="fltr" style="filter: blur(5px) hue-rotate(180deg);" src="../Imgs/tree.jpg" />
-        </div>
         <div style="position: relative;"> <b>backdrop-filter:</b> blur(5px) <br>
-          <img height="150px" src="../Imgs/tree.jpg" />
+          <img height="110px" src="../Imgs/tree.jpg" />
           <div class="bkdrp"></div>
           <details>
             .fondo{ <br>
