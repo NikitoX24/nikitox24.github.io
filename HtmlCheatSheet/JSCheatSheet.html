@@ -36,14 +36,14 @@
     <h1 class="titulo">Fundamentos</h1>
 
     <fieldset> <!-- Script -->
-      <legend> <h2>&lt;Script></h2> </legend>
+      <legend> &lt;Script> </legend>
       <div class="cod">
         &lt;<span>script</span> <font class="purp">type</font> ="text/javascript" <font class="purp">src</font>="htmlcheatsheet.js"> &lt;/<span>script</span>>
       </div>
     </fieldset>
 
     <fieldset> <!-- Salidas -->
-      <legend> <h2>Salidas</h2> </legend>
+      <legend> Salidas </legend>
       <div class="flex">
         <div style="width: 70%;">
           Salida por <b>Html</b>:
@@ -60,28 +60,24 @@
       </div>
     </fieldset>
 
-    <!-- Variables y Funciones -->
-    <div class="flex">
-      <fieldset class="width100 "> <!-- Variables -->
-        <legend> <h2>Variables</h2> </legend>
-        <div class="cod  marg0">
+    <fieldset> <!-- Variable -->
+      <legend> Variables y Strings </legend>
+      <div class="flex">
+        <div class="cod">
           <font class="purp">var</font> a <font class="purp">=</font> <font class="orange">10</font>; <font class="comentario"> // publica.</font> <br>
           <font class="purp">let</font> b <font class="purp">=</font> <font class="orange">true</font>; <font class="comentario"> // privada.</font> <br>
-          <font class="purp">const</font> c <font class="purp">=</font> '<font class="green">hello</font>'; <font class="comentario">// privado y no se puede modificar.</font>
+          <font class="purp">const</font> c <font class="purp">=</font> '<font class="green">hello</font>'; <font class="comentario">// privado y no se puede modificar.</font> <br>
         </div>
-      </fieldset>
-      
-      <fieldset class="width100"> <!-- Funcion -->
-        <legend> <h2> Funciones </h2> </legend>
-        <div class="codigo  marg0">
-          <font class="purp">function</font> <font class="blue">name</font>( parametro1, parametro2 ) { <br>
-            &nbsp; <font class="aqua">return</font> parametro1 + parametro2; <br> }
+        <div class="cod">
+          <font class="gray"> // Literales de plantilla</font> <br>
+          <font class="purp">let</font> <b>nombre</b> <font class="purp">=</font> '<font class="green">David</font>'; <br>
+          <font class="purp">let</font> mensaje <font class="purp">=</font> `<font class="green">Welcome</font> <font class="aqua">${</font><b>nombre</b><font class="aqua">}</font>!`;
         </div>
-      </fieldset>
-    </div>
+      </div>
+    </fieldset>
 
     <fieldset> <!-- Arrays -->
-      <legend> <h2>Arrays</h2> </legend>
+      <legend> Arrays </legend>
       <!-- Crear: --> Crear:
       <div class="flex">
         <div class="cod">
@@ -106,7 +102,7 @@
           couses[<font class="orange">1</font>] = "C++"; <font class="comentario">//"CSS" ahora es "C++"</font>
         </div> 
       </div>
-      <details open>
+      <details>
         <summary>Propiedades...</summary>
         palabra.includes("A"); // true <br>
         palabra.indexOf("A"); // 1 <br>
@@ -115,7 +111,7 @@
     </fieldset>
 
     <fieldset> <!-- Alert, Prompt, Confirm. -->
-      <legend> <h2>Alert, Prompt, Confirm.</h2> </legend>
+      <legend> Alert, Prompt, Confirm. </legend>
       <div class="flex">
         <div>
           <button onclick="botonalerta1();"> Alert </button>
@@ -135,18 +131,28 @@
       </div>
     </fieldset>
     
-    <fieldset> <!-- SetInterval -->
-      <legend><h2>SetInterval (Update)</h2></legend>
-      <div class="codigo">
-        var x = <font class="blue">setInterval</font>(<font class="blue">funcion</font>, <font class="orange">1000</font>) <font class="comentario">(1seg)</font> <br>
-        function <font class="blue">funcion</font>() { <br>
-          &nbsp; <font class="blue">clearInterval</font>(x); <br>
-        } <br>
-      </div>
-    </fieldset>
+    <!-- SetInterval y Funciones -->
+    <div class="flex">
+      <fieldset class="width100"> 
+        <legend>SetInterval (Update)</legend>
+        <div class="cod">
+          var x = <font class="blue">setInterval</font>(<font class="blue">funcion</font>, <font class="orange">1000</font>) <font class="comentario">(1seg)</font> <br>
+          function <font class="blue">funcion</font>() { <br>
+            &nbsp; <font class="blue">clearInterval</font>(x); <br>
+          } <br>
+        </div>
+      </fieldset>
+      <fieldset class="width100"> <!-- Funcion -->
+        <legend>  Funciones  </legend>
+        <div class="codigo  marg0">
+          <font class="purp">function</font> <font class="blue">name</font>( parametro1, parametro2 ) { <br>
+            &nbsp; <font class="aqua">return</font> parametro1 + parametro2; <br> }
+        </div>
+      </fieldset>
+    </div>
 
     <fieldset> <!-- Condicionales -->
-      <legend> <h2>Condicionales</h2> </legend>
+      <legend> Condicionales </legend>
       <div class="flex">
         <div class="cod">
           <font class="aqua">if</font> (condicion) { <br>
@@ -167,26 +173,6 @@
         </div>
       </div>
     </fieldset>
-
-    <fieldset> <!-- Bucles -->
-      <legend><h2>Bucles</h2></legend>
-      <div class="flex">
-        <div class="cod">
-          <font class="aqua">for</font> ( Condicion1; Condicion2) { <br>
-            &nbsp; <font class="comentario">// Bloque de Codigo</font> <br> }
-        </div>
-        <div class="cod">
-          <font class="aqua">while</font> (Condicion ) { <br>
-            &nbsp; <font class="comentario">// Bloque de Codigo</font> <br> }
-        </div>
-
-        <div class="cod">
-          <font class="aqua">do</font> { <br>
-            &nbsp; <font class="comentario">// Bloque de Codigo</font> <br> } <br>
-          <font class="aqua">while</font> (Condicion)
-        </div>
-      </div>
-    </fieldset>
   </div>
 
   <!-- Otros -->
@@ -195,10 +181,7 @@
     
     <!-- Math -->
     <fieldset>
-      <legend> <h2>Math:</h2> </legend>
-      <div class="codigo">
-        document.<font class="blue">write</font>(<u>Math.PI</u>); <font class="gray">// 3.14....</font>
-      </div>
+      <legend> Math: </legend>
       <div class="cod">
         function randomNumber(min, max) { <br>
           &nbsp; return Math.floor(Math.random() * (max - min)) + min; <br> }
@@ -237,21 +220,9 @@
 
     <!-- Date -->
     <fieldset>
-      <legend> <h2>Fechas:</h2> </legend>
+      <legend> Fechas: </legend>
 
-      Guardar fecha actual:
-      <div class="codigo">
-        <font class="purp">var</font> d = <font class="purp">new</font> <font class="blue">Date</font>();
-        <font class="gray"> // <script> var d = new Date(); document.write(d); </script> </font>
-      </div>
-
-      Crear fecha;
-      <div class="codigo">
-        <font class="purp">var</font> d1 = <font class="purp">new</font> <font class="blue">Date</font>("January 2, 2015 10:42:00");
-        <font class="gray"> // Fri Jan 02 2015 10:42:00</font>
-      </div><hr>
-
-      <h3>Metodos de Date:</h3>
+      Metodos de Date:
       <div class="flex">
         <div class="codigo flex width100 marg0">
           <div class="width100">
@@ -268,7 +239,7 @@
           </div>
         </div>
         <div class="cod width100">
-          <font class="purp">var</font> date1 = <font class="purp">new</font> <font class="blue">Date</font>(); <br>
+          <font class="purp">var</font> date1 = <font class="purp">new</font> <font class="blue">Date</font>(); <font class="gray"> // Crear</font> <br>
           <font class="purp">var</font> hours = date1.<font class="blue">getHours</font>(); <br>
           document.<font class="blue">write</font>(<u>hours</u>); <br>
           <font class="gray">// Muestra solo la hora actual, sin min/seg.</font>
@@ -278,7 +249,7 @@
 
     <!-- Almacenamiento -->
     <fieldset>
-      <legend> <h2> Almacenamiento (API) </h2> </legend>
+      <legend>  Almacenamiento (API)  </legend>
       <div class="flex">
         <div class="codigo marg0">
           sessionStorage(); <font class="gray"> //Temporal.</font> <br>
@@ -295,7 +266,7 @@
     
     <!-- Dragg & Drop -->
     <fieldset>
-      <legend> <h2> Dragg & Drop (API) </h2> </legend>
+      <legend>  Dragg & Drop (API)  </legend>
       <div class="flex">
         <div class="flex width100" style="margin: auto;">
           <div id="box" ondrop="drop(event)" ondragover="allowDrop(event)" style="border:1px solid black;
@@ -304,35 +275,33 @@
           <img id="image" src="../Imgs/cat1.png" draggable="true" ondragstart="drag(event)" width="150" height="150" alt="" style="cursor: move;"/>
         </div>
         <div class="cod wAuto" style="font-size: smaller;">
-          function allowDrop(ev) { <br>
-            &nbsp; ev.preventDefault(); <br>
-          } <br> <br>
+          <font class="purp">function</font> <font class="blue">allowDrop</font>(ev) { <br>
+            &nbsp; ev.<font class="blue">preventDefault</font>(); <br>
+          } <br>
   
-          function drag(ev) { <br>
-            &nbsp; ev.dataTransfer.setData("text", ev.target.id); <br>
-          } <br> <br>
+          <font class="purp">function</font> <font class="blue">drag</font>(ev) { <br>
+            &nbsp; ev.dataTransfer.<font class="blue">setData</font>("text", ev.target.id); <br>
+          } <br>
   
-          function drop(ev) { <br>
-            &nbsp; ev.preventDefault(); <br>
-            &nbsp; var data = ev.dataTransfer.getData("text"); <br>
-            &nbsp; ev.target.appendChild(document.getElementById(data)); <br>
+          <font class="purp">function</font> <font class="blue">drop</font>(ev) { <br>
+            &nbsp; ev.<font class="blue">preventDefault</font>(); <br>
+            &nbsp; var data = ev.dataTransfer.<font class="blue">getData</font>("text"); <br>
+            &nbsp; ev.target.<font class="blue">appendChild</font>(document.<font class="blue">getElementById</font>(data)); <br>
           }
         </div>
       </div>
       <div class="cod">
-        &lt;div id="box" ondrop="drop(event)"  ondragover="allowDrop(event)" &lt;/div> <br>
-        &lt;img id="image" src="cat1.png" draggable="true" ondragstart="drag(event)" style="cursor: move;"/>
+        <span>&lt;div</span> <font class="purp">id</font>="box" <font class="purp">ondrop</font>="drop(event)"  <font class="purp">ondragover</font>="allowDrop(event)" <span>&lt;/div></span> <br>
+        <span>&lt;img</span> <font class="purp">id</font>="image" <font class="purp">src</font>="cat1.png" <font class="purp">draggable</font>="true" <font class="purp">ondragstart</font>="drag(event)" <font class="purp">style</font>="cursor: move;"<span>/></span>
       </div>
 
       <script>
         function allowDrop(ev) {
           ev.preventDefault();
         }
-
         function drag(ev) {
           ev.dataTransfer.setData("text", ev.target.id);
         }
-
         function drop(ev) {
           ev.preventDefault();
           var data = ev.dataTransfer.getData("text");
@@ -349,7 +318,7 @@
     <!-- Obj y Constructor -->
     <div class="flex">
       <fieldset class="width100">
-        <legend><h2>Crear y Usar Objs</h2></legend>
+        <legend>Crear y Usar Objs</legend>
         <div class="codigo">
           <font class="purp">var</font> person = { <br>
             &nbsp; <strong>name:</strong> "john", <br>
@@ -364,7 +333,7 @@
 
       <!-- Constructor -->
       <fieldset class="width100">
-        <legend><h2>Constructor</h2></legend>
+        <legend>Constructor</legend>
         <div class="codigo">
           <font class="purp">function</font> <font class="blue">person</font>(name, age, color) { <br>
             &nbsp; this.name = name; <br>
@@ -382,7 +351,7 @@
 
     <!-- Metodos -->
     <fieldset>
-      <legend> <h2>Metodos</h2> </legend>
+      <legend> Metodos </legend>
       <div class="flex">
         <div class="codigo width100">
           <legend><font class="gray">//Metodo en los Objetos</font></legend><br>
@@ -426,7 +395,7 @@
 
     <!-- DOM -->
     <fieldset>
-      <legend> <h2>DOM</h2> </legend>
+      <legend> DOM </legend>
       El objeto <font class="blue"><u>document</u></font> es la raiz de todos los otros objs de la pag. <br>
       <div class="codigo marg0">
         <font class="blue"><u>document</u></font>.body.<font class="purp">innerHTML</font> = "Algun Texto";
@@ -436,7 +405,7 @@
 
     <!-- Seleccionar Elementos -->
     <fieldset>
-      <legend> <h2>Seleccionar/Buscar Elementos</h2> </legend>
+      <legend> Seleccionar/Buscar Elementos </legend>
 
       Buscar y usar <b>ID</b>:
       <div class="flex">
@@ -462,7 +431,7 @@
 
     <!-- Propiedades y metodos -->
     <fieldset>
-      <legend> <h2> Propiedades y metodos </h2> </legend>
+      <legend>  Propiedades y metodos  </legend>
 
       Cambiar valores <u>(Usando CHILDNODES)</u>
       <div class="flex">
@@ -488,7 +457,7 @@
 
     <!-- Modificar Atributos -->
     <fieldset>
-      <legend> <h2> Modificar Atributos </h2> </legend>
+      <legend>  Modificar Atributos  </legend>
       <div class="flex">
         <div> 
           <div class="ej wAuto" id="style" style="color: orange;"> 
@@ -531,11 +500,11 @@
 
     <!-- Elementos -->
     <fieldset>
-      <legend> <h2>Elementos:</h2> </legend>
+      <legend> Elementos: </legend>
 
       <div class="flex">
         <div>
-          <h2> Crear y borrar Elementos </h2>
+           Crear y borrar Elementos 
           <div class="ejemplo" id="divElement"> Texto. </div>
           <button onclick="createELEMENT()">Crear</button>
           <button onclick="delElem()">Borrar</button>
@@ -582,7 +551,7 @@
 
     <!-- Crear Animaciones -->
     <fieldset>
-      <legend> <h2> Crear Animaciones </h2> </legend>
+      <legend>  Crear Animaciones  </legend>
       <div class="flex">
         <div class="width100">
           <div id="container1">
@@ -655,7 +624,7 @@
 
     <!-- OnClick -->
     <fieldset>
-      <legend> <h2>OnClick</h2> </legend>
+      <legend> OnClick </legend>
       <!-- Html -->
       <div class="flex">
         <div style="width: 45%;">
@@ -692,7 +661,7 @@
 
     <!-- OnChange -->
     <fieldset>
-      <legend> <h2> OnChange </h2> </legend>
+      <legend>  OnChange  </legend>
       <div class="flex">
         <div style="width: 100%;">
           Convertir texto en Mayustulas.<br>
@@ -718,7 +687,7 @@
 
     <!-- Onload -->
     <fieldset>
-      <legend> <h2>OnLoad (Al cargar la pag.)</h2> </legend>
+      <legend> OnLoad (Al cargar la pag.) </legend>
       <div class="flex">
         <div class="codigo" style="width: 100%;">
           <font class="gray"> // Llamar una funcion desde html</font> <br>
@@ -733,7 +702,7 @@
 
     <!-- crear un evento manipulador -->
     <fieldset>
-      <legend> <h2> Crear un Evento Manipulador </h2> </legend>
+      <legend>  Crear un Evento Manipulador  </legend>
       <button id="demo8"> Evento de un solo uso </button> <br>
       <div class="codigo">
         &lt;<span>button</span> <font class="purp">id</font>="<font class="green">demo8</font>"> Evento de un solo uso &lt;/<span>button</span>> <br><br>
@@ -777,7 +746,7 @@
 
     <!-- Propagacion de eventos - bubbling & capturing -->
     <fieldset>
-      <legend> <h2> Propagacion de eventos - bubbling & capturing</h2> </legend>
+      <legend>  Propagacion de eventos - bubbling & capturing </legend>
       La propagación de eventos da orden en la que se ejecutan las funciones, <br>
       (ej. Si tiene un elemento &lt;p> dentro de un elemento &lt;div> y el usuario hace clic en el elemento &lt;p>, <br>
       ¿qué evento de "clic" de elemento debe manejarse primero?) <br><br>
@@ -796,7 +765,7 @@
 
     <!-- Image Slider -->
     <fieldset>
-      <legend> <h2> Image Slider </h2> </legend>
+      <legend>  Image Slider  </legend>
       <div class="flex">
         <div>
           <img id="slider" src="../Imgs/1.jpg" height="100px" /> <br>
@@ -860,7 +829,7 @@
 
     <!-- validacion de formularios -->
     <fieldset>
-      <legend> <h2> Validacion de formularios </h2> </legend>
+      <legend>  Validacion de formularios  </legend>
 
       <!-- Repetir -->
       <div class="flex">
@@ -956,7 +925,7 @@
 
     <!-- Variables y Strings -->
     <fieldset>
-      <legend> <h2>Variables y Strings</h2> </legend>
+      <legend> Variables y Strings </legend>
       <div class="flex">
         <div class="cod">
           <font class="purp">var</font> a <font class="purp">=</font> <font class="orange">10</font>; <font class="comentario"> // publica.</font> <br>
@@ -975,7 +944,7 @@
       <summary>Otros...</summary>
       <!-- Bucles For -->
       <fieldset>
-        <legend> <h2> Bucles For en ES6 </h2> </legend>
+        <legend>  Bucles For en ES6  </legend>
         <details>
           <div class="flex">
             <div class="codigo width100">
@@ -995,7 +964,7 @@
       </fieldset>
       <!-- ForEach -->
       <fieldset>
-        <legend> <h2>ForEach en ES6 (recorrer Arrays)</h2> </legend>
+        <legend> ForEach en ES6 (recorrer Arrays) </legend>
           <details>
             <div class="flex">
               <div class="width100">
@@ -1024,7 +993,7 @@
       </fieldset>
       <!-- Funciones -->
       <fieldset>
-        <legend> <h2> Funciones en ES6</h2> </legend>
+        <legend>  Funciones en ES6 </legend>
         <details>
           <div class="flex">
             <div class="width100">
@@ -1063,7 +1032,7 @@
       </fieldset>
       <!-- Parametros -->
       <fieldset>
-        <legend> <h2>Parametros predeterminados:</h2> </legend>
+        <legend> Parametros predeterminados: </legend>
         <details>
           <div class="flex">
             <div class="width100">
@@ -1092,7 +1061,7 @@
       </fieldset>
       <!-- Objetos -->
       <fieldset>
-        <legend> <h2> Objetos en ES6</h2> </legend>
+        <legend>  Objetos en ES6 </legend>
         <details>
           Objeto
           <div class="codigo">
@@ -1216,7 +1185,7 @@
       </fieldset>
       <!-- Destructuracion en ES6 -->
       <div class="borders">
-        <h2> Destructuracion en ES6 </h2>
+         Destructuracion en ES6 
         <details>
           <u><b>Destructurar Arrays:</b></u>
           <div class="codigo">
@@ -1280,7 +1249,7 @@
       </div>
       <!-- Rest y Spread -->
       <div class="borders">
-        <h2> REST & SPREAD </h2>
+         REST & SPREAD 
         <details>
           <u><b>Parámetros de REST (descanso):</b></u>
           <div class="codigo">
@@ -1367,7 +1336,7 @@
       </div>
       <!-- Clases -->
       <div class="borders">
-        <h2> Clases en ES6</h2>
+         Clases en ES6
         <details>
           <u><b>Constructor - (al iniciar):</b></u>
           <div class="codigo">
@@ -1481,7 +1450,7 @@
       </div>
       <!-- Map y Set -->
       <div class="borders">
-        <h2> Map & Set</h2>
+         Map & Set
         <details>
           <div class="codigo">
             <pre>
@@ -1516,7 +1485,7 @@
       </div>
       <!-- Otros -->
       <div class="borders">
-        <h2> Otros </h2>
+         Otros 
         <details>
           <h3>PROMISES (por tiempo):</h3>
           <div class="flex">
@@ -1599,7 +1568,7 @@
 <script>
   var flecha = document.getElementsByClassName("flecha");
   for (var x = 0; x <flecha.length; x++) {
-    flecha[x].innerHTML = "<h2>➜</h2>";
+    flecha[x].innerHTML = "➜";
   }
 </script>
 <script type="text/javascript" src="../MenuJS.js"></script>
