@@ -86,6 +86,7 @@
     <fieldset>
       <legend>Alineación de Texto</legend>
       
+      <!-- (Horizontal y Vertical) -->
       <div style="height: 100px;">
         <div class="boxizq" style="width: 50%;"> <!-- Text-Align (Horizontal) -->
           <div class="flex">
@@ -119,73 +120,42 @@
       </div><hr>
 
       <!-- Text-Align Property (Vertical) -->
-      <div class="flex">
-        <div class="ej"> This is an <span style="vertical-align: baseline;"> <b> inline text </b></span> example. </div>
-        <div class="cod"> <b>vertical-align:</b> baseline; </div>
-      </div>
-
-      <div class="flex">
-        <div class="ej"> This is a <span style="vertical-align: sub;"><b>sub line text</b></span> example. </div>
-        <div class="cod"> <b>vertical-align:</b> sub; </div>
-      </div>
-
-      <div class="flex">
-        <div class="ej"> This is a <span style="vertical-align: super;"><b>super line text</b></span> example. </div>
-        <div class="cod"> <b>vertical-align:</b> super; </div>
-      </div>
-
-      <div class="flex">
-        <div class="ej"> This is a <span style="vertical-align: -10px;"><b>pixel</b></span> example. </div>
-        <div class="cod"> <b>vertical-align:</b> -10px; </div>
-      </div><hr>
-
-      <div class="flex">
-        <div class="ej">
-          <font style="text-decoration: overline;">This is <span> overlined </span> text. </font>
+      <div>
+        <div class="flex">
+          <div class="ej"> This is an <span style="vertical-align: baseline;"> <b> inline text </b></span> example. </div>
+          <div class="cod"> <b>vertical-align:</b> baseline; </div>
         </div>
-        <div class="cod"> <b>text-decoration:</b> overline; </div>
-      </div>
-
-      <div class="flex">
-        <div class="ej">
-          <font style="text-decoration: underline;">This is <span> lined-through</span> text. </font>
+        <div class="flex">
+          <div class="ej"> This is a <span style="vertical-align: sub;"><b>sub line text</b></span> example. </div>
+          <div class="cod"> <b>vertical-align:</b> sub; </div>
         </div>
-        <div class="cod"> <b>text-decoration:</b> line-through; </div>
-      </div>
-
-      <div class="flex">
-        <div class="ej">
-          <font style="text-decoration: line-through;">This is <span> underlined</span> text. </font>
+        <div class="flex">
+          <div class="ej"> This is a <span style="vertical-align: super;"><b>super line text</b></span> example. </div>
+          <div class="cod"> <b>vertical-align:</b> super; </div>
         </div>
-        <div class="cod"> <b>text-decoration:</b> underline; </div>
-      </div> <hr>
-
-      <!-- Text-Align Property Div (Vertical) -->
-      <div class="flex">
-      <div class="main">
-        <div class="paragraph">
-          Aligned to the middle of div.
+        <div class="flex">
+          <div class="ej"> This is a <span style="vertical-align: -10px;"><b>pixel</b></span> example. </div>
+          <div class="cod"> <b>vertical-align:</b> -10px; </div>
+        </div><hr>
+        <div class="flex">
+          <div class="ej">
+            <font style="text-decoration: overline;">This is <span> overlined </span> text. </font>
+          </div>
+          <div class="cod"> <b>text-decoration:</b> overline; </div>
         </div>
-      </div> <br>
-      <style>
-        .main {
-          height: 70px;
-          width: 300px;
-          background-color: rgba(128, 128, 128, 0.398);
-          display: inline-table;
-        }
-        .paragraph {
-          text-align: center;
-          display: table-cell;
-          vertical-align: middle;
-        }
-      </style>
-      <div class="codigo">
-        &nbsp; <b>display:</b> flex; <br>
-        &nbsp; <b>align-items:</b> center; <br>
-        &nbsp; <b>justify-content:</b> center;
+        <div class="flex">
+          <div class="ej">
+            <font style="text-decoration: underline;">This is <span> lined-through</span> text. </font>
+          </div>
+          <div class="cod"> <b>text-decoration:</b> line-through; </div>
+        </div>
+        <div class="flex">
+          <div class="ej">
+            <font style="text-decoration: line-through;">This is <span> underlined</span> text. </font>
+          </div>
+          <div class="cod"> <b>text-decoration:</b> underline; </div>
+        </div>
       </div>
-    </div>
     </fieldset>
 
     <!-- Text-Sadow -->
@@ -461,6 +431,51 @@
         <div class="cod"> <b>display:</b> inline; </div>
       </div> <hr>
       
+      <!-- Centering Div -->
+      <div class="flex">
+        <div class="ej">
+          <div class="main">
+            <div class="flxBoxs"></div>
+            <div class="flxBoxs"></div>
+            <div class="flxBoxs"></div>
+          </div>
+        </div>
+        <style>
+          .main {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .paragraph {
+            display: table;
+            margin: 0 auto;
+          }
+        </style>
+        <div class="cod">
+          &nbsp; <b>display:</b> flex; <br>
+          &nbsp; <b>align-items:</b> center; <br>
+          &nbsp; <b>justify-content:</b> center;
+        </div>
+      </div> <hr>
+
+      <!-- Centering Div 2 -->
+      <div class="flex">
+        <div class="ej" style="height: 100px;">
+          <div class="paragraph">
+            asd
+            <!-- <div class="flxBoxs"></div>
+            <div class="flxBoxs"></div>
+            <div class="flxBoxs"></div> -->
+          </div>
+        </div>
+        <div class="cod">
+          &nbsp; <b>display:</b> flex; <br>
+          &nbsp; <b>align-items:</b> center; <br>
+          &nbsp; <b>justify-content:</b> center;
+        </div>
+      </div> <hr>
+      
       <!-- Display: Flex -->
       <div class="flex">
         <div class="ej">
@@ -497,6 +512,74 @@
           <!-- <button>space-evenly</button>
           <button>space-around</button>
           <button>space-between</button> -->
+      </div><hr>
+
+      <!-- justify-content -->
+      <div class="flex" style="flex-wrap: wrap;">
+        <div>
+          <b>justify-content: </b> start
+          <div class="flx" style="justify-content: start;">
+            <div class="flxBoxs"></div>
+            <div class="flxBoxs"></div>
+            <div class="flxBoxs"></div>
+          </div>
+        </div>
+        <div>
+          <b>justify-content: </b> center
+          <div class="flx" style="justify-content: center;">
+            <div class="flxBoxs"></div>
+            <div class="flxBoxs"></div>
+            <div class="flxBoxs"></div>
+          </div>
+        </div>
+        <div>
+          <b>justify-content: </b> end
+          <div class="flx" style="justify-content: end;">
+            <div class="flxBoxs"></div>
+            <div class="flxBoxs"></div>
+            <div class="flxBoxs"></div>
+          </div>
+        </div>
+        <div>
+          <b>justify-content: </b> space-between
+          <div class="flx" style="justify-content: space-between;">
+            <div class="flxBoxs"></div>
+            <div class="flxBoxs"></div>
+            <div class="flxBoxs"></div>
+          </div>
+        </div>
+        <div>
+          <b>justify-content: </b> space-evenly
+          <div class="flx" style="justify-content: space-evenly;">
+            <div class="flxBoxs"></div>
+            <div class="flxBoxs"></div>
+            <div class="flxBoxs"></div>
+          </div>
+        </div>
+        <div>
+          <b>justify-content: </b> space-around
+          <div class="flx" style="justify-content: space-around;">
+            <div class="flxBoxs"></div>
+            <div class="flxBoxs"></div>
+            <div class="flxBoxs"></div>
+          </div>
+        </div>
+        <style>
+          .flx{
+            display: flex;
+            background-color: white;
+            padding: 4px;
+            border-radius: 5px;
+            width: 200px;
+          }
+          .flxBoxs{
+            background-color: cadetblue;
+            height: 20px;
+            width: 20px;
+            margin: 1px;
+            border-radius: 2px;
+          }
+          </style>
       </div>
     </fieldset>
   

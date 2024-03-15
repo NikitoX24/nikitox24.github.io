@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game</title>
+</head>
+<body>
+  
+  <style>
+    body{
+      background-color: rgb(19, 19, 19);
+      color: white;
+      position: relative;
+    }
+    #Juego{
+      width: 720px; /* 18 */
+      height: 720px;
+      background-color: rgb(255, 255, 255);
+      margin: auto;
+      /* display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center; */
+    }
+    .slot{
+      width: 83px;
+      height: 83px;
+      background-color: rgba(255, 255, 255, 0.694);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3em;
+      font-family: Arial;
+      font-weight: 900;
+      border: solid 1px black;
+    }
+    #alerta{
+      width: 350px;height: 200px;
+      background-color: rgba(255, 255, 255, 0.119);
+      color: rgb(0, 0, 0);
+      font-size: 3em;
+      font-weight: 900;
+      font-family: Arial;
+      border-radius: 10px;
+
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(5px);
+
+      display: none;
+      cursor: pointer;
+    }
+    .box{
+      width: 40px;
+      height: 40px;
+    }
+    .worm{
+      background-color: green;
+    }
+  </style>
+
+
+
+
+
+
+
+  <div id="Juego">
+    <div class="worm box"></div>
+  </div>
+
+  <div id="alerta"></div>
+
+
+
+
+  <script>
+    var wormArray = [];
+    
+
+
+
+
+
+
+
+
+
+  </script>
+
+</body>
+</html>

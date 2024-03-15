@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-AR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TaTeTi</title>
+  <title>Memory</title>
 </head>
 <body>
+
   <style>
     body{
       background-color: rgb(19, 19, 19);
@@ -58,7 +59,7 @@
       cursor: pointer;
     }
   </style>
-
+  
   <div id="Juego">
     <div class="slot"></div>
     <div class="slot"></div>
@@ -71,56 +72,6 @@
     <div class="slot"></div>
   </div>
 
-  <div id="alerta"></div>
-
   
-  <script>
-    var slotsDoc = document.getElementsByClassName("slot");
-    var alertaDoc = document.getElementById("alerta");
-    let turno = "X";
-    var slots = new Array(9);
-    
-    for (let i = 0; i < slotsDoc.length; i++) {
-      slotsDoc[i].onmouseover = function(){
-        if(slots[i] == null)
-          slotsDoc[i].innerHTML = turno;
-      }
-      slotsDoc[i].onmouseout = function(){
-        if(slots[i] == null)
-          slotsDoc[i].innerHTML = "";
-      }
-      slotsDoc[i].onclick = function(){
-        if(slots[i] == null){
-          slotsDoc[i].style.color = "black";
-          slotsDoc[i].innerHTML = turno;
-          slotsDoc[i].style.cursor = "not-allowed";
-          slots[i] = turno;
-          CheckSlots(turno);
-          turno = (turno == "X") ? "O" : "X";
-        }
-      }
-    }
-
-    function CheckSlots(t){
-      if(slots[0]==t && slots[1]==t && slots[2]==t || slots[3]==t && slots[4]==t && slots[5]==t || slots[6]==t && slots[7]==t && slots[8]==t)
-        Win();
-
-      if(slots[0]==t && slots[3]==t && slots[6]==t || slots[1]==t && slots[4]==t && slots[7]==t || slots[2]==t && slots[5]==t && slots[8]==t)
-        Win();
-      
-      if(slots[0]==t && slots[4]==t && slots[8]==t || slots[6]==t && slots[4]==t && slots[2]==t)
-        Win();
-    }
-    
-    function Win(){
-      alertaDoc.innerHTML = turno+" GANÓ!!!";
-      alertaDoc.style.display = "flex";
-    }
-    
-    alertaDoc.onclick = function(){
-      location.reload();
-    }
-  </script>
-
 </body>
 </html>

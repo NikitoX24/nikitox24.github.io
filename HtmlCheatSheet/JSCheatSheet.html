@@ -772,41 +772,28 @@
           <button onclick="prev()"> Prev </button>
           <button onclick="next()"> Next </button>
           <div class="codigo">
-            var images = [ <br>
-              &nbsp; '../Imgs/1.jpg', <br>
-              &nbsp; '../Imgs/2.jpg', <br>
-              &nbsp; '../Imgs/3.jpg' <br>
-            ]; <br>
-            var num = 0; <br>
+            <font class="purp">var</font> images = [ '1.jpg', '2.jpg', '3.jpg' ]; <br>
+            <font class="purp">var</font> num = 0; <br>
           </div>
         </div>
-        <div class="cod width100">
-          <pre>
-              function next() {
-                var slider = document.getElementById('slider');
-                num++;
-                if(num >= images.length) {
-                  num = 0;
-                }
-                slider.src = images[num];
-              }
-              function prev() {
-                var slider = document.getElementById('slider');
-                num--;
-                if(num < 0) {
-                  num = images.length-1;
-                }
-                slider.src = images[num];
-              }
-          </pre>
+        <div class="cod width100" style="font-size: 11px;">
+          <font class="purp">function</font> next() { <br>
+            &nbsp; <font class="purp">var</font> slider = document.getElementById('slider'); <br>
+            &nbsp; num++; <br>
+            &nbsp; if(num >= images.length) { num = 0; } <br>
+            &nbsp; slider.src = images[num]; <br> } <br>
+          <font class="purp">function</font> prev() { <br>
+            &nbsp; <font class="purp">var</font> slider = document.getElementById('slider'); <br>
+            &nbsp; num--; <br>
+            &nbsp; if(num < 0) { <br>
+              &nbsp; &nbsp; num = images.length-1; <br>
+              &nbsp; } <br>
+            &nbsp; slider.src = images[num]; <br>
+          }
         </div>
       </div>
       <script>
-        var images = [
-          '../Imgs/1.jpg',
-          '../Imgs/2.jpg',
-          '../Imgs/3.jpg'
-        ];
+        var images = [ '../Imgs/1.jpg', '../Imgs/2.jpg', '../Imgs/3.jpg' ];
         var num = 0;
         function next() {
           var slider = document.getElementById('slider');
