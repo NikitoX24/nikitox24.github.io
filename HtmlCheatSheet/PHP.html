@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="hcsCSS.css">
+  <title>PHP CheatSheet</title>
+</head>
+
+<body>
+<header>
+  <menu-component></menu-component>
+
+  <h1 class="titulo">HTML CheatSheet</h1>
+  <div class="iconosFlex"> <!-- icons -->
+    <a href="htmlcheatsheet.html"><img src="../Imgs/html.png" alt="html" class="icons filtrogris"></a>
+    <a href="CssCheatSheet.html"><img src="../Imgs/css.png" alt="css" class="icons filtrogris"></a>
+    <a href="JSCheatSheet.html"><img src="../Imgs/js.png" alt="js" class="icons filtrogris"></a>
+  </div>
+  <style>
+    .borders {
+      background-color: rgba(0, 0, 255, .05);
+      box-shadow: inset 0 40px 0 0 rgba(0, 119, 255, 0.164), 
+          4px 4px 15px 5px rgba(0, 0, 255, 0.1);}
+  </style>
+</header>
+
+  <style>
+    :root{
+      --varC: rgb(210, 210, 210);
+      --aquaC: rgb(20, 212, 255);
+    }
+    .cod{
+      background-color: rgb(53, 53, 53);
+      color: var(--aquaC);
+      text-shadow: none;
+      /* font-family: Arial; */
+      /* font-size: 0.9em;
+      letter-spacing: 0.8px; */
+    }
+    font.aqua{
+      color: var(--aquaC);
+    }
+    font.blue{
+      color: rgb(91, 138, 230);
+    }
+    font.green{
+      color: rgb(209, 255, 139);
+    }
+    font.var{
+      color: var(--varC);
+    }
+    font.purp{
+      color: rgb(184, 83, 184);
+    }
+
+  </style>
+
+<main>
+  <!-- CSS -->
+  <h1 class="titulo"> PHP <font class="subText">(Pre-Procesador de Hipertexto)</font> </h1>
+
+  <!-- Conceptos Básicos -->
+  <div class="borders">
+    <h1 class="titulo"> Variables </h1>
+
+    <fieldset> <!-- Variable -->
+      <legend> Variables </legend>
+
+      Variable
+      <div class="cod">
+        &lt;?php <br>
+        &nbsp; $<font class="var">name</font> = "<font class="green">John</font>" <br>
+        &nbsp; <font class="blue">echo</font> $<font class="var">name</font>; <br>
+        <font class="aqua">?></font>
+      </div> <br>
+
+      Variable como Variable
+      <div class="cod">
+        $<font class="var">a</font> = "<font class="green">variable</font>" <br>
+        $<font class="var">variable</font> = "<font class="green">hola mundo!</font>" <br>
+        <font class="blue">echo</font> $$<font class="var">a</font>; <font class="gray">// hola mundo!</font>
+      </div> <br>
+
+      Constante
+      <div class="cod">
+        <font class="blue">define</font>("<font class="green">Mensaje</font>", "<font class="green">Hola Mundo!</font>"); <br>
+        <font class="blue">echo</font> <font class="var">Mensaje</font>;
+      </div> <br>
+
+      Variable en Funciones
+      <div class="cod">
+        $<font class="var">name</font> = "<font class="green">David</font>" <br>
+        <font class="purp">function</font>
+      </div>
+    </fieldset>
+
+    <fieldset> <!-- Arrays -->
+      <legend> Arrays </legend>
+      Array
+      <div class="cod">
+        $<font class="var">Personas</font> = <font class="blue">array</font>("<font class="green">David</font>" => "<font class="green">27</font>"); <br>
+        $<font class="var">Personas</font>["<font class="green">David</font>"] = "<font class="green">28</font>";
+      </div> <br>
+
+      Array MultiDimensionales
+      <div class="cod">
+        $<font class="var">Personas</font> = <font class="blue">array</font> (<br>
+        &nbsp; "<font class="green">online</font>" => <font class="blue">array</font>("<font class="green">David</font>", "<font class="green">Amy</font>"), <br>
+        &nbsp; "<font class="green">offline</font>" => <font class="blue">array</font>("<font class="green">John</font>", "<font class="green">Rob</font>") <br>
+        );<br>
+        <font class="blue">echo</font> $<font class="var">Personas</font>["<font class="green">online</font>"][<font class="orange">0</font>];
+        <font class="gray">// "David"</font>
+      </div>
+    </fieldset>
+
+
+
+
+
+  </div>
+
+  
+  <script type="text/javascript" src="../MenuJS.js"></script>
+</main>
+</body>
+</html>
