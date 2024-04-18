@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="STYLE.css">
+  <title>JS CheatSheet</title>
+  <link rel="icon" href="../logo.png">
+</head>
+
+<nav><menu-component></menu-component></nav>
+<header> 
+  <h1 class="titulo">JavaScript CheatSheet</h1>
+
+  <!-- icons -->
+  <div class="iconosFlex">
+    <a href="HTML.html"><img src="../Imgs/html.png" alt="html" class="icons filtrogris"></a>
+    <a href="CSS.html"><img src="../Imgs/css.png" alt="css" class="icons filtrogris"></a>
+    <a href="JavaScript.html"><img src="../Imgs/js.png" alt="js" class="icons"></a>
+  </div>
+  <style>
+    :root{ 
+      --border-color: rgba(0, 159, 0, 0.3);
+    }
+    section {
+      background-color: rgba(0, 255, 0, .03);
+      box-shadow: inset 0 40px 0 0 var(--border-color), 4px 4px 15px 5px rgba(0, 255, 38, 0.1);
+    }
+    @media screen and (max-width: 767px){
+      section { box-shadow: inset 0 35px 0 0 var(--border-color) !important; }
+    }
+  </style>
+</header>
+
+<body><main>
+  <!-- Fundamentos -->
+  <section id="Fundamentos"> 
+
+    <fieldset> <!-- Script -->
+      <legend> &lt;Script> </legend>
+      <div class="cod">
+        &lt;<NRed>script</NRed> <NPurp>type</NPurp> ="text/javascript" <NPurp>src</NPurp>="htmlcheatsheet.js"> &lt;/<NRed>script</NRed>>
+      </div>
+    </fieldset>
+
+    <fieldset> <!-- Salidas -->
+      <legend> Salidas </legend>
+      <div class="flex">
+        <div style="width: 70%;">
+          Salida por <b>Html</b>:
+          <div class="cod wAuto">
+            document.<NBlue>write</NBlue>("<NGreen>&#60h1> Hello World! &#60/h1></NGreen>");
+          </div>
+        </div>
+        <div style="width: 70%;">
+          Salida por <b>Consola</b>:
+          <div class="cod wAuto">
+            console.<NBlue>log</NBlue>("<NGreen>Hello from Console!</NGreen>");
+          </div>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset> <!-- Variable -->
+      <legend> Variables y Strings </legend>
+      <div class="flex">
+        <div class="cod">
+          <NPurp>var</NPurp> a <NPurp>=</NPurp> <NOrg>10</NOrg>; <NGray> // publica.</NGray> <br>
+          <NPurp>let</NPurp> b <NPurp>=</NPurp> <NOrg>true</NOrg>; <NGray> // privada.</NGray> <br>
+          <NPurp>const</NPurp> c <NPurp>=</NPurp> '<NGreen>hello</NGreen>'; <NGray>// privado y no se puede modificar.</NGray> <br>
+        </div>
+        <div class="cod">
+          <NGray> // Literales de plantilla</NGray> <br>
+          <NPurp>let</NPurp> <b>nombre</b> <NPurp>=</NPurp> '<NGreen>David</NGreen>'; <br>
+          <NPurp>let</NPurp> mensaje <NPurp>=</NPurp> `<NGreen>Welcome</NGreen> <font class="aqua">${</font><b>nombre</b><font class="aqua">}</font>!`;
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset> <!-- Arrays TODO: --> 
+      <legend> Arrays </legend>
+      <!-- Crear: --> Crear:
+      <div class="flex">
+        <div class="cod"> <NPurp>var</NPurp> myArray <NAqua>= new</NAqua> <NObj>Array</NObj>("<NGreen>a</NGreen>", "<NGreen>b</NGreen>"); </div>
+        <div class="cod"> <NPurp>var</NPurp> myArray = <NAqua>new</NAqua> <NObj>Array</NObj>(<NOrg>3</NOrg>); </div>
+        <div class="cod"> <NPurp>var</NPurp> myArray = ["<NGreen>a</NGreen>", "<NGreen>b</NGreen>", "<NGreen>c</NGreen>"]; </div>
+      </div><br>
+
+      <b>Propiedades:</b> <br>
+      <div class="flex">
+        <div class="cod">
+          <NPurp>let</NPurp> array = "<NGreen>PALABRA</NGreen>" <br>
+          array.<NBlue>includes</NBlue>("<NGreen>A</NGreen>"); <NGray>// true</NGray> <br>
+          array.<NBlue>indexOf</NBlue>("<NGreen>A</NGreen>"); <NGray>// 1</NGray>
+        </div>
+        <div class="cod">
+          <NPurp>let</NPurp> array = ["<NGreen>B</NGreen>", "<NGreen>A</NGreen>", "<NGreen>B</NGreen>"] <br>
+          array.<NBlue>findIndex</NBlue>(a => a == "<NGreen>B</NGreen>"); <NGray>// 0</NGray> <br>
+          <!-- array.<NBlue>find</NBlue>(a => a == "<NGreen>A</NGreen>"); <NGray>// 0</NGray> <br>  TODO: -->
+          array.<NBlue>filter</NBlue>(a => a == "<NGreen>B</NGreen>"); <NGray>// [B, B]</NGray> <br>
+          array.<NBlue>sort</NBlue>(); <NGray>// [A, B, B]</NGray> - array.<NBlue>reverse</NBlue>(); <NGray>// [B, B, A]</NGray>
+        </div>
+      </div> <br>
+      Extraer elementos(p) y ponerlos en un Array
+      <div class="cod">
+        <NPurp>var</NPurp> elementos = <NObj>Array</NObj>.<NBlue>from</NBlue>(document.<NBlue>querySelectorAll</NBlue>("<NGreen>.dias p</NGreen>"));<br>
+        <NPurp>var</NPurp> array = elementos.<NBlue>map</NBlue>(dia <NPurp>=></NPurp> dia.textContent); <br>
+        console.<NBlue>log</NBlue>(array); <NGray>// ["L", "M", "M" ...] </NGray>
+      </div>
+    </fieldset>
+
+    <fieldset> <!-- Funciones -->
+      <legend>  Funciones  </legend>
+      <div class="flex">
+        <div class="cod">
+          <NPurp>function</NPurp> <NBlue>MyFunc</NBlue>( parametro1 ) { <br>
+            &nbsp; <font class="aqua">return</font> parametro1; <br> }
+        </div>
+        <div class="flecha wAuto"></div>
+        <div class="cod">
+          <NPurp>const</NPurp> <NBlue>myFunc</NBlue> <NPurp>=</NPurp> name <NPurp>=></NPurp> name; <NGray>//con parametros</NGray> <br>
+          <NPurp>const</NPurp> <NBlue>myFunc</NBlue> <NPurp>=</NPurp> () <NPurp>=></NPurp> "<NGreen>Hola!</NGreen>"; <NGray>//sin parametros</NGray>
+        </div>
+      </div> <hr>
+      <!-- Enviar-Devolver Array -->
+      Enviar-Devolver Array
+      <div class="flex">
+        <div class="cod">
+          <NGray>// Devolver Array</NGray> <br>
+          <NPurp>function</NPurp> <NBlue>MyFunc</NBlue>(...array) { <br>
+            &nbsp; console.<NBlue>log</NBlue>(array); <br> } <br><br>
+          <NBlue>MyFunc</NBlue>("Ene", "Feb" ...);
+        </div>
+        <div class="cod">
+          <NGray>// Enviar Array</NGray> <br>
+          <NPurp>function</NPurp> <NBlue>myFunc</NBlue>( uno, dos ) { <br>
+            &nbsp; document<NBlue>.write</NBlue>(uno + dos); <br> } <br>
+            <NPurp>var</NPurp> array=["<NGreen>Juan</NGreen>", "<NGreen>David</NGreen>"];<br>
+            <NBlue>myFunc</NBlue>(...array);
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset> <!-- Alert, Prompt, Confirm. -->
+      <legend> Alert, Prompt, Confirm. </legend>
+      <div class="flex">
+        <div class="width100">
+          <button onclick="botonalerta1();"> Alert </button>
+            <NBlue>Alert</NBlue>("<NGreen>Alerta</NGreen>")
+            <script> function botonalerta1() { alert("Esto es una Alerta!"); } </script> <br>
+          <button onclick="botonalerta2();"> Prompt </button>
+            <NBlue>Prompt</NBlue>("<NGreen>Solicitud</NGreen>")
+            <script> function botonalerta2() { alert("Esto es una Solicitud!"); } </script> <br>
+          <button onclick="botonalerta3();"> Confirm </button>
+            <NBlue>Confirm</NBlue>("<NGreen>Confirmacion</NGreen>")
+            <script> function botonalerta3() { alert("Esto es una Confirmacion!"); } </script> <br>
+        </div>
+        <div class="cod">
+          <NGray>//Prompt</NGray> <br>
+            <NPurp>var</NPurp> soli = <NBlue>prompt</NBlue>("<NGreen>Nombre</NGreen>", "<NGreen>Placeholder</NGreen>"); <br>
+            document.<NBlue>write</NBlue>("<NGreen>hola</NGreen> "+ soli); <br>
+          <NGray>//Confirm</NGray> <br>
+            <NPurp>var</NPurp> a = <NBlue>confirm</NBlue>("<NGreen>Necesitas ayuda?</NGreen>") ? "<NGreen>Si</NGreen>" : "<NGreen>No</NGreen>"; <br>
+            document.<NBlue>write</NBlue>(a);
+        </div>
+      </div>
+    </fieldset>
+    
+    <div class="flex"> <!-- SetInterval - SetTimeout -->
+      <fieldset class="width100"> 
+        <legend>SetInterval (Infinito)</legend>
+        <div class="cod">
+          var x = <NBlue>setInterval</NBlue>(<NBlue>MyFuncion</NBlue>, <NOrg>1000</NOrg>) <NGray>(1seg)</NGray> <br>
+          function <NBlue>MyFuncion</NBlue>() { <br>
+            &nbsp; <NBlue>clearInterval</NBlue>(x); <br> }
+        </div>
+      </fieldset>
+      <fieldset class="width100"> <!-- SetTimeOut -->
+        <legend> SetTimeout (1 vez) </legend>
+        <div class="cod">
+          <NBlue>setTimeout</NBlue>(<NBlue>MyFuncion</NBlue>, <NOrg>1000</NOrg>) <NGray>(1seg)</NGray> <br>
+          function <NBlue>MyFuncion</NBlue>() { <br> &nbsp; <NGray>// Codigo...</NGray> <br> }
+        </div>
+      </fieldset>
+    </div>
+
+    <fieldset> <!-- Condicionales -->
+      <legend> Condicionales </legend>
+      <div class="flex">
+        <div class="cod">
+          <font class="aqua">if</font> (condicion) { <br>
+            &nbsp; <NGray>// Declaraciones si es Verdadero.</NGray> <br>
+          } <font class="aqua">else</font> { <br>
+            &nbsp; <NGray>// Declaraciones si es Falso.</NGray> <br> } <br>
+          Variable = (condicion) ? True : False;
+        </div>
+        <div class="cod" style="font-size: smaller;">
+          <font class="aqua">switch</font> ( Expresion ) { <br>
+            &nbsp;<font class="aqua">Case</font> n1: <br>
+              &nbsp; <NGray>// Bloque de Codigo</NGray> <br>
+            &nbsp; <font class="aqua">breack;</font> <br>
+            &nbsp;<font class="aqua">default:</font> <br>
+              &nbsp; <NGray>// Bloque de Codigo</NGray> <br>
+            &nbsp; <font class="aqua">breack;</font> <br>
+            }
+        </div>
+      </div>
+    </fieldset>
+    
+    <fieldset> <!-- Bucles For -->
+      <legend> Bucle For (ES6) </legend>
+      <div class="flex">
+        <div class="cod width100">
+          <u><b>For In:</b></u> <NGray>//  (Solo para este tipo de arrays) </NGray> <br>
+          <NPurp>let</NPurp> obj <NPurp>=</NPurp> {a:<NOrg>1</NOrg>, b:<NOrg>2</NOrg>, c:<NOrg>3</NOrg>}; <br>
+          <font class="aqua">for</font> (<NPurp>let</NPurp> v <NPurp>in</NPurp> obj) { <br>
+            &nbsp; document.<NBlue>write</NBlue>(v); <br> }
+        </div>
+        <div class="cod width100">
+          <u><b>For Of:</b></u> <NGray>// (Solo para arrays con strings) </NGray> <br>
+          <NPurp>let</NPurp> obj <NPurp>=</NPurp> ["<NGreen>hola</NGreen>", "<NGreen>hi</NGreen>"]; <br>
+          <NPurp>let</NPurp> texto <NPurp>=</NPurp> ["<NGreen>LoremIpsumAsd</NGreen>"]; <br>
+          <font class="aqua">for</font> (<NPurp>let</NPurp> v <NPurp>of</NPurp> obj) { <br>
+            &nbsp; document.<NBlue>write</NBlue>(v); <br> }
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset> <!-- ForEach -->
+      <legend> ForEach (recorrer Arrays) </legend>
+      <div class="flex">
+        <div class="width100">
+          <u><b>ForEach:</b></u>
+          <div class="cod">
+            <NPurp>var</NPurp> array<NPurp>=</NPurp> [2,3,7,8]; <br><br>
+            array.<NBlue>forEach</NBlue>(<NPurp>function</NPurp>(<NRed>el</NRed>) { <br>
+              &nbsp; document.<NBlue>write</NBlue>(<NRed>el</NRed> * 2); <br>
+            }); <br>
+            <NGray>// 4 6 14 16</NGray>
+          </div>
+        </div>
+        <div class="flecha wAuto"></div>
+        <div class="width100">
+          <u><b>ForEach ES6:</b></u>
+          <div class="cod">
+            <NPurp>const</NPurp> array <NPurp>=</NPurp> [2,3,7,8];<br><p style="line-height: 10px;"> </p>
+            array.<NBlue>forEach</NBlue>(<NRed>v</NRed> <NPurp>=></NPurp> {<br>
+              &nbsp; document.<NBlue>write</NBlue>(<NRed>v</NRed> * 2);<br>
+            }); <br>
+            <NGray>// 4 6 14 16</NGray>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </section>
+
+  <!-- Otros -->
+  <section id="Otros">
+    
+    <!-- Math -->
+    <fieldset>
+      <legend> Math: </legend>
+      <div class="cod">
+        function randomNumber(min, max) { <br>
+          &nbsp; return Math.floor(Math.random() * (max - min)) + min; <br> }
+      </div>
+      <details>
+        <summary>Metodos de Math</summary>
+        abs(x) Returns the absolute value of x <br>
+        acos(x) Returns the arccosine of x, in radians <br>
+        acosh(x) Returns the hyperbolic arccosine of x <br>
+        asin(x) Returns the arcsine of x, in radians <br>
+        asinh(x) Returns the hyperbolic arcsine of x <br>
+        atan(x) Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians <br>
+        atan2(y, x) Returns the arctangent of the quotient of its arguments <br>
+        atanh(x) Returns the hyperbolic arctangent of x <br>
+        cbrt(x) Returns the cubic root of x <br>
+        ceil(x) Returns x, rounded upwards to the nearest integer <br>
+        cos(x) Returns the cosine of x (x is in radians) <br>
+        cosh(x) Returns the hyperbolic cosine of x <br>
+        exp(x) Returns the value of Ex <br>
+        floor(x) Returns x, rounded downwards to the nearest integer <br>
+        log(x) Returns the natural logarithm (base E) of x <br>
+        max(x, y, z, ..., n) Returns the number with the highest value <br>
+        min(x, y, z, ..., n) Returns the number with the lowest value <br>
+        pow(x, y) Returns the value of x to the power of y <br>
+        random() Returns a random number between 0 and 1 <br>
+        round(x) Rounds x to the nearest integer <br>
+        sign(x) Returns if x is negative, null or positive (-1, 0, 1) <br>
+        sin(x) Returns the sine of x (x is in radians) <br>
+        sinh(x) Returns the hyperbolic sine of x <br>
+        sqrt(x) Returns the square root of x <br>
+        tan(x) Returns the tangent of an angle <br>
+        tanh(x) Returns the hyperbolic tangent of a number <br>
+        trunc(x) Returns the integer part of a number (x) <br>
+      </details>
+    </fieldset>
+
+    <!-- Date -->
+    <fieldset>
+      <legend> Fechas: </legend>
+
+      Metodos de Date:
+      <div class="flex">
+        <div class="codigo flex width100 marg0">
+          <div class="width100">
+            getFullYer()      <NGray>// año.</NGray> <br>
+            getMonth()        <NGray>// mes.</NGray> <br>
+            getDate()         <NGray>// dia(num).</NGray> <br>
+            getDay()          <NGray>// dia(sem).</NGray> <br>
+          </div>
+          <div class="width100">
+            getHours()        <NGray>// hora.</NGray> <br>
+            getMinutes()      <NGray>// min.</NGray> <br>
+            getSeconds()      <NGray>// seg.</NGray> <br>
+            getMilliseconds() <NGray>// ms.</NGray>
+          </div>
+        </div>
+        <div class="cod width100">
+          <NPurp>var</NPurp> date1 = <NPurp>new</NPurp> <NBlue>Date</NBlue>(); <NGray> // Crear</NGray> <br>
+          <NPurp>var</NPurp> hours = date1.<NBlue>getHours</NBlue>(); <br>
+          document.<NBlue>write</NBlue>(<u>hours</u>); <br>
+          <NGray>// Muestra solo la hora actual, sin min/seg.</NGray>
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- Almacenamiento -->
+    <fieldset>
+      <legend>  Almacenamiento (API)  </legend>
+      <div class="flex">
+        <div class="codigo marg0">
+          sessionStorage(); <NGray> //Temporal.</NGray> <br>
+          localStorage(); <NGray> //Permanente.</NGray> <br>
+          localStorage.<NBlue>clear</NBlue>(); <NGray>(Limpiar)</NGray>
+        </div>
+        <div class="cod">
+          localStorage.<NBlue>setItem</NBlue>("<NGreen>Clave1</NGreen>", "<NGreen>Valor1</NGreen>"); <NGray>(Guardar)</NGray><br>
+          localStorage.<NBlue>getItem</NBlue>("<NGreen>Clave1</NGreen>"); <NGray>(Cargar)</NGray> <br>
+          localStorage.<NBlue>removeItem</NBlue>("<NGreen>Clave1</NGreen>"); <NGray>(Borrar)</NGray>
+        </div>
+      </div>
+    </fieldset>
+    
+    <!-- Dragg & Drop -->
+    <fieldset>
+      <legend>  Dragg & Drop (API)  </legend>
+      <div class="flex">
+        <div class="flex width100" style="margin: auto;">
+          <div id="box" ondrop="drop(event)" ondragover="allowDrop(event)" style="border:1px solid black;
+            width:150px; height:150px; background-color: #b9bebe;">
+          </div>
+          <img id="image" src="../Imgs/cat1.png" draggable="true" ondragstart="drag(event)" width="150" height="150" alt="" style="cursor: move;"/>
+        </div>
+        <div class="cod wAuto" style="font-size: smaller;">
+          <NPurp>function</NPurp> <NBlue>allowDrop</NBlue>(ev) { <br>
+            &nbsp; ev.<NBlue>preventDefault</NBlue>(); <br>
+          } <br>
+  
+          <NPurp>function</NPurp> <NBlue>drag</NBlue>(ev) { <br>
+            &nbsp; ev.dataTransfer.<NBlue>setData</NBlue>("text", ev.target.id); <br>
+          } <br>
+  
+          <NPurp>function</NPurp> <NBlue>drop</NBlue>(ev) { <br>
+            &nbsp; ev.<NBlue>preventDefault</NBlue>(); <br>
+            &nbsp; var data = ev.dataTransfer.<NBlue>getData</NBlue>("text"); <br>
+            &nbsp; ev.target.<NBlue>appendChild</NBlue>(document.<NBlue>getElementById</NBlue>(data)); <br>
+          }
+        </div>
+      </div>
+      <div class="cod">
+        <NRed>&lt;div</NRed> <NPurp>id</NPurp>="box" <NPurp>ondrop</NPurp>="drop(event)"  <NPurp>ondragover</NPurp>="allowDrop(event)" <NRed>&lt;/div></NRed> <br>
+        <NRed>&lt;img</NRed> <NPurp>id</NPurp>="image" <NPurp>src</NPurp>="cat1.png" <NPurp>draggable</NPurp>="true" <NPurp>ondragstart</NPurp>="drag(event)" <NPurp>style</NPurp>="cursor: move;"<NRed>/></NRed>
+      </div>
+
+      <script>
+        function allowDrop(ev) {
+          ev.preventDefault();
+        }
+        function drag(ev) {
+          ev.dataTransfer.setData("text", ev.target.id);
+        }
+        function drop(ev) {
+          ev.preventDefault();
+          var data = ev.dataTransfer.getData("text");
+          ev.target.appendChild(document.getElementById(data));
+        }
+      </script>
+      <style>
+        @media screen and (max-width: 767px) {
+          #image, #box{
+            width: 100px !important;
+            height: 100px !important;
+          }
+        }
+      </style>
+    </fieldset>
+  </section>
+
+  <!-- Objetos -->
+  <section id="Objetos"> 
+
+    <!-- Obj y Constructor -->
+    <div class="flex">
+      <!-- Variable/Obj -->
+      <fieldset class="wAuto">
+        <legend> Crear un Objeto</legend>
+        <div class="cod wAuto">
+          <NPurp>var</NPurp> person = { <br>
+            &nbsp; <strong>name:</strong> "<NGreen>David</NGreen>", <br>
+            &nbsp; <strong>age:</strong> <NOrg>26</NOrg>, <br>
+            &nbsp; <NGray>property: value</NGray> <br>
+          };
+        </div>
+        <div class="cod wAuto">
+          person.name; <NGray>// or</NGray> <br>
+          person["<NGreen>name</NGreen>"];
+        </div>
+      </fieldset>
+
+      <!-- Constructor -->
+      <fieldset class="wAuto">
+        <legend>Constructor de Obj</legend>
+        (para navegadores viejos)
+        <div class="cod wAuto">
+          <NPurp>function</NPurp> <NObj>person</NObj>(name, age) { <br>
+            &nbsp; <NAqua>this</NAqua>.name = name; <br>
+            &nbsp; <NAqua>this</NAqua>.age = age; <br>
+          }
+        </div>
+        <div class="cod wAuto">
+          <NPurp>var</NPurp> p1 = <NAqua>new</NAqua> <NObj>person</NObj>("<NGreen>John</NGreen>", <NOrg>42</NOrg>) <br>
+          document.<NBlue>write</NBlue>(p1.age) <NGray>//42</NGray> <br>
+        </div>
+      </fieldset>
+
+      <Flecha></Flecha>
+      
+      <!-- Clase -->
+      <fieldset class="wAuto">
+        <legend>Clase (ES6)</legend>
+        <div class="cod wAuto">
+          <NPurp>class <NObj>person{</NObj> <br>
+          &nbsp; constructor(<NVar>name, age</NVar>){</NPurp> <br>
+            &nbsp; &nbsp; <NAqua>this</NAqua>.name = name; <br>
+            &nbsp; &nbsp; <NAqua>this</NAqua>.age = age; <br>
+          &nbsp; <Npurp>}</Npurp> <br>
+          <NObj>}</NObj>
+        </div>
+        <div class="cod wAuto">
+          <NPurp>var</NPurp> p1 = <NAqua>new</NAqua> <NBlue>person</NBlue>("<NGreen>John</NGreen>", <NOrg>42</NOrg>) <br>
+          document.<NBlue>write</NBlue>(p1.age) <NGray>//42</NGray>
+        </div>
+      </fieldset>
+    </div>
+
+    <!-- Metodos -->
+    <fieldset>
+      <legend> Metodos / Funciones </legend>
+      <!-- TODO: -->
+      <div class="flex">
+        <div class="wAuto">
+          Metodo en Objeto
+          <div class="cod wAuto">
+            <NPurp>let</NPurp> person = { <br>
+              &nbsp; name: "<NGreen>David</NGreen>", <br>
+              &nbsp; age: <NOrg>20</NOrg>, <br>
+              <div class="markBlock">
+                &nbsp; <NBlue>cumple</NBlue>() { <br>
+                  &nbsp; &nbsp; <NAqua>this</NAqua>.age++; <br>
+                &nbsp; }
+              </div>
+            }; <br><br>
+            tree.<NBlue>grow</NBlue>(); <br>
+            document.<NBlue>write</NBlue>(tree.height); <br>
+            <NGray>// 12</NGray>
+          </div>
+        </div>
+
+        <div class="wAuto">
+          Metodo en Constructor<br>
+          <div class="cod wAuto">
+            <NPurp>function</NPurp> <NObj>person(<NVar>name, age</NVar>) {</NObj> <br>
+              &nbsp; <NAqua>this</NAqua>.name = name; <br>
+              &nbsp; <NAqua>this</NAqua>.age = age; <br>
+              <div class="markBlock">
+                &nbsp; <NAqua>this</NAqua>.<u>changeName</u> = <NBlue>funcion</NBlue> (name); { <br>
+                  &nbsp; &nbsp; <NAqua>this</NAqua>.name = name; <br>
+                  &nbsp;} <br>
+              </div> <NObj>}</NObj> <br><br>
+            <NPurp>var</NPurp> p = <NPurp>new</NPurp> <NBlue>person</NBlue>("David", 21); <br>
+            <div class="markBlock">
+              p.<NBlue><u>changeName</u></NBlue>("Jhon"); <br>
+            </div>
+            <NGray>// Ahora (p.name) es Jhon.</NGray>
+          </div>
+        </div>
+
+        <div class="wAuto">
+          Metodo fuera del Constructor<br>
+          <div class="cod wAuto">
+            <NPurp>function</NPurp> <NObj>person(<NVar>name, age</NVar>) {</NObj> <br>
+              &nbsp; <NAqua>this</NAqua>.name = name; <br>
+              &nbsp; <NAqua>this</NAqua>.age = age; <br>
+              <div class="markBlock">
+                &nbsp; <NAqua>this</NAqua>.yearOfBirth = <NBlue>bornYear</NBlue>; <br>
+              </div><NObj>}</NObj> <br>
+            <div class="markBlock">
+              <NPurp>function</NPurp> <NBlue>bornYear</NBlue>() { <br>
+              &nbsp; <NAqua>return</NAqua> 2024 - this.age; <br> }
+            </div> <br>
+            <NPurp>var</NPurp> p = <NPurp>new</NPurp> <NBlue><NObj>person</NObj></NBlue>("Nick", 25); <br>
+            document.<NBlue><u>write</u></NBlue>(p.<NBlue>yearOfBirth</NBlue><NPurp>()</NPurp>); <NGray>// 1999</NGray>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </section>
+
+  <!-- DOM -->
+  <section id="DOM">
+
+    <!-- DOM -->
+    <fieldset>
+      <legend> DOM </legend>
+      <div class="cod">
+        <NBlue><u>document</u></NBlue>.body.<NPurp>innerHTML</NPurp> = "Algun Texto";
+      </div>
+    </fieldset>
+
+    <!-- Seleccionar Elementos -->
+    <fieldset>
+      <legend> Seleccionar/Buscar Elementos </legend>
+
+      Buscar y usar <b>ID</b>:
+      <div class="flex">
+        <div class="cod"> <NPurp>var</NPurp> elem = document.<NBlue>getElementById</NBlue>("<NGreen>id</NGreen>") </div>
+        <div class="cod"> elem.innerHTML = "<NGreen>Hello World!</NGreen>"; </div>
+      </div> <br>
+
+      Buscar y usar <b>Class</b>:
+      <div class="flex">
+        <div class="cod"> <NPurp>var</NPurp> arr = document.<NBlue>getElementsByClassName</NBlue>("<NGreen>clase</NGreen>") </div>
+        <div class="cod"> arr[0].innerHTML = "<NGreen>Hiii</NGreen>"; </div>
+      </div><br>
+
+      Buscar y usar <b>Tag</b>:
+      <div class="flex">
+        <div class="cod"> <NPurp>var</NPurp> arr = document.<NBlue>getElementsByTagName</NBlue>("<NGreen>tag</NGreen>") </div>
+        <div class="cod">
+          <font class="aqua">for</font> (<NPurp>var</NPurp> x = <NOrg>0</NOrg>; x &lt;arr.length; x++) { <br>
+            &nbsp; arr[x].innerHTML = "<NGreen>Hi there!</NGreen>"; <br> }
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- Propiedades y metodos -->
+    <fieldset>
+      <legend>  Propiedades y metodos  </legend>
+
+      Cambiar valores <u>(Usando CHILDNODES)</u>
+      <div class="flex">
+        <div class="codigo marg0">
+          element.childNodes: <br>
+          element.firstChild: <br>
+          element.lastChild: <br>
+          element.hasChildNodes: <br>
+          element.nextSibling: <br>
+          element.previousSibling: <br>
+          element.parentNode:
+        </div>
+        <div class="cod">
+          <NPurp>function</NPurp> <NBlue>setText</NBlue>() { <br>
+            &nbsp;<NPurp>var</NPurp> a = document.getElementById("demo2"); <br>
+            &nbsp;<NPurp>var</NPurp> arr = a.<u>childNodes</u>; <br>
+            &nbsp;<font class="aqua">for</font> (<NPurp>var</NPurp> x = 0; x < arr.length; x++) { <br>
+              &nbsp; arr[x].innerHTML = "<NGreen>new text</NGreen>"; <br>
+            &nbsp;} <br> }
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- Modificar Atributos -->
+    <fieldset>
+      <legend>  Modificar Atributos  </legend>
+      <div class="flex">
+        <div> 
+          <div class="ej wAuto" id="style" style="color: orange;"> 
+            <a href="../Imgs/Orange.png" target="_blank"><img id="myimg" src="../Imgs/Orange.png" alt="orange.png" title="Orange" height="60" /></a> <br>
+            Cambiar estilo
+          </div>
+        </div>
+        <div class="cod">
+          <NPurp>var</NPurp> _img = document.<NBlue>getElementById</NBlue>("<NGreen>myimg</NGreen>"); <br>
+          _img.src = "<NGreen>../Imgs/Apple.png</NGreen>"; <br>
+          _img.href= '<NGreen>../Imgs/Apple.png</NGreen>'; <br><br>
+          <NPurp>var</NPurp> _text = document.<NBlue>getElementById</NBlue>("<NGreen>mytext</NGreen>"); <br>
+          _text.style.color = '<NGreen>#0F0</NGreen>';
+        </div>
+        <script>
+          var _styleText = document.getElementById("style");
+          var srcimg = document.getElementById("myimg");
+          var _changeSRC = true;
+
+          function changeSRC(){
+            if(_changeSRC) {
+              srcimg.src = "../Imgs/Apple.png";
+              srcimg.href= '../Imgs/Apple.png';
+              srcimg.title= 'Apple';
+              _styleText.style.color = '#F00';
+              _changeSRC = false;
+            }
+            else {
+              srcimg.src = "../Imgs/Orange.png";
+              srcimg.href= '../Imgs/Orange.png';
+              srcimg.title= 'Orange';
+              _styleText.style.color = 'orange';
+              _changeSRC = true;
+            }
+          }
+          setInterval(changeSRC, 1000);
+        </script>
+      </div>
+    </fieldset>
+
+    <!-- Elementos -->
+    <fieldset>
+      <legend> Crear Elementos: </legend>
+      <div class="flex">
+        <div>
+           Crear y borrar Elementos 
+          <div class="ejemplo" id="divElement"> Texto. </div>
+          <button onclick="createELEMENT()">Crear</button>
+          <button onclick="delElem()">Borrar</button>
+
+          <div class="codigo">
+            elem.cloneNode(); <NGray>// Clonear.</NGray><br>
+            a.replaceChild(esteElem, porEsteElem); <NGray>// Reemplazar</NGray> <br>
+            padre.insertBefore(elem, padre.firstChild); <NGray>// Add first</NGray>
+          </div>
+        </div>
+        <div>
+          <div class="codigo">
+            <NPurp>let</NPurp> p = document.<NBlue>createElement</NBlue>("<NGreen>p</NGreen>");
+            <NGray>// Crear un parrafo.</NGray> <br>
+            <NPurp>let</NPurp> text = document.<NBlue>createTextNode</NBlue>("<NGreen>Nuevo Texto</NGreen>"); <NGray>// Crear un Texto</NGray> <br>
+            p.<NBlue>appendChild</NBlue>(text); <NGray>// Agregar el text al parrafo.</NGray> <br><br>
+        
+            <NPurp>let</NPurp> div = document.<NBlue>getElementById</NBlue>("<NGreen>div</NGreen>"); <br>
+            div.<NBlue>appendChild</NBlue>(p); <NGray>// Agregar el parrafo al div.</NGray> <br><br>
+
+            div.<NBlue>removeChild</NBlue>(parent.lastChild); <NGray>// Borrar</NGray>
+          </div>
+          <script>
+            var parent = document.getElementById("divElement");
+
+            function createELEMENT(){
+              getParent();
+              var p = document.createElement("p"); // Crear un paragraph
+              var text = document.createTextNode("Nuevo Texto Creado!"); // Crear un texto
+              p.appendChild(text); // Agregar el text al paragraph.
+              parent.appendChild(p); // Agregar el paragraph al div.
+            }
+
+            function delElem(){
+              getParent();
+              parent.removeChild(parent.lastChild);
+            }
+
+            function getParent(){
+              parent = document.getElementById("divElement");
+            }
+          </script>
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- Crear Animaciones -->
+    <fieldset>
+      <legend>  Crear Animaciones  </legend>
+      <div class="flex">
+        <div class="width100">
+          <div id="container1"> <div id="box1"> </div> </div> <br>
+          <div class="cod marg0 wAuto">
+            <NPurp>var</NPurp> pos = <NOrg>0</NOrg>; <br>
+            <NPurp>var</NPurp> box = document.<NBlue>getElementById</NBlue>('<NGreen>box1</NGreen>'); <br>
+            <NPurp>var</NPurp> t = <NBlue>setInterval</NBlue>(move, <NOrg>10</NOrg>);
+          </div>
+        </div>
+        <div class="cod">
+          <NPurp>function</NPurp> <NBlue>move</NBlue>() { <br>
+            &nbsp; <font class="aqua">if</font>(pos >= <NOrg>150</NOrg>) { <br>
+              &nbsp; &nbsp; pos = 0; <br>
+            &nbsp; } <font class="aqua">else</font> { <br>
+              &nbsp; &nbsp; pos += <NOrg>1</NOrg>; <br>
+              &nbsp; &nbsp; box.style.left = pos+'<NGreen>px</NGreen>'; <br>
+            &nbsp; } <br> }
+        </div>
+      </div>
+      <style>
+        #container1 {
+          width: 200px; height: 50px;
+          background: green;
+          position: relative;
+          margin: 5px;
+        }
+        #box1 {
+          width: 40px; height: 40px;
+          margin: 5px;
+          background: red;
+          position: absolute;
+        }
+      </style>
+      <script>
+        var pos = 0;
+        var box = document.getElementById('box1');
+        var t = setInterval(move, 10);
+
+        function move() {
+          if (pos >= 150) {
+            pos = 0;
+          }
+          else {
+            pos += 1;
+            box.style.left = pos + 'px';
+          }
+        }
+      </script>
+    </fieldset>
+  </section>
+
+  <!-- Eventos -->
+  <section id="Eventos">
+
+    <fieldset> <!-- tipos -->
+    <legend> Tipos de Eventos </legend>
+      onload - onunload: <br>
+      onmouseover - onmouseout <br>
+      onmousedown - onmouseup: <br>
+      onfocus - onblur(perder focus) <br>
+    </fieldset>
+
+    <!-- OnClick -->
+    <div class="flex">
+      <!-- Desde HTML -->
+      <fieldset class="width100"> 
+      <legend> OnClick desde HTML </legend>
+        <div class="codigo">
+          &lt;<NRed>button</NRed> <u><NPurp>onclick</NPurp>="<NBlue>show</NBlue>()"</u>> Button &lt;/<NRed>button</NRed>>
+        </div>
+        <div class="cod">
+          <NPurp>function</NPurp> <NBlue>show</NBlue>() { <br>
+            &nbsp; <NBlue>alert</NBlue>("<NGreen>Alerta!</NGreen>"); <br> }
+        </div>
+      </fieldset>
+
+      <!-- JS -->
+      <fieldset class="width100"> 
+      <legend> OnClick desde JS </legend>
+        <div class="cod">
+          <NPurp>var</NPurp> <u>elemento</u> = document.<NBlue>getElementById</NBlue>('<NGreen>demo7</NGreen>'); <br><br>
+          <u>elemento.<NBlue>onclick</NBlue></u> = <NPurp>function</NPurp>(){ <br>
+          &nbsp; <NBlue>alert</NBlue>(<NGreen>"Listo"</NGreen>) <br> };
+        </div>
+      </fieldset>
+    </div>
+
+    <!-- OnChange & OnLoad -->
+    <div class="flex">
+      <!-- OnChange -->
+      <fieldset class="width100">
+        <legend>  OnChange  </legend>
+        <div>
+          <label>Convertir texto en Mayustulas.</label> <br>
+          <input type="text" id="name001" onchange="change()" placeholder="Escribe & Enter"> <br>
+          <div class="codigo marg0">
+            <NRed>&lt;input</NRed> <NPurp>id</NPurp>="<NGreen>texto</NGreen>" <NPurp>onchange</NPurp>="<NBlue>change</NBlue>()"<NRed>></NRed>
+          </div>
+          <div class="cod">
+            <NPurp>function</NPurp> <NBlue>change</NBlue>() { <br>
+              &nbsp; <NPurp>var</NPurp> <b>text</b> = document.<NBlue>getElementById</NBlue>('<NGreen>texto</NGreen>'); <br>
+              &nbsp; <b>text</b>.value = <b>text</b>.value.<NBlue>toUpperCase</NBlue>(); <br> }
+          </div>
+          <script>
+            function change() {
+              var x001 = document.getElementById('name001');
+              x001.value = x001.value.toUpperCase();
+            }
+          </script>
+        </div>
+      </fieldset>
+      <!-- Onload -->
+      <fieldset class="width100">
+        <legend> OnLoad (Al cargar la pag.) </legend>
+        <div>
+          <div class="codigo width100">
+            &lt;<NRed>body</NRed> <NPurp>onload</NPurp>="<NBlue>myFunc</NBlue>()"> &lt;/<NRed>body</NRed>> <NGray>// Desde HTML</NGray>
+          </div><br>
+          <div class="cod">
+            window.<NBlue>onload</NBlue> = <NPurp>function</NPurp>(){ <br>
+              &nbsp; <NGray>// Codigo...</NGray> <br>
+            }
+          </div>
+          <div class="cod">
+            window.<NBlue>addEventListener</NBlue>("<NGreen>load</NGreen>", <NBlue>myFunc</NBlue>());
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <br><hr><br>
+
+    <!-- crear un evento manipulador -->
+    <fieldset>
+      <legend>  Crear un Evento Manipulador  </legend>
+      <!-- Crear Borrar -->
+      <div class="flex">
+        <div class="width100"> Crear Evento:
+          <div class="cod wAuto"> element.<NBlue>addEventListener</NBlue>("<NGreen><u>evento</u></NGreen>", <NPurp><u>function</u></NPurp>); </div>
+        </div>
+        <div class="width100"> Borrar Evento:
+          <div class="cod wAuto"> element.<NBlue>removeEventListener</NBlue>("<NGreen>mouseover</NGreen>", <NPurp>myFunction</NPurp>); </div>
+        </div>
+      </div> <hr>
+
+      <label>Evento de un solo uso:</label>
+      <button id="demo8"> Botón </button>
+      <div class="codigo" style="display: inline;">
+        &lt;<NRed>button</NRed> <NPurp>id</NPurp>="<NGreen>demo8</NGreen>"> Botón &lt;/<NRed>button</NRed>> 
+      </div>
+      <div class="cod">
+        <NPurp>var</NPurp> btn = document.<NBlue>getElementById</NBlue>("<NGreen>demo8</NGreen>"); <br>
+        btn.<NBlue>addEventListener</NBlue>("<NGreen>click</NGreen>", myFunction01); <br><br>
+        <NPurp>function</NPurp> <NBlue>myFunction01</NBlue>() { <br>
+          &nbsp; <NBlue>alert</NBlue>("<NGreen>Hola</NGreen>"); <br>
+          &nbsp; btn.<NBlue>removeEventListener</NBlue>("<NGreen>click</NGreen>", myFunction01); <br> }
+        <script>
+          var btn = document.getElementById("demo8");
+          btn.addEventListener("click", myFunction01);
+          function myFunction01() {
+            alert("Hola");
+            btn.removeEventListener("click", myFunction01);
+          }
+        </script>
+      </div> <hr>
+
+      Detectar una tecla pulsada:
+      <div class="cod">
+        document.<NBlue>addEventListener</NBlue>('<NGreen>keydown</NGreen>', (event) <NPurp>=></NPurp> { <br>
+          &nbsp; console.<NBlue>log</NBlue>(event.key); <br>
+        });
+      </div> <hr>
+
+      play - ended - etc video
+      <div class="cod">
+        <!-- TODO:  -->
+        <NPurp>var</NPurp> video = document.<NBlue>getElementById</NBlue>("<NGreen>vid</NGreen>"); <br>
+        video.<NBlue>addEventListener</NBlue>("<NGreen>seeking</NGreen>", <NPurp>function()</NPurp>{ <NBlue>alert</NBlue>(this.currentTime)});
+      </div>
+    </fieldset>
+
+    <!-- Propagacion de eventos - bubbling & capturing -->
+    <fieldset>
+      <legend>  Propagacion de eventos - bubbling & capturing </legend>
+      La propagación de eventos da orden en la que se ejecutan las funciones, <br>
+      (ej. Si tiene un elemento &lt;p> dentro de un elemento &lt;div> y el usuario hace clic en el elemento &lt;p>, <br>
+      ¿qué evento de "clic" de elemento debe manejarse primero?) <br><br>
+      <u>Bubbling</u>: primero &lt;p> y luego &lt;div>. (de adentro hacia afuera). <br>
+      <u>Capturing</u>: primero &lt;div> y luego &lt;p>. (de afuera hacia adentro). <br><br>
+    
+      <NGray>// Sintax </NGray> <br>
+      <div class="codigo"><NBlue>addEventListener</NBlue>("<NGreen>event</NGreen>", <NBlue>function</NBlue>, <font class="red">useCapture</font>);</div>
+    
+      <NGray><u>BUBBLING</u>: Desde adentro hacia afuera. (Por defecto = FALSE).</NGray> <br>
+        <div class="codigo"> elem.<NBlue>addEventListener</NBlue>("<NGreen>click02</NGreen>", <NBlue>myFunction</NBlue>, <font class="red"><u>false</u></font>); </div>
+    
+      <NGray><u>CAPTURING</u>: Desde afuera hacia adentro. (TRUE).</NGray> <br>
+        <div class="codigo">elem.<NBlue>addEventListener</NBlue>("<NGreen>click02</NGreen>", <NBlue>myFunction</NBlue>, <font class="red"><u>true</u></font>);</div>
+    </fieldset>
+
+    <!-- Image Slider -->
+    <fieldset>
+      <legend>  Image Slider  </legend>
+      <div class="flex">
+        <div>
+          <img id="slider" src="../Imgs/1.jpg" height="100px" /> <br>
+          <button onclick="prev()"> Prev </button>
+          <button onclick="next()"> Next </button>
+          <div class="codigo">
+            <NPurp>var</NPurp> images = [ '1.jpg', '2.jpg', '3.jpg' ]; <br>
+            <NPurp>var</NPurp> num = 0; <br>
+          </div>
+        </div>
+        <div class="cod width100" style="font-size: 11px;">
+          <NPurp>function</NPurp> next() { <br>
+            &nbsp; <NPurp>var</NPurp> slider = document.getElementById('slider'); <br>
+            &nbsp; num++; <br>
+            &nbsp; if(num >= images.length) { num = 0; } <br>
+            &nbsp; slider.src = images[num]; <br> } <br>
+          <NPurp>function</NPurp> prev() { <br>
+            &nbsp; <NPurp>var</NPurp> slider = document.getElementById('slider'); <br>
+            &nbsp; num--; <br>
+            &nbsp; if(num < 0) { <br>
+              &nbsp; &nbsp; num = images.length-1; <br>
+              &nbsp; } <br>
+            &nbsp; slider.src = images[num]; <br>
+          }
+        </div>
+      </div>
+      <script>
+        var images = [ '../Imgs/1.jpg', '../Imgs/2.jpg', '../Imgs/3.jpg' ];
+        var num = 0;
+        function next() {
+          var slider = document.getElementById('slider');
+          num++;
+          if (num >= images.length) {
+            num = 0;
+          }
+          slider.src = images[num];
+        }
+        function prev() {
+          var slider = document.getElementById('slider');
+          num--;
+          if (num < 0) {
+            num = images.length - 1;
+          }
+          slider.src = images[num];
+        }
+      </script>
+    </fieldset>
+
+    <!-- validacion de formularios -->
+    <fieldset>
+      <legend>  Validacion de formularios  </legend>
+
+      <!-- Repetir -->
+      <div class="flex">
+        <div style="width: 100%;">
+          <b><u>Repetir Numero.</u></b>
+          <form onsubmit="return validate()" method="post">
+            Numero: <input type="text" name="num1" id="num1" /> <br>
+            Repetir: <input type="text" name="num2" id="num2" /> <br>
+            <input type="submit" value="Enviar" />
+          </form>
+          <div class="codigo">
+            &lt;<NRed>form</NRed> <NPurp>onsubmit</NPurp>="return validate()" method="post"> <br>
+              &nbsp; Numero: &lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>text</NGreen>" <NPurp>name</NPurp>="<NGreen>num1</NGreen>" <NPurp>id</NPurp>="<NGreen>num1</NGreen>" /> <br>
+              &nbsp; Repetir: &lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>text</NGreen>" <NPurp>name</NPurp>="<NGreen>num2</NGreen>" <NPurp>id</NPurp>="<NGreen>num2</NGreen>" /> <br>
+              &nbsp; &lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>submit</NGreen>" <NPurp>value</NPurp>="<NGreen>Submit</NGreen>" /> <br>
+            &lt;/<NRed>form</NRed>>
+          </div>
+        </div>
+        
+        <div class="cod">
+          <NPurp>function</NPurp> <NBlue>validate</NBlue>() { <br>
+           &nbsp; <NPurp>var</NPurp> n1 = document.<NBlue>getElementById</NBlue>('<NGreen>num1</NGreen>'); <br>
+           &nbsp; <NPurp>var</NPurp> n2 = document.<NBlue>getElementById</NBlue>('<NGreen>num2</NGreen>'); <br>
+           &nbsp; <font class="aqua">if</font>(n1.value <NPurp>!=</NPurp> '' <NPurp>&&</NPurp> n2.value <NPurp>!=</NPurp> '') { <br>
+            &nbsp; &nbsp; <font class="aqua">if</font>(n1.value <NPurp>==</NPurp> n2.value) { <br>
+              &nbsp; &nbsp; &nbsp; <font class="aqua">return</font> <NOrg>true</NOrg>; <br>
+            &nbsp; &nbsp; } <br>
+            &nbsp; } <br>
+            &nbsp; <NBlue>alert</NBlue>("<NGreen>The values should be equal and not blank</NGreen>"); <br>
+            &nbsp; <font class="aqua">return</font> <NOrg>false</NOrg>; <br> }
+        </div>
+        <script>
+        function validate() {
+          var n1 = document.getElementById('num1');
+          var n2 = document.getElementById('num2');
+          if(n1.value != '' && n2.value != '') {
+            if(n1.value == n2.value) {
+              return true;
+            }
+          }
+          alert("Los valores deben ser iguales y no en blanco.");
+          return false;
+        }
+        </script>
+      </div> <br><hr>
+
+      <!-- 1 entre 10 -->
+      <div class="flex">
+        <div style="width: 100%;">
+          <p>Colocar un número entre 1 y 10:</p>
+          <input id="numb">
+          <button type="button" style="margin: 0;" onclick="myFunction()">Submit</button>
+          <p id="demo"> </p>
+          <div class="codigo">
+            &lt;p> Colocar un número entre 1 y 10: &lt;/p> <br>
+            &lt;input id="numb"> <br>
+            &nbsp; &lt;button onclick="myFunction()"> Submit &lt;/button> <br>
+            &lt;p id="demo">< /p> <br>
+          </div>
+        </div>
+        <div class="cod">
+          function myFunction() { <br>
+            &nbsp; let x = document.getElementById("numb").value; <br>
+            &nbsp; let text; <br><br>
+        
+            &nbsp; if (isNaN(x) || x < 1 || x > 10) { <br>
+              &nbsp; &nbsp; text = "Input not valid"; <br>
+            &nbsp; } else { <br>
+              &nbsp; &nbsp; text = "Input OK"; <br>
+            &nbsp; } <br>
+            &nbsp; document.getElementById("demo").innerHTML = text; <br> }
+        </div>
+        <script>
+        function myFunction() {
+          let x = document.getElementById("numb").value;
+          let text;
+        
+          if (isNaN(x) || x < 1 || x > 10) {
+            text = "Incorrecto";
+          } else {
+            text = "Correcto";
+          }
+          document.getElementById("demo").innerHTML = text;
+        }
+        </script>
+      </div>
+    </fieldset>
+  </section>
+  
+  <br><hr><hr><br><br>
+
+  <!--ES6 -->
+  <section id="ES6">
+
+    <!-- Objetos -->
+    <fieldset>
+      <legend>  Objetos en ES6 </legend>
+
+        <h3> Nombres de propiedad calculados: </h3>
+        <details open>
+          <summary>Codigo/Ejemplo...</summary>
+          <div class="codigo">
+            <pre>
+                // Ej.1
+                let prop = 'name';
+                let id = '1234';
+                let mobile = '08923';
+                let user = {
+                  [prop]: 'Jack',
+                  [`user_${id}`]: `${mobile}`
+                };
+                // Ej.2
+                var i = 0;
+                var a = {
+                  ['foo' + ++i]: i,
+                  ['foo' + ++i]: i,
+                  ['foo' + ++i]: i
+                };
+                // Ej. 3
+                var param = 'size';
+                var config = {
+                  [param]: 12,
+                  ['mobile' + param.charAt(0).toUpperCase() + param.slice(1)]: 4
+                };
+            </pre>
+          </div>
+        </details>
+        <hr>
+        <h3> Object.assign(): </h3>
+        <details open>
+          <summary>Codigo/Ejemplo...</summary>
+          <div class="codigo">
+            <pre>
+                //
+                let person00 = {
+                  name: 'Jack',
+                  age: 18,
+                  sex: 'male'
+                };
+                let student00 = {
+                  name: 'Bob',
+                  age: 20,
+                  xp: '2'
+                };
+    
+                let newStudent = Object.assign({}, person00, student00);
+    
+                document.write(newStudent.name); // Bob
+                document.write(newStudent.age); // 20
+                document.write(newStudent.sex); // male
+                document.write(newStudent.xp); // 2
+                <hr>
+                //
+                let person01 = {
+                  name: 'Jack',
+                  age: 18
+                };
+    
+                let newPerson01 = person01;
+                newPerson01.name = 'Bob';
+    
+                document.write(person.name); // Bob
+                document.write(newPerson.name); // Bob
+                <hr>
+                //
+                let person02 = {
+                  name: 'Jack',
+                  age: 18
+                };
+    
+                let newPerson02 = Object.assign({}, person02);
+                newPerson02.name = 'Bob';
+    
+                document.write(person.name); // Jack
+                document.write(newPerson.name); // Bob
+                <hr>
+                //
+                let person03 = {
+                  name: 'Jack',
+                  age: 18
+                };
+    
+                let newPerson03 = Object.assign({}, person03, {name: 'Bob'});
+    
+                document.write(newPerson.name); // Bob
+            </pre>
+          </div>
+        </details>
+    </fieldset>
+
+    <!-- Destructuracion en ES6 -->
+    <div class="borders">
+      Destructuracion en ES6
+      <u><b>Destructurar Arrays:</b></u>
+      <div class="codigo">
+        <pre>
+                // Ej 1
+                    let arrDes = ['1', '2', '3'];
+                    let [one, two, three] = arrDes;
+  
+                    // console.log(one); // 1
+                    // console.log(two); // 2
+                    // console.log(three); // 3
+  
+                // Ej 2
+                    let aDes = () => {
+                    return [1, 3, 2];
+                    };
+  
+                    [one, ,two] = aDes();
+  
+                    // console.log(one); // 1
+                    // console.log(two); // 2
+                // Ej 3
+                    let _a, _b, _c = 4, _d = 8;
+                    [_a, _b = 6] = [2]; // a=2, b=6.
+                    // console.log(a); // 2
+                    // console.log(b); // 6
+                    [_c, _d] = [_d, _c]; // c=8, d=4.
+                    // console.log(c); // 8
+                    // console.log(d); // 4
+            </pre>
+      </div>
+      <u><b>Destructurar Objetos:</b></u>
+      <div class="codigo">
+        <pre>
+                // Ej 1
+                    let obj = {h:100, s: true};
+                    let {h, s} = obj;
+                    // console.log(h);
+                    // console.log(s);
+  
+                // Ej 2
+                    let j0, k0;
+                    ({j0, k0} = {j0: 'Hello ', k0: 'Jack'});
+                    // console.log(a + b);
+                // Ej 3
+                    let {u0, i0} = {u0: 'Hello ', i0: 'Jack'};
+                    // console.log(a + b);
+                // Ej 4
+                    var o0 = {_h: 42, _s: true};
+                    var {_h: foo, _s: bar} = o0;
+                    //console.log(h); // Error
+                    // console.log(foo); // 42
+                // Ej 5
+                    var obj_0 = {_id: 42, name: "Jack"};
+                    let {_id = 10, _age = 20} = obj_0;
+                    // console.log(id); // 42
+                    // console.log(age); // 20
+                </pre>
+      </div>
+    </div>
+
+    <!-- Rest y Spread -->
+    <div class="borders">
+        REST & SPREAD 
+      <details>
+        <u><b>Parámetros de REST (descanso):</b></u>
+        <div class="codigo">
+          <pre>
+                  function containsAll(arr) {
+                  for (let k = 1; k < arguments.length; k++) {
+                      let num = arguments[k];
+                      if (arr.indexOf(num) === -1) {
+                          return false;
+                      }
+                  }
+                  return true;
+                  }
+                  let x0_ = [2, 4, 6, 7];
+                  console.log(containsAll(x0_, 2, 4, 7));
+                  console.log(containsAll(x0_, 6, 4, 9));
+                  //
+                  function containsAll2(arr, ...nums) {
+                  for (let num of nums) {
+                      if (arr.indexOf(num) === -1) {
+                          return false;
+                      }
+                  }
+                  return true;
+                  }
+    
+                  let x1_ = [2, 4, 6, 7];
+                  console.log(containsAll2(x1_, 2, 4, 7));
+                  console.log(containsAll2(x1_, 6, 4, 9));
+    
+              </pre>
+        </div>
+        <u><b>Parámetros de SPREAD(propagación):</b></u>
+        <div class="codigo">
+          <pre>
+                  function myFunction(w, x, y, z) {
+                      console.log(w + x + y + z);
+                  }
+                  var args = [1, 2, 3];
+                  myFunction.apply(null, args.concat(4));
+    
+    
+                  const myFunction = (w, x, y, z) => {
+                      console.log(w + x + y + z);
+                  };
+                  let args = [1, 2, 3];
+                  myFunction(...args, 4);
+    
+    
+                  var dateFields = [1970, 0, 1];  // 1 Jan 1970
+                  var date = new Date(...dateFields);
+                  console.log(date);
+    
+    
+                  var arr = ["One", "Two", "Five"];
+                  arr.splice(2, 0, "Three");
+                  arr.splice(3, 0, "Four");
+                  console.log(arr);
+    
+    
+                  let newArr = ['Three', 'Four'];
+                  let arr = ['One', 'Two', ...newArr, 'Five'];
+                  console.log(arr);
+    
+    
+                  const obj1 = { foo: 'bar', x: 42 };
+                  const obj2 = { foo: 'baz', y: 5 };
+                  const clonedObj = { ...obj1 }; // { foo: "bar", x: 42 }
+                  const mergedObj = { ...obj1, ...obj2 }; // { foo: "baz", x: 42, y: 5 }
+    
+    
+                  const obj1 = { foo: 'bar', x: 42 };
+                  const obj2 = { foo: 'baz', y: 5 };
+                  const merge = (...objects) => ({ ...objects });
+    
+                  let mergedObj = merge (obj1, obj2);
+                  // { 0: { foo: 'bar', x: 42 }, 1: { foo: 'baz', y: 5 } }
+    
+                  let mergedObj2 = merge ({}, obj1, obj2);
+                  // { 0: {}, 1: { foo: 'bar', x: 42 }, 2: { foo: 'baz', y: 5 } }
+              </pre>
+        </div>
+      </details>
+    </div>
+
+    <!-- Clases -->
+    <div class="borders">
+        Clases en ES6
+      <details>
+        <u><b>Constructor - (al iniciar):</b></u>
+        <div class="codigo">
+          <pre>
+                  class Rectangle0 {
+                      constructor(height, width)
+                      {
+                      this.height = height;
+                      this.width = width;
+                      }
+                  }
+                  const square0 = new Rectangle0(5, 5);
+                  const poster0 = new Rectangle0(2, 3);
+                  console.log(square0.height);
+              </pre>
+        </div>
+        <u><b>Clase nombrada:</b></u>
+        <div class="codigo">
+          <pre>
+                  var Square0 = class Rectangle0
+                  {
+                      constructor(height, width) {
+                      this.height = height;
+                      this.width = width;
+                      }
+                  };
+    
+                  const square00 = new Square0(5, 5);
+                  const poster00 = new Square0(2, 3);
+                  console.log(square00.height);
+    
+              </pre>
+        </div>
+        <u><b>Clase no nombrada:</b></u>
+        <div class="codigo">
+          <pre>
+                  var Square1 = class
+                  {
+                  constructor(height, width) {
+                      this.height = height;
+                      this.width = width;
+                  }
+                  };
+                  const square1 = new Square1(5, 5);
+                  const poster1 = new Square1(2, 3);
+                  console.log(square1.height);
+              </pre>
+        </div>
+        <u><b>Metodo/Func</b></u>
+        <div class="codigo">
+          <pre>
+                  class Rectangle1 {
+                  constructor(height, width) {
+                      this.height = height;
+                      this.width = width;
+                  }
+    
+                  get area() {
+                      return this.calcArea();
+                  }
+    
+                  calcArea() {
+                      return this.height * this.width;
+                  }
+                  }
+                  const square01 = new Rectangle1(5, 5);
+                  console.log(square01.area); // 25
+    
+              </pre>
+        </div>
+        <u><b>Herencia</b></u>
+        <div class="codigo">
+          <pre>
+                  class Animal0 {
+                  constructor(name) {
+                      this.name = name;
+                  }
+                  speak() {
+                      console.log(this.name + ' makes a noise.');
+                  }
+                  }
+    
+                  class Dog0 extends Animal0 {
+                  speak() {
+                      console.log(this.name + ' barks.');
+                  }
+                  }
+                  let dog0 = new Dog0('Rex');
+                  dog0.speak(); // Rex barks.
+                  //
+                  class Animal1 {
+                  constructor(name) {
+                      this.name = name;
+                  }
+                  speak() {
+                      console.log(this.name + ' makes a noise.');
+                  }
+                  }
+    
+                  class Dog1 extends Animal1 {
+                  speak() {
+                      super.speak(); // Rex barks.
+                      console.log(this.name + ' barks.');
+                  }
+                  }
+                  let dog1 = new Dog1('Rex');
+                  dog1.speak(); // Rex makes a noise.
+              </pre>
+        </div>
+      </details>
+    </div>
+
+    <!-- Map y Set -->
+    <div class="borders">
+        Map & Set
+      <details>
+        <div class="codigo">
+          <pre>
+                  let map00 = new Map([["k1","v1"], ["k2", "v2"]]);
+                      console.log(map00.size); // 2
+    
+                      // Metodos
+                      // set(key, value)
+                      // get(key)
+                      // has(key)
+                      // delete(key)
+                      // clear()
+                      // keys()    : Arr de k
+                      // value()   : Arr de v
+                      // entries() : Arr de [k, v]
+    
+                      let map2 = new Map();
+                      map2.set("k1", "v1").set("k2", "v2");
+                      console.log(map2.get("k1")); // v1
+                      console.log(map2.has("k2")); // true
+                      for (let kv of map2.entries())
+                      console.log(kv[0] + " : " + kv[1]); // k1:v1  // k2:v2
+                  //
+    
+                  // SET (obj)
+                  let set = new Set([1, 2, 4, 2, 59, 9, 4, 9, 1]);
+                  console.log(set.size); // 5 (size devuelve la cant de valores diferentes)
+                  // Metodos= Add, delete, has, clear, values.
+              </pre>
+        </div>
+      </details>
+    </div>
+
+    <!-- Otros -->
+    <div class="borders">
+        Otros 
+      <details>
+        <h3>PROMISES (por tiempo):</h3>
+        <div class="flex">
+          <div>
+            Antes js:
+            <div class="codigo">
+              <NBlue>setTimeout</NBlue>(<NPurp>function</NPurp>() { <br>
+              &nbsp; console.<NBlue>log</NBlue>("<NGreen>Work 1</NGreen>"); <br>
+              &nbsp; <NBlue>setTimeout</NBlue>(<NPurp>function</NPurp>() { <br>
+                &nbsp; &nbsp; console.<NBlue>log</NBlue>("<NGreen>Work 2</NGreen>"); <br>
+              &nbsp; }, <NOrg>1000</NOrg>); <br>
+              }, <NOrg>1000</NOrg>); <br>
+              console.log("<NGreen>End</NGreen>"); <br>
+            </div>
+          </div>
+          <Flecha></Flecha>
+          <div>
+            Ahora ES6:
+            <div class="codigo">
+              <NPurp>new</NPurp> <font class="selector">Promise</font>(<NPurp>function</NPurp>(<NRed>resolve</NRed>, <NRed>reject</NRed>) { <br>
+                &nbsp; <font class="aqua">if</font> (success) <br>
+                  &nbsp; &nbsp; <NBlue>resolve</NBlue>(result); <br>
+                &nbsp; <font class="aqua">else</font> <br>
+                  &nbsp; &nbsp; <NBlue>reject</NBlue>(<NBlue>Error</NBlue>("<NGreen>failure</NGreen>")); <br>
+              });
+            </div>
+          </div>
+        </div>
+        <hr>
+        <h3>Iteradores y Generadores:</h3>
+        <details>
+          <div class="codigo">
+            <pre>
+                  let myIterableObj = {
+                    [Symbol.iterator] : function* () {
+                    yield 1; yield 2; yield 3;
+                    }
+                  };
+                  console.log([...myIterableObj]); // [ 1, 2, 3 ]
+                  //
+                  function* idMaker() {
+                  let index = 0;
+                  while (index < 5)
+                    yield index++;
+                  }
+                  var gen = idMaker();
+                  console.log(gen.next().value);
+                  console.log(gen.next().value);
+                  console.log(gen.next().value);
+                  console.log(gen.next().value);
+                  console.log(gen.next().value);
+                  // Try to add one more console.log, just like the above see what happens.
+                  //
+                  const arr_ = ['0', '1', '4', 'a', '9', 'c', '16'];
+                  const my_obj = {
+                    [Symbol.iterator]: function*() {
+                    for(let index of arr_) {
+                      yield `${index}`;
+                    }
+                    }
+                  };
+                  const all = [...my_obj] // Here you can replace the '[...my_obj]' with 'arr'.
+                    .map(i => parseInt(i, 10))
+                    .map(Math.sqrt)
+                    .filter((i) => i < 5) // try changing the value of 5 to 4 see what happens.
+                    .reduce((i, d) => i + d); // comment this line while you are changing the value of the line above
+                  console.log(all);
+            </pre>
+          </div>
+        </details>
+        <hr>
+        <u><b>Módulos:</b></u> <br>
+        <u><b>Métodos integrados:</b></u>
+      </details>
+    </div>
+  </section>
+
+  <p id="textoFix"></p>
+
+<script type="text/javascript" src="../MenuJS.js"></script>
+</main></body>
+</html>

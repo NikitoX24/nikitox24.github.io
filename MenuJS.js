@@ -4,7 +4,7 @@ class Menu extends HTMLElement {
     this.innerHTML = `
     <div>
       <nav><ul>
-        <li><a href="../index.html"> <img src="/Imgs/logo.png" height="30px";"></a></li>
+        <li><a href="../index.html"> <img src="../logo.png" height="25px"></a></li>
         <li><a href="https://nikitox24.github.io/Main/"> INICIO(GitHub) </a></li>
         <li><a href="https://github.com/NikitoX24/Main"> GITHUB </a></li>
         <li><a href="https://github.com/NikitoX24?tab=repositories"> REPOSITORIOS </a></li>
@@ -13,7 +13,7 @@ class Menu extends HTMLElement {
     </div>
     <style>
       nav {
-        padding: 10px 0;
+        padding: 7px 0;
         min-width: 100%;
         position: fixed;
         top: -23px;
@@ -21,7 +21,7 @@ class Menu extends HTMLElement {
       }
       nav ul {
         background: linear-gradient(90deg, 
-          rgba(255, 255, 255, 0.5) 0%, 
+          rgba(255, 255, 255, 0.5) 0%,
           rgba(255, 255, 255, 0.8) 25%, 
           rgba(255, 255, 255, 0.8) 75%, 
           rgba(255, 255, 255, 0.5) 100%);
@@ -35,7 +35,7 @@ class Menu extends HTMLElement {
         display: inline-block;
       }
       nav ul li a {
-        padding: 10px;
+        padding: 7px;
         color: #000000;
         font-size: 18px;
         font-family: Arial;
@@ -52,3 +52,27 @@ class Menu extends HTMLElement {
 }
 
 customElements.define("menu-component", Menu);
+
+
+
+// #region (Mostrar Seccion y h1 )
+let textoFix = document.querySelector("#textoFix");
+let Section = document.querySelectorAll("section");
+
+for (let i = 0; i < Section.length; i++) {
+  Section[i].addEventListener("mouseenter", function() {
+    textoFix.innerHTML = Section[i].id;
+  });
+}
+
+window.onload = function(){
+  for (let i = 0; i < Section.length; i++) {
+    let h1 = document.createElement("h1"); // Crear un parrafo.
+    let text = document.createTextNode(Section[i].id); // Crear el Texto.
+    h1.appendChild(text); // Agregar el text al parrafo.
+    Section[i].insertBefore(h1, Section[i].firstChild); // Agregar el h1 a Section.
+  };
+}
+
+//#endregion
+

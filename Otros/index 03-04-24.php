@@ -5,13 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#1bb566"> <!-- Color de la barra de navegador -->
-  <meta name="description" content="Esto es la pag principal">
-  <meta name="robots" content="no-follow">
-  <meta name="keywords" content="html, css, js, cheatsheet, etc">
   <title> Index (localhost) </title>
   <link rel="icon" href="logo.png">
 </head>
-
+<!-- Sin uso -->
+<?php
+  $host = $_SERVER['HTTP_HOST'];
+  $image_path = $host.'/Imgs/';
+?>
 <body>
 <main>
   <!-- Pags -->
@@ -21,15 +22,14 @@
     <hr>
 
     <!-- CheatSheet -->
-    <a href="HtmlCheatSheet\HTML.html"><img src="Imgs/htmlcssjs.png" alt="HtmlCssJss" class="icons imgcentred"></a> <!-- TODO: -->
+    <a href="HtmlCheatSheet\htmlcheatsheet.html"><img src="Imgs/htmlcssjs.png" alt="HtmlCssJss" class="icons imgcentred"></a> <!-- TODO: -->
     <hr>
-    <a href="HtmlCheatSheet\HTML.html"><img src="Imgs/html.png" alt="html" class="icons"></a>
-    <a href="HtmlCheatSheet\CSS.html"><img src="Imgs/css.png" alt="css" class="icons"></a>
-    <a href="HtmlCheatSheet\JavaScript.html"><img src="Imgs/js.png" alt="js" class="icons"></a>
-    <!-- <a href="HtmlCheatSheet/php.html"><img src="Imgs/PHP-logo.png" alt="php" height="50px"></a> -->
+    <a href="HtmlCheatSheet\htmlcheatsheet.html"><img src="Imgs/html.png" alt="html" class="icons"></a>
+    <a href="HtmlCheatSheet\CssCheatSheet.html"><img src="Imgs/css.png" alt="css" class="icons"></a>
+    <a href="HtmlCheatSheet\JSCheatSheet.html"><img src="Imgs/js.png" alt="js" class="icons"></a>
     <hr>
 
-    <!-- PHP -->
+    <!-- Otros -->
     <h3 class="centred"><u>PHP</u></h3>
     <form action="HtmlCheatSheet/php.html">
       <input type="submit" value="PHP" />
@@ -38,8 +38,6 @@
       <input type="submit" value="test" />
     </form> <br> 
     <hr>
-
-    <!-- Otros -->
     <h3 class="centred"><u>Otros</u></h3>
     <form action="Otros/Test.html">
       <input type="submit" value="Test" />
@@ -63,7 +61,7 @@
     </form>
     <br> <hr>
 
-    <!-- Ejercicios -->
+
     <h3 class="centred"><u>Ejercicios</u></h3>
     <form action="Ejercicios/Ahorcado.html">
       <input type="submit" value="Ahorcado" />
@@ -125,8 +123,25 @@
   <div class="round">
     <h3 class="centred"><u>Probando...</u></h3> <hr>
 
+    <!-- HORA -->
+    <div id="HoraPS" class="centred">Hora: 00:00:00</div>
+    <script>
+      printTime();
+      function printTime() {
+        var d = new Date();
+        var hours = d.getHours();
+        var mins = d.getMinutes();
+        var secs = d.getSeconds();
+        if(secs < 10) { secs = "0"+secs }
+        var horaPS = document.getElementById("HoraPS");
+        horaPS.innerHTML = "Hora: " + hours+":"+mins+":"+secs;
+      }
+      setInterval(printTime, 1000);
+    </script>
+    <hr>
+
     <!-- Elejir opciones -->
-    <input placeholder="Seleccionar o Escribir:" list="Lista">
+    <input placeholder="Elije:" list="Lista">
     <datalist id="Lista">
       <option value="uno"></option>
       <option value="dos"></option>
@@ -280,13 +295,6 @@
   </div>
 
 
-
-
-
-
-
-
-
   <!-- ESPACIO EN BLANCO -->
   <div style="height: 700px;"></div>
 </main>
@@ -299,37 +307,12 @@
 </footer>
 
 
-<!-- HORA -->
-<div id="HoraPS" class="centred">Hora: 00:00:00</div>
-<style>
-  #HoraPS{
-    font-size: 1.7em;
-    /* font-family: Arial; */
-    font-weight: 900;
-    position: fixed;
-    top: 97%;
-    left: 10px;
-  }
-</style>
-<script>
-  printTime();
-  function printTime() {
-    var d = new Date();
-    var hours = d.getHours();
-    var mins = d.getMinutes();
-    var secs = d.getSeconds();
-    if(secs < 10) { secs = "0"+secs }
-    var horaPS = document.getElementById("HoraPS");
-    horaPS.innerHTML = "Hora: " + hours+":"+mins+":"+secs;
-  }
-  setInterval(printTime, 1000);
-</script>
+
 
 <section id="Final">
 
 <!-- JavaScript -->
 <script type="text/javascript" src="MenuJS.js"></script>
-<!-- Style -->
 <style>
   body{
     background-color: beige;
@@ -338,8 +321,16 @@
     background-attachment: scroll; /* fixel, scroll, inherit */
   }
 
-  .centred, form, summary{
-    text-align: center; 
+  form{
+    text-align: center; /* left, right, center, justify */
+  }
+
+  summary{
+    text-align: center;
+  }
+
+  .centred{
+    text-align: center; /* left, right, center, justify */
   }
 
   .titles{

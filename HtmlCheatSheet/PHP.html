@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="hcsCSS.css">
+  <link rel="stylesheet" href="STYLE.css">
   <title>PHP CheatSheet</title>
 </head>
 
@@ -14,9 +14,9 @@
 
   <h1 class="titulo">HTML CheatSheet</h1>
   <div class="iconosFlex"> <!-- icons -->
-    <a href="htmlcheatsheet.html"><img src="../Imgs/html.png" alt="html" class="icons filtrogris"></a>
-    <a href="CssCheatSheet.html"><img src="../Imgs/css.png" alt="css" class="icons filtrogris"></a>
-    <a href="JSCheatSheet.html"><img src="../Imgs/js.png" alt="js" class="icons filtrogris"></a>
+    <a href="HTML.html"><img src="../Imgs/html.png" alt="html" class="icons filtrogris"></a>
+    <a href="CSS.html"><img src="../Imgs/css.png" alt="css" class="icons filtrogris"></a>
+    <a href="JavaScript.html"><img src="../Imgs/js.png" alt="js" class="icons filtrogris"></a>
   </div>
   <style>
     .borders {
@@ -32,36 +32,26 @@
       --aquaC: rgb(20, 212, 255);
     }
     .cod{
-      background-color: rgb(53, 53, 53);
-      color: var(--aquaC);
+      background-color: rgb(15, 15, 27);
       text-shadow: none;
-      /* font-family: Arial; */
-      /* font-size: 0.9em;
-      letter-spacing: 0.8px; */
-    }
-    font.aqua{
       color: var(--aquaC);
     }
-    font.blue{
-      color: rgb(91, 138, 230);
-    }
-    font.green{
-      color: rgb(209, 255, 139);
-    }
-    font.var{
-      color: var(--varC);
-    }
-    font.purp{
-      color: rgb(184, 83, 184);
-    }
-
+    NAqua{ color: var(--aquaC); }
+    NBlue{ color: rgb(107, 149, 234); }
+    NGreen{ color: rgb(209, 255, 139); }
+    NVar{ color: var(--varC); }
+    NPurp{ color: rgb(194, 122, 194); }
+    NRed{ color: rgb(255, 85, 85); }
+    NOrg{ color: rgb(254, 146, 38);}
+    NGray{ color: gray; }
+    NObj{ color: rgb(252, 222, 104); }
   </style>
 
 <main>
   <!-- CSS -->
   <h1 class="titulo"> PHP <font class="subText">(Pre-Procesador de Hipertexto)</font> </h1>
 
-  <!-- Conceptos Básicos -->
+  <!-- Variables -->
   <div class="borders">
     <h1 class="titulo"> Variables </h1>
 
@@ -71,58 +61,256 @@
       Variable
       <div class="cod">
         &lt;?php <br>
-        &nbsp; $<font class="var">name</font> = "<font class="green">John</font>" <br>
-        &nbsp; <font class="blue">echo</font> $<font class="var">name</font>; <br>
-        <font class="aqua">?></font>
+        &nbsp; $<NVar>name</NVar> = "<NGreen>John</NGreen>" <br>
+        &nbsp; <NBlue>echo</NBlue> $<NVar>name</NVar>; <br>
+        ?>
       </div> <br>
 
       Variable como Variable
       <div class="cod">
-        $<font class="var">a</font> = "<font class="green">variable</font>" <br>
-        $<font class="var">variable</font> = "<font class="green">hola mundo!</font>" <br>
-        <font class="blue">echo</font> $$<font class="var">a</font>; <font class="gray">// hola mundo!</font>
+        $<NVar>a</NVar> = "<NGreen>variable</NGreen>" <br>
+        $<NVar>variable</NVar> = "<NGreen>hola mundo!</NGreen>" <br>
+        <NBlue>echo</NBlue> $$<NVar>a</NVar>; <NVar>// hola mundo!</NVar>
       </div> <br>
 
       Constante
       <div class="cod">
-        <font class="blue">define</font>("<font class="green">Mensaje</font>", "<font class="green">Hola Mundo!</font>"); <br>
-        <font class="blue">echo</font> <font class="var">Mensaje</font>;
+        <NBlue>define</NBlue>("<NGreen>Mensaje</NGreen>", "<NGreen>Hola Mundo!</NGreen>"); <br>
+        <NBlue>echo</NBlue> <NVar>Mensaje</NVar>;
       </div> <br>
 
       Variable en Funciones
       <div class="cod">
-        $<font class="var">name</font> = "<font class="green">David</font>" <br>
-        <font class="purp">function</font>
+        $<NVar>name</NVar> = "<NGreen>David</NGreen>" <br>
+        <NGreen class="purp">function</NGreen> <NBlue>getName</NBlue>() { <br>
+          &nbsp; <NGreen class="purp">global</NGreen> $<NVar>name</NVar>; <br>
+          &nbsp; <NBlue>echo</NBlue> $<NVar>name</NVar>; <br> } <br>
+        <NBlue>getName</NBlue>(); <NVar> // "David"</NVar>
       </div>
     </fieldset>
 
+    <fieldset> <!-- Variables Predefinidas -->
+      <legend> Variables Predefinidas</legend>
+      <div class="flex" style="justify-content: space-between;">
+        <font>$_SERVER</font> <font>$GLOBALS</font> <font>$_REQUEST</font> <font>$_POST / $_GET</font> <font>$_FILES</font> <font>$_ENV</font> <font>$_COOKIE / $_SESSION</font>
+      </div> <hr>
+      <!-- $_Server -->
+      $_SERVER
+      <div class="flex">
+        <div class="cod">
+          <NBlue>echo</NBlue> $<NVar>_SERVER</NVar>["<NGreen>SCRIPT_NAME</NGreen>"]; <br>
+          <NVar>/MyServer/HtmlCheatSheet/PHP.html</NVar>
+        </div>
+        <div class="cod">
+          <NBlue>echo</NBlue> $<NVar>_SERVER</NVar>["<NGreen>HTTP_HOST</NGreen>"]; <br>
+          <NVar>localhost</NVar>
+        </div>
+      </div> <hr>
+      <!--  $_GET y $_POST -->
+      $_POST (Mostrar Encriptado) <br>
+      $_GET (Mostrar en el URL)
+      <div class="flex">
+        <div class="ej" style="width: 65%;">
+          <form action="php.php" method="post">
+            <p>Nombre: <input type="text" name="name" /></p>
+            <p>Edad: <input type="text" name="age" /></p>
+            <p><input type="submit" name="submit" value="Submit" /></p>
+          </form>
+        </div>
+        <div class="cod">
+          &lt;<NRed>form</NRed> <NPurp>action</NPurp>="<NGreen>php.php</NGreen>" <NPurp>method</NPurp>="<NGreen><u>post</u></NGreen>"> <br>
+            &nbsp; &lt;<NRed>label</NRed>><NVar>Nombre</NVar>: &lt;/<NRed>label</NRed>>&lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>text</NGreen>" <NPurp>name</NPurp>="<NGreen>name</NGreen>"/> <br>
+
+            &nbsp; &lt;<NRed>label</NRed>><NVar>Edad</NVar>: &lt;/<NRed>label</NRed>>&lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>text</NGreen>" <NPurp>name</NPurp>="<NGreen>age</NGreen>"/> <br>
+
+            &nbsp; &lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>submit</NGreen>" <NPurp>name</NPurp>="<NGreen>submit</NGreen>" <NPurp>value</NPurp>="<NGreen>Submit</NGreen>"/> <br>
+          &lt;/<NRed>form</NRed>> <br><br>
+
+          <NGray>(archivo php.php)</NGray> <br>
+            <NBlue>echo</NBlue> "<NGreen>Hi </NGreen>".$<NVar>_POST</NVar>['<NGreen>name</NGreen>'].". "; <br>
+            <NBlue>echo</NBlue> "<NGreen>You are </NGreen>".$<NVar>_POST</NVar>['<NGreen>age</NGreen>']." <NGreen>years old</NGreen>.";
+        </div>
+      </div> <hr>
+
+      $_SESSION (Disponible hasta cerrar Sesion)
+      <div class="flex">
+        <div class="cod">
+          &lt;?php <NGray>// Siempre en la 1ra linea</NGray> <br>
+            <NBlue>session_start</NBlue>(); <br>
+          ?>
+        </div>
+        <div class="cod">
+          &lt;?php <br>
+            $<NVar>_SESSION</NVar>["<NGreen>name</NGreen>"] = "<NGreen>John</NGreen>"; <br>
+            <NBlue>echo</NBlue> "<NGreen>Nombre: </NGreen>" . $<NVar>_SESSION</NVar>["<NGreen>name</NGreen>"]; <br>
+        </div>
+      </div> <hr>
+
+      $_COOKIE (Guardar en el disco del Usuario)
+      <div class="cod">
+        <NBlue>setcookie</NBlue>("user", $value, time() + (86400 * 30), '/'); <br>
+        <NBlue>setcookie</NBlue>(<NVar>name, value, expire(seg), path</NVar><NGray>, domain(opc), secure(opc), httponly(opc)</NGray>);
+      </div>
+
+    </fieldset>
+  </div>
+
+  <!-- Arrays -->
+  <div class="borders">
+    <h1 class="titulo"> Arrays </h1>
     <fieldset> <!-- Arrays -->
       <legend> Arrays </legend>
       Array
       <div class="cod">
-        $<font class="var">Personas</font> = <font class="blue">array</font>("<font class="green">David</font>" => "<font class="green">27</font>"); <br>
-        $<font class="var">Personas</font>["<font class="green">David</font>"] = "<font class="green">28</font>";
+        $<NVar>Personas</NVar> = <NBlue>array</NBlue>("<NGreen>David</NGreen>" => "<NGreen>27</NGreen>"); <br>
+        $<NVar>Personas</NVar>["<NGreen>David</NGreen>"] = "<NGreen>28</NGreen>";
       </div> <br>
 
       Array MultiDimensionales
       <div class="cod">
-        $<font class="var">Personas</font> = <font class="blue">array</font> (<br>
-        &nbsp; "<font class="green">online</font>" => <font class="blue">array</font>("<font class="green">David</font>", "<font class="green">Amy</font>"), <br>
-        &nbsp; "<font class="green">offline</font>" => <font class="blue">array</font>("<font class="green">John</font>", "<font class="green">Rob</font>") <br>
+        $<NVar>Personas</NVar> = <NBlue>array</NBlue> (<br>
+        &nbsp; "<NGreen>online</NGreen>" => <NBlue>array</NBlue>("<NGreen>David</NGreen>", "<NGreen>Amy</NGreen>"), <br>
+        &nbsp; "<NGreen>offline</NGreen>" => <NBlue>array</NBlue>("<NGreen>John</NGreen>", "<NGreen>Rob</NGreen>") <br>
         );<br>
-        <font class="blue">echo</font> $<font class="var">Personas</font>["<font class="green">online</font>"][<font class="orange">0</font>];
-        <font class="gray">// "David"</font>
+        <NBlue>echo</NBlue> $<NVar>Personas</NVar>["<NGreen>online</NGreen>"][<NGreen class="orange">0</NGreen>];
+        <NVar>// "David"</NVar>
       </div>
     </fieldset>
-
-
-
-
-
   </div>
 
+  <!-- Archivos -->
+  <div class="borders">
+    <h1 class="titulo"> Archivos </h1>
+    <fieldset> <!-- Archivos -->
+      <legend> Archivos </legend>
+      <div class="flex">
+        <div class="cod">
+          <NGray>// Escribir</NGray> <br>
+          $<NVar>myfile</NVar> = <NBlue>fopen</NBlue>("<NGreen>file.txt</NGreen>", "<NGreen>w</NGreen>"); <br><br>
+          $<NVar>txt</NVar> = "<NGreen>John\n</NGreen>"; <br>
+          <NBlue>fwrite</NBlue>($<NVar>myfile</NVar>, $<NVar>txt</NVar>); <br>
+          <NVar></NVar>
+          $<NVar>myfile</NVar> = <NBlue>fclose</NBlue>("<NGreen>file.txt</NGreen>");
+        </div>
+        <div class="cod">
+          <NGray>// Leer</NGray> <br>
+          $<NVar>read</NVar> = <NBlue>file</NBlue>('<NGreen>names.txt</NGreen>'); <br><br>
+          foreach ($<NVar>read</NVar> as $<NVar>line</NVar>) { <br>
+            &nbsp; <NBlue>echo</NBlue> $<NVar>line</NVar> ."<NGreen>,</NGreen> "; <br>
+          }
+        </div>
+      </div>
+    </fieldset>
+  </div>
+  
+  <!-- Objetos -->
+  <div class="borders">
+    <h1 class="titulo"> Objetos - Clases </h1>
+    <fieldset> <!-- Objetos -->
+      <legend> Objetos / Clases </legend>
+
+      <!-- Objs -->
+      <div class="flex">
+        <div class="cod">
+          <NGray>//Instanciar y Asignar</NGray> <br>
+          <NPurp>class</NPurp> <NObj>Person{</NObj> <br>
+            &nbsp; <NPurp>public</NPurp> $<NVar>name</NVar>; <br>
+            &nbsp; <NPurp>public function</NPurp> <NBlue>speak</NBlue><NPurp>( ) {</NPurp> <br>
+            &nbsp; &nbsp; <NBlue>echo</NBlue> "<NGreen>Hola me llamo </NGreen>". $this-><NVar>name</NVar>; <br>
+            &nbsp; <NPurp>}</NPurp> <br>
+          <NObj>}</NObj> <br><br>
+          $<NVar>p1</NVar> = <NOrg>new</NOrg> <NObj>Person( )</NObj>; <NGray> // Instanciar</NGray> <br>
+          $<NVar>p1</NVar>-><NVar>name</NVar> = "<NGreen>David</NGreen>"; <NGray> // Asignar </NGray> <br>
+          <NBlue>echo</NBlue> $<NVar>p1</NVar>-><NVar>name</NVar>; <NGray> // David</NGray> <br>
+          $<NVar>p1</NVar>-><NBlue>speak</NBlue>( ); <NGray> // Hola me llamo <u>David</u></NGray>
+        </div>
+
+        <div class="cod">
+          <NGray>// Constructor - Desconstructor</NGray> <br>
+          <NPurp>class</NPurp> <NObj>Objeto{</NObj> <br>
+            &nbsp; <NPurp>public function</NPurp> <NBlue>__construct</NBlue><NPurp>( ) {</NPurp> <br>
+              &nbsp; &nbsp; <NBlue>echo</NBlue> "<NGreen>Object created!</NGreen>"; <br>
+            &nbsp; <NPurp>}</NPurp> <br>
+            &nbsp; <NPurp>public function</NPurp> <NBlue>__destruct</NBlue><NPurp>( ) {</NPurp> <br>
+              &nbsp; &nbsp; <NBlue>echo</NBlue> "<NGreen>Object destroyed!</NGreen>"; <br>
+            &nbsp; <NPurp>}</NPurp> <br>
+          <NObj>}</NObj> <br><br>
+          $<NVar>obj1</NVar> = <NOrg>new</NOrg> <NObj>Objeto( )</NObj>; <NGray> // Object created!</NGray> <br>
+          <NBlue>unset</NBlue>($<NVar>obj1</NVar>); <NGray> // Object destroyed!</NGray> <br>
+        </div>
+      </div> <hr>
+
+      Herencia de clases
+      <div class="flex">
+        <div class="cod">
+          <NPurp>class</NPurp> <NObj>Coder</NObj> <NPurp><u>extends</u></NPurp> <NObj>Person{</NObj> <br>
+          &nbsp; <NPurp>public function</NPurp> <NBlue>hablar</NBlue><NPurp>() {</NPurp> <br>
+            &nbsp; &nbsp; <NBlue>echo</NBlue> "<NGreen>Hola mundo!, by: </NGreen>". $this-><NVar>name</NVar>; <br>
+          &nbsp; <NPurp>}</NPurp> <br> <NObj>}</NObj> <br><br>
+          $<NVar>p2</NVar> = <NOrg>new</NOrg> <NObj>Coder( )</NObj>; <br>
+          $<NVar>p2</NVar>-><NVar>name</NVar> = "<NGreen>Nico</NGreen>"; <br>
+          $<NVar>p2</NVar>-><NBlue>speak</NBlue>( ); <NGray> // Hola mundo!, by Nico</NGray>
+        </div>
+        <div class="cod">
+          <NGray>// Final (no permite heredar clases o funciones).</NGray> <br><br>
+          <NPurp><u>final</u> class</NPurp> <NObj>myFinalClass { <br> } </NObj> <br><br>
+          <NPurp>class</NPurp> <NObj>myClass</NObj> <NPurp>extends</NPurp> <NObj><u>myFinalClass</u> { <br>
+            &nbsp; <NGray>//ERROR no se puede heredar una clase "Final"</NGray> <br> }</NObj>
+        </div>
+      </div> <hr>
+
+      Interface (Crear funciones para objetos).
+      <div class="cod">
+        <NPurp>interface</NPurp> <NObj>MyInterface {</NObj> <br>
+          &nbsp; <NPurp>public function <NBlue>hablar</NBlue>( )</NPurp>; <br> <NObj>}</NObj> <br><br>
+          
+        <NPurp>class</NPurp> <NObj>Person</NObj> <NPurp>implements</NPurp> <NObj>MyInterface {</NObj> <br>
+          &nbsp; <NPurp>public function <NBlue>hablar</NBlue>( ){</NPurp> <br> 
+            &nbsp; &nbsp; <NBlue>echo</NBlue> "<NGreen>Hola!</NGreen>"; <br>
+          <NObj>}</NObj> <br><br>
+          $<NVar>p3</NVar> = <NOrg>new</NOrg> <NObj>Person( )</NObj>; <br>
+          $<NVar>p3</NVar>-><NBlue>hablar</NBlue><NObj>( )</NObj>; <NGray>// Hola!</NGray>
+      </div> <hr>
+
+      Clases Abstractas (pueden ser heredadas pero no instanciadas). <br>
+      <div class="cod">
+        <NPurp> abstract class <NObj>Fruit{</NObj> <br>
+            &nbsp; private <NAqua>$<NVar>color</NVar>;</NAqua> <br><br>
+            
+            &nbsp; abstract public function <NBlue>eat</NBlue>( ); <br> <br>
+            
+            &nbsp; public function <NBlue>setColor</NBlue>(<NAqua>$</NAqua><NVar>c</NVar>) { </NPurp><br>
+              &nbsp; &nbsp; $this-><NVar>color</NVar> = $<NVar>c</NVar>; <br>
+            &nbsp; <NPurp>}</NPurp> <br> 
+        <NObj>}</NObj> <br> <br>
+  
+        <NPurp>class</NPurp> <NObj>Apple</NObj> <NPurp>extends</NPurp> <NObj>Fruit {</NObj> <br>
+          &nbsp; <NPurp>public function <NBlue>eat</NBlue>( ){</NPurp> <br> 
+            &nbsp; &nbsp; <NBlue>echo</NBlue> "<NGreen>Omnomnom</NGreen>"; <br>
+          <NObj>}</NObj> <br><br>
+          $<NVar>obj</NVar> = <NOrg>new</NOrg> <NObj>Apple( )</NObj>; <br>
+          $<NVar>obj</NVar>-><NBlue>eat</NBlue><NObj>( )</NObj>; <NGray>// Omnomnom</NGray>
+      </div> <hr>
+
+      Static (define propiedades estáticas y métodos estáticos).
+      <div class="cod">
+        <NPurp>class</NPurp> <NObj>myClass {</NObj> <br>
+          &nbsp; <NPurp>static</NPurp> $<NVar>myProperty</NVar> = <NOrg>42</NOrg>; <br>
+          &nbsp; <NPurp>static function</NPurp> myMethod<NPurp>() {</NPurp> <br>
+            &nbsp; &nbsp; echo <NPurp>self</NPurp>::$<NVar>myProperty</NVar>; <br>
+          &nbsp; <NPurp>}</NPurp> <br>
+        <NObj>}</NObj> <br><br>
+        
+        <NObj>myClass</NObj>::myMethod<NObj>()</NObj>;
+      </div> <hr>
+
+    </fieldset>
+  </div>
+  
+  <br><br><br><br><br>
   
   <script type="text/javascript" src="../MenuJS.js"></script>
+  <script type="text/javascript" src="/JS.js"></script>
 </main>
 </body>
 </html>
