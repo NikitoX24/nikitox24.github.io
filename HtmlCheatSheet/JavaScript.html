@@ -732,88 +732,53 @@
 
   <!-- Eventos -->
   <section id="Eventos">
-
-    <fieldset> <!-- tipos -->
-    <legend> Tipos de Eventos </legend>
-      onload - onunload: <br>
-      onmouseover - onmouseout <br>
-      onmousedown - onmouseup: <br>
-      onfocus - onblur(perder focus) <br>
-    </fieldset>
-
-    <!-- OnClick -->
+    <!-- Tipos - Onload -->
     <div class="flex">
-      <!-- Desde HTML -->
-      <fieldset class="width100"> 
-      <legend> OnClick desde HTML </legend>
-        <div class="codigo">
-          &lt;<NRed>button</NRed> <u><NPurp>onclick</NPurp>="<NBlue>show</NBlue>()"</u>> Button &lt;/<NRed>button</NRed>>
-        </div>
-        <div class="cod">
-          <NPurp>function</NPurp> <NBlue>show</NBlue>() { <br>
-            &nbsp; <NBlue>alert</NBlue>("<NGreen>Alerta!</NGreen>"); <br> }
-        </div>
-      </fieldset>
-
-      <!-- JS -->
-      <fieldset class="width100"> 
-      <legend> OnClick desde JS </legend>
-        <div class="cod">
-          <NPurp>var</NPurp> <u>elemento</u> = document.<NBlue>getElementById</NBlue>('<NGreen>demo7</NGreen>'); <br><br>
-          <u>elemento.<NBlue>onclick</NBlue></u> = <NPurp>function</NPurp>(){ <br>
-          &nbsp; <NBlue>alert</NBlue>(<NGreen>"Listo"</NGreen>) <br> };
-        </div>
-      </fieldset>
-    </div>
-
-    <!-- OnChange & OnLoad -->
-    <div class="flex">
-      <!-- OnChange -->
-      <fieldset class="width100">
-        <legend>  OnChange  </legend>
-        <div>
-          <label>Convertir texto en Mayustulas.</label> <br>
-          <input type="text" id="name001" onchange="change()" placeholder="Escribe & Enter"> <br>
-          <div class="codigo marg0">
-            <NRed>&lt;input</NRed> <NPurp>id</NPurp>="<NGreen>texto</NGreen>" <NPurp>onchange</NPurp>="<NBlue>change</NBlue>()"<NRed>></NRed>
-          </div>
-          <div class="cod">
-            <NPurp>function</NPurp> <NBlue>change</NBlue>() { <br>
-              &nbsp; <NPurp>var</NPurp> <b>text</b> = document.<NBlue>getElementById</NBlue>('<NGreen>texto</NGreen>'); <br>
-              &nbsp; <b>text</b>.value = <b>text</b>.value.<NBlue>toUpperCase</NBlue>(); <br> }
-          </div>
-          <script>
-            function change() {
-              var x001 = document.getElementById('name001');
-              x001.value = x001.value.toUpperCase();
-            }
-          </script>
-        </div>
+      <!-- tipos -->
+      <fieldset class="width100" style="column-count: 2;"> 
+      <legend> Tipos de Eventos </legend>
+        onfocus - onblur <br>
+        onload - onunload <br>
+        onclick - onchange <br>
+        onkeydown - onkeyup <br>
+        onmousedown - onmouseup <br>
+        onmouseover - onmouseout <br>
       </fieldset>
       <!-- Onload -->
       <fieldset class="width100">
         <legend> OnLoad (Al cargar la pag.) </legend>
-        <div>
-          <div class="codigo width100">
-            &lt;<NRed>body</NRed> <NPurp>onload</NPurp>="<NBlue>myFunc</NBlue>()"> &lt;/<NRed>body</NRed>> <NGray>// Desde HTML</NGray>
-          </div><br>
-          <div class="cod">
-            window.<NBlue>onload</NBlue> = <NPurp>function</NPurp>(){ <br>
-              &nbsp; <NGray>// Codigo...</NGray> <br>
-            }
-          </div>
-          <div class="cod">
-            window.<NBlue>addEventListener</NBlue>("<NGreen>load</NGreen>", <NBlue>myFunc</NBlue>());
-          </div>
+        <div class="cod"> window.<NBlue>onload</NBlue> = <NPurp>function</NPurp>(){ <br> &nbsp; <NGray>// Codigo...</NGray> <br> } </div>
+      </fieldset>
+    </div>
+
+    <!-- Evento Syntax -->
+    <div class="flex">
+      <!-- Evento desde HTML -->
+      <fieldset class="width100"> 
+      <legend> Evento desde HTML </legend>
+        <div class="codigo">
+          &lt;<NRed>button</NRed> <b><u><NPurp>evento</NPurp></u></b>="<NBlue>myFunc</NBlue>()"> Button &lt;/<NRed>button</NRed>>
+        </div>
+        <div class="cod">
+          <NPurp>function</NPurp> <NBlue>myFunc</NBlue>() { <br> &nbsp; <NGray>// Codigo...</NGray> <br> }
+        </div>
+      </fieldset>
+
+      <!-- Evento desde JS -->
+      <fieldset class="width100"> 
+      <legend> Evento desde JS </legend>
+        <div class="cod">
+          <NPurp>let</NPurp> <u>elemento</u> = document.<NBlue>getElementById</NBlue>('<NGreen>demo7</NGreen>'); <br><br>
+          elemento.<b><u><NBlue>evento</NBlue></u></b> = <NPurp>function</NPurp>(){ <br> &nbsp; <NGray>// Codigo...</NGray> <br> }
         </div>
       </fieldset>
     </div>
 
-    <br><hr><br>
+    <br>
 
-    <!-- crear un evento manipulador -->
+    <!-- AddEventListener -->
     <fieldset>
-      <legend>  Crear un Evento Manipulador  </legend>
+      <legend> AddEventListener </legend>
       <!-- Crear Borrar -->
       <div class="flex">
         <div class="width100"> Crear Evento:
@@ -823,87 +788,71 @@
           <div class="cod wAuto"> element.<NBlue>removeEventListener</NBlue>("<NGreen>mouseover</NGreen>", <NPurp>myFunction</NPurp>); </div>
         </div>
       </div> <hr>
-
-      <label>Evento de un solo uso:</label>
-      <button id="demo8"> Botón </button>
-      <div class="codigo" style="display: inline;">
-        &lt;<NRed>button</NRed> <NPurp>id</NPurp>="<NGreen>demo8</NGreen>"> Botón &lt;/<NRed>button</NRed>> 
-      </div>
-      <div class="cod">
-        <NPurp>var</NPurp> btn = document.<NBlue>getElementById</NBlue>("<NGreen>demo8</NGreen>"); <br>
-        btn.<NBlue>addEventListener</NBlue>("<NGreen>click</NGreen>", myFunction01); <br><br>
-        <NPurp>function</NPurp> <NBlue>myFunction01</NBlue>() { <br>
-          &nbsp; <NBlue>alert</NBlue>("<NGreen>Hola</NGreen>"); <br>
-          &nbsp; btn.<NBlue>removeEventListener</NBlue>("<NGreen>click</NGreen>", myFunction01); <br> }
-        <script>
-          var btn = document.getElementById("demo8");
-          btn.addEventListener("click", myFunction01);
-          function myFunction01() {
-            alert("Hola");
-            btn.removeEventListener("click", myFunction01);
-          }
-        </script>
-      </div> <hr>
-
-      Detectar una tecla pulsada:
-      <div class="cod">
-        document.<NBlue>addEventListener</NBlue>('<NGreen>keydown</NGreen>', (event) <NPurp>=></NPurp> { <br>
-          &nbsp; console.<NBlue>log</NBlue>(event.key); <br>
-        });
-      </div> <hr>
-
-      play - ended - etc video
-      <div class="cod">
-        <!-- TODO:  -->
-        <NPurp>var</NPurp> video = document.<NBlue>getElementById</NBlue>("<NGreen>vid</NGreen>"); <br>
-        video.<NBlue>addEventListener</NBlue>("<NGreen>seeking</NGreen>", <NPurp>function()</NPurp>{ <NBlue>alert</NBlue>(this.currentTime)});
+      
+      <!-- Tecla - video -->
+      <div class="flex">
+        <div class="width100">
+          Detectar una tecla pulsada:
+          <div class="cod wAuto">
+            document.<NBlue>addEventListener</NBlue>('<NGreen>keydown</NGreen>', <NPurp>(<NVar>event</NVar>) => {</NPurp> <br>
+              &nbsp; console.<NBlue>log</NBlue>(event.key); <br>
+            });
+          </div>
+        </div>
+        <div class="width100">
+          (video/audio) play - ended:
+          <div class="cod wAuto">
+            <NPurp>let</NPurp> video = document.<NBlue>getElementById</NBlue>("<NGreen>vid</NGreen>"); <br>
+            video.<NBlue>addEventListener</NBlue>("<NGreen>seeking</NGreen>", <NPurp>function()</NPurp>{ <br>
+              &nbsp; <NBlue>alert</NBlue>(this.currentTime) <br> });
+          </div>
+        </div>
       </div>
     </fieldset>
 
     <!-- Propagacion de eventos - bubbling & capturing -->
     <fieldset>
       <legend>  Propagacion de eventos - bubbling & capturing </legend>
-      La propagación de eventos da orden en la que se ejecutan las funciones, <br>
-      (ej. Si tiene un elemento &lt;p> dentro de un elemento &lt;div> y el usuario hace clic en el elemento &lt;p>, <br>
-      ¿qué evento de "clic" de elemento debe manejarse primero?) <br><br>
-      <u>Bubbling</u>: primero &lt;p> y luego &lt;div>. (de adentro hacia afuera). <br>
-      <u>Capturing</u>: primero &lt;div> y luego &lt;p>. (de afuera hacia adentro). <br><br>
-    
-      <NGray>// Sintax </NGray> <br>
-      <div class="codigo"><NBlue>addEventListener</NBlue>("<NGreen>event</NGreen>", <NBlue>function</NBlue>, <font class="red">useCapture</font>);</div>
-    
-      <NGray><u>BUBBLING</u>: Desde adentro hacia afuera. (Por defecto = FALSE).</NGray> <br>
-        <div class="codigo"> elem.<NBlue>addEventListener</NBlue>("<NGreen>click02</NGreen>", <NBlue>myFunction</NBlue>, <font class="red"><u>false</u></font>); </div>
-    
-      <NGray><u>CAPTURING</u>: Desde afuera hacia adentro. (TRUE).</NGray> <br>
-        <div class="codigo">elem.<NBlue>addEventListener</NBlue>("<NGreen>click02</NGreen>", <NBlue>myFunction</NBlue>, <font class="red"><u>true</u></font>);</div>
+      <div class="flex">
+        <div class="width100">
+          Orden en la que se ejecutan las funciones.<br><br>
+          <div class="codigo">
+            &lt;<NRed>div</NRed>> <br>
+            &nbsp; &nbsp;&lt;<NRed>p</NRed>>&lt;/<NRed>p</NRed>> <br>
+            &lt;/<NRed>div</NRed>>
+          </div>
+        </div>
+        <div class="width100">
+          <u>BUBBLING</u>: <NGray>// primero &lt;p> y luego &lt;div>.</NGray> <br>
+          <div class="codigo"> elem.<NBlue>addEventListener</NBlue>("<NGreen>event</NGreen>", <NBlue>myFunc</NBlue>, <font class="red">false</font>); </div>
+          <u>CAPTURING</u>: <NGray>// primero &lt;div> y luego &lt;p>.</NGray> <br>
+          <div class="codigo"> elem.<NBlue>addEventListener</NBlue>("<NGreen>event</NGreen>", <NBlue>myFunc</NBlue>, <font class="red">true</font>); </div>
+        </div>
+      </div>
     </fieldset>
 
     <!-- Image Slider -->
     <fieldset>
-      <legend>  Image Slider  </legend>
+      <legend> Image Slider </legend>
       <div class="flex">
-        <div>
-          <img id="slider" src="../Imgs/1.jpg" height="100px" /> <br>
-          <button onclick="prev()"> Prev </button>
-          <button onclick="next()"> Next </button>
-          <div class="codigo">
-            <NPurp>var</NPurp> images = [ '1.jpg', '2.jpg', '3.jpg' ]; <br>
-            <NPurp>var</NPurp> num = 0; <br>
+        <div class="wAuto">
+          <img id="slider" src="../Imgs/1.jpg" height="105px" /> <br>
+          <button onclick="prev()"> &lt; Prev </button>
+          <button onclick="next()"> Next > </button>
+          <div class="cod wAuto">
+            <NPurp>let</NPurp> images = [ '<NGreen>1.jpg</NGreen>', '<NGreen>2.jpg</NGreen>', '<NGreen>3.jpg</NGreen>' ]; <br>
+            <NPurp>let</NPurp> num = 0; <br>
           </div>
         </div>
-        <div class="cod width100" style="font-size: 11px;">
-          <NPurp>function</NPurp> next() { <br>
-            &nbsp; <NPurp>var</NPurp> slider = document.getElementById('slider'); <br>
+        <div class="cod width100">
+          <NPurp>let</NPurp> slider = document.<NBlue>getElementById</NBlue>('<NGreen>slider</NGreen>'); <br><br>
+          <NPurp>function</NPurp> <NBlue>next</NBlue>() { <br>
             &nbsp; num++; <br>
             &nbsp; if(num >= images.length) { num = 0; } <br>
             &nbsp; slider.src = images[num]; <br> } <br>
-          <NPurp>function</NPurp> prev() { <br>
-            &nbsp; <NPurp>var</NPurp> slider = document.getElementById('slider'); <br>
+          <NPurp>function</NPurp> <NBlue>prev</NBlue>() { <br>
             &nbsp; num--; <br>
-            &nbsp; if(num < 0) { <br>
-              &nbsp; &nbsp; num = images.length-1; <br>
-              &nbsp; } <br>
+            &nbsp; if(num < 0) { num = images.length-1; } <br>
             &nbsp; slider.src = images[num]; <br>
           }
         </div>
@@ -932,7 +881,7 @@
 
     <!-- validacion de formularios -->
     <fieldset>
-      <legend>  Validacion de formularios  </legend>
+      <legend>  Validacion de formularios (js) </legend>
 
       <!-- Repetir -->
       <div class="flex">
@@ -944,7 +893,7 @@
             <input type="submit" value="Enviar" />
           </form>
           <div class="codigo">
-            &lt;<NRed>form</NRed> <NPurp>onsubmit</NPurp>="return validate()" method="post"> <br>
+            &lt;<NRed>form</NRed> <NPurp>onsubmit</NPurp>="<b><NAqua>return</NAqua> <NBlue>validate</NBlue>()</b>" <NPurp>method</NPurp>="post"> <br>
               &nbsp; Numero: &lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>text</NGreen>" <NPurp>name</NPurp>="<NGreen>num1</NGreen>" <NPurp>id</NPurp>="<NGreen>num1</NGreen>" /> <br>
               &nbsp; Repetir: &lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>text</NGreen>" <NPurp>name</NPurp>="<NGreen>num2</NGreen>" <NPurp>id</NPurp>="<NGreen>num2</NGreen>" /> <br>
               &nbsp; &lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>submit</NGreen>" <NPurp>value</NPurp>="<NGreen>Submit</NGreen>" /> <br>
@@ -975,47 +924,6 @@
           }
           alert("Los valores deben ser iguales y no en blanco.");
           return false;
-        }
-        </script>
-      </div> <br><hr>
-
-      <!-- 1 entre 10 -->
-      <div class="flex">
-        <div style="width: 100%;">
-          <p>Colocar un número entre 1 y 10:</p>
-          <input id="numb">
-          <button type="button" style="margin: 0;" onclick="myFunction()">Submit</button>
-          <p id="demo"> </p>
-          <div class="codigo">
-            &lt;p> Colocar un número entre 1 y 10: &lt;/p> <br>
-            &lt;input id="numb"> <br>
-            &nbsp; &lt;button onclick="myFunction()"> Submit &lt;/button> <br>
-            &lt;p id="demo">< /p> <br>
-          </div>
-        </div>
-        <div class="cod">
-          function myFunction() { <br>
-            &nbsp; let x = document.getElementById("numb").value; <br>
-            &nbsp; let text; <br><br>
-        
-            &nbsp; if (isNaN(x) || x < 1 || x > 10) { <br>
-              &nbsp; &nbsp; text = "Input not valid"; <br>
-            &nbsp; } else { <br>
-              &nbsp; &nbsp; text = "Input OK"; <br>
-            &nbsp; } <br>
-            &nbsp; document.getElementById("demo").innerHTML = text; <br> }
-        </div>
-        <script>
-        function myFunction() {
-          let x = document.getElementById("numb").value;
-          let text;
-        
-          if (isNaN(x) || x < 1 || x > 10) {
-            text = "Incorrecto";
-          } else {
-            text = "Correcto";
-          }
-          document.getElementById("demo").innerHTML = text;
         }
         </script>
       </div>

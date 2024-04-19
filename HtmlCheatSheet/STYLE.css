@@ -168,7 +168,7 @@ h1 .subText{
   justify-content: space-around;
 }
 .flex .flex{ width: 50%; }
-.flex .codigo{ min-width: 250px; }
+.flex .codigo{ min-width: 200px; }
 .flex .ejemplo{ min-width: 200px; }
 .flex .cod{ margin: 1px; }
 
