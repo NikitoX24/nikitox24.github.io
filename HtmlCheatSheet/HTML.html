@@ -135,10 +135,9 @@
 
     <!-- Imagen -->
     <fieldset>
-      <legend>  Imagen  </legend>
+      <legend> Imagen </legend>
     
       <!-- Imagen con texto alternativo: -->
-      <h3>Imagen con Link:</h3>
       <div class="flex">
         <div class="ej wAuto"> 
           <a href="../Imgs/Apple.png" target="_blank"> <img src="../Imgs/Apple.png" alt="Apple" height="50px" title="Apple"> </a>
@@ -147,14 +146,13 @@
           <NRed>&lt;a</NRed> <font color="purple">href</font> ="<font color="green">../Apple.png</font>"<NRed>></NRed> <br>
           &nbsp; <NRed>&lt;img</NRed> <font color="purple">src=</font> "<font color="green">../Imagen.png</font>" <font color="purple">alt=</font>"Texto alternativo" <font color="purple">title=</font>"descripción"<NRed>> <br> &lt;/a></NRed> <font class="gray"> target="_blank" (abrir en nueva pestaña) </font>
         </div>
-      </div>
+      </div> <hr>
 
       <!-- Mapa -->
-      <h3>Imagen con Mapa: <u>(Usar DreamWeaver CC)</u></h3>
-      <div class="flex">
-        <div class="ej">
+      Imagen con Mapa: <u>(Usar DreamWeaver CC)</u>
+      <div class="flex fWrap">
+        <div class="ej wAuto">
           <img src="../Imgs/imgMap.png" usemap="htmlcheatsheet.html#ejemplo_mapa" height="163px">
-          
           <map name="ejemplo_mapa">
             <area shape="rect" coords="18,16,171,73" href="../Imgs/Apple.png" alt="rectangulo">
             <area shape="circle" coords="263,55,36" href="../Imgs/css_logo.png" alt="circulo">
@@ -162,15 +160,15 @@
           </map>
         </div>
         
-        <div class="cod" style="font-size: 0.8em;">
-          <NRed>&lt;img</NRed> src="../imgs/imgMap.png" usemap="htmlcheatsheet.html#ejemplo_mapa""<NRed>></NRed> <br><br>
-          <NRed>&lt;map</NRed> name="ejemplo_mapa"<NRed>></NRed> <br>
-            &nbsp; <NRed>&lt;area</NRed> shape="rect" coords="18,16,171,73" href="Apple.png" alt="rectangulo"> 
-              <font class="gray">(izq, sup, der, inf)</font> <br>
-            &nbsp; <NRed>&lt;area</NRed> shape="circle" coords="263,55,36" href="css_logo.png" alt="circulo"> 
-              <font class="gray">(centro-x, centro-y, redia)</font> <br>
-            &nbsp; <NRed>&lt;area</NRed> shape="poly" coords="163,91,213,141,127,141" href="Orange.png" alt="poligono"> 
-              <font class="gray">(x1, y1, x2, y2, ..., xN, yN)</font> <br>
+        <div class="cod wAuto" style="font-size: 0.9em;">
+          <NRed>&lt;img</NRed> <NPurp>src</NPurp>="imgMap.png"  <NPurp>usemap</NPurp>="HTML.html#ejemplo_mapa""<NRed>></NRed> <br><br>
+          <NRed>&lt;map</NRed> <NPurp>name</NPurp>="ejemplo_mapa"<NRed>></NRed> <br>
+            &nbsp; <NRed>&lt;area</NRed> <NPurp>shape</NPurp>="rect" <NPurp>coords</NPurp>="18,16,171,73" <NPurp>href</NPurp>="Apple.png"> <br>
+              <!-- <font class="gray">coorlds(izq, sup, der, inf)</font> <br> -->
+            &nbsp; <NRed>&lt;area</NRed> <NPurp>shape</NPurp>="circle" <NPurp>coords</NPurp>="263,55,36" <NPurp>href</NPurp>="css_logo.png"> <br>
+              <!-- <font class="gray">(centro-x, centro-y, redia)</font> <br> -->
+            &nbsp; <NRed>&lt;area</NRed> <NPurp>shape</NPurp>="poly" <NPurp>coords</NPurp>="163,91,213,141,127,141" <br> <NPurp>href</NPurp>="Orange.png"> <br>
+              <!-- <font class="gray">(x1, y1, x2, y2, ..., xN, yN)</font> <br> -->
             <NRed>&lt;/map></NRed> <br>
           <font class="gray"> nohref=""(indica q este area no tiene enlace) </font>
         </div>
@@ -180,24 +178,27 @@
     <!-- Audio, Video, Progress, Iframe -->
     <fieldset>
       <legend> Audio, Video, Progreso, Iframe </legend>
-      <div class="flex">
-        <div>
+      <!-- Audio -->
+      <div class="flex fWrap">
+        <div class="wAuto">
           <audio src="audio.mp3" controls style="height: 50px; width: 240px;"> Texto por si el navegador no soporta audio. </audio>
           <div class="cod">&lt;<NRed>audio<font class="purp"> src="<font class="green">aud.mp3</font>" controls autoplay loop</font>> &lt; /audio</NRed>></div>
         </div>
         <div class="wAuto"> <br>
-          <progress min="0" max="100" value="75" style="height: 24px; width: 300px;"></progress> <br>
+          <progress min="0" max="100" value="75" style="height: 24px; width: 240px;"></progress> <br>
           <div class="cod">
             &lt;<NRed>progress <font class="purp"> min="<font class="green">0</font>" max="<font class="green">100</font>"value="<font class="green">75</font>>  </font> /progress</NRed>>
           </div>
         </div>
       </div> <hr><br>
-      <div class="flex">
-        <div class="width100">
+
+      <!-- Video - IFrame -->
+      <div class="flex fWrap" style="font-size: 0.9em;">
+        <div class="wAuto">
           <iframe width="300" height="150" src="https://www.youtube.com/embed/o8kT5c_4PAc" frameborder="0" allowfullscreen></iframe>
           <div class="cod"> &lt;<NRed>iframe</NRed> <font class="purp">src</font>="<font class="green">link</font>" <font class="purp">frameborder</font>="0" <font class="purp">allowfullscreen</font>> &lt;/<NRed>iframe</NRed>> </div>
         </div>
-        <div class="width100">
+        <div class="wAuto">
           <video controls autoplay loop> <source src="video.mp4" type="video/mp4">Este navegador no soporta audio. </video>
           <div class="cod">&lt;<NRed>video <font class="purp">src="<font class="green">video.mp4</font>" controls autoplay loop</font>> &lt;/video</NRed>> <br></div>
         </div>
@@ -205,61 +206,53 @@
     </fieldset>
     
     <!-- Listas -->
-    <fieldset class="flex">
+    <fieldset class="flex fWrap">
       <legend> Listas </legend>
 
       <!-- Lista desordenada -->
       <div>
-        <h3 class="subtitles">Desordenada &lt;ul&gt;</h3>
+        <h3>Desordenada &lt;ul&gt;</h3>
         <ul>
           <li type="disc">Disc</li>
           <li type="circle">Circle</li>
           <li type="square">Square</li>
         </ul>
-        <div class="codigo" style="min-width: 180px;">
-          &lt;ul> <br>
-            &nbsp; &lt;li type="disc"> Disc &lt;/li> <br>
-            &nbsp; &lt;li type="circle"> Circle &lt;/li> <br>
-            &nbsp; &lt;li type="square"> Square &lt;/li> <br>
-          &lt;/ul>
+        <div class="codigo"> <NRed>
+          &lt;ul> <br> 
+            &nbsp; &lt;li <NPurp>type</NPurp>="<NGreen>disc</NGreen>"> &lt;/li> <br>
+            &nbsp; &lt;li <NPurp>type</NPurp>="<NGreen>circle</NGreen>"> &lt;/li> <br>
+            &nbsp; &lt;li <NPurp>type</NPurp>="<NGreen>square</NGreen>"> &lt;/li> <br>
+          &lt;/ul> </NRed>
         </div>
-      </div>
-      <hr>
+      </div> <hr>
         
       <!-- Lista  Ordenada -->
       <div>
-        <h3 class="subtitles">Ordenada &lt;ol&gt;</h3>
+        <h3>Ordenada &lt;ol&gt;</h3>
         <ol>
           <li type="1">Numeros (1).</li>
           <li type="a">Letras (a-A).</li>
           <li type="I">Num romanos (i-I).</li>
         </ol>
-        <div class="codigo" style="min-width: 210px;">
+        <div class="codigo"> <NRed>
           &lt;ol> <br>
-            &nbsp; &lt;li type="1"> Numeros (1). &lt;/li> <br>
-            &nbsp; &lt;li type="a"> Letras (a-A). &lt;/li> <br>
-            &nbsp; &lt;li type="I">Num romanos (i-I). &lt;/li> <br>
-          &lt;/ol>
-        </div>
-      </div>
-      <hr>
+            &nbsp; &lt;li <NPurp>type</NPurp>="<NGreen>1</NGreen>"> &lt;/li> <br>
+            &nbsp; &lt;li <NPurp>type</NPurp>="<NGreen>a</NGreen>"> &lt;/li> <br>
+            &nbsp; &lt;li <NPurp>type</NPurp>="<NGreen>I</NGreen>"> &lt;/li> <br>
+          &lt;/ol> </NRed>
+        </div> 
+      </div> <hr>
       
       <!-- Lista descriptiva -->
       <div>
-        <h3 class="subtitles">Descriptiva &lt;dl&gt;</h3>
-        <dl>
-          <dt>Texto a detallar.
-            <dd> Texto descriptivo...</dd>
-          </dt>
-        </dl>
-        <br>
-
-        <div class="codigo" style="min-width: 200px;">
-          &#60;dl> <br>
-            &nbsp; &#60;dt> Texto a detallar. <br>
-              &nbsp; &nbsp; &#60;dd> Texto descriptivo... &#60;/dd></dd> <br>
-              &nbsp; &#60;/dt> <br>
-          &#60;/dl>
+        <h3>Descriptiva &lt;dl&gt;</h3>
+        <dl> <dt>Texto a detallar.
+          <dd> Texto descriptivo...</dd> </dt>
+        </dl> <br>
+        <div class="codigo"> <NRed>
+          &#60;dl> <br> &nbsp; &#60;dt> <NVar>Texto a detallar.</NVar> <br>
+          &nbsp; &nbsp; &#60dd> <NVar>Texto descriptivo...</NVar> &#60;/dd></dd> <br>
+          &nbsp; &#60;/dt> <br> &#60;/dl> </NRed>
         </div>
       </div>
     </fieldset>
@@ -268,7 +261,7 @@
     <fieldset class="flex">
       <legend>  Tabla </legend>
       <div><br>
-        <table border="2" style="width: 300px; height: 100px; background-color: white;">
+        <table border="2" style="width: 100%; height: 100px; background-color: white;">
           <caption> Título </caption>
           <tr><th colspan="4">Colores</th></tr>
           <tr>
@@ -621,7 +614,7 @@
 
       <!-- Translate script -->
       <div class="flex">
-        <div class="ej"> <canvas id="canvas2" width="300" height="100"> </canvas> </div>
+        <div class="ej wAuto"> <canvas id="canvas2" width="280" height="100"> </canvas> </div>
         <div class="cod">
           <font class="purp">var</font> c = document.<font class="blue">getElementById</font> ("<font class="green">canvas1</font>"); <br>
           <font class="purp">var</font> ctx3 = c.<font class="blue">getContext</font>("<font class="green">2d</font>"); <br><br>

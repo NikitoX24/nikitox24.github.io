@@ -301,7 +301,7 @@
           </style>
         </div>
 
-        <div class="codigo" style="min-width: 170px;">
+        <div class="codigo wAuto" style="min-width: auto;">
           table.styled { <br>
             &nbsp; <b>caption-side:</b> top; <br>
             &nbsp; <b>border-spacing:</b> 20px 5px; <br>
@@ -309,12 +309,12 @@
           } <br>
         </div>
         <div class="cod flex"> <br>
-          <div>
+          <div class="width100">
             <font class="gray">Filas por colores:</font> <br>
             tr:<font class="purp">nth-child</font>(even) { <br>
               &nbsp; <b>background-color:</b> gray; <br> }<br>
           </div>
-          <div> <br>
+          <div class="width100"> <br>
             tr:<font class="purp">nth-child</font>(odd) { <br>
               &nbsp; <b>background-color:</b> black; <br> }
           </div>
@@ -447,7 +447,7 @@
     </fieldset>
   </section> 
   
-  <!-- Positioning And Layout -->
+  <!-- Positioning & Layout -->
   <section id="Pos & Layout">
 
     <!-- Display -->
@@ -613,7 +613,11 @@
     <!-- Posicionamiento -->
     <fieldset>
       <legend>  Posicionamiento  </legend>
-      <img src="../Imgs/css-position-all.png" alt="" height="300px">
+      <img id="imgPos" src="../Imgs/css-position-all.png" alt="">
+      <style>
+        #imgPos{ height: 100%; }
+        @media screen and (max-width: 700px){ #imgPos{ height: 290px;} }
+      </style>
     </fieldset>
 
     <!-- Floating -->
@@ -692,10 +696,13 @@
     <!-- OverFlow -->
     <fieldset>
       <legend> OverFlow </legend>
-      <div class="flex">
+      <div class="flex fWrap">
         <div class="flex" style="width: 300px;">
           <div class="overflow">
             This text is inside the div element, which has a blue
+            background color and is floated to the left. We set a specific
+            height and width for the div element, and as you can see,
+            the content cannot fit.This text is inside the div element, which has a blue
             background color and is floated to the left. We set a specific
             height and width for the div element, and as you can see,
             the content cannot fit.
@@ -705,17 +712,17 @@
               &nbsp; <b>width:</b> 150px; <br>
               &nbsp; <b>height:</b> 150px; <br>
               &nbsp; <b>overflow:</b> auto; <br>
-              <font class="gray"> visible, scroll, hidden</font> <br>
-            }
+              <font class="gray"> visible, scroll, hidden</font> <br> }
           </div>
         </div>
+
         <!-- Word-Wrap -->  
         <div>
-          <div class="flex" style="width: 380px;">
+          <div class="flex" style="width: 370px;">
             <div class="wordwrap" style="word-wrap: normal;"> ABCDEFGHIJKLMNÑOPQRSTUVWXYZ. </div>
             <div class="cod marg0 wAuto"> .texto{ <u><b>word-wrap:</b> normal;</u> } </div>
-          </div> <br>
-          <div class="flex" style="width: 380px;">
+          </div>
+          <div class="flex" style="width: 370px;">
             <div class="wordwrap" style="word-wrap: break-word;"> ABCDEFGHIJKLMNÑOPQRSTUVWXYZ. </div>
             <div class="cod marg0 wAuto"> .texto{ <u><b>word-wrap:</b> break-word;</u> } </div>
           </div>
@@ -735,7 +742,6 @@
           width: 135px; height: 30px;
           background-color: lightblue;
           text-transform: lowercase;
-          /* margin: 0; */
         }
       </style>
     </fieldset>
@@ -747,7 +753,7 @@
     <!-- Border-Radius -->
     <fieldset>
       <legend>  Border-Radius/Style  </legend>
-      <div class="flex">
+      <div class="flex fWrap">
         <div class="flex" style="width: 300px;">
           <div class="boxsh divBorderRadius" style="margin-top: 15px;"> border-radius: 0 10px 20px 30px; </div>
           <div class="boxsh divCirculo"> border-radius: 50%; </div>
@@ -795,7 +801,7 @@
     <!-- Box-Shadow -->
     <fieldset>
       <legend>  Box-Shadow  </legend>
-      <div class="flex" style="margin-top: 15px;">
+      <div class="flex fWrap" style="margin-top: 15px;">
         <!-- Shadow -->
         <div class="backgw boxsh" style="box-shadow: 10px 10px 10px 5px grey; color: black;">
           <b>box-shadow:</b> 10px 10px 10px 5px #888; <br>
@@ -808,7 +814,7 @@
         </div>
       </div>
 
-      <div class="flex">
+      <div class="flex fWrap">
         <!-- Box-Triple Shadow -->
         <div class="BoxTrilpeShadow">
           <b>box-shadow:</b> 0 0 10px 30px rgba(255, 191, 136, 0.742), <br> 30px 0 20px 30px #B0E0E6;
@@ -890,7 +896,7 @@
     <fieldset>
       <legend> Degradados Radiales </legend>
       
-      <div class="flex">
+      <div class="flex fWrap">
         <div class="first48 degrad">Ellipse (Default)</div>
         <div class="second48 degrad">Circle</div>
         <div class="first49 degrad">Top Left</div>
@@ -919,19 +925,19 @@
       </style>
     </fieldset>
 
-    <!-- Background size-clip -->
+    <!-- Backgrounds -->
     <fieldset>
       <legend> Backgrounds </legend>
       <!-- Background size -->
-        <div class="flex">
-          <div class="backsize" style="background-size: 75px 75px;"><b>background-size:</b> 75px</div>
-          <div class="backsize" style="background-size: contain;"><b>background-size:</b> contain</div>
-          <div class="backsize" style="background-size: cover;"><b>background-size:</b> cover</div>
-          <div>
+      <div class="flex fWrap">
+        <div class="backsize" style="background-size: 75px 75px;"><b>background-size:</b> 75px</div>
+        <div class="backsize" style="background-size: contain;"><b>background-size:</b> contain</div>
+        <div class="backsize" style="background-size: cover;"><b>background-size:</b> cover</div>
+        <div> 
           <div class="backclip" style="background-clip: padding-box;"> <b>background-clip:</b> padding-box</div>
-          <div class="backclip" style="background-clip: content-box;"> <b>background-clip:</b> content-box</div>
-          </div>
+          <div class="backclip" style="background-clip: content-box;"> <b>background-clip:</b> content-box</div> 
         </div>
+      </div>
       <style>
         .backsize {
           height: 115px; width: 150px;
@@ -968,8 +974,9 @@
         </style>
       </div>
 
+      <!-- Backoun Fix -->
       <div class="flex">
-        <div class="ej">
+        <div class="ej wAuto">
           <div class="backgfx"></div>
         </div>
         <div class="cod">
@@ -980,13 +987,16 @@
             &nbsp; <b>background-image:</b> url("/Imgs/cat1.png"); <br>
             &nbsp; <b>background-repeat:</b> no-repeat; <br>
             &nbsp; <b>background-attachment:</b> fixed; <br>
+            &nbsp; <b>background-size:</b> contain; <br>
           }
         </div>
         <style>
           .backgfx{
-            height: 150px;
-            background: black url("/Imgs/cat1.png") no-repeat fixed top;
+            height: 150px; width: 200px;
+            background: black url("/Imgs/cat1.png") repeat fixed top;
+            background-size: contain;
           }
+          @media screen and (max-width: 767px){ .backgfx { height: 100px } }
         </style>
       </div>
     </fieldset>
