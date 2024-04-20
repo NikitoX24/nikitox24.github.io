@@ -3,8 +3,9 @@
 }
 @media screen and (max-width: 767px){
   body{ font-size: 0.7em !important; }
-  h1{ font-size: 1.5em !important; line-height: 10px !important;}
-  legend{ font-size: 1.3em !important; }
+  h1{ font-size: 1.5em !important; line-height: 0px !important;}
+  legend{ font-size: 1em !important; }
+  fieldset{ padding: 5px !important; }
 }
 body {
   background-image: url("../Imgs/TileW.jpg");
@@ -58,7 +59,7 @@ pre {
 }
 summary {
   color: rgb(0, 77, 155);
-  font-size: 17px;
+  font-size: 1em;
   cursor: help;
 }
 
@@ -227,4 +228,8 @@ Flecha::before{ content: "➜"; font-size: 1.5em; }
 
 .fWrap{
   flex-wrap: wrap;
+}
+
+.columnas{
+  column-count: 2;
 }

@@ -28,7 +28,7 @@
       box-shadow: inset 0 40px 0 0 var(--border-color), 4px 4px 15px 5px rgba(0, 255, 38, 0.1);
     }
     @media screen and (max-width: 767px){
-      section { box-shadow: inset 0 35px 0 0 var(--border-color) !important; }
+      section { box-shadow: inset 0 27px 0 0 var(--border-color) !important; }
     }
   </style>
 </header>
@@ -50,7 +50,7 @@
         <div style="width: 70%;">
           Salida por <b>Html</b>:
           <div class="cod wAuto">
-            document.<NBlue>write</NBlue>("<NGreen>&#60h1> Hello World! &#60/h1></NGreen>");
+            document.<NBlue>write</NBlue>("<NGreen>&#60h1> Hola! &#60/h1></NGreen>");
           </div>
         </div>
         <div style="width: 70%;">
@@ -68,7 +68,7 @@
         <div class="cod">
           <NPurp>var</NPurp> a <NPurp>=</NPurp> <NOrg>10</NOrg>; <NGray> // publica.</NGray> <br>
           <NPurp>let</NPurp> b <NPurp>=</NPurp> <NOrg>true</NOrg>; <NGray> // privada.</NGray> <br>
-          <NPurp>const</NPurp> c <NPurp>=</NPurp> '<NGreen>hello</NGreen>'; <NGray>// privado y no se puede modificar.</NGray> <br>
+          <NPurp>const</NPurp> c <NPurp>=</NPurp> '<NGreen>hello</NGreen>'; <NGray>// priv + no modif.</NGray> <br>
         </div>
         <div class="cod">
           <NGray> // Literales de plantilla</NGray> <br>
@@ -153,7 +153,7 @@
             <NBlue>Prompt</NBlue>("<NGreen>Solicitud</NGreen>")
             <script> function botonalerta2() { alert("Esto es una Solicitud!"); } </script> <br>
           <button onclick="botonalerta3();"> Confirm </button>
-            <NBlue>Confirm</NBlue>("<NGreen>Confirmacion</NGreen>")
+            <NBlue>Confirm</NBlue>("<NGreen>Confirm</NGreen>")
             <script> function botonalerta3() { alert("Esto es una Confirmacion!"); } </script> <br>
         </div>
         <div class="cod">
@@ -167,7 +167,7 @@
       </div>
     </fieldset>
     
-    <div class="flex"> <!-- SetInterval - SetTimeout -->
+    <div class="flex"> <!-- SetInterval - SetTimeout FIXME: -->
       <fieldset class="width100"> 
         <legend>SetInterval (Infinito)</legend>
         <div class="cod">
@@ -304,24 +304,22 @@
       Metodos de Date:
       <div class="flex">
         <div class="codigo flex width100 marg0">
-          <div class="width100">
-            getFullYer()      <NGray>// año.</NGray> <br>
-            getMonth()        <NGray>// mes.</NGray> <br>
-            getDate()         <NGray>// dia(num).</NGray> <br>
-            getDay()          <NGray>// dia(sem).</NGray> <br>
-          </div>
-          <div class="width100">
-            getHours()        <NGray>// hora.</NGray> <br>
-            getMinutes()      <NGray>// min.</NGray> <br>
-            getSeconds()      <NGray>// seg.</NGray> <br>
-            getMilliseconds() <NGray>// ms.</NGray>
+          <div class="width100 columnas">
+            getFullYer()      <NGray>// 1999.</NGray> <br>
+            getMonth()        <NGray>// 06.</NGray> <br>
+            getDate()         <NGray>// 24.</NGray> <br>
+            getDay()          <NGray>// Lun.</NGray> <br>
+            getHours()        <br>
+            getMinutes()      <br>
+            getSeconds()      <br>
+            getMilliseconds()
           </div>
         </div>
         <div class="cod width100">
           <NPurp>var</NPurp> date1 = <NPurp>new</NPurp> <NBlue>Date</NBlue>(); <NGray> // Crear</NGray> <br>
           <NPurp>var</NPurp> hours = date1.<NBlue>getHours</NBlue>(); <br>
           document.<NBlue>write</NBlue>(<u>hours</u>); <br>
-          <NGray>// Muestra solo la hora actual, sin min/seg.</NGray>
+          <NGray>// Muestra solo la hora(sin min/seg).</NGray>
         </div>
       </div>
     </fieldset>
@@ -336,9 +334,9 @@
           localStorage.<NBlue>clear</NBlue>(); <NGray>(Limpiar)</NGray>
         </div>
         <div class="cod">
-          localStorage.<NBlue>setItem</NBlue>("<NGreen>Clave1</NGreen>", "<NGreen>Valor1</NGreen>"); <NGray>(Guardar)</NGray><br>
-          localStorage.<NBlue>getItem</NBlue>("<NGreen>Clave1</NGreen>"); <NGray>(Cargar)</NGray> <br>
-          localStorage.<NBlue>removeItem</NBlue>("<NGreen>Clave1</NGreen>"); <NGray>(Borrar)</NGray>
+          localStorage.<NBlue>setItem</NBlue>("<NGreen>name</NGreen>", "<NGreen>Val</NGreen>"); <NGray>(Guardar)</NGray><br>
+          localStorage.<NBlue>getItem</NBlue>("<NGreen>name</NGreen>"); <NGray>(Cargar)</NGray> <br>
+          localStorage.<NBlue>removeItem</NBlue>("<NGreen>name</NGreen>"); <NGray>(Borrar)</NGray>
         </div>
       </div>
     </fieldset>

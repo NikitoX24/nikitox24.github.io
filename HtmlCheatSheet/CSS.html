@@ -28,7 +28,7 @@
       box-shadow: inset 0 40px 0 0 var(--border-color), 4px 4px 15px 5px rgba(0, 0, 255, 0.1);
     }
     @media screen and (max-width: 767px){
-      section { box-shadow: inset 0 35px 0 0 var(--border-color) !important; }
+      section { box-shadow: inset 0 27px 0 0 var(--border-color) !important; }
     }
   </style>
 </header>
@@ -39,7 +39,7 @@
 
     <!-- Fuentes -->
     <fieldset>
-      <legend> Fuentes </legend>
+      <legend> Fuentes - Text </legend>
 
       <!-- Font-Style -->
       <div class="flex">
@@ -53,67 +53,61 @@
 
       <!-- Font-Weight -->
       <div class="flex">
-        <p class="ej" id="fontWeight">
-          This is a paragraph in lighter.
-        </p>
-        <div class="cod">
-          <b>font-weight:</b> 900; <font class="gray">/* 100: finito / 900: grueso */</font>
-        </div>
+        <p class="ej" id="fontWeight"> Ejemplso de font-weight. </p>
+        <div class="cod"> <b>font-weight:</b> 900; <font class="gray">/* 100-900 */</font> </div>
         <style>
-          #fontWeight {
-            animation: fontWeight 1s infinite linear;
-          }
+          #fontWeight { animation: fontWeight 1s infinite linear; }
           @keyframes fontWeight {
-            0% { font-weight: 100; }
-            100% { font-weight: 900; }
+            from { font-weight: 100; }
+            to { font-weight: 900; }
           }
         </style>
       </div>
 
       <!-- Font-Variant -->
       <div class="flex">
-        <p class="ej" style="font-variant: small-caps;">
-          This is a paragraph in small-caps.
-        </p>
-        <div class="cod">
-          <b>font-variant:</b> small-caps; <font class="gray">/* normal, small-caps, inherit */</font>
-        </div>
+        <p class="ej" style="font-variant: small-caps;"> This is a paragraph in small-caps. </p>
+        <div class="cod"> <b>font-variant:</b> small-caps; <font class="gray">/* normal */</font> </div>
+      </div>
+
+      <!-- Text-Transorm -->
+      <div class="flex">
+        <p class="ej" style="text-transform: capitalize;"> transformar la primera letra de cada palabra en mayúsc.</p>
+        <div class="cod"> <b>text-transform:</b> capitalize; <font class="gray"> uppercase, lowercase.</font></div>
       </div>
     </fieldset>
 
     <!-- Alineacion de Texto -->
     <fieldset>
       <legend>Alineación de Texto</legend>
-      
-      <!-- (Horizontal y Vertical) -->
-      <div style="height: 100px;">
-        <div class="boxizq" style="width: 50%;"> <!-- Text-Align (Horizontal) -->
-          <div class="flex">
-            <div class="ej"> <div style="text-align: left;">Aligned to <b>Left</b></div> </div>
-            <div class="cod"> <b>text-align:</b> left; </div>
-          </div>
-          <div class="flex">
-            <div class="ej"> <div style="text-align: center;">Aligned to <b>Center</b></div> </div>
-            <div class="cod"> <b>text-align:</b> center; </div>
-          </div>
-          <div class="flex">
-            <div class="ej"> <div style="text-align: right;">Aligned to <b>Right</b></div> </div>
-            <div class="cod"> <b>text-align:</b> right; </div>
-          </div>
+      <!-- Text-Align (Horizontal) -->
+      <div class="boxizq" style="width: 50%;">
+        <div class="flex">
+          <div class="ej marg0" style="text-align: left;">Aligned to <b>Left</b></div>
+          <div class="cod"> <b>text-align:</b> left; </div>
         </div>
+        <div class="flex">
+          <div class="ej marg0" style="text-align: center;">Aligned to <b>Center</b></div>
+          <div class="cod"> <b>text-align:</b> center; </div>
+        </div>
+        <div class="flex">
+          <div class="ej marg0" style="text-align: right;">Aligned to <b>Right</b></div>
+          <div class="cod"> <b>text-align:</b> right; </div>
+        </div>
+      </div>
 
-        <div class="boxder" style="width: 50%;"><!-- Text-Align (Vertical) -->
+      <!-- Text-Align (Vertical) -->
+      <div class="boxder" style="width: 50%;">
+        <div class="flex">
           <div class="flex">
-            <div class="flex">
-              <div class="ej" style="display: inline-table; vertical-align: top;"><div style="vertical-align: top; display: table-cell;">Top</div></div>
-              <div class="ej" style="display: inline-table;"><div style="vertical-align: middle; display: table-cell;">Middle</div></div>
-              <div class="ej" style="display: inline-table; vertical-align: bottom;"><div style="vertical-align: bottom; display: table-cell;">Bottom</div></div>
-            </div>
-            <div>
-              <div class="cod"> <b>vertical-align:</b> top; </div>
-              <div class="cod"> <b>vertical-align:</b> middle; </div>
-              <div class="cod"> <b>vertical-align:</b> bottom; </div>
-            </div>
+            <div class="ej marg0" style="display: inline-table; vertical-align: top;"><div style="vertical-align: top; display: table-cell;">Top</div></div>
+            <div class="ej marg0" style="display: inline-table;"><div style="vertical-align: middle; display: table-cell;">Midd.</div></div>
+            <div class="ej marg0" style="display: inline-table; vertical-align: bottom;"><div style="vertical-align: bottom; display: table-cell;">Bott.</div></div>
+          </div>
+          <div>
+            <div class="cod"> <b>vertical-align:</b> top; </div>
+            <div class="cod"> <b>vertical-align:</b> middle; </div>
+            <div class="cod"> <b>vertical-align:</b> bottom; </div>
           </div>
         </div>
       </div><hr>
@@ -172,15 +166,6 @@
       </div>
 
       <div class="flex">
-      </div>
-    </fieldset>
-
-    <!-- Text-Transform -->
-    <fieldset>
-      <legend> Text-Transform </legend> 
-      <div class="flex">
-        <p class="ej" style="text-transform: capitalize;"> transformar la primera letra de cada palabra en mayúsc.</p>
-        <div class="cod"> <b>text-transform:</b> capitalize; <font class="gray"> uppercase, lowercase.</font></div>
       </div>
     </fieldset>
 
@@ -653,7 +638,7 @@
     <fieldset>
       <legend>  Z-Index </legend>
       <div class="flex">
-        <div style="margin: 0 70px 0 70px;">
+        <div class="wAuto">
           <div class="boxi bluee">Blue</div>
           <div class="boxi redd">Red</div>
         </div>
@@ -675,7 +660,7 @@
             margin: -50px 0 0 50px;
           }
         </style>
-        <!-- <div class="flex"> -->
+        <div class="flex width100">
           <div class="cod">
             .bluee { <br>
               &nbsp; <b>z-index:</b> 3; <br>
@@ -689,7 +674,7 @@
               &nbsp; <b>margin:</b> -50px 0 0 50px; <br>
             }
           </div>
-        <!-- </div> -->
+        </div>
       </div>
     </fieldset>
     
@@ -754,20 +739,24 @@
     <fieldset>
       <legend>  Border-Radius/Style  </legend>
       <div class="flex fWrap">
-        <div class="flex" style="width: 300px;">
+        <div class="flex" style="width: 100%;">
           <div class="boxsh divBorderRadius" style="margin-top: 15px;"> border-radius: 0 10px 20px 30px; </div>
           <div class="boxsh divCirculo"> border-radius: 50%; </div>
         </div>
         <div class="flex" style="padding: 5px; flex-wrap: wrap; width: 220px;">
-          <font style="border-style: dotted; padding: 5px;">dotted.</font>
-          <font style="border-style: dashed; padding: 5px;">dashed.</font>
-          <font style="border-style: double; padding: 5px;">double.</font>
-          <font style="border-style: groove; padding: 5px;">grooved.</font>
-          <font style="border-style: ridge; padding: 5px;">ridged.</font>
-          <font style="border-style: inset; padding: 5px;">inset.</font>
-          <font style="border-style: outset; padding: 5px;">outset.</font>
-          <div class="cod"> <b>border-style:</b> <font class="gray">dotted...</font>; </div>
+          <font class="borderSty" style="border-style: dotted;"><b>border-style:</b> dotted.</font>
+          <font class="borderSty" style="border-style: dashed;"><b>border-style:</b> dashed.</font>
+          <font class="borderSty" style="border-style: double;"><b>border-style:</b> double.</font>
+          <font class="borderSty" style="border-style: groove;"><b>border-style:</b> grooved.</font>
+          <font class="borderSty" style="border-style: ridge;"><b>border-style:</b> ridged.</font>
+          <font class="borderSty" style="border-style: inset;"><b>border-style:</b> inset.</font>
+          <font class="borderSty" style="border-style: outset;"><b>border-style:</b> outset.</font>
         </div>
+        <style>
+          .borderSty{
+            padding: 10px;
+          }
+        </style>
       </div>
       <style>
         .boxsh {
