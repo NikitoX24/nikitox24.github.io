@@ -295,44 +295,15 @@
         </div>
         <div class="cod flex"> <br>
           <div class="width100">
-            <font class="gray">Filas por colores:</font> <br>
+            <font class="gray">Pares:</font> <br>
             tr:<font class="purp">nth-child</font>(even) { <br>
               &nbsp; <b>background-color:</b> gray; <br> }<br>
           </div>
-          <div class="width100"> <br>
+          <div class="width100"><NGray>// Impares</NGray> <br>
             tr:<font class="purp">nth-child</font>(odd) { <br>
               &nbsp; <b>background-color:</b> black; <br> }
           </div>
         </div>
-      </div>
-    </fieldset>
-
-    <!-- Mouse-Cursor -->
-    <fieldset>
-      <legend>  Mouse-Cursor </legend>
-      <div class="cod" style="word-spacing: 5px; cursor: default;"> <b>cursor</b>:
-        <NRed style="cursor: default;">default</NRed>,
-        <NRed style="cursor: pointer;">pointer</NRed>,
-        <NRed style="cursor: crosshair;">crosshair</NRed>,
-        <NRed style="cursor: help;">Help</NRed>,
-        <NRed style="cursor: move;">move</NRed>,
-        <NRed style="cursor: text;">text</NRed>,
-        <NRed style="cursor: wait;">wait</NRed>,
-        <NRed style="cursor: progress;">progress</NRed>,
-        <NRed style="cursor: not-allowed;">not-allowed</NRed>,
-        <NRed style="cursor: no-drop;">no-drop</NRed>.
-        <br>
-        <NRed style="cursor: n-resize;">n-resize</NRed>,
-        <NRed style="cursor: s-resize;">s-resize</NRed>,
-        <NRed style="cursor: ne-resize;">ne-resize</NRed>,
-        <NRed style="cursor: sw-resize;">sw-resize</NRed>,
-        <NRed style="cursor: se-resize;">se-resize</NRed>,
-        <NRed style="cursor: e-resize;">e-resize</NRed>,
-        <NRed style="cursor: w-resize;">w-resize</NRed>,
-        <NRed style="cursor: vertical-text;">vertical-text</NRed>,
-        <NRed style="cursor: all-scroll;">all-scroll</NRed>,
-        <NRed style="cursor: col-resize;">col-resize</NRed>,
-        <NRed style="cursor: row-resize;">row-resize</NRed>.
       </div>
     </fieldset>
 
@@ -364,16 +335,29 @@
             &nbsp; <b>color:</b> red; <br> }
         </div>
       </div>
-
-      <div class="flex"> <!-- Focus -->
-        <div class="ej">
-          <label>(Al hacer click cambia de color)</label> <br>
-          <input type="text" class="focusme"></input>
+      <div class="flex"> <!-- Parent -->
+        <div id="parent" class="ej">
+          <font>Primer Hijo</font> <br>
+          <font>Segundo Hijo</font> <br>
+          <font>Ultimo Hijo</font>
+        </div>
+        <style>
+          #parent font:first-child {
+            color: green;
+            text-decoration: underline;
+          }
+          #parent font:last-child {
+            color: red;
+            text-decoration: underline;
+          }
+        </style>
+        <div class="cod">
+          #<font class="orange">parent</font>:<font class="purp"><ins>first-child</ins></font> { <br>
+            &nbsp; <b>color:</b> green; <br> }
         </div>
         <div class="cod">
-          .<font class="yellow">input</font>:<font class="purp">focus</font> { <br>
-            &nbsp; <b>background-color:</b> green; <br> }
-          <style>.focusme:focus { background-color: #589432; color: #FF6347; }</style>
+          #<font class="orange">parent</font>:<font class="purp"><ins>last-child</ins></font> { <br>
+            &nbsp; <b>color:</b> red; <br> }
         </div>
       </div>
     </fieldset>
@@ -429,6 +413,47 @@
           <style> #insertImageBeforeText:before { content: url("../Imgs/loguito.png"); } </style>
         </div>
       </div>
+
+      <div class="flex"> <!-- Focus -->
+        <div class="ej">
+          <label>(Al hacer click cambia de color)</label> <br>
+          <input type="text" class="focusme"></input>
+        </div>
+        <div class="cod">
+          .<font class="yellow">input</font>:<font class="purp">focus</font> { <br>
+            &nbsp; <b>background-color:</b> green; <br> }
+          <style>.focusme:focus { background-color: #589432; color: #FF6347; }</style>
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- Mouse-Cursor -->
+    <fieldset>
+      <legend>  Mouse-Cursor </legend>
+      <div class="cod" style="word-spacing: 5px; cursor: default;"> <b>cursor</b>:
+        <NRed style="cursor: default;">default</NRed>,
+        <NRed style="cursor: pointer;">pointer</NRed>,
+        <NRed style="cursor: crosshair;">crosshair</NRed>,
+        <NRed style="cursor: help;">Help</NRed>,
+        <NRed style="cursor: move;">move</NRed>,
+        <NRed style="cursor: text;">text</NRed>,
+        <NRed style="cursor: wait;">wait</NRed>,
+        <NRed style="cursor: progress;">progress</NRed>,
+        <NRed style="cursor: not-allowed;">not-allowed</NRed>,
+        <NRed style="cursor: no-drop;">no-drop</NRed>.
+        <br>
+        <NRed style="cursor: n-resize;">n-resize</NRed>,
+        <NRed style="cursor: s-resize;">s-resize</NRed>,
+        <NRed style="cursor: ne-resize;">ne-resize</NRed>,
+        <NRed style="cursor: sw-resize;">sw-resize</NRed>,
+        <NRed style="cursor: se-resize;">se-resize</NRed>,
+        <NRed style="cursor: e-resize;">e-resize</NRed>,
+        <NRed style="cursor: w-resize;">w-resize</NRed>,
+        <NRed style="cursor: vertical-text;">vertical-text</NRed>,
+        <NRed style="cursor: all-scroll;">all-scroll</NRed>,
+        <NRed style="cursor: col-resize;">col-resize</NRed>,
+        <NRed style="cursor: row-resize;">row-resize</NRed>.
+      </div>
     </fieldset>
   </section> 
   
@@ -470,6 +495,7 @@
             .main {
               background-color: rgba(128, 128, 128, 0.461);
               height: 50px;
+
               display: flex;
               align-items: center;
               justify-content: center;
@@ -480,6 +506,10 @@
           &nbsp; <b>display:</b> flex; <br>
           &nbsp; <b>align-items:</b> center; <br>
           &nbsp; <b>justify-content:</b> center;
+        </div>
+        <div class="cod">
+          &nbsp; <b>display:</b> grid; <br>
+          &nbsp; <b>place-items:</b> center;
         </div>
       </div>
       <!-- Display: Flex -->
@@ -505,9 +535,9 @@
         </div>
         <div class="cod">
           <b>display:</b> flex; <br>
-          <b>flex-wrap:</b> wrap; <font class="gray">(acomodar)</font> <br>
+          <b>align-items:</b> center; <br>
           <b>justify-content:</b> space-evenly; <br>
-          <b>align-items:</b> center;
+          <u><b>flex-wrap:</b> wrap; <font class="gray">(acomodar)</font></u>
         </div>
       </div><hr>
 
@@ -743,7 +773,7 @@
           <div class="boxsh divBorderRadius" style="margin-top: 15px;"> border-radius: 0 10px 20px 30px; </div>
           <div class="boxsh divCirculo"> border-radius: 50%; </div>
         </div>
-        <div class="flex" style="padding: 5px; flex-wrap: wrap; width: 220px;">
+        <div id="bordDiv">
           <font class="borderSty" style="border-style: dotted;"><b>border-style:</b> dotted.</font>
           <font class="borderSty" style="border-style: dashed;"><b>border-style:</b> dashed.</font>
           <font class="borderSty" style="border-style: double;"><b>border-style:</b> double.</font>
@@ -753,6 +783,13 @@
           <font class="borderSty" style="border-style: outset;"><b>border-style:</b> outset.</font>
         </div>
         <style>
+          #bordDiv{
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+          }
           .borderSty{
             padding: 10px;
           }
@@ -991,230 +1028,209 @@
     </fieldset>
   </section>
 
-  <!-- transiciones y Transferencia -->
+  <!-- transiciones y Transform -->
   <section id="Transition - Transform">
 
-    <!-- Transition & Transform -->
-    <fieldset>
-      <legend> Transition & Transform </legend>
+    <!-- Anim Prop -->
+    <div class="flex">
+      <div class="ej"> <div class="animdurat"></div> </div>
+      <div class="cod">
+        .div { <br>
+          &nbsp; <b>animation:</b> widthChange 2s infinite; <br> }
+      </div>
+      <div class="cod">
+        <font class="aqua">@keyframes</font> widthChange { <br>
+          &nbsp; <font class="yellow">from</font> { width: 0px; } <font class="gray">0%</font> <br>
+          &nbsp; <font class="yellow">to</font> { width: 250px; } <font class="gray">100%</font>  }
+      </div>
       <style>
-        div.colorforcc {
-          width: 75px;
-          height: 75px;
-          background-color: red;
-          animation-name: colorchange;
-          animation-duration: 1s;
-          animation-iteration-count: infinite;
+        div.animdurat {
+          height: 50px;
+          background-color: green;
+          animation: colorchange2 1.2s infinite;
+        }
+
+        @keyframes colorchange2 {
+          from { width: 50px; } 
+          to { width: 150px; }
         }
       </style>
+    </div>
 
-      <!-- Anim Prop -->
+    <!-- Transition -->
+    <div class="flex">
+      <div class="ej">
+        <div class="box3d transit"> <font style="font-size: smaller;">Apuntame.</font> </div>
+      </div>
+      <div class="cod">
+        .div { <br> &nbsp; <b>transition:</b> 2s;<br> } 
+      </div>
+      <div class="cod">
+        .div:<font class="purp">hover</font> { <br> &nbsp; <b>width:</b> 350px; <br> }
+      </div>
+      <style>
+        .transit { transition: 2s; }
+        .transit:hover{ width: 200px; }
+      </style> 
+    </div> <br>
+
+    <!-- Scale -->
+    <div class="flex">
       <div class="flex">
-        <div class="ej"> <div class="animdurat"></div> </div>
-        <div class="cod">
-          .div { <br>
-            &nbsp; <b>animation:</b> widthChange 2s infinite; <br> }
-        </div>
-        <div class="cod">
-          <font class="aqua">@keyframes</font> widthChange { <br>
-            &nbsp; <font class="yellow">from</font> { width: 0px; } <font class="gray">0%</font> <br>
-            &nbsp; <font class="yellow">to</font> { width: 250px; } <font class="gray">100%</font>  }
-        </div>
+        <div class="ej wAuto"> <div class="box3d scalerot"></div> </div>
+        <div class="cod"> .div { <br> &nbsp; <b>transform:</b> scale(0.5, 0.5); <br> } <font class="gray">transform: none; (Desactivar)</font> </div>
         <style>
-          div.animdurat {
-            height: 50px;
-            background-color: green;
-            animation: colorchange2 1.2s infinite;
-          }
-
-          @keyframes colorchange2 {
-            from { width: 50px; } 
-            to { width: 150px; }
+          .scalerot { animation: scaleAnim 2s infinite; }
+          @keyframes scaleAnim {
+            0% { transform: none; }
+            50% { transform: scale(0.5, 0.5); }
+            100% { transform: none; }
           }
         </style>
       </div>
-      <details>
-        <summary>Info...</summary>
-        <pre class="cod">
-        (timing-function: *)
-          ease (default) - slow start, then fast, then end slowly 
-          linear - same speed from start to end
-          ease-in - slow start
-          ease-out - slow end
-          ease-in-out - slow start and end
-          cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier Function
 
-        (direction: *)
-          normal - the default value, which means it plays forward from 0 % to 100%.
-          reverse - plays the keyframe in an opposite direction from 100 % to 0%
-          alternate - the animation first runs forward, then backward, then forward.
-          alternate-reverse - the animation first runs backward, then forward, then backward.
-
-          animation-delay: 1s;
-          animation-direction: reverse; 
-        </pre>
-      </details> <hr>
-
-      <!-- Transition -->
+      <!-- Translate (Mover) -->
       <div class="flex">
-        <div class="ej">
-          <div class="box3d transit"> <font style="font-size: smaller;">Apuntame.</font> </div>
-        </div>
-        <div class="cod">
-          .div { <br> &nbsp; <b>transition:</b> 2s;<br> } 
-        </div>
-        <div class="cod">
-          .div:<font class="purp">hover</font> { <br> &nbsp; <b>width:</b> 350px; <br> }
-        </div>
+        <div class="ej wAuto" style="width: 100px;"><div class="box3d torig"></div></div>
+        <div class="cod"> .div{ <br> &nbsp; <b>transform:</b> translate(10px); <br> } </div>
         <style>
-          .transit { transition: 2s; }
-          .transit:hover{ width: 200px; }
-        </style> 
-      </div> <br>
-
-      <!-- Scale -->
-      <div class="flex">
-        <div class="flex">
-          <div class="ej wAuto"> <div class="box3d scalerot"></div> </div>
-          <div class="cod"> .div { <br> &nbsp; <b>transform:</b> scale(0.5, 0.5); <br> } <font class="gray">transform: none; (Desactivar)</font> </div>
-          <style>
-            .scalerot { animation: scaleAnim 2s infinite; }
-            @keyframes scaleAnim {
-              0% { transform: none; }
-              50% { transform: scale(0.5, 0.5); }
-              100% { transform: none; }
-            }
-          </style>
-        </div>
-
-        <!-- Translate (Mover) -->
-        <div class="flex">
-          <div class="ej wAuto" style="width: 100px;"><div class="box3d torig"></div></div>
-          <div class="cod"> .div{ <br> &nbsp; <b>transform:</b> translate(10px); <br> } </div>
-          <style>
-            .torig { animation: translateAnim 2s infinite; }
-            @keyframes translateAnim {
-              0% { transform: none; }
-              50% { transform: translate(20px); }
-              100% { transform: none }
-            }
-          </style>
-        </div>
-      </div>
-
-      <!-- Skew (Torcer) -->
-      <div class="flex">
-        <div class="flex">
-          <div class="ej wAuto"> <div class="box3d skew"></div> </div>
-          <div class="cod"> .div{ <br> &nbsp; <b>transform:</b> skew(30deg); <br> } </div>
-          <style>
-            div.skew {
-              margin: 5px;
-              animation: skewAnim 2s infinite;
-            }
-            @keyframes skewAnim {
-              0% { transform: none; }
-              50% { transform: skew(-25deg); }
-              100% { transform: none; }
-            }
-          </style>
-        </div>
-  
-        <!-- Rotate (Rotar) -->
-        <div class="flex">
-          <div class="ej wAuto"> <div class="box3d greendivrot"></div> </div>
-          <div class="cod"> .div{ <br> &nbsp; <b>transform:</b> rotate(10deg); <br> &nbsp; <b>transform-origin:</b> top center; <br>} </div>
-          <style>
-            .greendivrot {
-              margin: 5px;
-              animation: rotAnim 1.5s infinite linear;
-              transform-origin: top center;
-            }
-            @keyframes rotAnim {
-              0% { transform: none; }
-              25% { transform: rotate(-20deg); }
-              75% { transform: rotate(20deg); }
-              100% { transform: none; }
-            }
-          </style>
-        </div>
-      </div> <br>
-
-      <!-- 3D Rotation -->
-      <div class="flex">
-        <div class="ej flex"> 
-          <div class="box3d rot3d1">Texto</div>
-          <div class="box3d rot3d2">Texto</div>
-          <div class="box3d rot3d3">Texto</div>
-        </div>
-        <div class="cod"> .div{ <br> &nbsp; <b>transform:</b> rotateX(180deg); <font class="gray">rotateY(180deg); rotateZ(180deg);</font> <br> } </div>
-        <style>
-          .rot3d1{ animation: rot3d1 2s infinite; }
-          .rot3d2{ animation: rot3d2 2s infinite; }
-          .rot3d3{ animation: rot3d3 2s infinite; }
-
-          @keyframes rot3d1 {
+          .torig { animation: translateAnim 2s infinite; }
+          @keyframes translateAnim {
             0% { transform: none; }
-            50% { transform: rotateX(180deg); }
-            100% { transform: none; }
-          }
-          @keyframes rot3d2 {
-            0% { transform: none; }
-            50% { transform: rotateY(180deg); }
-            100% { transform: none; }
-          }
-          @keyframes rot3d3 {
-            0% { transform: none; }
-            50% { transform: rotateZ(180deg); }
-            100% { transform: none; }
+            50% { transform: translate(20px); }
+            100% { transform: none }
           }
         </style>
-      </div> <br>
+      </div>
+    </div>
 
-      <!-- 3D Translate -->
+    <!-- Skew (Torcer) -->
+    <div class="flex">
       <div class="flex">
-        <div class="ej" style="width: auto;"> <div class="empty"> <div class="box3d translate3d"></div> </div> </div>
-        <div class="cod" style="width: 30%;"> .fondoGris { <br> &nbsp; <b>perspective:</b> 60px; <br> } </div>
-        <div class="cod"> .div { <br> &nbsp; <b>transform:</b> <font class="blue">translateX</font>(10px) <font class="blue">translateY</font>(10px) <font class="blue">translateZ</font>(15px); <br> } </div>
+        <div class="ej wAuto"> <div class="box3d skew"></div> </div>
+        <div class="cod"> .div{ <br> &nbsp; <b>transform:</b> skew(30deg); <br> } </div>
         <style>
-          div.empty {
-            width: 50px; height: 50px;
+          div.skew {
             margin: 5px;
-            background-color: gray;
-            position: relative;
-            border: 1px solid black;
-            perspective: 60px;
+            animation: skewAnim 2s infinite;
           }
-          .translate3d {
-            animation: trans3d 2s infinite;
-          }
-
-          @keyframes trans3d {
+          @keyframes skewAnim {
             0% { transform: none; }
-            50% { transform: translateX(10px) translateY(10px) translateZ(15px); }
-            100% { transform: none }
+            50% { transform: skew(-25deg); }
+            100% { transform: none; }
           }
         </style>
       </div>
 
-      <!-- 3D Persp -->
+      <!-- Rotate (Rotar) -->
       <div class="flex">
-        <div class="ej" style="width: auto;"> <div class="empty"> <div class="box3d persp3d"></div> </div> </div>
-        <div class="cod" style="width: 30%;"> .fondoGris { <br> &nbsp; <b>perspective:</b> 60px; <br> } </div>
-        <div class="cod"> .fondoGris { <br> &nbsp; <b>perspective:</b> 60px; <br> } </div>
+        <div class="ej wAuto"> <div class="box3d greendivrot"></div> </div>
+        <div class="cod"> .div{ <br> &nbsp; <b>transform:</b> rotate(10deg); <br> &nbsp; <b>transform-origin:</b> top center; <br>} </div>
         <style>
-          .persp3d {
-            animation: persp3d 2s infinite;
+          .greendivrot {
+            margin: 5px;
+            animation: rotAnim 1.5s infinite linear;
+            transform-origin: top center;
           }
-
-          @keyframes persp3d {
+          @keyframes rotAnim {
             0% { transform: none; }
-            50% { transform: rotateX(35deg); }
-            100% { transform: none }
+            25% { transform: rotate(-20deg); }
+            75% { transform: rotate(20deg); }
+            100% { transform: none; }
           }
         </style>
       </div>
-    </fieldset>
+    </div> <br>
+
+    <!-- 3D Rotation -->
+    <div class="flex">
+      <div class="ej flex"> 
+        <div class="box3d rot3d1">Texto</div>
+        <div class="box3d rot3d2">Texto</div>
+        <div class="box3d rot3d3">Texto</div>
+      </div>
+      <div class="cod"> .div{ <br> &nbsp; <b>transform:</b> rotateX(180deg); <font class="gray">rotateY(180deg); rotateZ(180deg);</font> <br> } </div>
+      <style>
+        .rot3d1{ animation: rot3d1 2s infinite; }
+        .rot3d2{ animation: rot3d2 2s infinite; }
+        .rot3d3{ animation: rot3d3 2s infinite; }
+
+        @keyframes rot3d1 {
+          0% { transform: none; }
+          50% { transform: rotateX(180deg); }
+          100% { transform: none; }
+        }
+        @keyframes rot3d2 {
+          0% { transform: none; }
+          50% { transform: rotateY(180deg); }
+          100% { transform: none; }
+        }
+        @keyframes rot3d3 {
+          0% { transform: none; }
+          50% { transform: rotateZ(180deg); }
+          100% { transform: none; }
+        }
+      </style>
+    </div> <br>
+
+    <!-- 3D Translate -->
+    <div class="flex">
+      <div class="ej" style="width: auto;"> <div class="empty"> <div class="box3d translate3d"></div> </div> </div>
+      <div class="cod" style="width: 30%;"> .fondoGris { <br> &nbsp; <b>perspective:</b> 60px; <br> } </div>
+      <div class="cod"> .div { <br> &nbsp; <b>transform:</b> <font class="blue">translateX</font>(10px) <font class="blue">translateY</font>(10px) <font class="blue">translateZ</font>(15px); <br> } </div>
+      <style>
+        div.empty {
+          width: 50px; height: 50px;
+          margin: 5px;
+          background-color: gray;
+          position: relative;
+          border: 1px solid black;
+          perspective: 60px;
+        }
+        .translate3d {
+          animation: trans3d 2s infinite;
+        }
+
+        @keyframes trans3d {
+          0% { transform: none; }
+          50% { transform: translateX(10px) translateY(10px) translateZ(15px); }
+          100% { transform: none }
+        }
+      </style>
+    </div>
+
+    <!-- 3D Persp -->
+    <div class="flex">
+      <div class="ej" style="width: auto;"> <div class="empty"> <div class="box3d persp3d"></div> </div> </div>
+      <div class="cod" style="width: 30%;"> .fondoGris { <br> &nbsp; <b>perspective:</b> 60px; <br> } </div>
+      <div class="cod"> .fondoGris { <br> &nbsp; <b>perspective:</b> 60px; <br> } </div>
+      <style>
+        .persp3d {
+          animation: persp3d 2s infinite;
+        }
+
+        @keyframes persp3d {
+          0% { transform: none; }
+          50% { transform: rotateX(35deg); }
+          100% { transform: none }
+        }
+      </style>
+    </div>
+
+    <!-- Info -->
+    <div class="cod columnas" style="font-size: smaller;">
+      <b>ease:</b> lento, rápio, lento. <br>
+      <b>linear:</b> misma velocidad. <br>
+      <b>ease-in:</b> inicio lento. <br>
+      <b>ease-out:</b> termina lento. <br>
+      <b>ease-in-out:</b> inicio y final lento. <br><br>
+
+      (animation-direction: *) <br>
+      <b>normal:</b> 0% a 100%. <br>
+      <b>reverse:</b> 100% a 0%. <br>
+      <b>alternate:</b> normal, reversa, normal. <br>
+      <b>alternate-reverse:</b> reversa, normal, reversa. <br>
+    </div>
   </section>
 
   <!-- Filtros -->

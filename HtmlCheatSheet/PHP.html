@@ -12,80 +12,79 @@
 <header>
   <menu-component></menu-component>
 
-  <h1 class="titulo">HTML CheatSheet</h1>
+  <h1 class="titulo">PHP CheatSheet</h1>
   <div class="iconosFlex"> <!-- icons -->
     <a href="HTML.html"><img src="../Imgs/html.png" alt="html" class="icons filtrogris"></a>
     <a href="CSS.html"><img src="../Imgs/css.png" alt="css" class="icons filtrogris"></a>
     <a href="JavaScript.html"><img src="../Imgs/js.png" alt="js" class="icons filtrogris"></a>
   </div>
   <style>
-    .borders {
+    section {
       background-color: rgba(0, 0, 255, .05);
       box-shadow: inset 0 40px 0 0 rgba(0, 119, 255, 0.164), 
           4px 4px 15px 5px rgba(0, 0, 255, 0.1);}
   </style>
 </header>
 
-  <style>
-    :root{
-      --varC: rgb(210, 210, 210);
-      --aquaC: rgb(20, 212, 255);
-    }
-    .cod{
-      background-color: rgb(15, 15, 27);
-      text-shadow: none;
-      color: var(--aquaC);
-    }
-    NAqua{ color: var(--aquaC); }
-    NBlue{ color: rgb(107, 149, 234); }
-    NGreen{ color: rgb(209, 255, 139); }
-    NVar{ color: var(--varC); }
-    NPurp{ color: rgb(194, 122, 194); }
-    NRed{ color: rgb(255, 85, 85); }
-    NOrg{ color: rgb(254, 146, 38);}
-    NGray{ color: gray; }
-    NObj{ color: rgb(252, 222, 104); }
-  </style>
+<style>
+  :root{
+    --varC: rgb(210, 210, 210);
+    --aquaC: rgb(20, 212, 255);
+  }
+  .cod{
+    background-color: rgb(15, 15, 27);
+    text-shadow: none;
+    color: var(--aquaC);
+  }
+  NAqua{ color: var(--aquaC); }
+  NBlue{ color: rgb(107, 149, 234); }
+  NGreen{ color: rgb(209, 255, 139); }
+  NVar{ color: var(--varC); }
+  NPurp{ color: rgb(194, 122, 194); }
+  NRed{ color: rgb(255, 85, 85); }
+  NOrg{ color: rgb(254, 146, 38);}
+  NGray{ color: gray; }
+  NObj{ color: rgb(252, 222, 104); }
+</style>
 
 <main>
-  <!-- CSS -->
-  <h1 class="titulo"> PHP <font class="subText">(Pre-Procesador de Hipertexto)</font> </h1>
 
   <!-- Variables -->
-  <div class="borders">
-    <h1 class="titulo"> Variables </h1>
+  <section id="Variables">
 
-    <fieldset> <!-- Variable -->
+    <fieldset class="columnas"> <!-- Variable -->
       <legend> Variables </legend>
 
-      Variable
-      <div class="cod">
-        &lt;?php <br>
-        &nbsp; $<NVar>name</NVar> = "<NGreen>John</NGreen>" <br>
-        &nbsp; <NBlue>echo</NBlue> $<NVar>name</NVar>; <br>
-        ?>
-      </div> <br>
+      <div>
+        Variable
+        <div class="cod">
+          &lt;?php <br>
+          &nbsp; $<NVar>name</NVar> = "<NGreen>John</NGreen>" <br>
+          &nbsp; <NBlue>echo</NBlue> $<NVar>name</NVar>; <br>
+          ?>
+        </div><br>
+        Variable como Variable
+        <div class="cod">
+          $<NVar>a</NVar> = "<NGreen>variable</NGreen>" <br>
+          $<NVar>variable</NVar> = "<NGreen>hola mundo!</NGreen>" <br>
+          <NBlue>echo</NBlue> $$<NVar>a</NVar>; <NGray>// hola mundo!</NGray>
+        </div>
+      </div>
 
-      Variable como Variable
-      <div class="cod">
-        $<NVar>a</NVar> = "<NGreen>variable</NGreen>" <br>
-        $<NVar>variable</NVar> = "<NGreen>hola mundo!</NGreen>" <br>
-        <NBlue>echo</NBlue> $$<NVar>a</NVar>; <NVar>// hola mundo!</NVar>
-      </div> <br>
-
-      Constante
-      <div class="cod">
-        <NBlue>define</NBlue>("<NGreen>Mensaje</NGreen>", "<NGreen>Hola Mundo!</NGreen>"); <br>
-        <NBlue>echo</NBlue> <NVar>Mensaje</NVar>;
-      </div> <br>
-
-      Variable en Funciones
-      <div class="cod">
-        $<NVar>name</NVar> = "<NGreen>David</NGreen>" <br>
-        <NGreen class="purp">function</NGreen> <NBlue>getName</NBlue>() { <br>
-          &nbsp; <NGreen class="purp">global</NGreen> $<NVar>name</NVar>; <br>
-          &nbsp; <NBlue>echo</NBlue> $<NVar>name</NVar>; <br> } <br>
-        <NBlue>getName</NBlue>(); <NVar> // "David"</NVar>
+      <div>
+        Constante
+        <div class="cod">
+          <NBlue>define</NBlue>("<NGreen>Mensaje</NGreen>", "<NGreen>Hola Mundo!</NGreen>"); <br>
+          <NBlue>echo</NBlue> <NVar>Mensaje</NVar>;
+        </div>
+        Variable en Funciones
+        <div class="cod">
+          $<NVar>name</NVar> = "<NGreen>David</NGreen>" <br>
+          <NGreen class="purp">function</NGreen> <NBlue>getName</NBlue>() { <br>
+            &nbsp; <NGreen class="purp">global</NGreen> $<NVar>name</NVar>; <br>
+            &nbsp; <NBlue>echo</NBlue> $<NVar>name</NVar>; <br> } <br>
+          <NBlue>getName</NBlue>(); <NGray> // "David"</NGray>
+        </div>
       </div>
     </fieldset>
 
@@ -153,11 +152,10 @@
       </div>
 
     </fieldset>
-  </div>
+  </section>
 
   <!-- Arrays -->
-  <div class="borders">
-    <h1 class="titulo"> Arrays </h1>
+  <section id="Arrays">
     <fieldset> <!-- Arrays -->
       <legend> Arrays </legend>
       Array
@@ -176,11 +174,10 @@
         <NVar>// "David"</NVar>
       </div>
     </fieldset>
-  </div>
+  </section>
 
   <!-- Archivos -->
-  <div class="borders">
-    <h1 class="titulo"> Archivos </h1>
+  <section id="Archivos">
     <fieldset> <!-- Archivos -->
       <legend> Archivos </legend>
       <div class="flex">
@@ -201,11 +198,10 @@
         </div>
       </div>
     </fieldset>
-  </div>
+  </section>
   
   <!-- Objetos -->
-  <div class="borders">
-    <h1 class="titulo"> Objetos - Clases </h1>
+  <section id="Objetos - Clases">
     <fieldset> <!-- Objetos -->
       <legend> Objetos / Clases </legend>
 
@@ -305,7 +301,7 @@
       </div> <hr>
 
     </fieldset>
-  </div>
+  </section>
   
   <br><br><br><br><br>
   
