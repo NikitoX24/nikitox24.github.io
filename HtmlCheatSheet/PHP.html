@@ -8,7 +8,6 @@
   <title>PHP CheatSheet</title>
 </head>
 
-<body>
 <header>
   <menu-component></menu-component>
 
@@ -47,15 +46,16 @@
   NObj{ color: rgb(252, 222, 104); }
 </style>
 
+<body>
 <main>
 
   <!-- Variables -->
   <section id="Variables">
 
-    <fieldset class="columnas"> <!-- Variable -->
+    <fieldset> <!-- Variable -->
       <legend> Variables </legend>
 
-      <div>
+      <div class="columnas">
         Variable
         <div class="cod">
           &lt;?php <br>
@@ -69,9 +69,7 @@
           $<NVar>variable</NVar> = "<NGreen>hola mundo!</NGreen>" <br>
           <NBlue>echo</NBlue> $$<NVar>a</NVar>; <NGray>// hola mundo!</NGray>
         </div>
-      </div>
-
-      <div>
+        
         Constante
         <div class="cod">
           <NBlue>define</NBlue>("<NGreen>Mensaje</NGreen>", "<NGreen>Hola Mundo!</NGreen>"); <br>
@@ -85,6 +83,21 @@
             &nbsp; <NBlue>echo</NBlue> $<NVar>name</NVar>; <br> } <br>
           <NBlue>getName</NBlue>(); <NGray> // "David"</NGray>
         </div>
+      </div> <hr>
+
+      <div>
+        Propiedades:
+        <div class="cod">
+          $<NVar>dia</NVar> = "<NGreen>Lunes</NGreen>"; <br>
+          <NBlue>echo gettype</NBlue>($<NVar>dia</NVar>); <NGray>// string</NGray> <br>
+          <NBlue>echo var_dump</NBlue>($<NVar>dia</NVar>); <NGray>// string(5)"Lunes"</NGray>
+        </div>
+
+        Convertir:
+        <div class="cod">
+          $<NVar>a</NVar> = <NOrg>1.654</NOrg>; <br>
+          $<NVar>b</NVar> = (<NPurp>int</NPurp>)$<NVar>a</NVar>;
+        </div>
       </div>
     </fieldset>
 
@@ -93,6 +106,7 @@
       <div class="flex" style="justify-content: space-between;">
         <font>$_SERVER</font> <font>$GLOBALS</font> <font>$_REQUEST</font> <font>$_POST / $_GET</font> <font>$_FILES</font> <font>$_ENV</font> <font>$_COOKIE / $_SESSION</font>
       </div> <hr>
+
       <!-- $_Server -->
       $_SERVER
       <div class="flex">
@@ -105,37 +119,68 @@
           <NVar>localhost</NVar>
         </div>
       </div> <hr>
+
       <!--  $_GET y $_POST -->
       $_POST (Mostrar Encriptado) <br>
       $_GET (Mostrar en el URL)
-      <div class="flex">
-        <div class="ej" style="width: 65%;">
+      <div class="fWrap">
+        <div class="ej wAuto">
           <form action="php.php" method="post">
-            <p>Nombre: <input type="text" name="name" /></p>
-            <p>Edad: <input type="text" name="age" /></p>
+            <p>Usuario: <input type="text" name="name" /></p>
+            <p>Contraseña: <input type="text" name="pass" /></p>
             <p><input type="submit" name="submit" value="Submit" /></p>
           </form>
         </div>
-        <div class="cod">
+        <div class="cod wAuto">
           &lt;<NRed>form</NRed> <NPurp>action</NPurp>="<NGreen>php.php</NGreen>" <NPurp>method</NPurp>="<NGreen><u>post</u></NGreen>"> <br>
-            &nbsp; &lt;<NRed>label</NRed>><NVar>Nombre</NVar>: &lt;/<NRed>label</NRed>>&lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>text</NGreen>" <NPurp>name</NPurp>="<NGreen>name</NGreen>"/> <br>
-
-            &nbsp; &lt;<NRed>label</NRed>><NVar>Edad</NVar>: &lt;/<NRed>label</NRed>>&lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>text</NGreen>" <NPurp>name</NPurp>="<NGreen>age</NGreen>"/> <br>
-
+            &nbsp; &lt;<NRed>label</NRed>><NVar>Usuario</NVar>: &lt;/<NRed>label</NRed>>&lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>text</NGreen>" <NPurp>name</NPurp>="<NGreen>usuario</NGreen>"/> <br>
+            &nbsp; &lt;<NRed>label</NRed>><NVar>Contraseña</NVar>: &lt;/<NRed>label</NRed>>&lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>password</NGreen>" <NPurp>name</NPurp>="<NGreen>password</NGreen>"/> <br>
             &nbsp; &lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>submit</NGreen>" <NPurp>name</NPurp>="<NGreen>submit</NGreen>" <NPurp>value</NPurp>="<NGreen>Submit</NGreen>"/> <br>
-          &lt;/<NRed>form</NRed>> <br><br>
+          &lt;/<NRed>form</NRed>>
+        </div> <br>
 
-          <NGray>(archivo php.php)</NGray> <br>
-            <NBlue>echo</NBlue> "<NGreen>Hi </NGreen>".$<NVar>_POST</NVar>['<NGreen>name</NGreen>'].". "; <br>
-            <NBlue>echo</NBlue> "<NGreen>You are </NGreen>".$<NVar>_POST</NVar>['<NGreen>age</NGreen>']." <NGreen>years old</NGreen>.";
+        (php.php) <br>
+        <div class="cod">
+          $<NVar>user</NVar> = "<NGreen>Nico</NGreen>"; <NGray>// Evaluar con MySQL</NGray> <br>
+          $<NVar>password</NVar> = "<NGreen>123</NGreen>"; <br> <br>
+          
+          if($<NVar>_POST</NVar>['<NGreen>usuario</NGreen>']==$<NVar>user</NVar> && $<NVar>_POST</NVar>['<NGreen>contrasena</NGreen>']==$<NVar>password</NVar>) { <br>
+            &nbsp; <NBlue>session_start</NBlue>(); <br>
+            &nbsp; $_<NVar>SESSION</NVar>['<NGreen>usuario</NGreen>'] = "<NGreen>Nico Pasino</NGreen>"; <br>
+            &nbsp; $_<NVar>SESSION</NVar>["<NGreen>pais</NGreen>"] = "<NGreen>Argentina</NGreen>"; <br>
+            &nbsp; <NBlue>header</NBlue>('<NGreen>location: cuenta.php</NGreen>'); <br>
+          } <br>
+          else { <br>
+            &nbsp; <NBlue>echo</NBlue> "<NGreen>USUARIO o CONTRASEÑA incorrecta.</NGreen>"; <br>
+            &nbsp; <NBlue>echo</NBlue> "<NGreen>&lt;a href='index.php'> INTENTAR NUEVAMENTE &lt;/a></NGreen>"; <br>
+          }
+        </div> <br>
+
+        <div class="flex">
+          <div class="cod">
+            <NGray>(cuenta.php)</NGray> <br>
+            <NBlue>session_start</NBlue>(); <br>
+          
+            <NBlue>echo</NBlue> "<NGreen>Bienvenido</NGreen> ".$<NVar>_SESSION</NVar>["<NGreen>usuario</NGreen>"]."<NGreen></NGreen>"; <br>
+            <NBlue>echo</NBlue> "<NGreen>Su pais es:</NGreen> ".$<NVar>_SESSION</NVar>["<NGreen>pais</NGreen>"]; <br>
+            <NBlue>echo</NBlue> "<NGreen>< a href='cerrarSesion.php'>Cerrar Sesion< /a></NGreen>";
+          </div> <br>
+          <div class="cod">
+            <NGray>(cerrarSesion.php)</NGray> <br>
+            <NBlue>session_start</NBlue>(); <br>
+            <NBlue>session_unset</NBlue>(); <br>
+            <NBlue>session_destroy</NBlue>(); <br>
+            <NBlue>header</NBlue>('<NGreen>location: index.php</NGreen>');
+          </div>
         </div>
       </div> <hr>
 
-      $_SESSION (Disponible hasta cerrar Sesion)
+      $_SESSION (temporal, acceso a la variable en cualquer lado)
       <div class="flex">
         <div class="cod">
           &lt;?php <NGray>// Siempre en la 1ra linea</NGray> <br>
             <NBlue>session_start</NBlue>(); <br>
+            <NBlue>session_destroy</NBlue>(); <br>
           ?>
         </div>
         <div class="cod">
@@ -145,10 +190,12 @@
         </div>
       </div> <hr>
 
-      $_COOKIE (Guardar en el disco del Usuario)
+      $_COOKIE (Guardar en el disco del Usuario )
       <div class="cod">
-        <NBlue>setcookie</NBlue>("user", $value, time() + (86400 * 30), '/'); <br>
-        <NBlue>setcookie</NBlue>(<NVar>name, value, expire(seg), path</NVar><NGray>, domain(opc), secure(opc), httponly(opc)</NGray>);
+        <NBlue>setcookie</NBlue>("<NGreen>user</NGreen>", "<NGreen>$value</NGreen>", <NBlue>time</NBlue>()+(<NOrg>3600</NOrg>), '<NGreen>/</NGreen>', '<NGreen>www..com</NGreen>', $<NVar>_SERVER</NVar>('<NGreen>HTTPS</NGreen>')); <br>
+        <NBlue>setcookie</NBlue>(<NVar>name, value, expire(seg), path</NVar><NGray>, domain(opc), secure(opc), httponly(opc)</NGray>); <br><br>
+
+        <NBlue>echo</NBlue> $<NVar>_COOKIE</NVar>["<NGreen>user</NGreen>"];
       </div>
 
     </fieldset>
@@ -159,19 +206,35 @@
     <fieldset> <!-- Arrays -->
       <legend> Arrays </legend>
       Array
-      <div class="cod">
-        $<NVar>Personas</NVar> = <NBlue>array</NBlue>("<NGreen>David</NGreen>" => "<NGreen>27</NGreen>"); <br>
-        $<NVar>Personas</NVar>["<NGreen>David</NGreen>"] = "<NGreen>28</NGreen>";
+      <div class="flex">
+        <div class="cod">
+          $<NVar>Personas</NVar> = <NBlue>array</NBlue>("<NGreen>David</NGreen>" => "<NGreen>27</NGreen>"); <br>
+          $<NVar>Personas</NVar>["<NGreen>David</NGreen>"] = "<NGreen>28</NGreen>";
+        </div>
+        <div class="cod">
+          $<NVar>dia</NVar><NObj>[]</NObj> = "<NGreen>Lunes</NGreen>"; <br>
+          $<NVar>dia</NVar><NObj>[]</NObj> = "<NGreen>Martes</NGreen>";
+        </div>
       </div> <br>
 
       Array MultiDimensionales
-      <div class="cod">
-        $<NVar>Personas</NVar> = <NBlue>array</NBlue> (<br>
-        &nbsp; "<NGreen>online</NGreen>" => <NBlue>array</NBlue>("<NGreen>David</NGreen>", "<NGreen>Amy</NGreen>"), <br>
-        &nbsp; "<NGreen>offline</NGreen>" => <NBlue>array</NBlue>("<NGreen>John</NGreen>", "<NGreen>Rob</NGreen>") <br>
-        );<br>
-        <NBlue>echo</NBlue> $<NVar>Personas</NVar>["<NGreen>online</NGreen>"][<NGreen class="orange">0</NGreen>];
-        <NVar>// "David"</NVar>
+      <div class="flex">
+        <div class="cod">
+          $<NVar>Personas</NVar> = <NBlue>array</NBlue> (<br>
+          &nbsp; "<NGreen>online</NGreen>" => ["<NGreen>David</NGreen>", "<NGreen>Amy</NGreen>"], <br>
+          &nbsp; "<NGreen>offline</NGreen>" => ["<NGreen>John</NGreen>", "<NGreen>Rob</NGreen>"] <br>
+          );<br>
+          <NBlue>echo</NBlue> $<NVar>Personas</NVar>["<NGreen>online</NGreen>"][<NGreen class="orange">0</NGreen>];
+          <NVar>// "David"</NVar>
+        </div>
+        <div class="cod">
+          $<NVar>semana</NVar> = [ <br>
+            &nbsp; [<NOrg>10</NOrg>, <NOrg>20</NOrg>, <NOrg>30</NOrg>], <br>
+            &nbsp; [<NOrg>40</NOrg>, <NOrg>50</NOrg>, <NOrg>60</NOrg>], <br>
+            &nbsp; ["<NGreen>uno</NGreen>", "<NGreen>dos</NGreen>", "<NGreen>tres</NGreen>"] <br>
+          ]; <br>
+          <NBlue>echo</NBlue> $<NVar>semana</NVar>[<NOrg>2</NOrg>][<NOrg>1</NOrg>] <NGray>// dos</NGray>
+        </div>
       </div>
     </fieldset>
   </section>
@@ -183,7 +246,7 @@
       <div class="flex">
         <div class="cod">
           <NGray>// Escribir</NGray> <br>
-          $<NVar>myfile</NVar> = <NBlue>fopen</NBlue>("<NGreen>file.txt</NGreen>", "<NGreen>w</NGreen>"); <br><br>
+          $<NVar>myfile</NVar> = <NBlue>fopen</NBlue>("<NGreen>file.txt</NGreen>", "<NGreen>a</NGreen>") or die("<NGreen>Error al abrir!</NGreen>"); <br><br>
           $<NVar>txt</NVar> = "<NGreen>John\n</NGreen>"; <br>
           <NBlue>fwrite</NBlue>($<NVar>myfile</NVar>, $<NVar>txt</NVar>); <br>
           <NVar></NVar>
@@ -196,6 +259,24 @@
             &nbsp; <NBlue>echo</NBlue> $<NVar>line</NVar> ."<NGreen>,</NGreen> "; <br>
           }
         </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="flex"> <!-- Escribir desde form -->
+    <legend> Escribir desde form </legend>
+      <div class="cod width100"> <br>
+        &lt;<NRed>form</NRed> <NPurp>action</NPurp>="<NGreen>php.php</NGreen>" <NPurp>method</NPurp>="<NGreen>POST</NGreen>"> <br>
+          &nbsp; &lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>text</NGreen>" <NPurp>name</NPurp>="<NGreen>usuario</NGreen>"/> <br>
+          &nbsp; &lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>submit</NGreen>" <NPurp>name</NPurp>="<NGreen>submit</NGreen>"/> <br>
+        &lt;/<NRed>form</NRed>>
+      </div> <br>
+      <div class="cod width100">
+        if(<NBlue>isset</NBlue>($<NVar>_POST</NVar>["<NGreen>asunto</NGreen>"])) { <br>
+          &nbsp; $<NVar>text</NVar> = $<NVar>_POST</NVar>["<NGreen>asunto</NGreen>"] . "<NGreen>\r\n</NGreen>"; <br>
+          &nbsp; $<NVar>archivo</NVar> = <NBlue>fopen</NBlue>('<NGreen>texto.txt</NGreen>', '<NGreen>a</NGreen>'); <br>
+          &nbsp; <NBlue>fwrite</NBlue>($<NVar>archivo</NVar>, $<NVar>text</NVar>); <br>
+          &nbsp; <NBlue>fclose</NBlue>($<NVar>archivo</NVar>); <br>
+        }
       </div>
     </fieldset>
   </section>

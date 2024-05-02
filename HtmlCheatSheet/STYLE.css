@@ -222,14 +222,8 @@ h1 .subText{
 Flecha{ margin-block: auto; }
 Flecha::before{ content: "➜"; font-size: 1.5em; }
 
-.markBlock{
-  background-color: rgba(124, 124, 124, 0.642);
-}
+.markBlock{ background-color: rgba(124, 124, 124, 0.642); }
 
-.fWrap{
-  flex-wrap: wrap;
-}
+.fWrap{ flex-wrap: wrap; }
 
-.columnas{
-  column-count: 2;
-}
+.columnas{ column-count: 2; }
