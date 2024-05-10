@@ -1,7 +1,7 @@
 class Menu extends HTMLElement {
   constructor() {
     super();
-    this.innerHTML = `
+    this.innerHTML =/*html*/`
     <div>
       <nav><ul>
         <li><a href="../index.html"> <img src="../logo.png" height="25px"></a></li>
