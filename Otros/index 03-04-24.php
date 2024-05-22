@@ -14,7 +14,7 @@
   $image_path = $host.'/Imgs/';
 ?>
 <body>
-<main>
+
   <!-- Pags -->
   <div class="round">
 
@@ -297,7 +297,7 @@
 
   <!-- ESPACIO EN BLANCO -->
   <div style="height: 700px;"></div>
-</main>
+
 
 <!-- Footer -->
 <footer>
@@ -312,7 +312,7 @@
 <section id="Final">
 
 <!-- JavaScript -->
-<script type="text/javascript" src="MenuJS.js"></script>
+<script type="text/javascript" src="index.js"></script>
 <style>
   body{
     background-color: beige;

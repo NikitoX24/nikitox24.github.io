@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+  <meta chatset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+  <meta http-equiv="x-ua-compatible" content="ie-edge"> <!-- Compatible con Internet Explorer y Edge -->
+  <link rel="stylesheet" href="../../../HtmlCheatSheet/STYLE.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>Bootstrap</title>
+</head>
+<h1 class="TextoCentrado">Bootstrap CheatSheet</h1> <br>
+<style>
+  body {
+    max-width: 90%;
+    margin: auto;
+  }
+  h1, h3, h4{
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  .section{
+    border-radius: 12px;
+    padding: 2px 10px 10px 10px;
+    margin-bottom: 25px;
+    background-color: rgba(128, 128, 128, 0.227);
+  }
+  
+
+  NGreen{ 
+    word-spacing: 10px; 
+    font-size: smaller;
+  }
+  NRed, NPurp{
+    font-weight: 400;
+  }
+
+  #screenSize{
+    margin: 0;
+    left: 10px;
+    bottom: 0;
+    position: fixed;
+    font-family: Arial;
+    background-color: rgba(128, 128, 128, 0.448);
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+  }
+
+  /*  */
+
+  /* .borde{ background-color: gray; } */
+  .bordeBase, .borde1, .borde2, .borde3{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    background-color: white;
+    padding-inline: 15px;
+  }
+  .container{
+    margin-block: 15px;
+  }
+  .bordeBase{ background-color: white; }
+  .borde1{ background-color: aquamarine; }
+  .borde2{ background-color: olivedrab; }
+  .borde3{ background-color: orangered; }
+  
+</style>
+<body>  
+  <!-- Container -->
+  <div class="section">
+    <h3> Container </h3>
+    <div class="container">
+      row
+      <div class="row">
+        <div class="col bordeBase">col</div> <div class="col bordeBase">col</div>
+        <div class="col bordeBase">col</div> <div class="col bordeBase">col</div>
+        <div class="col bordeBase">col</div> <div class="col bordeBase">col</div>
+        <div class="col bordeBase">col</div> <div class="col bordeBase">col</div>
+        <div class="col bordeBase">col</div> <div class="col bordeBase">col</div>
+        <div class="col bordeBase">col</div> <div class="col bordeBase">col</div>
+      </div>
+    </div>
+    <div class="cod">
+      &lt;<NRed>div</NRed> <NPurp>class=</NPurp>"<NGreen>container</NGreen>"> <br>
+      &nbsp; &nbsp; &lt;<NRed>div</NRed> <NPurp>class=</NPurp>"<NGreen>row</NGreen>"> <br>
+      &nbsp; &nbsp; &nbsp; &nbsp; &lt;<NRed>div</NRed> <NPurp>class=</NPurp>"<NGreen>col</NGreen>"> &lt;<NRed>/div</NRed>> <br>
+      &nbsp; &nbsp; &nbsp; &nbsp; &lt;<NRed>div</NRed> <NPurp>class=</NPurp>"<NGreen>col</NGreen>"> &lt;<NRed>/div</NRed>> <br>
+      &nbsp; &nbsp; &lt;<NRed>/div</NRed>> <br> &lt;<NRed>/div</NRed>>
+    </div> <hr>
+
+    <h3> Container-fluid </h3>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col bordeBase"></div> <div class="col bordeBase"></div>
+          <div class="col bordeBase"></div> <div class="col bordeBase"></div>
+          <div class="col bordeBase"></div> <div class="col bordeBase"></div>
+          <div class="col bordeBase"></div> <div class="col bordeBase"></div>
+          <div class="col bordeBase"></div> <div class="col bordeBase"></div>
+          <div class="col bordeBase"></div> <div class="col bordeBase"></div>
+        </div>
+      </div>
+  </div>
+
+  <!-- Col -->
+  <div class="section">
+  <h3> Col </h3>
+    <div class="container">
+      <div class="row">
+        <div class="col-4 borde1">col-4</div>
+        <div class="col-4 borde2">col-4</div>
+        <div class="col-4 borde3">col-4</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-6 borde1">col-6</div>
+        <div class="col-4 borde2">col-4</div>
+        <div class="col-2 borde3">col-2</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-8 borde1">col-8</div>
+        <div class="col-4 borde2">col-4</div>
+        <div class="col-12 borde3">col-12</div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 
+    XS/Col (< 575) --- Extra Small. / COLumna
+    SM (576 - 767) --- Small.
+    MD (768 - 991) --- Middle.
+    LG (992 - 1199) -- Large.
+    XL (1200 > ) ----- Extra Large.
+  -->
+  <!-- Responsive -->
+  <div class="section">
+    <h3> Responsive (según pantalla)</h3>
+    <div class="container">
+      <div class="row">
+        <div class="col-12  col-sm-6   col-md-8   col-lg-4  col-xl-8  borde1" id="col1"></div>
+        <div class="col-12  col-sm-6   col-md-4   col-lg-4  col-xl-2  borde2" id="col2"></div>
+        <div class="col-12  col-sm-12  col-md-12  col-lg-4  col-xl-2  borde3" id="col3"></div>
+      </div>
+    </div>
+    <div class="cod">
+      &lt;<NRed>div</NRed> <NPurp>class=</NPurp>"<NGreen>col-12 col-sm-6 col-md-8 col-lg-4 col-xl-8</NGreen>"> &lt;<NRed>/div</NRed>> <br>
+      &lt;<NRed>div</NRed> <NPurp>class=</NPurp>"<NGreen>col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2</NGreen>"> &lt;<NRed>/div</NRed>> <br>
+      &lt;<NRed>div</NRed> <NPurp>class=</NPurp>"<NGreen>col-12 col-sm-12 col-md-12 col-lg-4 col-xl-2</NGreen>"> &lt;<NRed>/div</NRed>>
+    </div>
+    <script> // Mostrar Col text según pantalla
+      let col1 = document.querySelector("#col1");
+      let col2 = document.querySelector("#col2");
+      let col3 = document.querySelector("#col3");
+      
+      setInterval(ResponsiveJS, 500);
+
+      function ResponsiveJS(){
+        screenSize = window.innerWidth;
+        if( screenSize < XS ){
+          col1.innerHTML = "col-12"; col2.innerHTML = "col-12"; col3.innerHTML = "col-12";
+        }
+        if( screenSize > SM ){
+          col1.innerHTML = "col-6"; col2.innerHTML = "col-6"; col3.innerHTML = "col-12";
+        }
+        if( screenSize > MD ){
+          col1.innerHTML = "col-8"; col2.innerHTML = "col-4"; col3.innerHTML = "col-12";
+        }
+        if( screenSize > LG ){
+          col1.innerHTML = "col-4"; col2.innerHTML = "col-4"; col3.innerHTML = "col-4";
+        }
+        if( screenSize > XL ){
+          col1.innerHTML = "col-8"; col2.innerHTML = "col-2"; col3.innerHTML = "col-2";
+        }
+      }
+    </script>
+    <hr>
+
+    <h4> d-none (Display None) </h4>
+    <div class="container">
+      <div class="row">
+        <div class="col-12  col-md-2  d-none  d-md-block  borde1">d-none</div>
+        <div class="col-12  col-md-8  borde2">col-8</div>
+        <div class="col-12  col-md-2  d-none  d-md-block  borde3">d-none</div>
+      </div>
+    </div>
+    <div class="cod">
+      &lt;<NRed>div</NRed> <NPurp>class=</NPurp>"<NGreen>col-12  col-md-2  d-none  d-md-block</NGreen>"> &lt;<NRed>/div</NRed>> <br>
+      &lt;<NRed>div</NRed> <NPurp>class=</NPurp>"<NGreen>col-12  col-md-8  borde2</NGreen>"> &lt;<NRed>/div</NRed>> <br>
+      &lt;<NRed>div</NRed> <NPurp>class=</NPurp>"<NGreen>col-12  col-md-2  d-none  d-md-block</NGreen>"> &lt;<NRed>/div</NRed>>
+    </div>
+  </div>
+
+  <!-- Align (Posicion) -->
+  <div class="section">
+    <h3> Alineación </h3>
+    <div class="container">
+      <div class="row">
+        <div class="mx-auto borde1" style="width: auto;">mx-auto</div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="float-start borde2">float-start</div>
+          <div class="float-end borde3">float-end</div>
+        </div>
+      </div>
+    </div> <hr>
+    <!-- Justify -->
+    <div class="container">
+      <div class="row"><div class="mx-auto" style="width: auto;">(row) justify-content-center</div></div>
+      <div class="row justify-content-center bordeBase">
+        <div class="col-4 borde1"> col-4 </div>
+        <div class="col-4 borde2"> col-4 </div>
+      </div><br>
+      <div class="row"><div class="mx-auto" style="width: auto;">(row) justify-content-between</div></div>
+      <div class="row justify-content-between bordeBase">
+        <div class="col-3 borde1"> col-3 </div>
+        <div class="col-3 borde2"> col-3 </div>
+        <div class="col-3 borde3"> col-3 </div>
+      </div><br>
+      <div class="row"><div class="mx-auto" style="width: auto;">(row) justify-content-around</div></div>
+      <div class="row justify-content-around bordeBase">
+        <div class="col-3 borde1"> col-3 </div>
+        <div class="col-3 borde2"> col-3 </div>
+        <div class="col-3 borde3"> col-3 </div>
+      </div>
+    </div> <hr>
+
+    <!-- Center -->
+    <div class="container">
+      <div class="row"><div class="mx-auto" style="width: auto;">(row) align-items-center</div></div>
+      <div class="row align-items-center bordeBase" style="height: 100px;">
+        <div class="col-4 borde1"> col-4 </div>
+        <div class="col-4 borde2"> col-4 </div>
+      </div>
+      <div class="row bordeBase" style="height: 100px;">
+        <div class="borde3 align-self-center" style="width: auto;">align-self-center</div>
+      </div>
+    </div><hr>
+
+    <!-- Fix -->
+    <div class="row"><div class="mx-auto" style="width: auto;">Fixed-Top / Fixed-Bottom</div></div>
+  </div>
+
+  <!-- Tamaños -->
+  <div class="section">
+    <h3> Tamaños </h3>
+    <div class="container">
+      <div class="row bordeBase" style="height: 200px;">
+        <div class="borde2 w-50 h-75">
+          w-50 (width 50%) <br>
+          h-75 (height 75%)
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row borde1 h-100">
+        <div class="m-5 " style="background-color: antiquewhite;">
+          m-5 (margin: 5px) <br>
+          mt, mr, ml, mb, (0-5); <br><br>
+          p-5 (padding: 5px) <br>
+          pt, pr, pl, pb, (0-5);
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tipografia -->
+  <div class="section">
+    <h3>Tipografia</h3>
+    <p class="display-1">Ej. prrafo (display-1)</p>
+    <p class="display-2">Ej. prrafo (display-2)</p>
+    <p class="display-3">Ej. prrafo (display-3)</p>
+    <p class="display-4">Ej. prrafo (display-4)</p>
+    <hr>
+
+    <p class="fw-bold">Bold text (fw-bold).</p>
+    <p class="fst-italic">Italic text (fst-italic).</p>
+    <p class="fst-normal">Text with normal font style (fst-italic).</p>
+    <p class="font-monospace">This is in monospace (font-monospace).</p> <br>
+
+    <p class="lh-1">Line-Height (lh-1)(lh-sm)(lh-base)(lh-lg) </p> <br>
+
+    <p class="text-decoration-underline">This text has a line underneath it.</p>
+    <p class="text-decoration-line-through">This text has a line going through it.</p>
+    <a href="#" class="text-decoration-none">This link has its text decoration removed</a>
+    <hr>
+    
+    <p class="text-start"> parrafo alineado a la izquierda (text-start).</p>
+    <p class="text-center"> parrafo alineado al centro (text-center).</p>
+    <p class="text-end"> parrafo alineado a la derecha (text-end).</p>
+    <hr>
+
+    <!-- <p class="text-justify">(text-justify): <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nulla recusandae laboriosam expedita, vitae aut velit ipsa quo corrupti non accusantium, modi veritatis debitis id voluptates fugiat eum inventore nisi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore itaque et repudiandae ducimus, doloribus eos qui vitae. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur quo eveniet dicta facilis, non ipsam dignissimos vitae perspiciatis cupiditate, explicabo inventore, mollitia dolorum sed consequatur cumque architecto odit? Totam, sapiente?</p>
+    <br> -->
+
+    <p class="text-nowrap">(text-nowrap): <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eius porro animi, blanditiis accusamus temporibus iste commodi delectus cupiditate quisquam fuga labore veritatis tempora eos harum at magnam, soluta exercitationem. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore reiciendis non fuga quam qui soluta sunt exercitationem ea tenetur. Voluptates soluta enim iste nobis? Quis sunt repellendus eum est pariatur!</p>
+    <hr>
+
+    <p class="text-lowercase">Texto Forzado A Minusculas (text-lowercase). </p>
+    <p class="text-uppercase">Texto Forzado A Mayusculas (text-uppercase). </p>
+    <p class="text-capitalize">Texto forzado a Capitalize (text-capitalize). </p>
+  </div>
+
+  <!-- 
+    primary   -   secondary
+    dark      -   light
+    danger    -   warning
+    succes    -   info
+   -->
+  <!-- Colores -->
+  <div class="section">
+    <h3>Colores (text / bg)</h3>
+
+    <div class="bg-primary">bg-primary</div>
+    <div class="bg-secondary">bg-secondary</div>
+    <div class="bg-dark">bg-dark</div>
+    <div class="bg-light">bg-light</div>
+    <div class="bg-danger">bg-danger</div>
+    <div class="bg-warning">bg-warning</div>
+    <div class="bg-success">bg-success</div>
+    <div class="bg-info">bg-info</div>
+    <div class="bg-white">bg-white</div>
+  </div>
+
+  <!-- Tablas -->
+  <div class="section">
+    <h3>Tabla</h3>
+    <table class="table table-striped table-bordered table-hover table-dark">
+      <tr> <td>Lun</td> <td>Mar</td> <td>Mier</td> <td>Jue</td> <td>Vie</td> </tr>
+      <tr> <td>5</td> <td>5</td> <td>5</td> <td>5</td> <td>5</td> </tr>
+      <tr> <td>12</td> <td>12</td> <td>12</td> <td>12</td> <td>12</td> </tr>
+      <tr> <td>25</td> <td>25</td> <td>25</td> <td>25</td> <td>25</td> </tr>
+    </table>
+    <div class="cod">
+      <<NRed>table</NRed> <NPurp>class</NPurp>="<NGreen>table table-striped table-bordered table-hover table-dark</NGreen>"> <<NRed>/table</NRed>>
+    </div>
+  </div>  
+
+  <!-- Imagenes -->
+  <div class="section">
+    <h3> Imagen </h3>
+    <img src="/Imgs/cat1.png" class="img-fluid img-thumbnail w-25" title="img-thumbnail">
+    <img src="/Imgs/cat1.png" class="img-fluid rounded w-25" title="rounded">
+    <img src="/Imgs/cat1.png" class="img-fluid rounded-circle w-25" title="rounded-circle">
+  </div>
+
+  <!-- Jumbotron - Alert -->
+  <div class="section">
+    <h3>Texto alert</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam deleniti quas quae ad repellat exercitationem delectus consectetur nostrum. Excepturi explicabo incidunt quo dolorem doloribus saepe quibusdam perspiciatis aperiam consectetur cumque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fugiat velit dolorem. Accusamus beatae consectetur iste laboriosam cum sapiente fugit ea quasi recusandae at repellendus voluptatum incidunt aliquam, laudantium dignissimos? </p>
+
+    <p class="alert alert-info">(alert alert-info) <br> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis ipsam expedita nulla cumque tempore deserunt, ad dolorem suscipit praesentium numquam molestiae officiis voluptate, qui rem accusamus, tenetur sed necessitatibus repudiandae. <a class="alert-link" href="#">Esto es un link con: (alert-link)</a></p>
+    
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis aut repudiandae facilis ab vel rem, harum eligendi rerum asperiores a suscipit, quas placeat quos beatae doloribus quaerat eius dicta? Illo! Lorem ipsum earum cumque.</p>
+    <hr>
+    <p class="alert alert-success alert-dismissible" role="alert">
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      <strong>Felicidades</strong> la operación concluyó satisfactoriamente.
+    </p>
+    <div class="cod">
+      <<NRed>p</NRed> <NPurp>class</NPurp>="<NGreen>alert alert-success alert-dismissible</NGreen>"> <br>
+        &nbsp; <<NRed>button</NRed> <NPurp>type</NPurp>="<NGreen>button</NGreen>" <NPurp>class</NPurp>="<NGreen>btn-close</NGreen>" <NPurp>data-bs-dismiss</NPurp>="<NGreen>alert</NGreen>"><<NRed>/button</NRed>> <br>
+      <<Nred>/p</Nred>>
+    </div>
+  </div>
+
+  <!-- Botones -->
+  <div class="section">
+    <h3>Botón</h3>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-3">
+          <button class="btn btn-primary">Enviar</button>   <button class="btn btn-outline-primary">Enviar</button> <br>
+          <button class="btn btn-secondary">Enviar</button> <button class="btn btn-outline-secondary">Enviar</button>
+        </div>
+        <div class="col-3">
+          <button class="btn btn-dark">Enviar</button>  <button class="btn btn-outline-dark">Enviar</button> <br>
+          <button class="btn btn-light">Enviar</button> <button class="btn btn-outline-light">Enviar</button>
+        </div>
+        <div class="col-3">
+          <button class="btn btn-danger">Enviar</button>  <button class="btn btn-outline-danger">Enviar</button> <br>
+          <button class="btn btn-warning">Enviar</button> <button class="btn btn-outline-warning">Enviar</button>
+        </div>
+        <div class="col-3">
+          <button class="btn btn-success">Enviar</button> <button class="btn btn-outline-success">Enviar</button> <br>
+          <button class="btn btn-info">Enviar</button>    <button class="btn btn-outline-info">Enviar</button>
+        </div>
+        <div class="cod">
+          <<NRed>button</NRed> <NPurp>class</NPurp>="<NGreen>btn btn-dark</NGreen>">Enviar<<NRed>/button</NRed>>
+        </div>
+      </div> <hr>
+      <div class="d-grid">
+        <button class="btn btn-success">d-grid (parent)</button>
+      </div><hr>
+      <div class="flex">
+        <div> <!-- estado -->
+          <button class="btn btn-success disabled">disabled</button>
+          <button class="btn btn-success">-</button>
+          <button class="btn btn-success active">active</button>
+        </div>
+        <div> <!-- tamaños -->
+          <button class="btn btn-success btn-lg">btn-lg</button>
+          <button class="btn btn-success">-</button>
+          <button class="btn btn-success btn-sm">btn-sm</button>
+        </div>
+      </div>
+      <hr>
+
+      btn-group y dropdown: <br>
+      <div class="btn-group">
+        <button class="btn btn-success">Opcion 1</button>
+        <button class="btn btn-success">Opcion 2</button>
+        <!-- Dropdown -->
+        <div class="btn-group dropdown">
+          <button class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown">Otras opciones</button>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item">Opcion A</a>
+            <a href="#" class="dropdown-item">Opcion B</a>
+            <a href="#" class="dropdown-item">Opcion C</a>
+          </div>
+        </div>
+      </div>
+      <div class="cod">
+        <<NRed>div</NRed> <NPurp>class</NPurp>="<NGreen>btn-group</NGreen>"> <br>
+          &nbsp; <<NRed>button</NRed> <NPurp>class</NPurp>="<NGreen>btn</NGreen>"> Opcion 1 <<NRed>/button</NRed>> <br>
+          
+          &nbsp; <<NRed>div</NRed> <NPurp>class</NPurp>="<NGreen>btn-group dropdown</NGreen>"> <br>
+          &nbsp; &nbsp; <<NRed>button</NRed> <NPurp>class</NPurp>="<NGreen>btn dropdown-toggle</NGreen>" <NPurp>data-bs-toggle</NPurp>="<NGreen>dropdown</NGreen>"> Otras opciones <<NRed>/button</NRed>> <br>
+          &nbsp; &nbsp; <<NRed>a</NRed> <NPurp>href</NPurp>="<NGreen>#</NGreen>" <NPurp>class</NPurp>="<NGreen>dropdown-item</NGreen>"> Opcion A <<NRed>/button</NRed>> <br>
+          &nbsp; &nbsp; <<NRed>a</NRed> <NPurp>href</NPurp>="<NGreen>#</NGreen>" <NPurp>class</NPurp>="<NGreen>dropdown-item</NGreen>"> Opcion B <<NRed>/button</NRed>> <br>
+
+          &nbsp; <<NRed>/div</NRed>> <br>
+        <<NRed>/div</NRed>>
+      </div> 
+      <br>
+
+      btn-group-vertical (parent) <br>
+      <div class="btn-group-vertical">
+        <button class="btn btn-success">Opcion 1</button>
+        <button class="btn btn-success">Opcion 2</button>
+        <button class="btn btn-success">Opcion 3</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Insignias -->
+  <div class="section">
+    <h3>Insignias</h3>
+    <span class="badge text-bg-primary">Primary</span>
+    <span class="badge text-bg-secondary">Secondary</span>
+    <span class="badge text-bg-success">Success</span>
+    <span class="badge text-bg-danger">Danger</span>
+    <span class="badge text-bg-warning">Warning</span>
+    <span class="badge text-bg-info">Info</span>
+    <span class="badge text-bg-light">Light</span>
+    <span class="badge text-bg-dark">Dark</span>
+    <<NRed>span</NRed> <NPurp>class</NPurp>="<NGreen>badge text-bg-primary</NGreen>"><<NRed>/span</NRed>>
+    <br>
+    <span class="badge rounded-pill text-bg-primary">Primary</span>
+    <span class="badge rounded-pill text-bg-secondary">Secondary</span>
+    <span class="badge rounded-pill text-bg-success">Success</span>
+    <span class="badge rounded-pill text-bg-danger">Danger</span>
+    <span class="badge rounded-pill text-bg-warning">Warning</span>
+    <span class="badge rounded-pill text-bg-info">Info</span>
+    <<NRed>span</NRed> <NPurp>class</NPurp>="<NGreen>badge rounded-pill text-bg-primary</NGreen>"><<NRed>/span</NRed>>
+    <br><br>
+
+    <button class="btn btn-primary"> Mensajes
+      <span class="badge text-bg-secondary">4</span>
+    </button>
+    <div class="cod">
+      <<NRed>button</NRed> <NPurp>class</NPurp>="<NGreen>btn btn-primary</NGreen>"> Mensajes <br>
+      &nbsp; <<NRed>span</NRed> <NPurp>class</NPurp>="<NGreen>badge text-bg-secondary</NGreen>"> 4 <<NRed>/span</NRed>> <br>
+      <<NRed>/button</NRed>>
+    </div><br>
+
+    <button class="btn btn-primary position-relative"> Mensajes
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"> 99+ </span>
+    </button>
+    <div class="cod">
+      <<NRed>button</NRed> <NPurp>class</NPurp>="<NGreen>btn btn-primary position-relative</NGreen>"> Mensajes <br>
+      &nbsp; <<NRed>span</NRed> <NPurp>class</NPurp>="<NGreen>position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger</NGreen>"> 99+ <<NRed>/span</NRed>> <br>
+      <<NRed>/button</NRed>>
+    </div><br>
+
+    <button class="btn btn-primary position-relative"> Perfil
+      <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border rounded-circle"></span>
+    </button>
+    <div class="cod">
+      <<NRed>button</NRed> <NPurp>class</NPurp>="<NGreen>btn btn-primary position-relative</NGreen>"> Perfil <br>
+      &nbsp; <<NRed>span</NRed> <NPurp>class</NPurp>="<NGreen>position-absolute top-0 start-100 translate-middle p-2 bg-danger border rounded-circle</NGreen>"><<NRed>/span</NRed>> <br>
+      <<NRed>/button</NRed>>
+    </div><br>
+
+  </div>
+  
+  <!-- Barra de progreso -->
+  <div class="section">
+    <h3>Barra de progreso</h3>
+    <div class="progress bg-secondary" style="height: 40px;">
+      <div class="progress-bar w-75 bg-success progress-bar-striped progress-bar-animated">75%</div>
+    </div>
+    <div class="cod">
+      <<NRed>div</NRed> <NPurp>class</NPurp>="<NGreen>progress</NGreen>"> <br>
+      &nbsp; &nbsp; <<NRed>div</NRed> <NPurp>class</NPurp>="<NGreen>progress-bar w-75 bg-success progress-bar-striped progress-bar-animated</NGreen>"> 75% <<NRed>/div</NRed>> <br>
+      <<NRed>/div</NRed>>
+    </div>
+  </div>
+
+  <!-- Paginacion -->
+  <div class="section">
+    <h3>paginacion</h3>
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="#">< Previo</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item active"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item disabled"><a class="page-link" href="#">4</a></li>
+      <li class="page-item"><a class="page-link" href="#">5</a></li>
+      <li class="page-item"><a class="page-link" href="#">Siguiente ></a></li>
+    </ul>
+    <div class="cod">
+      <<NRed>ul</NRed> <NPurp>class</NPurp>="<NGreen>pagination</NGreen>"> <br>
+      &nbsp; <<NRed>li</NRed> <NPurp>class</NPurp>="<NGreen>page-item</NGreen>"> <<NRed>a</NRed> <NPurp>class</NPurp>="<NGreen>page-link</NGreen>" <NPurp>href</NPurp>="<NGreen>#</NGreen>"> 1 <<NRed>/a</NRed>><<NRed>/li</NRed>> <br>
+      &nbsp; <<NRed>li</NRed> <NPurp>class</NPurp>="<NGreen>page-item active/disabled</NGreen>"> <<NRed>a</NRed> <NPurp>class</NPurp>="<NGreen>page-link</NGreen>" <NPurp>href</NPurp>="<NGreen>#</NGreen>"> 2 <<NRed>/a</NRed>><<NRed>/li</NRed>> <br>
+      <<NRed>/ul</NRed>>
+    </div> <hr>
+    
+    <ul class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Peliculas</a></li>
+      <li class="breadcrumb-item"><a href="#">2024</a></li>
+    </ul>
+    <div class="cod">
+      <<NRed>ul</NRed> <NPurp>class</NPurp>="<NGreen>breadcrumb</NGreen>"> <br>
+      &nbsp; <<NRed>li</NRed> <NPurp>class</NPurp>="<NGreen>breadcrumb-item</NGreen>"> <<NRed>a</NRed> <NPurp>href</NPurp>="<NGreen>#</NGreen>"> Home <<NRed>/a</NRed>><<NRed>/li</NRed>> <br>
+      <<NRed>/ul</NRed>>
+    </div>
+  </div>
+
+  <!-- Listas -->
+  <div class="section">
+    <h3>Listas</h3>
+    <ul class="list-group">
+      <li class="list-group-item">Lunes</li>
+      <li class="list-group-item active">Martes</li>
+      <li class="list-group-item">Miercoles</li>
+      <li class="list-group-item disabled">Jueves</li>
+    </ul>
+  </div>
+
+  <!-- Tarjetas -->
+  <div class="section">
+    <h3>Tarjetas</h3>
+    <div class="flex">
+      <div class="card w-25">
+        <div class="card-header">
+          <p>ADMINISTRADOR</p>
+        </div>
+        <img src="/Imgs/cat2.png">
+        <div class="card-body">
+          <h5 class="card-title"> José Gonzales</h5>
+          <p class="card-text">Descripcion de la persona</p>
+          <a href="#" class="btn btn-primary">Ver perfil</a>
+        </div>
+        <div class="card-footer">
+          <p>Esto es un pie de tarjeta</p>
+        </div>
+      </div>
+      
+      <div class="card w-25">
+        <img src="/Imgs/cat2.png">
+        <div class="card-body">
+          <h5 class="card-title"> José Gonzales</h5>
+          <p class="card-text">Descripcion de la persona</p>
+          <a href="#" class="btn btn-primary">Ver perfil</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dropdown menu -->
+  <!-- plegables -->
+  <!-- Menus de nav -->
+  <!-- Barra de Nav -->
+  <!-- from -->
+
+  <!-- Carousel -->
+  <!-- Modal -->
+  <!-- Tooltip -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <p id="screenSize">Screen Size: </p>
+  <script>
+    let XS = 575;
+    let SM = 576;
+    let MD = 768;
+    let LG = 992;
+    let XL = 1200;
+
+    let screenSize;
+    let sElem = document.querySelector("#screenSize");
+    setInterval(SSS, 1000);
+    function SSS(){
+      sElem.innerHTML = "Screen Size: " + screenSize;
+    }
+  </script>
+  <!-- *********************************************************************** -->
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <!-- <script src="js/jquery-3.2.1.slim.min.js"></script> -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="js/popper.min.js"></script> -->
+  <!-- <script src="js/bootstrap.min.js"></script> -->
+</body>
+</html>

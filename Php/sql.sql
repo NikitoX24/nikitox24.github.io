@@ -35,7 +35,7 @@ CREATE TABLE pedidos (
   FOREIGN KEY (id_producto) REFERENCES productos(id_producto)
 );
 
-DROP TABLE mytabla; -- borrar tabla.
+DROP TABLE tabla; -- borrar tabla.
 
 ALTER TABLE mytabla RENAME myusuarios; -- renombrar tabla.
 ALTER TABLE myusuarios CHANGE telefono celular INT(11); -- cambiar el nombre a una columna.
@@ -83,6 +83,8 @@ SELECT * FROM clientes WHERE nombre="John" OR nombre="David"; -- todos los usuar
 
 SELECT * FROM clientes WHERE id_cliente > 3; -- todos los registros despues del id 3.
 SELECT * FROM clientes WHERE id_cliente != 4; -- todos los registros menos el id 4.
+SELECT * FROM clientes LIMIT 10; -- solo los 10 primeros registros
+SELECT * FROM clientes LIMIT 10 OFFSET 2; -- extrae los 10 registros ignorando los 2 prmeros
 
 SELECT * FROM clientes WHERE nombre LIKE "d%"; -- todos los registros que empliezen por D.
 SELECT * FROM clientes WHERE nombre LIKE "%n"; -- todos los registros que terminan con N.
@@ -98,6 +100,7 @@ SELECT COUNT(*) AS nombre FROM clientes WHERE nombre="David"; -- Contar cuantas 
 SELECT SUM(edad) AS edad FROM clientes WHERE nombre="John"; -- Sumar todas las edades de los q se llaman John.
 SELECT MAX(edad) AS edad FROM clientes; -- Mostrar entre todas las edades cual es el maximo. (MAX-MIN)
 SELECT AVG(edad) AS edad FROM clientes; -- Mostrar entre todas las edades la edad promedio.
+SELECT precio+envio AS total FROM clientes; -- Mostrar una suma en una calumna nueva
 
 -- Agrupar
 SELECT nombre, COUNT(*) FROM clientes GROUP BY nombre; -- Mostrar Lista con todos los nombres repetidos.

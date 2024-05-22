@@ -7,40 +7,32 @@
   <meta name="theme-color" content="#1bb566"> <!-- Color de la barra de navegador -->
   <meta name="description" content="Esto es la pag principal">
   <meta name="robots" content="no-follow">
-  <meta name="keywords" content="html, css, js, cheatsheet, etc">
+  <meta name="keywords" content="html, css, js, cheatsheet">
   <title> Index (localhost) </title>
   <link rel="icon" href="logo.png">
 </head>
 
 <body>
-<main>
+
   <!-- Pags -->
   <div class="round">
 
-    <h2 class="centred"><span>&#x263A;</span><ins>Mis Paginas de Prueba</ins>.</h2>
+    <h2 class="centred"><span>&#x263A;</span><ins>Dev-Web CheatSheets</ins>.</h2>
     <hr>
 
     <!-- CheatSheet -->
-    <a href="HtmlCheatSheet\HTML.html"><img src="Imgs/htmlcssjs.png" alt="HtmlCssJss" class="icons imgcentred"></a> <!-- TODO: -->
-    <hr>
-    <a href="HtmlCheatSheet\HTML.html"><img src="Imgs/html.png" alt="html" class="icons"></a>
-    <a href="HtmlCheatSheet\CSS.html"><img src="Imgs/css.png" alt="css" class="icons"></a>
-    <a href="HtmlCheatSheet\JavaScript.html"><img src="Imgs/js.png" alt="js" class="icons"></a>
-    <!-- <a href="HtmlCheatSheet/php.html"><img src="Imgs/PHP-logo.png" alt="php" height="50px"></a> -->
-    <hr>
-
-    <!-- PHP -->
-    <h3 class="centred"><u>PHP</u></h3>
-    <form action="HtmlCheatSheet/php.html">
-      <input type="submit" value="PHP" />
-    </form> 
-    <form action="Php/php.html">
-      <input type="submit" value="test" />
-    </form> <br> 
+      <a href="HtmlCheatSheet/HTML.html"><img src="Imgs/html.png" alt="html" class="icons"></a>
+      <a href="HtmlCheatSheet/CSS.html"><img src="Imgs/css.png" alt="css" class="icons"></a>
+      <a href="HtmlCheatSheet/JavaScript.html"><img src="Imgs/js.png" alt="js" class="icons"></a>
+      <a href="HtmlCheatSheet/php.html"><img src="Imgs/php.png" alt="php" class="icons"></a>
+      <!-- <a href="HtmlCheatSheet/sql.html"><img src="Imgs/sql.png" alt="sql" class="icons"></a> -->
     <hr>
 
     <!-- Otros -->
     <h3 class="centred"><u>Otros</u></h3>
+    <form action="Php/php.html">
+      <input type="submit" value="php test" />
+    </form>
     <form action="Otros/Test.html">
       <input type="submit" value="Test" />
     </form>
@@ -64,7 +56,7 @@
     <br> <hr>
 
     <!-- Ejercicios -->
-    <h3 class="centred"><u>Ejercicios</u></h3>
+    <h3 class="centred"><u>Juegos</u></h3>
     <form action="Ejercicios/Ahorcado.html">
       <input type="submit" value="Ahorcado" />
     </form> <br>
@@ -73,7 +65,7 @@
     </form> <br>
 
     <!-- Ejercicios HTML-CSS -->
-    <details>
+    <!-- <details>
       <summary>Ejercicios HTML-CSS</summary>
       <div class="summaryBackground">
         <form action="Ejercicios/HTML-CSS/2- Ejemplo/ejemplo.html">
@@ -108,17 +100,17 @@
           <input type="submit" value="necrologicas-2014" />
         </form>
       </div>
-    </details> <br>
+    </details> <br> -->
 
     <!-- Ejercicios JavaScript -->
-    <details>
+    <!-- <details>
       <summary>Ejercicios JavaScript</summary>
       <div class="summaryBackground">
         <form action="Ejercicios/JavaScript/Ejercicio1.html">
           <input type="submit" value="Ejerciocio 1" />
         </form>
       </div>
-    </details> <br>
+    </details> <br> -->
   </div>
 
   <!-- Probando... -->
@@ -139,14 +131,14 @@
     </label>
     <select>
       <option>Seleccionar: </option>
-        <optgroup label="Color">
-          <option>Red</option>
-          <option>Blue</option>
-        </optgroup>
-        <optgroup label="Numero">
-          <option>1</option>
-          <option>2</option>
-        </optgroup>
+      <optgroup label="Color">
+        <option>Red</option>
+        <option>Blue</option>
+      </optgroup>
+      <optgroup label="Numero">
+        <option>1</option>
+        <option>2</option>
+      </optgroup>
     </select>
     <hr>
 
@@ -212,25 +204,18 @@
     <hr>
 
     <!-- Loader Circle -->
-    <div class="loader"></div>
+    <div id="loader"></div>
     <style>
-      .loader {
+      #loader {
         width: 100px;
         height: 100px;
         border-radius: 50%;
         background: #000;
         animation: zoom 1.5s ease infinite;
       }
-
       @keyframes zoom {
-        0% {
-          transform: scale(0);
-          opacity: 1;
-        }
-        100% {
-          transform: scale(1);
-          opacity: 0;
-        }
+        from{ transform: scale(0); opacity: 1; }
+        to{ transform: scale(1); opacity: 0; }
       }
     </style>
     <hr>
@@ -289,7 +274,7 @@
 
   <!-- ESPACIO EN BLANCO -->
   <div style="height: 700px;"></div>
-</main>
+
 
 <!-- Footer -->
 <footer>
@@ -319,16 +304,15 @@
     var mins = d.getMinutes();
     var secs = d.getSeconds();
     if(secs < 10) { secs = "0"+secs }
+    if(mins < 10) { mins = "0"+mins }
     var horaPS = document.getElementById("HoraPS");
     horaPS.innerHTML = "Hora: " + hours+":"+mins+":"+secs;
   }
   setInterval(printTime, 1000);
 </script>
 
-<section id="Final">
-
 <!-- JavaScript -->
-<script type="text/javascript" src="MenuJS.js"></script>
+<script type="text/javascript" src="index.js"></script>
 <!-- Style -->
 <style>
   body{
@@ -353,7 +337,7 @@
     -webkit-border-radius: 24px;
     border-radius: 7px;
     border: 1px solid grey;
-    max-width: 330px;
+    max-width: 350px;
     padding: 5px;
     box-shadow: 10px 10px 5px 5px rgba(136, 136, 136, 0.207);
     background-color: rgba(0, 0, 0, 0.281);

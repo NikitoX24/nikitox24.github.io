@@ -50,12 +50,9 @@ class Menu extends HTMLElement {
     `
   }
 }
-
 customElements.define("menu-component", Menu);
 
-
-
-// #region (Mostrar Seccion y h1 )
+// #region (Mostrar Seccion (hover) y h1 )
 let textoFix = document.querySelector("#textoFix");
 let Section = document.querySelectorAll("section");
 
@@ -73,6 +70,5 @@ window.onload = function(){
     Section[i].insertBefore(h1, Section[i].firstChild); // Agregar el h1 a Section.
   };
 }
-
 //#endregion
 
