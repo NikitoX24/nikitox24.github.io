@@ -74,37 +74,69 @@
         <div class="cod">
           <NGray> // Literales de plantilla</NGray> <br>
           <NPurp>let</NPurp> <b>nombre</b> <NPurp>=</NPurp> '<NGreen>David</NGreen>'; <br>
-          <NPurp>let</NPurp> mensaje <NPurp>=</NPurp> `<NGreen>Welcome</NGreen> <font class="aqua">${</font><b>nombre</b><font class="aqua">}</font>!`;
+          <NPurp>let</NPurp> mensaje <NPurp>=</NPurp> `<NGreen>Welcome <NAqua>${<NVar>nombre</NVar>}</NAqua>!</NGreen>`; <NGray>// (alt+96)</NGray>
         </div>
+      </div>
+    </fieldset>
+    
+    <fieldset> <!-- Funciones / Propiedades -->
+      <legend> Propiedades de Strings </legend>
+      <!-- Variable (Hola a todos) -->
+      <div class="cod columnas">
+        <NPurp>let</NPurp> texto = "<NGreen>Hola a todos mis amigos, a mis Videos</NGreen>"; <br>
+        texto.<NBlue>substr</NBlue>(<NOrg>5, 11</NOrg>); <NGray>// "a todos mis" (2do param cantidad)</NGray> <br>
+        texto.<NBlue>substring</NBlue>(<NOrg>5, 11</NOrg>); <NGray>// "a todo" (2do param index)</NGray> <br>
+        texto.<NBlue>match</NBlue>(/<NGreen>mis</NGreen>/<NOrg>gi</NOrg>); <NGray>// [mis, mis] (array) </NGray> <br>
+        texto.<NBlue>match</NBlue>("<NGreen>todos</NGreen>"); <NGray>// [todos] (array)</NGray> <br>
+        texto.<NBlue>includes</NBlue>("<NGreen>amig</NGreen>", <NOrg>25</NOrg>); <NGray>// false</NGray> <br>
+        texto.<NBlue>includes</NBlue>("<NGreen>amig</NGreen>"); <NGray>// true</NGray> <br>
+        
+        texto.length; <NGray>// 37</NGray> <br>
+        texto.<NBlue>startsWith</NBlue>("<NGreen>Si</NGreen>"); <NGray>// false</NGray> <br>
+        texto.<NBlue>endsWith</NBlue>("<NGreen>Videos</NGreen>"); <NGray>// true</NGray> <br>
+        texto.<NBlue>indexOf</NBlue>("<NGreen>a</NGreen>", <NOrg>4</NOrg>); <NGray>// 5</NGray> <br>
+        texto.<NBlue>lastIndexOf</NBlue>("<NGreen>mis</NGreen>"); <NGray>// 27</NGray> <br>
+        texto.<NBlue>charAt</NBlue>("<NGreen>3</NGreen>"); <NGray>// a</NGray> <br>
+        texto.<NBlue>search</NBlue>("<NGreen>a</NGreen>"); <NGray>// 3</NGray> <br>
+      </div>
+      <div class="cod">
+        <NPurp>let</NPurp> texto = "<NGreen>Hola mundo </NGreen>"; <br>
+        document.write( texto.<NBlue>repeat</NBlue>(<NOrg>2</NOrg>) ); <NGray>// Hola mundo Hola mundo</NGray> <br>
+        nuevoTexto = texto.<NBlue>replace</NBlue>("<NGreen>mundo</NGreen>", "<NGreen>amigos</NGreen>"); <NGray>// Hola amigos</NGray> <br>
+        nuevoTexto = texto.<NBlue>replace</NBlue>("<NGreen>mundo</NGreen>", ""); <NGray>// Hola (borrar "mundo")</NGray> <br>
+        document.write( texto.<NBlue>slice</NBlue>(<NOrg>5</NOrg>) ); <NGray>// mundo (comenzar a leer desde Index 5)</NGray> <br>
+        Array = texto.<NBlue>split</NBlue>(" "); <NGray>// ["Hola" "mundo"] (convertir en Array, separados por " ")</NGray> <br>
+        document.write( texto.<NBlue>trim</NBlue>() ); <NGray>// (quitar espacios antes y dps)</NGray> <br>
+        document.write( texto.<NBlue>toUpperCase / toLowerCase</NBlue>() ); <NGray>// (transform)</NGray> <br>
+        document.write( texto.<NBlue>concat</NBlue>("<NGreen>_</NGreen>", var) ); <NGray>// (unir strings)</NGray> <br>
       </div>
     </fieldset>
 
     <fieldset> <!-- Arrays --> 
       <legend> Arrays </legend>
-      <!-- Crear: --> Crear:
+      Crear:
       <div class="flex">
         <div class="cod"> <NPurp>var</NPurp> myArray <NAqua>= new</NAqua> <NObj>Array</NObj>("<NGreen>a</NGreen>", "<NGreen>b</NGreen>"); </div>
         <div class="cod"> <NPurp>var</NPurp> myArray = <NAqua>new</NAqua> <NObj>Array</NObj>(<NOrg>3</NOrg>); </div>
         <div class="cod"> <NPurp>var</NPurp> myArray = ["<NGreen>a</NGreen>", "<NGreen>b</NGreen>", "<NGreen>c</NGreen>"]; </div>
       </div><br>
 
-      <b>Propiedades:</b> <br>
-      <div class="flex">
-        <div class="cod">
-          <NPurp>let</NPurp> array = "<NGreen>PALABRA</NGreen>" <br>
-          array.<NBlue>includes</NBlue>("<NGreen>A</NGreen>"); <NGray>// true</NGray> <br>
-          array.<NBlue>indexOf</NBlue>("<NGreen>A</NGreen>"); <NGray>// 1</NGray>
-        </div>
-        <div class="cod">
-          <NPurp>let</NPurp> array = ["<NGreen>B</NGreen>", "<NGreen>A</NGreen>", "<NGreen>B</NGreen>"] <br>
-          array.<NBlue>findIndex</NBlue>(a => a == "<NGreen>B</NGreen>"); <NGray>// 0</NGray> <br>
-          <!-- array.<NBlue>find</NBlue>(a => a == "<NGreen>A</NGreen>"); <NGray>// 0</NGray> <br>  TODO: -->
-          array.<NBlue>filter</NBlue>(a => a == "<NGreen>B</NGreen>"); <NGray>// [B, B]</NGray> <br>
-          array.<NBlue>sort</NBlue>(); <NGray>// [A, B, B]</NGray> - array.<NBlue>reverse</NBlue>(); <NGray>// [B, B, A]</NGray>
-        </div>
+      Propiedades: <br>
+      <div class="cod columnas">
+        <NPurp>let</NPurp> array = ["<NGreen>B</NGreen>", "<NGreen>A</NGreen>", "<NGreen>B</NGreen>"]; <br>
+        array.<NBlue>findIndex</NBlue>(res => res == "<NGreen>B</NGreen>"); <NGray>// 0 (buscar 1ro)</NGray> <br>
+        array.<NBlue>find</NBlue>(res => res == "<NGreen>A</NGreen>"); <NGray>// A / undefined (buscar 1ro)</NGray> <br>
+        array.<NBlue>filter</NBlue>(res => res == "<NGreen>B</NGreen>"); <NGray>// [B, B] (buscar todos)</NGray> <br>
+        array.<NBlue>some</NBlue>(res => res < <NOrg>50</NOrg>); <NGray>// false (alguno... es menor q)</NGray> <br>
+
+        array.<NBlue>sort</NBlue>(); <NGray>// (odenar asc A-Z)</NGray> <br>
+        array.<NBlue>reverse</NBlue>(); <NGray>// (odenar desc Z-A)</NGray>  <br>
+        array.<NBlue>join</NBlue>(); <NGray>// (convertir en string)</NGray> <br>
+        array.<NBlue>push</NBlue>("<NGreen>C</NGreen>"); <NGray>// (agregar al último)</NGray> <br>
+        array.<NBlue>pop</NBlue>(); <NGray>// (extraer último)</NGray> <br>
       </div> <br>
 
-      Extraer elementos(p) y ponerlos en un Array
+      Extraer de DOM y ponerlos en un Array
       <div class="cod">
         <NPurp>var</NPurp> elementos = <NObj>Array</NObj>.<NBlue>from</NBlue>(document.<NBlue>querySelectorAll</NBlue>("<NGreen>.dias p</NGreen>"));<br>
         <NPurp>var</NPurp> array = elementos.<NBlue>map</NBlue>(dia <NPurp>=></NPurp> dia.textContent); <br>
@@ -112,11 +144,10 @@
       </div> <br>
 
       Destructurar Arrays:
-      <div class="cod columnas">
-        <NPurp>let</NPurp> arrDes = ['<NGreen>1</NGreen>', '<NGreen>2</NGreen>', '<NGreen>3</NGreen>']; <br>
-        <NPurp>let</NPurp> [one, two, three] = arrDes; <br>
-        console.<NBlue>log</NBlue>(one); <NGray>// 1</NGray> <br>
-        console.<NBlue>log</NBlue>(two); <NGray>// 2</NGray>
+      <div class="cod">
+        <NPurp>let</NPurp> arrDes <NAqua>=</NAqua> ['<NGreen>1</NGreen>', '<NGreen>2</NGreen>', '<NGreen>3</NGreen>']; <br>
+        <NPurp>let</NPurp> [one, two, three] <NAqua>=</NAqua> arrDes; <br>
+        console.<NBlue>log</NBlue>(one); <NGray>// 1</NGray>
       </div>
     </fieldset>
 
@@ -274,145 +305,6 @@
           </div>
         </div>
       </div>
-    </fieldset>
-  </section>
-
-  <!-- Otros -->
-  <section id="Otros">
-    
-    <!-- Math -->
-    <fieldset>
-      <legend> Math: </legend>
-      <div class="cod">
-        function randomNumber(min, max) { <br>
-          &nbsp; return Math.floor(Math.random() * (max - min)) + min; <br> }
-      </div>
-      <details>
-        <summary>Metodos de Math</summary>
-        abs(x) Returns the absolute value of x <br>
-        acos(x) Returns the arccosine of x, in radians <br>
-        acosh(x) Returns the hyperbolic arccosine of x <br>
-        asin(x) Returns the arcsine of x, in radians <br>
-        asinh(x) Returns the hyperbolic arcsine of x <br>
-        atan(x) Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians <br>
-        atan2(y, x) Returns the arctangent of the quotient of its arguments <br>
-        atanh(x) Returns the hyperbolic arctangent of x <br>
-        cbrt(x) Returns the cubic root of x <br>
-        ceil(x) Returns x, rounded upwards to the nearest integer <br>
-        cos(x) Returns the cosine of x (x is in radians) <br>
-        cosh(x) Returns the hyperbolic cosine of x <br>
-        exp(x) Returns the value of Ex <br>
-        floor(x) Returns x, rounded downwards to the nearest integer <br>
-        log(x) Returns the natural logarithm (base E) of x <br>
-        max(x, y, z, ..., n) Returns the number with the highest value <br>
-        min(x, y, z, ..., n) Returns the number with the lowest value <br>
-        pow(x, y) Returns the value of x to the power of y <br>
-        random() Returns a random number between 0 and 1 <br>
-        round(x) Rounds x to the nearest integer <br>
-        sign(x) Returns if x is negative, null or positive (-1, 0, 1) <br>
-        sin(x) Returns the sine of x (x is in radians) <br>
-        sinh(x) Returns the hyperbolic sine of x <br>
-        sqrt(x) Returns the square root of x <br>
-        tan(x) Returns the tangent of an angle <br>
-        tanh(x) Returns the hyperbolic tangent of a number <br>
-        trunc(x) Returns the integer part of a number (x) <br>
-      </details>
-    </fieldset>
-
-    <!-- Date -->
-    <fieldset>
-      <legend> Fechas: </legend>
-
-      Metodos de Date:
-      <div class="flex">
-        <div class="codigo columnas width100">
-          getFullYer()      <NGray>// 1999.</NGray> <br>
-          getMonth()        <NGray>// 06.</NGray> <br>
-          getDate()         <NGray>// 24.</NGray> <br>
-          getDay()          <NGray>// Lun.</NGray> <br>
-          getHours()        <br>
-          getMinutes()      <br>
-          getSeconds()      <br>
-            getMilliseconds()
-        </div>
-        <div class="cod">
-          <NPurp>var</NPurp> date1 = <NPurp>new</NPurp> <NBlue>Date</NBlue>(); <NGray> // Crear</NGray> <br>
-          <NPurp>var</NPurp> hours = date1.<NBlue>getHours</NBlue>(); <br>
-          document.<NBlue>write</NBlue>(<u>hours</u>); <br>
-          <NGray>// Muestra solo la hora(sin min/seg).</NGray>
-        </div>
-      </div>
-    </fieldset>
-
-    <!-- Almacenamiento -->
-    <fieldset>
-      <legend>  Almacenamiento (API)  </legend>
-      <div class="flex">
-        <div class="codigo marg0">
-          sessionStorage(); <NGray> //Temporal.</NGray> <br>
-          localStorage(); <NGray> //Permanente.</NGray> <br>
-          localStorage.<NBlue>clear</NBlue>(); <NGray>(Limpiar)</NGray>
-        </div>
-        <div class="cod">
-          localStorage.<NBlue>setItem</NBlue>("<NGreen>name</NGreen>", "<NGreen>Val</NGreen>"); <NGray>(Guardar)</NGray><br>
-          localStorage.<NBlue>getItem</NBlue>("<NGreen>name</NGreen>"); <NGray>(Cargar)</NGray> <br>
-          localStorage.<NBlue>removeItem</NBlue>("<NGreen>name</NGreen>"); <NGray>(Borrar)</NGray>
-        </div>
-      </div>
-    </fieldset>
-    
-    <!-- Dragg & Drop -->
-    <fieldset>
-      <legend>  Dragg & Drop (API)  </legend>
-      <div class="flex">
-        <div class="flex width100" style="margin: auto;">
-          <div id="box" ondrop="drop(event)" ondragover="allowDrop(event)" style="border:1px solid black;
-            width:150px; height:150px; background-color: #b9bebe;">
-          </div>
-          <img id="image" src="../Imgs/cat1.png" draggable="true" ondragstart="drag(event)" width="150" height="150" alt="" style="cursor: move;"/>
-        </div>
-        <div class="cod wAuto" style="font-size: smaller;">
-          <NPurp>function</NPurp> <NBlue>allowDrop</NBlue>(ev) { <br>
-            &nbsp; ev.<NBlue>preventDefault</NBlue>(); <br>
-          } <br>
-  
-          <NPurp>function</NPurp> <NBlue>drag</NBlue>(ev) { <br>
-            &nbsp; ev.dataTransfer.<NBlue>setData</NBlue>("text", ev.target.id); <br>
-          } <br>
-  
-          <NPurp>function</NPurp> <NBlue>drop</NBlue>(ev) { <br>
-            &nbsp; ev.<NBlue>preventDefault</NBlue>(); <br>
-            &nbsp; var data = ev.dataTransfer.<NBlue>getData</NBlue>("text"); <br>
-            &nbsp; ev.target.<NBlue>appendChild</NBlue>(document.<NBlue>getElementById</NBlue>(data)); <br>
-          }
-        </div>
-      </div>
-      <div class="cod">
-        <NRed>&lt;div</NRed> <NPurp>id</NPurp>="box" <NPurp>ondrop</NPurp>="drop(event)"  <NPurp>ondragover</NPurp>="allowDrop(event)" <NRed>&lt;/div></NRed> <br>
-        <NRed>&lt;img</NRed> <NPurp>id</NPurp>="image" <NPurp>src</NPurp>="cat1.png" <NPurp>draggable</NPurp>="true" <NPurp>ondragstart</NPurp>="drag(event)" <NPurp>style</NPurp>="cursor: move;"<NRed>/></NRed>
-      </div>
-
-      <script>
-        function allowDrop(ev) {
-          ev.preventDefault();
-        }
-        function drag(ev) {
-          ev.dataTransfer.setData("text", ev.target.id);
-        }
-        function drop(ev) {
-          ev.preventDefault();
-          var data = ev.dataTransfer.getData("text");
-          ev.target.appendChild(document.getElementById(data));
-        }
-      </script>
-      <style>
-        @media screen and (max-width: 767px) {
-          #image, #box{
-            width: 100px !important;
-            height: 100px !important;
-          }
-        }
-      </style>
     </fieldset>
   </section>
 
@@ -586,9 +478,9 @@
   <!-- DOM -->
   <section id="DOM">
 
-    <!-- DOM -->
+    <!-- Escribir en el Doc -->
     <fieldset>
-      <legend> DOM </legend>
+      <legend> Escribir en el Doc </legend>
       <div class="cod">
         <NBlue><u>document</u></NBlue>.body.<NPurp>innerHTML</NPurp> = "Algun Texto";
       </div>
@@ -1043,6 +935,171 @@
         </script>
       </div>
     </fieldset>
+  </section>
+
+  <!-- APIs -->
+  <section id="APIs">
+    <!-- Math -->
+    <fieldset>
+      <legend> Math: </legend>
+      <div class="cod">
+        function randomNumber(min, max) { <br>
+          &nbsp; return Math.floor(Math.random() * (max - min)) + min; <br> }
+      </div>
+      <details>
+        <summary>Metodos de Math</summary>
+        abs(x) Returns the absolute value of x <br>
+        acos(x) Returns the arccosine of x, in radians <br>
+        acosh(x) Returns the hyperbolic arccosine of x <br>
+        asin(x) Returns the arcsine of x, in radians <br>
+        asinh(x) Returns the hyperbolic arcsine of x <br>
+        atan(x) Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians <br>
+        atan2(y, x) Returns the arctangent of the quotient of its arguments <br>
+        atanh(x) Returns the hyperbolic arctangent of x <br>
+        cbrt(x) Returns the cubic root of x <br>
+        ceil(x) Returns x, rounded upwards to the nearest integer <br>
+        cos(x) Returns the cosine of x (x is in radians) <br>
+        cosh(x) Returns the hyperbolic cosine of x <br>
+        exp(x) Returns the value of Ex <br>
+        floor(x) Returns x, rounded downwards to the nearest integer <br>
+        log(x) Returns the natural logarithm (base E) of x <br>
+        max(x, y, z, ..., n) Returns the number with the highest value <br>
+        min(x, y, z, ..., n) Returns the number with the lowest value <br>
+        pow(x, y) Returns the value of x to the power of y <br>
+        random() Returns a random number between 0 and 1 <br>
+        round(x) Rounds x to the nearest integer <br>
+        sign(x) Returns if x is negative, null or positive (-1, 0, 1) <br>
+        sin(x) Returns the sine of x (x is in radians) <br>
+        sinh(x) Returns the hyperbolic sine of x <br>
+        sqrt(x) Returns the square root of x <br>
+        tan(x) Returns the tangent of an angle <br>
+        tanh(x) Returns the hyperbolic tangent of a number <br>
+        trunc(x) Returns the integer part of a number (x) <br>
+      </details>
+    </fieldset>
+
+    <!-- Date -->
+    <fieldset>
+      <legend> Fechas: </legend>
+
+      Metodos de Date:
+      <div class="flex">
+        <div class="codigo columnas width100">
+          getFullYer()      <NGray>// 1999.</NGray> <br>
+          getMonth()        <NGray>// 06.</NGray> <br>
+          getDate()         <NGray>// 24.</NGray> <br>
+          getDay()          <NGray>// Lun.</NGray> <br>
+          getHours()        <br>
+          getMinutes()      <br>
+          getSeconds()      <br>
+            getMilliseconds()
+        </div>
+        <div class="cod">
+          <NPurp>var</NPurp> date1 = <NPurp>new</NPurp> <NBlue>Date</NBlue>(); <NGray> // Crear</NGray> <br>
+          <NPurp>var</NPurp> hours = date1.<NBlue>getHours</NBlue>(); <br>
+          document.<NBlue>write</NBlue>(<u>hours</u>); <br>
+          <NGray>// Muestra solo la hora(sin min/seg).</NGray>
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- Almacenamiento -->
+    <fieldset>
+      <legend>  Almacenamiento (API)  </legend>
+      <div class="flex">
+        <div class="codigo marg0">
+          sessionStorage(); <NGray> //Temporal.</NGray> <br>
+          localStorage(); <NGray> //Permanente.</NGray> <br>
+          localStorage.<NBlue>clear</NBlue>(); <NGray>(Limpiar)</NGray>
+        </div>
+        <div class="cod">
+          localStorage.<NBlue>setItem</NBlue>("<NGreen>name</NGreen>", "<NGreen>Val</NGreen>"); <NGray>(Guardar)</NGray><br>
+          localStorage.<NBlue>getItem</NBlue>("<NGreen>name</NGreen>"); <NGray>(Cargar)</NGray> <br>
+          localStorage.<NBlue>removeItem</NBlue>("<NGreen>name</NGreen>"); <NGray>(Borrar)</NGray>
+        </div>
+      </div>
+    </fieldset>
+    
+    <!-- Dragg & Drop -->
+    <fieldset>
+      <legend>  Dragg & Drop (API)  </legend>
+      <div class="flex">
+        <div class="flex width100" style="margin: auto;">
+          <div id="box" ondrop="drop(event)" ondragover="allowDrop(event)" style="border:1px solid black;
+            width:150px; height:150px; background-color: #b9bebe;">
+          </div>
+          <img id="image" src="../Imgs/cat1.png" draggable="true" ondragstart="drag(event)" width="150" height="150" alt="" style="cursor: move;"/>
+        </div>
+        <div class="cod wAuto" style="font-size: smaller;">
+          <NPurp>function</NPurp> <NBlue>allowDrop</NBlue>(ev) { <br>
+            &nbsp; ev.<NBlue>preventDefault</NBlue>(); <br>
+          } <br>
+  
+          <NPurp>function</NPurp> <NBlue>drag</NBlue>(ev) { <br>
+            &nbsp; ev.dataTransfer.<NBlue>setData</NBlue>("text", ev.target.id); <br>
+          } <br>
+  
+          <NPurp>function</NPurp> <NBlue>drop</NBlue>(ev) { <br>
+            &nbsp; ev.<NBlue>preventDefault</NBlue>(); <br>
+            &nbsp; var data = ev.dataTransfer.<NBlue>getData</NBlue>("text"); <br>
+            &nbsp; ev.target.<NBlue>appendChild</NBlue>(document.<NBlue>getElementById</NBlue>(data)); <br>
+          }
+        </div>
+      </div>
+      <div class="cod">
+        <NRed>&lt;div</NRed> <NPurp>id</NPurp>="box" <NPurp>ondrop</NPurp>="drop(event)"  <NPurp>ondragover</NPurp>="allowDrop(event)" <NRed>&lt;/div></NRed> <br>
+        <NRed>&lt;img</NRed> <NPurp>id</NPurp>="image" <NPurp>src</NPurp>="cat1.png" <NPurp>draggable</NPurp>="true" <NPurp>ondragstart</NPurp>="drag(event)" <NPurp>style</NPurp>="cursor: move;"<NRed>/></NRed>
+      </div>
+
+      <script>
+        function allowDrop(ev) {
+          ev.preventDefault();
+        }
+        function drag(ev) {
+          ev.dataTransfer.setData("text", ev.target.id);
+        }
+        function drop(ev) {
+          ev.preventDefault();
+          var data = ev.dataTransfer.getData("text");
+          ev.target.appendChild(document.getElementById(data));
+        }
+      </script>
+      <style>
+        @media screen and (max-width: 767px) {
+          #image, #box{
+            width: 100px !important;
+            height: 100px !important;
+          }
+        }
+      </style>
+    </fieldset>
+    
+    <!-- Copiar al Portapapeles -->
+    <fieldset>
+      <legend> Copiar al Portapapeles </legend>
+      <font id="miTexto">Texto a copiar</font>
+      <button class="btn btn-success" onclick="copiarContenido()">Copiar</button>
+
+      <script>
+        let texto = document.getElementById('miTexto').innerHTML;
+        function copiarContenido(){
+          navigator.clipboard.writeText(texto);
+        }
+      </script>
+      <div class="flex">
+        <div class="codigo wAuto">
+          <<NRed>p</NRed> <NPurp>id</NPurp>="<NGreen>miTexto</NGreen>"> <<NRed>p</NRed>> <br>
+          <<NRed>button</NRed> <NPurp>onclick</NPurp>="<NBlue>copiarContenido</NBlue>()"> Copiar <<NRed>/button</NRed>>
+        </div>
+        <div class="cod width100">
+          <NPurp>let</NPurp> texto = document.<NBlue>getElementById</NBlue>("<NGreen>miTexto</NGreen>").innerHTML; <br>
+          <NPurp>function</NPurp> <NBlue>copiarContenido</NBlue>() { <br>
+            <NTab></NTab> navigator.clipboard.<NBlue>writeText(<NVar>texto</NVar>)</NBlue>; <br>
+          }
+        </div>
+      </div>
+    </fieldset>
+
   </section>
   
   <br><hr><hr><br><br>

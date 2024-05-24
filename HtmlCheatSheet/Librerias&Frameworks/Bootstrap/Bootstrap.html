@@ -85,10 +85,10 @@
     </div>
     <div class="cod">
       &lt;<NRed>div</NRed> <NPurp>class=</NPurp>"<NGreen>container</NGreen>"> <br>
-      &nbsp; &nbsp; &lt;<NRed>div</NRed> <NPurp>class=</NPurp>"<NGreen>row</NGreen>"> <br>
-      &nbsp; &nbsp; &nbsp; &nbsp; &lt;<NRed>div</NRed> <NPurp>class=</NPurp>"<NGreen>col</NGreen>"> &lt;<NRed>/div</NRed>> <br>
-      &nbsp; &nbsp; &nbsp; &nbsp; &lt;<NRed>div</NRed> <NPurp>class=</NPurp>"<NGreen>col</NGreen>"> &lt;<NRed>/div</NRed>> <br>
-      &nbsp; &nbsp; &lt;<NRed>/div</NRed>> <br> &lt;<NRed>/div</NRed>>
+      <NTab></NTab> &lt;<NRed>div</NRed> <NPurp>class=</NPurp>"<NGreen>row</NGreen>"> <br>
+      <NTab></NTab> <NTab></NTab> &lt;<NRed>div</NRed> <NPurp>class=</NPurp>"<NGreen>col</NGreen>"> &lt;<NRed>/div</NRed>> <br>
+      <NTab></NTab> <NTab></NTab> &lt;<NRed>div</NRed> <NPurp>class=</NPurp>"<NGreen>col</NGreen>"> &lt;<NRed>/div</NRed>> <br>
+      <NTab></NTab> &lt;<NRed>/div</NRed>> <br> &lt;<NRed>/div</NRed>>
     </div> <hr>
 
     <h3> Container-fluid </h3>
@@ -366,7 +366,7 @@
     </p>
     <div class="cod">
       <<NRed>p</NRed> <NPurp>class</NPurp>="<NGreen>alert alert-success alert-dismissible</NGreen>"> <br>
-        &nbsp; <<NRed>button</NRed> <NPurp>type</NPurp>="<NGreen>button</NGreen>" <NPurp>class</NPurp>="<NGreen>btn-close</NGreen>" <NPurp>data-bs-dismiss</NPurp>="<NGreen>alert</NGreen>"><<NRed>/button</NRed>> <br>
+        <NTab></NTab> <<NRed>button</NRed> <NPurp>type</NPurp>="<NGreen>button</NGreen>" <NPurp>class</NPurp>="<NGreen>btn-close</NGreen>" <NPurp>data-bs-dismiss</NPurp>="<NGreen>alert</NGreen>"><<NRed>/button</NRed>> <br>
       <<Nred>/p</Nred>>
     </div>
   </div>
@@ -374,79 +374,89 @@
   <!-- Botones -->
   <div class="section">
     <h3>Botón</h3>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-3">
-          <button class="btn btn-primary">Enviar</button>   <button class="btn btn-outline-primary">Enviar</button> <br>
-          <button class="btn btn-secondary">Enviar</button> <button class="btn btn-outline-secondary">Enviar</button>
-        </div>
-        <div class="col-3">
-          <button class="btn btn-dark">Enviar</button>  <button class="btn btn-outline-dark">Enviar</button> <br>
-          <button class="btn btn-light">Enviar</button> <button class="btn btn-outline-light">Enviar</button>
-        </div>
-        <div class="col-3">
-          <button class="btn btn-danger">Enviar</button>  <button class="btn btn-outline-danger">Enviar</button> <br>
-          <button class="btn btn-warning">Enviar</button> <button class="btn btn-outline-warning">Enviar</button>
-        </div>
-        <div class="col-3">
-          <button class="btn btn-success">Enviar</button> <button class="btn btn-outline-success">Enviar</button> <br>
-          <button class="btn btn-info">Enviar</button>    <button class="btn btn-outline-info">Enviar</button>
-        </div>
-        <div class="cod">
-          <<NRed>button</NRed> <NPurp>class</NPurp>="<NGreen>btn btn-dark</NGreen>">Enviar<<NRed>/button</NRed>>
-        </div>
-      </div> <hr>
-      <div class="d-grid">
-        <button class="btn btn-success">d-grid (parent)</button>
-      </div><hr>
-      <div class="flex">
-        <div> <!-- estado -->
-          <button class="btn btn-success disabled">disabled</button>
-          <button class="btn btn-success">-</button>
-          <button class="btn btn-success active">active</button>
-        </div>
-        <div> <!-- tamaños -->
-          <button class="btn btn-success btn-lg">btn-lg</button>
-          <button class="btn btn-success">-</button>
-          <button class="btn btn-success btn-sm">btn-sm</button>
+    <!-- Botones de colores -->
+    <div class="row">
+      <div class="col-3">
+        <button class="btn btn-primary">Enviar</button>   <button class="btn btn-outline-primary">Enviar</button> <br>
+        <button class="btn btn-secondary">Enviar</button> <button class="btn btn-outline-secondary">Enviar</button>
+      </div>
+      <div class="col-3">
+        <button class="btn btn-dark">Enviar</button>  <button class="btn btn-outline-dark">Enviar</button> <br>
+        <button class="btn btn-light">Enviar</button> <button class="btn btn-outline-light">Enviar</button>
+      </div>
+      <div class="col-3">
+        <button class="btn btn-danger">Enviar</button>  <button class="btn btn-outline-danger">Enviar</button> <br>
+        <button class="btn btn-warning">Enviar</button> <button class="btn btn-outline-warning">Enviar</button>
+      </div>
+      <div class="col-3">
+        <button class="btn btn-success">Enviar</button> <button class="btn btn-outline-success">Enviar</button> <br>
+        <button class="btn btn-info">Enviar</button>    <button class="btn btn-outline-info">Enviar</button>
+      </div>
+    </div> <br>
+    <div class="cod">
+      <<NRed>button</NRed> <NPurp>class</NPurp>="<NGreen>btn btn-dark</NGreen>">Enviar<<NRed>/button</NRed>>
+    </div> <hr>
+
+    <!-- Tamaños y estados -->
+    <div class="d-grid"> <button class="btn btn-success">d-grid (parent)</button> </div><hr>
+    <div class="flex">
+      <div> <!-- estado -->
+        <button class="btn btn-success disabled">disabled</button>
+        <button class="btn btn-success">-</button>
+        <button class="btn btn-success active">active</button>
+      </div>
+      <div> <!-- tamaños -->
+        <button class="btn btn-success btn-lg">btn-lg</button>
+        <button class="btn btn-success">-</button>
+        <button class="btn btn-success btn-sm">btn-sm</button>
+      </div>
+    </div>
+    <hr>
+
+    btn-group y dropdown: <br>
+    <div class="btn-group">
+      <button class="btn btn-success">Opcion 1</button>
+      <button class="btn btn-success">Opcion 2</button>
+      <!-- Dropdown -->
+      <div class="btn-group dropdown">
+        <button class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown">Otras opciones</button>
+        <div class="dropdown-menu">
+          <div class="dropdown-header"> -Grupo-</div>
+          <a href="#" class="dropdown-item">Opcion A</a>
+          <a href="#" class="dropdown-item">Opcion B</a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">Opcion C</a>
+          <a href="#" class="dropdown-item">Opcion D</a>
         </div>
       </div>
-      <hr>
+    </div>
+    <div class="cod">
+      <<NRed>div</NRed> <NPurp>class</NPurp>="<NGreen>btn-group</NGreen>"> <br>
+        <NTab></NTab> <<NRed>button</NRed> <NPurp>class</NPurp>="<NGreen>btn</NGreen>"> Opcion 1 <<NRed>/button</NRed>> <br>
+        
+        <NTab></NTab> <<NRed>div</NRed> <NPurp>class</NPurp>="<NGreen>btn-group dropdown <NGray>/*dropup*/</NGray></NGreen>"> <br>
 
-      btn-group y dropdown: <br>
-      <div class="btn-group">
-        <button class="btn btn-success">Opcion 1</button>
-        <button class="btn btn-success">Opcion 2</button>
-        <!-- Dropdown -->
-        <div class="btn-group dropdown">
-          <button class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown">Otras opciones</button>
-          <div class="dropdown-menu">
-            <a href="#" class="dropdown-item">Opcion A</a>
-            <a href="#" class="dropdown-item">Opcion B</a>
-            <a href="#" class="dropdown-item">Opcion C</a>
-          </div>
-        </div>
-      </div>
-      <div class="cod">
-        <<NRed>div</NRed> <NPurp>class</NPurp>="<NGreen>btn-group</NGreen>"> <br>
-          &nbsp; <<NRed>button</NRed> <NPurp>class</NPurp>="<NGreen>btn</NGreen>"> Opcion 1 <<NRed>/button</NRed>> <br>
-          
-          &nbsp; <<NRed>div</NRed> <NPurp>class</NPurp>="<NGreen>btn-group dropdown</NGreen>"> <br>
-          &nbsp; &nbsp; <<NRed>button</NRed> <NPurp>class</NPurp>="<NGreen>btn dropdown-toggle</NGreen>" <NPurp>data-bs-toggle</NPurp>="<NGreen>dropdown</NGreen>"> Otras opciones <<NRed>/button</NRed>> <br>
-          &nbsp; &nbsp; <<NRed>a</NRed> <NPurp>href</NPurp>="<NGreen>#</NGreen>" <NPurp>class</NPurp>="<NGreen>dropdown-item</NGreen>"> Opcion A <<NRed>/button</NRed>> <br>
-          &nbsp; &nbsp; <<NRed>a</NRed> <NPurp>href</NPurp>="<NGreen>#</NGreen>" <NPurp>class</NPurp>="<NGreen>dropdown-item</NGreen>"> Opcion B <<NRed>/button</NRed>> <br>
+        <NTab></NTab> <NTab></NTab> <<NRed>button</NRed> <NPurp>class</NPurp>="<NGreen>btn dropdown-toggle</NGreen>" <NPurp>data-bs-toggle</NPurp>="<NGreen>dropdown</NGreen>"> Otras opciones <<NRed>/button</NRed>> <br>
 
-          &nbsp; <<NRed>/div</NRed>> <br>
-        <<NRed>/div</NRed>>
-      </div> 
-      <br>
+        <NTab></NTab> <NTab></NTab> <<NRed>div</NRed> <NPurp>class</NPurp>="<NGreen>dropdown-header</NGreen>"> -header- <<NRed>/div</NRed>><br>
+        
+        <NTab></NTab> <NTab></NTab> <<NRed>a</NRed> <NPurp>href</NPurp>="<NGreen>#</NGreen>" <NPurp>class</NPurp>="<NGreen>dropdown-item</NGreen>"> Opcion A <<NRed>/button</NRed>> <br>
 
-      btn-group-vertical (parent) <br>
-      <div class="btn-group-vertical">
-        <button class="btn btn-success">Opcion 1</button>
-        <button class="btn btn-success">Opcion 2</button>
-        <button class="btn btn-success">Opcion 3</button>
-      </div>
+        <NTab></NTab> <NTab></NTab> <<NRed>div</NRed> <NPurp>class</NPurp>="<NGreen>dropdown-divider</NGreen>"><<NRed>/div</NRed>><br>
+        
+        <NTab></NTab> <NTab></NTab> <<NRed>a</NRed> <NPurp>href</NPurp>="<NGreen>#</NGreen>" <NPurp>class</NPurp>="<NGreen>dropdown-item</NGreen>"> Opcion B <<NRed>/button</NRed>> <br>
+
+        <NTab></NTab> <<NRed>/div</NRed>> <br>
+      <<NRed>/div</NRed>>
+    </div> <br>
+
+    <br>
+
+    btn-group-vertical (parent) <br>
+    <div class="btn-group-vertical">
+      <button class="btn btn-success">Opcion 1</button>
+      <button class="btn btn-success">Opcion 2</button>
+      <button class="btn btn-success">Opcion 3</button>
     </div>
   </div>
 
@@ -477,7 +487,7 @@
     </button>
     <div class="cod">
       <<NRed>button</NRed> <NPurp>class</NPurp>="<NGreen>btn btn-primary</NGreen>"> Mensajes <br>
-      &nbsp; <<NRed>span</NRed> <NPurp>class</NPurp>="<NGreen>badge text-bg-secondary</NGreen>"> 4 <<NRed>/span</NRed>> <br>
+      <NTab></NTab> <<NRed>span</NRed> <NPurp>class</NPurp>="<NGreen>badge text-bg-secondary</NGreen>"> 4 <<NRed>/span</NRed>> <br>
       <<NRed>/button</NRed>>
     </div><br>
 
@@ -486,7 +496,7 @@
     </button>
     <div class="cod">
       <<NRed>button</NRed> <NPurp>class</NPurp>="<NGreen>btn btn-primary position-relative</NGreen>"> Mensajes <br>
-      &nbsp; <<NRed>span</NRed> <NPurp>class</NPurp>="<NGreen>position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger</NGreen>"> 99+ <<NRed>/span</NRed>> <br>
+      <NTab></NTab> <<NRed>span</NRed> <NPurp>class</NPurp>="<NGreen>position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger</NGreen>"> 99+ <<NRed>/span</NRed>> <br>
       <<NRed>/button</NRed>>
     </div><br>
 
@@ -495,7 +505,7 @@
     </button>
     <div class="cod">
       <<NRed>button</NRed> <NPurp>class</NPurp>="<NGreen>btn btn-primary position-relative</NGreen>"> Perfil <br>
-      &nbsp; <<NRed>span</NRed> <NPurp>class</NPurp>="<NGreen>position-absolute top-0 start-100 translate-middle p-2 bg-danger border rounded-circle</NGreen>"><<NRed>/span</NRed>> <br>
+      <NTab></NTab> <<NRed>span</NRed> <NPurp>class</NPurp>="<NGreen>position-absolute top-0 start-100 translate-middle p-2 bg-danger border rounded-circle</NGreen>"><<NRed>/span</NRed>> <br>
       <<NRed>/button</NRed>>
     </div><br>
 
@@ -509,7 +519,7 @@
     </div>
     <div class="cod">
       <<NRed>div</NRed> <NPurp>class</NPurp>="<NGreen>progress</NGreen>"> <br>
-      &nbsp; &nbsp; <<NRed>div</NRed> <NPurp>class</NPurp>="<NGreen>progress-bar w-75 bg-success progress-bar-striped progress-bar-animated</NGreen>"> 75% <<NRed>/div</NRed>> <br>
+      <NTab></NTab> <NTab></NTab> <<NRed>div</NRed> <NPurp>class</NPurp>="<NGreen>progress-bar w-75 bg-success progress-bar-striped progress-bar-animated</NGreen>"> 75% <<NRed>/div</NRed>> <br>
       <<NRed>/div</NRed>>
     </div>
   </div>
@@ -528,8 +538,8 @@
     </ul>
     <div class="cod">
       <<NRed>ul</NRed> <NPurp>class</NPurp>="<NGreen>pagination</NGreen>"> <br>
-      &nbsp; <<NRed>li</NRed> <NPurp>class</NPurp>="<NGreen>page-item</NGreen>"> <<NRed>a</NRed> <NPurp>class</NPurp>="<NGreen>page-link</NGreen>" <NPurp>href</NPurp>="<NGreen>#</NGreen>"> 1 <<NRed>/a</NRed>><<NRed>/li</NRed>> <br>
-      &nbsp; <<NRed>li</NRed> <NPurp>class</NPurp>="<NGreen>page-item active/disabled</NGreen>"> <<NRed>a</NRed> <NPurp>class</NPurp>="<NGreen>page-link</NGreen>" <NPurp>href</NPurp>="<NGreen>#</NGreen>"> 2 <<NRed>/a</NRed>><<NRed>/li</NRed>> <br>
+      <NTab></NTab> <<NRed>li</NRed> <NPurp>class</NPurp>="<NGreen>page-item</NGreen>"> <<NRed>a</NRed> <NPurp>class</NPurp>="<NGreen>page-link</NGreen>" <NPurp>href</NPurp>="<NGreen>#</NGreen>"> 1 <<NRed>/a</NRed>><<NRed>/li</NRed>> <br>
+      <NTab></NTab> <<NRed>li</NRed> <NPurp>class</NPurp>="<NGreen>page-item active/disabled</NGreen>"> <<NRed>a</NRed> <NPurp>class</NPurp>="<NGreen>page-link</NGreen>" <NPurp>href</NPurp>="<NGreen>#</NGreen>"> 2 <<NRed>/a</NRed>><<NRed>/li</NRed>> <br>
       <<NRed>/ul</NRed>>
     </div> <hr>
     
@@ -540,7 +550,7 @@
     </ul>
     <div class="cod">
       <<NRed>ul</NRed> <NPurp>class</NPurp>="<NGreen>breadcrumb</NGreen>"> <br>
-      &nbsp; <<NRed>li</NRed> <NPurp>class</NPurp>="<NGreen>breadcrumb-item</NGreen>"> <<NRed>a</NRed> <NPurp>href</NPurp>="<NGreen>#</NGreen>"> Home <<NRed>/a</NRed>><<NRed>/li</NRed>> <br>
+      <NTab></NTab> <<NRed>li</NRed> <NPurp>class</NPurp>="<NGreen>breadcrumb-item</NGreen>"> <<NRed>a</NRed> <NPurp>href</NPurp>="<NGreen>#</NGreen>"> Home <<NRed>/a</NRed>><<NRed>/li</NRed>> <br>
       <<NRed>/ul</NRed>>
     </div>
   </div>
@@ -575,7 +585,7 @@
         </div>
       </div>
       
-      <div class="card w-25">
+      <div class="card w-25" style="margin-block: auto;">
         <img src="/Imgs/cat2.png">
         <div class="card-body">
           <h5 class="card-title"> José Gonzales</h5>
@@ -586,15 +596,131 @@
     </div>
   </div>
 
-  <!-- Dropdown menu -->
   <!-- plegables -->
-  <!-- Menus de nav -->
-  <!-- Barra de Nav -->
-  <!-- from -->
+  <div class="section">
+    <h3> Plegables </h3>
+    <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demoEj">Mostrar más...</button>
+    <div class="collapse" id="demoEj">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, nihil magnam, ab maxime reiciendis atque optio libero, architecto expedita officiis facere provident amet velit ut voluptas perspiciatis sunt sint error.
+    </div>
+    <div class="cod">
+      <<NRed>button</NRed> <NPurp>class</NPurp>="<NGreen>btn btn-primary</NGreen>" <NPurp>data-bs-toggle</NPurp>="<NGreen>collapse</NGreen>" <NPurp>data-bs-target</NPurp>="<NGreen>#demo</NGreen>"> Mostrar más... <<NRed>/button</NRed>> <br>
+      <<NRed>div</NRed> <NPurp>class</NPurp>="<NGreen>collapse</NGreen>" <NPurp>id</NPurp>="<NGreen>demo</NGreen>"> Texto oculto... <<NRed>/div</NRed>>
+    </div> <br>
 
+    <!-- Acordion -->
+    <div id="acordion">
+      <div class="card">
+        <div class="card-header">
+          <a href="#uno" class="card-link" data-bs-toggle="collapse" data-bs-parent="#acordion"> Primero </a>
+        </div>
+        <div id="uno" class="collapse show">
+          <div class="card-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex provident laudantium ad asperiores facilis?
+          </div>
+        </div>
+
+        <div class="card-header">
+          <a href="#dos" class="card-link" data-bs-toggle="collapse" data-bs-parent="#acordion"> Segundo </a>
+        </div>
+        <div id="dos" class="collapse">
+          <div class="card-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse alias, sequi doloribus repudiandae voluptatibus corrupti distinctio dolore ut necessitatibus culpa a aliquid, consequuntur dolorum voluptas deleniti aspernatur perferendis? Vel, dignissimos!
+          </div>
+        </div>
+
+        <div class="card-header">
+          <a href="#tres" class="card-link" data-bs-toggle="collapse" data-bs-parent="#acordion"> Segundo </a>
+        </div>
+        <div id="tres" class="collapse">
+          <div class="card-body">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus in repudiandae enim consequuntur ipsa pariatur fugit nesciunt! Tempore fugiat, cumque quos excepturi magni doloribus nesciunt unde praesentium commodi ullam. Consequuntur!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cod">
+      <<NRed>div</NRed> <NPurp>id</NPurp>="<NGreen>acordion</NGreen>"> <br>
+      <NTab></NTab> <<NRed>div</NRed> <NPurp>class</NPurp>="<NGreen>card</NGreen>"> 
+      <NTab2></NTab2> <<NRed>div</NRed> <NPurp>class</NPurp>="<NGreen>card-header</NGreen>"> 
+      
+    </div>
+  </div>
+
+  <!-- Menus de nav (acordion) -->
+  <div class="section">
+    <h3> Menus de nav </h3>
+  </div>
+
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          Accordion Item #1
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum aliquam cupiditate beatae voluptas asperiores! Deleniti laboriosam ipsa sunt, rerum delectus eligendi temporibus, libero voluptatibus natus error voluptate incidunt corrupti sapiente!
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Accordion Item #2
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam amet illum facilis, perferendis dolorum animi hic. Unde ab, praesentium ex illo repellat fuga aut reprehenderit numquam necessitatibus deleniti aliquid perferendis.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Accordion Item #3
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi fuga optio sapiente sequi non aliquam ab illum dolorum, hic facilis repellendus adipisci expedita voluptatibus ex autem sint iure ea saepe.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Barra de Nav -->
+  <div class="section">
+    <h3> Barra de Nav </h3>
+
+  </div>
+
+  <!-- from -->
+  <div class="section">
+    <h3> from </h3>
+
+  </div>
+  
   <!-- Carousel -->
+  <div class="section">
+    <h3> Carousel </h3>
+
+  </div>
+
   <!-- Modal -->
+  <div class="section">
+    <h3> Modal </h3>
+
+  </div>
+
   <!-- Tooltip -->
+  <div class="section">
+    <h3> Tooltip </h3>
+
+  </div>
+
 
 
 
@@ -622,6 +748,12 @@
     setInterval(SSS, 1000);
     function SSS(){
       sElem.innerHTML = "Screen Size: " + screenSize;
+    }
+
+    // <NTab> (espacio)
+    let spaces = document.querySelectorAll("NTab");
+    for (let i = 0; i < spaces.length; i++) {
+      spaces[i].innerHTML = "&nbsp; &nbsp;";
     }
   </script>
   <!-- *********************************************************************** -->

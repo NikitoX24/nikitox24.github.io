@@ -72,3 +72,12 @@ window.onload = function(){
 }
 //#endregion
 
+// <NTab> (espacio) TODO: cambiar los nbsp
+let tabs = document.querySelectorAll("NTab");
+for (let i = 0; i < tabs.length; i++) {
+  tabs[i].innerHTML = "&nbsp; &nbsp;";
+}
+let tabs2 = document.querySelectorAll("NTab2");
+for (let i = 0; i < tabs2.length; i++) {
+  tabs2[i].innerHTML = "&nbsp; &nbsp; &nbsp; &nbsp;";
+}

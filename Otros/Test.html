@@ -7,13 +7,37 @@
   <title>Test2</title>
 </head>
 <body>
-  
 
-  <!-- <video src="../Imgs/BobSponja.mp4" id="vid" controls></video> -->
-  <!-- <button id="demo7"> Alert Button 2 </button> -->
 
-  <!-- <button onclick="visitar()"> Visitar </button> -->
 
+
+<textarea id="Texto" rows="15" cols="100"></textarea> <br>
+<button onclick="change()">Cambiar y Copiar</button>
+
+<script>
+  // change();
+  function change() {
+    let texto = document.querySelector("#Texto").value.trim(); // trim( quitar espacios ).
+    let nuevoTexto = texto; // texto convertido
+
+    let arrLineas = texto.split("\n"); // Arrays por Lineas.
+    
+    for (let i = 0; i < arrLineas.length; i++) {
+      if(!arrLineas[i].startsWith("<")) continue; // si no comienza con < ignorar...
+      
+      for (let i = 0; i < texto.length; i++) {
+        nuevoTexto = nuevoTexto.replace("<","&lt;");
+      }
+    }
+   
+    
+
+
+    let resultado = nuevoTexto;
+    // let resultado = typeof arrLineas[0];
+    navigator.clipboard.writeText(resultado);
+  }
+</script>
 
 
 
