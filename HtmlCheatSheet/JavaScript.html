@@ -80,7 +80,7 @@
     </fieldset>
     
     <fieldset> <!-- Funciones / Propiedades -->
-      <legend> Propiedades de Strings </legend>
+      <legend> Metodos de Strings </legend>
       <!-- Variable (Hola a todos) -->
       <div class="cod columnas">
         <NPurp>let</NPurp> texto = "<NGreen>Hola a todos mis amigos, a mis Videos</NGreen>"; <br>
@@ -96,15 +96,15 @@
         texto.<NBlue>endsWith</NBlue>("<NGreen>Videos</NGreen>"); <NGray>// true</NGray> <br>
         texto.<NBlue>indexOf</NBlue>("<NGreen>a</NGreen>", <NOrg>4</NOrg>); <NGray>// 5</NGray> <br>
         texto.<NBlue>lastIndexOf</NBlue>("<NGreen>mis</NGreen>"); <NGray>// 27</NGray> <br>
-        texto.<NBlue>charAt</NBlue>("<NGreen>3</NGreen>"); <NGray>// a</NGray> <br>
+        texto.<NBlue>charAt</NBlue>(<NOrg>3</NOrg>); <NGray>// a</NGray> <br>
         texto.<NBlue>search</NBlue>("<NGreen>a</NGreen>"); <NGray>// 3</NGray> <br>
       </div>
       <div class="cod">
         <NPurp>let</NPurp> texto = "<NGreen>Hola mundo </NGreen>"; <br>
         document.write( texto.<NBlue>repeat</NBlue>(<NOrg>2</NOrg>) ); <NGray>// Hola mundo Hola mundo</NGray> <br>
-        nuevoTexto = texto.<NBlue>replace</NBlue>("<NGreen>mundo</NGreen>", "<NGreen>amigos</NGreen>"); <NGray>// Hola amigos</NGray> <br>
+        nuevoTexto = texto.<NBlue>replace</NBlue>("<NGreen>mundo</NGreen>", "<NGreen>amigos</NGreen>"); <NGray>// Hola <s>mundo</s> amigos</NGray> <br>
         nuevoTexto = texto.<NBlue>replace</NBlue>("<NGreen>mundo</NGreen>", ""); <NGray>// Hola (borrar "mundo")</NGray> <br>
-        document.write( texto.<NBlue>slice</NBlue>(<NOrg>5</NOrg>) ); <NGray>// mundo (comenzar a leer desde Index 5)</NGray> <br>
+        document.write( texto.<NBlue>slice</NBlue>(<NOrg>0, 5</NOrg>) ); <NGray>// mundo (comenzar a leer desde Index 5 (1-2 args) )</NGray> <br>
         Array = texto.<NBlue>split</NBlue>(" "); <NGray>// ["Hola" "mundo"] (convertir en Array, separados por " ")</NGray> <br>
         document.write( texto.<NBlue>trim</NBlue>() ); <NGray>// (quitar espacios antes y dps)</NGray> <br>
         document.write( texto.<NBlue>toUpperCase / toLowerCase</NBlue>() ); <NGray>// (transform)</NGray> <br>
@@ -121,24 +121,58 @@
         <div class="cod"> <NPurp>var</NPurp> myArray = ["<NGreen>a</NGreen>", "<NGreen>b</NGreen>", "<NGreen>c</NGreen>"]; </div>
       </div><br>
 
-      Propiedades: <br>
-      <div class="cod columnas">
-        <NPurp>let</NPurp> array = ["<NGreen>B</NGreen>", "<NGreen>A</NGreen>", "<NGreen>B</NGreen>"]; <br>
-        array.<NBlue>findIndex</NBlue>(res => res == "<NGreen>B</NGreen>"); <NGray>// 0 (buscar 1ro)</NGray> <br>
-        array.<NBlue>find</NBlue>(res => res == "<NGreen>A</NGreen>"); <NGray>// A / undefined (buscar 1ro)</NGray> <br>
-        array.<NBlue>filter</NBlue>(res => res == "<NGreen>B</NGreen>"); <NGray>// [B, B] (buscar todos)</NGray> <br>
-        array.<NBlue>some</NBlue>(res => res < <NOrg>50</NOrg>); <NGray>// false (alguno... es menor q)</NGray> <br>
+      Metodos de array: <br>
+      <div class="cod">
+        <!-- ["A", "B", "C", "C"] -->
+        <NPurp>let</NPurp> array = ["<NGreen>A</NGreen>", "<NGreen>B</NGreen>", "<NGreen>C</NGreen>", "<NGreen>C</NGreen>"]; <br>
+        array.length; <NGray>// 4</NGray> <br>
+        <NObj>Array</NObj>.<NBlue>isArray</NBlue>(<u>array</u>); <NGray>// true</NGray> <br>
+        <NObj>Array</NObj>.<NBlue>from</NBlue>("<NGreen>ABC</NGreen>"); <NGray>// ["A", "B", "C"];</NGray> <br>
+        <hr>
+        <b>Buscar</b>: <br>
+        array.<NBlue>findIndex</NBlue>(elem => elem == "<NGreen>B</NGreen>"); <NGray>// 1 (buscar 1ro)</NGray> <br>
+        array.<NBlue>indexOf</NBlue>("<NGreen>H</NGreen>"); <NGray>// -1 (buscar 1ro)</NGray> <br>
+        array.<NBlue>find</NBlue>(elem => elem == "<NGreen>A</NGreen>"); <NGray>// A / undefined (buscar 1ro)</NGray> <br>
+        array.<NBlue>filter</NBlue>(elem => elem == "<NGreen>C</NGreen>"); <NGray>// [C, C] (buscar todos)</NGray> <br>
+        array.<NBlue>filter</NBlue>(elem => elem != "<NGreen>A</NGreen>"); <NGray>// [B, C, C] (buscar todos excepto "A")</NGray> <br>
+        array.<NBlue>filter</NBlue>(elem => elem == "<NGreen>A</NGreen>" || element == "<NGreen>B</NGreen>"); <NGray>// [A, B] (buscar "A" y "B") ?</NGray> <br>
+        array.<NBlue>slice</NBlue>(<NOrg>1, 3</NOrg>); <NGray>// [B, C]  (leer desde index(1-2 args) )</NGray> <br>
+        n = array.<NBlue>join</NBlue>(" "); <NGray>// (convertir en string y separar por " ")</NGray> <br>
+        n = array.<NBlue>flat</NBlue>(); <NGray>// (convertir todos los sub-arrays en uno solo)</NGray> <br>
+        <hr>
 
-        array.<NBlue>sort</NBlue>(); <NGray>// (odenar asc A-Z)</NGray> <br>
-        array.<NBlue>reverse</NBlue>(); <NGray>// (odenar desc Z-A)</NGray>  <br>
-        array.<NBlue>join</NBlue>(); <NGray>// (convertir en string)</NGray> <br>
-        array.<NBlue>push</NBlue>("<NGreen>C</NGreen>"); <NGray>// (agregar al último)</NGray> <br>
-        array.<NBlue>pop</NBlue>(); <NGray>// (extraer último)</NGray> <br>
-      </div> <br>
+        <b>Buscar / Modificar</b>: <br>
+        array.<NBlue>sort</NBlue>(); <NGray>// (odenar asc A-Z) <a href="../Imgs/arraySort.png">Leer más...</a></NGray> <br>
+        array.<NBlue>reverse</NBlue>(); <NGray>// (1ro es último, y viceversa)</NGray>  <br>
+        array.<NBlue>shift</NBlue>(); <NGray>// (extrae/elimina el 1ro)</NGray> <br>
+        array.<NBlue>unshift</NBlue>(); <NGray>// (agrega en el 1ro y return length)</NGray> <br>
+        array.<NBlue>pop</NBlue>(); <NGray>// (extrae/elimina último)</NGray> <br>
+        array.<NBlue>at</NBlue>(-<NOrg>2</NOrg>); <NGray>// (extraer por index pos/negat)</NGray> <br>
+        array.<NBlue>splice</NBlue>(<NOrg>2, 1</NOrg>); <NGray>// (elimina un index)</NGray> <br>
+        array.<NBlue>splice</NBlue>(<NOrg>1, 0</NOrg>, "<NGreen>G</NGreen>"); <NGray>// (agregar y/o eliminar alguno/s) (index, borrar cant, nuevo valor)</NGray> <br>
+        array.<NBlue>push</NBlue>("<NGreen>C</NGreen>"); <NGray>// (agregar último y return length)</NGray> <br>
+        <NAqua>delete</NAqua>(array[<NOrg>2</NOrg>]); <NGray>// ["A", "B", undefined, "C"]  (borra valor, pero no el elemento)</NGray> <br>
+        array.<NBlue>concat</NBlue>(array2); <NGray>// ["A", "B", "C", "C", 1, 2, 3] (unir arrays en un nuevo array) </NGray> <br>
+        array.<NBlue>fill</NBlue>("<NGreen>H</NGreen>", <NOrg>2</NOrg>); <NGray>// A, B, H, H... (llenar a partir de un index) </NGray> <br>
+        array.<NBlue>fill</NBlue>("<NGreen>H</NGreen>", <NOrg>0</NOrg>, <NOrg>3</NOrg>); <NGray>// H, H, H, C (a partir de , cantidad) </NGray> <br>
+        <hr>
+
+        
+        <!-- <NPurp>let</NPurp> array = ["<NGreen>A</NGreen>", "<NGreen>B</NGreen>", "<NGreen>C</NGreen>"]; <br> -->
+        <b>Recorrer</b>: <br>
+        <NPurp>let</NPurp> array = ["<NGreen>A</NGreen>", "<NGreen>B</NGreen>", "<NGreen>C</NGreen>"]; <br>
+        array.<NBlue>map</NBlue>(elem <NPurp>=></NPurp> elem + "<NGreen>#</NGreen>"); <NGray>// ["A#", "B#", "C#"] (recorrer arrays) </NGray> <br>
+        array.<NBlue>forEach</NBlue>((elem, i) <NPurp>=></NPurp> {elem + i}); <NGray>// ["A0", "B1", "C2"] ? (recorrer arrays) </NGray> <hr>
+        <!-- [1, 2, 3, 4] -->
+        <NPurp>let</NPurp> array = [<NOrg>1</NOrg>, <NOrg>2</NOrg>, <NOrg>3</NOrg>, <NOrg>4</NOrg>]; <br>
+        array.<NBlue>some</NBlue>(elem => elem < <NOrg>2</NOrg>); <NGray>// true (alguno es menor q?)</NGray> <br>
+        array.<NBlue>every</NBlue>(elem => elem < <NOrg>2</NOrg>); <NGray>// false (todos son menor q?)</NGray> <br>
+        array.<NBlue>reduce</NBlue>((acumulado, actual) <NPurp>=></NPurp> acumulado + actual); <NGray>// 10 (unir anterior(acumulados) con el siguiente) </NGray> <br>
+      </div><br>
 
       Extraer de DOM y ponerlos en un Array
       <div class="cod">
-        <NPurp>var</NPurp> elementos = <NObj>Array</NObj>.<NBlue>from</NBlue>(document.<NBlue>querySelectorAll</NBlue>("<NGreen>.dias p</NGreen>"));<br>
+        <NPurp>let</NPurp> elementos = <NObj>Array</NObj>.<NBlue>from</NBlue>(document.<NBlue>querySelectorAll</NBlue>("<NGreen>.dias p</NGreen>"));<br>
         <NPurp>var</NPurp> array = elementos.<NBlue>map</NBlue>(dia <NPurp>=></NPurp> dia.textContent); <br>
         console.<NBlue>log</NBlue>(array); <NGray>// ["L", "M", "M" ...] </NGray>
       </div> <br>
@@ -1428,6 +1462,6 @@
 
   
   <p id="textoFix"></p>
-<script type="text/javascript" src="/index.js"></script>
+<script type="text/javascript" src="../index.js"></script>
 </body>
 </html>

@@ -17,25 +17,31 @@
 <script>
   // change();
   function change() {
-    let texto = document.querySelector("#Texto").value.trim(); // trim( quitar espacios ).
-    let nuevoTexto = texto; // texto convertido
-
-    let arrLineas = texto.split("\n"); // Arrays por Lineas.
+    // obtener texto y quitar espacios.
+    let texto = document.querySelector("#Texto").value.trim();
     
-    for (let i = 0; i < arrLineas.length; i++) {
-      if(!arrLineas[i].startsWith("<")) continue; // si no comienza con < ignorar...
+    // texto convertido.
+    let nuevoTexto = texto;
+    let resultado;
+  
+    // Arrays por Lineas.
+    let arrLineas = texto.split("\n");
+    
+    // recorrer lineas.
+    for (let linea = 0; linea < arrLineas.length; linea++) {
+      // if(!arrLineas[linea].startsWith("<")) continue;
       
-      for (let i = 0; i < texto.length; i++) {
-        nuevoTexto = nuevoTexto.replace("<","&lt;");
-      }
+      // separar por espacios.
+      arrLineas[linea] = texto.split(" ");
+      
+      // obtener y quitar "<elem".
+      let elemento = arrLineas[linea][0].replace("<","");
+      arrLineas[linea][0] = ""; // eliminar?
+      
+      // atributos
+      //arrLineas[linea][1]
     }
-   
-    
 
-
-    let resultado = nuevoTexto;
-    // let resultado = typeof arrLineas[0];
-    navigator.clipboard.writeText(resultado);
   }
 </script>
 
