@@ -4,50 +4,93 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../HtmlCheatSheet/STYLE.css">
   <title>Test2</title>
 </head>
 <body>
 
+<style>
+  /* body{
+    background-color: black;
+    filter: invert();
+  } */
+  textarea {
+    background-color: rgb(252, 241, 241);
+  }
+</style>
 
 
-
-<textarea id="Texto" rows="15" cols="100"></textarea> <br>
+<textarea id="Texto" rows="4" cols="100"></textarea> <br>
 <button onclick="change()">Cambiar y Copiar</button>
+<pre id="salida"></pre>
 
 <script>
-  // change();
-  function change() {
-    // obtener texto y quitar espacios.
-    let texto = document.querySelector("#Texto").value.trim();
-    
-    // texto convertido.
-    let nuevoTexto = texto;
-    let resultado;
-  
-    // Arrays por Lineas.
-    let arrLineas = texto.split("\n");
-    
-    // recorrer lineas.
-    for (let linea = 0; linea < arrLineas.length; linea++) {
-      // if(!arrLineas[linea].startsWith("<")) continue;
-      
-      // separar por espacios.
-      arrLineas[linea] = texto.split(" ");
-      
-      // obtener y quitar "<elem".
-      let elemento = arrLineas[linea][0].replace("<","");
-      arrLineas[linea][0] = ""; // eliminar?
-      
-      // atributos
-      //arrLineas[linea][1]
-    }
+  let textArea = document.querySelector("#Texto");
+  textArea.value = localStorage.getItem("textarea"); // cargar codigo anterior
 
+
+  // change();
+
+  function change() {
+    let texto = textArea.value.trim();
+    localStorage.setItem("textarea", texto);
+    
+    let arrLineas = texto.split("\n"); // Arrays por Lineas.
+    
+    let resultado = [];
+    
+    // ----------- recorrer lineas. ----------- //
+    for (let linea = 0; linea < arrLineas.length; linea++) {
+      arrLineas[linea] = arrLineas[linea].trim(); // quitar espacios.
+
+      // Si es un elemento...
+      if(arrLineas[linea].startsWith("<")){
+        let lastI = arrLineas[linea].indexOf(" "); // (index donde termina el elemento).
+        let elemento = arrLineas[linea].slice(1, lastI); // (seleccionar elemento).
+        let lineaSinElem = arrLineas[linea].slice(lastI); // resto de la linea (sin primer elemento).
+        if (lineaSinElem.contains(`</${elemento}>`)) {
+          console.log(arrLineas[linea] + " tiene elemento final");
+        }
+        lineaSinElem = lineaSinElem.replace(">", " >"); // separar ">".
+        resultado[linea] = `&lt;<NRed>${elemento}</NRed>` + lineaSinElem; // cambiar elemento.
+        
+        resultado[linea] = resultado[linea].split(" "); // separar lineas por espacios.
+        
+        // recorrer atributos
+        for (let i = 1; i < resultado[linea].length; i++) {
+          if(!resultado[linea][i].includes("=")) continue; // si no es un atributo ingnorar
+          resultado[linea][i] = resultado[linea][i].split("="); // separar.
+
+          // atributo
+          let atr = resultado[linea][i][0]; // seleccionar atributo name.
+          resultado[linea][i][0] = `<NPurp>${atr}</NPurp>`; // cambiar atributo.
+
+          // valor
+          let val = resultado[linea][i][1].slice(1, -1); // quitar comillas.
+          resultado[linea][i][1] = `"<NGreen>${val}</NGreen>"`; // cambiar valor.
+
+          resultado[linea][i] = resultado[linea][i].join("="); // unir atributo.
+        }
+      }
+      resultado[linea] = resultado[linea].join(" ");
+    }
+    resultado = resultado.join(" <br>\n")
+
+    // res = arrLineas[0]; // primera linea
+    // res1 = resultado; // primera linea
+    
+    
+    // let salida = document.querySelector("#salida");
+    // salida.innerHTML = resultado;
+
+    console.log(resultado);
+    navigator.clipboard.writeText(resultado);
   }
 </script>
 
-
-
+&lt;<NRed>div</NRed> <NPurp>class</NPurp>="<NGreen>flex</NGreen>" <NPurp>atrr</NPurp>="<NGreen>value</NGreen>" > <br>
+&lt;<NRed>p</NRed> <NPurp>id</NPurp>="<NGreen>uno</NGreen>" > hola </p> <br>
+&lt;<NRed>/div</NRed> >
 
 </body>
-<script type ="text/javascript" src="../HtmlCheatSheet/JS.js"> </script>
 </html>
