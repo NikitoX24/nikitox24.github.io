@@ -26,14 +26,11 @@
     background-color: rgba(128, 128, 128, 0.227);
   }
   
-
-  NGreen{ 
-    word-spacing: 10px; 
+  NGreen{
+    word-spacing: 10px;
     font-size: smaller;
   }
-  NRed, NPurp{
-    font-weight: 400;
-  }
+  NRed, NPurp{ font-weight: 400; }
 
   #screenSize{
     margin: 0;
@@ -45,6 +42,12 @@
     padding: 5px;
     border-radius: 5px;
     border: 1px solid black;
+  }
+
+  .cod{
+    font-size: 0.8em;
+    max-height: 200px;
+    overflow: auto;
   }
 
   /*  */
@@ -73,7 +76,6 @@
   <div class="section">
     <h3> Container </h3>
     <div class="container">
-      row
       <div class="row">
         <div class="col bordeBase">col</div> <div class="col bordeBase">col</div>
         <div class="col bordeBase">col</div> <div class="col bordeBase">col</div>
@@ -83,25 +85,23 @@
         <div class="col bordeBase">col</div> <div class="col bordeBase">col</div>
       </div>
     </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col bordeBase"></div> <div class="col bordeBase"></div>
+        <div class="col bordeBase"></div> <div class="col bordeBase"></div>
+        <div class="col bordeBase"></div> <div class="col bordeBase"></div>
+        <div class="col bordeBase"></div> <div class="col bordeBase"></div>
+        <div class="col bordeBase"></div> <div class="col bordeBase"></div>
+        <div class="col bordeBase"></div> <div class="col bordeBase"></div>
+      </div>
+    </div>
     <div class="cod">
-      &lt;<NRed>div</NRed> <NPurp>class=</NPurp>"<NGreen>container</NGreen>"> <br>
+      &lt;<NRed>div</NRed> <NPurp>class=</NPurp>"<NGreen>container / container-fluid</NGreen>"> <br>
       <NTab></NTab> &lt;<NRed>div</NRed> <NPurp>class=</NPurp>"<NGreen>row</NGreen>"> <br>
       <NTab></NTab> <NTab></NTab> &lt;<NRed>div</NRed> <NPurp>class=</NPurp>"<NGreen>col</NGreen>"> &lt;<NRed>/div</NRed>> <br>
       <NTab></NTab> <NTab></NTab> &lt;<NRed>div</NRed> <NPurp>class=</NPurp>"<NGreen>col</NGreen>"> &lt;<NRed>/div</NRed>> <br>
       <NTab></NTab> &lt;<NRed>/div</NRed>> <br> &lt;<NRed>/div</NRed>>
-    </div> <hr>
-
-    <h3> Container-fluid </h3>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col bordeBase"></div> <div class="col bordeBase"></div>
-          <div class="col bordeBase"></div> <div class="col bordeBase"></div>
-          <div class="col bordeBase"></div> <div class="col bordeBase"></div>
-          <div class="col bordeBase"></div> <div class="col bordeBase"></div>
-          <div class="col bordeBase"></div> <div class="col bordeBase"></div>
-          <div class="col bordeBase"></div> <div class="col bordeBase"></div>
-        </div>
-      </div>
+    </div>
   </div>
 
   <!-- Col -->
@@ -274,10 +274,8 @@
   <!-- Tipografia -->
   <div class="section">
     <h3>Tipografia</h3>
-    <p class="display-1">Ej. prrafo (display-1)</p>
-    <p class="display-2">Ej. prrafo (display-2)</p>
-    <p class="display-3">Ej. prrafo (display-3)</p>
-    <p class="display-4">Ej. prrafo (display-4)</p>
+    <p class="display-1">Ej. parrafo (display-1)</p>
+    <p class="display-4">Ej. parrafo (display-4)</p>
     <hr>
 
     <p class="fw-bold">Bold text (fw-bold).</p>
@@ -640,61 +638,154 @@
       </div>
     </div>
     <div class="cod">
-      <<NRed>div</NRed> <NPurp>id</NPurp>="<NGreen>acordion</NGreen>"> <br>
-      <NTab></NTab> <<NRed>div</NRed> <NPurp>class</NPurp>="<NGreen>card</NGreen>"> 
-      <NTab2></NTab2> <<NRed>div</NRed> <NPurp>class</NPurp>="<NGreen>card-header</NGreen>"> 
-      
+      &lt;<NRed>div</NRed> <NPurp> id</NPurp>="<NGreen>acordion</NGreen>" > <br>
+      <NTab></NTab>&lt;<NRed>div</NRed> <NPurp> class</NPurp>="<NGreen>card</NGreen>" > <br>
+      <NTab></NTab><NTab></NTab>&lt;<NRed>div</NRed> <NPurp> class</NPurp>="<NGreen>card-header</NGreen>" > <br>
+      <NTab></NTab><NTab></NTab><NTab></NTab>&lt;<NRed>a</NRed> <NPurp> href</NPurp>="<NGreen>#uno</NGreen>" <NPurp>class</NPurp>="<NGreen>card-link</NGreen>" <NPurp>data-bs-toggle</NPurp>="<NGreen>collapse</NGreen>" <NPurp>data-bs-parent</NPurp>="<NGreen>#acordion</NGreen>" > Primero &lt;<NRed>/a</NRed>> <br>
+      <NTab></NTab><NTab></NTab>&lt;<NRed>/div</NRed>  > <br>
+      <NTab></NTab><NTab></NTab>&lt;<NRed>div</NRed> <NPurp> id</NPurp>="<NGreen>uno</NGreen>" <NPurp>class</NPurp>="<NGreen>collapse show</NGreen>" > <br>
+      <NTab></NTab><NTab></NTab><NTab></NTab>&lt;<NRed>div</NRed> <NPurp> class</NPurp>="<NGreen>card-body</NGreen>" > <br>
+      <NTab></NTab><NTab></NTab><NTab></NTab><NTab></NTab>Lorem... <br>
+      <NTab></NTab><NTab></NTab><NTab></NTab>&lt;<NRed>/div</NRed>  > <br>
+      <NTab></NTab><NTab></NTab>&lt;<NRed>/div</NRed>  > <br>
+       <br>
+      <NTab></NTab><NTab></NTab>&lt;<NRed>div</NRed> <NPurp> class</NPurp>="<NGreen>card-header</NGreen>" > <br>
+      <NTab></NTab><NTab></NTab><NTab></NTab>&lt;<NRed>a</NRed> <NPurp> href</NPurp>="<NGreen>#dos</NGreen>" <NPurp>class</NPurp>="<NGreen>card-link</NGreen>" <NPurp>data-bs-toggle</NPurp>="<NGreen>collapse</NGreen>" <NPurp>data-bs-parent</NPurp>="<NGreen>#acordion</NGreen>" > Segundo &lt;<NRed>/a</NRed>> <br>
+      <NTab></NTab><NTab></NTab>&lt;<NRed>/div</NRed>  > <br>
+      <NTab></NTab><NTab></NTab>&lt;<NRed>div</NRed> <NPurp> id</NPurp>="<NGreen>dos</NGreen>" <NPurp>class</NPurp>="<NGreen>collapse</NGreen>" > <br>
+      <NTab></NTab><NTab></NTab><NTab></NTab>&lt;<NRed>div</NRed> <NPurp> class</NPurp>="<NGreen>card-body</NGreen>" > <br>
+      <NTab></NTab><NTab></NTab><NTab></NTab><NTab></NTab>Lorem... <br>
+      <NTab></NTab><NTab></NTab><NTab></NTab>&lt;<NRed>/div</NRed>  > <br>
+      <NTab></NTab><NTab></NTab>&lt;<NRed>/div</NRed>  > <br>
+       <br>
+      <NTab></NTab><NTab></NTab>&lt;<NRed>div</NRed> <NPurp> class</NPurp>="<NGreen>card-header</NGreen>" > <br>
+      <NTab></NTab><NTab></NTab><NTab></NTab>&lt;<NRed>a</NRed> <NPurp> href</NPurp>="<NGreen>#tres</NGreen>" <NPurp>class</NPurp>="<NGreen>card-link</NGreen>" <NPurp>data-bs-toggle</NPurp>="<NGreen>collapse</NGreen>" <NPurp>data-bs-parent</NPurp>="<NGreen>#acordion</NGreen>" > Segundo &lt;<NRed>/a</NRed>> <br>
+      <NTab></NTab><NTab></NTab>&lt;<NRed>/div</NRed>  > <br>
+      <NTab></NTab><NTab></NTab>&lt;<NRed>div</NRed> <NPurp> id</NPurp>="<NGreen>tres</NGreen>" <NPurp>class</NPurp>="<NGreen>collapse</NGreen>" > <br>
+      <NTab></NTab><NTab></NTab><NTab></NTab>&lt;<NRed>div</NRed> <NPurp> class</NPurp>="<NGreen>card-body</NGreen>" > <br>
+      <NTab></NTab><NTab></NTab><NTab></NTab><NTab></NTab>Lorem... <br>
+      <NTab></NTab><NTab></NTab><NTab></NTab>&lt;<NRed>/div</NRed>  > <br>
+      <NTab></NTab><NTab></NTab>&lt;<NRed>/div</NRed>  > <br>
+      <NTab></NTab>&lt;<NRed>/div</NRed>  > <br>
+      &lt;<NRed>/div</NRed>  >
     </div>
   </div>
 
   <!-- Menus de nav (acordion) -->
   <div class="section">
     <h3> Menus de nav </h3>
-  </div>
-
-  <div class="accordion" id="accordionExample">
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-          Accordion Item #1
-        </button>
-      </h2>
-      <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum aliquam cupiditate beatae voluptas asperiores! Deleniti laboriosam ipsa sunt, rerum delectus eligendi temporibus, libero voluptatibus natus error voluptate incidunt corrupti sapiente!
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            Accordion Item #1
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum aliquam cupiditate beatae voluptas asperiores! Deleniti laboriosam ipsa sunt, rerum delectus eligendi temporibus, libero voluptatibus natus error voluptate incidunt corrupti sapiente!
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Accordion Item #2
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam amet illum facilis, perferendis dolorum animi hic. Unde ab, praesentium ex illo repellat fuga aut reprehenderit numquam necessitatibus deleniti aliquid perferendis.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Accordion Item #3
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi fuga optio sapiente sequi non aliquam ab illum dolorum, hic facilis repellendus adipisci expedita voluptatibus ex autem sint iure ea saepe.
+          </div>
         </div>
       </div>
     </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Accordion Item #2
-        </button>
-      </h2>
-      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam amet illum facilis, perferendis dolorum animi hic. Unde ab, praesentium ex illo repellat fuga aut reprehenderit numquam necessitatibus deleniti aliquid perferendis.
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Accordion Item #3
-        </button>
-      </h2>
-      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi fuga optio sapiente sequi non aliquam ab illum dolorum, hic facilis repellendus adipisci expedita voluptatibus ex autem sint iure ea saepe.
-        </div>
-      </div>
+    <div class="cod">
+      &lt;<NRed>div</NRed> <NPurp> class</NPurp>="<NGreen>accordion</NGreen>" <NPurp>id</NPurp>="<NGreen>accordionExample</NGreen>" > <br>
+      <NTab></NTab>&lt;<NRed>div</NRed> <NPurp> class</NPurp>="<NGreen>accordion-item</NGreen>" > <br>
+      <NTab></NTab><NTab></NTab>&lt;<NRed>h2</NRed> <NPurp> class</NPurp>="<NGreen>accordion-header</NGreen>" > <br>
+      <NTab></NTab><NTab></NTab><NTab></NTab>&lt;<NRed>button</NRed> <NPurp> class</NPurp>="<NGreen>accordion-button collapsed</NGreen>" <NPurp>type</NPurp>="<NGreen>button</NGreen>" <NPurp>data-bs-toggle</NPurp>="<NGreen>collapse</NGreen>" <NPurp>data-bs-target</NPurp>="<NGreen>#collapseOne</NGreen>" <NPurp>aria-expanded</NPurp>="<NGreen>false</NGreen>" <NPurp>aria-controls</NPurp>="<NGreen>collapseOne</NGreen>" > <br>
+      <NTab></NTab><NTab></NTab><NTab></NTab><NTab></NTab>Accordion Item #1 <br>
+      <NTab></NTab><NTab></NTab><NTab></NTab>&lt;<NRed>/button</NRed>  > <br>
+      <NTab></NTab><NTab></NTab>&lt;<NRed>/h2</NRed>  > <br>
+      <NTab></NTab><NTab></NTab>&lt;<NRed>div</NRed> <NPurp> id</NPurp>="<NGreen>collapseOne</NGreen>" <NPurp>class</NPurp>="<NGreen>accordion-collapse collapse</NGreen>" <NPurp>data-bs-parent</NPurp>="<NGreen>#accordionExample</NGreen>" > <br>
+      <NTab></NTab><NTab></NTab><NTab></NTab>&lt;<NRed>div</NRed> <NPurp> class</NPurp>="<NGreen>accordion-body</NGreen>" > <br>
+      <NTab></NTab><NTab></NTab><NTab></NTab><NTab></NTab>Lorem... <br>
+      <NTab></NTab><NTab></NTab><NTab></NTab>&lt;<NRed>/div</NRed>  > <br>
+      <NTab></NTab><NTab></NTab>&lt;<NRed>/div</NRed>  > <br>
+      <NTab></NTab>&lt;<NRed>/div</NRed>  > <br>
+      <NTab></NTab>&lt;<NRed>div</NRed> <NPurp> class</NPurp>="<NGreen>accordion-item</NGreen>" > <br>
+      <NTab></NTab><NTab></NTab>&lt;<NRed>h2</NRed> <NPurp> class</NPurp>="<NGreen>accordion-header</NGreen>" > <br>
+      <NTab></NTab><NTab></NTab><NTab></NTab>&lt;<NRed>button</NRed> <NPurp> class</NPurp>="<NGreen>accordion-button collapsed</NGreen>" <NPurp>type</NPurp>="<NGreen>button</NGreen>" <NPurp>data-bs-toggle</NPurp>="<NGreen>collapse</NGreen>" <NPurp>data-bs-target</NPurp>="<NGreen>#collapseTwo</NGreen>" <NPurp>aria-expanded</NPurp>="<NGreen>false</NGreen>" <NPurp>aria-controls</NPurp>="<NGreen>collapseTwo</NGreen>" > <br>
+      <NTab></NTab><NTab></NTab><NTab></NTab><NTab></NTab>Accordion Item #2 <br>
+      <NTab></NTab><NTab></NTab><NTab></NTab>&lt;<NRed>/button</NRed>  > <br>
+      <NTab></NTab><NTab></NTab>&lt;<NRed>/h2</NRed>  > <br>
+      <NTab></NTab><NTab></NTab>&lt;<NRed>div</NRed> <NPurp> id</NPurp>="<NGreen>collapseTwo</NGreen>" <NPurp>class</NPurp>="<NGreen>accordion-collapse collapse</NGreen>" <NPurp>data-bs-parent</NPurp>="<NGreen>#accordionExample</NGreen>" > <br>
+      <NTab></NTab><NTab></NTab><NTab></NTab>&lt;<NRed>div</NRed> <NPurp> class</NPurp>="<NGreen>accordion-body</NGreen>" > <br>
+      <NTab></NTab><NTab></NTab><NTab></NTab><NTab></NTab>Lorem... <br>
+      <NTab></NTab><NTab></NTab><NTab></NTab>&lt;<NRed>/div</NRed>  > <br>
+      <NTab></NTab><NTab></NTab>&lt;<NRed>/div</NRed>  > <br>
+      <NTab></NTab>&lt;<NRed>/div</NRed>  > <br>
+      <NTab></NTab>&lt;<NRed>div</NRed> <NPurp> class</NPurp>="<NGreen>accordion-item</NGreen>" > <br>
+      <NTab></NTab><NTab></NTab>&lt;<NRed>h2</NRed> <NPurp> class</NPurp>="<NGreen>accordion-header</NGreen>" > <br>
+      <NTab></NTab><NTab></NTab><NTab></NTab>&lt;<NRed>button</NRed> <NPurp> class</NPurp>="<NGreen>accordion-button collapsed</NGreen>" <NPurp>type</NPurp>="<NGreen>button</NGreen>" <NPurp>data-bs-toggle</NPurp>="<NGreen>collapse</NGreen>" <NPurp>data-bs-target</NPurp>="<NGreen>#collapseThree</NGreen>" <NPurp>aria-expanded</NPurp>="<NGreen>false</NGreen>" <NPurp>aria-controls</NPurp>="<NGreen>collapseThree</NGreen>" > <br>
+      <NTab></NTab><NTab></NTab><NTab></NTab><NTab></NTab>Accordion Item #3 <br>
+      <NTab></NTab><NTab></NTab><NTab></NTab>&lt;<NRed>/button</NRed>  > <br>
+      <NTab></NTab><NTab></NTab>&lt;<NRed>/h2</NRed>  > <br>
+      <NTab></NTab><NTab></NTab>&lt;<NRed>div</NRed> <NPurp> id</NPurp>="<NGreen>collapseThree</NGreen>" <NPurp>class</NPurp>="<NGreen>accordion-collapse collapse</NGreen>" <NPurp>data-bs-parent</NPurp>="<NGreen>#accordionExample</NGreen>" > <br>
+      <NTab></NTab><NTab></NTab><NTab></NTab>&lt;<NRed>div</NRed> <NPurp> class</NPurp>="<NGreen>accordion-body</NGreen>" > <br>
+      <NTab></NTab><NTab></NTab><NTab></NTab><NTab></NTab>Lorem... <br>
+      <NTab></NTab><NTab></NTab><NTab></NTab>&lt;<NRed>/div</NRed>  > <br>
+      <NTab></NTab><NTab></NTab>&lt;<NRed>/div</NRed>  > <br>
+      <NTab></NTab>&lt;<NRed>/div</NRed>  > <br>
+      &lt;<NRed>/div</NRed>  >
     </div>
   </div>
 
   <!-- Barra de Nav -->
   <div class="section">
     <h3> Barra de Nav </h3>
+    <ul class="nav justify-content-center" id="navID"> 
+      <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">Active</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="#">Link</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="#">Link</a> </li>
+      <li class="nav-item"> <a class="nav-link disabled" aria-disabled="true">Disabled</a> </li>
+    </ul>
+    <!-- <script>
+      let nav = document.querySelector("#navID");
+      setInterval(MyFuncion, 2000);
+      function MyFuncion(){
 
+      }
+    </script> -->
+    <div class="cod"> 
+      &lt;<NRed>ul</NRed> <NPurp> class</NPurp>="<NGreen>nav justify-content-center</NGreen>">
+      <NTab></NTab> <NGray>// start - center - end. </NGray> 
+      <NTab></NTab> <NGray>// flex-column (vertical)</NGray> 
+      <NTab></NTab> <NGray>// nav-justified</NGray>
+      <br>
+      <NTab></NTab>&lt;<NRed>li</NRed> <NPurp> class</NPurp>="<NGreen>nav-item</NGreen>"> 
+      &lt;<NRed>a</NRed> <NPurp> class</NPurp>="<NGreen>nav-link active</NGreen>" <NPurp>aria-current</NPurp>="<NGreen>page</NGreen>" <NPurp>href</NPurp>="<NGreen>#</NGreen>" >Active&lt;<NRed>/a</NRed>> &lt;<NRed>/li</NRed>> <br>
+      <NTab></NTab>&lt;<NRed>li</NRed> <NPurp> class</NPurp>="<NGreen>nav-item</NGreen>">
+      &lt;<NRed>a</NRed> <NPurp> class</NPurp>="<NGreen>nav-link</NGreen>" <NPurp>href</NPurp>="<NGreen>#</NGreen>" >Link&lt;<NRed>/a</NRed>> &lt;<NRed>/li</NRed>> <br>
+      <NTab></NTab>&lt;<NRed>li</NRed> <NPurp> class</NPurp>="<NGreen>nav-item</NGreen>">
+      &lt;<NRed>a</NRed> <NPurp> class</NPurp>="<NGreen>nav-link</NGreen>" <NPurp>href</NPurp>="<NGreen>#</NGreen>" >Link&lt;<NRed>/a</NRed>> &lt;<NRed>/li</NRed>> <br>
+      <NTab></NTab>&lt;<NRed>li</NRed> <NPurp> class</NPurp>="<NGreen>nav-item</NGreen>">
+      &lt;<NRed>a</NRed> <NPurp> class</NPurp>="<NGreen>nav-link disabled</NGreen>" <NPurp>aria-disabled</NPurp>="<NGreen>true</NGreen>" >Disabled&lt;<NRed>/a</NRed>> &lt;<NRed>/li</NRed>> <br>
+      &lt;<NRed>/ul</NRed>>
+    </div>
   </div>
 
   <!-- from -->
@@ -736,29 +827,36 @@
 
 
   <p id="screenSize">Screen Size: </p>
+  <div name="abajo">.</div>
   <script>
-    let XS = 575;
-    let SM = 576;
-    let MD = 768;
-    let LG = 992;
-    let XL = 1200;
+    // window.location.href ="#abajo";
+    window.scrollTo(0, document.body.scrollHeight);
+
+    const XS = 575;
+    const SM = 576;
+    const MD = 768;
+    const LG = 992;
+    const XL = 1200;
 
     let screenSize;
-    let sElem = document.querySelector("#screenSize");
+    const sElem = document.querySelector("#screenSize");
     setInterval(SSS, 1000);
     function SSS(){
       sElem.innerHTML = "Screen Size: " + screenSize;
     }
 
+    sElem.scrollIntoView();
+
     // <NTab> (espacio)
-    let spaces = document.querySelectorAll("NTab");
-    for (let i = 0; i < spaces.length; i++) {
-      spaces[i].innerHTML = "&nbsp; &nbsp;";
-    }
+    const doubleSpace = "&nbsp &nbsp;";
+    const spaces = document.querySelectorAll("NTab");
+    spaces.forEach(element => { element.innerHTML = doubleSpace; });
+    const spaces2 = document.querySelectorAll("NTab2");
+    spaces2.forEach(element => { element.innerHTML = doubleSpace.repeat(); });
   </script>
   <!-- *********************************************************************** -->
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
   <!-- <script src="js/jquery-3.2.1.slim.min.js"></script> -->
   <script src="js/bootstrap.bundle.min.js"></script>
   <!-- <script src="js/popper.min.js"></script> -->

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../HtmlCheatSheet/STYLE.css">
+  <title>Convertir texto a html</title>
+</head>
+<body>
+
+<style>
+  /* body{
+    background-color: black;
+    filter: invert();
+  } */
+  textarea {
+    background-color: rgb(252, 241, 241);
+  }
+</style>
+
+<textarea id="Texto" rows="14" cols="100"></textarea> <br>
+<button onclick="change()">Cambiar y Copiar</button>
+<pre id="salida"></pre>
+
+<script>
+  let textArea = document.querySelector("#Texto");
+
+
+  // FIXME: un elemento dentro de otro?
+  // FIXME: unir los >
+  function change() {
+    let texto = textArea.value; //
+    let arrLineas = texto.split("\n"); // Arrays por Lineas.
+    let resultado = [];
+    
+    let arr = Array.from(arrLineas[0]); // convertir primera linea en array
+    let numDelspace = arr.findIndex(elem => elem != " "); // buscar primer caracter q no sea espacio
+    arrLineas[0] = arr.join(""); // volver a convertir en string
+
+    // ----------- recorrer lineas. ----------- //
+    for (let linea = 0; linea < arrLineas.length; linea++) {
+      arrLineas[linea] = arrLineas[linea].replace( " ".repeat(numDelspace), ""); // igualar espacios
+
+      // conservar espacios
+      let espacios = [];
+      if (arrLineas[linea].includes("  ")){ 
+        espacios = arrLineas[linea].match(/  /gi); // pasar espacios a un array
+        
+        for (let i = 0; i < espacios.length; i++) {
+          espacios[i] = espacios[i].replace("  ", "<NTab></NTab>");
+          espacios[i] = espacios[i].replace("<NTab></NTab><NTab></NTab>", "<NTab2></NTab2>");
+        }
+        espacios = espacios.join("");
+      } else espacios = ""; // si no tiene espacio ignorar
+
+      arrLineas[linea] = arrLineas[linea].trim(); // quitar espacios.
+      
+      // Si es un elemento...
+      if(arrLineas[linea].startsWith("<")){
+        let lastI = arrLineas[linea].indexOf(" "); // (index donde termina el elemento).
+        let elemento = arrLineas[linea].slice(1, lastI); // (seleccionar elemento).
+        let lineaSinElem = arrLineas[linea].slice(lastI); // resto de la linea (sin primer elemento).
+        lineaSinElem = lineaSinElem.replace(">", " >"); // separar ">".
+        if (lineaSinElem.includes(`</${elemento}>`))
+          lineaSinElem = lineaSinElem.replace(`</${elemento}>`, `&lt;<NRed>/${elemento}</NRed>>`);
+
+        resultado[linea] = lineaSinElem.split('" '); // separar linea.
+
+        resultado[linea].unshift(`&lt;<NRed>${elemento}</NRed>`); // poner elemento nuevo primero
+        
+        // recorrer atributos
+        for (let i = 1; i < resultado[linea].length; i++) {
+          if(!resultado[linea][i].includes("=")) continue; // si no es un atributo ingnorar
+          resultado[linea][i] = resultado[linea][i].split("="); // separar. 
+
+          // atributo
+          let atr = resultado[linea][i][0]; // seleccionar atributo name.
+          resultado[linea][i][0] = `<NPurp>${atr}</NPurp>`; // cambiar atributo.
+
+          // valor
+          let val = resultado[linea][i][1].slice(1); // quitar comillas.
+          resultado[linea][i][1] = `"<NGreen>${val}</NGreen>"`; // cambiar valor.
+
+          resultado[linea][i] = resultado[linea][i].join("="); // unir atributo.
+        }
+      }
+      else{ // linea con texto común.
+        if(arrLineas[linea].startsWith("Lorem")) // si es Lorem...
+          arrLineas[linea] = "Lorem...";
+        resultado[linea] = espacios + arrLineas[linea]; // ignorar texto común.
+        continue;
+      }
+      
+      resultado[linea] = espacios + resultado[linea].join(" "); // unir linea
+    }
+    resultado = resultado.join(" <br>\n"); // unir todo.
+
+    // console.log(resultado);
+    navigator.clipboard.writeText(resultado);
+  }
+</script>
+
+</body>
+</html>

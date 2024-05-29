@@ -134,7 +134,7 @@
         <NGray>[-]</NGray> array.<NBlue>splice</NBlue>(<NOrg>2, 1</NOrg>); <NGray>// (elimina un index)</NGray> <br>
         <NGray>[+]</NGray> array.<NBlue>splice</NBlue>(<NOrg>1, 0</NOrg>, "<NGreen>G</NGreen>"); <NGray>// (agregar y/o eliminar alguno/s) (index, borrar cant, nuevo valor)</NGray> <br>
         <NGray>←(-)</NGray> array.<NBlue>shift</NBlue>(); <NGray>// (extrae/elimina el 1ro)</NGray> <br>
-        <NGray>←(+)</NGray> array.<NBlue>unshift</NBlue>(); <NGray>// (agrega en el 1ro y return length)</NGray> <br>
+        <NGray>←(+)</NGray> array.<NBlue>unshift</NBlue>("<NGreen>A</NGreen>"); <NGray>// (agrega en el 1ro y return length)</NGray> <br>
         <NGray>(-)→</NGray> array.<NBlue>pop</NBlue>(); <NGray>// (extrae/elimina último)</NGray> <br>
         <NGray>(+)→</NGray> array.<NBlue>push</NBlue>("<NGreen>C</NGreen>"); <NGray>// (agregar último y return length)</NGray> <br>
         array.<NBlue>concat</NBlue>(array2); <NGray>// ["A", "B", "C", "C", 1, 2, 3] (unir arrays en un nuevo array) </NGray> <br>
@@ -227,24 +227,25 @@
       </div>
     </fieldset>
     
-    <div class="flex"> <!-- SetInterval - SetTimeout FIXME: -->
-      <fieldset class="width100"> 
-        <legend>SetInterval (Infinito)</legend>
+    <fieldset class="flex"> <!-- SetInterval - SetTimeout  -->
+      <legend>SetInterval - SetTimeout</legend>
+      <div class="width100">
+        <b>SetInterval (Infinito)</b>
         <div class="cod wAuto">
-          var x = <NBlue>setInterval</NBlue>(<NBlue>MyFuncion</NBlue>, <NOrg>1000</NOrg>) <NGray>(1seg)</NGray> <br>
+          <NPurp>var</NPurp> x = <NBlue>setInterval</NBlue>(<NBlue>MyFuncion</NBlue>, <NOrg>1000</NOrg>); <br>
           function <NBlue>MyFuncion</NBlue>() { <br>
             &nbsp; <NBlue>clearInterval</NBlue>(x); <br> }
         </div>
-      </fieldset>
-      <fieldset class="width100"> <!-- SetTimeOut -->
-        <legend> SetTimeout (1 vez) </legend>
+      </div>
+      <div class="width100"> <!-- SetTimeOut -->
+        <b> SetTimeout (1 vez) </b>
         <div class="cod wAuto">
-          <NBlue>setTimeout</NBlue>(<NBlue>MyFuncion</NBlue>, <NOrg>1000</NOrg>) <NGray>(1seg)</NGray> <br>
+          <NBlue>setTimeout</NBlue>(<NBlue>MyFuncion</NBlue>, <NOrg>1000</NOrg>);  <NGray>// 1seg</NGray> <br>
           function <NBlue>MyFuncion</NBlue>() { <br> &nbsp; <NGray>// Codigo...</NGray> <br> }
         </div>
-      </fieldset>
-      <fieldset class="width100">
-        <legend>Promise ES6</legend>
+      </div>
+      <div class="width100">
+        <b>Promise ES6</b>
         <div class="cod wAuto">
           <NPurp>new</NPurp> <font class="selector">Promise</font>( <br>
             &nbsp; <NPurp>function</NPurp>(<NRed>resolve</NRed>, <NRed>reject</NRed>) { <br>
@@ -254,8 +255,8 @@
               &nbsp; &nbsp; <NBlue>reject</NBlue>(<NBlue>Error</NBlue>("<NGreen>failure</NGreen>")); <br>
           });
         </div>
-      </fieldset>
-    </div>
+      </div>
+    </fieldset>
 
     <fieldset> <!-- Condicionales -->
       <legend> Condicionales </legend>
@@ -269,12 +270,12 @@
         </div>
         <div class="cod" style="font-size: smaller;">
           <font class="aqua">switch</font> ( Expresion ) { <br>
-            &nbsp;<font class="aqua">Case</font> n1: <br>
+            &nbsp;<font class="aqua">case</font> 1: <br>
               &nbsp; <NGray>// Bloque de Codigo</NGray> <br>
-            &nbsp; <font class="aqua">breack;</font> <br>
+            &nbsp; <font class="aqua">break;</font> <br>
             &nbsp;<font class="aqua">default:</font> <br>
               &nbsp; <NGray>// Bloque de Codigo</NGray> <br>
-            &nbsp; <font class="aqua">breack;</font> <br>
+            &nbsp; <font class="aqua">break;</font> <br>
             }
         </div>
       </div>
