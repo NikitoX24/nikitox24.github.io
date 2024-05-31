@@ -17,6 +17,7 @@ class Menu extends HTMLElement {
         min-width: 100%;
         position: fixed;
         top: -23px;
+        left: 0;
         z-index: 1;
       }
       nav ul {
@@ -29,7 +30,7 @@ class Menu extends HTMLElement {
         inset 0 0 1px rgba(255, 255, 255, 0.6);
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
       }
       nav ul li {
         display: inline-block;

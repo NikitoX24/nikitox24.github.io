@@ -732,26 +732,46 @@
           </div>
         </div>
 
-        <!-- Word-Wrap -->  
-        <div>
-          <div class="flex" style="width: 370px;">
-            <div class="wordwrap" style="word-wrap: normal;"> ABCDEFGHIJKLMNÑOPQRSTUVWXYZ. </div>
-            <div class="cod marg0 wAuto"> .texto{ <u><b>word-wrap:</b> normal;</u> } </div>
-          </div>
-          <div class="flex" style="width: 370px;">
-            <div class="wordwrap" style="word-wrap: break-word;"> ABCDEFGHIJKLMNÑOPQRSTUVWXYZ. </div>
-            <div class="cod marg0 wAuto"> .texto{ <u><b>word-wrap:</b> break-word;</u> } </div>
-          </div>
+        <div class="overflow2">
+          This text is inside the div element, which has a blue
+          background color and is floated to the left. We set a specific
+          height and width for the div element, and as you can see. <br>
+          the content cannot fit.This text is inside the div element, which has a blue
+          background color and is floated to the left. We set a specific
+          height and width for the div element, and as you can see,
+          the content cannot fit.
+        </div>
+        <div class="cod" style="width: 140px;">
+          .overflow { <br>
+            &nbsp; <b>overflow:</b> auto; <br>
+            &nbsp; <b>white-space:</b> nowrap; <br> }
+        </div>
+      </div> <hr>
+
+      <!-- Word-Wrap -->
+      <div class="flex">
+        <div class="flex" style="width: 100%;">
+          <div class="wordwrap" style="word-wrap: normal;"> ABCDEFGHIJKLMNÑOPQRSTUVWXYZ. </div>
+          <div class="cod marg0 wAuto"> <u><b>word-wrap:</b> normal;</u> </div>
+        </div>
+        <div class="flex" style="width: 100%;">
+          <div class="wordwrap" style="word-wrap: break-word;"> ABCDEFGHIJKLMNÑOPQRSTUVWXYZ. </div>
+          <div class="cod marg0 wAuto"> <u><b>word-wrap:</b> break-word;</u> </div>
         </div>
       </div>
+
       <style>
-        div.overflow {
-          width: 120px;
+        div.overflow , div.overflow2{
+          width: 140px;
           height: 100px;
           background-color: lightblue;
           overflow: auto;
           padding: 3px;
           border: solid 1px black;
+        }
+        div.overflow2{
+          white-space: nowrap;
+          height: 60px;
         }
         .wordwrap{ 
           border: 1px solid black;

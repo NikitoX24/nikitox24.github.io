@@ -10,94 +10,124 @@
 <body>
 
 <style>
+  :root{
+    --normal: white;
+    --error:  rgb(252, 241, 241);
+    --done: rgb(238, 255, 241);
+  }
   /* body{
     background-color: black;
     filter: invert();
   } */
   textarea {
-    background-color: rgb(252, 241, 241);
+    background-color: var(--normal);
+  }
+  button{
+    height: 50px;
+    width: 200px;
+    font-size: 1.5em;
   }
 </style>
 
-<textarea id="Texto" rows="14" cols="100"></textarea> <br>
+<br>
+<textarea id="Texto" rows="25" cols="100"></textarea> <br>
 <button onclick="change()">Cambiar y Copiar</button>
-<pre id="salida"></pre>
+<p id="salida"></p>
 
 <script>
   let textArea = document.querySelector("#Texto");
+  let pSalida = document.querySelector("#salida");
 
 
-  // FIXME: un elemento dentro de otro?
-  // FIXME: unir los >
+  // FIXME: un elemento dentro/lado de otro?
   function change() {
-    let texto = textArea.value; //
-    let arrLineas = texto.split("\n"); // Arrays por Lineas.
-    let resultado = [];
-    
-    let arr = Array.from(arrLineas[0]); // convertir primera linea en array
-    let numDelspace = arr.findIndex(elem => elem != " "); // buscar primer caracter q no sea espacio
-    arrLineas[0] = arr.join(""); // volver a convertir en string
-
-    // ----------- recorrer lineas. ----------- //
-    for (let linea = 0; linea < arrLineas.length; linea++) {
-      arrLineas[linea] = arrLineas[linea].replace( " ".repeat(numDelspace), ""); // igualar espacios
-
-      // conservar espacios
-      let espacios = [];
-      if (arrLineas[linea].includes("  ")){ 
-        espacios = arrLineas[linea].match(/  /gi); // pasar espacios a un array
-        
-        for (let i = 0; i < espacios.length; i++) {
-          espacios[i] = espacios[i].replace("  ", "<NTab></NTab>");
-          espacios[i] = espacios[i].replace("<NTab></NTab><NTab></NTab>", "<NTab2></NTab2>");
-        }
-        espacios = espacios.join("");
-      } else espacios = ""; // si no tiene espacio ignorar
-
-      arrLineas[linea] = arrLineas[linea].trim(); // quitar espacios.
+    textArea.style.background = "var(--normal)";
+    pSalida.innerHTML = "";
+    try {
+      let texto = textArea.value; //
+      let arrLineas = texto.split("\n"); // Arrays por Lineas.
+      let resultado = [];
       
-      // Si es un elemento...
-      if(arrLineas[linea].startsWith("<")){
-        let lastI = arrLineas[linea].indexOf(" "); // (index donde termina el elemento).
-        let elemento = arrLineas[linea].slice(1, lastI); // (seleccionar elemento).
-        let lineaSinElem = arrLineas[linea].slice(lastI); // resto de la linea (sin primer elemento).
-        lineaSinElem = lineaSinElem.replace(">", " >"); // separar ">".
-        if (lineaSinElem.includes(`</${elemento}>`))
-          lineaSinElem = lineaSinElem.replace(`</${elemento}>`, `&lt;<NRed>/${elemento}</NRed>>`);
+      let arr = Array.from(arrLineas[0]); // convertir primera linea en array
+      let numDelspace = arr.findIndex(elem => elem != " "); // buscar primer caracter q no sea espacio
+      arrLineas[0] = arr.join(""); // volver a convertir en string
 
-        resultado[linea] = lineaSinElem.split('" '); // separar linea.
+      // ----------- recorrer lineas. ----------- //
+      for (let linea = 0; linea < arrLineas.length; linea++) {
+        arrLineas[linea] = arrLineas[linea].replace( " ".repeat(numDelspace), ""); // igualar espacios
 
-        resultado[linea].unshift(`&lt;<NRed>${elemento}</NRed>`); // poner elemento nuevo primero
+        // conservar espacios
+        let espacios = [];
+        if (arrLineas[linea].includes("  ")){ 
+          espacios = arrLineas[linea].match(/  /gi); // pasar espacios a un array
+          
+          for (let i = 0; i < espacios.length; i++) {
+            espacios[i] = espacios[i].replace("  ", "<NTab></NTab>");
+            espacios[i] = espacios[i].replace("<NTab></NTab><NTab></NTab>", "<NTab2></NTab2>");
+          }
+          espacios = espacios.join("");
+        } else espacios = ""; // si no tiene espacio ignorar
+
+        arrLineas[linea] = arrLineas[linea].trim(); // quitar espacios.
         
-        // recorrer atributos
-        for (let i = 1; i < resultado[linea].length; i++) {
-          if(!resultado[linea][i].includes("=")) continue; // si no es un atributo ingnorar
-          resultado[linea][i] = resultado[linea][i].split("="); // separar. 
+        // Si es un elemento...
+        if(arrLineas[linea].startsWith("<")){
+          let lastI = arrLineas[linea].indexOf(" "); // (index donde termina el elemento).
+          let elemento = arrLineas[linea].slice(1, lastI); // (seleccionar elemento).
+          let lineaSinElem = arrLineas[linea].slice(lastI); // resto de la linea (sin primer elemento).
+          lineaSinElem = lineaSinElem.replace(">", " >"); // separar ">".
+          if (lineaSinElem.includes(`</${elemento}>`))
+            lineaSinElem = lineaSinElem.replace(`</${elemento}>`, `&lt;<NRed>/${elemento}</NRed>>`);
 
-          // atributo
-          let atr = resultado[linea][i][0]; // seleccionar atributo name.
-          resultado[linea][i][0] = `<NPurp>${atr}</NPurp>`; // cambiar atributo.
+          resultado[linea] = lineaSinElem.split('" '); // separar linea.
 
-          // valor
-          let val = resultado[linea][i][1].slice(1); // quitar comillas.
-          resultado[linea][i][1] = `"<NGreen>${val}</NGreen>"`; // cambiar valor.
+          resultado[linea].unshift(`&lt;<NRed>${elemento}</NRed>`); // poner elemento nuevo primero
+          
+          // recorrer atributos
+          for (let i = 1; i < resultado[linea].length; i++) {
+            if(!resultado[linea][i].includes("=")) continue; // si no es un atributo ingnorar
+            resultado[linea][i] = resultado[linea][i].split("="); // separar. 
 
-          resultado[linea][i] = resultado[linea][i].join("="); // unir atributo.
+            // atributo
+            let atr = resultado[linea][i][0]; // seleccionar atributo name.
+            resultado[linea][i][0] = `<NPurp>${atr}</NPurp>`; // cambiar atributo.
+
+            // valor
+            let val = resultado[linea][i][1].slice(1); // quitar comillas.
+            resultado[linea][i][1] = `"<NGreen>${val}</NGreen>"`; // cambiar valor.
+
+            resultado[linea][i] = resultado[linea][i].join("="); // unir atributo.
+          }
+        }
+        else{ // linea con texto común.
+          if(arrLineas[linea].startsWith("Lorem")) // si es Lorem...
+            arrLineas[linea] = "Lorem...";
+          resultado[linea] = espacios + arrLineas[linea]; // ignorar texto común.
+          continue;
+        }
+        
+        resultado[linea] = espacios + resultado[linea].join(" "); // unir linea
+
+        let cierreElem = resultado[linea].match(/ >/gi);
+        for (let i = 0; i < cierreElem.length+1; i++) {
+          resultado[linea] = resultado[linea].replace(" >", ">");
         }
       }
-      else{ // linea con texto común.
-        if(arrLineas[linea].startsWith("Lorem")) // si es Lorem...
-          arrLineas[linea] = "Lorem...";
-        resultado[linea] = espacios + arrLineas[linea]; // ignorar texto común.
-        continue;
-      }
+      resultado = resultado.join(" <br>\n"); // unir todo.
+
+      // console.log(resultado);
       
-      resultado[linea] = espacios + resultado[linea].join(" "); // unir linea
+      // Copiar texto al portapapeles.
+      navigator.clipboard.writeText(resultado); 
+      console.log('Contenido copiado al portapapeles');
+      textArea.style.background = "var(--done)";
     }
-    resultado = resultado.join(" <br>\n"); // unir todo.
-
-    // console.log(resultado);
-    navigator.clipboard.writeText(resultado);
+    // Mostrar error si lo hay.
+    catch (err) {
+      console.error('Error al copiar: ', err);
+      pSalida.innerHTML = err;
+      textArea.style.background = "var(--error)";
+    }
   }
 </script>
 

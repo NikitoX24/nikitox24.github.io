@@ -325,7 +325,7 @@
       </div>
     </fieldset>
 
-    <!-- Tipos de Entradas -->
+    <!-- Form - Tipos de Entradas -->
     <fieldset>
       <legend>  Formularios (usar en &lt;form> y PHP)  </legend>
 
@@ -521,6 +521,23 @@
           &lt;option <NPurp>value=</NPurp>"<NGreen>Arg</NGreen>"></NRed>
         </div>
       </div>
+      <hr>
+
+      <!-- Formulario POST -->
+      <form action="">
+        <label for="POST-name">Nombre:</label>
+        <input id="POST-name" type="text" name="name" />
+        <input type="submit" value="Save" />
+      </form>
+      <div class="cod">
+        &lt;<NRed>form</NRed> <NPurp> action</NPurp>="<NGreen>file.php</NGreen>" <NPurp>method</NPurp>="<NGreen>POST / GET</NGreen>"> <br>
+        <NTab></NTab>&lt;<NRed>label</NRed> <NPurp> for</NPurp>="<NGreen>POST-name</NGreen>"> Nombre: &lt;<NRed>/label</NRed>> <br>
+        <NTab></NTab>&lt;<NRed>input</NRed> <NPurp> id</NPurp>="<NGreen>POST-name</NGreen>" <NPurp>type</NPurp>="<NGreen>text</NGreen>" <NPurp>name</NPurp>="<NGreen>name</NGreen>" /> <br>
+        <NTab></NTab>&lt;<NRed>input</NRed> <NPurp> type</NPurp>="<NGreen>submit</NGreen>" <NPurp>value</NPurp>="<NGreen>Save</NGreen>" /> <br>
+        &lt;<NRed>/form</NRed>>
+      </div>
+
+
 
     </fieldset>
   </section>
