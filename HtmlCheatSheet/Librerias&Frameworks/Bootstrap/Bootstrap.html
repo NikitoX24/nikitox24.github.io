@@ -276,6 +276,14 @@
     <div class="cod">
       <NPurp>class=</NPurp>"<NGreen>Fixed-Top / Fixed-Bottom</NGreen>"
     </div>
+
+    <!-- Sticky -->
+    <div class="sticky-top">... Sticky-top ...</div>
+    <div class="sticky-bottom">... Sticky-bottom ...</div>
+    <div class="cod">
+      &lt;<NRed>div</NRed> <NPurp> class</NPurp>="<NGreen>sticky-top</NGreen>">... Sticky-top ...&lt;<NRed>/div</NRed>> <br>
+      &lt;<NRed>div</NRed> <NPurp> class</NPurp>="<NGreen>sticky-bottom</NGreen>">... Sticky-bottom ...&lt;<NRed>/div</NRed>>
+    </div>
   </div>
 
   <!-- Tamaños -->
@@ -296,6 +304,14 @@
           p-5 (padding: 5px) <br> pt, pr, pl, pb, (0-5);
         </div>
       </div>
+    </div>
+    <div class="ratio ratio-21x9">
+      <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" allowfullscreen></iframe>
+    </div>
+    <div class="cod">
+      &lt;<NRed>div</NRed> <NPurp> class</NPurp>="<NGreen>ratio ratio-21x9</NGreen>"> <NGray>// 1x1, 4x3, 16x9, 21x9.</NGray><br>
+        &nbsp; &lt;<NRed>iframe...</NRed> <br>
+      &lt;<NRed>/div</NRed>>
     </div>
   </div>
 
@@ -327,6 +343,11 @@
     <hr>
 
     <p class="text-nowrap">(text-nowrap): <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eius porro animi, blanditiis accusamus temporibus iste commodi delectus cupiditate quisquam fuga labore veritatis tempora eos harum at magnam, soluta exercitationem. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore reiciendis non fuga quam qui soluta sunt exercitationem ea tenetur. Voluptates soluta enim iste nobis? Quis sunt repellendus eum est pariatur!</p>
+    <hr>
+
+    <b>User-select:</b>
+    <p class="user-select-all">Este párrafo quedará completamente seleccionado al hacer clic en él. (.user-select-all)</p>
+    <p class="user-select-none">Este párrado no se puede seleccionar. (.user-select-none)</p>
   </div>
 
   <!-- 
@@ -337,17 +358,79 @@
    -->
   <!-- Colores -->
   <div class="section">
-    <h3>Colores (text / bg)</h3>
+    <h3>Colores (textos / BackGround)</h3>
+    <div class="flex">
+      <div class="w-50">
+        <div class="flex w-100">
+          <div class="w-100 p-1 bg-primary text-white">.bg-primary</div>
+          <div class="w-100 p-1 bg-primary-subtle text-primary-emphasis">.bg-primary-subtle</div>
+        </div>
+        <div class="flex w-100">
+          <div class="w-100 p-1 bg-secondary text-white">.bg-secondary</div>
+          <div class="w-100 p-1 bg-secondary-subtle text-secondary-emphasis">.bg-secondary-subtle</div>
+        </div>
+        <div class="flex w-100">
+          <div class="w-100 p-1 bg-success text-white">.bg-success</div>
+          <div class="w-100 p-1 bg-success-subtle text-success-emphasis">.bg-success-subtle</div>
+        </div>
+        <div class="flex w-100">
+          <div class="w-100 p-1 bg-danger text-white">.bg-danger</div>
+          <div class="w-100 p-1 bg-danger-subtle text-danger-emphasis">.bg-danger-subtle</div>
+        </div>
+        <div class="flex w-100">
+          <div class="w-100 p-1 bg-warning text-dark">.bg-warning</div>
+          <div class="w-100 p-1 bg-warning-subtle text-warning-emphasis">.bg-warning-subtle</div>
+        </div>
+        <div class="flex w-100">
+          <div class="w-100 p-1 bg-info text-dark">.bg-info</div>
+          <div class="w-100 p-1 bg-info-subtle text-info-emphasis">.bg-info-subtle</div>
+        </div>
+        <div class="flex w-100">
+          <div class="w-100 p-1 bg-dark text-white">.bg-dark</div>
+          <div class="w-100 p-1 bg-black text-white">.bg-black</div>
+        </div>        
+        <div class="flex w-100">
+          <div class="w-100 p-1 bg-dark-subtle text-dark-emphasis">.bg-dark-subtle</div>
+          <div class="w-100 p-1 bg-body-secondary">.bg-body-secondary</div>
+        </div>
+        <div class="flex w-100">
+          <div class="w-100 p-1 bg-body-tertiary">.bg-body-tertiary</div>
+          <div class="w-100 p-1 bg-body text-body">.bg-body</div>
+        </div>
+        <div class="flex w-100">
+          <div class="w-100 p-1 bg-light text-dark">.bg-light</div> <div class="vr"></div>
+          <div class="w-100 p-1 bg-light-subtle text-light-emphasis">.bg-light-subtle</div> <div class="vr"></div>
+          <div class="w-100 p-1 bg-white text-dark">.bg-white</div>
+        </div>
+      </div>
+      
+      <div class="w-50">
+        <div class="p-1 bg-primary bg-gradient text-white">.bg-primary.bg-gradient</div>
+        <div class="p-1 bg-secondary bg-gradient text-white">.bg-secondary.bg-gradient</div>
+        <div class="p-1 bg-success bg-gradient text-white">.bg-success.bg-gradient</div>
+        <div class="p-1 bg-danger bg-gradient text-white">.bg-danger.bg-gradient</div>
+        <div class="p-1 bg-warning bg-gradient text-black">.bg-warning.bg-gradient</div>
+        <div class="p-1 bg-info bg-gradient text-black">.bg-info.bg-gradient</div>
+        <div class="p-1 bg-dark bg-gradient text-white">.bg-dark.bg-gradient</div>
 
-    <div class="bg-primary">bg-primary</div>
-    <div class="bg-secondary">bg-secondary</div>
-    <div class="bg-dark">bg-dark</div>
-    <div class="bg-light">bg-light</div>
-    <div class="bg-danger">bg-danger</div>
-    <div class="bg-warning">bg-warning</div>
-    <div class="bg-success">bg-success</div>
-    <div class="bg-info">bg-info</div>
-    <div class="bg-white">bg-white</div>
+        <div style="font-size: small;">
+          <a href="#" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Primary</a>
+          <a href="#" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Secondary</a>
+          <a href="#" class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Success</a>
+          <a href="#" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Danger</a>
+          <a href="#" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Warning</a>
+          <a href="#" class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Info</a>
+          <a href="#" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Light</a>
+          <a href="#" class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Dark</a>
+          <a href="#" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover">Emphasis</a>
+        </div>
+        <div class="cod" >
+          &lt;<NRed>div</NRed> <NPurp> class</NPurp>="<NGreen>text-bg-primary p-2</NGreen>"> Primary &lt;<NRed>/div</NRed>> <br>
+          &lt;<NRed>div</NRed> <NPurp> class</NPurp>="<NGreen>w-100 p-1 bg-primary text-white</NGreen>">.bg-primary&lt;<NRed>/div</NRed>> <br>
+          &lt;<NRed>a</NRed> <NPurp> href</NPurp>="<NGreen>#</NGreen>" <NPurp>class</NPurp>="<NGreen>link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover</NGreen>">Primary link&lt;<NRed>/a</NRed>>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Tablas -->
@@ -367,9 +450,12 @@
   <!-- Imagenes -->
   <div class="section">
     <h3> Imagen </h3>
-    <img src="/Imgs/cat1.png" class="img-fluid img-thumbnail w-25" title="img-thumbnail">
-    <img src="/Imgs/cat1.png" class="img-fluid rounded w-25" title="rounded">
-    <img src="/Imgs/cat1.png" class="img-fluid rounded-circle w-25" title="rounded-circle">
+    <div class="flex">
+      <img src="/Imgs/cat1.png" style="width: 200px;" class="img-fluid img-thumbnail" title="img-thumbnail">
+      <img src="/Imgs/cat1.png" style="width: 200px;" class="img-fluid rounded" title="rounded">
+      <img src="/Imgs/cat1.png" style="width: 200px;" class="img-fluid rounded-circle" title="rounded-circle">
+      <img src="/Imgs/cat1.png" style="width: 200px;" class="img-fluid opacity-50" title="opacity-50">
+    </div>
   </div>
 
   <!-- Alert -->
@@ -759,7 +845,21 @@
 
     <a href="https://getbootstrap.com/docs/5.3/components/card/">
       https://getbootstrap.com/docs/5.3/components/card/
+    </a> <br>
+    <a href="https://getbootstrap.com/docs/5.3/helpers/stretched-link/">
+      https://getbootstrap.com/docs/5.3/helpers/stretched-link/
     </a>
+
+    <div class="row g-0 bg-body-secondary position-relative">
+      <div class="col-md-6 mb-md-0 p-md-4">
+        <img src="/Imgs/cat1.png" class="w-75">
+      </div>
+      <div class="col-md-6 p-4 ps-md-0">
+        <h5 class="mt-0">Columns with stretched link</h5>
+        <p>Another instance of placeholder content for this other custom component. It is intended to mimic what some real-world content would look like, and we're using it here to give the component a bit of body and size.</p>
+        <a href="#" class="stretched-link">Go somewhere</a>
+      </div>
+    </div>
   </div>
 
   <!-- plegables -->
@@ -775,7 +875,26 @@
     </div>
     <a href="https://getbootstrap.com/docs/5.3/components/collapse/">
       https://getbootstrap.com/docs/5.3/components/collapse/
-    </a> 
+    </a> <hr>
+
+    <!-- ext-truncate -->
+    <div>
+      <!-- Block level -->
+      <div class="row">
+        <div class="col-2 text-truncate">
+          This text is quite long, and will be truncated once displayed.
+        </div>
+      </div>
+      <!-- Inline level -->
+      <span class="d-inline-block text-truncate" style="max-width: 250px;">
+        This text is quite long, and will be truncated once displayed.
+      </span>
+      <br>
+      <a href="https://getbootstrap.com/docs/5.3/helpers/text-truncation/">
+        https://getbootstrap.com/docs/5.3/helpers/text-truncation/
+      </a>
+    </div>
+
     <br><hr>
 
     <!-- Acordion -->
@@ -1390,6 +1509,7 @@
   <div class="section">
     <h3>Otros...</h3>
 
+    <!-- HR -->
     &lt;<code>hr</code>>
     <hr class="border border-danger border-2 opacity-50">
     <hr class="border border-primary border-3 opacity-75">
@@ -1398,10 +1518,23 @@
       &lt;<NRed>hr</NRed> <NPurp> class</NPurp>="<NGreen>border border-primary border-3 opacity-75</NGreen>">
     </div> <br>
 
+    <!-- VR -->
+    <div class="vr"></div> <div class="vr"></div> <div class="vr"></div> <div class="vr"></div> 
+    <div class="vr"></div> <div class="vr"></div> <div class="vr"></div> <div class="vr"></div> 
+    <div class="vr"></div> <div class="vr"></div> <div class="vr"></div> <div class="vr"></div> 
+    
+    <br><hr>
+
+    <!-- KBD (KeyBoarD) -->
     press <kbd><kbd>Ctrl</kbd> + <kbd>,</kbd></kbd>
     <div class="cod">
       &lt;<NRed>kbd</NRed>> Ctrl &lt;<NRed>/kbd</NRed>>
-    </div>
+    </div> <hr>
+
+
+    
+
+    <hr>
 
     <hr><hr>
     <hr>
@@ -1428,6 +1561,10 @@
     </a>
     <a href="https://getbootstrap.com/docs/5.3/components/tooltips/">
       https://getbootstrap.com/docs/5.3/components/tooltips/
+    </a>
+
+    <a href="https://getbootstrap.com/docs/5.3/utilities/api/">
+      APIS: https://getbootstrap.com/docs/5.3/utilities/api/
     </a>
   </div>  
 
