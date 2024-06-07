@@ -36,20 +36,14 @@
 
 <body>
   <!-- Fundamentos -->
-  <section id="Fundamentos"> 
-
-    <!-- 
-      <fieldset>
-      <legend> &lt;Script> </legend>
-      <div class="cod"> &lt;<NRed>script</NRed> <NPurp>src</NPurp>="<NGreen>htmlcheatsheet.js</NGreen>"> &lt;/<NRed>script</NRed>> </div>
-    </fieldset> -->
+  <section id="Fundamentos">
 
     <fieldset> <!-- Variable -->
       <legend> Variables y Strings </legend>
       <div class="flex">
         <div class="cod">
-          <NPurp>var</NPurp> a <NPurp>=</NPurp> <NOrg>10</NOrg>; <NGray> // publica.</NGray> <br>
-          <NPurp>let</NPurp> b <NPurp>=</NPurp> <NOrg>true</NOrg>; <NGray> // privada.</NGray> <br>
+          <NPurp>let</NPurp> a <NPurp>=</NPurp> <NOrg>true</NOrg>; <NGray> // privada.</NGray> <br>
+          <NPurp>var</NPurp> b <NPurp>=</NPurp> <NOrg>100</NOrg>; <NGray> // publica.</NGray> <br>
           <NPurp>const</NPurp> c <NPurp>=</NPurp> '<NGreen>hello</NGreen>'; <NGray>// priv + no modif.</NGray> <br>
         </div>
         <div class="cod">
@@ -68,18 +62,53 @@
         <hr>
         <NGray>bool =</NGray> <NBlue>Boolean</NBlue>("<NGreen>asd</NGreen>"); <NGray>// true (si contiene), false (no)</NGray> <br>
         <NGray>bool =</NGray> <NBlue>!!</NBlue>"<NGreen>asd</NGreen>"; <NGray>// true (si contiene), false (no)</NGray> <br>
+      </div> <br>
 
+      <b>Metodos de Numeros</b>
+      <div class="cod">
+        <div class="flex separados">
+          <div> <NPurp>let</NPurp> a = <NOrg>1_300_000_000</NOrg>; <NGray>// 1.3m</NGray> </div>
+          <div> <NPurp>let</NPurp> a = <NOrg>1.3e9</NOrg>; <NGray>// 1.3m </NGray> </div>
+          <div> <NPurp>let</NPurp> b = <NOrg>1.e-4</NOrg>; <NGray>// 0.0001 </NGray> </div>
+          <div> <NPurp>let</NPurp> c = <NOrg>0xFF</NOrg>; <NGray>// 255 </NGray> </div>
+        </div> <hr>
+        <div class="flex separados">
+          <div> (255).<NBlue>toString</NBlue>(<NOrg>2</NOrg>) <NGray>// 11111111 </NGray> </div>
+          <div> 255..<NBlue>toString</NBlue>(<NOrg>16</NOrg>) <NGray>// ff </NGray> </div>
+          <div> (123456).<NBlue>toString</NBlue>(<NOrg>32</NOrg>) <NGray>// 2n9c </NGray> </div>
+        </div> <hr>
+        <div class="flex separados">
+          <div> <NBlue>parseInt</NBlue>("<NGreen>100px</NGreen>"); <NGray>// 100 </NGray> </div>
+          <div> <NBlue>parseFloat</NBlue>("<NGreen>12.5em</NGreen>"); <NGray>// 12.5 </NGray> </div>
+          <div> <NBlue>parseInt</NBlue>("<NGreen>a123</NGreen>"); <NGray>// NaN </NGray> </div>
+        </div> <hr>
+        <div class="flex separados">
+          <div> Math.<NBlue>floor</NBlue>(<NOrg> 3.1 </NOrg>); <NGray>// 3 </NGray> </div>
+          <div> Math.<NBlue>floor</NBlue>(<NOrg> -1.1 </NOrg>); <NGray>// -2</NGray> </div>
+        </div>
+        <div class="flex separados">
+          <div> Math.<NBlue>ceil</NBlue>(<NOrg> 3.1 </NOrg>); <NGray>// 4 </NGray> </div>
+          <div> Math.<NBlue>ceil</NBlue>(<NOrg> -1.1 </NOrg>); <NGray>// -1 </NGray> </div>
+        </div>
+        <div class="flex separados">
+          <div> Math.<NBlue>round</NBlue>(<NOrg> 3.1 </NOrg>); <NGray>// 3 </NGray> </div>
+          <div> Math.<NBlue>round</NBlue>(<NOrg> 3.5 </NOrg>); <NGray>// 4 </NGray> </div>
+        </div>
+        <div class="flex separados">
+          <div> 1.23456..<NBlue>toFixed</NBlue>(<NOrg>2</NOrg>); <NGray>// "1.23" (string) </NGray> </div>
+          <div> +(1.11).<NBlue>toFixed</NBlue>(<NOrg>5</NOrg>); <NGray>// 1.11000 (num) </NGray> </div>
+        </div>
       </div>
     </fieldset>
     
     <fieldset> <!-- Metodos -->
-      <legend> Metodos de Strings </legend>
+      <legend> Metodos de Strings (no se modifican) </legend>
       <!-- Variable (Hola a todos) -->
       <div class="cod">
         <NPurp>let</NPurp> texto = "<NGreen>Hola a todos mis amigos, a mis Videos</NGreen>";
         <!-- ------------------------------------- --> <hr> <!-- ------------------------------------- -->
         <NGray>int =</NGray> texto.length; <NGray>// 37</NGray> <br> 
-        <NGray>int =</NGray> texto.<NBlue>indexOf</NBlue>("<NGreen>a</NGreen>", <NOrg>4</NOrg>); <NGray>// 5</NGray> <br>
+        <NGray>int =</NGray> texto.<NBlue>indexOf</NBlue>("<NGreen>la</NGreen>", <NOrg>1</NOrg>); <NGray>// 2 </NGray> <br>
         <NGray>int =</NGray> texto.<NBlue>lastIndexOf</NBlue>("<NGreen>mis</NGreen>"); <NGray>// 27</NGray> <br>
         <NGray>int =</NGray> texto.<NBlue>search</NBlue>("<NGreen>a</NGreen>"); <NGray>// 3</NGray> <br>
         <!-- ------------------------------------- --> <hr> <!-- ------------------------------------- -->
@@ -87,6 +116,7 @@
         <NGray>array =</NGray> texto.<NBlue>match</NBlue>(/<NGreen>mis</NGreen>/<NOrg>gi</NOrg>); <NGray>// [mis, mis] (array) </NGray> <br>
         <NGray>array =</NGray> texto.<NBlue>split</NBlue>(" "); <NGray>// (convertir en Array, separados por " ")</NGray> <br> 
         <!-- ------------------------------------- --> <hr> <!-- ------------------------------------- -->
+        <NGray>string =</NGray> texto.<NBlue>at</NBlue>(<NOrg>-3</NOrg>); <NGray>// e</NGray> <br>
         <NGray>string =</NGray> texto.<NBlue>charAt</NBlue>(<NOrg>3</NOrg>); <NGray>// a</NGray> <br>
         <NGray>string =</NGray> texto.<NBlue>slice</NBlue>(<NOrg>0, 5</NOrg>) ; <NGray>// Leer (start, stop(opcional))</NGray> <br>
         <NGray>string =</NGray> texto.<NBlue>substr</NBlue>(<NOrg>5, 11</NOrg>); <NGray>// "a todos mis" (start, cantidad)</NGray> <br>
@@ -111,19 +141,20 @@
       <div class="flex">
         <div class="cod"> <NPurp>var</NPurp> myArray <NAqua>= new</NAqua> <NObj>Array</NObj>("<NGreen>a</NGreen>", "<NGreen>b</NGreen>"); </div>
         <div class="cod"> <NPurp>var</NPurp> myArray = <NAqua>new</NAqua> <NObj>Array</NObj>(<NOrg>3</NOrg>); </div>
-        <div class="cod"> <NPurp>var</NPurp> myArray = ["<NGreen>a</NGreen>", "<NGreen>b</NGreen>", "<NGreen>c</NGreen>"]; </div>
+        <div class="cod"> <NPurp>var</NPurp> myArray = [<NOrg>1</NOrg>, "<NGreen>b</NGreen>", <NRed>true</NRed>]; </div>
       </div><br>
 
-      Metodos de array: <br>
+      Metodos de array: (se modifican) <br>
       <div class="cod">
         <!-- ["A", "B", "C", "C"] -->
         <NPurp>let</NPurp> array = ["<NGreen>A</NGreen>", "<NGreen>B</NGreen>", "<NGreen>C</NGreen>", "<NGreen>C</NGreen>"]; <br>
         <!-- ------------------------------------- --> <hr> <!-- ------------------------------------- -->
         array.length; <NGray>// 4</NGray> <br>
+        array.length = <NOrg>0</NOrg>; <NGray>// (borrar array) </NGray> <br>
+        <NAqua>delete</NAqua>(array[<NOrg>2</NOrg>]); <NGray>// ["A", "B", undefined, "C"]  (borra valor, pero no el elemento)</NGray> <br>
         <NObj>Array</NObj>.<NBlue>isArray</NBlue>(<u>array</u>); <NGray>// true</NGray> <br>
         <NObj>Array</NObj>.<NBlue>from</NBlue>("<NGreen>ABC</NGreen>"); <NGray>// ["A", "B", "C"];</NGray> <br>
-        let [one, two, three] = array; <br>
-        <NAqua>delete</NAqua>(array[<NOrg>2</NOrg>]); <NGray>// ["A", "B", undefined, "C"]  (borra valor, pero no el elemento)</NGray> <br>
+        <NPurp>let</NPurp> [one, two, three] = array; <br>
         <NGray>string =</NGray> array.<NBlue>join</NBlue>(" "); <NGray>// (convertir en string y separar por " ")</NGray> <br>
         <NGray>array =</NGray> array.<NBlue>flat</NBlue>(); <NGray>// (unir todos los sub-arrays)</NGray> <br>
         <!-- ------------------------------------- --> <hr> <!-- ------------------------------------- -->
@@ -191,44 +222,54 @@
     <fieldset> <!-- Funciones -->
       <legend>  Funciones  </legend>
       <div class="flex">
-        <!-- Declaración de Función -->
-        <div class="cod">
+        <div class="cod w50">
+          <!-- Declaración de Función -->
           <NGray>// Declaración de Función </NGray> <br>
           <NPurp>function</NPurp> <NBlue>saludar</NBlue>() { <br>
             &nbsp; console.<NBlue>log</NBlue>("<NGreen>Hola!</NGreen>"); <br> }
-        </div>
-        <!-- Expresión de Función -->
-        <div class="cod">
+          <hr>
+          <!-- Expresión de Función -->
           <NGray>// Expresión de Función </NGray> <br>
-          <NPurp>let</NPurp> saludar; <br>
-          <NBlue>saludar</NBlue> = <NPurp>function</NPurp> () { <br>
+          <NPurp>let</NPurp> <u>saludar</u>; <br>
+          <u>saludar</u> = <NPurp>function</NPurp> () { <br>
           &nbsp; console.<NBlue>log</NBlue>("<NGreen>Hola!</NGreen>"); <br> };
         </div>
-        <!--  -->
+        <!-- JS Doc -->
         <div class="cod">
-          <NGray>// Funcion dinamica?</NGray> <br>
-          <NPurp>let</NPurp> age = <NBlue>prompt</NBlue>("<NGreen>Edad?</NGreen>", <NOrg>18</NOrg>); <br>
-          <NPurp>let</NPurp> <NPurp>welcome</NPurp> = (age < <NOrg>18</NOrg> ) ? <br>
-          &nbsp; () => <NBlue>alert</NBlue>("<NGreen>Payaso</NGreen>"): <br>
-          &nbsp; () => <NBlue>alert</NBlue>("<NGreen>Calvo!</NGreen>"):
+          <NGray>/** <br>
+            <NTab></NTab>* Devuelve x elevado a la potencia de n. <br>
+            <NTab></NTab>* <br>
+            <NTab></NTab>* @param {number} x El número a elevar. <br>
+            <NTab></NTab>* @param {number} n La potencia, debe ser un número natural. <br>
+            <NTab></NTab>* @return {number} x Devuelve x elevado a la potencia de n. <br>
+            <NTab></NTab>*/ <br> 
+            </NGray>
+            <NPurp>function</NPurp> <NBlue>pow</NBlue>(x, n) { <br> 
+              <NTab></NTab> <NGray>// Código...</NGray> <br> }
         </div>
       </div> <hr>
 
       <div class="flex">
-        <div class="cod" style="width: 300px;">
-          
-        </div>
-        <div class="flecha wAuto"></div>
         <div class="cod">
           <NGray>// Funciones de Flechas</NGray> <br>
           <NPurp>let</NPurp> <NBlue>myFunc</NBlue> <NPurp>=</NPurp> () <NPurp>=></NPurp> "<NGreen>Hola!</NGreen>"; <NGray>//sin parametros.</NGray> <br>
           <NPurp>let</NPurp> <NBlue>myFunc</NBlue> <NPurp>=</NPurp> name <NPurp>=></NPurp> "<NGreen>Hola: </NGreen>" + name; <NGray>//con 1 parametro.</NGray> <br>
           <NPurp>let</NPurp> <NBlue>myFunc</NBlue> <NPurp>=</NPurp> (a, b) <NPurp>=></NPurp> a+b; <NGray>//con varios parametros.</NGray> <br>
+          <NPurp>let</NPurp> <NBlue>myFunc</NBlue> <NPurp>=</NPurp> (a, b) <NPurp>=></NPurp> { a + b; }; <NGray>// multilínea.</NGray>
+        </div>
+        <!--  -->
+        <div class="cod">
+          <!-- <NGray>// Expresión de Funcion de flechas</NGray> <br> -->
+          <NPurp>let</NPurp> age = <NBlue>prompt</NBlue>("<NGreen>Edad?</NGreen>", <NOrg>18</NOrg>); <br>
+          <NPurp>let</NPurp> <NBlue>welcome</NBlue> = (age < <NOrg>18</NOrg> ) ? <br>
+          &nbsp; () => <NBlue>alert</NBlue>("<NGreen>Payaso</NGreen>"): <br>
+          &nbsp; () => <NBlue>alert</NBlue>("<NGreen>Calvo!</NGreen>"); <br>
+          <NBlue>welcome</NBlue>();
         </div>
       </div> <hr>
 
       <!-- Enviar-Devolver Array -->
-      Enviar-Devolver Array
+      <b>Funcion con Arrays</b>
       <div class="flex">
         <div class="cod">
           <NGray>// Devolver Array</NGray> <br>
@@ -335,15 +376,14 @@
       <legend> Bucle For (ES6) </legend>
       <div class="flex">
         <div class="cod width100">
-          <u><b>For In:</b></u> <NGray>//  (Solo para este tipo de arrays) </NGray> <br>
+          <u><b>For In:</b></u> <NGray>//  (Solo para Objetos Literales) </NGray> <br>
           <NPurp>let</NPurp> obj <NPurp>=</NPurp> {a:<NOrg>1</NOrg>, b:<NOrg>2</NOrg>, c:<NOrg>3</NOrg>}; <br>
           <font class="aqua">for</font> (<NPurp>let</NPurp> v <NPurp>in</NPurp> obj) { <br>
             &nbsp; document.<NBlue>write</NBlue>(v); <br> }
         </div>
         <div class="cod width100">
-          <u><b>For Of:</b></u> <NGray>// (Solo para arrays con strings) </NGray> <br>
+          <u><b>For Of:</b></u> <NGray>// (Solo para Arrays o Strings) </NGray> <br>
           <NPurp>let</NPurp> obj <NPurp>=</NPurp> ["<NGreen>hola</NGreen>", "<NGreen>hi</NGreen>"]; <br>
-          <NPurp>let</NPurp> texto <NPurp>=</NPurp> ["<NGreen>LoremIpsumAsd</NGreen>"]; <br>
           <font class="aqua">for</font> (<NPurp>let</NPurp> v <NPurp>of</NPurp> obj) { <br>
             &nbsp; document.<NBlue>write</NBlue>(v); <br> }
         </div>
@@ -380,39 +420,47 @@
 
   <!-- Objetos -->
   <section id="Objetos"> 
-
-    <!-- Obj y Constructor -->
     <div class="flex">
-      <!-- Variable/Obj -->
+      <!-- Crear un Objeto  -->
       <fieldset class="wAuto">
-        <legend> Crear un Objeto</legend>
+        <legend> Objeto Literal </legend>
         <div class="cod wAuto">
-          <NPurp>var</NPurp> person = { <br>
-            &nbsp; <strong>name:</strong> "<NGreen>David</NGreen>", <br>
-            &nbsp; <strong>age:</strong> <NOrg>26</NOrg>, <br>
-            &nbsp; <NGray>property: value</NGray> <br>
-          };
+          <NPurp>let</NPurp> person = { <strong>"last name":</strong> "<NGreen>Queen</NGreen>" };
+          <hr>
+          person["<NGreen>last name</NGreen>"]; <NGray>// (Obtener)</NGray> <br>
+          person.<strong>age</strong> = "<NOrg>30</NOrg>"; <NGray>// (Agregar/Cambiar)</NGray> <br>
+          <NAqua>delete</NAqua> person.<strong>age</strong>; <NGray>// (Borrar key)</NGray> <br>
+          "<NGreen>name</NGreen>" <NAqua>in</NAqua> person; <NGray>// false (Existe key)</NGray> <br>
         </div>
         <div class="cod wAuto">
-          person.name; <NGray>// or</NGray> <br>
-          person["<NGreen>name</NGreen>"];
+          <NGray>// Propiedades Calculadas</NGray> <br>
+          <NPurp>let</NPurp> <strong>keyName</strong> = "<NGreen>nombre</NGreen>"; <br>
+          <NPurp>let</NPurp> person = { [<strong>keyName</strong> + "1"]: "<NGreen>David</NGreen>" }; <br>
         </div>
       </fieldset>
 
-      <!-- Constructor -->
+      <!-- Funcion Constructora -->
       <fieldset class="wAuto">
-        <legend>Constructor de Obj</legend>
-        (para navegadores viejos)
+        <legend title="(para navegadores viejos)" style="cursor: help;">Función Constructora</legend>
         <div class="cod wAuto">
-          <NPurp>function</NPurp> <NObj>person</NObj>(name, age) { <br>
+          <NPurp>function</NPurp> <NObj>Person</NObj>(name, age) { <br>
             &nbsp; <NAqua>this</NAqua>.name = name; <br>
-            &nbsp; <NAqua>this</NAqua>.age = age; <br>
-          }
+            &nbsp; <NAqua>this</NAqua>.age = age; <br> }
         </div>
+        <!-- Constructor de Objetos -->
         <div class="cod wAuto">
-          <NPurp>var</NPurp> p1 = <NAqua>new</NAqua> <NObj>person</NObj>("<NGreen>John</NGreen>", <NOrg>42</NOrg>) <br>
+          <NGray>// Constructor de Objetos</NGray> <br>
+          <NPurp>let</NPurp> p1 = <NAqua>new</NAqua> <NObj>Person</NObj>("<NGreen>John</NGreen>", <NOrg>42</NOrg>) <br>
           document.<NBlue>write</NBlue>(p1.age) <NGray>//42</NGray> <br>
-        </div>
+        </div> <br>
+        <!-- Función de un único uso.. -->
+        <details>
+          <summary>Función de un único uso...</summary>
+          <div class="cod">
+            <NPurp>let</NPurp> user<NAqua> = new</NAqua> <NPurp>function</NPurp>() { <br>
+            <NTab></NTab> <NAqua>this.</NAqua>name = "<NGreen>John</NGreen>"; <br> };
+          </div>
+        </details>
       </fieldset>
 
       <Flecha></Flecha>
@@ -429,7 +477,7 @@
           <NObj>}</NObj>
         </div>
         <div class="cod wAuto">
-          <NPurp>var</NPurp> p1 = <NAqua>new</NAqua> <NBlue>person</NBlue>("<NGreen>John</NGreen>", <NOrg>42</NOrg>) <br>
+          <NPurp>let</NPurp> p1 = <NAqua>new</NAqua> <NBlue>person</NBlue>("<NGreen>John</NGreen>", <NOrg>42</NOrg>) <br>
           document.<NBlue>write</NBlue>(p1.age) <NGray>//42</NGray>
         </div>
       </fieldset>
@@ -452,9 +500,8 @@
                 &nbsp; }
               </div>
             }; <br><br>
-            tree.<NBlue>grow</NBlue>(); <br>
-            <!-- document.<NBlue>write</NBlue>(tree.height); <br> -->
-            <NGray>// age = 21</NGray>
+            <NGray>// Checkear si existe algo...</NGray> <br>
+            person.<NBlue>cumple</NBlue>?.(); <NGray>// si existe ejecuta, sino ignora.</NGray>
           </div>
         </div>
 

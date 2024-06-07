@@ -4,11 +4,10 @@ class Menu extends HTMLElement {
     this.innerHTML =/*html*/`
     <div>
       <nav><ul>
-        <li><a href="../index.html"> <img src="../logo.png" height="25px"></a></li>
-        <li><a href="https://nikitox24.github.io/Main/"> INICIO(GitHub) </a></li>
-        <li><a href="https://github.com/NikitoX24/Main"> GITHUB </a></li>
-        <li><a href="https://github.com/NikitoX24?tab=repositories"> REPOSITORIOS </a></li>
-        <li><a href=#> (arriba) </a></li>
+        <li><a href="../index.html"> <img src="../logo.png" height="25px"> </a></li>
+        <li><a href="https://nikitox24.github.io/MyServer/"> PAG INICIO(GitHub) </a></li>
+        <li><a href="https://github.com/NikitoX24/Main"> GITHUB User </a></li>
+        <li><a href=#> ▲ Inicio </a></li>
       </ul></nav>
     </div>
     <style>
@@ -30,7 +29,7 @@ class Menu extends HTMLElement {
         inset 0 0 1px rgba(255, 255, 255, 0.6);
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
       }
       nav ul li {
         display: inline-block;
