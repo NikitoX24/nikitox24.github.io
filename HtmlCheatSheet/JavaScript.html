@@ -39,7 +39,7 @@
   <section id="Fundamentos">
 
     <fieldset> <!-- Variable -->
-      <legend> Variables y Strings </legend>
+      <legend> Variables </legend>
       <div class="flex">
         <div class="cod">
           <NPurp>let</NPurp> a <NPurp>=</NPurp> <NOrg>true</NOrg>; <NGray> // privada.</NGray> <br>
@@ -98,12 +98,32 @@
           <div> 1.23456..<NBlue>toFixed</NBlue>(<NOrg>2</NOrg>); <NGray>// "1.23" (string) </NGray> </div>
           <div> +(1.11).<NBlue>toFixed</NBlue>(<NOrg>5</NOrg>); <NGray>// 1.11000 (num) </NGray> </div>
         </div>
+      </div> <br>
+
+      <b>Map</b>
+      <div class="cod">
+        <NPurp>let</NPurp> map<NAqua> = new </NAqua> <NObj>Map( )</NObj>; <NGray>// Crear Mapa.</NGray> <br>
+        map.<NBlue>set</NBlue>("<NGreen>clave</NGreen>", "<NGreen>valor</NGreen>"); <NGray>// Agregar elemento.</NGray> <br>
+        map.<NBlue>get</NBlue>("<NGreen>clave</NGreen>"); <NGray>// Obtener elemento.</NGray> <br>
+        map.<NBlue>has</NBlue>("<NGreen>clave</NGreen>"); <NGray>// Bool si tiene.</NGray> <br>
+        map.<NBlue>delete</NBlue>("<NGreen>clave</NGreen>"); <NGray>// Eliminar elemento.</NGray> <br>
+        map.<NBlue>clear</NBlue>(); <NGray>// Vaciar Map.</NGray> <br>
+        map.<NBlue>size</NBlue>; <NGray>// devuelve la cantidad de elementos.</NGray> <br>
+        map.<NBlue>keys</NBlue>(); <NGray>// Claves.</NGray> <br>
+        map.<NBlue>values</NBlue>(); <NGray>// Valores.</NGray> <br>
       </div>
     </fieldset>
+
+    <script>
+      let map = new Map()
+      map.set("1", "asd")
+      for (let a of map.keys() ){
+        console.log(a);
+      }
+    </script>
     
-    <fieldset> <!-- Metodos -->
+    <fieldset> <!-- Metodos de Strings -->
       <legend> Metodos de Strings (no se modifican) </legend>
-      <!-- Variable (Hola a todos) -->
       <div class="cod">
         <NPurp>let</NPurp> texto = "<NGreen>Hola a todos mis amigos, a mis Videos</NGreen>";
         <!-- ------------------------------------- --> <hr> <!-- ------------------------------------- -->
@@ -113,8 +133,8 @@
         <NGray>int =</NGray> texto.<NBlue>search</NBlue>("<NGreen>a</NGreen>"); <NGray>// 3</NGray> <br>
         <!-- ------------------------------------- --> <hr> <!-- ------------------------------------- -->
         <NGray>array =</NGray> texto.<NBlue>match</NBlue>("<NGreen>todos</NGreen>"); <NGray>// [todos] (array-obj)</NGray> <br>
-        <NGray>array =</NGray> texto.<NBlue>match</NBlue>(/<NGreen>mis</NGreen>/<NOrg>gi</NOrg>); <NGray>// [mis, mis] (array) </NGray> <br>
-        <NGray>array =</NGray> texto.<NBlue>split</NBlue>(" "); <NGray>// (convertir en Array, separados por " ")</NGray> <br> 
+        <NGray>array =</NGray> texto.<NBlue>match</NBlue>(/<NGreen>mis</NGreen>/<NOrg>gi</NOrg>); <NGray>// [mis, mis] </NGray> <br>
+        <NGray>array =</NGray> texto.<NBlue>split</NBlue>(" ", <NOrg>2</NOrg>); <NGray>// (Array separados por " ", cantidad)</NGray> <br> 
         <!-- ------------------------------------- --> <hr> <!-- ------------------------------------- -->
         <NGray>string =</NGray> texto.<NBlue>at</NBlue>(<NOrg>-3</NOrg>); <NGray>// e</NGray> <br>
         <NGray>string =</NGray> texto.<NBlue>charAt</NBlue>(<NOrg>3</NOrg>); <NGray>// a</NGray> <br>
