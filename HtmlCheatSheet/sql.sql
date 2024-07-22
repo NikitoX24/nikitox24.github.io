@@ -6,13 +6,16 @@
 -- DLL (Lenguaje de Definicion de Datos) --
 -------------------------------------------
 CREATE USER nico @localhost IDENTIFIED BY "123456"; --  Crear Usuario:
-CREATE DATABASE proyecto; --  Crear Base de Datos:
-DROP DATABASE proyecto; -- borrar Base de Datos.
+CREATE DATABASE proyecto; --  Crear Base de Datos.
+  DROP DATABASE IF EXISTS proyecto; -- borrar Base de Datos.  -- IF EXISTS (opcional)
+
+show databases; -- Mostrar todas las Base de Datos.
+USE proyecto; -- Usar la Base de Datos.(para crear tablas, etc)
 
 -- Crear Tabla.
 CREATE TABLE productos (
-  id_producto INT NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (id_producto),
+  id_producto INT NOT NULL AUTO_INCREMENT, -- nombre de la columna, que se identifica como INT, y se asigne autom-
+  PRIMARY KEY (id_producto), --
   nombre VARCHAR(150),
   precio int
 );
@@ -43,13 +46,20 @@ ALTER TABLE myusuarios ADD COLUMN (direccion VARCHAR(20)); -- agregar nueva colu
 ALTER TABLE myusuarios DROP COLUMN edad; -- borrar columna
 
 
+-- Añadir Constrains para hacer checks
+ALTER TABLE followers ADD CONSTRAINT check_follower_id CHECK (follower_id != following_id); -- cant follow self
+
+
 
 ---------------------------------------------
 -- DML (Lenguaje de Manipulacion de Datos) --
 ---------------------------------------------
 
 -- agregar un registro
-INSERT INTO clientes (nombre, apellido, edad, telefono)VALUES("Alex", "Gonzales", "29", "1234567");
+INSERT INTO clientes (nombre, apellido, edad, telefono)
+VALUES
+("Alex", "Gonzales", "29", "1234567"),
+("Nico", "Wolf", "22", "12121212");
 
 -- importar archivo .csv
 LOAD DATA LOCAL INFILE "C:/clientes.csv"

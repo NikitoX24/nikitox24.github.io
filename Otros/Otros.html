@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+  <meta chatset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Título</title>
+</head>
+<body>
+
+
+
+  <!-- Elejir opciones -->
+  <input placeholder="Seleccionar o Escribir:" list="Lista">
+  <datalist id="Lista">
+    <option value="uno"></option>
+    <option value="dos"></option>
+    <option value="tres"></option>
+  </datalist>
+  <hr>
+
+  <label for="escojerUno">
+    Escoje uno:
+  </label>
+  <select>
+    <option>Seleccionar: </option>
+    <optgroup label="Color">
+      <option>Red</option>
+      <option>Blue</option>
+    </optgroup>
+    <optgroup label="Numero">
+      <option>1</option>
+      <option>2</option>
+    </optgroup>
+  </select>
+  <hr>
+
+  <!-- Busqueda -->
+  <style>
+    .search {
+      position: relative;
+      width: 250px;
+      background-color: #fff;
+      display: flex;
+    }
+
+    .search::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: #0170F0;
+      transform: scaleX(0);
+      transform-origin: center;
+      transform-origin: left;
+      transition: transform .25s;
+    }
+
+    .search:focus-within::before {
+      transform: scale(1)
+    }
+
+    .search input,
+    .search button {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      color: #8e8e8e;
+    }
+
+    .input {
+      width: 100%;
+      padding: 10px;
+    }
+
+    .button {
+      display: grid;
+      place-items: center;
+      width: 50px;
+      font-size: 19px;
+      cursor: pointer;
+      transition: color .25%;
+    }
+
+    .button:hover {
+      color: #0170F0
+    }
+  </style>
+  <form class="search">
+    <input type="text" placeholder="Buscar..." class="input">
+    <button type="submit" class="button">
+      <i class="ri-search-2-Line"></i>
+    </button>
+  </form>
+  <hr>
+
+  <!-- Loader Circle -->
+  <div id="loader"></div>
+  <style>
+    #loader {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: #000;
+      animation: zoom 1.5s ease infinite;
+    }
+    @keyframes zoom {
+      from{ transform: scale(0); opacity: 1; }
+      to{ transform: scale(1); opacity: 0; }
+    }
+  </style>
+  <hr>
+
+  <!-- Bar -->
+  <style>
+    .barra {
+      /* margin: 0 auto;  */
+      height: 20px;
+      width: 30%;
+      background: gray;
+      border-radius: 50px;
+      overflow: hidden;
+    }
+    .progreso {
+      display: block;
+      height: 100%;
+      width: 50%;
+      border-radius: 50px;
+      background-image: linear-gradient( -45deg,yellow 25%,green 25%,green 50%,yellow 50%,yellow 75%,green 75%,green);
+      background-size: 50px 50px;
+      animation: load 2s infinite linear;
+    }
+
+    @keyframes load {
+      0% { background-position: 0 0; }
+      100% { background-position: 50px 50px; }
+    }
+  </style>
+  <p> cargando... </p>
+  <div class="barra">
+    <span class="progreso"> </span>
+  </div>
+  <script>
+    setInterval(function () {
+      let bar = document.getElementsByClassName("progreso")[0]
+      let fondo = document.getElementsByClassName("barra")[0]
+
+      if (bar.clientWidth >= fondo.clientWidth) {
+        bar.style.width = 1 + "px";
+      }
+    }, 30)
+  </script>
+
+
+
+</body>
+</html>
