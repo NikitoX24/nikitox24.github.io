@@ -1,14 +1,13 @@
 <?php
-  require("config.php");
-
   $title = "Index";
   $color = "#003e1e";
 
-  require("header.php");
-?>
-<!-- Pags -->
-<div class="round">
-<?php
+  require("../PHP/config.php");
+  require("../PHP/header.php");
+
+
+  // INICIO DE PAG //
+  echo '<div class="round">';
   echo '<h2 class="centred">'.$logo_25px.' Dev-Web CheatSheets '.$logo_25px.'</h2><hr>';
 
   // CheatSheet
@@ -54,7 +53,6 @@
     <input type="submit" value="TaTeTi" />
   </form>
 </div>
-
 
 
 <?php require("footer.php");
