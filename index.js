@@ -45,3 +45,19 @@ let tabs2 = document.querySelectorAll("NTab2");
 for (let i = 0; i < tabs2.length; i++) {
   tabs2[i].innerHTML = "&nbsp; &nbsp; &nbsp; &nbsp;";
 }
+
+
+// #region (Hora Izq-Abajo)
+printTime();
+function printTime() {
+  var d = new Date();
+  var hours = d.getHours();
+  var mins = d.getMinutes();
+  var secs = d.getSeconds();
+  if(secs < 10) { secs = "0"+secs }
+  if(mins < 10) { mins = "0"+mins }
+  var horaPS = document.getElementById("HoraPS");
+  horaPS.innerHTML = "Hora: " + hours+":"+mins+":"+secs;
+}
+setInterval(printTime, 1000);
+//#endregion
