@@ -1,0 +1,118 @@
+body{
+  background-color: beige;
+  background-image: url("Imgs/TileW.jpg");
+  background-repeat: repeat; /*repeat-x, repeat-y, no-repeat, inherit */
+  background-attachment: scroll; /* fixel, scroll, inherit */
+}
+
+.centred, form, summary{
+  text-align: center; 
+}
+
+.titles{
+  text-shadow: 5px 2px 4px grey;
+  text-align: center;
+  text-decoration: underline;
+  /* text-transform: uppercase; */
+}
+
+.round{
+  -webkit-border-radius: 24px;
+  border-radius: 7px;
+  border: 1px solid grey;
+  max-width: 350px;
+  padding: 5px;
+  box-shadow: 10px 10px 5px 5px rgba(136, 136, 136, 0.207);
+  background-color: rgba(0, 0, 0, 0.281);
+  margin: auto;
+  margin-top: 60px;
+}
+
+/* copyright */
+.copyright {
+  font-size: 8pt;
+  text-align: right;
+  padding-bottom: 10px;
+  color: grey;
+  position: fixed;
+  top: 98%;
+  right: 10px;
+}
+
+/* icons */
+.icons{
+  height: 100px;
+  margin: 3px;
+}
+.icons:hover{
+  height: 105px;
+  margin: 0;
+}
+.imgcentred{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.imgcentred:hover{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#HoraPS{
+  font-size: 1.7em;
+  font-weight: 900;
+  position: fixed;
+  top: 96%;
+  left: 10px;
+}
+
+/* GO UP */
+#up{
+  font-size: 3em;
+  color: black;
+  position: fixed;
+  top: 40px;
+  right: 10px;
+  text-decoration: none;
+}
+#up:hover{
+  font-size: 4em;
+}
+
+/* NAV-BAR */
+#navbar {
+  padding: 7px 0;
+  min-width: 100%;
+  position: fixed;
+  top: -23px;
+  left: 0;
+  z-index: 1;
+}
+#navbar nav ul {
+  background: linear-gradient(90deg, 
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.8) 25%, 
+    rgba(255, 255, 255, 0.8) 75%, 
+    rgba(255, 255, 255, 0.5) 100%);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
+  inset 0 0 1px rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#navbar nav ul li {
+  display: inline-block;
+}
+#navbar nav ul li a {
+  padding: 7px;
+  color: #000000;
+  font-size: 18px;
+  font-family: Arial;
+  text-decoration: none;
+  display: block;
+}
+#navbar li a:hover{
+  color: blue;
+  transform: scale(1.1);
+}

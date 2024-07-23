@@ -2,51 +2,15 @@ class Menu extends HTMLElement {
   constructor() {
     super();
     this.innerHTML =/*html*/`
-    <div>
+    <div id="navbar">
       <nav><ul>
         <li><a href="../index.html"> <img src="../logo.png" height="25px"> </a></li>
-        <li><a href="https://nikitox24.github.io/MyServer/"> PAG INICIO(GitHub) </a></li>
-        <li><a href="https://github.com/NikitoX24/Main"> GITHUB User </a></li>
-        <li><a href=#> ▲ Inicio </a></li>
+        <li><a href="https://nikitox24.github.io/MyServer/"> <img src="/imgs/github-logo.png" alt="GitHub" height="25px"/> Index GitHub </a></li>
+        <li><a href="https://github.com/NikitoX24/Main"> <img src="/imgs/github-logo.png" alt="GitHub" height="25px"/> My GitHub </a></li>
+        <br />
       </ul></nav>
     </div>
-    <style>
-      nav {
-        padding: 7px 0;
-        min-width: 100%;
-        position: fixed;
-        top: -23px;
-        left: 0;
-        z-index: 1;
-      }
-      nav ul {
-        background: linear-gradient(90deg, 
-          rgba(255, 255, 255, 0.5) 0%,
-          rgba(255, 255, 255, 0.8) 25%, 
-          rgba(255, 255, 255, 0.8) 75%, 
-          rgba(255, 255, 255, 0.5) 100%);
-        box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
-        inset 0 0 1px rgba(255, 255, 255, 0.6);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      nav ul li {
-        display: inline-block;
-      }
-      nav ul li a {
-        padding: 7px;
-        color: #000000;
-        font-size: 18px;
-        font-family: Arial;
-        text-decoration: none;
-        display: block;
-      }
-      li a:hover{
-        color: red;
-        transform: scale(1.1);
-      }
-    </style>
+    <a id="up" href=#> ▲ </a>
     `
   }
 }
