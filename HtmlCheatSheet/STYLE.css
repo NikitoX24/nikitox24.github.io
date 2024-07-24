@@ -8,10 +8,13 @@
   fieldset{ padding: 5px !important; }
 }
 body {
+  background-color: beige;
   background-image: url("../Imgs/TileW.jpg");
+  background-repeat: repeat; /*repeat-x, repeat-y, no-repeat, inheri */
+  background-attachment: scroll; /* fixel, scroll, inherit */
   font-family: 'Brush Script MT';
   text-shadow: 3px 3px 7px grey;
-  font-size: small;
+  font-size: small; 
 }
 header {
   margin-top: 60px;
@@ -52,7 +55,6 @@ font.selector{ color: rgb(146, 146, 0);
 font.prop{ color: rgb(114, 125, 122);
   text-shadow: .1px .1px rgb(124, 156, 150); }
 b{ text-shadow: .5px .5px 12px black; }
-/*  */
 
 pre {
   margin-left: -80px;
@@ -86,6 +88,7 @@ button{
 /* #region Icons */
 .icons {
   height: 85px;
+  margin: 3px;
   filter: drop-shadow(3px 3px 5px black);
 }
 .filtrogris {
@@ -190,6 +193,8 @@ h1 .subText{
   min-height: 35px;
 }
 
+
+
 /* Box Tipo de entrada HTML*/
 .round {
   width: 60%;
@@ -218,7 +223,7 @@ h1 .subText{
 .boxder {
   float: right;
   border-radius: 10px;
-}/*  */
+}
 
 Flecha{ margin-block: auto; }
 Flecha::before{ content: "➜"; font-size: 1.5em; }
