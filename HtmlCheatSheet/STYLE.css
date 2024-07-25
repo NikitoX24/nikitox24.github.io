@@ -32,15 +32,12 @@ body {
   font-family: 'Brush Script MT';
   text-shadow: 3px 3px 7px grey;
   font-size: small; 
-}
-header {
-  margin-top: 60px;
-}
-body {
   max-width: 720px;
   margin: auto;
 }
+header { margin-top: 60px; } /* cheats.php */
 
+/* CSS-JS (muestra seccion actual) */
 #textoFix{
   margin: 0;
   right: 0;
@@ -73,9 +70,7 @@ font.prop{ color: rgb(114, 125, 122);
   text-shadow: .1px .1px rgb(124, 156, 150); }
 b{ text-shadow: .5px .5px 12px black; }
 
-pre {
-  margin-left: -80px;
-}
+pre { margin-left: -80px; }
 summary {
   color: rgb(0, 77, 155);
   font-size: 1em;

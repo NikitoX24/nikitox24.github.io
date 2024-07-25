@@ -28,13 +28,16 @@ echo '<div class="round-index">';
     </div><hr>
   ';
 
+  // CheatSheet iconos Lib-Fram
+  // echo '
+  //   <div class="iconosFlex">
+  //     <a href="HtmlCheatSheet\Librerias&Frameworks\Bootstrap\Bootstrap.html"> <img src="'.$imgs_dir.'bootstrap-icon.png" alt="html" class="icons"> </a>
+  //   </div><hr>
+  // ';
   ?>
   <link rel="stylesheet" href="../HtmlCheatSheet/STYLE.css">
 
   <!-- Otros -->
-  <form action="../PHP/index.php"> 
-    <input type="submit" value="index.php" />
-  </form>
   <form action="../HtmlCheatSheet/Librerias&Frameworks/Bootstrap/Bootstrap.html">
     <input type="submit" value="bootstrap.html" />
   </form>

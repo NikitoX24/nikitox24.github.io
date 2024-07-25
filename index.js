@@ -30,7 +30,7 @@ for (let i = 0; i < Section.length; i++) {
 
 window.onload = function(){
   for (let i = 0; i < Section.length; i++) {
-    let h1 = document.createElement("h1"); // Crear un parrafo.
+    let h1 = document.createElement("h1"); // Crear un h1.
     let text = document.createTextNode(Section[i].id); // Crear el Texto.
     h1.appendChild(text); // Agregar el text al parrafo.
     Section[i].insertBefore(h1, Section[i].firstChild); // Agregar el h1 a Section.
