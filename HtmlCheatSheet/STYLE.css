@@ -114,10 +114,12 @@ button{
 .iconosFlex{
   display: flex;
   justify-content: center;
+  height: 100px;
 }
 .iconosFlex a:hover{
   transform: scale(1.1);
   filter: none;
+  filter: drop-shadow(0px 0px 15px gray);
 }
 /* #endregion */
 
@@ -206,10 +208,7 @@ h1 .subText{
 }
 
 /* Tipos de entrada HTML */
-.div {
-  min-height: 35px;
-}
-
+.div { min-height: 35px; }
 
 
 /* Box Tipo de entrada HTML*/
@@ -279,16 +278,15 @@ Flecha::before{ content: "➜"; font-size: 1.5em; }
   -webkit-border-radius: 24px;
   border-radius: 7px;
   border: 1px solid grey;
-  max-width: 350px;
-  padding: 5px;
+  max-width: 450px;
+  padding: 15px;
   box-shadow: 10px 10px 5px 5px rgba(136, 136, 136, 0.207);
   background-color: rgba(0, 0, 0, 0.281);
   margin: auto;
   margin-top: 60px;
+  margin-bottom: 20px;
+  text-align: center; 
 }
-
-/* fix underline in Icons */
-.round-index a{ text-decoration: none; }
 
 /* copyright */
 .copyright {
@@ -301,79 +299,11 @@ Flecha::before{ content: "➜"; font-size: 1.5em; }
   right: 10px;
 }
 
-
-.centred, form{
-  text-align: center; 
-}
-
-/* icons Index */
-.icons_index{
-  height: 100px;
-  margin: 3px;
-}
-.icons_index:hover{
-  height: 105px;
-  margin: 0;
-}
-
-
-/* ------------ */
-/* -- Header -- */
-
+/* footer.php */
 #HoraPS{
   font-size: 1.7em;
   font-weight: 900;
   position: fixed;
   top: 96%;
   left: 10px;
-}
-
-/* GO UP */
-#up{
-  font-size: 3em;
-  color: black;
-  position: fixed;
-  top: 40px;
-  right: 10px;
-  text-decoration: none;
-}
-#up:hover{
-  font-size: 4em;
-}
-
-/* NAV-BAR */
-#navbar {
-  padding: 7px 0;
-  min-width: 100%;
-  position: fixed;
-  top: -23px;
-  left: 0;
-  z-index: 1;
-}
-#navbar nav ul {
-  background: linear-gradient(90deg, 
-    rgba(255, 255, 255, 0.5) 0%,
-    rgba(255, 255, 255, 0.8) 25%, 
-    rgba(255, 255, 255, 0.8) 75%, 
-    rgba(255, 255, 255, 0.5) 100%);
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
-  inset 0 0 1px rgba(255, 255, 255, 0.6);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-#navbar nav ul li {
-  display: inline-block;
-}
-#navbar nav ul li a {
-  padding: 7px;
-  color: #000000;
-  font-size: 18px;
-  font-family: Arial;
-  text-decoration: none;
-  display: block;
-}
-#navbar li a:hover{
-  color: blue;
-  transform: scale(1.1);
 }
