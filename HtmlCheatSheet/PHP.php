@@ -1,16 +1,18 @@
 <?php
 
 $title = "PHP";
-$color = "#003e1e";
+$color = "#003e1e"; // color navegador
 $back_color = "rgba(0, 0, 255, .05)";
 $shadow1 = "rgba(0, 119, 255, 0.164)";
 $shadow2 = "rgba(0, 0, 255, 0.1)";
 
 require("../PHP/config.php");
-require("../PHP/header.php");
-require("../PHP/cheats.php");
+include_once("../PHP/header.php");
+include_once("../PHP/navbar.php");
+include("../PHP/cheats.php");
 
 ?>
+<link rel="stylesheet" href="../HtmlCheatSheet/STYLE.css">
 
 <style>
   :root{
@@ -24,13 +26,13 @@ require("../PHP/cheats.php");
   }
   NAqua{ color: var(--aquaC); }
   NBlue{ color: rgb(107, 149, 234); }
-  NGreen{ color: rgb(209, 255, 139); }
-  NVar{ color: var(--varC); }
+  NGreen{color: rgb(209, 255, 139); }
+  NVar{  color: var(--varC); }
   NPurp{ color: rgb(194, 122, 194); }
-  NRed{ color: rgb(255, 85, 85); }
-  NOrg{ color: rgb(254, 146, 38);}
+  NRed{  color: rgb(255, 85, 85); }
+  NOrg{  color: rgb(254, 146, 38);}
   NGray{ color: gray; }
-  NObj{ color: rgb(252, 222, 104); }
+  NObj{  color: rgb(252, 222, 104); }
 </style>
 
 <body>

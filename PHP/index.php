@@ -1,12 +1,12 @@
 <?php
-  $title = "Index";
-  $color = "#003e1e";
-  require("../PHP/config.php");
-  require("../PHP/header.php");
+$title = "Index";
+$color = "#003e1e";
+require("../PHP/config.php");
+include_once("../PHP/header.php");
+include_once("../PHP/navbar.php");
 
-
-  echo '<div class="round-index">';
-  // Texto
+// round + Texto
+echo '<div class="round-index">';
   echo '<h2 class="centred">'.$logo_25px.' CheatSheets '.$logo_25px.'</h2><hr>';
 
   // CheatSheet iconos .html
@@ -15,7 +15,7 @@
   echo '<a href="'.$cheat_dir.'js.html">   <img src="'.$imgs_dir.'js.png"   alt="js"   class="icons_index"> </a> ';
   echo '<a href="'.$cheat_dir.'php.html">  <img src="'.$imgs_dir.'php.png"  alt="php"  class="icons_index"> </a> ';
 
-  echo '<br>';
+  echo '<hr>';
   
   // CheatSheet iconos .php
   echo '<a href="'.$html_dir.'"> <img src="'.$imgs_dir.'html.png" alt="html" class="icons_index"> </a> ';
@@ -23,8 +23,10 @@
   echo '<a href="'.$js_dir.  '"> <img src="'.$imgs_dir.'js.png"   alt="js"   class="icons_index"> </a> ';
   echo '<a href="'.$php_dir. '"> <img src="'.$imgs_dir.'php.png"  alt="php"  class="icons_index"> </a> ';
   
-?>
-<hr>
+  ?>
+  <link rel="stylesheet" href="../HtmlCheatSheet/STYLE.css">
+
+  <hr>
 
   <!-- Otros -->
   <form action="../PHP/index.php"> 
@@ -58,7 +60,7 @@
   <form action="../Ejercicios/TaTeTi.html">
     <input type="submit" value="TaTeTi" />
   </form>
-</div>
+</div> <!-- fin del round -->
 
 
 <?php require("footer.php");

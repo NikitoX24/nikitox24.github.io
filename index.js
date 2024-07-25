@@ -1,8 +1,8 @@
-/* 
+// #region (menu-component)
 class Menu extends HTMLElement {
   constructor() {
     super();
-    this.innerHTML =`
+    this.innerHTML = /*html*/`
     <div id="navbar">
       <nav><ul>
         <li><a href="../index.html"> <img src="../logo.png" height="25px"> </a></li>
@@ -16,7 +16,7 @@ class Menu extends HTMLElement {
   }
 }
 customElements.define("menu-component", Menu); 
-*/
+//#endregion
 
 // #region (Mostrar Seccion (hover) y h1 )
 let textoFix = document.querySelector("#textoFix");
