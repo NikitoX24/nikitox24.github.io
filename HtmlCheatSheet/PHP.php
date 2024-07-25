@@ -132,11 +132,11 @@ require("../PHP/cheats.php");
       <div class="flex">
         <div class="cod">
           <NBlue>echo</NBlue> $<NVar>_SERVER</NVar>["<NGreen>SCRIPT_NAME</NGreen>"]; <br>
-          <NGray> // /MyServer/HtmlCheatSheet/PHP.html</NGray>
+          <NGray> <?php echo $_SERVER["SCRIPT_NAME"]; ?> </NGray>
         </div>
         <div class="cod">
           <NBlue>echo</NBlue> $<NVar>_SERVER</NVar>["<NGreen>HTTP_HOST</NGreen>"]; <br>
-          <NGray>// localhost</NGray>
+          <NGray> <?php echo $_SERVER["HTTP_HOST"]; ?> </NGray>
         </div>
       </div>
     </fieldset>
@@ -147,7 +147,7 @@ require("../PHP/cheats.php");
       <div class="fWrap">
         <div class="flex">
           <div class="ej width100">
-            <form action="Php/php.php" method="post">
+            <form action="Php/login.php" method="post">
               Usuario: <input type="text" name="user" /> <br>
               Contraseña: <input type="text" name="password" /> <br><br>
               <input type="submit" name="submit" value="Submit" />
@@ -270,9 +270,9 @@ require("../PHP/cheats.php");
     <legend> Usar archivos php como bloques de código </legend>
       <div class="flex">
         <div class="cod">
-          require("<NGreen>header.php</NGreen>"); <NGray>// Obligatorio</NGray> <br>
+          require("<NGreen>header.php</NGreen>"); <NGray>// Obligatorio (error)</NGray> <br>
           require_once("<NGreen>header.php</NGreen>"); <NGray>// Obligatorio 1 vez</NGray> <br><br>
-          include("<NGreen>header.php</NGreen>"); <NGray>// Opcional</NGray> <br>
+          include("<NGreen>header.php</NGreen>"); <NGray>// Opcional (warning)</NGray> <br>
           include_once("<NGreen>header.php</NGreen>"); <NGray>// Opcional 1 vez</NGray>
         </div>
         <div class="cod">
@@ -426,7 +426,7 @@ require("../PHP/cheats.php");
     </fieldset>
   </section>
 
-  <!-- Base de Datos -->
+  <!-- Base de Datos SQL -->
   <section id="Base de Datos (SQL)">
     <fieldset> <!-- Conexion y Solicitud -->
       <legend>Conexion y Solicitud</legend>
@@ -448,8 +448,8 @@ require("../PHP/cheats.php");
       <a href="">(Ver más en el archivo sql.sql).</a>
     </fieldset>
 
-    <fieldset> <!-- Crear Tabla -->
-    <legend> Crear una tabla con Columnas/field (DLL) </legend>
+    <fieldset> <!-- Crear Tabla (DLL) -->
+    <legend> Crear una tabla con Columnas/field </legend>
       <div class="cod">
         <NGreen><NOrg>CREATE TABLE</NOrg> nombreTabla ( <NGray>-- Crear tabla.</NGray> <br>
           &nbsp; ID <NPurp>int</NPurp> <NOrg>NOT NULL</NOrg> AUTO_INCREMENT, <br>
@@ -469,11 +469,11 @@ require("../PHP/cheats.php");
       </div>
     </fieldset>
 
-    <fieldset> <!-- Enviar a una Tabla -->
-    <legend> Enviar un Registro a una Tabla con (DML) </legend>
+    <fieldset> <!-- Enviar Registro a una Tabla / Registrarse (DML) uno.php -->
+    <legend> Enviar un Registro a una Tabla </legend>
       <div class="flex">
         <div class="ej width100">
-          <form action="Php/uno.php" method="post">
+          <form action="Php/registrarse.php" method="post">
             Nombre: <input type="text" name="nombre"/><br>
             Apellido: <input type="text" name="apellido"/><br>
             Edad: <input type="text" name="edad"/><br>
@@ -506,9 +506,9 @@ require("../PHP/cheats.php");
       </div>
     </fieldset>
 
-    <fieldset> <!-- Consultar una tabla -->
-      <legend> Consultar y modificar una tabla (DML) </legend>
-      <a href="Php/dos.php">ir a la consulta.</a>
+    <fieldset> <!-- Consultar una tabla (DML) -->
+      <legend> Consultar y modificar una tabla </legend>
+      <a href="Php/registros.php">ir a la consulta.</a>
       <div class="cod">
         include("<NGreen>Conexion.php</NGreen>"); <br><br>
 
@@ -525,9 +525,9 @@ require("../PHP/cheats.php");
       </div>
     </fieldset>
 
-    <fieldset> <!-- Eliminar un registro -->
-      <legend> Eliminar un registro/record (DML) </legend>
-      <a href="Php/dos.php">ir a la consulta.</a>
+    <fieldset> <!-- Eliminar un registro (DML) -->
+      <legend> Eliminar un registro/record </legend>
+      <a href="Php/registros.php">ir a la consulta.</a>
       <div class="cod">
         &lt;<NRed>a</NRed> <NPurp>href=</NPurp>"<NGreen>php.php?id='1'</NGreen>"><NVar>Eliminar</NVar>&lt;/<NRed>a</NRed>> <hr>
         <!-- &lt;?php <br> -->

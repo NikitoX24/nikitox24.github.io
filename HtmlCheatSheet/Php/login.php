@@ -1,4 +1,6 @@
 <?php
+// iniciar sesion
+
 $user = "Nico"; // Evaluar con MySQL
 $password = "123";
 
@@ -10,5 +12,5 @@ if($_POST['user'] == $user && $_POST['password'] == $password) {
 }
 else {
   echo "USUARIO o CONTRASEÑA incorrecta.<br>";
-  echo "<a href='/HtmlCheatSheet/PHP.html'> INTENTAR NUEVAMENTE </a>";
+  echo "<a href='/HtmlCheatSheet/PHP.php'> INTENTAR NUEVAMENTE </a>"; // TODO:
 }

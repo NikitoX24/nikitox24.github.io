@@ -1,4 +1,5 @@
 <?php
+// actualizar datos
 
 $nombre = $_POST['nombre'];
 $apellido = $_POST['apellido'];
@@ -8,5 +9,5 @@ $id = $_POST['id'];
 
 include("Conexion.php");
 
-$solicitud = "UPDATE datos SET Nombre='$nombre', Apellido='$apellido', Edad='$edad', Celular='$celular' WHERE id=$id";
+$solicitud = "UPDATE datos SET nombre='$nombre', apellido='$apellido', edad='$edad', celular='$celular' WHERE id=$id";
 $resultado = mysqli_query($conexion, $solicitud);

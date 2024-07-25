@@ -1,3 +1,20 @@
+
+/* RESPONSIVE */
+
+@media (max-width:480px){
+  /* celular */
+}
+
+@media (min-width:481px) and (max-width:980px){
+  /* tablet */
+}
+
+@media (min-width:981px) {
+  /* pc */
+}
+
+/* ------------------------------------------------- */
+
 :root{
   --aquaC: rgb(77, 222, 255);
 }
@@ -9,7 +26,7 @@
 }
 body {
   background-color: beige;
-  background-image: url("../Imgs/TileW.jpg");
+  /* background-image: url("../Imgs/TileW.jpg"); */
   background-repeat: repeat; /*repeat-x, repeat-y, no-repeat, inheri */
   background-attachment: scroll; /* fixel, scroll, inherit */
   font-family: 'Brush Script MT';

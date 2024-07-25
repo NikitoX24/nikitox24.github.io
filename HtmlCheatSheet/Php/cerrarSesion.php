@@ -2,4 +2,4 @@
 session_start();
 session_unset();
 session_destroy();
-header('location: /MyServer/HtmlCheatSheet/PHP.html');
+header('location: ../PHP.php'); // TODO:

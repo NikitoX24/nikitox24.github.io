@@ -10,18 +10,18 @@
   echo '<h2 class="centred">'.$logo_25px.' CheatSheets '.$logo_25px.'</h2><hr>';
 
   // CheatSheet iconos .html
-  echo '<a href="'.$html_dir.'.html"> <img src="'.$imgs_dir.'html.png" alt="html" class="icons_index"> </a> ';
-  echo '<a href="'.$css_dir. '.html"> <img src="'.$imgs_dir.'css.png"  alt="css"  class="icons_index"> </a> ';
-  echo '<a href="'.$js_dir.  '.html"> <img src="'.$imgs_dir.'js.png"   alt="js"   class="icons_index"> </a> ';
-  echo '<a href="'.$php_dir. '.html"> <img src="'.$imgs_dir.'php.png"  alt="php"  class="icons_index"> </a> ';
+  echo '<a href="'.$cheat_dir.'html.html"> <img src="'.$imgs_dir.'html.png" alt="html" class="icons_index"> </a> ';
+  echo '<a href="'.$cheat_dir.'css.html">  <img src="'.$imgs_dir.'css.png"  alt="css"  class="icons_index"> </a> ';
+  echo '<a href="'.$cheat_dir.'js.html">   <img src="'.$imgs_dir.'js.png"   alt="js"   class="icons_index"> </a> ';
+  echo '<a href="'.$cheat_dir.'php.html">  <img src="'.$imgs_dir.'php.png"  alt="php"  class="icons_index"> </a> ';
 
   echo '<br>';
   
   // CheatSheet iconos .php
-  echo '<a href="'.$html_dir.'.php"> <img src="'.$imgs_dir.'html.png" alt="html" class="icons_index"> </a> ';
-  echo '<a href="'.$css_dir. '.php"> <img src="'.$imgs_dir.'css.png"  alt="css"  class="icons_index"> </a> ';
-  echo '<a href="'.$js_dir.  '.php"> <img src="'.$imgs_dir.'js.png"   alt="js"   class="icons_index"> </a> ';
-  echo '<a href="'.$php_dir. '.php"> <img src="'.$imgs_dir.'php.png"  alt="php"  class="icons_index"> </a> ';
+  echo '<a href="'.$html_dir.'"> <img src="'.$imgs_dir.'html.png" alt="html" class="icons_index"> </a> ';
+  echo '<a href="'.$css_dir. '"> <img src="'.$imgs_dir.'css.png"  alt="css"  class="icons_index"> </a> ';
+  echo '<a href="'.$js_dir.  '"> <img src="'.$imgs_dir.'js.png"   alt="js"   class="icons_index"> </a> ';
+  echo '<a href="'.$php_dir. '"> <img src="'.$imgs_dir.'php.png"  alt="php"  class="icons_index"> </a> ';
   
 ?>
 <hr>
