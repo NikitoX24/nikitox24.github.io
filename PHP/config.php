@@ -15,4 +15,13 @@ $css_dir =  $cheat_dir."CSS.php";
 $js_dir =   $cheat_dir."JS.php";
 $php_dir =  $cheat_dir."php.php";
 
+
+echo '
+<script>
+  function loadHTML() { window.location.href = "'.$html_dir.'"; }
+  function loadCSS() { window.location.href = "'.$css_dir.'"; }
+  function loadJS() { window.location.href = "'.$js_dir.'"; }
+  function loadPHP() { window.location.href = "'.$php_dir.'"; }
+</script>
+';
 ?>

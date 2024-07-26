@@ -33,9 +33,9 @@ body {
   text-shadow: 3px 3px 7px grey;
   font-size: small; 
   max-width: 720px;
-  margin: auto;
+  margin: auto
 }
-header { margin-top: 60px; } /* cheats.php */
+header { margin-top: 60px; }
 
 /* CSS-JS (muestra seccion actual) */
 #textoFix{
@@ -100,7 +100,6 @@ button{
 /* #region Icons */
 .icons {
   height: 85px;
-  margin: 3px;
 }
 .filtrogris {
   height: 75px;
@@ -109,13 +108,37 @@ button{
 .iconosFlex{
   display: flex;
   justify-content: center;
-  height: 100px;
+  align-items: center;
+  height: 150px;
 }
 .iconosFlex a:hover{
   transform: scale(1.1);
   filter: none;
   filter: drop-shadow(0px 0px 15px gray);
 }
+
+    /* new icons */   
+    
+    /* hover */
+    .iconosFlex table:hover{
+      filter: none;
+      filter: drop-shadow(0 0 10px black);
+      transform: scale(1.2);
+      cursor: pointer;
+    }
+
+    /* text icon */
+    .iconosFlex table caption{
+      font-family: Georgia;
+      font-size: 1.5em;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+    
+    /* icon */
+    .iconosFlex table td img{
+      height: 85px;
+    }
 /* #endregion */
 
 section {

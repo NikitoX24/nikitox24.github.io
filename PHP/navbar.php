@@ -9,6 +9,9 @@
   </ul></nav>
 </div>
 
+<!-- Espacio q ocupa el Nav -->
+<div style="height: 60px;"></div>
+
 <!-- Go-Up icon -->
 <a id="up" href=#> &#9650; </a>
 

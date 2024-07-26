@@ -19,26 +19,21 @@ echo '<div class="round-index">';
   ';
 
   // CheatSheet iconos .php
-  echo '
-    <div class="iconosFlex">
-      <a href="'.$html_dir.'"> <img src="'.$imgs_dir.'html.png" alt="html" class="icons"> </a>
-      <a href="'.$css_dir. '"> <img src="'.$imgs_dir.'css.png"  alt="css"  class="icons"> </a>
-      <a href="'.$js_dir.  '"> <img src="'.$imgs_dir.'js.png"   alt="js"   class="icons"> </a>
-      <a href="'.$php_dir. '"> <img src="'.$imgs_dir.'php.png"  alt="php"  class="icons"> </a>
-    </div><hr>
-  ';
+  include("PHP/cheats.php");
 
   // CheatSheet iconos Lib-Fram
-  // echo '
-  //   <div class="iconosFlex">
-  //     <a href="HtmlCheatSheet\Librerias&Frameworks\Bootstrap\Bootstrap.html"> <img src="'.$imgs_dir.'bootstrap-icon.png" alt="html" class="icons"> </a>
-  //   </div><hr>
-  // ';
+  echo '
+    <div class="iconosFlex">
+      <a href="HtmlCheatSheet\Lib-Fram\Bootstrap\Bootstrap.html"> 
+        <img src="'.$imgs_dir.'bootstrap-icon.png" alt="html" class="icons"> 
+      </a>
+    </div><hr>
+  ';
   ?>
   <link rel="stylesheet" href="../HtmlCheatSheet/STYLE.css">
 
   <!-- Otros -->
-  <form action="../HtmlCheatSheet/Librerias&Frameworks/Bootstrap/Bootstrap.html">
+  <form action="../HtmlCheatSheet/Lib-Fram/Bootstrap/Bootstrap.html">
     <input type="submit" value="bootstrap.html" />
   </form>
   <form action="../Otros/Test.html">
@@ -60,10 +55,10 @@ echo '<div class="round-index">';
 
   <!-- Ejercicios -->
   <h3><u>Juegos</u></h3>
-  <form action="../Ejercicios/Ahorcado.html">
+  <form action="../Otros/Ejercicios/Ahorcado.html">
     <input type="submit" value="Ahorcado" />
   </form> <br>
-  <form action="../Ejercicios/TaTeTi.html">
+  <form action="../Otros/Ejercicios/TaTeTi.html">
     <input type="submit" value="TaTeTi" />
   </form>
 </div> <!-- fin del round -->
