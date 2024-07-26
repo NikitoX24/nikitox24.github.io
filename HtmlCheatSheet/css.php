@@ -1,45 +1,25 @@
-<!DOCTYPE html>
-<html lang="es-AR">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="STYLE.css">
-  <link rel="icon" href="../logo.png">
-  <title>CSS CheatSheet</title>
-</head>
+<?php
 
-<header>
-  <menu-component></menu-component>
-  <h1>CSS CheatSheet</h1>
+$title = "css";
+$color = "#003e1e"; // color navegador celu
+$back_color = "rgba(0, 0, 255, .05)";
+$shadow1 = "rgba(0, 119, 255, 0.164)";
+$shadow2 = "rgba(0, 0, 255, 0.1)";
 
-  <!-- iconos Cheatsheet -->
-  <div class="iconosFlex">
-    <a href="HTML.html"><img src="../Imgs/html.png" alt="html" class="icons filtrogris"></a>
-    <a href="CSS.html"><img src="../Imgs/css.png" alt="css" class="icons"></a>
-    <a href="JS.html"><img src="../Imgs/js.png" alt="js" class="icons filtrogris"></a>
-    <a href="PHP.html"><img src="../Imgs/php.png" alt="php" class="icons filtrogris"></a>
-  </div>
-  <style>
-    :root{
-      --border-color: rgba(0, 119, 255, 0.164);
-    }
-    section {
-      background-color: rgba(0, 0, 255, .05);
-      box-shadow: inset 0 40px 0 0 var(--border-color), 4px 4px 15px 5px rgba(0, 0, 255, 0.1);
-    }
-    @media screen and (max-width: 767px){
-      section { box-shadow: inset 0 27px 0 0 var(--border-color) !important; }
-    }
-  </style>
-</header>
+require("../PHP/config.php");
+include_once("../PHP/header.php");
+include_once("../PHP/navbar.php");
+include("../PHP/cheats.php");
+
+?>
+<link rel="stylesheet" href="../HtmlCheatSheet/STYLE.css">
 
 <body>
   <!-- Text -->
   <section id="Text">
 
     <!-- Bootstrap -->
-    <a href="../HtmlCheatSheet\Librerias&Frameworks\Bootstrap\Bootstrap.html"><img src="../Imgs/bootstrap-icon.png" alt="Bootstrap" height="50px"> </a>
+    <a href="../HtmlCheatSheet/Lib-Fram/Bootstrap/Bootstrap.html"><img src="../Imgs/bootstrap-icon.png" alt="Bootstrap" height="50px"> </a>
 
     <!-- Fuentes -->
     <fieldset>

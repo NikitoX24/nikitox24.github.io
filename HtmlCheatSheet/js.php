@@ -1,38 +1,18 @@
-<!DOCTYPE html>
-<html lang="es-AR">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="STYLE.css">
-  <title>JS CheatSheet</title>
-  <link rel="icon" href="../logo.png">
-</head>
+<?php
 
-<nav><menu-component></menu-component></nav>
-<header> 
-  <h1 class="titulo">JS CheatSheet</h1>
+$title = "css";
+$color = "#003e1e"; // color navegador celu
+$back_color = "rgba(0, 255, 0, .03)";
+$shadow1 = "rgba(0, 159, 0, 0.3)";
+$shadow2 = "rgba(0, 255, 38, 0.1)";
 
-  <!-- icons -->
-  <div class="iconosFlex">
-    <a href="HTML.html"><img src="../Imgs/html.png" alt="html" class="icons filtrogris"></a>
-    <a href="CSS.html"><img src="../Imgs/css.png" alt="css" class="icons filtrogris"></a>
-    <a href="JS.html"><img src="../Imgs/js.png" alt="js" class="icons"></a>
-    <a href="php.html"><img src="../Imgs/php.png" alt="php" class="icons filtrogris"></a>
-  </div>
-  <style>
-    :root{ 
-      --border-color: rgba(0, 159, 0, 0.3);
-    }
-    section {
-      background-color: rgba(0, 255, 0, .03);
-      box-shadow: inset 0 40px 0 0 var(--border-color), 4px 4px 15px 5px rgba(0, 255, 38, 0.1);
-    }
-    @media screen and (max-width: 767px){
-      section { box-shadow: inset 0 27px 0 0 var(--border-color) !important; }
-    }
-  </style>
-</header>
+require("../PHP/config.php");
+include_once("../PHP/header.php");
+include_once("../PHP/navbar.php");
+include("../PHP/cheats.php");
+
+?>
+<link rel="stylesheet" href="../HtmlCheatSheet/STYLE.css">
 
 <body>
   <!-- Fundamentos -->

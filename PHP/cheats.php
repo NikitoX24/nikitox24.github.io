@@ -3,6 +3,7 @@
 // Titulo CheatSheet
 if($title != "Index"){ echo '<h1 class="titulo">'.$title.' CheatSheet</h1>'; }
 
+// Iconos
 echo '
   <div class="iconosFlex"> 
     <table class="ch-HTML" onclick="loadHTML()"> <caption> HTML </caption> 
@@ -24,9 +25,10 @@ echo '
   if(!isset($back_color) && !isset($shadow1) && !isset($shadow2)){
     $back_color = "rgba(0, 0, 255, .05)";
     $shadow1 = "rgba(0, 119, 255, 0.164)";
-    $shadow2 = "rgba(0, 0, 255, 0.1)"; 
+    $shadow2 = "rgba(0, 0, 255, 0.1)";
   }
 
+  // Style
   echo '
   <style>
     /* section color */
