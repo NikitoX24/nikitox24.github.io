@@ -1,7 +1,6 @@
 <?php
 
-$title = "css";
-$color = "#003e1e"; // color navegador celu
+$title = "CSS";
 $back_color = "rgba(0, 0, 255, .05)";
 $shadow1 = "rgba(0, 119, 255, 0.164)";
 $shadow2 = "rgba(0, 0, 255, 0.1)";
@@ -19,7 +18,7 @@ include("../PHP/cheats.php");
   <section id="Text">
 
     <!-- Bootstrap -->
-    <a href="../HtmlCheatSheet/Lib-Fram/Bootstrap/Bootstrap.html"><img src="../Imgs/bootstrap-icon.png" alt="Bootstrap" height="50px"> </a>
+    <a href="../HtmlCheatSheet/Bootstrap.html"><img src="../Imgs/bootstrap-icon.png" alt="Bootstrap" height="50px"> </a>
 
     <!-- Fuentes -->
     <fieldset>

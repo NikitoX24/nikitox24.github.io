@@ -12,14 +12,14 @@ echo '<div class="round-index">';
   include("PHP/cheats.php");
 
   // CheatSheet iconos Lib-Fram
-  echo '
+  echo '    
     <div class="iconosFlex">
-      <a href="HtmlCheatSheet\Lib-Fram\Bootstrap\Bootstrap.html">
-        <img src="'.$imgs_dir.'bootstrap-icon.png" alt="BootStrap" class="icons"> 
-      </a>
-    </div><hr>
+      <table class="ch-BS" onclick="loadBS()"> <caption> BtSp </caption> 
+        <td><img src="'.$imgs_dir.'bootstrap-icon.png"></td> </table>
+    </div>
   ';
   ?>
+  <hr>
   <link rel="stylesheet" href="../HtmlCheatSheet/STYLE.css">
 
   <!-- Otros -->

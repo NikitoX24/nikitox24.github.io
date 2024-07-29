@@ -1,7 +1,6 @@
 <?php
 
-$title = "css";
-$color = "#003e1e"; // color navegador celu
+$title = "JS";
 $back_color = "rgba(0, 255, 0, .03)";
 $shadow1 = "rgba(0, 159, 0, 0.3)";
 $shadow2 = "rgba(0, 255, 38, 0.1)";

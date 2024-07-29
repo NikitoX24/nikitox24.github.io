@@ -15,6 +15,8 @@ $css_dir =  $cheat_dir."CSS.php";
 $js_dir =   $cheat_dir."JS.php";
 $php_dir =  $cheat_dir."php.php";
 
+$bs_dir =  $cheat_dir."Bootstrap.php";
+
 
 echo '
 <script>
@@ -22,6 +24,8 @@ echo '
   function loadCSS() { window.location.href = "'.$css_dir.'"; }
   function loadJS() { window.location.href = "'.$js_dir.'"; }
   function loadPHP() { window.location.href = "'.$php_dir.'"; }
+
+  function loadBS() { window.location.href = "'.$bs_dir.'"; }
 </script>
 ';
 ?>

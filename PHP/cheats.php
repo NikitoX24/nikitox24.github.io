@@ -1,6 +1,6 @@
 <?php
 
-// Titulo CheatSheet
+// Titulo CheatSheet (ignorar si es index)
 if($title != "Index"){ echo '<h1 class="titulo">'.$title.' CheatSheet</h1>'; }
 
 // Iconos
@@ -22,7 +22,7 @@ echo '
 
 
   // si no tienen colores ignorar
-  if(!isset($back_color) && !isset($shadow1) && !isset($shadow2)){
+  if(!isset($back_color) || !isset($shadow1) || !isset($shadow2)){
     $back_color = "rgba(0, 0, 255, .05)";
     $shadow1 = "rgba(0, 119, 255, 0.164)";
     $shadow2 = "rgba(0, 0, 255, 0.1)";
@@ -35,6 +35,9 @@ echo '
     section {
       background-color: '.$back_color.';
       box-shadow: inset 0 40px 0 0 '.$shadow1.', 4px 4px 15px 5px '.$shadow2.';
+    }
+    @media screen and (max-width: 767px){
+      section { box-shadow: inset 0 27px 0 0 '.$shadow1.' !important; }
     }
 
     /* icon actual */

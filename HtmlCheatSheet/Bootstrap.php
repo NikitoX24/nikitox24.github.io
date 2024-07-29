@@ -1,14 +1,16 @@
-<!DOCTYPE html>
-<html lang='es'>
-<head>
-  <meta chatset='UTF-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
-  <meta http-equiv="x-ua-compatible" content="ie-edge"> <!-- Compatible con Internet Explorer y Edge -->
-  <link rel="stylesheet" href="../../../HtmlCheatSheet/STYLE.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <title>Bootstrap</title>
-</head>
-<h1 class="TextoCentrado">Bootstrap CheatSheet</h1> <br>
+<?php
+$title = "BS";
+
+require("../PHP/config.php");
+include_once("../PHP/navbar.php");
+include_once("../PHP/header.php");
+include("../PHP/cheats.php");
+
+?>
+
+<link rel="stylesheet" href="STYLE.css">
+<link rel="stylesheet" href="Lib-Fram/Bootstrap/css/bootstrap.min.css">
+
 <style>
   html {
     scroll-behavior: auto !important;
@@ -66,9 +68,7 @@
     background-color: white;
     padding-inline: 15px;
   }
-  .container{
-    margin-block: 15px;
-  }
+  .container{ margin-block: 15px; }
   .bordeBase{ background-color: white; }
   .borde1{ background-color: aquamarine; }
   .borde2{ background-color: olivedrab; }
@@ -1627,6 +1627,6 @@
     const spaces2 = document.querySelectorAll("NTab2");
     spaces2.forEach(element => { element.innerHTML = doubleSpace.repeat(); });
   </script>
-  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="Lib-Fram/Bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

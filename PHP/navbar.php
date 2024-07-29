@@ -36,6 +36,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 1em;
   }
   #navbar nav ul li {
     display: inline-block;

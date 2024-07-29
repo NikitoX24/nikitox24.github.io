@@ -1,16 +1,10 @@
 /* RESPONSIVE */
 
-@media (max-width:480px){
-  /* celular */
-}
+@media (max-width:480px){ /* celular */ }
 
-@media (min-width:481px) and (max-width:980px){
-  /* tablet */
-}
+@media (min-width:481px) and (max-width:980px){ /* tablet */ }
 
-@media (min-width:981px) {
-  /* pc */
-}
+@media (min-width:981px) { /* pc */ }
 
 /* ------------------------------------------------- */
 
@@ -36,19 +30,6 @@ body {
 }
 header { margin-top: 60px; }
 
-/* CSS-JS (muestra seccion actual) */
-#textoFix{
-  margin: 0;
-  right: 0;
-  bottom: 0;
-  font-size: 2em;
-  position: fixed;
-  font-family: Arial;
-  background-color: rgba(128, 128, 128, 0.448);
-  padding: 5px;
-  border-radius: 5px;
-  border: 1px solid black;
-}
 
 /* HTML, CSS, JS */
 NVar{ color: black; }
@@ -97,47 +78,32 @@ button{
 }
 
 /* #region Icons */
-.icons {
-  height: 85px;
-}
-.filtrogris {
-  height: 75px;
-  filter: blur(1.5px) grayscale(75%);
-}
 .iconosFlex{
   display: flex;
   justify-content: center;
   align-items: center;
   height: 150px;
 }
-.iconosFlex a:hover{
-  transform: scale(1.1);
+/* hover */
+.iconosFlex table:hover{
   filter: none;
-  filter: drop-shadow(0px 0px 15px gray);
+  filter: drop-shadow(0 0 10px black);
+  transform: scale(1.2);
+  cursor: pointer;
 }
-
-    /* new icons */   
-    
-    /* hover */
-    .iconosFlex table:hover{
-      filter: none;
-      filter: drop-shadow(0 0 10px black);
-      transform: scale(1.2);
-      cursor: pointer;
-    }
-
-    /* text icon */
-    .iconosFlex table caption{
-      font-family: Georgia;
-      font-size: 1.5em;
-      font-weight: 900;
-      text-transform: uppercase;
-    }
-    
-    /* icon */
-    .iconosFlex table td img{
-      height: 85px;
-    }
+/* text icon */
+.iconosFlex table caption{
+  caption-side: top;
+  text-align: center;
+  font-family: Georgia;
+  font-size: 1.5em;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+/* icon */
+.iconosFlex table td img{
+  height: 85px;
+}
 /* #endregion */
 
 section {
@@ -146,7 +112,6 @@ section {
   margin-top: 5px;
   margin-bottom: 25px; 
   border: 1px solid grey;
-  background-color: rgba(128, 128, 128, 0.227);
 }
 
 h1{
@@ -322,4 +287,18 @@ Flecha::before{ content: "➜"; font-size: 1.5em; }
   position: fixed;
   top: 96%;
   left: 10px;
+}
+
+/* CSS-JS (muestra seccion actual) */
+#textoFix{
+  margin: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 2em;
+  position: fixed;
+  font-family: Arial;
+  background-color: rgba(128, 128, 128, 0.448);
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
 }
