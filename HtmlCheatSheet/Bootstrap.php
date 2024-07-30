@@ -288,17 +288,17 @@ include("../PHP/cheats.php");
 
   <!-- Tamaños -->
   <div class="section">
-    <h3> TamaNos </h3>
+    <h3> Tamanios </h3>
     <div class="container">
       <div class="bordeBase" style="height: 200px;">
         <div class="borde2 w-50 h-75"> 
           class=" w-50 &nbsp; h-75 " <br>
-          (width 50%) (height 75%) 
+          (width 50%) (height 75%)
         </div>
       </div>
     </div>
     <div class="container">
-      <div class="row bordeBase h-100">
+      <div class="row bordeBase" style="height: 200px;">
         <div class="m-5" style="background-color: olivedrab;">
           m-5 (margin: 5px) <br> mt, mr, ml, mb, (0-5); <br><br>
           p-5 (padding: 5px) <br> pt, pr, pl, pb, (0-5);

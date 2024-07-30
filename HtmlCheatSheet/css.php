@@ -18,7 +18,7 @@ include("../PHP/cheats.php");
   <section id="Text">
 
     <!-- Bootstrap -->
-    <a href="../HtmlCheatSheet/Bootstrap.html"><img src="../Imgs/bootstrap-icon.png" alt="Bootstrap" height="50px"> </a>
+    <a href="<?php echo $bs_dir;?>"><img src="../Imgs/bootstrap-icon.png" alt="Bootstrap" height="50px"> </a>
 
     <!-- Fuentes -->
     <fieldset>

@@ -93,7 +93,6 @@ SELECT * FROM clientes WHERE nombre = "John"; -- mostrar los usuarios con nombre
 SELECT * FROM clientes WHERE nombre = "John" OR nombre= "David"; -- mostrar los usuarios con esos nombres.
 SELECT * FROM clientes WHERE nombre = "John" AND apellido= "Wick"; -- mostrar los usuarios con ese nombre y apellido.
 
--- TODO: --
 SELECT * FROM clientes WHERE id_cliente > 3; -- mostrar los registros despues del id 3.
 SELECT * FROM clientes WHERE id_cliente != 4; -- mostrar los registros menos el id 4.
 

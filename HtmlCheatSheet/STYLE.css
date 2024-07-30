@@ -77,34 +77,6 @@ button{
   cursor: pointer;
 }
 
-/* #region Icons */
-.iconosFlex{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 150px;
-}
-/* hover */
-.iconosFlex table:hover{
-  filter: none;
-  filter: drop-shadow(0 0 10px black);
-  transform: scale(1.2);
-  cursor: pointer;
-}
-/* text icon */
-.iconosFlex table caption{
-  caption-side: top;
-  text-align: center;
-  font-family: Georgia;
-  font-size: 1.5em;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-/* icon */
-.iconosFlex table td img{
-  height: 85px;
-}
-/* #endregion */
 
 section {
   border-radius: 12px;
@@ -247,6 +219,38 @@ Flecha::before{ content: "➜"; font-size: 1.5em; }
 
 
 
+/* #region Icons */
+.iconosFlex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+.iconosFlex table{
+  transition: all 200ms;
+  /* filter: blur(1.5px); */
+}
+/* hover */
+.iconosFlex table:hover{
+  filter: none;
+  filter: drop-shadow(0 0 10px black);
+  transform: scale(1.2);
+  cursor: pointer;
+}
+/* text icon */
+.iconosFlex table caption{
+  caption-side: top;
+  text-align: center;
+  font-family: Georgia;
+  font-size: 1.5em;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+/* icon */
+.iconosFlex table td img{
+  height: 85px;
+}
+/* #endregion */
 
 
 

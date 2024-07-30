@@ -59,10 +59,11 @@
     font-size: 3em;
     color: black;
     position: fixed;
-    bottom: 20px;
-    right: 10px;
+    bottom: 40px;
+    right: 40px;
     text-decoration: none;
     filter: drop-shadow(1px 1px 2px gray);
+    transition: all 200ms;
   }
   #up:hover{
     font-size: 4em;

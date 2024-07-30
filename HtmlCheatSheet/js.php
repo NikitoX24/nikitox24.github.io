@@ -597,8 +597,14 @@ include("../PHP/cheats.php");
     <!-- Escribir en el Doc -->
     <fieldset>
       <legend> Escribir en el Doc </legend>
-      <div class="cod">
-        <NBlue><u>document</u></NBlue>.body.<NPurp>innerHTML</NPurp> = "Algun Texto";
+      <div class="flex">
+        <div class="cod">
+          <NBlue><u>document</u></NBlue>.body.<NPurp>innerHTML</NPurp> = "<NGreen>Algun Texto</NGreen>"; <br> <NGray>(Reemplazar toda la pag.)</NGray>
+        </div>
+        <div class="cod">
+          document<NBlue>.write</NBlue>("<NGreen>Algun Texto</NGreen>");
+          <br> <NGray>(Agregar en la pos del script)</NGray>
+        </div>
       </div>
     </fieldset>
 
