@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Parallax</title>
+</head>
+<body>
+
+  <header>
+    <a href="#" class="logo">Logo</a>
+    <ul class="navigation">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Home</a></li>
+    </ul>
+  </header>
+  <section class="parallax">
+    <h2 id="text">Parallax Scrolling</h2>
+    <img src="Imgs/monutain_01.png" alt="m1">
+    <img src="Imgs/trees_02.png" alt="t2">
+    <img src="Imgs/monutain_02.png" alt="m2">
+    <img src="Imgs/trees_01.png" alt="t1">
+    <img src="Imgs/man.png" alt="man">
+    <img src="Imgs/plants.png" alt="plants">
+  </section>
+  <section class="sec">
+    <h2>Parallax Scrolling Website</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque aliquid enim in distinctio non optio voluptates nulla sunt, deserunt ipsum placeat praesentium similique? Tenetur laboriosam minima quam, accusantium autem atque.
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe in facere sapiente veniam adipisci reiciendis dicta ullam maxime distinctio ut omnis deleniti expedita dolorem corrupti, molestiae quod eaque iure amet sint voluptas. Sed rerum, facilis, nam culpa error placeat accusamus magnam est fugiat ex molestiae. Eius quis exercitationem, tenetur commodi vel aliquid accusamus sed, vero voluptates at, libero facilis veniam ad quod! Numquam ad facilis molestiae asperiores atque porro quisquam ex nisi optio, similique quo, laboriosam delectus libero unde quas repellat dolor sit ipsam cupiditate itaque? Aut facilis similique <br> earum nisi incidunt fugit nemo sed dolor ipsum, totam praesentium eos, ab porro inventore unde accusamus doloribus provident doloremque dolore! Eius a, amet blanditiis dolor iure, modi quibusdam facilis ducimus consequatur doloremque numquam aspernatur consectetur commodi culpa eveniet sit! Distinctio ex ratione sint deleniti molestias quae accusamus corrupti itaque numquam perspiciatis nemo blanditiis repellat eligendi in nesciunt ea, porro vitae quisquam quo ut tenetur facere delectus temporibus nam? Blanditiis incidunt possimus quisquam, eum explicabo rem eveniet adipisci quasi accusamus quae totam. Fugiat, maxime tempora id repellendus enim nesciunt quisquam voluptas amet aut veritatis, odit nostrum. Natus similique repudiandae voluptate minima odit ab! Vitae corporis vero non beatae sequi porro quibusdam est illum iusto architecto adipisci amet, voluptatum qui ex quidem facere excepturi eum reprehenderit odit nemo quos. Dolorum, at ullam! Asperiores, exercitationem vel. Dolorem beatae, provident nesciunt iusto quia asperiores sed est vitae minus assumenda optio perferendis cum sapiente odio! Ea quis quisquam optio consequuntur, illo voluptate natus obcaecati architecto distinctio ipsam sed veritatis eligendi magni, rerum et eius illum explicabo commodi provident voluptatem veniam. Similique cupiditate magnam explicabo<br><br> blanditiis esse ipsa quidem obcaecati voluptatem veniam reprehenderit, aspernatur suscipit doloribus aut odit minima,<br><br> eius dolores nam possimus sapiente dolorum id. Nemo quos quod rerum placeat mollitia, cum iusto excepturi quia temporibus. Dignissimos dicta aperiam ipsam consectetur quasi quo aliquam distinctio corrupti fugiat odit omnis iste quidem eum, alias temporibus expedita magni praesentium officiis dolore sint. Unde provident eos repellat odio amet animi assumenda, vitae ratione quod labore, nisi quaerat quasi aperiam commodi voluptas dolore sit eligendi harum omnis nostrum reprehenderit beatae. Maxime mollitia corporis expedita suscipit, non libero dolore blanditiis amet praesentium voluptatem dignissimos deserunt beatae exercitationem dicta nemo tempore. At molestias quasi, culpa excepturi mollitia unde voluptatibus nam. Incidunt in iusto odit dolores labore nam itaque quidem vel sed corrupti at debitis natus sapiente ratione esse cupiditate, impedit maiores quia mollitia distinctio iure. Dolor harum, ipsam dolorem ipsum obcaecati nisi<br>  tenetur inventore placeat ea sunt optio, quos quidem, doloremque est? Hic maiores ipsum nemo consectetur harum qui, autem officia quasi earum cupiditate iste dolorum amet possimus, sit non cum eveniet quas nulla. In cupiditate recusandae nisi praesentium vel mollitia nobis tempore, adipisci incidunt rem, quam ut ipsum placeat quod iste qui sint natus. At fuga consequatur, iste odio officiis reiciendis ad id eveniet fugiat repudiandae veritatis excepturi accusantium amet aut repellendus reprehenderit debitis quidem atque animi corporis ipsa! Cum laboriosam eius illum incidunt distinctio ullam culpa aut fugiat. Blanditiis, ipsum?
+    </p>
+
+  </section>
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+    body{
+      overflow-x: hidden;
+      background: #fff;
+      min-height: 100vh;
+    }
+    header{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 30px 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .logo{
+      color: #112434;
+      font-weight: 700;
+      font-size: 2em;
+      text-decoration: none;
+    }
+    .navigation{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+    .navigation li{
+      list-style: none;
+    }
+    .navigation li a{
+      text-decoration: none;
+      padding: 6px;
+      color: #112434;
+      border-radius: 20px;
+    }
+    .navigation li a:hover, 
+    .navigation li a.active{
+      background: #112434;
+      color: #fff;
+    }
+
+    /* Parallax */
+    .parallax{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .parallax img{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      pointer-events: none;
+    }
+    #text{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 4em;
+      color: #112434;
+    }
+    .sec{
+      position: relative;
+      padding: 100px;
+      background: #112434;
+    }
+    .sec h2{
+      font-size: 3em;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .sec p{
+      font-size: 1em;
+      color: #fff;
+      font-weight: 300;
+    }
+
+
+    
+  </style>
+
+</body>
+</html>

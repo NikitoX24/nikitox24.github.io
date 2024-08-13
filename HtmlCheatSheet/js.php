@@ -16,9 +16,8 @@ include("../PHP/cheats.php");
 <body>
   <!-- Fundamentos -->
   <section id="Fundamentos">
-
     <fieldset> <!-- Variable -->
-      <legend> Variables </legend>
+      <legend> Variables (tipado dinamico) </legend>
       <div class="flex">
         <div class="cod">
           <NPurp>let</NPurp> a <NPurp>=</NPurp> <NOrg>true</NOrg>; <NGray> // privada.</NGray> <br>
@@ -123,6 +122,8 @@ include("../PHP/cheats.php");
         <!-- ------------------------------------- --> <hr> <!-- ------------------------------------- -->
         <NGray>string =</NGray> texto.<NBlue>replace</NBlue>("<NGreen>mundo", "amigos</NGreen>"); <NGray>// (reemplazar) </NGray> <br>
         <NGray>string =</NGray> texto.<NBlue>trim</NBlue>(); <NGray>// (quitar espacios antes y dps)</NGray> <br>
+        <NGray>string =</NGray> texto.<NBlue>trimStart</NBlue>(); <NGray>// (quitar espacios antes)</NGray> <br>
+        <NGray>string =</NGray> texto.<NBlue>trimEnd</NBlue>(); <NGray>// (quitar espacios dps)</NGray> <br>
         <NGray>string =</NGray> texto.<NBlue>toUpperCase / toLowerCase</NBlue>(); <NGray>// (transform)</NGray> <br>
         <NGray>string =</NGray> texto.<NBlue>concat</NBlue>("<NGreen>_</NGreen>", var); <NGray>// (unir strings)</NGray> <br>
         <NGray>string =</NGray> texto.<NBlue>repeat</NBlue>(<NOrg>2</NOrg>); <NGray>// (repetir)</NGray> <br>
@@ -283,6 +284,16 @@ include("../PHP/cheats.php");
             <NPurp>var</NPurp> array=["<NGreen>Juan</NGreen>", "<NGreen>David</NGreen>"];<br>
             <NBlue>myFunc</NBlue>(...array);
         </div>
+      </div> <hr>
+
+      <b>Funcion de Funcion</b>
+      <div class="cod">
+        <NPurp>const</NPurp> sayHiFromFunction = (fn) <NPurp> =></NPurp> { <br>
+          &nbsp; <NAqua>return</NAqua> <NBlue>fn</NBlue>("<NGreen>Miguel</NGreen>") <br>
+        } <br>
+        <NBlue>sayHiFromFunction</NBlue>((name)) <NPurp> => </NPurp>{ <br>
+          console.<NPurp>log</NPurp>(`<NGreen>Hola</NGreen> ${name}`) <br>
+        }
       </div>
     </fieldset>
 
@@ -372,19 +383,34 @@ include("../PHP/cheats.php");
     </fieldset>
     
     <fieldset> <!-- Bucles For -->
-      <legend> Bucle For (ES6) </legend>
+      <legend> Bucles (ES6) </legend>
+      <!-- For -->
       <div class="flex">
         <div class="cod width100">
-          <u><b>For In:</b></u> <NGray>//  (Solo para Objetos Literales) </NGray> <br>
+          <u><b>For In:</b></u> <NGray>//  (Objetos Literales) </NGray> <br>
           <NPurp>let</NPurp> obj <NPurp>=</NPurp> {a:<NOrg>1</NOrg>, b:<NOrg>2</NOrg>, c:<NOrg>3</NOrg>}; <br>
           <font class="aqua">for</font> (<NPurp>let</NPurp> v <NPurp>in</NPurp> obj) { <br>
             &nbsp; document.<NBlue>write</NBlue>(v); <br> }
         </div>
         <div class="cod width100">
-          <u><b>For Of:</b></u> <NGray>// (Solo para Arrays o Strings) </NGray> <br>
+          <u><b>For Of:</b></u> <NGray>// (Arrays o Strings) </NGray> <br>
           <NPurp>let</NPurp> obj <NPurp>=</NPurp> ["<NGreen>hola</NGreen>", "<NGreen>hi</NGreen>"]; <br>
           <font class="aqua">for</font> (<NPurp>let</NPurp> v <NPurp>of</NPurp> obj) { <br>
             &nbsp; document.<NBlue>write</NBlue>(v); <br> }
+        </div>
+      </div>
+      <!-- While -->
+      <div class="flex">
+        <div class="cod width100">
+          <u><b>While:</b></u> <br>
+          <NAqua>while</NAqua> (condición) { <br>
+            &nbsp; <NGray>// comandos...</NGray> <br> }
+        </div>
+        <div class="cod width100">
+          <u><b>While:</b></u> <br>
+          <NPurp>let</NPurp> a = <NOrg>1</NOrg>; <br>
+          <NAqua>while</NAqua> (a < 10) { <br>
+            &nbsp; a++; <br> }
         </div>
       </div>
     </fieldset>
@@ -614,15 +640,15 @@ include("../PHP/cheats.php");
 
       Buscar y usar <b>ID</b>:
       <div class="flex">
-        <div class="cod"> <NPurp>var</NPurp> elem = document.<NBlue>getElementById</NBlue>("<NGreen>id</NGreen>"); </div>
+        <div class="cod"> <NPurp>const</NPurp> elem = document.<NBlue>getElementById</NBlue>("<NGreen>id</NGreen>"); </div>
         <div class="cod"> elem.innerHTML = "<NGreen>Hello World!</NGreen>"; </div>
       </div> <br>
 
       Buscar y usar <b>Class</b>:
       <div class="flex">
         <div class="cod"> 
-          <NPurp>var</NPurp> arr = document.<NBlue>getElementsByClassName</NBlue>("<NGreen>className</NGreen>"); <br>
-          <NPurp>var</NPurp> arr = document.<NBlue>querySelector</NBlue>("<NGreen>.className</NGreen>");
+          <NPurp>const</NPurp> arr = document.<NBlue>getElementsByClassName</NBlue>("<NGreen>className</NGreen>"); <br>
+          <NPurp>const</NPurp> arr = document.<NBlue>querySelector</NBlue>("<NGreen>.className</NGreen>");
         </div>
         <div class="cod"> 
           arr[<NOrg>0</NOrg>].innerHTML = "<NGreen>Hiii</NGreen>"; <br>
@@ -633,9 +659,9 @@ include("../PHP/cheats.php");
       Buscar y usar <b>Tag</b>:
       <div class="flex">
         <div class="cod"> 
-          <NPurp>var</NPurp> arr = document.<NBlue>getElementsByTagName</NBlue>("<NGreen>tag</NGreen>"); <br>
-          <NPurp>var</NPurp> arr = document.<NBlue>querySelectorAll</NBlue>("<NGreen>tag</NGreen>"); <br>
-          <NPurp>var</NPurp> arr = document.<NBlue>querySelector</NBlue>("<NGreen>a[class="name"]</NGreen>");
+          <NPurp>const</NPurp> arr = document.<NBlue>getElementsByTagName</NBlue>("<NGreen>tag</NGreen>"); <br>
+          <NPurp>const</NPurp> arr = document.<NBlue>querySelectorAll</NBlue>("<NGreen>tag</NGreen>"); <br>
+          <NPurp>const</NPurp> arr = document.<NBlue>querySelector</NBlue>("<NGreen>a[class="name"]</NGreen>");
         </div>
         <div class="cod">
           <font class="aqua">for</font> (<NPurp>var</NPurp> x = <NOrg>0</NOrg>; x &lt;arr.length; x++) { <br>
@@ -826,20 +852,27 @@ include("../PHP/cheats.php");
   <section id="BOM">
     <fieldset> <!-- Window -->
     <legend> Window </legend>
-      <div class="cod">
-        window.name = "Ventanaa"; <br> <br>
-        
-        <NPurp>let</NPurp> dato = "<NGreen>Name</NGreen>: " + window.name; <NGray>// Nombre de la ventana</NGray> <br>
-        <NPurp>let</NPurp> ancho = "<NGreen>Ancho</NGreen>: " + window.outerWidth; <NGray>// incluye scroll</NGray> <br>
-        <NPurp>let</NPurp> alto = "<NGreen>Alto</NGreen>: " + window.outerHeight; <NGray>// incluye pestañas y todo</NGray> <br>
-        <NPurp>let</NPurp> anchoInt = "<NGreen>Ancho interior</NGreen>: " + window.innerWidth; <NGray>// sin scroll</NGray> <br>
-        <NPurp>let</NPurp> altoInt = "<NGreen>Alto interior</NGreen>: " + window.innerHeight; <NGray>// solo interior</NGray> <br>
-        <NPurp>let</NPurp> scrollX = "<NGreen>scrollX</NGreen>: " + window.scrollX; <NGray>// Scroll</NGray> <br>
-        <NPurp>let</NPurp> scrollY = "<NGreen>scrollY</NGreen>: " + window.scrollY; <NGray>// Scroll</NGray> <br>
-        <NPurp>let</NPurp> distancia = "<NGreen>distancia</NGreen>: " + window.screenX; <NGray>// izq pantalla, hasta la ventana</NGray>
+      <div class="cod">        
+        window.name = "Ventana"; <NGray>// Nombre de la ventana</NGray> <br>
+        window.location = "<script>document.write(window.location);</script>";<br><br>
+
+        window.outerWidth; <NGray>// incluye scroll</NGray> <br>
+        window.outerHeight; <NGray>// incluye pestañas y todo</NGray> <br>
+        window.innerWidth; <NGray>// sin scroll</NGray> <br>
+        window.innerHeight; <NGray>// solo interior</NGray> <br>
+        window.scrollX; <NGray>// Scroll</NGray> <br>
+        window.scrollY; <NGray>// Scroll</NGray> <br>
+        window.screenX; <NGray>// izq pantalla, hasta la ventana</NGray> <br>
+        screen.availHeight; <NGray>// Tamaño Alto pantalla</NGray> <br>
+        screen.availWidth; <NGray>// Tamaño Ancho pantalla</NGray><br>
+        screen.colorDepth; <NGray>// Profundidad de color pantalla</NGray> <hr>
+
+        navigator.appName / appVersion; <NGray>// Navegador + SO / version</NGray> <br>
+        navigator.cookieEnabled; <NGray>// Cookies</NGray> <br>
       </div>
       <div class="cod">
-        ventana = window.<NBlue>open</NBlue>("<NGreen>name.html</NGreen>", "<NGreen>_black</NGreen>", "<NGreen>width=500 height=300</NGreen>"); <NGray>// Abrir</NGray> <br> <br>
+        ventana = window.<NBlue>open</NBlue>(); <NGray>// Abrir Pestaña nueva</NGray> <br>
+        ventana = window.<NBlue>open</NBlue>("<NGreen>name.html</NGreen>", "<NGreen>_blank</NGreen>", "<NGreen>width=500 height=300</NGreen>"); <NGray>// Abrir Ventana nueva</NGray> <br> <br>
       
         ventana.<NBlue>resizeBy</NBlue>(100,100); <NGray>// +100</NGray> <br>
         ventana.<NBlue>resizeTo</NBlue>(100,100); <NGray>// =100</NGray> <br> <br>
@@ -853,8 +886,6 @@ include("../PHP/cheats.php");
       <div class="cod">
         console.log(window.frame().length) <br>
         console.log(window.history) <br>
-        console.log(window.navigator) <br>
-        console.log(window.screen)
       </div>
     </fieldset>
   </section>
@@ -865,7 +896,7 @@ include("../PHP/cheats.php");
     <div class="flex">
       <!-- tipos -->
       <fieldset class="width100" style="column-count: 2;"> 
-      <legend> Tipos de Eventos </legend>
+      <legend> Tipos de Eventos - <a href="../Otros/eventos.html">(Ejemplos)</a></legend>
         onfocus - onblur <br>
         onload - onunload <br>
         onclick - onchange <br>
@@ -898,7 +929,7 @@ include("../PHP/cheats.php");
       <legend> Evento desde JS </legend>
         <div class="cod">
           <NPurp>let</NPurp> <u>elemento</u> = document.<NBlue>getElementById</NBlue>('<NGreen>demo7</NGreen>'); <br><br>
-          elemento.<b><u><NBlue>evento</NBlue></u></b> = <NPurp>function</NPurp>(){ <br> &nbsp; <NGray>// Codigo...</NGray> <br> }
+          <u>elemento</u>.<b><NBlue>evento</NBlue></b> = <NPurp>function</NPurp>(){ <br> &nbsp; <NGray>// Codigo...</NGray> <br> }
         </div>
       </fieldset>
     </div>
@@ -1067,6 +1098,10 @@ include("../PHP/cheats.php");
       <div class="cod">
         function randomNumber(min, max) { <br>
           &nbsp; return Math.floor(Math.random() * (max - min)) + min; <br> }
+      </div>
+      
+      <div class="cod">
+        Math.round(Math.random()*5)
       </div>
       <details>
         <summary>Metodos de Math</summary>

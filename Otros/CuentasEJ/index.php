@@ -1,3 +1,11 @@
+<?php
+  session_start();
+  if(isset($_SESSION["correo"])){
+    echo '
+      <script> window.location = "bienvenida.php"; </script>
+    ';
+  }
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -133,8 +141,6 @@
         position: relative;
         top: -185px;
         left: 10px;
-
-        /*La transicion va despues del codigo JS*/
         transition: left 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
       }
 

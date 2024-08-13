@@ -4,12 +4,10 @@
 <script>
   printTime();
   function printTime() {
-    var d = new Date();
-    var hours = d.getHours();
-    var mins = d.getMinutes();
-    var secs = d.getSeconds();
-    if(secs < 10) { secs = "0"+secs }
-    if(mins < 10) { mins = "0"+mins }
+    let d = new Date();
+    let hours = d.getHours();
+    let mins = String(d.getMinutes()).padStart(2, "0");
+    let secs = String(d.getSeconds()).padStart(2, "0");
     var horaPS = document.getElementById("HoraPS");
     horaPS.innerHTML = "Hora: " + hours+":"+mins+":"+secs;
   }
@@ -26,3 +24,8 @@
 
 </body>
 </html>
+
+<!-- 
+  var mins = d.getMinutes();
+  var secs = d.getSeconds();
+-->

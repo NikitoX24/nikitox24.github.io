@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Megamenu</title>
+</head>
+<body>
+
+  <ul class="menu">
+    <li><a href="#">Inicio</a></li>
+    <li><a href="#">Nosotros</a>
+      <ul class="menu1">
+        <li><a href="#">Historia</a></li>
+        <li><a href="#">Personal</a></li>
+        <li><a href="#">Mision</a></li>
+        <li><a href="#">Vision</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Portafolio</a></li>
+    <li><a href="#">Servicios</a></li>
+    <li><a href="#">Contactos</a></li>
+  </ul>
+
+  <style>
+    .menu > li{
+      width: 150px;
+      height: 35px;
+      float: left;
+      overflow: hidden;
+      list-style: none;
+      border: 1px solid gray;
+
+    }
+
+    .menu > li a{
+      width: 150px;
+      height: 35px;
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      padding-top: 8px;
+    }
+
+    .menu1{
+      position: absolute;
+      overflow: hidden;
+      width: 800px;
+      float: left;
+      left: 0px;
+      background-color: #333;
+      transition: 1s;
+      height: 0px;
+    }
+
+    .menu1 a{
+      color: #fff;
+      font-family: arial;
+      font-weight: bold;
+    }
+
+    .menu1 li{
+      list-style: none;
+      overflow: hidden;
+      width: 49%;
+      float: left;
+    }
+    .menu1 p{
+      color: #eee;
+      font-family: arial;
+    }
+    .menu > li:hover .menu1{
+      height: 500px;
+    }
+  </style>
+
+</body>
+</html>

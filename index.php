@@ -26,7 +26,7 @@ echo '<div class="round-index">';
   <form action="../Otros/Test.html">
     <input type="submit" value="Test" />
   </form>
-  <form action="../Otros/CuentasEJ/CuentasEJ.html">
+  <form action="../Otros/CuentasEJ/index.php">
     <input type="submit" value="Cuentas PHP" />
   </form>
   <form action="../Otros/ConvertirTexto.html">

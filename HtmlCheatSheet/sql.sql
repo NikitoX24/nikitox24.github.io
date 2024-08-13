@@ -9,7 +9,7 @@
 -------------------------------------------
 CREATE USER nico @localhost IDENTIFIED BY "123456"; -- Crear Usuario:
 CREATE DATABASE proyecto; --  Crear Base de Datos.
-  DROP DATABASE IF EXISTS proyecto; -- borrar Base de Datos.  -- IF EXISTS (opcional)
+DROP DATABASE IF EXISTS proyecto; -- borrar Base de Datos.  -- IF EXISTS (opcional)
 
 show databases; -- Mostrar todas las Base de Datos.
 
@@ -60,7 +60,7 @@ ALTER TABLE followers ADD CONSTRAINT check_follower_id CHECK (follower_id != fol
 
 -----------------------------------------------------------------------------
 -- importar archivo .csv
-LOAD DATA LOCAL INFILE "C:...../clientes.csv"        -- John;Wick;43;12545346
+LOAD DATA LOCAL INFILE "C:..../clientes.csv"        -- John;Wick;43;12545346
   INTO TABLE clientes
   FIELDS TERMINATED BY ";" LINES TERMINATED BY "\n"
   (nombre, apellido, edad, telefono);
@@ -93,21 +93,15 @@ SELECT * FROM clientes WHERE nombre = "John"; -- mostrar los usuarios con nombre
 SELECT * FROM clientes WHERE nombre = "John" OR nombre= "David"; -- mostrar los usuarios con esos nombres.
 SELECT * FROM clientes WHERE nombre = "John" AND apellido= "Wick"; -- mostrar los usuarios con ese nombre y apellido.
 
-SELECT * FROM clientes WHERE id_cliente > 3; -- mostrar los registros despues del id 3.
-SELECT * FROM clientes WHERE id_cliente != 4; -- mostrar los registros menos el id 4.
-
+SELECT * FROM clientes WHERE id_cliente >, <, =, != 4; -- mostrar 
 SELECT * FROM clientes LIMIT 10; -- mostrar solo los 10 primeros registros
 SELECT * FROM clientes LIMIT 10 OFFSET 10; -- extrae los 10 registros ignorando los 10 prmeros(anteriores)
 
-SELECT * FROM clientes WHERE nombre = "David"; -- Sensitive (rapido)
-SELECT * FROM clientes WHERE nombre != "David"; -- Sensitive (rapido)
+SELECT * FROM clientes WHERE nombre = "David", != "David"; -- Sensitive (rapido)
 SELECT * FROM clientes WHERE nombre LIKE "DAVID"; -- InSensitive (lento)
 SELECT * FROM clientes WHERE nombre NOT LIKE "DAVID"; -- InSensitive (lento)
 
-SELECT * FROM clientes WHERE nombre LIKE "d%"; -- mostrar los registros que empliezen por D.
-SELECT * FROM clientes WHERE nombre LIKE "%n"; -- mostrar los registros que terminan con N.
-SELECT * FROM clientes WHERE nombre LIKE "%at%"; -- mostrar los registros que contenga AT.
-SELECT * FROM clientes WHERE nombre LIKE "A_"; -- mostrar los registros que tengan una letra despues de A.
+SELECT * FROM clientes WHERE nombre LIKE "d%", "%n", "%at%", "A_"; -- registros. start D, ends N, contain AT, tho letter A¿?
 
 SELECT * FROM clientes WHERE id_cliente IN (1,3,5,8); -- mostrar varios registros.
 SELECT * FROM clientes WHERE nombre NOT IN ("A", "B"); -- mostrar menos estos.
@@ -115,8 +109,7 @@ SELECT * FROM clientes WHERE id BETWEEN 5 AND 10; -- mostrar ENTRE dos numeros.
 SELECT * FROM clientes WHERE id NOT BETWEEN 5 AND 10; -- mostrar los que no estan ENRTE dos numeros.
 
 -- Ordenar --
-SELECT * FROM clientes WHERE id_cliente < 20  ORDER BY nombre ASC; -- ordenar alfab. Ascendentemente. (ASD opcional)
-SELECT * FROM clientes WHERE id_cliente < 20  ORDER BY nombre DESC; -- ordenar alfab. Descendentemente.
+SELECT * FROM clientes WHERE id_cliente < 20  ORDER BY nombre ASC, DESC; -- ordenar alfab. ASCendentemente/DESCendentemente.
 SELECT DISTINCT nombre FROM clientes ORDER BY nombre; -- no mostrar nombres duplicados
 
 -- Agregar --

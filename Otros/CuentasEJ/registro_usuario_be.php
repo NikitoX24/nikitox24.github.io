@@ -17,7 +17,7 @@
     echo '
       <script>
         alert("Este correo ya esta registrado! intente con otro")
-        window.location = "CuentasEj.html";
+        window.location = "index.php";
       </script>
     ';
     exit();
@@ -29,7 +29,7 @@
     echo '
       <script>
         alert("Usuario Creado exitosamente!")
-        window.location = "CuentasEj.html";
+        window.location = "index.php";
       </>
     ';
   }
