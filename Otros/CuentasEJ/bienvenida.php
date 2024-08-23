@@ -5,15 +5,13 @@
   if(!isset($_SESSION["correo"])){
     echo '
       <script>
-        alert("Debes iniciar sesion");
+        alert("Debes iniciar sesión");
         window.location = "index.php";
       </script>
     ';
     session_destroy();
     die();
   }
-  // session_destroy();
-
 ?>
 
 <!DOCTYPE html>
@@ -24,20 +22,6 @@
   <title>Bienvenida</title>
 </head>
 <body>
-
-  <main>
-    <div class="contenedor__todo">
-      <h1> <?php echo "Bienvenido ".$_SESSION["usuario"]; ?> </h1>
-      <br>
-      <div class="cerrar_sesion_bt">
-        <form action="cerrar_sesion.php">
-          <button>Cerrar sesion</button>
-        </form>
-      </div>
-    </div>
-  </main>
-
-
   <style>
     * {
       margin: 0;
@@ -86,6 +70,27 @@
       color: #46a2fd;
     }
   </style>
+
+  <main>
+    <div class="contenedor__todo">
+      <h1> <?php echo "Bienvenido ".$_SESSION["usuario"]; ?> </h1>
+      <br>
+      <div class="cerrar_sesion_bt">
+        <form action="mis_datos.php">
+          <button>Mis Datos</button>
+        </form> <br>
+
+        <form action="cerrar_sesion.php">
+          <button>Cerrar sesion</button>
+        </form> 
+      </div>
+    </div>
+  </main>
+
+  
+  
+
+
 
 </body>
 </html>

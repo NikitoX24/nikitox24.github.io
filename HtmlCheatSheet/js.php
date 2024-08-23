@@ -91,14 +91,6 @@ include("../PHP/cheats.php");
         map.<NBlue>values</NBlue>(); <NGray>// Valores.</NGray> <br>
       </div>
     </fieldset>
-
-    <script>
-      let map = new Map()
-      map.set("1", "asd")
-      for (let a of map.keys() ){
-        console.log(a);
-      }
-    </script>
     
     <fieldset> <!-- Metodos de Strings -->
       <legend> Metodos de Strings (no se modifican) </legend>
@@ -474,8 +466,8 @@ include("../PHP/cheats.php");
         </div>
         <!-- Constructor de Objetos -->
         <div class="cod wAuto">
-          <NGray>// Constructor de Objetos</NGray> <br>
-          <NPurp>let</NPurp> p1 = <NAqua>new</NAqua> <NObj>Person</NObj>("<NGreen>John</NGreen>", <NOrg>42</NOrg>) <br>
+          <NGray>// Instanciar</NGray> <br>
+          <NPurp>let</NPurp> p1 = <NAqua>new</NAqua> <NBlue>Person</NBlue>("<NGreen>John</NGreen>", <NOrg>42</NOrg>) <br>
           document.<NBlue>write</NBlue>(p1.age) <NGray>//42</NGray> <br>
         </div> <br>
         <!-- Función de un único uso.. -->
@@ -487,14 +479,12 @@ include("../PHP/cheats.php");
           </div>
         </details>
       </fieldset>
-
-      <Flecha></Flecha>
       
       <!-- Clase -->
       <fieldset class="wAuto">
-        <legend>Clase (ES6)</legend>
+        <legend>Clase</legend>
         <div class="cod wAuto">
-          <NPurp>class <NObj>person{</NObj> <br>
+          <NPurp>class <NObj>Person{</NObj> <br>
           &nbsp; constructor(<NVar>name, age</NVar>){</NPurp> <br>
             &nbsp; &nbsp; <NAqua>this</NAqua>.name = name; <br>
             &nbsp; &nbsp; <NAqua>this</NAqua>.age = age; <br>
@@ -502,10 +492,103 @@ include("../PHP/cheats.php");
           <NObj>}</NObj>
         </div>
         <div class="cod wAuto">
-          <NPurp>let</NPurp> p1 = <NAqua>new</NAqua> <NBlue>person</NBlue>("<NGreen>John</NGreen>", <NOrg>42</NOrg>) <br>
+          <NPurp>let</NPurp> p1 = <NAqua>new</NAqua> <NBlue>Person</NBlue>("<NGreen>John</NGreen>", <NOrg>42</NOrg>) <br>
           document.<NBlue>write</NBlue>(p1.age) <NGray>//42</NGray>
         </div>
+        
+        <details>
+          <summary>Expresiones de Clases...</summary>
+          <div class="cod">
+            <NGray>// Clase anonima</NGray> <br>
+            let Person_A = class{ <br>
+              constructor(nombre) { <br>
+                this.nombre = nombre; <br>
+              } <br>
+            } <br>
+            let Person_A_01 = new Person_A("Nico"); // Instanciar <br> <br>
+
+            <NGray>// Clase nombrada</NGray> <br>
+            let Person_B = class PapelX{ <br>
+              constructor(nombre) { <br>
+                this.nombre = nombre; <br>
+              } <br>
+            } <br>
+            let Person_B_01 = new Person_B("Nico"); // Instanciar
+          </div>
+        </details>
       </fieldset>
+
+      <!-- Script Detallado -->
+      <script>
+        //* Objeto
+          let ObjPersona = { 
+            nombre: "Nicolas" 
+          }
+          // console.log(ObjPersona.nombre);
+
+        //* Funcion
+          function Libro(titulo){
+            this.titulo = titulo;
+          }
+          let Libro1 = new Libro("Nicolas"); // instanciar
+        //////////////////////////////////////////////////////////////////////////////////////
+
+        //*       Clases      *//
+
+        //? Declaración de Clase (Opcion 1)
+          class Persona1{
+            constructor(nombre) {
+              this.nombre = nombre;
+            }
+          }
+          const persona1_A = new Persona1(); // Instanciar
+
+        //? Expresiones de Clases (Opcion 2)
+          // Clase anonima 
+          let Person_A = class{
+            constructor(nombre) {
+              this.nombre = nombre;
+            }
+          }
+          let Person_A_01 = new Person_A("Nico"); // Instanciar
+
+          // Clase nombrada
+          let Person_B = class PapelX{
+            constructor(nombre) {
+              this.nombre = nombre;
+            }
+          }
+          let Person_B_01 = new Person_B("Nico"); // Instanciar
+
+
+        //////////////////////////////////////////////////////////////////////////////////////
+        //* Herencias + Get-Set
+
+        // Sub-Clase
+          class Deportista{
+            constructor(nombre, apellido){
+              this.nombre = nombre;
+              this.apellido = apellido;
+            }
+          }
+          class Futbolista extends Deportista{
+            constructor(nombre, apellido, goles){
+              super(nombre, apellido); // Obtener de Padre
+              this._goles = goles;
+            }
+            // Get
+            get goles(){
+              return this._goles;
+            }
+            // Set
+            set goles(nuevoGoles){
+              this._goles = nuevoGoles;
+            }
+          }
+          futbolista_1 = new Futbolista("Leo", "Messi", 5); // Instanciar
+          futbolista_1.goles; // Get  =>  5
+          futbolista_1.goles = 8; // Set  =>  8
+      </script>
     </div>
 
     <!-- Metodos -->
@@ -573,28 +656,10 @@ include("../PHP/cheats.php");
     
     <!-- Herencias y Assign -->
     <div class="flex">
-      <!-- Herencias -->
-      <fieldset class="width100">
-        <legend> Herencias </legend>
-        <div class="cod wAuto">
-          <NPurp>class <NObj>person{</NObj> <br>
-          &nbsp; constructor(<NVar>name, age</NVar>){</NPurp> <br>
-            &nbsp; &nbsp; <NAqua>this</NAqua>.name = name; <br>
-          &nbsp; <Npurp>}</Npurp> <br>
-          <NObj>}</NObj>
-        </div>
-        <div class="cod wAuto">
-          <NPurp>class <NObj>estudiante{</NObj> <br>
-          &nbsp; constructor(<NVar>name</NVar>){</NPurp> <br>
-            &nbsp; &nbsp; super(name); <br>
-          &nbsp; <Npurp>}</Npurp> <br>
-          <NObj>}</NObj>
-        </div>
-      </fieldset>
       <!-- Assign -->
-      <fieldset class="width100">
+      <fieldset class="wAuto">
         <legend> assign() </legend>
-          <div class="cod columnas">
+          <div class="cod columnas wAuto">
             <NPurp>let</NPurp> person = { <br>
               &nbsp; name: '<NGreen>Jack</NGreen>', <br>
               &nbsp; age: <NOrg>18</NOrg>, <br>
@@ -606,13 +671,48 @@ include("../PHP/cheats.php");
               &nbsp; xp: '<NGreen>2</NGreen>' <br>
             };
           </div>
-          <div class="cod">
-            <NPurp>let</NPurp> newStudent = <NObj>Object</NObj>.<NBlue>assign</NBlue>(<NPurp>{}</NPurp>, person, student); <br>
-            document.<NBlue>write</NBlue>(newStudent.name); <NGray>// Bob</NGray> <br>
-            document.<NBlue>write</NBlue>(newStudent.age); <NGray>// 20</NGray> <br>
-            document.<NBlue>write</NBlue>(newStudent.sex); <NGray>// male</NGray> <br>
-            document.<NBlue>write</NBlue>(newStudent.xp); <NGray>// 2</NGray>
+          <div class="cod wAuto">
+            <NPurp>let</NPurp> user = <NObj>Object</NObj>.<NBlue>assign</NBlue>(<NPurp>{}</NPurp>, person, student); <br>
+            document.<NBlue>write</NBlue>(user.name); <NGray>// Bob</NGray> <br>
+            document.<NBlue>write</NBlue>(user.age); <NGray>// 20</NGray> <br>
+            document.<NBlue>write</NBlue>(user.sex); <NGray>// male</NGray> <br>
+            document.<NBlue>write</NBlue>(user.xp); <NGray>// 2</NGray>
           </div>
+      </fieldset>
+      <!-- Herencias -->
+      <fieldset class="wAuto">
+        <legend> Herencias </legend>
+        <div class="cod wAuto">
+          <NPurp>class <NObj>Person{</NObj> <br>
+          &nbsp; constructor(<NVar>name</NVar>){</NPurp> <br>
+            &nbsp; &nbsp; <NAqua>this</NAqua>.name = name; <br>
+          &nbsp; <Npurp>}</Npurp> <br>
+          <NObj>}</NObj>
+        </div>
+        <div class="cod wAuto">
+          <NPurp>class <NObj>Estudiante</NObj> extends <NObj>Person{</NObj> <br>
+          &nbsp; constructor(<NVar>name</NVar>){</NPurp> <br>
+            &nbsp; &nbsp; super(name); <br>
+          &nbsp; <Npurp>}</Npurp> <br>
+          <NObj>}</NObj>
+        </div>
+      </fieldset>
+      <!-- Get y Set -->
+      <fieldset class="wAuto">
+        <legend> Get y Set </legend>
+        <div class="cod wAuto">
+          <NPurp>class <NObj>Person{</NObj> <br>
+          &nbsp; constructor(<NVar>name</NVar>){</NPurp> <br>
+            &nbsp; &nbsp; <NAqua>this</NAqua>.name = name; <br>
+          &nbsp; <Npurp>}</Npurp> <br>
+          &nbsp; <NPurp>get</NPurp> <NBlue>name</NBlue>(){ <NGray>// Get</NGray><br>
+          <NTab></NTab> <NAqua>return this.</NAqua>name; <br>
+          &nbsp; } <br>
+          &nbsp; <NPurp>set</NPurp> <NBlue>name</NBlue>(newName){ <NGray>// Set</NGray> <br>
+          <NTab></NTab> <NAqua>this.</NAqua>name = newName; <br>
+          &nbsp; } <br>
+          <NObj>}</NObj>
+        </div>
       </fieldset>
     </div>
   </section>
@@ -726,7 +826,7 @@ include("../PHP/cheats.php");
               srcimg.src = "../Imgs/Apple.png";
               srcimg.href= '../Imgs/Apple.png';
               srcimg.title= 'Apple';
-              _styleText.style.color = '#F00';
+              _styleText.style.color = '#F00 ';
               _changeSRC = false;
             }
             else {
@@ -917,7 +1017,7 @@ include("../PHP/cheats.php");
       <fieldset class="width100"> 
       <legend> Evento desde HTML </legend>
         <div class="codigo">
-          &lt;<NRed>button</NRed> <b><u><NPurp>evento</NPurp></u></b>="<NBlue>myFunc</NBlue>()"> Button &lt;/<NRed>button</NRed>>
+          &lt;<NRed>button</NRed> <b><u><NPurp>event</NPurp></u></b>="<NBlue>myFunc</NBlue>()"> Button &lt;/<NRed>button</NRed>>
         </div>
         <div class="cod">
           <NPurp>function</NPurp> <NBlue>myFunc</NBlue>() { <br> &nbsp; <NGray>// Codigo...</NGray> <br> }
@@ -1273,6 +1373,62 @@ include("../PHP/cheats.php");
       </details>
     </fieldset>
 
+    <fieldset> <!-- JSON -->
+      <legend> JSON </legend>
+      <div class="cod">
+        <!-- Opcion 1 -->
+        <NGray>// Opcion 1</NGray> <br>
+        <NPurp>let</NPurp> datosJson; <br>
+        <NPurp>let</NPurp> xhr = <NAqua>new</NAqua> <Nblue>XMLHttpRequest</Nblue>(); <br>
+        xhr.<Nblue>open</Nblue>("<NGreen>GET</NGreen>", "<NGreen>JSON.json</NGreen>",  true); <br>
+        xhr.responseType = "<NGreen>json</NGreen>"; <br>
+        xhr.<Nblue>onload</Nblue> = <NPurp>function</NPurp>() { <br>
+          &nbsp; <NAqua>if</NAqua>(xhr.status === <NOrg>200</NOrg>){ <br>
+            <NTab></NTab> datosJson = xhr.response; <br>
+          &nbsp; }<NAqua>else</NAqua>{ <NGray>/* manejar el error */</NGray> } <br>
+        } <br>
+        xhr.<NBlue>send</NBlue>(); <br><hr>
+        
+        <!-- Opcion 2 -->
+        <NGray>// Opcion 2</NGray> <br>
+        <NPurp>let</NPurp> datosJson; <br>
+        <NBlue>fetch</NBlue>("<NGreen>JSON.json</NGreen>") <br>
+        &nbsp; <NBlue>.then</NBlue>(res<NPurp> => </NPurp> res.<NBlue>json</NBlue>() ) <br>
+        &nbsp; <NBlue>.then</NBlue>( (salida) <NPurp> => </NPurp> { <br>
+          <NTab></NTab> datosJson = salida; <br>
+        }) <br>
+        <NBlue>.catch</NBlue>( <NPurp>function</NPurp>(error){ <br>
+          &nbsp; <NBlue>alert</NBlue>(error); <br>
+        });
+        <!-- Promesas -->
+          <!-- Solicitud -->
+            <!-- GET    (obtener) -->
+            <!-- POST   (enviar) -->
+            <!-- PUT    (Actualizar) -->
+            <!-- Delete (Eliminar) -->
+
+          <!-- Respuestas -->
+            <!-- 200 (completada) -->
+            <!-- 201 (elemento creado) -->
+            <!-- 204 (respuesta vacia) -->
+            <!-- 400 (mal solicitado) -->
+            <!-- 401 (no autorizado) -->
+
+        <!-- <script>
+          let datosJson;
+          fetch("JSON.json")
+            .then(res => res.json() )
+            .then( (salida) => {
+            datosJson = salida;
+          } )
+          .catch(function(error) {
+            alert(error);
+          });
+
+        </script> -->
+        
+      </div>
+    </fieldset>
   </section>
   
   <br><hr><hr><br><br>

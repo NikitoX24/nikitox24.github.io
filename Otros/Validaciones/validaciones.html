@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Validaciones</title>
+  <link rel="stylesheet" href="../../HtmlCheatSheet/STYLE.css">
+  <link rel="stylesheet" href="../../HtmlCheatSheet/Lib-Fram/Bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+  
+  <style>
+    html {
+      scroll-behavior: auto !important;
+    }
+  
+    body {
+      max-width: 90%;
+      margin: auto;
+    }
+  
+    h1,
+    h3,
+    h4 {
+      text-align: center;
+      text-decoration: underline;
+    }
+  
+    .section {
+      border-radius: 12px;
+      padding: 2px 10px 10px 10px;
+      margin-bottom: 80px;
+      background-color: rgba(128, 128, 128, 0.227);
+    }
+  
+    NGreen {
+      word-spacing: 10px;
+      font-size: smaller;
+    }
+  
+    NRed,
+    NPurp {
+      font-weight: 400;
+    }
+  
+    #screenSize {
+      margin: 0;
+      left: 10px;
+      bottom: 0;
+      position: fixed;
+      font-family: Arial;
+      background-color: rgba(128, 128, 128, 0.448);
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid black;
+    }
+  
+    .cod {
+      font-size: 0.8em;
+      max-height: 200px;
+      width: 100%;
+      overflow: auto;
+      white-space: nowrap;
+    }
+  
+    /*  */
+    svg {
+      height: 20px;
+    }
+  
+    .bordeBase,
+    .borde1,
+    .borde2,
+    .borde3,
+    .borde4 {
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      border: 1px solid black;
+      background-color: white;
+      padding-inline: 15px;
+    }
+  
+    .container {
+      margin-block: 15px;
+    }
+  
+    .bordeBase {
+      background-color: white;
+    }
+  
+    .borde1 {
+      background-color: aquamarine;
+    }
+  
+    .borde2 {
+      background-color: olivedrab;
+    }
+  
+    .borde3 {
+      background-color: orangered;
+    }
+  
+    .borde4 {
+      background-color: blueviolet;
+    }
+  </style>
+
+  <!-- from -->
+  <div class="section">
+    <h3> from </h3>
+    <!-- Nombre - contraseña -->
+    <div class="flex">
+      <form class="w-75">
+        <label for="nombre">Nombre: </label> <br>
+        <input type="text" name="nombre" class="form-control"> <br>
+
+        <label for="inputPassword5"> Contraseña: </label> <br>
+        <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+        <div id="passwordHelpBlock" class="form-text">
+          Su contraseña debe tener entre 8 y 20 caracteres.
+        </div>
+      </form>
+      <div class="cod w-100">
+        &lt;<NRed>label</NRed>
+        <NPurp> for</NPurp>="<NGreen>nombre</NGreen>">Nombre: &lt;<NRed>/label</NRed> > <br>
+        &lt;<NRed>input</NRed>
+        <NPurp> type</NPurp>="<NGreen>text</NGreen>" <NPurp>name</NPurp>="<NGreen>nombre</NGreen>" <NPurp>class</NPurp>="<NGreen>form-control</NGreen>"> <br><br>
+
+        &lt;<NRed>label</NRed>
+        <NPurp> for</NPurp>="<NGreen>inputPassword5</NGreen>"> Contraseña: &lt;<NRed>/label</NRed>> <br>
+        &lt;<NRed>input</NRed>
+        <NPurp> type</NPurp>="<NGreen>password</NGreen>" <NPurp>id</NPurp>="<NGreen>inputPassword5</NGreen>" <NPurp>class</NPurp>="<NGreen>form-control</NGreen>" <NPurp>aria-describedby</NPurp>="<NGreen>passwordHelpBlock</NGreen>"> <br>
+        &lt;<NRed>div</NRed>
+        <NPurp> id</NPurp>="<NGreen>passwordHelpBlock</NGreen>" <NPurp>class</NPurp>="<NGreen>form-text</NGreen>"> <NTab></NTab>Su contraseña debe... &lt;<NRed>/div</NRed>>
+      </div>
+    </div>
+    <hr>
+
+    <!-- nombre y apellido -->
+    <div class="flex">
+      <div class="input-group align-self-center">
+        <span class="input-group-text">First and last name</span>
+        <input type="text" aria-label="First name" class="form-control">
+        <input type="text" aria-label="Last name" class="form-control">
+      </div>
+      <div class="cod">
+        &lt;<NRed>div</NRed>
+        <NPurp> class</NPurp>="<NGreen>input-group</NGreen>"> <br>
+        <NTab></NTab>&lt;<NRed>span</NRed>
+        <NPurp> class</NPurp>="<NGreen>input-group-text</NGreen>">First and last name&lt;<NRed>/span</NRed>> <br>
+        <NTab></NTab>&lt;<NRed>input</NRed>
+        <NPurp> type</NPurp>="<NGreen>text</NGreen>" <NPurp>aria-label</NPurp>="<NGreen>First name</NGreen>" <NPurp>class</NPurp>="<NGreen>form-control</NGreen>"> <br>
+        <NTab></NTab>&lt;<NRed>input</NRed>
+        <NPurp> type</NPurp>="<NGreen>text</NGreen>" <NPurp>aria-label</NPurp>="<NGreen>Last name</NGreen>" <NPurp>class</NPurp>="<NGreen>form-control</NGreen>"> <br>
+        &lt;<NRed>/div</NRed>>
+      </div>
+    </div>
+    <hr>
+
+    <!-- TODO: -->
+    <div>
+      <a href="https://getbootstrap.com/docs/5.3/forms/input-group/">
+        https://getbootstrap.com/docs/5.3/forms/input-group/
+      </a> <br>
+      <a href="https://getbootstrap.com/docs/5.3/forms/floating-labels/?">
+        https://getbootstrap.com/docs/5.3/forms/floating-labels/?
+      </a> <br>
+      <a href="https://getbootstrap.com/docs/5.3/forms/layout/">
+        https://getbootstrap.com/docs/5.3/forms/layout/
+      </a>
+    </div>
+    <hr>
+
+    <!-- Select Archivos -->
+    <div class="flex">
+      <div class="w-100">
+        <input class="form-control" type="file" id="formFile">
+      </div>
+      <div class="cod">
+        &lt;<NRed>label</NRed>
+        <NPurp> for</NPurp>="<NGreen>formFile</NGreen>" <NPurp>class</NPurp>="<NGreen>form-label</NGreen>"> Seleccionar archivo &lt;<NRed>/label</NRed>> <br>
+        &lt;<NRed>input</NRed>
+        <NPurp> class</NPurp>="<NGreen>form-control</NGreen>" <NPurp>type</NPurp>="<NGreen>file</NGreen>" <NPurp>id</NPurp>="<NGreen>formFile</NGreen>">
+      </div>
+    </div>
+    <hr>
+
+    <!-- Section -->
+    <div class="flex">
+      <div class="w-75">
+        <select class="form-select align-self-center" aria-label="Default select example">
+          <option selected>Seleccionar</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select> <br>
+        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Escribe para buscar...">
+        <datalist id="datalistOptions">
+          <option value="San Francisco">
+          <option value="New York">
+          <option value="Seattle">
+          <option value="Los Angeles">
+          <option value="Chicago">
+        </datalist>
+      </div>
+      <div class="cod" style="height: 100px;">
+        &lt;<NRed>select</NRed>
+        <NPurp> class</NPurp>="<NGreen>form-select</NGreen>" <NPurp>aria-label</NPurp>="<NGreen>Default select example</NGreen>"> <br>
+        <NTab></NTab>&lt;<NRed>option</NRed>
+        <NPurp>selected</NPurp>> Seleccionar &lt;<NRed>/option</NRed>> <br>
+        <NTab></NTab>&lt;<NRed>option</NRed>
+        <NPurp> value</NPurp>="<NGreen>1</NGreen>"> One &lt;<NRed>/option</NRed>> <br>
+        &lt;<NRed>/select</NRed> >
+        <hr>
+        &lt;<NRed>input</NRed>
+        <NPurp> class</NPurp>="<NGreen>form-control</NGreen>" <NPurp>list</NPurp>="<NGreen>datalistOptions</NGreen>" <NPurp>id</NPurp>="<NGreen>exampleDataList</NGreen>" <NPurp>placeholder</NPurp>="<NGreen>Escribe para buscar...</NGreen>"> <br>
+        &lt;<NRed>datalist</NRed>
+        <NPurp> id</NPurp>="<NGreen>datalistOptions</NGreen>"> <br>
+        <NTab></NTab>&lt;<NRed>option</NRed>
+        <NPurp> value</NPurp>="<NGreen>San Francisco</NGreen>"> <br>
+        <NTab></NTab>&lt;<NRed>option</NRed>
+        <NPurp> value</NPurp>="<NGreen>New York</NGreen>"> <br>
+        <NTab></NTab>&lt;<NRed>option</NRed>
+        <NPurp> value</NPurp>="<NGreen>Seattle</NGreen>"> <br>
+        <NTab></NTab>&lt;<NRed>option</NRed>
+        <NPurp> value</NPurp>="<NGreen>Los Angeles</NGreen>"> <br>
+        <NTab></NTab>&lt;<NRed>option</NRed>
+        <NPurp> value</NPurp>="<NGreen>Chicago</NGreen>"> <br>
+        &lt;<NRed>/datalist</NRed>>
+      </div>
+    </div>
+    <hr>
+
+    <!-- CheckBox -->
+    <div class="flex">
+      <div class="w-50 ">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+          <label class="form-check-label" for="flexRadioDefault1"> Default radio </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled" disabled>
+          <label class="form-check-label" for="flexRadioDisabled"> Disabled radio </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+          <label class="form-check-label" for="flexCheckChecked"> Checked checkbox </label>
+        </div>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+          <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+        </div>
+        <div>
+          <label class="btn btn-primary" for="btn-check">Single toggle</label> <br>
+          <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+        </div>
+        <!-- Inline -->
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+          <label class="form-check-label" for="inlineCheckbox1">1</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <label class="form-check-label" for="inlineCheckbox2">2</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+          <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+        </div>
+        <a class="small" href="https://getbootstrap.com/docs/5.3/forms/checks-radios/">
+          bootstrap.com/checks-radios.</a>
+      </div>
+      <div class="cod">
+        &lt;<NRed>div</NRed>
+        <NPurp> class</NPurp>="<NGreen>form-check</NGreen>"> <br>
+        <NTab></NTab>&lt;<NRed>input</NRed>
+        <NPurp> class</NPurp>="<NGreen>form-check-input</NGreen>" <NPurp>type</NPurp>="<NGreen>radio</NGreen>" <NPurp>name</NPurp>="<NGreen>flexRadioDefault</NGreen>" <NPurp>id</NPurp>="<NGreen>flexRadioDefault1</NGreen>"> <br>
+        <NTab></NTab>&lt;<NRed>label</NRed>
+        <NPurp> class</NPurp>="<NGreen>form-check-label</NGreen>" <NPurp>for</NPurp>="<NGreen>flexRadioDefault1</NGreen>"> Default radio &lt;<NRed>/label</NRed>> <br>
+        &lt;<NRed>/div</NRed>> <br>
+        &lt;<NRed>div</NRed>
+        <NPurp> class</NPurp>="<NGreen>form-check</NGreen>"> <br>
+        <NTab></NTab>&lt;<NRed>input</NRed>
+        <NPurp> class</NPurp>="<NGreen>form-check-input</NGreen>" <NPurp>type</NPurp>="<NGreen>radio</NGreen>" <NPurp>name</NPurp>="<NGreen>flexRadioDisabled</NGreen>" <NPurp>id</NPurp>="<NGreen>flexRadioDisabled</NGreen>" disabled> <br>
+        <NTab></NTab>&lt;<NRed>label</NRed>
+        <NPurp> class</NPurp>="<NGreen>form-check-label</NGreen>" <NPurp>for</NPurp>="<NGreen>flexRadioDisabled</NGreen>"> Disabled radio &lt;<NRed>/label</NRed>> <br>
+        &lt;<NRed>/div</NRed>> <br>
+        &lt;<NRed>div</NRed>
+        <NPurp> class</NPurp>="<NGreen>form-check</NGreen>"> <br>
+        <NTab></NTab>&lt;<NRed>input</NRed>
+        <NPurp> class</NPurp>="<NGreen>form-check-input</NGreen>" <NPurp>type</NPurp>="<NGreen>checkbox</NGreen>" <NPurp>value</NPurp>="<NGreen></NGreen>" <NPurp>id</NPurp>="<NGreen>flexCheckChecked</NGreen>" <NPurp><u>checked</u></NPurp>> <br>
+        <NTab></NTab>&lt;<NRed>label</NRed>
+        <NPurp> class</NPurp>="<NGreen>form-check-label</NGreen>" <NPurp>for</NPurp>="<NGreen>flexCheckChecked</NGreen>"> Checked checkbox &lt;<NRed>/label</NRed>> <br>
+        &lt;<NRed>/div</NRed>> <br>
+        &lt;<NRed>div</NRed>
+        <NPurp> class</NPurp>="<NGreen>form-check form-switch</NGreen>"> <br>
+        <NTab></NTab>&lt;<NRed>input</NRed>
+        <NPurp> class</NPurp>="<NGreen>form-check-input</NGreen>" <NPurp>type</NPurp>="<NGreen>checkbox</NGreen>" <NPurp>role</NPurp>="<NGreen>switch</NGreen>" <NPurp>id</NPurp>="<NGreen>flexSwitchCheckChecked</NGreen>" checked> <br>
+        <NTab></NTab>&lt;<NRed>label</NRed>
+        <NPurp> class</NPurp>="<NGreen>form-check-label</NGreen>" <NPurp>for</NPurp>="<NGreen>flexSwitchCheckChecked</NGreen>">Checked switch checkbox input&lt;<NRed>/label</NRed>> <br>
+        &lt;<NRed>/div</NRed>> <br>
+        &lt;<NRed>input</NRed>
+        <NPurp> type</NPurp>="<NGreen>checkbox</NGreen>" <NPurp>class</NPurp>="<NGreen>btn-check</NGreen>" <NPurp>id</NPurp>="<NGreen>btn-check</NGreen>" <NPurp>autocomplete</NPurp>="<NGreen>off</NGreen>"> <br>
+        &lt;<NRed>label</NRed>
+        <NPurp> class</NPurp>="<NGreen>btn btn-primary</NGreen>" <NPurp>for</NPurp>="<NGreen>btn-check</NGreen>">Single toggle&lt;<NRed>/label</NRed>>
+        <hr>
+        &lt;<NRed>div</NRed>
+        <NPurp> class</NPurp>="<NGreen>form-check form-check-inline</NGreen>"> <br>
+        <NTab></NTab>&lt;<NRed>input</NRed>
+        <NPurp> class</NPurp>="<NGreen>form-check-input</NGreen>" <NPurp>type</NPurp>="<NGreen>checkbox</NGreen>" <NPurp>id</NPurp>="<NGreen>inlineCheckbox1</NGreen>" <NPurp>value</NPurp>="<NGreen>option1</NGreen>"> <br>
+        <NTab></NTab>&lt;<NRed>label</NRed>
+        <NPurp> class</NPurp>="<NGreen>form-check-label</NGreen>" <NPurp>for</NPurp>="<NGreen>inlineCheckbox1</NGreen>">1&lt;<NRed>/label</NRed>> <br>
+        &lt;<NRed>/div</NRed>>
+      </div>
+    </div>
+    <hr>
+
+    <!-- Input Group -->
+    <div class="flex">
+      <div class="w-50">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">@</span>
+          <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <span class="input-group-text" id="basic-addon2">@hotmail.com</span>
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+          <span class="input-group-text">@</span>
+          <input type="text" class="form-control" placeholder="hotmail, gmail,  etc" aria-label="Server">
+        </div>
+        <div class="mb-3">
+          <label for="basic-url" class="form-label">Your vanity URL</label>
+          <div class="input-group">
+            <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+          </div>
+          <div class="form-text" id="basic-addon4">Example help text goes outside the input group.</div>
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text">$</span>
+          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+          <span class="input-group-text">.00</span>
+        </div>
+        <div class="input-group">
+          <span class="input-group-text">With textarea</span>
+          <textarea class="form-control" aria-label="With textarea"></textarea>
+        </div> <br>
+        <form class="form-floating">
+          <input type="email" class="form-control is-invalid" id="floatingInputInvalid" placeholder="name@example.com" value="test@example.com">
+          <label for="floatingInputInvalid">Invalid input</label>
+        </form>
+      </div>
+      <div class="cod w-50" style="max-height: 450px;">
+        &lt;<NRed>div</NRed>
+        <NPurp> class</NPurp>="<NGreen>input-group mb-3</NGreen>"> <br>
+        <NTab></NTab>&lt;<NRed>span</NRed>
+        <NPurp> class</NPurp>="<NGreen>input-group-text</NGreen>" <NPurp>id</NPurp>="<NGreen>basic-addon1</NGreen>">@&lt;<NRed>/span</NRed>> <br>
+        <NTab></NTab>&lt;<NRed>input</NRed>
+        <NPurp> type</NPurp>="<NGreen>text</NGreen>" <NPurp>class</NPurp>="<NGreen>form-control</NGreen>" <NPurp>placeholder</NPurp>="<NGreen>Username</NGreen>" <NPurp>aria-label</NPurp>="<NGreen>Username</NGreen>" <NPurp>aria-describedby</NPurp>="<NGreen>basic-addon1</NGreen>"> <br>
+        &lt;<NRed>/div</NRed>> <br>
+        &lt;<NRed>div</NRed>
+        <NPurp> class</NPurp>="<NGreen>input-group</NGreen>"> <br>
+        <NTab></NTab>&lt;<NRed>input</NRed>
+        <NPurp> type</NPurp>="<NGreen>text</NGreen>" <NPurp>class</NPurp>="<NGreen>form-control</NGreen>" <NPurp>placeholder</NPurp>="<NGreen>Recipient's username</NGreen>" <NPurp>aria-label</NPurp>="<NGreen>Recipient's username</NGreen>" <NPurp>aria-describedby</NPurp>="<NGreen>basic-addon2</NGreen>"> <br>
+        <NTab></NTab>&lt;<NRed>span</NRed>
+        <NPurp> class</NPurp>="<NGreen>input-group-text</NGreen>" <NPurp>id</NPurp>="<NGreen>basic-addon2</NGreen>">@hotmail.com&lt;<NRed>/span</NRed>> <br>
+        &lt;<NRed>/div</NRed>> <br>
+        &lt;<NRed>div</NRed>
+        <NPurp> class</NPurp>="<NGreen>input-group mb-3</NGreen>"> <br>
+        <NTab></NTab>&lt;<NRed>input</NRed>
+        <NPurp> type</NPurp>="<NGreen>text</NGreen>" <NPurp>class</NPurp>="<NGreen>form-control</NGreen>" <NPurp>placeholder</NPurp>="<NGreen>Username</NGreen>" <NPurp>aria-label</NPurp>="<NGreen>Username</NGreen>"> <br>
+        <NTab></NTab>&lt;<NRed>span</NRed>
+        <NPurp> class</NPurp>="<NGreen>input-group-text</NGreen>">@&lt;<NRed>/span</NRed>> <br>
+        <NTab></NTab>
+        <NTab></NTab>&lt;<NRed>input</NRed>
+        <NPurp> type</NPurp>="<NGreen>text</NGreen>" <NPurp>class</NPurp>="<NGreen>form-control</NGreen>" <NPurp>placeholder</NPurp>="<NGreen>hotmail, gmail, etc</NGreen>" <NPurp>aria-label</NPurp>="<NGreen>Server</NGreen>"> <br>
+        &lt;<NRed>/div</NRed>> <br>
+        &lt;<NRed>div</NRed>
+        <NPurp> class</NPurp>="<NGreen>mb-3</NGreen>"> <br>
+        <NTab></NTab>&lt;<NRed>label</NRed>
+        <NPurp> for</NPurp>="<NGreen>basic-url</NGreen>" <NPurp>class</NPurp>="<NGreen>form-label</NGreen>">Your vanity URL&lt;<NRed>/label</NRed>> <br>
+        <NTab></NTab>&lt;<NRed>div</NRed>
+        <NPurp> class</NPurp>="<NGreen>input-group</NGreen>"> <br>
+        <NTab></NTab>
+        <NTab></NTab>&lt;<NRed>span</NRed>
+        <NPurp> class</NPurp>="<NGreen>input-group-text</NGreen>" <NPurp>id</NPurp>="<NGreen>basic-addon3</NGreen>">https://example.com/users/&lt;<NRed>/span</NRed>> <br>
+        <NTab></NTab>
+        <NTab></NTab>&lt;<NRed>input</NRed>
+        <NPurp> type</NPurp>="<NGreen>text</NGreen>" <NPurp>class</NPurp>="<NGreen>form-control</NGreen>" <NPurp>id</NPurp>="<NGreen>basic-url</NGreen>" <NPurp>aria-describedby</NPurp>="<NGreen>basic-addon3 basic-addon4</NGreen>"> <br>
+        <NTab></NTab>&lt;<NRed>/div</NRed>> <br>
+        <NTab></NTab>&lt;<NRed>div</NRed>
+        <NPurp> class</NPurp>="<NGreen>form-text</NGreen>" <NPurp>id</NPurp>="<NGreen>basic-addon4</NGreen>">Example help text goes outside the input group.&lt;<NRed>/div</NRed>> <br>
+        &lt;<NRed>/div</NRed>> <br>
+        &lt;<NRed>div</NRed>
+        <NPurp> class</NPurp>="<NGreen>input-group mb-3</NGreen>"> <br>
+        <NTab></NTab>&lt;<NRed>span</NRed>
+        <NPurp> class</NPurp>="<NGreen>input-group-text</NGreen>">$&lt;<NRed>/span</NRed>> <br>
+        <NTab></NTab>&lt;<NRed>input</NRed>
+        <NPurp> type</NPurp>="<NGreen>text</NGreen>" <NPurp>class</NPurp>="<NGreen>form-control</NGreen>" <NPurp>aria-label</NPurp>="<NGreen>Amount (to the nearest dollar)</NGreen>"> <br>
+        <NTab></NTab>&lt;<NRed>span</NRed>
+        <NPurp> class</NPurp>="<NGreen>input-group-text</NGreen>">.00&lt;<NRed>/span</NRed>> <br>
+        &lt;<NRed>/div</NRed>> <br>
+        &lt;<NRed>div</NRed>
+        <NPurp> class</NPurp>="<NGreen>input-group</NGreen>"> <br>
+        <NTab></NTab>&lt;<NRed>span</NRed>
+        <NPurp> class</NPurp>="<NGreen>input-group-text</NGreen>">With textarea&lt;<NRed>/span</NRed>> <br>
+        <NTab></NTab>&lt;<NRed>textarea</NRed>
+        <NPurp> class</NPurp>="<NGreen>form-control</NGreen>" <NPurp>aria-label</NPurp>="<NGreen>With textarea</NGreen>">&lt;<NRed>/textarea</NRed>> <br>
+        &lt;<NRed>/div</NRed>> <br>
+        &lt;<NRed>form</NRed>
+        <NPurp> class</NPurp>="<NGreen>form-floating</NGreen>"> <br>
+        <NTab></NTab>&lt;<NRed>input</NRed>
+        <NPurp> type</NPurp>="<NGreen>email</NGreen>" <NPurp>class</NPurp>="<NGreen>form-control is-invalid</NGreen>" <NPurp>id</NPurp>="<NGreen>floatingInputInvalid</NGreen>" <NPurp>placeholder</NPurp>="<NGreen>name@example.com</NGreen>" <NPurp>value</NPurp>="<NGreen>test@example.com</NGreen>"> <br>
+        <NTab></NTab>&lt;<NRed>label</NRed>
+        <NPurp> for</NPurp>="<NGreen>floatingInputInvalid</NGreen>">Invalid input&lt;<NRed>/label</NRed>> <br>
+        &lt;<NRed>/form</NRed>>
+      </div>
+    </div>
+    <hr>
+
+    <!-- Validacion -->
+    <form class="row g-3">
+      <div class="col-md-4">
+        <label for="validationServer01" class="form-label">First name</label>
+        <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label for="validationServer02" class="form-label">Last name</label>
+        <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label for="validationServerUsername" class="form-label">Username</label>
+        <div class="input-group has-validation">
+          <span class="input-group-text" id="inputGroupPrepend3">@</span>
+          <input type="text" class="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+          <div id="validationServerUsernameFeedback" class="invalid-feedback">
+            Please choose a username.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="validationServer03" class="form-label">City</label>
+        <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+        <div id="validationServer03Feedback" class="invalid-feedback">
+          Please provide a valid city.
+        </div>
+      </div>
+      <div class="col-md-3">
+        <label for="validationServer04" class="form-label">State</label>
+        <select class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+          <option selected disabled value="">Choose...</option>
+          <option>...</option>
+        </select>
+        <div id="validationServer04Feedback" class="invalid-feedback">
+          Please select a valid state.
+        </div>
+      </div>
+      <div class="col-md-3">
+        <label for="validationServer05" class="form-label">Zip</label>
+        <input type="text" class="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" required>
+        <div id="validationServer05Feedback" class="invalid-feedback">
+          Please provide a valid zip.
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+          <label class="form-check-label" for="invalidCheck3">
+            Agree to terms and conditions
+          </label>
+          <div id="invalidCheck3Feedback" class="invalid-feedback">
+            You must agree before submitting.
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Submit form</button>
+      </div>
+    </form>
+    <br>
+    <a href="https://getbootstrap.com/docs/5.3/forms/validation/">https://getbootstrap.com/docs/5.3/forms/validation/</a>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="../../Lib-Fram/Bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

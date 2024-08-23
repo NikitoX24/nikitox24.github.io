@@ -1,14 +1,13 @@
 <?php
   include("conexion_be.php");
   
-  $nombre_completo = $_POST["nombre_completo"];
-  $correo = $_POST["correo"];
   $usuario = $_POST["usuario"];
+  $correo = $_POST["correo"];
   $contrasena = $_POST["contrasena"];
   $contrasena = hash("sha512", $contrasena); // Encriptar contraseñas (150char)
 
-  $query = "INSERT INTO usuarios(nombre_completo, correo, usuario, contrasena) 
-            VALUES('$nombre_completo', '$correo', '$usuario', '$contrasena')";
+  $query = "INSERT INTO usuarios(usuario, correo, contrasena)
+            VALUES('$usuario', '$correo', '$contrasena')";
   
   // Verificar q no se repitan
   $verificacion_correo = mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo='$correo'");
@@ -16,7 +15,7 @@
   if(mysqli_num_rows($verificacion_correo) > 0 ){
     echo '
       <script>
-        alert("Este correo ya esta registrado! intente con otro")
+        alert("Este correo ya esta registrado! intente con otro");
         window.location = "index.php";
       </script>
     ';
@@ -28,9 +27,9 @@
   if ($ejecutar) {
     echo '
       <script>
-        alert("Usuario Creado exitosamente!")
+        alert("Usuario creado Exitosamente, Por favor inicie sesión");
         window.location = "index.php";
-      </>
+      </script>
     ';
   }
 

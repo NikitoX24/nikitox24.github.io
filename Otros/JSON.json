@@ -1,0 +1,13 @@
+{
+  "nombre": "Bart Simpson",
+  "edad": 18,
+  "estudiante": false,
+  "direccion": {
+    "calle": "Av. Siempreviva #742",
+    "ciudad": "Springfield"
+  },
+  "telefonos": [
+    "123-123-123",
+    "321-321-321"
+  ]
+}

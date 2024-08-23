@@ -1,9 +1,7 @@
 <?php
   session_start();
   if(isset($_SESSION["correo"])){
-    echo '
-      <script> window.location = "bienvenida.php"; </script>
-    ';
+    echo ' <script> window.location = "bienvenida.php"; </script> ';
   }
 ?>
 <!DOCTYPE html>
@@ -42,10 +40,9 @@
           <!-- Regist -->
           <form action="registro_usuario_be.php" method="POST" class="formulario__register">
             <h2>Registrarse</h2>
-            <input type="text" placeholder="Nombre Completo" name="nombre_completo"/>
-            <input type="text" placeholder="Correo Electonico" name="correo"/>
             <input type="text" placeholder="Usuario" name="usuario"/>
-            <input type="password" placeholder="Contrasena" name="contrasena"/>
+            <input type="text" placeholder="Correo Electrónico" name="correo"/>
+            <input type="password" placeholder="Contraseña" name="contrasena"/>
             <button>Registrarse</button>
           </form>
         </div>

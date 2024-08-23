@@ -46,8 +46,21 @@ public class Java {
 
   // Arrays
     int[] array = new int[5];
-    int[] array2 = {1, 2, 3, 4};
-    
+    int[] array_numeros = {1, 2, 3, 4};
+
+    // metodos Arrays
+    Arrays.toString(array_numeros); // string
+    Arrays.sort(array_numeros); // Ordenar
+    Arrays.equals(array_numeros, array); // Comparar
+    Arrays.fill(array, 1); // LLenar 
+    Arrays.copyOf(array, 6); // Copiar y establecer cantidad (opcional)
+
+
+  // Matrices 
+    int[][] matrices = new int[3][3]; // 3x3
+    matrices[0][0]; = 1;
+
+
 
 
 
@@ -109,6 +122,7 @@ public class Java {
     palabra1.toUpperCase();
     palabra2.toLowerCase();
 
+
   
 
   // Bucles
@@ -131,10 +145,58 @@ public class Java {
     }
 
 
+  // POO
+    // Class
+    class Persona{
+      String nombre = "José";
+      int edad = 30;
+      double peso = 86.30;
+      boolean soltero = true;
+
+      String Saludar(){ return "Hola, me llamo " + nombre; } // Metodo get
+      void establecerPeso(double peso){ this.peso = peso; } // Metodo set
+
+      public static void main(String[] args){
+        Persona persona1 = new Persona(); // Instanciar una clase
+      }
+    }
+
+
+    // Clase con Constructor
+    class Alumnos{
+      String nombre, asignatura;
+      int nota;
+
+      // Constructor
+      public Alumnos(){
+        nombre = "Miguel";
+        nota = 80;
+      }
+
+      // sobrecarga de metodos constructores (pasar parametros)
+      public Alumnos(String asignatura){
+        this.asignatura = asignatura;
+      }
+
+      // Get
+      String GetNombre(){
+        return nombre;
+      }
+      // Set
+      void SetNota(int nuevaNota){
+        nota = nuevaNota;
+      }
+    }
+    Alumnos Alumno = new Alumnos("Matematicas");
+    Alumno.GetNombre();
 
 
 
-    
+    // Paquetes (video 48)
+    package Clases;
+    import Clases.archivoClase;
+
+
 
   }
 }
