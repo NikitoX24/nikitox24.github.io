@@ -1478,7 +1478,7 @@ include("../PHP/cheats.php");
         <!-- Opcion 2 -->
         <div class="cod">
           <NGray>// Opcion 2 (fetch)</NGray> <br>
-          <NPurp>let</NPurp> datosJson; <br>
+          <NPurp>let</NPurp> datosJson; <br><br>
           <NBlue>fetch</NBlue>("<NGreen>JSON.json</NGreen>") <br>
           &nbsp; <NBlue>.then</NBlue>(res<NPurp> => </NPurp> res.<NBlue>json</NBlue>() ) <br>
           &nbsp; <NBlue>.then</NBlue>( (salida) <NPurp> => </NPurp> { <br>
@@ -1672,10 +1672,9 @@ include("../PHP/cheats.php");
       </div>
     </fieldset>
 
-
     <fieldset> <!-- Metodos Fetch -->
       <legend> Metodos Fetch </legend>
-        <div class="cod">
+        <div class="cod"> <!-- POST -->
           <NGray>// POST</NGray>
           <pre>
               <NPurp>async function</NPurp> <NBlue>crearPost</NBlue>(titulo, contenido) {
@@ -1704,7 +1703,7 @@ include("../PHP/cheats.php");
           </pre>
         </div>
 
-        <div class="cod">
+        <div class="cod"> <!-- GET -->
           <NGray>// GET</NGray>
           <pre>
               <NBlue>fetch</NBlue>("<NGreen>https://jsonplaceholder.typicode.com/posts/5</NGreen>", {
@@ -1716,7 +1715,7 @@ include("../PHP/cheats.php");
           </pre>
         </div>
 
-        <div class="cod">
+        <div class="cod"> <!-- PUT -->
           <NGray>// PUT</NGray>
           <pre>
               <NBlue>fetch</NBlue>("<NGreen>https://jsonplaceholder.typicode.com/posts/5</NGreen>", {
@@ -1735,7 +1734,7 @@ include("../PHP/cheats.php");
           </pre>
         </div>
 
-        <div class="cod">
+        <div class="cod"> <!-- PATCH -->
           <NGray>// PATCH</NGray>
           <pre>
               <NBlue>fetch</NBlue>("<NGreen>https://jsonplaceholder.typicode.com/posts/5</NGreen>", {
@@ -1753,7 +1752,7 @@ include("../PHP/cheats.php");
           </pre>
         </div>
 
-        <div class="cod">
+        <div class="cod"> <!-- DEL -->
           <NGray>// DELETE</NGray>
           <pre>
               <NBlue>fetch</NBlue>("<NGreen>https://jsonplaceholder.typicode.com/posts/5</NGreen>", {
@@ -1765,7 +1764,7 @@ include("../PHP/cheats.php");
           </pre>
         </div>
 
-        <div class="cod">
+        <div class="cod"> <!-- Avanzado -->
           <NGray>// Avanzado</NGray>
           <pre>
               <NBlue>fetch</NBlue>("<NGreen>https://jsonplaceholder.typicode.com/posts</NGreen>", {
@@ -1784,113 +1783,71 @@ include("../PHP/cheats.php");
           </pre>
         </div>
     </fieldset>
-    
-    <!-- Video SERVIORES (Metodos de Fetch) -->
-    <script>
-      // POST (Crear)
-      async function crearPost(titulo, contenido) {
-        try {
-          let respuesta = await fetch("https://jsonplaceholder.typicode.com/posts", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              title: titulo,
-              body: contenido,
-              userId: 1,
-            }),
-          })
-          if(!respuesta.ok){
-            throw new Error("Error en la solicitud: " + respuesta.statusText);
-          }
-          let data = await(respuesta.json());
-          console.log("Registro Creado: " , data);
-        } catch (error) {
-          console.error("Algo salió mal al crear el registro:", error);
-        }
-      }
-      crearPost("Mi titulo de ejemplo", "Contenido de ejemplo");
 
+    <fieldset> <!-- Axios -->
+      <legend> Axios (más potente que fetch)</legend>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script> <!-- ó "npm install axios" -->
 
-      
-      // GET (Obtener)
-      fetch("https://jsonplaceholder.typicode.com/posts/5", {
-        method: "GET",
-      })
-      .then(respuesta => respuesta.json())
-      .then(data => console.log(data))
-      .catch(error => console.error("Error: ", error));
+      <div class="cod"> <!-- install / script axion -->
+        <<NRed>script</NRed> <NPurp>src</NPurp>="<NGreen>https://unpkg.com/axios/dist/axios.min.js</NGreen>"><<NRed>/script</NRed>> 
+        <NGray>// ó "npm install axios"</NGray>
+      </div>
+      <div class="cod"> <!-- GET -->
+        <NGray>// GET</NGray> <br>
+        axios.<NBlue>get</NBlue>("<NGreen>https://jsonplaceholder.typicode.com/posts</NGreen>") <br>
+        .<NBlue>then</NBlue>(<NPurp>function</NPurp>(respuesta){ <br>
+          &nbsp; console.<NBlue>log</NBlue>(respuesta.data[<NOrg>0</NOrg>].title); <br>
+        }) <br>
+        .<NBlue>catch</NBlue>(error <NPurp> => </NPurp> console.<NBlue>log</NBlue>(error))
+      </div>
+      <div class="cod"> <!-- POST -->
+        <NPurp>let</NPurp> datos = { <br>
+          &nbsp; <NRed>title</NRed>: "<NGreen>Nuevo Post</NGreen>", <br>
+          &nbsp; <NRed>body</NRed>: "<NGreen>Mi contenido</NGreen>" <br>
+        } <br>
+        axios.<NBlue>post</NBlue>("<NGreen>https://jsonplaceholder.typicode.com/posts</NGreen>", datos) <br>
+        .<NBlue>then</NBlue>(respuesta <NPurp> =></NPurp> console.<NBlue>log</NBlue>("<NGreen>Post creado!</NGreen> ", respuesta.data)) <br>
+        .<NBlue>catch</NBlue>(error <NPurp> =></NPurp> console.<NBlue>log</NBlue>("<NGreen>Error al publicar:</NGreen> " , error)) <br>
+      </div>
+      <div class="cod"> <!-- Otros -->
+        <details>
+          <summary>Axios simultáneos + interceptores [...]</summary>
+          <pre>
+              <NGray>// Axios simultáneos + interceptores</NGray>
+              let token = "MiToken";
 
+              axios.interceptors.request.use( <NGray> // interceptor Request</NGray>
+                (config)=> {
+                  config.headers.Autorization = `Bearer $(token)`;
+                  return config
+                },(error)=> { return Promise.reject(error) }
+              )
 
+              axios.interceptors.response.use( <NGray> // interceptor Respuesta</NGray>
+                (respuesta) => {
+                  respuesta.data.customField = "Nuevo campo";
+                  return respuesta;
+                },(error)=> { return Promise.reject(error) }
+              )
 
-      // PUT (Reemplazar)
-      fetch("https://jsonplaceholder.typicode.com/posts/5", {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          title: "Nuevo titulo",
-          body: "Nueva descripción"
-        })
-      })
-      .then(respuesta => respuesta.json())
-      .then(data => console.log(data))
-      .catch(error => console.error("Error: ", error));
+              let pedido1 = axios.get("https://api.ejemplo.com/data1");
+              let pedido2 = axios.get("https://api.ejemplo.com/data2");
+              let pedido3 = axios.get("https://api.ejemplo.com/data3");
 
-
-
-      // PATCH (Modificar)
-      fetch("https://jsonplaceholder.typicode.com/posts/5", {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          title: "Nuevo titulo",
-        })
-      })
-      .then(respuesta => respuesta.json())
-      .then(data => console.log(data))
-      .catch(error => console.error("Error: ", error));
-
-
-
-      // DELETE (Eliminar)
-      fetch("https://jsonplaceholder.typicode.com/posts/5", { 
-        method: "DELETE" 
-      })
-      .then(respuesta => respuesta.json())
-      .then(data => console.log(data))
-      .catch(error => console.error("Error: ", error));
-
-
-
-
-
-    // Fetch Avanzado TODO:
-      let usuario = "usuario01";
-      let password = "123";
-      let token = "miToken";
-
-      fetch("https://jsonplaceholder.typicode.com/posts", {
-        method: "GET",
-        credentials: "include",
-        cache: "force-cache", // (opcional) - no-cache, default, reload, only-if-cache
-        redirect: "follow", // (opcional) - error, manual
-        headers: {
-          "Autorization": "Bearer" + token, // "Basic "+btoa(usuario + ";" + password)
-          "Content-Type": "application/json"
-        }
-      })
-      .then(respuesta => respuesta.json())
-      .then(data => console.log(data))
-      .catch(error => console.error("Error: ", error));
-
-    </script>
+              function obtenerInfo() {
+                axios.post([pedido1, pedido2, pedido3])
+                .then(axios.spread((respuesta1, respuesta2, respuesta3)=>{
+                  <NGray>// Codigo...</NGray>
+                }))
+                .catch(error => { <NGray>// Manejar errores</NGray> })
+              }
+          </pre>
+        </details>
+      </div>
+    </fieldset>
 
   </section>
+
 
   
   <p id="textoFix"></p>
