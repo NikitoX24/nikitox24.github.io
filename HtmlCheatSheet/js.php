@@ -261,19 +261,19 @@ include("../PHP/cheats.php");
       </div> <hr>
 
       <!-- Enviar-Devolver Array -->
-      <b>Funcion con Arrays</b>
+      <b>REST y SPREAD</b>
       <div class="flex">
         <div class="cod">
-          <NGray>// Devolver Array</NGray> <br>
+          <NGray>// REST (convertir en array)</NGray> <br>
           <NPurp>function</NPurp> <NBlue>MyFunc</NBlue>(...array) { <br>
             &nbsp; console.<NBlue>log</NBlue>(array); <br> } <br><br>
           <NBlue>MyFunc</NBlue>("Ene", "Feb" ...);
         </div>
         <div class="cod">
-          <NGray>// Enviar Array</NGray> <br>
+          <NGray>// SPREAD (recibir un array)</NGray> <br>
           <NPurp>function</NPurp> <NBlue>myFunc</NBlue>( uno, dos ) { <br>
             &nbsp; document<NBlue>.write</NBlue>(uno + dos); <br> } <br>
-            <NPurp>var</NPurp> array=["<NGreen>Juan</NGreen>", "<NGreen>David</NGreen>"];<br>
+            <NPurp>var</NPurp> array = ["<NGreen>Juan</NGreen>", "<NGreen>David</NGreen>"];<br>
             <NBlue>myFunc</NBlue>(...array);
         </div>
       </div> <hr>
@@ -951,10 +951,10 @@ include("../PHP/cheats.php");
   <!-- BOM -->
   <section id="BOM">
     <fieldset> <!-- Window -->
-    <legend> Window </legend>
+    <legend> Browser Object Model </legend>
       <div class="cod">        
-        window.name = "Ventana"; <NGray>// Nombre de la ventana</NGray> <br>
-        window.location = "<script>document.write(window.location);</script>";<br><br>
+        window.name = "<NGreen>Ventana</NGreen>"; <NGray>// Nombre de la ventana</NGray> <br>
+        window.location = "<NGreen>https://www.google.com</NGreen>"; <NGray>// ir a otra pag</NGray> <br><br>
 
         window.outerWidth; <NGray>// incluye scroll</NGray> <br>
         window.outerHeight; <NGray>// incluye pestañas y todo</NGray> <br>
@@ -1000,9 +1000,9 @@ include("../PHP/cheats.php");
         onfocus - onblur <br>
         onload - onunload <br>
         onclick - onchange <br>
-        onkeydown - onkeyup <br>
-        onmousedown - onmouseup <br>
-        onmouseover - onmouseout <br>
+        onkey down-up-press<br>
+        onmouse down-up-move <br>
+        mouseover - mouseout <br>
       </fieldset>
       <!-- Onload -->
       <fieldset class="width100">
@@ -1041,22 +1041,34 @@ include("../PHP/cheats.php");
       <legend> AddEventListener </legend>
       <!-- Crear Borrar -->
       <div class="flex">
-        <div class="width100"> Crear Evento:
-          <div class="cod wAuto"> element.<NBlue>addEventListener</NBlue>("<NGreen><u>evento</u></NGreen>", <NPurp><u>function</u></NPurp>); </div>
+        <div>
+          <div class="width100"> Crear Evento:
+            <div class="cod"> element.<NBlue>addEventListener</NBlue>("<NGreen><u>evento</u></NGreen>", <NPurp><u>function</u></NPurp>); </div>
+          </div>
+          <div class="width100"> Borrar Evento:
+            <div class="cod"> element.<NBlue>removeEventListener</NBlue>("<NGreen>evento</NGreen>", <NPurp>function</NPurp>); </div>
+          </div>
         </div>
-        <div class="width100"> Borrar Evento:
-          <div class="cod wAuto"> element.<NBlue>removeEventListener</NBlue>("<NGreen>mouseover</NGreen>", <NPurp>myFunction</NPurp>); </div>
+        <div>
+          <div class="width100"> MouseMove:
+            <div class="cod"> element.<NBlue>addEventListener</NBlue>("<NGreen><u>mousemove</u></NGreen>", <NPurp><u>function</u></NPurp>(event)<br>
+              &nbsp; console.log(event.clientX + event.clientY); <br>
+             );
+            </div>
+          </div>
         </div>
       </div> <hr>
       
       <!-- Tecla - video -->
       <div class="flex">
         <div class="width100">
-          Detectar una tecla pulsada:
+          Detectar y Prevenir cualquer tecla excepto números:
           <div class="cod wAuto">
             document.<NBlue>addEventListener</NBlue>('<NGreen>keydown</NGreen>', <NPurp>(<NVar>event</NVar>) => {</NPurp> <br>
-              &nbsp; console.<NBlue>log</NBlue>(event.key); <br>
-            });
+              &nbsp; <NAqua>if</NAqua>(event.keyCode < <NOrg>48</NOrg> || > <NOrg>57</NOrg>){ <br>
+              <NTab></NTab> event.<NBlue>preventDefault</NBlue>(); <br>
+              &nbsp; } <br>
+            <NPurp>}</NPurp>);
           </div>
         </div>
         <div class="width100">
@@ -1067,7 +1079,67 @@ include("../PHP/cheats.php");
               &nbsp; <NBlue>alert</NBlue>(this.currentTime) <br> });
           </div>
         </div>
-      </div>
+      </div> <hr>
+
+      <!-- Evento en tiempo real -->
+      Evento en tiempo real: (WebSocket)
+      <div>
+        <form id="contenedorMensajes">
+          <input type="text" id="mensajeIngresado"></input>
+          <button type="submit" id="botonenviar">Enviar</button>
+        </form>
+
+        <!--  
+        <script>
+          let socket = new WebSocket("ws://localhost:8080");
+          let mensajeingresado = document.getElementById("mensajeIngresado");
+          let botonenviar = document.getElementById("botonenviar");
+
+          function mostrarMensajes(contenido) {
+            let contenedorMensajes = document.getElementById("contenedorMensajes");
+            let elementoMensaje = document.createElement("p");
+            elementoMensaje.innerText = contenido;
+            contenedorMensajes.appendChild(elementoMensaje);
+          }
+          botonenviar.onclick = function(){
+            let mensaje = mensajeingresado.value;
+            mostrarMensajes(mensaje);
+            socket.send(mensaje);
+          };
+          socket.onmessage = function(event){
+            let mensaje = event.data;
+            mostrarMensajes(mensaje);
+          }
+        </script>
+        -->
+
+        <details>
+          <summary>Código...</summary>
+          <div class="cod">
+            <pre>
+                let socket = new WebSocket("ws://http://myserver/HtmlCheatSheet/JS.php");
+                  let mensajeingresado = document.getElementById("mensajeIngresado");
+                  let botonenviar = document.getElementById("botonenviar");
+
+                  function mostrarMensajes(contenido) {
+                    let contenedorMensajes = document.getElementById("contenedorMensajes");
+                    let elementoMensaje = document.createElement("p");
+                    elementoMensaje.innerText = contenido;
+                    contenedorMensajes.appendChild(elementoMensaje);
+                  }
+                  botonenviar.onclick = function(){
+                    let mensaje = mensajeingresado.value;
+                    mostrarMensajes(mensaje);
+                    socket.send(mensaje);
+                  };
+                  socket.onmessage = function(event){
+                    let mensaje = event.data;
+                    mostrarMensajes(mensaje);
+                  }
+              </pre>
+          </div>
+        </details>
+       </div>
     </fieldset>
 
     <!-- Propagacion de eventos - bubbling & capturing -->
@@ -1373,394 +1445,452 @@ include("../PHP/cheats.php");
       </details>
     </fieldset>
 
-    <fieldset> <!-- JSON -->
+    <!-- JSON -->
+    <fieldset> 
       <legend> JSON </legend>
-      <div class="cod">
+      <div class="flex">
         <!-- Opcion 1 -->
-        <NGray>// Opcion 1</NGray> <br>
-        <NPurp>let</NPurp> datosJson; <br>
-        <NPurp>let</NPurp> xhr = <NAqua>new</NAqua> <Nblue>XMLHttpRequest</Nblue>(); <br>
-        xhr.<Nblue>open</Nblue>("<NGreen>GET</NGreen>", "<NGreen>JSON.json</NGreen>",  true); <br>
-        xhr.responseType = "<NGreen>json</NGreen>"; <br>
-        xhr.<Nblue>onload</Nblue> = <NPurp>function</NPurp>() { <br>
-          &nbsp; <NAqua>if</NAqua>(xhr.status === <NOrg>200</NOrg>){ <br>
-            <NTab></NTab> datosJson = xhr.response; <br>
-          &nbsp; }<NAqua>else</NAqua>{ <NGray>/* manejar el error */</NGray> } <br>
-        } <br>
-        xhr.<NBlue>send</NBlue>(); <br><hr>
-        
+        <div class="cod">
+          <NGray>// Opcion 1</NGray> <br>
+          <NPurp>let</NPurp> datosJson; <br>
+          <NPurp>let</NPurp> xhr = <NAqua>new</NAqua> <Nblue>XMLHttpRequest</Nblue>(); <br>
+          xhr.<Nblue>open</Nblue>("<NGreen>GET</NGreen>", "<NGreen>JSON.json</NGreen>",  true); <br>
+          xhr.responseType = "<NGreen>json</NGreen>"; <br>
+          xhr.<Nblue>onload</Nblue> = <NPurp>function</NPurp>() { <br>
+            &nbsp; <NAqua>if</NAqua>(xhr.status === <NOrg>200</NOrg>){ <br>
+              <NTab></NTab> datosJson = xhr.response; <br>
+            &nbsp; }<NAqua>else</NAqua>{ <NGray>/* manejar el error */</NGray> } <br>
+          } <br>
+          xhr.<NBlue>send</NBlue>();
+          <!-- Promesas -->
+            <!-- Solicitud -->
+              <!-- GET    (obtener) -->
+              <!-- POST   (enviar) -->
+              <!-- PUT    (Actualizar) -->
+              <!-- Delete (Eliminar) -->
+            <!-- Respuestas -->
+              <!-- 200 (completada) -->
+              <!-- 201 (elemento creado) -->
+              <!-- 204 (respuesta vacia) -->
+              <!-- 400 (mal solicitado) -->
+              <!-- 401 (no autorizado) -->
+        </div>
         <!-- Opcion 2 -->
-        <NGray>// Opcion 2</NGray> <br>
-        <NPurp>let</NPurp> datosJson; <br>
-        <NBlue>fetch</NBlue>("<NGreen>JSON.json</NGreen>") <br>
-        &nbsp; <NBlue>.then</NBlue>(res<NPurp> => </NPurp> res.<NBlue>json</NBlue>() ) <br>
-        &nbsp; <NBlue>.then</NBlue>( (salida) <NPurp> => </NPurp> { <br>
-          <NTab></NTab> datosJson = salida; <br>
-        }) <br>
-        <NBlue>.catch</NBlue>( <NPurp>function</NPurp>(error){ <br>
-          &nbsp; <NBlue>alert</NBlue>(error); <br>
-        });
-        <!-- Promesas -->
-          <!-- Solicitud -->
-            <!-- GET    (obtener) -->
-            <!-- POST   (enviar) -->
-            <!-- PUT    (Actualizar) -->
-            <!-- Delete (Eliminar) -->
-
-          <!-- Respuestas -->
-            <!-- 200 (completada) -->
-            <!-- 201 (elemento creado) -->
-            <!-- 204 (respuesta vacia) -->
-            <!-- 400 (mal solicitado) -->
-            <!-- 401 (no autorizado) -->
-
-        <!-- <script>
-          let datosJson;
-          fetch("JSON.json")
-            .then(res => res.json() )
-            .then( (salida) => {
-            datosJson = salida;
-          } )
-          .catch(function(error) {
-            alert(error);
+        <div class="cod">
+          <NGray>// Opcion 2 (fetch)</NGray> <br>
+          <NPurp>let</NPurp> datosJson; <br>
+          <NBlue>fetch</NBlue>("<NGreen>JSON.json</NGreen>") <br>
+          &nbsp; <NBlue>.then</NBlue>(res<NPurp> => </NPurp> res.<NBlue>json</NBlue>() ) <br>
+          &nbsp; <NBlue>.then</NBlue>( (salida) <NPurp> => </NPurp> { <br>
+            <NTab></NTab> datosJson = salida; <br>
+          }) <br>
+          <NBlue>.catch</NBlue>( <NPurp>function</NPurp>(error){ <br>
+            &nbsp; <NBlue>alert</NBlue>(error); <br>
           });
+        </div>
+        <!-- Opcion 3 -->
+        <div class="cod">
+          <NGray>// (fetch en funcion)</NGray> <br>
+          <NPurp>function</NPurp> <NBlue>obtenerDatos</NBlue>(){ <br>
+            <NAqua>return</NAqua> <NBlue>fetch</NBlue>("<NGreen>https://api.datos...</NGreen>") <br>
+          &nbsp; <NBlue>.then</NBlue>( <NPurp>function</NPurp>(respuesta){ <br>
+            <NTab></NTab> <NAqua>return</NAqua> respuesta.json(); <br>
+          &nbsp; }) <br>
+          &nbsp; <NBlue>.then</NBlue>( datos <NPurp> => </NPurp> console.<NBlue>log</NBlue>(datos) ) <br>
+          &nbsp; <NBlue>.catch</NBlue>( error <NPurp> => </NPurp> console.<NBlue>log</NBlue>(error) ) <br>
+          } <br>
+          <NBlue>obtenerDatos</NBlue>();
+        </div>
+      </div>
 
-        </script> -->
+      <!-- POST -->
+      <div class="cod">
         
       </div>
     </fieldset>
   </section>
-  
-  <br><hr><hr><br><br>
 
-  <!--ES6 -->
-  <section id="ES6">
 
-    <u><b>Destructurar Objetos:</b></u>
-    <details>
-      <pre>
-          // Ej 1
-              let obj = {h:100, s: true};
-              let {h, s} = obj;
-              // console.log(h);
-              // console.log(s);
+  <!-- Asincronía + Errores -->
+  <section id="Asincronía + Errores">
 
-          // Ej 2
-              let j0, k0;
-              ({j0, k0} = {j0: 'Hello ', k0: 'Jack'});
-              // console.log(a + b);
-          // Ej 3
-              let {u0, i0} = {u0: 'Hello ', i0: 'Jack'};
-              // console.log(a + b);
-          // Ej 4
-              var o0 = {_h: 42, _s: true};
-              var {_h: foo, _s: bar} = o0;
-              //console.log(h); // Error
-              // console.log(foo); // 42
-          // Ej 5
-              var obj_0 = {_id: 42, name: "Jack"};
-              let {_id = 10, _age = 20} = obj_0;
-              // console.log(id); // 42
-              // console.log(age); // 20
-      </pre>
-    </details>
-    <hr>
-
-    <!-- Rest y Spread -->
-    <div class="borders">
-        REST & SPREAD 
-      <details>
-        <u><b>Parámetros de REST (descanso):</b></u>
-        <div class="codigo">
-          <pre>
-                  function containsAll(arr) {
-                  for (let k = 1; k < arguments.length; k++) {
-                      let num = arguments[k];
-                      if (arr.indexOf(num) === -1) {
-                          return false;
-                      }
-                  }
-                  return true;
-                  }
-                  let x0_ = [2, 4, 6, 7];
-                  console.log(containsAll(x0_, 2, 4, 7));
-                  console.log(containsAll(x0_, 6, 4, 9));
-                  //
-                  function containsAll2(arr, ...nums) {
-                  for (let num of nums) {
-                      if (arr.indexOf(num) === -1) {
-                          return false;
-                      }
-                  }
-                  return true;
-                  }
-    
-                  let x1_ = [2, 4, 6, 7];
-                  console.log(containsAll2(x1_, 2, 4, 7));
-                  console.log(containsAll2(x1_, 6, 4, 9));
-    
-              </pre>
-        </div>
-        <u><b>Parámetros de SPREAD(propagación):</b></u>
-        <div class="codigo">
-          <pre>
-                  function myFunction(w, x, y, z) {
-                      console.log(w + x + y + z);
-                  }
-                  var args = [1, 2, 3];
-                  myFunction.apply(null, args.concat(4));
-    
-    
-                  const myFunction = (w, x, y, z) => {
-                      console.log(w + x + y + z);
-                  };
-                  let args = [1, 2, 3];
-                  myFunction(...args, 4);
-    
-    
-                  var dateFields = [1970, 0, 1];  // 1 Jan 1970
-                  var date = new Date(...dateFields);
-                  console.log(date);
-    
-    
-                  var arr = ["One", "Two", "Five"];
-                  arr.splice(2, 0, "Three");
-                  arr.splice(3, 0, "Four");
-                  console.log(arr);
-    
-    
-                  let newArr = ['Three', 'Four'];
-                  let arr = ['One', 'Two', ...newArr, 'Five'];
-                  console.log(arr);
-    
-    
-                  const obj1 = { foo: 'bar', x: 42 };
-                  const obj2 = { foo: 'baz', y: 5 };
-                  const clonedObj = { ...obj1 }; // { foo: "bar", x: 42 }
-                  const mergedObj = { ...obj1, ...obj2 }; // { foo: "baz", x: 42, y: 5 }
-    
-    
-                  const obj1 = { foo: 'bar', x: 42 };
-                  const obj2 = { foo: 'baz', y: 5 };
-                  const merge = (...objects) => ({ ...objects });
-    
-                  let mergedObj = merge (obj1, obj2);
-                  // { 0: { foo: 'bar', x: 42 }, 1: { foo: 'baz', y: 5 } }
-    
-                  let mergedObj2 = merge ({}, obj1, obj2);
-                  // { 0: {}, 1: { foo: 'bar', x: 42 }, 2: { foo: 'baz', y: 5 } }
-              </pre>
-        </div>
-      </details>
-    </div> <hr>
-
-    <!-- Clases -->
-    <div class="borders">
-        Clases en ES6
-      <details>
-        <u><b>Constructor - (al iniciar):</b></u>
-        <div class="codigo">
-          <pre>
-                  class Rectangle0 {
-                      constructor(height, width)
-                      {
-                      this.height = height;
-                      this.width = width;
-                      }
-                  }
-                  const square0 = new Rectangle0(5, 5);
-                  const poster0 = new Rectangle0(2, 3);
-                  console.log(square0.height);
-              </pre>
-        </div>
-        <u><b>Clase nombrada:</b></u>
-        <div class="codigo">
-          <pre>
-                  var Square0 = class Rectangle0
-                  {
-                      constructor(height, width) {
-                      this.height = height;
-                      this.width = width;
-                      }
-                  };
-    
-                  const square00 = new Square0(5, 5);
-                  const poster00 = new Square0(2, 3);
-                  console.log(square00.height);
-    
-              </pre>
-        </div>
-        <u><b>Clase no nombrada:</b></u>
-        <div class="codigo">
-          <pre>
-                  var Square1 = class
-                  {
-                  constructor(height, width) {
-                      this.height = height;
-                      this.width = width;
-                  }
-                  };
-                  const square1 = new Square1(5, 5);
-                  const poster1 = new Square1(2, 3);
-                  console.log(square1.height);
-              </pre>
-        </div>
-        <u><b>Metodo/Func</b></u>
-        <div class="codigo">
-          <pre>
-                  class Rectangle1 {
-                  constructor(height, width) {
-                      this.height = height;
-                      this.width = width;
-                  }
-    
-                  get area() {
-                      return this.calcArea();
-                  }
-    
-                  calcArea() {
-                      return this.height * this.width;
-                  }
-                  }
-                  const square01 = new Rectangle1(5, 5);
-                  console.log(square01.area); // 25
-    
-              </pre>
-        </div>
-        <u><b>Herencia</b></u>
-        <div class="codigo">
-          <pre>
-                  class Animal0 {
-                  constructor(name) {
-                      this.name = name;
-                  }
-                  speak() {
-                      console.log(this.name + ' makes a noise.');
-                  }
-                  }
-    
-                  class Dog0 extends Animal0 {
-                  speak() {
-                      console.log(this.name + ' barks.');
-                  }
-                  }
-                  let dog0 = new Dog0('Rex');
-                  dog0.speak(); // Rex barks.
-                  //
-                  class Animal1 {
-                  constructor(name) {
-                      this.name = name;
-                  }
-                  speak() {
-                      console.log(this.name + ' makes a noise.');
-                  }
-                  }
-    
-                  class Dog1 extends Animal1 {
-                  speak() {
-                      super.speak(); // Rex barks.
-                      console.log(this.name + ' barks.');
-                  }
-                  }
-                  let dog1 = new Dog1('Rex');
-                  dog1.speak(); // Rex makes a noise.
-              </pre>
-        </div>
-      </details>
-    </div> <hr>
-
-    <!-- Map y Set -->
-    <div class="borders">
-        Map & Set
-      <details>
-        <div class="codigo">
-          <pre>
-                  let map00 = new Map([["k1","v1"], ["k2", "v2"]]);
-                      console.log(map00.size); // 2
-    
-                      // Metodos
-                      // set(key, value)
-                      // get(key)
-                      // has(key)
-                      // delete(key)
-                      // clear()
-                      // keys()    : Arr de k
-                      // value()   : Arr de v
-                      // entries() : Arr de [k, v]
-    
-                      let map2 = new Map();
-                      map2.set("k1", "v1").set("k2", "v2");
-                      console.log(map2.get("k1")); // v1
-                      console.log(map2.has("k2")); // true
-                      for (let kv of map2.entries())
-                      console.log(kv[0] + " : " + kv[1]); // k1:v1  // k2:v2
-                  //
-    
-                  // SET (obj)
-                  let set = new Set([1, 2, 4, 2, 59, 9, 4, 9, 1]);
-                  console.log(set.size); // 5 (size devuelve la cant de valores diferentes)
-                  // Metodos= Add, delete, has, clear, values.
-              </pre>
-        </div>
-      </details>
-    </div> <hr>
-
-    <!-- Otros -->
-    <div class="borders">
-        Otros 
-      <details>
-        <h3>Iteradores y Generadores:</h3>
-          <div class="codigo">
-            <pre>
-                  let myIterableObj = {
-                    [Symbol.iterator] : function* () {
-                    yield 1; yield 2; yield 3;
-                    }
-                  };
-                  console.log([...myIterableObj]); // [ 1, 2, 3 ]
-                  //
-                  function* idMaker() {
-                  let index = 0;
-                  while (index < 5)
-                    yield index++;
-                  }
-                  var gen = idMaker();
-                  console.log(gen.next().value);
-                  console.log(gen.next().value);
-                  console.log(gen.next().value);
-                  console.log(gen.next().value);
-                  console.log(gen.next().value);
-                  // Try to add one more console.log, just like the above see what happens.
-                  //
-                  const arr_ = ['0', '1', '4', 'a', '9', 'c', '16'];
-                  const my_obj = {
-                    [Symbol.iterator]: function*() {
-                    for(let index of arr_) {
-                      yield `${index}`;
-                    }
-                    }
-                  };
-                  const all = [...my_obj] // Here you can replace the '[...my_obj]' with 'arr'.
-                    .map(i => parseInt(i, 10))
-                    .map(Math.sqrt)
-                    .filter((i) => i < 5) // try changing the value of 5 to 4 see what happens.
-                    .reduce((i, d) => i + d); // comment this line while you are changing the value of the line above
-                  console.log(all);
-            </pre>
+    <fieldset> <!-- Callback -->
+      <legend> Callback </legend>
+        <div class="flex">
+          <div class="cod">
+            <NGray>// Callback</NGray> <br>
+            <NPurp>function</NPurp> <NBlue>avanzaFila</NBlue>(callback){ <br>
+              &nbsp; <NBlue>setTimeout</NBlue>(<NPurp>function</NPurp>(){ <br>
+                <NTab></NTab> console.<NBlue>log</NBlue>("<NGreen>Tu turno ha llegado</NGreen>"); <br>
+                <NTab></NTab> <NBlue>callback</NBlue>(); <br>
+              &nbsp; }, <NOrg>5000</NOrg>); <br>
+            } <br>
+            <NPurp>function</NPurp> <NBlue>llamada</NBlue>(){ <br>
+              &nbsp; console.<NBlue>log</NBlue>("<NGreen>Te presentas a tu turno</NGreen>"); <br>
+            } <br>
+              <br>
+            console.<NBlue>log</NBlue>("<NGreen>Llegas a la fila</NGreen>"); <br>
+            <NBlue>avanzaFila</NBlue>(llamada); <br>
+            console.<NBlue>log</NBlue>("<NGreen>Te vas a comprar café</NGreen>");
           </div>
-        <hr>
-        <u><b>Módulos:</b></u> <br>
-        <u><b>Métodos integrados:</b></u>
-      </details>
-    </div> <hr>
+          <div class="cod">
+            <NGray>// Manejo de Error</NGray> <br>
+              <NPurp>function</NPurp> <NBlue>sumar</NBlue>(num1, num2, callback){ <br>
+                &nbsp; <NBlue>setTimeout</NBlue>(<NPurp>function</NPurp>(){ <br>
+                  <NTab></NTab>  if(<NAqua>typeof</NAqua> num1 != "<NGreen>number</NGreen>" || <NAqua>typeof</NAqua> num2 != "<NGreen>number</NGreen>"){ <br>
+                    <NTab></NTab> <NTab></NTab> <NAqua>return</NAqua> <NBlue>callback</NBlue>(<NAqua>new</NAqua> <NBlue>Error</NBlue>("<NGreen> Argumento no válido</NGreen>")); <br>
+                  <NTab></NTab> } <br>
+                  <NTab></NTab> <NBlue>callback</NBlue>(<NAqua>null</NAqua>, num1 + num2); <br>
+                &nbsp; }, <NOrg>1000</NOrg>); <br>
+              } <br> <br>
+              <NBlue>sumar</NBlue>("p", 50, <NPurp>function</NPurp>(error, resultado){ <br>
+                <NAqua>if</NAqua>(error){ <br>
+                  &nbsp; console.<NBlue>log</NBlue>(error); <br>
+                }<NAqua>else</NAqua>{ <br>
+                  &nbsp; console.<NBlue>log</NBlue>(resultado); <br>
+                } <br>
+              })
+          </div>
+        </div>
+    </fieldset>
+
+    <fieldset> <!-- Promise -->
+      <legend> Promise </legend>
+      <div class="flex">
+        <div class="cod">
+          <NGray>// Promise</NGray> <br>
+          <NPurp>let</NPurp> miPromesa = <NAqua>new</NAqua> Promise(<NPurp>function</NPurp>(resolve, reject){ <br>
+            &nbsp; <NBlue>setTimeout</NBlue>(<NPurp>function</NPurp>(){ <br>
+              <NTab></NTab> <NPurp>let</NPurp> error = false; <br>
+              <NTab></NTab> <NAqua>if</NAqua> (error){  <br>
+              <NTab></NTab> &nbsp; <NBlue>reject</NBlue>("<NGreen>La Promesa ha fallado</NGreen>"); <br>
+              <NTab></NTab> } <NAqua>else</NAqua>{  <br>
+              <NTab></NTab> &nbsp; <NBlue>resolve</NBlue>("<NGreen>La Promesa se ha cumplido</NGreen>") <br>
+              <NTab></NTab> } <br>
+            &nbsp; }) <br>
+          }); <br>
+          miPromesa.<NBlue>then</NBlue>(<NPurp>function</NPurp>(resultado){ <br>
+            &nbsp; console.<NBlue>log</NBlue>(resultado); <br>
+          }).<NBlue>catch</NBlue>(<NPurp>function</NPurp>(error){ <br>
+            &nbsp; console.<NBlue>log</NBlue>(error); <br>
+          }) <br><br>
+
+          <details>
+            <summary>Otros...</summary>
+            <pre>
+              <NGray>// Varios Promise </NGray>
+              let promesa1 = new Promise(function(resolve, reject){
+                setTimeout(resolve, 5000, "Saludos a todos"); 
+              });
+              let promesa2 = new Promise(function(resolve, reject){
+                setTimeout(resolve, 7000, "Otro saludo.");
+              });
+              Promise.all([promesa1, promesa2]).then(function(valores){
+                console.log(valores[0],",", valores[1]);
+              })
+
+              <NGray>// Promise + json</NGray>
+              function obtenerUsuarios(){
+                return new Promise(function(resolve, reject){
+                  let xhr = new XMLHttpRequest();
+                  xhr.open("GET", "https://jsonplaceholder.typicode.com/users");
+                  xhr.onload = function(){
+                    if (xhr.status === 200){
+                      resolve(JSON.parse(xhr.responseText));
+                    }else{
+                      reject(xhr.status);
+                    }
+                  }
+                  xhr.send();
+                });
+              }
+              obtenerUsuarios()
+              .then(function(usuarios){
+                console.log(usuarios);
+              })
+              .catch(function(error){
+                console.error(error);
+              })
+            </pre>
+          </details>
+        </div>
+
+        <div class="cod">
+          <NGray>// Manejo de Error</NGray> <br>
+          <NPurp>function</NPurp> <NBlue>sumar</NBlue>(num1, num2){ <br>
+            <NAqua>return new</NAqua> <NObj>Promise</NObj>(<NPurp>function</NPurp>(resolve, reject){ <br>
+              &nbsp; <NBlue>setTimeout</NBlue>(<NPurp>function</NPurp>(){ <br>
+                &nbsp; <NTab></NTab> if(<NAqua>typeof</NAqua> num1 != "<NGreen>number</NGreen>" || <NAqua>typeof</NAqua> num2 != "<NGreen>number</NGreen>"){ <br>
+                  <NTab2></NTab2> <NBlue>reject</NBlue>( <NAqua>new</NAqua> <NBlue>Error</NBlue> ("<NGreen>Argumento no válido</NGreen>")); <br>
+                &nbsp; <NTab></NTab> } <NAqua>else</NAqua>{  <br>
+                  <NTab2></NTab2> <NBlue>resolve</NBlue>("num1+num2") <br>
+                &nbsp; <NTab></NTab> } <br>
+              <NTab></NTab> }, <NOrg>1000</NOrg>); <br>
+            &nbsp; }) <br>
+          } <br><br>
+          <NBlue>sumar</NBlue>("p", <NOrg>50</NOrg>)
+          .<NBlue>then</NBlue>(<NPurp>function</NPurp>(resultado){ <br>
+            &nbsp; console.<NBlue>log</NBlue>(resultado); <br>
+          }).<NBlue>catch</NBlue>(<NPurp>function</NPurp>(error){ <br>
+            &nbsp; console.<NBlue>log</NBlue>(error); <br>
+          })
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset> <!-- Async - Await -->
+      <legend> Async - Await </legend>      
+      <div class="flex">
+        <div class="cod">
+          <NGray>// Async - Await</NGray> <br>
+          <NPurp>async function</NPurp> <NBlue>obtenerDatos</NBlue>(){ <br>
+            <NTab></NTab> <NPurp>let</NPurp> respuesta <NAqua> = await</NAqua> <NBlue>fetch</NBlue>("<NGreen>https://api.datos...</NGreen>") <br> <br>
+            <NTab></NTab> <NPurp>let</NPurp> datos <NAqua> = Await </NAqua> respuesta.<NBlue>json</NBlue>(); <br> <br>
+            <NTab></NTab> console.<NBlue>log</NBlue>(datos); <br>
+          } <br>
+          <NBlue>obtenerDatos</NBlue>();
+        </div>
+        <div class="cod">
+          <NGray>// Manejo de Error</NGray> <br>
+          <NPurp>async function</NPurp> <NBlue>sumar</NBlue>(num1, num2){ <br>
+            &nbsp; <NAqua>if</NAqua>(<NAqua>typeof</NAqua> num1 != "<NGreen>number</NGreen>" || typeof num2 != "<NGreen>number</NGreen>"){ <br>
+              <NTab></NTab> <NAqua>throw new</NAqua> <NBlue>Error</NBlue>("<NGreen>Argumento no válido</NGreen>"); <br>
+            &nbsp; } <br>
+            &nbsp; <NAqua>return</NAqua> num1+num2; <br>
+          } <br>
+          <NPurp>async function</NPurp> <NBlue>manejoErrores</NBlue>(){ <br>
+            &nbsp; <NAqua>try</NAqua>{ <br>
+            <NTab></NTab> <NPurp>let</NPurp> resultado = await <NBlue>sumar</NBlue>("p", 50); <br>
+            <NTab></NTab> console.<NBlue>log</NBlue>(resultado); <br>
+            &nbsp; } <br>
+            &nbsp; <NAqua>catch</NAqua>(error){ <br>
+            <NTab></NTab> console.<NBlue>error</NBlue>(error.message); <br>
+            &nbsp; } <br>
+          } <br>
+          <NBlue>manejoErrores</NBlue>(); <br>
+        </div>
+      </div>
+    </fieldset>
+
+
+    <fieldset> <!-- Metodos Fetch -->
+      <legend> Metodos Fetch </legend>
+        <div class="cod">
+          <NGray>// POST</NGray>
+          <pre>
+              <NPurp>async function</NPurp> <NBlue>crearPost</NBlue>(titulo, contenido) {
+                <NAqua>try</NAqua> {
+                  <NPurp>let</NPurp> respuesta = <NAqua>await</NAqua> <NBlue>fetch</NBlue>("<NGreen>https://jsonplaceholder.typicode.com/posts</NGreen>", {
+                    <NRed>method</NRed>: "<NGreen>POST</NGreen>",
+                    <NRed>headers</NRed>: {
+                      "<b>Content-Type</b>": "<NGreen>application/json</NGreen>",
+                    },
+                    <NRed>body</NRed>: JSON.<NBlue>stringify</NBlue>({
+                      <b>title</b>: titulo,
+                      <b>body</b>: contenido,
+                      <b>userId</b>: 1,
+                    }),
+                  })
+                  <NAqua>if</NAqua>(!respuesta.ok){
+                    <NAqua>throw new</NAqua> <NBlue>Error</NBlue>("<NGreen>Error en la solicitud:</NGreen> " + respuesta.statusText);
+                  }
+                  <NPurp>let</NPurp> data = <NAqua>await</NAqua>(respuesta.json());
+                  console.<NBlue>log</NBlue>("<NGreen>Registro Creado:</NGreen> " , data);
+                } <NAqua>catch</NAqua> (error) {
+                  console.<NBlue>error</NBlue>("<NGreen>Algo salió mal al crear el registro:</NGreen>", error);
+                }
+              }
+              <NBlue>crearPost</NBlue>("<NGreen>Mi titulo de ejemplo</NGreen>", "<NGreen>Contenido de ejemplo</NGreen>");
+          </pre>
+        </div>
+
+        <div class="cod">
+          <NGray>// GET</NGray>
+          <pre>
+              <NBlue>fetch</NBlue>("<NGreen>https://jsonplaceholder.typicode.com/posts/5</NGreen>", {
+                <NRed>method</NRed>: "<NGreen>GET</NGreen>",
+              })
+              .<NBlue>then</NBlue>(respuesta <NPurp> =></NPurp> respuesta.<NBlue>json</NBlue>())
+              .<NBlue>then</NBlue>(data <NPurp> =></NPurp> console.<NBlue>log</NBlue>(data))
+              .<NBlue>catch</NBlue>(error <NPurp> =></NPurp> console.<NBlue>error</NBlue>("<NGreen>Error</NGreen>: ", error));
+          </pre>
+        </div>
+
+        <div class="cod">
+          <NGray>// PUT</NGray>
+          <pre>
+              <NBlue>fetch</NBlue>("<NGreen>https://jsonplaceholder.typicode.com/posts/5</NGreen>", {
+                <NRed>method</NRed>: "<NGreen>PUT</NGreen>",
+                <NRed>headers</NRed>: {
+                  "<b>Content-Type</b>": "<NGreen>application/json</NGreen>",
+                },
+                <NRed>body</NRed>: JSON.<NBlue>stringify</NBlue>({
+                  <b>title</b>: "<NGreen>Nuevo título</NGreen>",
+                  <b>body</b>: "<NGreen>Nueva descripcion</NGreen>",
+                }),
+              })
+              .<NBlue>then</NBlue>(respuesta <NPurp> =></NPurp> respuesta.<NBlue>json</NBlue>())
+              .<NBlue>then</NBlue>(data <NPurp> =></NPurp> console.<NBlue>log</NBlue>(data))
+              .<NBlue>catch</NBlue>(error <NPurp> =></NPurp> console.<NBlue>error</NBlue>("<NGreen>Error</NGreen>: ", error));
+          </pre>
+        </div>
+
+        <div class="cod">
+          <NGray>// PATCH</NGray>
+          <pre>
+              <NBlue>fetch</NBlue>("<NGreen>https://jsonplaceholder.typicode.com/posts/5</NGreen>", {
+                <NRed>method</NRed>: "<NGreen>PATCH</NGreen>",
+                <NRed>headers</NRed>: {
+                  "<b>Content-Type</b>": "<NGreen>application/json</NGreen>",
+                },
+                <NRed>body</NRed>: JSON.<NBlue>stringify</NBlue>({
+                  <b>title</b>: "<NGreen>Nuevo título</NGreen>",
+                }),
+              })
+              .<NBlue>then</NBlue>(respuesta <NPurp> =></NPurp> respuesta.<NBlue>json</NBlue>())
+              .<NBlue>then</NBlue>(data <NPurp> =></NPurp> console.<NBlue>log</NBlue>(data))
+              .<NBlue>catch</NBlue>(error <NPurp> =></NPurp> console.<NBlue>error</NBlue>("<NGreen>Error</NGreen>: ", error));
+          </pre>
+        </div>
+
+        <div class="cod">
+          <NGray>// DELETE</NGray>
+          <pre>
+              <NBlue>fetch</NBlue>("<NGreen>https://jsonplaceholder.typicode.com/posts/5</NGreen>", {
+                <NRed>method</NRed>: "<NGreen>DELETE</NGreen>"
+              })
+              .<NBlue>then</NBlue>(respuesta <NPurp> =></NPurp> respuesta.<NBlue>json</NBlue>())
+              .<NBlue>then</NBlue>(data <NPurp> =></NPurp> console.<NBlue>log</NBlue>(data))
+              .<NBlue>catch</NBlue>(error <NPurp> =></NPurp> console.<NBlue>error</NBlue>("<NGreen>Error</NGreen>: ", error));
+          </pre>
+        </div>
+
+        <div class="cod">
+          <NGray>// Avanzado</NGray>
+          <pre>
+              <NBlue>fetch</NBlue>("<NGreen>https://jsonplaceholder.typicode.com/posts</NGreen>", {
+                <NRed>method</NRed>: "<NGreen>GET</NGreen>",
+                <NRed><u>credentials</u></NRed>: "<NGreen>include</NGreen>",
+                <NRed><u>cache</u></NRed>: "<NGreen>force-cache</NGreen>", <NGray>// no-cache, default, reload, only-if-cache</NGray>
+                <NRed><u>redirect</u></NRed>: "<NGreen>follow</NGreen>", <NGray>// error, manual</NGray>
+                <NRed>headers</NRed>: {
+                  "<b>Autorization</b>": "<NGreen>Bearer</NGreen> + token", <NGray>// "Basic " + btoa(user + ";" + password)</NGray>
+                  "<b>Content-Type</b>": "<NGreen>application/json</NGreen>",
+                },
+              })
+              .<NBlue>then</NBlue>(respuesta <NPurp> =></NPurp> respuesta.<NBlue>json</NBlue>())
+              .<NBlue>then</NBlue>(data <NPurp> =></NPurp> console.<NBlue>log</NBlue>(data))
+              .<NBlue>catch</NBlue>(error <NPurp> =></NPurp> console.<NBlue>error</NBlue>("<NGreen>Error</NGreen>: ", error));
+          </pre>
+        </div>
+    </fieldset>
+    
+    <!-- Video SERVIORES (Metodos de Fetch) -->
+    <script>
+      // POST (Crear)
+      async function crearPost(titulo, contenido) {
+        try {
+          let respuesta = await fetch("https://jsonplaceholder.typicode.com/posts", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              title: titulo,
+              body: contenido,
+              userId: 1,
+            }),
+          })
+          if(!respuesta.ok){
+            throw new Error("Error en la solicitud: " + respuesta.statusText);
+          }
+          let data = await(respuesta.json());
+          console.log("Registro Creado: " , data);
+        } catch (error) {
+          console.error("Algo salió mal al crear el registro:", error);
+        }
+      }
+      crearPost("Mi titulo de ejemplo", "Contenido de ejemplo");
+
+
+      
+      // GET (Obtener)
+      fetch("https://jsonplaceholder.typicode.com/posts/5", {
+        method: "GET",
+      })
+      .then(respuesta => respuesta.json())
+      .then(data => console.log(data))
+      .catch(error => console.error("Error: ", error));
+
+
+
+      // PUT (Reemplazar)
+      fetch("https://jsonplaceholder.typicode.com/posts/5", {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          title: "Nuevo titulo",
+          body: "Nueva descripción"
+        })
+      })
+      .then(respuesta => respuesta.json())
+      .then(data => console.log(data))
+      .catch(error => console.error("Error: ", error));
+
+
+
+      // PATCH (Modificar)
+      fetch("https://jsonplaceholder.typicode.com/posts/5", {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          title: "Nuevo titulo",
+        })
+      })
+      .then(respuesta => respuesta.json())
+      .then(data => console.log(data))
+      .catch(error => console.error("Error: ", error));
+
+
+
+      // DELETE (Eliminar)
+      fetch("https://jsonplaceholder.typicode.com/posts/5", { 
+        method: "DELETE" 
+      })
+      .then(respuesta => respuesta.json())
+      .then(data => console.log(data))
+      .catch(error => console.error("Error: ", error));
+
+
+
+
+
+    // Fetch Avanzado TODO:
+      let usuario = "usuario01";
+      let password = "123";
+      let token = "miToken";
+
+      fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: "GET",
+        credentials: "include",
+        cache: "force-cache", // (opcional) - no-cache, default, reload, only-if-cache
+        redirect: "follow", // (opcional) - error, manual
+        headers: {
+          "Autorization": "Bearer" + token, // "Basic "+btoa(usuario + ";" + password)
+          "Content-Type": "application/json"
+        }
+      })
+      .then(respuesta => respuesta.json())
+      .then(data => console.log(data))
+      .catch(error => console.error("Error: ", error));
+
+    </script>
+
   </section>
-
-  <script>
-    // window.location.replace("#");
-  </script>
-
-
-
 
   
   <p id="textoFix"></p>
