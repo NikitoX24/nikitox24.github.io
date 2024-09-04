@@ -1444,30 +1444,27 @@ include("../PHP/cheats.php");
         </pre>
       </details>
     </fieldset>
+  </section>
 
+  <!-- Json -->
+  <section id="JSON">
     <!-- JSON -->
     <fieldset> 
-      <legend> JSON </legend>
+      <legend> JSON (xhr y fetch) </legend>
       <div class="flex">
-        <!-- Opcion 1 -->
-        <div class="cod">
-          <NGray>// Opcion 1</NGray> <br>
-          <NPurp>let</NPurp> datosJson; <br>
+        <div class="cod"> <!-- xhr -->
+          <NGray>// Opcion 1 (XMLHttpRequest)</NGray> <br>
+          <NPurp>let</NPurp> <u>datosJson</u>; <br><br>
           <NPurp>let</NPurp> xhr = <NAqua>new</NAqua> <Nblue>XMLHttpRequest</Nblue>(); <br>
-          xhr.<Nblue>open</Nblue>("<NGreen>GET</NGreen>", "<NGreen>JSON.json</NGreen>",  true); <br>
+          xhr.<Nblue>open</Nblue>("<NGreen>GET</NGreen>", "<NGreen>JSON.json</NGreen>", 
+                                    <dfn title="Si es Asincrono ó no">true</dfn>); <br>
           xhr.responseType = "<NGreen>json</NGreen>"; <br>
           xhr.<Nblue>onload</Nblue> = <NPurp>function</NPurp>() { <br>
             &nbsp; <NAqua>if</NAqua>(xhr.status === <NOrg>200</NOrg>){ <br>
-              <NTab></NTab> datosJson = xhr.response; <br>
+              <NTab></NTab> <u>datosJson</u> = xhr.response; <br>
             &nbsp; }<NAqua>else</NAqua>{ <NGray>/* manejar el error */</NGray> } <br>
           } <br>
           xhr.<NBlue>send</NBlue>();
-          <!-- Promesas -->
-            <!-- Solicitud -->
-              <!-- GET    (obtener) -->
-              <!-- POST   (enviar) -->
-              <!-- PUT    (Actualizar) -->
-              <!-- Delete (Eliminar) -->
             <!-- Respuestas -->
               <!-- 200 (completada) -->
               <!-- 201 (elemento creado) -->
@@ -1475,41 +1472,130 @@ include("../PHP/cheats.php");
               <!-- 400 (mal solicitado) -->
               <!-- 401 (no autorizado) -->
         </div>
-        <!-- Opcion 2 -->
-        <div class="cod">
+        <div class="cod"> <!-- fetch -->
           <NGray>// Opcion 2 (fetch)</NGray> <br>
-          <NPurp>let</NPurp> datosJson; <br><br>
-          <NBlue>fetch</NBlue>("<NGreen>JSON.json</NGreen>") <br>
-          &nbsp; <NBlue>.then</NBlue>(res<NPurp> => </NPurp> res.<NBlue>json</NBlue>() ) <br>
-          &nbsp; <NBlue>.then</NBlue>( (salida) <NPurp> => </NPurp> { <br>
-            <NTab></NTab> datosJson = salida; <br>
+          <NPurp>let</NPurp> <u>datosJson</u>; <br><br>
+          <NBlue>fetch</NBlue>("<NGreen>JSON.json</NGreen>") <NGray>// ó URL</NGray> <br>
+          <NBlue>.then</NBlue>( res<NPurp> => </NPurp> res.<NBlue>json</NBlue>() ) <br>
+          <NBlue>.then</NBlue>( (salida) <NPurp> => </NPurp> { <br>
+            <NTab></NTab> <u>datosJson</u> = salida; <br>
           }) <br>
-          <NBlue>.catch</NBlue>( <NPurp>function</NPurp>(error){ <br>
-            &nbsp; <NBlue>alert</NBlue>(error); <br>
-          });
+          <NBlue>.catch</NBlue>( error <NPurp> => </NPurp> console.<NBlue>log</NBlue>(error) ) <br>
         </div>
-        <!-- Opcion 3 -->
-        <div class="cod">
-          <NGray>// (fetch en funcion)</NGray> <br>
-          <NPurp>function</NPurp> <NBlue>obtenerDatos</NBlue>(){ <br>
-            <NAqua>return</NAqua> <NBlue>fetch</NBlue>("<NGreen>https://api.datos...</NGreen>") <br>
-          &nbsp; <NBlue>.then</NBlue>( <NPurp>function</NPurp>(respuesta){ <br>
-            <NTab></NTab> <NAqua>return</NAqua> respuesta.json(); <br>
-          &nbsp; }) <br>
-          &nbsp; <NBlue>.then</NBlue>( datos <NPurp> => </NPurp> console.<NBlue>log</NBlue>(datos) ) <br>
-          &nbsp; <NBlue>.catch</NBlue>( error <NPurp> => </NPurp> console.<NBlue>log</NBlue>(error) ) <br>
-          } <br>
-          <NBlue>obtenerDatos</NBlue>();
-        </div>
-      </div>
-
-      <!-- POST -->
-      <div class="cod">
-        
       </div>
     </fieldset>
-  </section>
 
+    <!-- Metodos Fetch -->
+    <fieldset> 
+      <legend> Fetch (Metodos de Solicitud) </legend>
+      &nbsp;(URL usado): <u>https://jsonplaceholder.typicode.com/posts</u>
+      <div class="flex">
+        <div class="cod"> <!-- POST -->
+          <NGray>// POST (crear)</NGray>
+            <pre>
+                <NPurp>async function</NPurp> <NBlue>crearPost</NBlue>(titulo, contenido) {
+                  <NAqua>try</NAqua> {
+                    <NPurp>let</NPurp> respuesta = <NAqua>await</NAqua> <NBlue>fetch</NBlue>("<NGreen>url</NGreen>", {
+                      <NRed>method</NRed>: "<NGreen>POST</NGreen>",
+                      <NRed>headers</NRed>: {
+                        "<b>Content-Type</b>": "<NGreen>application/json</NGreen>",
+                      },
+                      <NRed>body</NRed>: JSON.<NBlue>stringify</NBlue>({
+                        <b>title</b>: titulo,
+                        <b>body</b>: contenido,
+                        <b>userId</b>: 1,
+                      }),
+                    })
+                    <NAqua>if</NAqua>(!respuesta.ok){ <NGray>// Error de solicitud</NGray>
+                      <NAqua>throw new</NAqua> <NBlue>Error</NBlue>(respuesta.statusText);
+                    }
+                    <NPurp>let</NPurp> data = <NAqua>await</NAqua>(respuesta.json());
+                    console.<NBlue>log</NBlue>("<NGreen>Registro Creado:</NGreen> " , data);
+                  } <NAqua>catch</NAqua> (error) {
+                    console.<NBlue>error</NBlue>("<NGreen>Error de registro:</NGreen>", error);
+                  }
+                }
+                <NBlue>crearPost</NBlue>("<NGreen>Titulo ejemplo</NGreen>", "<NGreen>Contenido ej...</NGreen>");
+            </pre>
+        </div>
+        
+        <div>
+          <div class="cod"> <!-- Avanzado -->
+            <NGray>// GET (obtener)</NGray>
+              <pre>
+                <NBlue>fetch</NBlue>("<NGreen>typicode.com/posts</NGreen>", {
+                  <NRed>method</NRed>: "<NGreen>GET</NGreen>",
+                  <NRed><u>credentials</u></NRed>: "<NGreen>include</NGreen>", <NGray>(Opcional)</NGray>
+                  <NRed><u>cache</u></NRed>: "<NGreen><dfn title="no-cache, default, reload, only-if-cache">force-cache</dfn></NGreen>", <NGray>(Opcional)</NGray>
+                  <NRed><u>redirect</u></NRed>: "<NGreen><dfn title="error, manual">follow</dfn></NGreen>", <NGray>(Opcional)</NGray>
+                  <NRed>headers</NRed>: {        <NGray>(Opcional)</NGray>
+                    "<b>Autorization</b>": "<NGreen>Bearer</NGreen> + token", <!-- <NGray>"Autorization": "Basic "+ btoa(user +";"+ password),</NGray> -->
+                    "<b>Content-Type</b>": "<NGreen>application/json</NGreen>",
+                  },
+                })
+                .<NBlue>then</NBlue>(respuesta <NPurp>=></NPurp> respuesta.<NBlue>json</NBlue>())
+                .<NBlue>then</NBlue>(data <NPurp>=></NPurp> console.<NBlue>log</NBlue>(data))
+                .<NBlue>catch</NBlue>(error <NPurp>=></NPurp> console.<NBlue>error</NBlue>("<NGreen>Error</NGreen>: ", error));
+              </pre>
+          </div>
+          <div class="cod">
+            <NGray>// DELETE (borrar)</NGray>
+              <pre>
+                <NBlue>fetch</NBlue>("<NGreen>typicode.com/posts/5</NGreen>", {
+                  <NRed>method</NRed>: "<NGreen>DELETE</NGreen>"
+                })
+                .<NBlue>then</NBlue>(respuesta <NPurp>=></NPurp> respuesta.<NBlue>json</NBlue>())
+                .<NBlue>then</NBlue>(data <NPurp>=></NPurp> console.<NBlue>log</NBlue>(data))
+                .<NBlue>catch</NBlue>(error <NPurp>=></NPurp> console.<NBlue>error</NBlue>(error));
+              </pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex">
+        <div class="cod"> <!-- PUT -->
+          <NGray>// PUT (reemplazar)</NGray>
+            <pre>
+                <NBlue>fetch</NBlue>("<NGreen>typicode.com/posts/5</NGreen>", {
+                  <NRed>method</NRed>: "<NGreen>PUT</NGreen>",
+                  <NRed>headers</NRed>: {
+                    "<b>Content-Type</b>": "<NGreen>application/json</NGreen>",
+                  },
+                  <NRed>body</NRed>: JSON.<NBlue>stringify</NBlue>({
+                    <b>title</b>: "<NGreen>Nuevo título</NGreen>",
+                    <b>body</b>: "<NGreen>Nueva descripcion</NGreen>",
+                  }),
+                })
+                .<NBlue>then</NBlue>(respuesta <NPurp>=></NPurp> respuesta.<NBlue>json</NBlue>())
+                .<NBlue>then</NBlue>(data <NPurp>=></NPurp> console.<NBlue>log</NBlue>(data))
+                .<NBlue>catch</NBlue>(error <NPurp>=></NPurp> console.<NBlue>error</NBlue>(error));
+            </pre>
+        </div>
+        <div class="cod"> <!-- PATCH -->
+          <NGray>// PATCH (modificar)</NGray>
+            <pre>
+                <NBlue>fetch</NBlue>("<NGreen>typicode.com/posts/5</NGreen>", {
+                  <NRed>method</NRed>: "<NGreen>PATCH</NGreen>",
+                  <NRed>headers</NRed>: {
+                    "<b>Content-Type</b>": "<NGreen>application/json</NGreen>",
+                  },
+                  <NRed>body</NRed>: JSON.<NBlue>stringify</NBlue>({
+                    <b>title</b>: "<NGreen>Nuevo título</NGreen>",
+                  }),
+                })
+                .<NBlue>then</NBlue>(respuesta <NPurp>=></NPurp> respuesta.<NBlue>json</NBlue>())
+                .<NBlue>then</NBlue>(data <NPurp>=></NPurp> console.<NBlue>log</NBlue>(data))
+                .<NBlue>catch</NBlue>(error <NPurp>=></NPurp> console.<NBlue>error</NBlue>(error));
+            </pre>
+        </div>
+      </div>
+
+
+
+      
+    </fieldset>
+
+  </section>
 
   <!-- Asincronía + Errores -->
   <section id="Asincronía + Errores">
@@ -1672,118 +1758,6 @@ include("../PHP/cheats.php");
       </div>
     </fieldset>
 
-    <fieldset> <!-- Metodos Fetch -->
-      <legend> Metodos Fetch </legend>
-        <div class="cod"> <!-- POST -->
-          <NGray>// POST</NGray>
-          <pre>
-              <NPurp>async function</NPurp> <NBlue>crearPost</NBlue>(titulo, contenido) {
-                <NAqua>try</NAqua> {
-                  <NPurp>let</NPurp> respuesta = <NAqua>await</NAqua> <NBlue>fetch</NBlue>("<NGreen>https://jsonplaceholder.typicode.com/posts</NGreen>", {
-                    <NRed>method</NRed>: "<NGreen>POST</NGreen>",
-                    <NRed>headers</NRed>: {
-                      "<b>Content-Type</b>": "<NGreen>application/json</NGreen>",
-                    },
-                    <NRed>body</NRed>: JSON.<NBlue>stringify</NBlue>({
-                      <b>title</b>: titulo,
-                      <b>body</b>: contenido,
-                      <b>userId</b>: 1,
-                    }),
-                  })
-                  <NAqua>if</NAqua>(!respuesta.ok){
-                    <NAqua>throw new</NAqua> <NBlue>Error</NBlue>("<NGreen>Error en la solicitud:</NGreen> " + respuesta.statusText);
-                  }
-                  <NPurp>let</NPurp> data = <NAqua>await</NAqua>(respuesta.json());
-                  console.<NBlue>log</NBlue>("<NGreen>Registro Creado:</NGreen> " , data);
-                } <NAqua>catch</NAqua> (error) {
-                  console.<NBlue>error</NBlue>("<NGreen>Algo salió mal al crear el registro:</NGreen>", error);
-                }
-              }
-              <NBlue>crearPost</NBlue>("<NGreen>Mi titulo de ejemplo</NGreen>", "<NGreen>Contenido de ejemplo</NGreen>");
-          </pre>
-        </div>
-
-        <div class="cod"> <!-- GET -->
-          <NGray>// GET</NGray>
-          <pre>
-              <NBlue>fetch</NBlue>("<NGreen>https://jsonplaceholder.typicode.com/posts/5</NGreen>", {
-                <NRed>method</NRed>: "<NGreen>GET</NGreen>",
-              })
-              .<NBlue>then</NBlue>(respuesta <NPurp> =></NPurp> respuesta.<NBlue>json</NBlue>())
-              .<NBlue>then</NBlue>(data <NPurp> =></NPurp> console.<NBlue>log</NBlue>(data))
-              .<NBlue>catch</NBlue>(error <NPurp> =></NPurp> console.<NBlue>error</NBlue>("<NGreen>Error</NGreen>: ", error));
-          </pre>
-        </div>
-
-        <div class="cod"> <!-- PUT -->
-          <NGray>// PUT</NGray>
-          <pre>
-              <NBlue>fetch</NBlue>("<NGreen>https://jsonplaceholder.typicode.com/posts/5</NGreen>", {
-                <NRed>method</NRed>: "<NGreen>PUT</NGreen>",
-                <NRed>headers</NRed>: {
-                  "<b>Content-Type</b>": "<NGreen>application/json</NGreen>",
-                },
-                <NRed>body</NRed>: JSON.<NBlue>stringify</NBlue>({
-                  <b>title</b>: "<NGreen>Nuevo título</NGreen>",
-                  <b>body</b>: "<NGreen>Nueva descripcion</NGreen>",
-                }),
-              })
-              .<NBlue>then</NBlue>(respuesta <NPurp> =></NPurp> respuesta.<NBlue>json</NBlue>())
-              .<NBlue>then</NBlue>(data <NPurp> =></NPurp> console.<NBlue>log</NBlue>(data))
-              .<NBlue>catch</NBlue>(error <NPurp> =></NPurp> console.<NBlue>error</NBlue>("<NGreen>Error</NGreen>: ", error));
-          </pre>
-        </div>
-
-        <div class="cod"> <!-- PATCH -->
-          <NGray>// PATCH</NGray>
-          <pre>
-              <NBlue>fetch</NBlue>("<NGreen>https://jsonplaceholder.typicode.com/posts/5</NGreen>", {
-                <NRed>method</NRed>: "<NGreen>PATCH</NGreen>",
-                <NRed>headers</NRed>: {
-                  "<b>Content-Type</b>": "<NGreen>application/json</NGreen>",
-                },
-                <NRed>body</NRed>: JSON.<NBlue>stringify</NBlue>({
-                  <b>title</b>: "<NGreen>Nuevo título</NGreen>",
-                }),
-              })
-              .<NBlue>then</NBlue>(respuesta <NPurp> =></NPurp> respuesta.<NBlue>json</NBlue>())
-              .<NBlue>then</NBlue>(data <NPurp> =></NPurp> console.<NBlue>log</NBlue>(data))
-              .<NBlue>catch</NBlue>(error <NPurp> =></NPurp> console.<NBlue>error</NBlue>("<NGreen>Error</NGreen>: ", error));
-          </pre>
-        </div>
-
-        <div class="cod"> <!-- DEL -->
-          <NGray>// DELETE</NGray>
-          <pre>
-              <NBlue>fetch</NBlue>("<NGreen>https://jsonplaceholder.typicode.com/posts/5</NGreen>", {
-                <NRed>method</NRed>: "<NGreen>DELETE</NGreen>"
-              })
-              .<NBlue>then</NBlue>(respuesta <NPurp> =></NPurp> respuesta.<NBlue>json</NBlue>())
-              .<NBlue>then</NBlue>(data <NPurp> =></NPurp> console.<NBlue>log</NBlue>(data))
-              .<NBlue>catch</NBlue>(error <NPurp> =></NPurp> console.<NBlue>error</NBlue>("<NGreen>Error</NGreen>: ", error));
-          </pre>
-        </div>
-
-        <div class="cod"> <!-- Avanzado -->
-          <NGray>// Avanzado</NGray>
-          <pre>
-              <NBlue>fetch</NBlue>("<NGreen>https://jsonplaceholder.typicode.com/posts</NGreen>", {
-                <NRed>method</NRed>: "<NGreen>GET</NGreen>",
-                <NRed><u>credentials</u></NRed>: "<NGreen>include</NGreen>",
-                <NRed><u>cache</u></NRed>: "<NGreen>force-cache</NGreen>", <NGray>// no-cache, default, reload, only-if-cache</NGray>
-                <NRed><u>redirect</u></NRed>: "<NGreen>follow</NGreen>", <NGray>// error, manual</NGray>
-                <NRed>headers</NRed>: {
-                  "<b>Autorization</b>": "<NGreen>Bearer</NGreen> + token", <NGray>// "Basic " + btoa(user + ";" + password)</NGray>
-                  "<b>Content-Type</b>": "<NGreen>application/json</NGreen>",
-                },
-              })
-              .<NBlue>then</NBlue>(respuesta <NPurp> =></NPurp> respuesta.<NBlue>json</NBlue>())
-              .<NBlue>then</NBlue>(data <NPurp> =></NPurp> console.<NBlue>log</NBlue>(data))
-              .<NBlue>catch</NBlue>(error <NPurp> =></NPurp> console.<NBlue>error</NBlue>("<NGreen>Error</NGreen>: ", error));
-          </pre>
-        </div>
-    </fieldset>
-
     <fieldset> <!-- Axios -->
       <legend> Axios (más potente que fetch)</legend>
       <script src="https://unpkg.com/axios/dist/axios.min.js"></script> <!-- ó "npm install axios" -->
@@ -1801,6 +1775,7 @@ include("../PHP/cheats.php");
         .<NBlue>catch</NBlue>(error <NPurp> => </NPurp> console.<NBlue>log</NBlue>(error))
       </div>
       <div class="cod"> <!-- POST -->
+        <NGray>// POST</NGray><br>
         <NPurp>let</NPurp> datos = { <br>
           &nbsp; <NRed>title</NRed>: "<NGreen>Nuevo Post</NGreen>", <br>
           &nbsp; <NRed>body</NRed>: "<NGreen>Mi contenido</NGreen>" <br>

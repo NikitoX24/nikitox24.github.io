@@ -20,7 +20,7 @@
   #navbar {
     padding: 7px 0;
     min-width: 100%;
-    position: fixed;
+    /* position: fixed; */
     top: -23px;
     left: 0;
     z-index: 1;

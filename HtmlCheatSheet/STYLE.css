@@ -50,7 +50,8 @@ font.prop{ color: rgb(114, 125, 122);
   text-shadow: .1px .1px rgb(124, 156, 150); }
 b{ text-shadow: .5px .5px 12px black; }
 
-pre { margin-left: -80px; }
+pre { margin-left: -80px;}
+dfn { cursor: help; }
 summary {
   color: rgb(0, 77, 155);
   font-size: 1em;

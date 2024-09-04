@@ -118,7 +118,7 @@ include("../PHP/cheats.php");
       <div class="flex"> <!-- Definicion - CortarPalabra -->
         <div class="flex"> <!-- Definicion -->
           <div class="ej"> <dfn title="Es la ciencia que s..."> psicología </dfn> </div>
-          <div class="cod"> <NRed>&lt;dfn></NRed><NRed>&lt;/dfn></NRed> </div>
+          <div class="cod"> <NRed>&lt;dfn <NPurp>title=""</NPurp>></NRed><NRed>&lt;/dfn></NRed> </div>
         </div> <div class="hr"></div>
         <div class="flex"> 
           <div class="ej">PalabraMuyLarga<wbr>CortadaPorLaMitad</div>
