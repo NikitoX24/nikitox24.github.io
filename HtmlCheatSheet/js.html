@@ -1,18 +1,31 @@
-<?php
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible" content="ie-edge">
+  <meta name="robots" content="no-follow">
+  <link rel="stylesheet" href="../HtmlCheatSheet/STYLE.css">
+  <link rel="icon" href="../logo.png">
+  <title>JS</title>
+</head>
+  
+<script>
+  let back_color = "rgba(0, 255, 0, .03)";
+  let shadow1 = "rgba(0, 159, 0, 0.3)";
+  let shadow2 = "rgba(0, 255, 38, 0.1)";
+</script>
 
-$title = "JS";
-$back_color = "rgba(0, 255, 0, .03)";
-$shadow1 = "rgba(0, 159, 0, 0.3)";
-$shadow2 = "rgba(0, 255, 38, 0.1)";
+<script src="../PHP/config.js"></script>
+<script src="../PHP/header.js"></script>
+<script src="../PHP/cheats.js"></script>
 
-require("../PHP/config.php");
-include_once("../PHP/header.php");
-include_once("../PHP/navbar.php");
-include("../PHP/cheats.php");
 
-?>
-<link rel="stylesheet" href="../HtmlCheatSheet/STYLE.css">
 
+
+</body>
+</html>
 
 <body>
   <!-- Fundamentos -->
@@ -1486,116 +1499,167 @@ include("../PHP/cheats.php");
       </div>
     </fieldset>
 
-    <!-- Metodos Fetch -->
+    <!-- Fetch (metodos) -->
     <fieldset> 
       <legend> Fetch (Metodos de Solicitud) </legend>
       &nbsp;(URL usado): <u>https://jsonplaceholder.typicode.com/posts</u>
-      <div class="flex">
-        <div class="cod"> <!-- POST -->
-          <NGray>// POST (crear)</NGray>
-            <pre>
-                <NPurp>async function</NPurp> <NBlue>crearPost</NBlue>(titulo, contenido) {
-                  <NAqua>try</NAqua> {
-                    <NPurp>let</NPurp> respuesta = <NAqua>await</NAqua> <NBlue>fetch</NBlue>("<NGreen>url</NGreen>", {
-                      <NRed>method</NRed>: "<NGreen>POST</NGreen>",
-                      <NRed>headers</NRed>: {
-                        "<b>Content-Type</b>": "<NGreen>application/json</NGreen>",
-                      },
-                      <NRed>body</NRed>: JSON.<NBlue>stringify</NBlue>({
-                        <b>title</b>: titulo,
-                        <b>body</b>: contenido,
-                        <b>userId</b>: 1,
-                      }),
-                    })
-                    <NAqua>if</NAqua>(!respuesta.ok){ <NGray>// Error de solicitud</NGray>
-                      <NAqua>throw new</NAqua> <NBlue>Error</NBlue>(respuesta.statusText);
-                    }
-                    <NPurp>let</NPurp> data = <NAqua>await</NAqua>(respuesta.json());
-                    console.<NBlue>log</NBlue>("<NGreen>Registro Creado:</NGreen> " , data);
-                  } <NAqua>catch</NAqua> (error) {
-                    console.<NBlue>error</NBlue>("<NGreen>Error de registro:</NGreen>", error);
-                  }
-                }
-                <NBlue>crearPost</NBlue>("<NGreen>Titulo ejemplo</NGreen>", "<NGreen>Contenido ej...</NGreen>");
-            </pre>
+      <div class="flex"> <!-- POST - GET - DELETE -->
+        <div class="cod width100"> <!-- POST -->
+          <NGray>// POST (crear)</NGray> <br>
+          <NPurp>async function</NPurp> <NBlue>crearPost</NBlue>(titulo, contenido) { <br>
+            &nbsp; <NAqua>try</NAqua> { <br>
+            <NTab></NTab> <NPurp>let</NPurp> respuesta = <NAqua>await</NAqua> <NBlue>fetch</NBlue>("<NGreen>url</NGreen>", { <br>
+            <NTab2></NTab2> <NRed>method</NRed>: "<NGreen>POST</NGreen>", <br>
+            <NTab2></NTab2> <NRed>headers</NRed>: { <br>
+            <NTab2></NTab2> &nbsp; "<b>Content-Type</b>": "<NGreen>application/json</NGreen>", <br>
+            <NTab2></NTab2> }, <br>
+            <NTab2></NTab2> <NRed>body</NRed>: JSON.<NBlue>stringify</NBlue>({ <br>
+            <NTab2></NTab2> &nbsp; <b>title</b>: titulo, <br>
+            <NTab2></NTab2> &nbsp; <b>body</b>: contenido, <br>
+            <NTab2></NTab2> }), <br>
+            <NTab></NTab> }) <br>
+            <NTab></NTab> <NAqua>if</NAqua>(!respuesta.ok){ <NGray>// Error de solicitud</NGray> <br>
+            <NTab></NTab> &nbsp; <NAqua>throw new</NAqua> <NBlue>Error</NBlue>(respuesta.statusText); <br>
+            <NTab></NTab> } <br>
+            <NTab></NTab> <NPurp>let</NPurp> data = <NAqua>await</NAqua>(respuesta.json()); <br>
+            <NTab></NTab> console.<NBlue>log</NBlue>("<NGreen>Registro Creado:</NGreen> " , data); <br>
+            &nbsp; } <NAqua>catch</NAqua> (error) { <br>
+            <NTab></NTab> console.<NBlue>error</NBlue>("<NGreen>Error de registro:</NGreen>", error); <br>
+            &nbsp; } <br>
+          } <br>
+          <NBlue>crearPost</NBlue>("<NGreen>Titulo ejemplo</NGreen>", "<NGreen>Contenido ej...</NGreen>");
         </div>
         
-        <div>
-          <div class="cod"> <!-- Avanzado -->
-            <NGray>// GET (obtener)</NGray>
-              <pre>
-                <NBlue>fetch</NBlue>("<NGreen>typicode.com/posts</NGreen>", {
-                  <NRed>method</NRed>: "<NGreen>GET</NGreen>",
-                  <NRed><u>credentials</u></NRed>: "<NGreen>include</NGreen>", <NGray>(Opcional)</NGray>
-                  <NRed><u>cache</u></NRed>: "<NGreen><dfn title="no-cache, default, reload, only-if-cache">force-cache</dfn></NGreen>", <NGray>(Opcional)</NGray>
-                  <NRed><u>redirect</u></NRed>: "<NGreen><dfn title="error, manual">follow</dfn></NGreen>", <NGray>(Opcional)</NGray>
-                  <NRed>headers</NRed>: {        <NGray>(Opcional)</NGray>
-                    "<b>Autorization</b>": "<NGreen>Bearer</NGreen> + token", <!-- <NGray>"Autorization": "Basic "+ btoa(user +";"+ password),</NGray> -->
-                    "<b>Content-Type</b>": "<NGreen>application/json</NGreen>",
-                  },
-                })
-                .<NBlue>then</NBlue>(respuesta <NPurp>=></NPurp> respuesta.<NBlue>json</NBlue>())
-                .<NBlue>then</NBlue>(data <NPurp>=></NPurp> console.<NBlue>log</NBlue>(data))
-                .<NBlue>catch</NBlue>(error <NPurp>=></NPurp> console.<NBlue>error</NBlue>("<NGreen>Error</NGreen>: ", error));
-              </pre>
+        <div class="width100"><!-- GET - DELETE -->
+          <div class="cod wAuto"> <!-- GET -->
+            <NGray>// GET (obtener)</NGray> <br>
+            <NBlue>fetch</NBlue>("<NGreen>typicode.com/posts</NGreen>", { <br>
+            &nbsp;  <NRed>method</NRed>: "<NGreen>GET</NGreen>", <br>
+            &nbsp;  <NRed><u>credentials</u></NRed>: "<NGreen>include</NGreen>", <NGray>(Opcional)</NGray> <br>
+            &nbsp;  <NRed><u>cache</u></NRed>: "<NGreen>
+            &nbsp;    <dfn title="no-cache, default, reload, only-if-cache">force-cache</dfn></NGreen>", <NGray>(Opcional)</NGray> <br>
+            &nbsp;  <NRed><u>redirect</u></NRed>: "<NGreen><dfn title="error, manual">follow</dfn></NGreen>", <NGray>(Opcional)</NGray> <br>
+            &nbsp;  <NRed>headers</NRed>: {        <NGray>(Opcional)</NGray> <br>
+            <NTab></NTab> "<b>Autorization</b>": "<NGreen>Bearer</NGreen> + token",  <br>
+                 <!-- "Autorization": "Basic "+ btoa(user +";"+ password), -->
+            <NTab></NTab> "<b>Content-Type</b>": "<NGreen>application/json</NGreen>", <br>
+            &nbsp;  }, <br>
+            }) <br>
+            .<NBlue>then</NBlue>(respuesta <NPurp>=></NPurp> respuesta.<NBlue>json</NBlue>()) <br>
+            .<NBlue>then</NBlue>(data <NPurp>=></NPurp> console.<NBlue>log</NBlue>(data)) <br>
+            .<NBlue>catch</NBlue>(error <NPurp>=></NPurp> console.<NBlue>error</NBlue>(error));
           </div>
-          <div class="cod">
-            <NGray>// DELETE (borrar)</NGray>
-              <pre>
-                <NBlue>fetch</NBlue>("<NGreen>typicode.com/posts/5</NGreen>", {
-                  <NRed>method</NRed>: "<NGreen>DELETE</NGreen>"
-                })
-                .<NBlue>then</NBlue>(respuesta <NPurp>=></NPurp> respuesta.<NBlue>json</NBlue>())
-                .<NBlue>then</NBlue>(data <NPurp>=></NPurp> console.<NBlue>log</NBlue>(data))
-                .<NBlue>catch</NBlue>(error <NPurp>=></NPurp> console.<NBlue>error</NBlue>(error));
-              </pre>
+
+          <div class="cod wAuto"> <!-- DELETE -->
+            <NGray>// DELETE (borrar)</NGray> <br>
+            <NBlue>fetch</NBlue>("<NGreen>typicode.com/posts/5</NGreen>", { <br>
+            &nbsp; <NRed>method</NRed>: "<NGreen>DELETE</NGreen>" <br>
+            }) <br>
+            .<NBlue>then</NBlue>(respuesta <NPurp>=></NPurp> respuesta.<NBlue>json</NBlue>()) <br>
+            .<NBlue>then</NBlue>(data <NPurp>=></NPurp> console.<NBlue>log</NBlue>(data)) <br>
+            .<NBlue>catch</NBlue>(error <NPurp>=></NPurp> console.<NBlue>error</NBlue>(error)); <br><br>
           </div>
         </div>
       </div>
 
-      <div class="flex">
+      <div class="flex"> <!-- PUT - PATCH -->
         <div class="cod"> <!-- PUT -->
-          <NGray>// PUT (reemplazar)</NGray>
-            <pre>
-                <NBlue>fetch</NBlue>("<NGreen>typicode.com/posts/5</NGreen>", {
-                  <NRed>method</NRed>: "<NGreen>PUT</NGreen>",
-                  <NRed>headers</NRed>: {
-                    "<b>Content-Type</b>": "<NGreen>application/json</NGreen>",
-                  },
-                  <NRed>body</NRed>: JSON.<NBlue>stringify</NBlue>({
-                    <b>title</b>: "<NGreen>Nuevo título</NGreen>",
-                    <b>body</b>: "<NGreen>Nueva descripcion</NGreen>",
-                  }),
-                })
-                .<NBlue>then</NBlue>(respuesta <NPurp>=></NPurp> respuesta.<NBlue>json</NBlue>())
-                .<NBlue>then</NBlue>(data <NPurp>=></NPurp> console.<NBlue>log</NBlue>(data))
-                .<NBlue>catch</NBlue>(error <NPurp>=></NPurp> console.<NBlue>error</NBlue>(error));
-            </pre>
+          <NGray>// PUT (reemplazar)</NGray> <br>
+          <NBlue>fetch</NBlue>("<NGreen>typicode.com/posts/5</NGreen>", { <br>
+          &nbsp; <NRed>method</NRed>: "<NGreen>PUT</NGreen>", <br>
+          &nbsp; <NRed>headers</NRed>: { <br>
+            <NTab></NTab> "<b>Content-Type</b>": "<NGreen>application/json</NGreen>", <br>
+          &nbsp; }, <br>
+          &nbsp; <NRed>body</NRed>: JSON.<NBlue>stringify</NBlue>({ <br>
+            <NTab></NTab> <b>title</b>: "<NGreen>Nuevo título</NGreen>", <br>
+            <NTab></NTab> <b>body</b>: "<NGreen>Nueva descripcion</NGreen>", <br>
+          &nbsp; }), <br>
+          }) <br>
+          .<NBlue>then</NBlue>(respuesta <NPurp>=></NPurp> respuesta.<NBlue>json</NBlue>()) <br>
+          .<NBlue>then</NBlue>(data <NPurp>=></NPurp> console.<NBlue>log</NBlue>(data)) <br>
+          .<NBlue>catch</NBlue>(error <NPurp>=></NPurp> console.<NBlue>error</NBlue>(error)); <br>
         </div>
         <div class="cod"> <!-- PATCH -->
-          <NGray>// PATCH (modificar)</NGray>
-            <pre>
-                <NBlue>fetch</NBlue>("<NGreen>typicode.com/posts/5</NGreen>", {
-                  <NRed>method</NRed>: "<NGreen>PATCH</NGreen>",
-                  <NRed>headers</NRed>: {
-                    "<b>Content-Type</b>": "<NGreen>application/json</NGreen>",
-                  },
-                  <NRed>body</NRed>: JSON.<NBlue>stringify</NBlue>({
-                    <b>title</b>: "<NGreen>Nuevo título</NGreen>",
-                  }),
-                })
-                .<NBlue>then</NBlue>(respuesta <NPurp>=></NPurp> respuesta.<NBlue>json</NBlue>())
-                .<NBlue>then</NBlue>(data <NPurp>=></NPurp> console.<NBlue>log</NBlue>(data))
-                .<NBlue>catch</NBlue>(error <NPurp>=></NPurp> console.<NBlue>error</NBlue>(error));
-            </pre>
+          <NGray>// PATCH (modificar)</NGray> <br>
+          <NBlue>fetch</NBlue>("<NGreen>typicode.com/posts/5</NGreen>", { <br>
+          &nbsp; <NRed>method</NRed>: "<NGreen>PATCH</NGreen>", <br>
+          &nbsp; <NRed>headers</NRed>: { <br>
+            <NTab></NTab> "<b>Content-Type</b>": "<NGreen>application/json</NGreen>", <br>
+          &nbsp; }, <br>
+          &nbsp; <NRed>body</NRed>: JSON.<NBlue>stringify</NBlue>({ <br>
+            <NTab></NTab> <b>title</b>: "<NGreen>Nuevo título</NGreen>", <br>
+          &nbsp; }), <br>
+          }) <br>
+          .<NBlue>then</NBlue>(respuesta <NPurp>=></NPurp> respuesta.<NBlue>json</NBlue>()) <br>
+          .<NBlue>then</NBlue>(data <NPurp>=></NPurp> console.<NBlue>log</NBlue>(data)) <br>
+          .<NBlue>catch</NBlue>(error <NPurp>=></NPurp> console.<NBlue>error</NBlue>(error)); <br>
         </div>
       </div>
-
-
-
-      
     </fieldset>
 
+    <!-- Axios -->
+    <fieldset> 
+      <legend> Axios (más potente que fetch)</legend>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script> <!-- ó "npm install axios" -->
+
+      <div class="cod"> <!-- install / script axion -->
+        <<NRed>script</NRed> <NPurp>src</NPurp>="<NGreen>https://unpkg.com/axios/dist/axios.min.js</NGreen>"><<NRed>/script</NRed>> 
+        <NGray>// ó "npm install axios"</NGray>
+      </div>
+      <div class="flex">
+        <div class="cod"> <!-- GET -->
+          <NGray>// GET</NGray> <br>
+          axios.<NBlue>get</NBlue>("<NGreen>https://...typicode.com/posts</NGreen>") <br>
+          .<NBlue>then</NBlue>(<NPurp>function</NPurp>(respuesta){ <br>
+            &nbsp; console.<NBlue>log</NBlue>(respuesta.data[<NOrg>0</NOrg>].title); <br>
+          }) <br>
+          .<NBlue>catch</NBlue>(error <NPurp> => </NPurp> console.<NBlue>log</NBlue>(error)) <hr>
+          <details>
+            <summary>Axios simultáneos + interceptores [...]</summary>
+            <pre>
+                <NGray>// Axios simultáneos + interceptores</NGray>
+                let token = "MiToken";
+  
+                axios.interceptors.request.use( <NGray> // interceptor Request</NGray>
+                  (config)=> {
+                    config.headers.Autorization = `Bearer $(token)`;
+                    return config
+                  },(error)=> { return Promise.reject(error) }
+                )
+  
+                axios.interceptors.response.use( <NGray> // interceptor Respuesta</NGray>
+                  (respuesta) => {
+                    respuesta.data.customField = "Nuevo campo";
+                    return respuesta;
+                  },(error)=> { return Promise.reject(error) }
+                )
+  
+                let pedido1 = axios.get("https://api.ejemplo.com/data1");
+                let pedido2 = axios.get("https://api.ejemplo.com/data2");
+                let pedido3 = axios.get("https://api.ejemplo.com/data3");
+  
+                function obtenerInfo() {
+                  axios.post([pedido1, pedido2, pedido3])
+                  .then(axios.spread((respuesta1, respuesta2, respuesta3)=>{
+                    <NGray>// Codigo...</NGray>
+                  }))
+                  .catch(error => { <NGray>// Manejar errores</NGray> })
+                }
+            </pre>
+          </details>
+        </div>
+        <div class="cod"> <!-- POST -->
+          <NGray>// POST</NGray><br>
+          <NPurp>let</NPurp> datos = { <br>
+            &nbsp; <NRed>title</NRed>: "<NGreen>Nuevo Post</NGreen>", <br>
+            &nbsp; <NRed>body</NRed>: "<NGreen>Mi contenido</NGreen>" <br>
+          } <br>
+          axios.<NBlue>post</NBlue>("<NGreen>https://...typicode.com/posts</NGreen>", datos) <br>
+          .<NBlue>then</NBlue>(respuesta <NPurp> =></NPurp> console.<NBlue>log</NBlue>("<NGreen>OK!</NGreen> ", respuesta.data)) <br>
+          .<NBlue>catch</NBlue>(error <NPurp> =></NPurp> console.<NBlue>log</NBlue>("<NGreen>Error:</NGreen> " , error)) <br>
+        </div>
+      </div>
+    </fieldset>
   </section>
 
   <!-- Asincronía + Errores -->
@@ -1641,189 +1705,74 @@ include("../PHP/cheats.php");
         </div>
     </fieldset>
 
+    <div class="flex">
     <fieldset> <!-- Promise -->
       <legend> Promise </legend>
-      <div class="flex">
-        <div class="cod">
-          <NGray>// Promise</NGray> <br>
-          <NPurp>let</NPurp> miPromesa = <NAqua>new</NAqua> Promise(<NPurp>function</NPurp>(resolve, reject){ <br>
-            &nbsp; <NBlue>setTimeout</NBlue>(<NPurp>function</NPurp>(){ <br>
-              <NTab></NTab> <NPurp>let</NPurp> error = false; <br>
-              <NTab></NTab> <NAqua>if</NAqua> (error){  <br>
-              <NTab></NTab> &nbsp; <NBlue>reject</NBlue>("<NGreen>La Promesa ha fallado</NGreen>"); <br>
-              <NTab></NTab> } <NAqua>else</NAqua>{  <br>
-              <NTab></NTab> &nbsp; <NBlue>resolve</NBlue>("<NGreen>La Promesa se ha cumplido</NGreen>") <br>
-              <NTab></NTab> } <br>
-            &nbsp; }) <br>
-          }); <br>
-          miPromesa.<NBlue>then</NBlue>(<NPurp>function</NPurp>(resultado){ <br>
-            &nbsp; console.<NBlue>log</NBlue>(resultado); <br>
-          }).<NBlue>catch</NBlue>(<NPurp>function</NPurp>(error){ <br>
-            &nbsp; console.<NBlue>log</NBlue>(error); <br>
-          }) <br><br>
+      <div class="cod wAuto">
+        <NGray>// Varios Promise </NGray><br>
+        <NPurp>let</NPurp> promesa1 = <NAqua>new</NAqua> <NObj>Promise</NObj>(<NPurp>function</NPurp>(<NBlue>resolve, reject</NBlue>){ <br>
+          &nbsp; <NBlue>setTimeout</NBlue>(<NBlue>resolve</NBlue>, <NOrg>5000</NOrg>, "<NGreen>Saludos a todos</NGreen>"); <br>
+        }); <br>
+        <NPurp>let</NPurp> promesa2 = <NAqua>new</NAqua> <NObj>Promise</NObj>(<NPurp>function</NPurp>(<NBlue>resolve, reject</NBlue>){ <br>
+          &nbsp; <NBlue>setTimeout</NBlue>(<NBlue>resolve</NBlue>, <NOrg>7000</NOrg>, "<NGreen>Otro saludo</NGreen>."); <br>
+        }); <br>
+        <NObj>Promise</NObj>.<NBlue>all</NBlue>([promesa1, promesa2]) <br>
+        .<NBlue>then</NBlue>(valores <NPurp> =></NPurp> console.<NBlue>log</NBlue>(valores[<NOrg>0</NOrg>],"-", valores[<NOrg>1</NOrg>]) ) <br>
+        <hr>
 
-          <details>
-            <summary>Otros...</summary>
-            <pre>
-              <NGray>// Varios Promise </NGray>
-              let promesa1 = new Promise(function(resolve, reject){
-                setTimeout(resolve, 5000, "Saludos a todos"); 
-              });
-              let promesa2 = new Promise(function(resolve, reject){
-                setTimeout(resolve, 7000, "Otro saludo.");
-              });
-              Promise.all([promesa1, promesa2]).then(function(valores){
-                console.log(valores[0],",", valores[1]);
-              })
-
-              <NGray>// Promise + json</NGray>
-              function obtenerUsuarios(){
-                return new Promise(function(resolve, reject){
-                  let xhr = new XMLHttpRequest();
-                  xhr.open("GET", "https://jsonplaceholder.typicode.com/users");
-                  xhr.onload = function(){
-                    if (xhr.status === 200){
-                      resolve(JSON.parse(xhr.responseText));
-                    }else{
-                      reject(xhr.status);
-                    }
-                  }
-                  xhr.send();
-                });
-              }
-              obtenerUsuarios()
-              .then(function(usuarios){
-                console.log(usuarios);
-              })
-              .catch(function(error){
-                console.error(error);
-              })
-            </pre>
-          </details>
-        </div>
-
-        <div class="cod">
-          <NGray>// Manejo de Error</NGray> <br>
-          <NPurp>function</NPurp> <NBlue>sumar</NBlue>(num1, num2){ <br>
-            <NAqua>return new</NAqua> <NObj>Promise</NObj>(<NPurp>function</NPurp>(resolve, reject){ <br>
-              &nbsp; <NBlue>setTimeout</NBlue>(<NPurp>function</NPurp>(){ <br>
-                &nbsp; <NTab></NTab> if(<NAqua>typeof</NAqua> num1 != "<NGreen>number</NGreen>" || <NAqua>typeof</NAqua> num2 != "<NGreen>number</NGreen>"){ <br>
-                  <NTab2></NTab2> <NBlue>reject</NBlue>( <NAqua>new</NAqua> <NBlue>Error</NBlue> ("<NGreen>Argumento no válido</NGreen>")); <br>
-                &nbsp; <NTab></NTab> } <NAqua>else</NAqua>{  <br>
-                  <NTab2></NTab2> <NBlue>resolve</NBlue>("num1+num2") <br>
-                &nbsp; <NTab></NTab> } <br>
-              <NTab></NTab> }, <NOrg>1000</NOrg>); <br>
-            &nbsp; }) <br>
-          } <br><br>
-          <NBlue>sumar</NBlue>("p", <NOrg>50</NOrg>)
-          .<NBlue>then</NBlue>(<NPurp>function</NPurp>(resultado){ <br>
-            &nbsp; console.<NBlue>log</NBlue>(resultado); <br>
-          }).<NBlue>catch</NBlue>(<NPurp>function</NPurp>(error){ <br>
-            &nbsp; console.<NBlue>log</NBlue>(error); <br>
-          })
-        </div>
+        <NGray>// Manejo de Error</NGray> <br>
+        <NPurp>function</NPurp> <NBlue>sumar</NBlue>(num1, num2){ <br>
+          &nbsp; <NAqua>return new</NAqua> <NObj>Promise</NObj>(<NPurp>function</NPurp>(<NBlue>resolve, reject</NBlue>){ <br>
+          <NTab></NTab> <NBlue>setTimeout</NBlue>(<NPurp>function</NPurp>(){ <br>
+              <NTab></NTab> <NAqua>if</NAqua>(<NAqua>typeof</NAqua> num1 != "<NGreen>number</NGreen>" || <br>
+              <NTab2></NTab2> <NAqua>typeof</NAqua> num2 != "<NGreen>number</NGreen>"){ <br>
+                <NTab2></NTab2> &nbsp; <NBlue>reject</NBlue>( <NAqua>new</NAqua> <NBlue>Error</NBlue> ("<NGreen>Argumento no válido</NGreen>")); <br>
+                <NTab></NTab> &nbsp; }<NAqua>else</NAqua>{  <br>
+                <NTab2></NTab2> <NBlue>resolve</NBlue>(num1+num2) <br>
+              &nbsp; <NTab></NTab> } <br>
+            <NTab></NTab> }, <NOrg>1000</NOrg>); <br>
+          &nbsp; }) <br>
+        } <br><br>
+        <NBlue>sumar</NBlue>("<NGreen>p</NGreen>", <NOrg>50</NOrg>) <br>
+        .<NBlue>then</NBlue>(respuesta <NPurp> =></NPurp> console.<NBlue>log</NBlue>(respuesta)) <br>
+        .<NBlue>catch</NBlue>(error <NPurp> =></NPurp> console.<NBlue>error</NBlue>(error)); <br>
       </div>
     </fieldset>
 
     <fieldset> <!-- Async - Await -->
-      <legend> Async - Await </legend>      
-      <div class="flex">
-        <div class="cod">
-          <NGray>// Async - Await</NGray> <br>
-          <NPurp>async function</NPurp> <NBlue>obtenerDatos</NBlue>(){ <br>
-            <NTab></NTab> <NPurp>let</NPurp> respuesta <NAqua> = await</NAqua> <NBlue>fetch</NBlue>("<NGreen>https://api.datos...</NGreen>") <br> <br>
-            <NTab></NTab> <NPurp>let</NPurp> datos <NAqua> = Await </NAqua> respuesta.<NBlue>json</NBlue>(); <br> <br>
-            <NTab></NTab> console.<NBlue>log</NBlue>(datos); <br>
-          } <br>
-          <NBlue>obtenerDatos</NBlue>();
-        </div>
-        <div class="cod">
-          <NGray>// Manejo de Error</NGray> <br>
-          <NPurp>async function</NPurp> <NBlue>sumar</NBlue>(num1, num2){ <br>
-            &nbsp; <NAqua>if</NAqua>(<NAqua>typeof</NAqua> num1 != "<NGreen>number</NGreen>" || typeof num2 != "<NGreen>number</NGreen>"){ <br>
-              <NTab></NTab> <NAqua>throw new</NAqua> <NBlue>Error</NBlue>("<NGreen>Argumento no válido</NGreen>"); <br>
-            &nbsp; } <br>
-            &nbsp; <NAqua>return</NAqua> num1+num2; <br>
-          } <br>
-          <NPurp>async function</NPurp> <NBlue>manejoErrores</NBlue>(){ <br>
-            &nbsp; <NAqua>try</NAqua>{ <br>
-            <NTab></NTab> <NPurp>let</NPurp> resultado = await <NBlue>sumar</NBlue>("p", 50); <br>
-            <NTab></NTab> console.<NBlue>log</NBlue>(resultado); <br>
-            &nbsp; } <br>
-            &nbsp; <NAqua>catch</NAqua>(error){ <br>
-            <NTab></NTab> console.<NBlue>error</NBlue>(error.message); <br>
-            &nbsp; } <br>
-          } <br>
-          <NBlue>manejoErrores</NBlue>(); <br>
-        </div>
-      </div>
-    </fieldset>
-
-    <fieldset> <!-- Axios -->
-      <legend> Axios (más potente que fetch)</legend>
-      <script src="https://unpkg.com/axios/dist/axios.min.js"></script> <!-- ó "npm install axios" -->
-
-      <div class="cod"> <!-- install / script axion -->
-        <<NRed>script</NRed> <NPurp>src</NPurp>="<NGreen>https://unpkg.com/axios/dist/axios.min.js</NGreen>"><<NRed>/script</NRed>> 
-        <NGray>// ó "npm install axios"</NGray>
-      </div>
-      <div class="cod"> <!-- GET -->
-        <NGray>// GET</NGray> <br>
-        axios.<NBlue>get</NBlue>("<NGreen>https://jsonplaceholder.typicode.com/posts</NGreen>") <br>
-        .<NBlue>then</NBlue>(<NPurp>function</NPurp>(respuesta){ <br>
-          &nbsp; console.<NBlue>log</NBlue>(respuesta.data[<NOrg>0</NOrg>].title); <br>
-        }) <br>
-        .<NBlue>catch</NBlue>(error <NPurp> => </NPurp> console.<NBlue>log</NBlue>(error))
-      </div>
-      <div class="cod"> <!-- POST -->
-        <NGray>// POST</NGray><br>
-        <NPurp>let</NPurp> datos = { <br>
-          &nbsp; <NRed>title</NRed>: "<NGreen>Nuevo Post</NGreen>", <br>
-          &nbsp; <NRed>body</NRed>: "<NGreen>Mi contenido</NGreen>" <br>
+      <legend> Async - Await </legend>
+      <div class="cod wAuto">
+        <NGray>// Async - Await</NGray> <br>
+        <NPurp>async function</NPurp> <NBlue>obtenerDatos</NBlue>(){ <br>
+          <NTab></NTab> <NPurp>let</NPurp> respuesta <NAqua> = await</NAqua> <NBlue>fetch</NBlue>("<NGreen>https://api.datos...</NGreen>") <br> <br>
+          <NTab></NTab> <NPurp>let</NPurp> datos <NAqua> = Await </NAqua> respuesta.<NBlue>json</NBlue>(); <br> <br>
+          <NTab></NTab> console.<NBlue>log</NBlue>(datos); <br>
         } <br>
-        axios.<NBlue>post</NBlue>("<NGreen>https://jsonplaceholder.typicode.com/posts</NGreen>", datos) <br>
-        .<NBlue>then</NBlue>(respuesta <NPurp> =></NPurp> console.<NBlue>log</NBlue>("<NGreen>Post creado!</NGreen> ", respuesta.data)) <br>
-        .<NBlue>catch</NBlue>(error <NPurp> =></NPurp> console.<NBlue>log</NBlue>("<NGreen>Error al publicar:</NGreen> " , error)) <br>
-      </div>
-      <div class="cod"> <!-- Otros -->
-        <details>
-          <summary>Axios simultáneos + interceptores [...]</summary>
-          <pre>
-              <NGray>// Axios simultáneos + interceptores</NGray>
-              let token = "MiToken";
+        <NBlue>obtenerDatos</NBlue>(); <br>
+        <hr>
 
-              axios.interceptors.request.use( <NGray> // interceptor Request</NGray>
-                (config)=> {
-                  config.headers.Autorization = `Bearer $(token)`;
-                  return config
-                },(error)=> { return Promise.reject(error) }
-              )
-
-              axios.interceptors.response.use( <NGray> // interceptor Respuesta</NGray>
-                (respuesta) => {
-                  respuesta.data.customField = "Nuevo campo";
-                  return respuesta;
-                },(error)=> { return Promise.reject(error) }
-              )
-
-              let pedido1 = axios.get("https://api.ejemplo.com/data1");
-              let pedido2 = axios.get("https://api.ejemplo.com/data2");
-              let pedido3 = axios.get("https://api.ejemplo.com/data3");
-
-              function obtenerInfo() {
-                axios.post([pedido1, pedido2, pedido3])
-                .then(axios.spread((respuesta1, respuesta2, respuesta3)=>{
-                  <NGray>// Codigo...</NGray>
-                }))
-                .catch(error => { <NGray>// Manejar errores</NGray> })
-              }
-          </pre>
-        </details>
+        <NGray>// Manejo de Error</NGray> <br>
+        <NPurp>async function</NPurp> <NBlue>sumar</NBlue>(num1, num2){ <br>
+          &nbsp; <NAqua>if</NAqua>(<NAqua>typeof</NAqua> num1 != "<NGreen>number</NGreen>" || typeof num2 != "<NGreen>number</NGreen>"){ <br>
+            <NTab></NTab> <NAqua>throw new</NAqua> <NBlue>Error</NBlue>("<NGreen>Argumento no válido</NGreen>"); <br>
+          &nbsp; } <br>
+          &nbsp; <NAqua>return</NAqua> num1+num2; <br>
+        } <br>
+        <NPurp>async function</NPurp> <NBlue>manejoErrores</NBlue>(){ <br>
+          &nbsp; <NAqua>try</NAqua>{ <br>
+          <NTab></NTab> <NPurp>let</NPurp> resultado = await <NBlue>sumar</NBlue>("p", 50); <br>
+          <NTab></NTab> console.<NBlue>log</NBlue>(resultado); <br>
+          &nbsp; } <br>
+          &nbsp; <NAqua>catch</NAqua>(error){ <br>
+          <NTab></NTab> console.<NBlue>error</NBlue>(error.message); <br>
+          &nbsp; } <br>
+        } <br>
+        <NBlue>manejoErrores</NBlue>(); <br>
       </div>
     </fieldset>
+  </div>
 
   </section>
-
 
   
   <p id="textoFix"></p>

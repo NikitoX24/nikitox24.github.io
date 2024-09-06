@@ -18,6 +18,7 @@ $php_dir =  $cheat_dir."php.php";
 $bs_dir =  $cheat_dir."Bootstrap.php";
 
 
+// OnClick de Cheats.php
 echo '
 <script>
   function loadHTML() { window.location.href = "'.$html_dir.'"; }

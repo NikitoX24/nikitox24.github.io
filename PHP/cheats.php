@@ -21,6 +21,7 @@ echo '
   ';
 
 
+  
   // si no tienen colores ignorar
   if(!isset($back_color) || !isset($shadow1) || !isset($shadow2)){
     $back_color = "rgba(0, 0, 255, .05)";

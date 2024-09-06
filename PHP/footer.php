@@ -15,17 +15,7 @@
 </script>
 
 <!-- Footer -->
-<footer>
-  <div class="copyright"> © 2022 My Blog. All rights reserved. </div>
-</footer>
+<footer> <div class="copyright"> © 2022 My Blog. All rights reserved. </div> </footer>
 
 <!-- JavaScript -->
 <script src="../index.js"></script>
-
-</body>
-</html>
-
-<!-- 
-  var mins = d.getMinutes();
-  var secs = d.getSeconds();
--->

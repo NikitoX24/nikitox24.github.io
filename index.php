@@ -23,7 +23,7 @@ echo '<div class="round-index">';
   <link rel="stylesheet" href="../HtmlCheatSheet/STYLE.css">
 
   <!-- Otros -->
-  <form action="../Otros/Test.html">
+  <form action="../Test.html">
     <input type="submit" value="Test" />
   </form>
   <form action="../Otros/CuentasEJ/index.php">
