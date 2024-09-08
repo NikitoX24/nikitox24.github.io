@@ -10,10 +10,10 @@ $logo_25px = '<img src="'.$server_dir.'logo.png" height="25px">';
 $git_logo = '<img src="'.$imgs_dir.'github-logo.png" height="25px">';
 
 // CheatSheets
-$html_dir = $cheat_dir."HTML.php";
-$css_dir =  $cheat_dir."CSS.php";
-$js_dir =   $cheat_dir."JS.php";
-$php_dir =  $cheat_dir."php.php";
+$html_dir = $cheat_dir."HTML";
+$css_dir =  $cheat_dir."CSS";
+$js_dir =   $cheat_dir."JS";
+$php_dir =  $cheat_dir."php";
 
 $bs_dir =  $cheat_dir."Bootstrap.php";
 

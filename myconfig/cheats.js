@@ -1,4 +1,4 @@
-
+// titulo de la pag
 let titulo = document.title;
 
 document.write(/*html*/`
@@ -16,6 +16,8 @@ document.write(/*html*/`
       <td><img src="../Imgs/PHP2.png"></td> </table>
   </div>
   
+
+
   <style>
     /* section color */
     section {

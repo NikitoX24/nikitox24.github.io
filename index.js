@@ -47,3 +47,9 @@ let tabs2 = document.querySelectorAll("NTab2");
 for (let i = 0; i < tabs2.length; i++) {
   tabs2[i].innerHTML = "&nbsp; &nbsp; &nbsp; &nbsp;";
 }
+
+
+
+
+// FOOTER
+document.write('<br><br><br><br><br>');

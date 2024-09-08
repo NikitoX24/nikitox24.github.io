@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel="stylesheet" href="../HtmlCheatSheet/STYLE.css">
+  <link rel="icon" href="../logo.png">
+  <title>SQL</title>
+</head>
+<body>
+
+  
+  <legend> Crear una tabla con Columnas/field </legend>
+  <div class="cod">
+    <NGreen><NOrg>CREATE TABLE</NOrg> nombreTabla ( <NGray>-- Crear tabla.</NGray> <br>
+      &nbsp; ID <NPurp>int</NPurp> <NOrg>NOT NULL</NOrg> AUTO_INCREMENT, <br>
+      &nbsp; Nombre <NPurp>varchar</NPurp> (<NOrg>15</NOrg>), <br>
+      &nbsp; Apellido <NPurp>varchar</NPurp> (<NOrg>15</NOrg>), <br>
+      &nbsp; Edad <NPurp>int</NPurp>, <br>
+      &nbsp; Celular <NPurp>int</NPurp>, <br>
+      &nbsp; <NPurp>PRIMARY KEY</NPurp>(ID) <br>
+    ) </NGreen><br> 
+  </div>
+  <div class="cod"> <NVar>
+    <NOrg>DROP TABLE</NOrg> <NGreen>nombreTabla;</NGreen> <NGray>-- Borrar Tabla.</NGray> <br>
+    <NOrg>ALTER TABLE</NOrg> mytabla RENAME myusuarios; <NGray>-- renombrar tabla.</NGray> <br>
+    <NOrg>ALTER TABLE</NOrg> myusuarios CHANGE telefono celular <NPurp>INT</NPurp>(<NOrg>11</NOrg>); <NGray>-- cambiar el nombre a una columna.</NGray> <br>
+    <NOrg>ALTER TABLE</NOrg> myusuarios <NOrg>ADD</NOrg> COLUMN (direccion <NPurp>VARCHAR</NPurp>(<NOrg>20</NOrg>)); <NGray>-- agregar nueva columna.</NGray> <br>
+    <NOrg>ALTER TABLE</NOrg> myusuarios <NOrg>DROP</NOrg> COLUMN edad; <NGray>-- borrar columna</NGray></NVar>
+  </div>
+  <a href="">(Ver más en el archivo sql.sql).</a>
+</fieldset>
+
+</body>
+</html>

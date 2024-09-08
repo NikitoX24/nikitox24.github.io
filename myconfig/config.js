@@ -1,17 +1,17 @@
 // Dir / Carpetas
 var server_dir = "../"; // _SERVER["HTTP_HOST"]."/";
 var imgs_dir = server_dir + "imgs/";
-var cheat_dir = server_dir + "HtmlCheatSheet/";
+var cheat_dir = server_dir + "machetes/";
 
 // Logos
 var logo_25px = '<img src="' + server_dir + 'logo.png" height="25px">';
 var git_logo = '<img src="' + imgs_dir + 'github-logo.png" height="25px">';
 
  // CheatSheets
-var html_dir = cheat_dir + "HTML.php";
-var css_dir =  cheat_dir + "CSS.php";
-var js_dir =   cheat_dir + "JS.php";
-var php_dir =  cheat_dir + "php.php";
+var html_dir = cheat_dir + "HTML.html";
+var css_dir =  cheat_dir + "CSS.html";
+var js_dir =   cheat_dir + "JS.html";
+var php_dir =  cheat_dir + "php.html";
 
 var bs_dir =  cheat_dir + "Bootstrap.php";
 

@@ -2,7 +2,6 @@
 <html lang="es-AR">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="x-ua-compatible" content="ie-edge">
   <meta name="robots" content="no-follow">
@@ -16,16 +15,10 @@
   let shadow1 = "rgba(0, 159, 0, 0.3)";
   let shadow2 = "rgba(0, 255, 38, 0.1)";
 </script>
+<script src="../myconfig/config.js"></script>
+<script src="../myconfig/header.js"></script>
+<script src="../myconfig/cheats.js"></script>
 
-<script src="../PHP/config.js"></script>
-<script src="../PHP/header.js"></script>
-<script src="../PHP/cheats.js"></script>
-
-
-
-
-</body>
-</html>
 
 <body>
   <!-- Fundamentos -->
@@ -119,6 +112,7 @@
         <NGray>array =</NGray> texto.<NBlue>match</NBlue>("<NGreen>todos</NGreen>"); <NGray>// [todos] (array-obj)</NGray> <br>
         <NGray>array =</NGray> texto.<NBlue>match</NBlue>(/<NGreen>mis</NGreen>/<NOrg>gi</NOrg>); <NGray>// [mis, mis] </NGray> <br>
         <NGray>array =</NGray> texto.<NBlue>split</NBlue>(" ", <NOrg>2</NOrg>); <NGray>// (Array separados por " ", cantidad)</NGray> <br> 
+        <NGray>array =</NGray> <NPurp>let</NPurp> [nombre, apellido] = "<NGreen>Will Smith</NGreen>".<NBlue>split</NBlue>(' '); <NGray>// (desestructuracion)</NGray>
         <!-- ------------------------------------- --> <hr> <!-- ------------------------------------- -->
         <NGray>string =</NGray> texto.<NBlue>at</NBlue>(<NOrg>-3</NOrg>); <NGray>// e</NGray> <br>
         <NGray>string =</NGray> texto.<NBlue>charAt</NBlue>(<NOrg>3</NOrg>); <NGray>// a</NGray> <br>
@@ -160,7 +154,7 @@
         <NAqua>delete</NAqua>(array[<NOrg>2</NOrg>]); <NGray>// ["A", "B", undefined, "C"]  (borra valor, pero no el elemento)</NGray> <br>
         <NObj>Array</NObj>.<NBlue>isArray</NBlue>(<u>array</u>); <NGray>// true</NGray> <br>
         <NObj>Array</NObj>.<NBlue>from</NBlue>("<NGreen>ABC</NGreen>"); <NGray>// ["A", "B", "C"];</NGray> <br>
-        <NPurp>let</NPurp> [one, two, three] = array; <br>
+        <NPurp>let</NPurp> [one, , three, four, ...rest] = array; <NGray>// (Desestructuracion: variables a los index) </NGray> <br>
         <NGray>string =</NGray> array.<NBlue>join</NBlue>(" "); <NGray>// (convertir en string y separar por " ")</NGray> <br>
         <NGray>array =</NGray> array.<NBlue>flat</NBlue>(); <NGray>// (unir todos los sub-arrays)</NGray> <br>
         <!-- ------------------------------------- --> <hr> <!-- ------------------------------------- -->
@@ -1323,7 +1317,7 @@
 
     <!-- Date -->
     <fieldset>
-      <legend> Fechas: </legend>
+      <legend> Date (objeto) </legend>
 
       Metodos de Date:
       <div class="flex">
@@ -1425,20 +1419,16 @@
 
       <script>
         let texto = document.getElementById('miTexto').innerHTML;
-        function copiarContenido(){
-          navigator.clipboard.writeText(texto);
-        }
+        function copiarContenido() { navigator.clipboard.writeText(texto) }
       </script>
       <div class="flex">
-        <div class="codigo wAuto">
+        <div class="codigo w75">
           <<NRed>p</NRed> <NPurp>id</NPurp>="<NGreen>miTexto</NGreen>"> <<NRed>p</NRed>> <br>
-          <<NRed>button</NRed> <NPurp>onclick</NPurp>="<NBlue>copiarContenido</NBlue>()"> Copiar <<NRed>/button</NRed>>
+          <<NRed>button</NRed> <NPurp>onclick</NPurp>="<NBlue>copiar</NBlue>()"> Copiar <<NRed>/button</NRed>>
         </div>
         <div class="cod width100">
           <NPurp>let</NPurp> texto = document.<NBlue>getElementById</NBlue>("<NGreen>miTexto</NGreen>").innerHTML; <br>
-          <NPurp>function</NPurp> <NBlue>copiarContenido</NBlue>() { <br>
-            <NTab></NTab> navigator.clipboard.<NBlue>writeText(<NVar>texto</NVar>)</NBlue>; <br>
-          }
+          <NPurp>function</NPurp> <NBlue>copiar</NBlue>() { navigator.clipboard.<NBlue>writeText(<NVar>texto</NVar>)</NBlue>; }
         </div>
       </div>
       <details>
@@ -1513,7 +1503,7 @@
             <NTab2></NTab2> <NRed>headers</NRed>: { <br>
             <NTab2></NTab2> &nbsp; "<b>Content-Type</b>": "<NGreen>application/json</NGreen>", <br>
             <NTab2></NTab2> }, <br>
-            <NTab2></NTab2> <NRed>body</NRed>: JSON.<NBlue>stringify</NBlue>({ <br>
+            <NTab2></NTab2> <NRed>body</NRed>: JSON.<NBlue>stringify</NBlue>({ <NGray>// convertir obj a json</NGray><br>
             <NTab2></NTab2> &nbsp; <b>title</b>: titulo, <br>
             <NTab2></NTab2> &nbsp; <b>body</b>: contenido, <br>
             <NTab2></NTab2> }), <br>
@@ -1570,7 +1560,7 @@
           &nbsp; <NRed>headers</NRed>: { <br>
             <NTab></NTab> "<b>Content-Type</b>": "<NGreen>application/json</NGreen>", <br>
           &nbsp; }, <br>
-          &nbsp; <NRed>body</NRed>: JSON.<NBlue>stringify</NBlue>({ <br>
+          &nbsp; <NRed>body</NRed>: JSON.<NBlue>stringify</NBlue>({ <NGray>// convertir obj a json</NGray><br>
             <NTab></NTab> <b>title</b>: "<NGreen>Nuevo título</NGreen>", <br>
             <NTab></NTab> <b>body</b>: "<NGreen>Nueva descripcion</NGreen>", <br>
           &nbsp; }), <br>

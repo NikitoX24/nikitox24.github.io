@@ -1,17 +1,24 @@
-<?php
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible" content="ie-edge">
+  <meta name="robots" content="no-follow">
+  <link rel="stylesheet" href="../HtmlCheatSheet/STYLE.css">
+  <link rel="icon" href="../logo.png">
+  <title>PHP</title>
+</head>
+  
+<script>  
+  let back_color = "rgba(0, 0, 255, .05)";
+  let shadow1 = "rgba(0, 119, 255, 0.164)";
+  let shadow2 = "rgba(0, 0, 255, 0.1)";
+</script>
+<script src="../PHP/config.js"></script>
+<script src="../PHP/header.js"></script>
+<script src="../PHP/cheats.js"></script>
 
-$title = "PHP";
-$back_color = "rgba(0, 0, 255, .05)";
-$shadow1 = "rgba(0, 119, 255, 0.164)";
-$shadow2 = "rgba(0, 0, 255, 0.1)";
-
-require("../PHP/config.php");
-include_once("../PHP/header.php");
-include_once("../PHP/navbar.php");
-include("../PHP/cheats.php");
-
-?>
-<link rel="stylesheet" href="../HtmlCheatSheet/STYLE.css">
 
 <style>
   :root{
@@ -133,11 +140,9 @@ include("../PHP/cheats.php");
       <div class="flex">
         <div class="cod">
           <NBlue>echo</NBlue> $<NVar>_SERVER</NVar>["<NGreen>SCRIPT_NAME</NGreen>"]; <br>
-          <NGray> <?php echo $_SERVER["SCRIPT_NAME"]; ?> </NGray>
         </div>
         <div class="cod">
           <NBlue>echo</NBlue> $<NVar>_SERVER</NVar>["<NGreen>HTTP_HOST</NGreen>"]; <br>
-          <NGray> <?php echo $_SERVER["HTTP_HOST"]; ?> </NGray>
         </div>
       </div>
     </fieldset>
@@ -428,47 +433,19 @@ include("../PHP/cheats.php");
   </section>
 
   <!-- Base de Datos SQL -->
-  <section id="Base de Datos (SQL)">
+  <section id="Conexion con la Base de Datos (SQL)">
     <fieldset> <!-- Conexion y Solicitud -->
       <legend>Conexion y Solicitud</legend>
       <div class="width100">
-        index.php
         <div class="cod wAuto">
-          include("<NGreen>Conexion.php</NGreen>"); <br>
+          $<NVar>conexion</NVar> = <NBlue>mysqli_connect</NBlue>("<NGreen>localhost</NGreen>", "<NGreen>root</NGreen>", "", "<NGreen>baseDatos</NGreen>"); <hr>
+          <!-- mysqli_set_charset($conexion, "utf8"); // opcional ? -->
           $<NVar>solicitud</NVar> = ' <NGray>/* comandos qsl */</NGray> '; <br>
           $<NVar>resultado</NVar> = <NBlue>mysqli_query</NBlue>($<NVar>conexion</NVar>, $<NVar>solicitud</NVar>);
         </div>
       </div>
-      <div class="width100">
-        Conexion.php
-        <div class="cod wAuto">
-          $<NVar>conexion</NVar> = <NBlue>mysqli_connect</NBlue>("<NGreen>localhost</NGreen>", "<NGreen>root</NGreen>", "", "<NGreen>baseDatos</NGreen>"); <br>
-          <NBlue>mysqli_set_charset</NBlue>($<NVar>conexion</NVar>, "<NGreen>utf8</NGreen>"); <NGray>// opcional ?</NGray>
-        </div>
-      </div>
-      <a href="">(Ver más en el archivo sql.sql).</a>
     </fieldset>
 
-    <fieldset> <!-- Crear Tabla (DLL) -->
-    <legend> Crear una tabla con Columnas/field </legend>
-      <div class="cod">
-        <NGreen><NOrg>CREATE TABLE</NOrg> nombreTabla ( <NGray>-- Crear tabla.</NGray> <br>
-          &nbsp; ID <NPurp>int</NPurp> <NOrg>NOT NULL</NOrg> AUTO_INCREMENT, <br>
-          &nbsp; Nombre <NPurp>varchar</NPurp> (<NOrg>15</NOrg>), <br>
-          &nbsp; Apellido <NPurp>varchar</NPurp> (<NOrg>15</NOrg>), <br>
-          &nbsp; Edad <NPurp>int</NPurp>, <br>
-          &nbsp; Celular <NPurp>int</NPurp>, <br>
-          &nbsp; <NPurp>PRIMARY KEY</NPurp>(ID) <br>
-        ) </NGreen><br> 
-      </div>
-      <div class="cod"> <NVar>
-        <NOrg>DROP TABLE</NOrg> <NGreen>nombreTabla;</NGreen> <NGray>-- Borrar Tabla.</NGray> <br>
-        <NOrg>ALTER TABLE</NOrg> mytabla RENAME myusuarios; <NGray>-- renombrar tabla.</NGray> <br>
-        <NOrg>ALTER TABLE</NOrg> myusuarios CHANGE telefono celular <NPurp>INT</NPurp>(<NOrg>11</NOrg>); <NGray>-- cambiar el nombre a una columna.</NGray> <br>
-        <NOrg>ALTER TABLE</NOrg> myusuarios <NOrg>ADD</NOrg> COLUMN (direccion <NPurp>VARCHAR</NPurp>(<NOrg>20</NOrg>)); <NGray>-- agregar nueva columna.</NGray> <br>
-        <NOrg>ALTER TABLE</NOrg> myusuarios <NOrg>DROP</NOrg> COLUMN edad; <NGray>-- borrar columna</NGray></NVar>
-      </div>
-    </fieldset>
 
     <fieldset> <!-- Enviar Registro a una Tabla / Registrarse (DML) uno.php -->
     <legend> Enviar un Registro a una Tabla </legend>
@@ -546,3 +523,27 @@ include("../PHP/cheats.php");
 
 </body>
 </html>
+
+<!-- SQL
+    <legend> Crear una tabla con Columnas/field </legend>
+      <div class="cod">
+        <NGreen><NOrg>CREATE TABLE</NOrg> nombreTabla ( <NGray>-- Crear tabla.</NGray> <br>
+          &nbsp; ID <NPurp>int</NPurp> <NOrg>NOT NULL</NOrg> AUTO_INCREMENT, <br>
+          &nbsp; Nombre <NPurp>varchar</NPurp> (<NOrg>15</NOrg>), <br>
+          &nbsp; Apellido <NPurp>varchar</NPurp> (<NOrg>15</NOrg>), <br>
+          &nbsp; Edad <NPurp>int</NPurp>, <br>
+          &nbsp; Celular <NPurp>int</NPurp>, <br>
+          &nbsp; <NPurp>PRIMARY KEY</NPurp>(ID) <br>
+        ) </NGreen><br> 
+      </div>
+      <div class="cod"> <NVar>
+        <NOrg>DROP TABLE</NOrg> <NGreen>nombreTabla;</NGreen> <NGray>-- Borrar Tabla.</NGray> <br>
+        <NOrg>ALTER TABLE</NOrg> mytabla RENAME myusuarios; <NGray>-- renombrar tabla.</NGray> <br>
+        <NOrg>ALTER TABLE</NOrg> myusuarios CHANGE telefono celular <NPurp>INT</NPurp>(<NOrg>11</NOrg>); <NGray>-- cambiar el nombre a una columna.</NGray> <br>
+        <NOrg>ALTER TABLE</NOrg> myusuarios <NOrg>ADD</NOrg> COLUMN (direccion <NPurp>VARCHAR</NPurp>(<NOrg>20</NOrg>)); <NGray>-- agregar nueva columna.</NGray> <br>
+        <NOrg>ALTER TABLE</NOrg> myusuarios <NOrg>DROP</NOrg> COLUMN edad; <NGray>-- borrar columna</NGray></NVar>
+      </div>
+      <a href="">(Ver más en el archivo sql.sql).</a>
+    </fieldset>
+
+-->

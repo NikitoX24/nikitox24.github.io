@@ -1,24 +1,32 @@
-<?php
-
-$title = "CSS";
-$back_color = "rgba(0, 0, 255, .05)";
-$shadow1 = "rgba(0, 119, 255, 0.164)";
-$shadow2 = "rgba(0, 0, 255, 0.1)";
-
-require("../PHP/config.php");
-include_once("../PHP/header.php");
-include_once("../PHP/navbar.php");
-include("../PHP/cheats.php");
-
-?>
-<link rel="stylesheet" href="../HtmlCheatSheet/STYLE.css">
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../HtmlCheatSheet/STYLE.css">
+  <link rel="icon" href="../logo.png">
+  <title>CSS</title>
+</head>
+  
+<script>
+  let back_color = "rgba(0, 0, 255, .05)";
+  let shadow1 = "rgba(0, 119, 255, 0.164)";
+  let shadow2 = "rgba(0, 0, 255, 0.1)";
+</script>
+<script src="../myconfig/config.js"></script>
+<script src="../myconfig/header.js"></script>
+<script src="../myconfig/cheats.js"></script>
 
 <body>
   <!-- Text -->
   <section id="Text">
 
     <!-- Bootstrap -->
-    <a href="<?php echo $bs_dir;?>"><img src="../Imgs/bootstrap-icon.png" alt="Bootstrap" height="50px"> </a>
+    <script>
+      document.write(/*html*/
+        `<a href="${bs_dir}"><img src="../Imgs/bootstrap-icon.png" alt="Bootstrap" height="50px"> </a>`
+      );
+    </script>
 
     <!-- Fuentes -->
     <fieldset>
