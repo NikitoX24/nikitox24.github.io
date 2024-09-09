@@ -20,8 +20,8 @@
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <title>Mis datos</title>
-  <link rel="stylesheet" href="../../HtmlCheatSheet/STYLE.css">
-  <link rel="stylesheet" href="../../HtmlCheatSheet/Lib-Fram/Bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../machetes/STYLE.css">
+  <link rel="stylesheet" href="../../machetes/Lib-Fram/Bootstrap/css/bootstrap.min.css">
 </head>
 <body>
 

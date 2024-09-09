@@ -12,5 +12,5 @@ if($_POST['user'] == $user && $_POST['password'] == $password) {
 }
 else {
   echo "USUARIO o CONTRASEÑA incorrecta.<br>";
-  echo "<a href='/HtmlCheatSheet/PHP.php'> INTENTAR NUEVAMENTE </a>"; // TODO:
+  echo "<a href='/machetes/PHP.php'> INTENTAR NUEVAMENTE </a>"; // TODO:
 }

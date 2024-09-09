@@ -3,7 +3,7 @@
 // Dir / Carpetas
 $server_dir = "../"; // $_SERVER["HTTP_HOST"]."/";
 $imgs_dir = $server_dir."imgs/";
-$cheat_dir = $server_dir."HtmlCheatSheet/";
+$cheat_dir = $server_dir."machetes/";
 
 // Logos
 $logo_25px = '<img src="'.$server_dir.'logo.png" height="25px">';

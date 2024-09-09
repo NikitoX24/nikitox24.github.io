@@ -9,19 +9,16 @@ document.write(/*html*/`
     </ul></nav>
   </div>
 
-  <!-- Espacio q ocupa el Nav -->
-  <div style="height: 60px;"></div>
-
   <!-- Go-Up icon -->
   <a id="up" href=#> &#9650; </a>
 
   <style>
     #navbar {
-      padding: 7px 0;
+      /* padding: 7px 0;
       min-width: 100%;
-      /* position: fixed; */
+      position: fixed;
       top: -23px;
-      left: 0;
+      left: 0; */
       z-index: 1;
     }
     #navbar nav ul {
@@ -35,7 +32,7 @@ document.write(/*html*/`
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-top: 1em;
+       /* margin-top: 1em; */
     }
     #navbar nav ul li {
       display: inline-block;

@@ -11,7 +11,7 @@ include_once("../PHP/navbar.php");
 include("../PHP/cheats.php");
 
 ?>
-<link rel="stylesheet" href="../HtmlCheatSheet/STYLE.css">
+<link rel="stylesheet" href="../machetes/STYLE.css">
 
 
 <body>
@@ -1118,7 +1118,7 @@ include("../PHP/cheats.php");
           <summary>Código...</summary>
           <div class="cod">
             <pre>
-                let socket = new WebSocket("ws://http://myserver/HtmlCheatSheet/JS.php");
+                let socket = new WebSocket("ws://http://myserver/machetes/JS.php");
                   let mensajeingresado = document.getElementById("mensajeIngresado");
                   let botonenviar = document.getElementById("botonenviar");
 

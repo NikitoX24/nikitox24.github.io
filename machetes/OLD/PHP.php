@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="x-ua-compatible" content="ie-edge">
   <meta name="robots" content="no-follow">
-  <link rel="stylesheet" href="../HtmlCheatSheet/STYLE.css">
+  <link rel="stylesheet" href="../machetes/STYLE.css">
   <link rel="icon" href="../logo.png">
   <title>PHP</title>
 </head>
