@@ -40,7 +40,11 @@
   <section id="Text">
 
     <!-- Bootstrap -->
-    <a href="../HtmlCheatSheet\Librerias&Frameworks\Bootstrap\Bootstrap.html"><img src="../Imgs/bootstrap-icon.png" alt="Bootstrap" height="50px"> </a>
+    <script>
+      document.write(/*html*/
+        `<a href="${bs_dir}"><img src="../Imgs/bootstrap-icon.png" alt="Bootstrap" height="50px"> </a>`
+      );
+    </script>
 
     <!-- Fuentes -->
     <fieldset>
@@ -1260,8 +1264,6 @@
 
   <!-- Filtros -->
   <section id="Filtros">
-
-    <!-- Filter Functions -->
     <fieldset>
       <legend>  Filter:  </legend>
       <div class="flex fltAuto">
@@ -1314,6 +1316,7 @@
         </div>
       </div>
     </fieldset>
+
     <style>
       .fltAuto{
         margin: auto;
@@ -1334,7 +1337,8 @@
         background-color: #ffffff26;
         backdrop-filter: blur(5px);
         position: absolute;
-        top: 50%; left: 50%;
+        top: 50%; 
+        left: 50%;
         transform: translate(-50%, -50%);
       }
     </style>
