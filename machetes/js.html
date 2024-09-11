@@ -1,3 +1,5 @@
+<script src="../myconfig/config.js"></script>
+
 <!DOCTYPE html>
 <html lang="es-AR">
 <head>
@@ -7,22 +9,16 @@
   <meta name="robots" content="no-follow">
   <link rel="stylesheet" href="../machetes/STYLE.css">
   <link rel="icon" href="../logo.png">
-  <title>JS</title>
+  <script>document.write(`<title>${t_js}</title>`)</script>
 </head>
-  
-<script>
-  let back_color = "rgba(0, 255, 0, .03)";
-  let shadow1 = "rgba(0, 159, 0, 0.3)";
-  let shadow2 = "rgba(0, 255, 38, 0.1)";
-</script>
-<script src="../myconfig/config.js"></script>
+
 <script src="../myconfig/header.js"></script>
 <script src="../myconfig/cheats.js"></script>
 
 
 <body>
-  <!-- Fundamentos -->
-  <section id="Fundamentos">
+  <!-- Variables -->
+  <section id="Variables y Arrays">
     <fieldset> <!-- Variable -->
       <legend> Variables (tipado dinamico) </legend>
       <div class="flex">
@@ -218,7 +214,10 @@
         </div>
       </div>
     </fieldset>
+  </section>
 
+  <!-- Funciones -->
+  <section id="Funciones">
     <fieldset> <!-- Funciones -->
       <legend>  Funciones  </legend>
       <div class="flex">
@@ -294,6 +293,24 @@
         <NBlue>sayHiFromFunction</NBlue>((name)) <NPurp> => </NPurp>{ <br>
           console.<NPurp>log</NPurp>(`<NGreen>Hola</NGreen> ${name}`) <br>
         }
+      </div> <hr>
+
+      <b>Callbacks</b>
+      <div class="cod columnas">
+        <NGray>// Callback (parametro como nombre de funcion)</NGray> <br>
+        <NPurp>function</NPurp> <NBlue>avanzaFila</NBlue>(callback){ <br>
+          &nbsp; <NBlue>setTimeout</NBlue>(<NPurp>function</NPurp>(){ <br>
+            <NTab></NTab> console.<NBlue>log</NBlue>("<NGreen>Tu turno ha llegado</NGreen>"); <br>
+            <NTab></NTab> <NBlue>callback</NBlue>(); <br>
+          &nbsp; }, <NOrg>5000</NOrg>); <br>
+        } <br>
+        <NPurp>function</NPurp> <NBlue>llamada</NBlue>(){ <br>
+          &nbsp; console.<NBlue>log</NBlue>("<NGreen>Te presentas a tu turno</NGreen>"); <br>
+        } <br>
+          <br>
+        console.<NBlue>log</NBlue>("<NGreen>Llegas a la fila</NGreen>"); <br>
+        <NBlue>avanzaFila</NBlue>(llamada); <br>
+        console.<NBlue>log</NBlue>("<NGreen>Te vas a comprar café</NGreen>");
       </div>
     </fieldset>
 
@@ -352,7 +369,10 @@
         </div>
       </div>
     </fieldset>
+  </section>
 
+  <!-- Condic y Bucles -->
+  <section id="Condicionales y Bucles">
     <fieldset> <!-- Condicionales IF/Switch -->
       <legend> Condicionales </legend>
       <div class="flex">
@@ -1270,8 +1290,8 @@
     </fieldset>
   </section>
 
-  <!-- APIs -->
-  <section id="APIs / Otros">
+  <!-- Otros -->
+  <section id="Otros">
     <!-- Math -->
     <fieldset>
       <legend> Math: </legend>
@@ -1452,46 +1472,52 @@
 
   <!-- Json -->
   <section id="JSON">
-    <!-- JSON -->
+    <!-- PHP y SON EJ -->
     <fieldset> 
-      <legend> JSON (xhr y fetch) </legend>
-      <div class="flex">
-        <div class="cod"> <!-- xhr -->
-          <NGray>// Opcion 1 (XMLHttpRequest)</NGray> <br>
-          <NPurp>let</NPurp> <u>datosJson</u>; <br><br>
-          <NPurp>let</NPurp> xhr = <NAqua>new</NAqua> <Nblue>XMLHttpRequest</Nblue>(); <br>
-          xhr.<Nblue>open</Nblue>("<NGreen>GET</NGreen>", "<NGreen>JSON.json</NGreen>", 
-                                    <dfn title="Si es Asincrono ó no">true</dfn>); <br>
-          xhr.responseType = "<NGreen>json</NGreen>"; <br>
-          xhr.<Nblue>onload</Nblue> = <NPurp>function</NPurp>() { <br>
-            &nbsp; <NAqua>if</NAqua>(xhr.status === <NOrg>200</NOrg>){ <br>
-              <NTab></NTab> <u>datosJson</u> = xhr.response; <br>
-            &nbsp; }<NAqua>else</NAqua>{ <NGray>/* manejar el error */</NGray> } <br>
-          } <br>
-          xhr.<NBlue>send</NBlue>();
-            <!-- Respuestas -->
-              <!-- 200 (completada) -->
-              <!-- 201 (elemento creado) -->
-              <!-- 204 (respuesta vacia) -->
-              <!-- 400 (mal solicitado) -->
-              <!-- 401 (no autorizado) -->
+      <legend> Fetch simple con PHP/JSON </legend>
+        <div class="flex">
+          <div class="cod">
+            <NGray>// GET</NGray> <br>
+            <NPurp>let</NPurp> div = document.<NBlue>querySelector</NBlue>("<NGreen>div</NGreen>"); <br><br>
+            <NPurp>async function</NPurp> <NBlue>obtenerDatos</NBlue>(){ <br>
+              &nbsp; <NPurp>let</NPurp> respuesta <NAqua> = await </NAqua> <NBlue>fetch</NBlue>("<NGreen>archivo.php</NGreen>"); <NGray>// archivo.json</NGray> <br>
+              &nbsp; <NPurp>let</NPurp> datos <NAqua> = await </NAqua> respuesta.<NBlue>json</NBlue>(); <br><br>
+              &nbsp; div.innerText = datos; <NGray>// datos.nombre</NGray> <br>
+            } <br>
+            <NBlue>obtenerDatos</NBlue>(); <br><hr>
+            <NGray>// PHP</NGray> <br>
+            <NBlue>echo json_encode</NBlue>("<NGreen>Hola mundo!</NGreen>"); <br> <hr>
+
+            <NGray>// JSON</NGray> <br>
+            { <br>
+              &nbsp; "nombre" : "nico", <br>
+              &nbsp; "apellido" : "Pasino" <br>
+            }
+          </div>
+          <div class="cod">
+            <NGray>// POST</NGray> <br>
+            <NPurp>const</NPurp> data <NAqua> = new </NAqua> <NObj>FromData()</NObj>; <br>
+            data.<NBlue>append</NBlue>("<NGreen>nombre</NGreen>", "<NGreen>Nico</NGreen>"); <br><br>
+            <NPurp>async function</NPurp> <NBlue>obtenerDatos</NBlue>(){ <br>
+              &nbsp; <NPurp>let</NPurp> respuesta <NAqua> = await </NAqua> <NBlue>fetch</NBlue>("<NGreen>archivo.php</NGreen>" , { <br>
+                <NTab></NTab> method: "<NGreen>POST</NGreen>", <br>
+                <NTab></NTab> body: data <br>
+              &nbsp; }) <br>
+              &nbsp; <NPurp>let</NPurp> datos <NAqua> = await </NAqua> respuesta.<NBlue>json</NBlue>(); <br><br>
+              &nbsp; div.innerText = datos; <br>
+            } <br>
+            <NBlue>obtenerDatos</NBlue>(); <br><hr>
+            <NGray>// PHP</NGray> <br>
+            <NAqua>if</NAqua> (<NAqua>$</NAqua>_POST['<NGreen>nombre</NGreen>'] == "<NGreen>Nico</NGreen>") { <br>
+              &nbsp; <NBlue>echo json_encode</NBlue>("<NGreen>Bienvenido!</NGreen>"); <br>
+            }
+          </div>
         </div>
-        <div class="cod"> <!-- fetch -->
-          <NGray>// Opcion 2 (fetch)</NGray> <br>
-          <NPurp>let</NPurp> <u>datosJson</u>; <br><br>
-          <NBlue>fetch</NBlue>("<NGreen>JSON.json</NGreen>") <NGray>// ó URL</NGray> <br>
-          <NBlue>.then</NBlue>( res<NPurp> => </NPurp> res.<NBlue>json</NBlue>() ) <br>
-          <NBlue>.then</NBlue>( (salida) <NPurp> => </NPurp> { <br>
-            <NTab></NTab> <u>datosJson</u> = salida; <br>
-          }) <br>
-          <NBlue>.catch</NBlue>( error <NPurp> => </NPurp> console.<NBlue>log</NBlue>(error) ) <br>
-        </div>
-      </div>
     </fieldset>
 
     <!-- Fetch (metodos) -->
     <fieldset> 
-      <legend> Fetch (Metodos de Solicitud) </legend>
+      <legend> Fetch </legend>
       &nbsp;(URL usado): <u>https://jsonplaceholder.typicode.com/posts</u>
       <div class="flex"> <!-- POST - GET - DELETE -->
         <div class="cod width100"> <!-- POST -->
@@ -1526,8 +1552,7 @@
             <NBlue>fetch</NBlue>("<NGreen>typicode.com/posts</NGreen>", { <br>
             &nbsp;  <NRed>method</NRed>: "<NGreen>GET</NGreen>", <br>
             &nbsp;  <NRed><u>credentials</u></NRed>: "<NGreen>include</NGreen>", <NGray>(Opcional)</NGray> <br>
-            &nbsp;  <NRed><u>cache</u></NRed>: "<NGreen>
-            &nbsp;    <dfn title="no-cache, default, reload, only-if-cache">force-cache</dfn></NGreen>", <NGray>(Opcional)</NGray> <br>
+            &nbsp;  <NRed><u>cache</u></NRed>: "<NGreen><dfn title="no-cache, default, reload, only-if-cache">force-cache</dfn></NGreen>", <NGray>(Opcional)</NGray> <br>
             &nbsp;  <NRed><u>redirect</u></NRed>: "<NGreen><dfn title="error, manual">follow</dfn></NGreen>", <NGray>(Opcional)</NGray> <br>
             &nbsp;  <NRed>headers</NRed>: {        <NGray>(Opcional)</NGray> <br>
             <NTab></NTab> "<b>Autorization</b>": "<NGreen>Bearer</NGreen> + token",  <br>
@@ -1589,7 +1614,7 @@
 
     <!-- Axios -->
     <fieldset> 
-      <legend> Axios (más potente que fetch)</legend>
+      <legend> Axios (Framework - más potente que fetch)</legend>
       <script src="https://unpkg.com/axios/dist/axios.min.js"></script> <!-- ó "npm install axios" -->
 
       <div class="cod"> <!-- install / script axion -->
@@ -1654,48 +1679,7 @@
 
   <!-- Asincronía + Errores -->
   <section id="Asincronía + Errores">
-
-    <fieldset> <!-- Callback -->
-      <legend> Callback </legend>
-        <div class="flex">
-          <div class="cod">
-            <NGray>// Callback</NGray> <br>
-            <NPurp>function</NPurp> <NBlue>avanzaFila</NBlue>(callback){ <br>
-              &nbsp; <NBlue>setTimeout</NBlue>(<NPurp>function</NPurp>(){ <br>
-                <NTab></NTab> console.<NBlue>log</NBlue>("<NGreen>Tu turno ha llegado</NGreen>"); <br>
-                <NTab></NTab> <NBlue>callback</NBlue>(); <br>
-              &nbsp; }, <NOrg>5000</NOrg>); <br>
-            } <br>
-            <NPurp>function</NPurp> <NBlue>llamada</NBlue>(){ <br>
-              &nbsp; console.<NBlue>log</NBlue>("<NGreen>Te presentas a tu turno</NGreen>"); <br>
-            } <br>
-              <br>
-            console.<NBlue>log</NBlue>("<NGreen>Llegas a la fila</NGreen>"); <br>
-            <NBlue>avanzaFila</NBlue>(llamada); <br>
-            console.<NBlue>log</NBlue>("<NGreen>Te vas a comprar café</NGreen>");
-          </div>
-          <div class="cod">
-            <NGray>// Manejo de Error</NGray> <br>
-              <NPurp>function</NPurp> <NBlue>sumar</NBlue>(num1, num2, callback){ <br>
-                &nbsp; <NBlue>setTimeout</NBlue>(<NPurp>function</NPurp>(){ <br>
-                  <NTab></NTab>  if(<NAqua>typeof</NAqua> num1 != "<NGreen>number</NGreen>" || <NAqua>typeof</NAqua> num2 != "<NGreen>number</NGreen>"){ <br>
-                    <NTab></NTab> <NTab></NTab> <NAqua>return</NAqua> <NBlue>callback</NBlue>(<NAqua>new</NAqua> <NBlue>Error</NBlue>("<NGreen> Argumento no válido</NGreen>")); <br>
-                  <NTab></NTab> } <br>
-                  <NTab></NTab> <NBlue>callback</NBlue>(<NAqua>null</NAqua>, num1 + num2); <br>
-                &nbsp; }, <NOrg>1000</NOrg>); <br>
-              } <br> <br>
-              <NBlue>sumar</NBlue>("p", 50, <NPurp>function</NPurp>(error, resultado){ <br>
-                <NAqua>if</NAqua>(error){ <br>
-                  &nbsp; console.<NBlue>log</NBlue>(error); <br>
-                }<NAqua>else</NAqua>{ <br>
-                  &nbsp; console.<NBlue>log</NBlue>(resultado); <br>
-                } <br>
-              })
-          </div>
-        </div>
-    </fieldset>
-
-    <div class="flex">
+    <div class="flex"> <!-- Promise + Async -->
     <fieldset> <!-- Promise -->
       <legend> Promise </legend>
       <div class="cod wAuto">
@@ -1735,7 +1719,7 @@
         <NGray>// Async - Await</NGray> <br>
         <NPurp>async function</NPurp> <NBlue>obtenerDatos</NBlue>(){ <br>
           <NTab></NTab> <NPurp>let</NPurp> respuesta <NAqua> = await</NAqua> <NBlue>fetch</NBlue>("<NGreen>https://api.datos...</NGreen>") <br> <br>
-          <NTab></NTab> <NPurp>let</NPurp> datos <NAqua> = Await </NAqua> respuesta.<NBlue>json</NBlue>(); <br> <br>
+          <NTab></NTab> <NPurp>let</NPurp> datos <NAqua> = await </NAqua> respuesta.<NBlue>json</NBlue>(); <br> <br>
           <NTab></NTab> console.<NBlue>log</NBlue>(datos); <br>
         } <br>
         <NBlue>obtenerDatos</NBlue>(); <br>
@@ -1750,7 +1734,7 @@
         } <br>
         <NPurp>async function</NPurp> <NBlue>manejoErrores</NBlue>(){ <br>
           &nbsp; <NAqua>try</NAqua>{ <br>
-          <NTab></NTab> <NPurp>let</NPurp> resultado = await <NBlue>sumar</NBlue>("p", 50); <br>
+          <NTab></NTab> <NPurp>let</NPurp> resultado = <NAqua>await</NAqua> <NBlue>sumar</NBlue>("p", 50); <br>
           <NTab></NTab> console.<NBlue>log</NBlue>(resultado); <br>
           &nbsp; } <br>
           &nbsp; <NAqua>catch</NAqua>(error){ <br>

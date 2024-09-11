@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Test</title>
+</head>
+<body>
+
+  <style>
+    body{
+      background-color: black;
+      color: white;
+    }
+  </style>
+  <p id="nombre"></p>
+  
+  <script>
+    const nombre_P = document.getElementById("nombre");
+    
+    
+
+    // JSON
+    async function obtenerDatosJson(){
+      let respuesta = await fetch("json.json"); // ó .json
+      let datos = await respuesta.json();
+
+      nombre_P.innerText = "Json: " + datos.nombre;
+    }
+    obtenerDatosJson();
+
+
+
+
+    // Obtener Datos PHP
+    async function obtenerDatosPHP(){
+      let respuesta = await fetch("peticion");
+      let datos = await respuesta.json();
+
+      nombre_P.innerText = "php: " + datos;
+    }
+    // obtenerDatosPHP();
+
+
+
+    // Enviar y obtener Datos PHP
+    const data = new FormData();
+    data.append("nombre", "Nico");
+    
+    async function obtenerDatos(){
+      let respuesta = await fetch("peticion", {
+        method: 'POST',
+        body: data
+      })
+      let datos = await respuesta.json();
+
+      nombre_P.innerText = "php: " + datos;
+    }
+    // obtenerDatos();
+
+
+   
+
+  </script>
+  
+
+</body>
+</html>

@@ -28,8 +28,6 @@ body {
   max-width: 720px;
   margin: auto
 }
-header { margin-top: 60px; }
-
 
 /* HTML, CSS, JS */
 NVar{ color: black; }
@@ -72,10 +70,13 @@ legend {
 }
 
 button{
-  margin: 4px 0px 10px 0px;
-  padding: 2px;
-  min-width: 100px;
+  margin: 4px 0px 5px 0px;
+  padding: 5px;
   cursor: pointer;
+}
+.links{
+  display: grid;
+  place-items: center;
 }
 
 

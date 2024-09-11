@@ -1,23 +1,20 @@
-// titulo de la pag
-let titulo = document.title;
+titulo = document.title;
 
 document.write(/*html*/`
   <div class="iconosFlex"> 
-    <table class="ch-HTML" onclick="loadHTML()"> <caption> HTML </caption> 
-      <td><img src="../Imgs/HTML2.png"></td> </table>
+    <table class="ch-${t_html}" onclick="loadHTML()"> <caption> HTML </caption> 
+      <td><img src="${imgs_dir}HTML2.png"></td> </table>
 
-    <table class="ch-CSS" onclick="loadCSS()">   <caption> CSS </caption> 
-      <td><img src="../Imgs/CSS2.png"></td> </table>
+    <table class="ch-${t_css}" onclick="loadCSS()">   <caption> CSS </caption> 
+      <td><img src="${imgs_dir}CSS2.png"></td> </table>
 
-    <table class="ch-JS" onclick="loadJS()">     <caption> JS </caption> 
-      <td><img src="../Imgs/JS2.png"></td> </table>
+    <table class="ch-${t_js}" onclick="loadJS()">     <caption> JS </caption> 
+      <td><img src="${imgs_dir}JS2.png"></td> </table>
 
-    <table class="ch-PHP" onclick="loadPHP()">   <caption> PHP </caption> 
-      <td><img src="../Imgs/PHP2.png"></td> </table>
+    <table class="ch-${t_php}" onclick="loadPHP()">   <caption> PHP </caption> 
+      <td><img src="${imgs_dir}PHP2.png"></td> </table>
   </div>
   
-
-
   <style>
     /* section color */
     section {
@@ -36,3 +33,14 @@ document.write(/*html*/`
     
   </style>
 `);
+
+// Frameworks & Librerias de INDEX
+if (titulo == "Index") {
+  document.write(/*html*/`
+    <div class="iconosFlex">
+      <table class="ch-BS" onclick="loadBS()"> <caption> BtSp </caption> 
+        <td><img src="${imgs_dir}bootstrap-icon.png"></td>
+      </table>
+    </div>
+  `);
+}

@@ -1,3 +1,5 @@
+<script src="../myconfig/config.js"></script>
+
 <!DOCTYPE html>
 <html lang="es-AR">
 <head>
@@ -7,63 +9,30 @@
   <meta name="robots" content="no-follow">
   <link rel="stylesheet" href="../machetes/STYLE.css">
   <link rel="icon" href="../logo.png">
-  <title>Index</title>
+  <script>document.write(`<title>${t_index}</title>`)</script>
 </head>
-  
-<script>
-  let back_color = "#000";
-  let shadow1 = "#000";
-  let shadow2 = "#000";
-</script>
-<script src="../myconfig/config.js"></script>
+
 <script src="../myconfig/header.js"></script>
 
 <div class="round-index">
   <h1><script>document.write(`${logo_25px}Machetes${logo_25px}`)</script></h1> <hr>
 
   <!-- Cheats -->
-  <script src="../myconfig/cheats.js"></script>
-  <script>
-    document.write(/*html*/`
-      <div class="iconosFlex">
-        <table class="ch-BS" onclick="loadBS()"> <caption> BtSp </caption> 
-          <td><img src="${imgs_dir}bootstrap-icon.png"></td> </table>
-      </div>
-    `);
-  </script>
+  <script src="../myconfig/cheats.js"></script> <hr>
 
-  <hr>
-  <link rel="stylesheet" href="../machetes/STYLE.css">
+  <!-- Links Nuevos -->
+  <div class="links">
+    <button onclick="loadTest()">     Test </button>
+    <button onclick="loadCuentas()">  Cuentas </button>
+    <button onclick="loadConvert()">  Convertir Texto html </button>
+    <button onclick="loadMC()">       MC </button>
+    <button onclick="loadVText()">    Video Text </button>
+    <button onclick="loadSocial()">   Social </button>
 
-  <!-- Otros -->
-  <form action="../Test.html">
-    <input type="submit" value="Test" />
-  </form>
-  <form action="../Otros/CuentasEJ/index.php">
-    <input type="submit" value="Cuentas PHP" />
-  </form>
-  <form action="../Otros/ConvertirTexto.html">
-    <input type="submit" value="ConvertirTexto" />
-  </form>
-  <form action="../Otros/MC.html">
-    <input type="submit" value="MC" />
-  </form>
-  <form action="../Otros/VideoText.html">
-    <input type="submit" value="HoraVideo" />
-  </form>  
-  <form action="../Otros/social.html">
-    <input type="submit" value="social" />
-  </form>
-  <br> <hr>
-
-  <!-- Ejercicios -->
-  <h3><u>Juegos</u></h3>
-  <form action="../Otros/Ejercicios/Ahorcado.html">
-    <input type="submit" value="Ahorcado" />
-  </form>
-  <form action="../Otros/Ejercicios/TaTeTi.html">
-    <input type="submit" value="TaTeTi" />
-  </form>
-</div> <!-- fin del round -->
+    <h3><u>Juegos</u></h3>
+    <button onclick="loadAhorcado()"> Ahorcado </button>
+    <button onclick="loadTateti()">   Tateti </button>
+  </div>
+</div>
 
 <script src="myconfig/footer.js"></script>

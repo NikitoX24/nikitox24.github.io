@@ -1,3 +1,5 @@
+<script src="../myconfig/config.js"></script>
+
 <!DOCTYPE html>
 <html lang="es-AR">
 <head>
@@ -5,15 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../machetes/STYLE.css">
   <link rel="icon" href="../logo.png">
-  <title>PHP</title>
+  <script>document.write(`<title>${t_php}</title>`)</script>
 </head>
 
-<script>  
-  let back_color = "rgba(0, 0, 255, .05)";
-  let shadow1 = "rgba(0, 119, 255, 0.164)";
-  let shadow2 = "rgba(0, 0, 255, 0.1)";
-</script>
-<script src="../myconfig/config.js"></script>
 <script src="../myconfig/header.js"></script>
 <script src="../myconfig/cheats.js"></script>
 
@@ -306,7 +302,8 @@
         <NBlue>ucfrirst</NBlue>($<NVar>var</NVar>); <NGray>// Capitalizar.</NGray> <br>
         <NBlue>ucwords</NBlue>($<NVar>var</NVar>); <NGray>// Capitalizar cada palabra.</NGray> <br>
         <NBlue>strlen</NBlue>($<NVar>var</NVar>); <NGray>// cantidad de letras.</NGray> <br>
-        <NBlue>strrev</NBlue>($<NVar>var</NVar>); <NGray>// texto de atras para adelante.</NGray>
+        <NBlue>strrev</NBlue>($<NVar>var</NVar>); <NGray>// texto de atras para adelante.</NGray> <br>
+        <NBlue>json_encode</NBlue>($<NVar>var</NVar>); <NGray>// convertir en Json.</NGray> <br>
       </div>
       Funciones de Fechas.
       <div class="cod">

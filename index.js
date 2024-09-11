@@ -1,24 +1,5 @@
-// #region (menu-component)
-class Menu extends HTMLElement {
-  constructor() {
-    super();
-    this.innerHTML = /*html*/`
-    <div id="navbar">
-      <nav><ul>
-        <li><a href="../index.html"> <img src="../logo.png" height="25px"> </a></li>
-        <li><a href="https://nikitox24.github.io/MyServer/"> <img src="/imgs/github-logo.png" alt="GitHub" height="25px"/> Index GitHub </a></li>
-        <li><a href="https://github.com/NikitoX24/Main"> <img src="/imgs/github-logo.png" alt="GitHub" height="25px"/> My GitHub </a></li>
-        <br />
-      </ul></nav>
-    </div>
-    <a id="up" href=#> ▲ </a>
-    `
-  }
-}
-customElements.define("menu-component", Menu); 
-//#endregion
 
-// #region (Mostrar Seccion (hover) y h1 )
+// #region (Mostrar Seccion (hover) y texto h1 )
 let textoFix = document.querySelector("#textoFix");
 let Section = document.querySelectorAll("section");
 
@@ -38,7 +19,7 @@ window.onload = function(){
 }
 //#endregion
 
-// <NTab> (espacio) TODO: cambiar los nbsp
+// <NTab> (espacio) cambiar los nbsp
 let tabs = document.querySelectorAll("NTab");
 for (let i = 0; i < tabs.length; i++) {
   tabs[i].innerHTML = "&nbsp; &nbsp;";
