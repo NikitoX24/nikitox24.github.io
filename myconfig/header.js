@@ -4,6 +4,7 @@ titulo = document.title;
 let back_color = "rgba(255, 255, 255, 0.5)";
 let shadow1 = "rgba(255, 255, 255, 0.8)";
 let shadow2 = "rgba(255, 255, 255, 0.3)";
+let linkColor = "#FFF";
 
 if (titulo == t_html){
   back_color = "rgba(255, 123, 0, 0.1)";
@@ -29,7 +30,7 @@ if (titulo == t_js){
 document.write(/*html*/`
   <div id="navbar">
     <nav><ul>
-      <li><a href="../index.html">${logo_25px}</a></li>
+      <li><a href="${index}">${logo_25px}</a></li>
       <li><a href="https://nikitox24.github.io/MyServerOLD/">${git_logo} OLD SV GitHub </a></li>
       <li><a href="https://github.com/NikitoX24/Main">${git_logo} This Repo. </a></li>
       <li><a href="https://github.com/NikitoX24">${git_logo} My GitHub </a></li>

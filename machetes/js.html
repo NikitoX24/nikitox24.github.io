@@ -285,14 +285,19 @@
         </div>
       </div> <hr>
 
-      <b>Funcion de Funcion</b>
+      <b>Recibir una Funcion y Devolver otra Funcion.</b>
       <div class="cod">
+        <!-- 
         <NPurp>const</NPurp> sayHiFromFunction = (fn) <NPurp> =></NPurp> { <br>
           &nbsp; <NAqua>return</NAqua> <NBlue>fn</NBlue>("<NGreen>Miguel</NGreen>") <br>
-        } <br>
-        <NBlue>sayHiFromFunction</NBlue>((name)) <NPurp> => </NPurp>{ <br>
-          console.<NPurp>log</NPurp>(`<NGreen>Hola</NGreen> ${name}`) <br>
-        }
+        }; <br><br>
+        <NBlue>sayHiFromFunction</NBlue>(name <NPurp> => </NPurp>{ <br>
+          &nbsp; console.<NPurp>log</NPurp>(`<NGreen>Hola</NGreen> ${name}`) <br>
+        }); -->
+        <NPurp>function</NPurp> <NBlue>returnFunction</NBlue>(nombre) { <br>
+          &nbsp; <NAqua>return</NAqua> <NBlue>nombre</NBlue>("<NGreen>Miguel</NGreen>"); <br>
+        } <br><br>
+        <NBlue>returnFunction</NBlue>(name <NPurp> => </NPurp> console.<NBlue>log</NBlue>(name));
       </div> <hr>
 
       <b>Callbacks</b>
@@ -340,32 +345,21 @@
     </fieldset>
     
     <fieldset class="flex"> <!-- SetInterval - SetTimeout  -->
-      <legend>SetInterval - SetTimeout</legend>
-      <div class="width100">
+      <legend>SetInterval - SetTimeout (Async)</legend>
+      <div class="width100"> <!-- SetInterval -->
         <b>SetInterval (Infinito)</b>
         <div class="cod wAuto">
-          <NPurp>var</NPurp> x = <NBlue>setInterval</NBlue>(<NBlue>MyFuncion</NBlue>, <NOrg>1000</NOrg>); <br>
-          function <NBlue>MyFuncion</NBlue>() { <br>
-            &nbsp; <NBlue>clearInterval</NBlue>(x); <br> }
+          <NPurp>var</NPurp> x = <NBlue>setInterval</NBlue>( <NPurp>function() { <br>
+            &nbsp; <NGray>// Código...</NGray> <br>
+          }</NPurp>, <NOrg>1000</NOrg>); <br>
+          <NBlue>clearInterval</NBlue>(x);
         </div>
       </div>
       <div class="width100"> <!-- SetTimeOut -->
         <b> SetTimeout (1 vez) </b>
         <div class="cod wAuto">
-          <NBlue>setTimeout</NBlue>(<NBlue>MyFuncion</NBlue>, <NOrg>1000</NOrg>);  <NGray>// 1seg</NGray> <br>
-          function <NBlue>MyFuncion</NBlue>() { <br> &nbsp; <NGray>// Codigo...</NGray> <br> }
-        </div>
-      </div>
-      <div class="width100">
-        <b>Promise ES6</b>
-        <div class="cod wAuto">
-          <NPurp>new</NPurp> <font class="selector">Promise</font>( <br>
-            &nbsp; <NPurp>function</NPurp>(<NRed>resolve</NRed>, <NRed>reject</NRed>) { <br>
-            &nbsp; <font class="aqua">if</font> (success) <br>
-              &nbsp; &nbsp; <NBlue>resolve</NBlue>(result); <br>
-            &nbsp; <font class="aqua">else</font> <br>
-              &nbsp; &nbsp; <NBlue>reject</NBlue>(<NBlue>Error</NBlue>("<NGreen>failure</NGreen>")); <br>
-          });
+          <NBlue>setTimeout</NBlue>(<NBlue>MyFuncion</NBlue>, <NOrg>1000</NOrg>); <NGray>// 1seg</NGray> <br>
+          <NPurp>function</NPurp> <NBlue>MyFuncion</NBlue>() { <br> &nbsp; <NGray>// Codigo...</NGray> <br> }
         </div>
       </div>
     </fieldset>
@@ -1496,7 +1490,7 @@
           </div>
           <div class="cod">
             <NGray>// POST</NGray> <br>
-            <NPurp>const</NPurp> data <NAqua> = new </NAqua> <NObj>FromData()</NObj>; <br>
+            <NPurp>const</NPurp> data <NAqua> = new </NAqua> <NObj>FormData()</NObj>; <br>
             data.<NBlue>append</NBlue>("<NGreen>nombre</NGreen>", "<NGreen>Nico</NGreen>"); <br><br>
             <NPurp>async function</NPurp> <NBlue>obtenerDatos</NBlue>(){ <br>
               &nbsp; <NPurp>let</NPurp> respuesta <NAqua> = await </NAqua> <NBlue>fetch</NBlue>("<NGreen>archivo.php</NGreen>" , { <br>
@@ -1680,73 +1674,96 @@
   <!-- Asincronía + Errores -->
   <section id="Asincronía + Errores">
     <div class="flex"> <!-- Promise + Async -->
-    <fieldset> <!-- Promise -->
-      <legend> Promise </legend>
-      <div class="cod wAuto">
-        <NGray>// Varios Promise </NGray><br>
-        <NPurp>let</NPurp> promesa1 = <NAqua>new</NAqua> <NObj>Promise</NObj>(<NPurp>function</NPurp>(<NBlue>resolve, reject</NBlue>){ <br>
-          &nbsp; <NBlue>setTimeout</NBlue>(<NBlue>resolve</NBlue>, <NOrg>5000</NOrg>, "<NGreen>Saludos a todos</NGreen>"); <br>
-        }); <br>
-        <NPurp>let</NPurp> promesa2 = <NAqua>new</NAqua> <NObj>Promise</NObj>(<NPurp>function</NPurp>(<NBlue>resolve, reject</NBlue>){ <br>
-          &nbsp; <NBlue>setTimeout</NBlue>(<NBlue>resolve</NBlue>, <NOrg>7000</NOrg>, "<NGreen>Otro saludo</NGreen>."); <br>
-        }); <br>
-        <NObj>Promise</NObj>.<NBlue>all</NBlue>([promesa1, promesa2]) <br>
-        .<NBlue>then</NBlue>(valores <NPurp> =></NPurp> console.<NBlue>log</NBlue>(valores[<NOrg>0</NOrg>],"-", valores[<NOrg>1</NOrg>]) ) <br>
-        <hr>
+      <fieldset> <!-- Promise -->
+        <legend> Promise (antes) </legend>
+        <div class="cod wAuto">
+          <NPurp>new</NPurp> <font class="selector">Promise</font>( <NPurp>function</NPurp>(<NBlue>resolve</NBlue>, <NBlue>reject</NBlue>) { <br>
+            &nbsp; <font class="aqua">if</font> (true) <br>
+              &nbsp; &nbsp; <NBlue>resolve</NBlue>("<NGreen>Cumplido!</NGreen>"); <br>
+            &nbsp; <font class="aqua">else</font> <br>
+              &nbsp; &nbsp; <NBlue>reject</NBlue>("<NGreen>Error!</NGreen>"); <br>
+          }) <br>
+          .<NBlue>then</NBlue>(res <NPurp> =></NPurp> console.<NBlue>log</NBlue>(res)) <br>
+          .<NBlue>catch</NBlue>(error <NPurp> =></NPurp> console.<NBlue>log</NBlue>(error));
+        </div>
+        <div class="cod wAuto">
+          <NGray>// Manejo de Error</NGray> <br>
+          <NPurp>function</NPurp> <NBlue>sumar</NBlue>(num1, num2){ <br>
+            &nbsp; <NAqua>return new</NAqua> <NObj>Promise</NObj>( <NPurp>function</NPurp>(<NBlue>resolve, reject</NBlue>){ <br>
+            <NTab></NTab> <NBlue>setTimeout</NBlue>(<NPurp>function</NPurp>(){ <br>
+                <NTab></NTab> <NAqua>if</NAqua>(<NAqua>typeof</NAqua> num1 != "<NGreen>number</NGreen>" || <br>
+                <NTab2></NTab2> <NAqua>typeof</NAqua> num2 != "<NGreen>number</NGreen>"){ <br>
+                  <NTab2></NTab2> &nbsp; <NBlue>reject</NBlue>( <NAqua>new</NAqua> <NBlue>Error</NBlue> ("<NGreen>Argumento no válido</NGreen>")); <br>
+                  <NTab></NTab> &nbsp; }<NAqua>else</NAqua>{  <br>
+                  <NTab2></NTab2> <NBlue>resolve</NBlue>(num1+num2) <br>
+                &nbsp; <NTab></NTab> } <br>
+              <NTab></NTab> }, <NOrg>1000</NOrg>); <br>
+            &nbsp; }) <br>
+          } <br><br>
+          <NBlue>sumar</NBlue>("<NGreen>p</NGreen>", <NOrg>50</NOrg>) <br>
+          .<NBlue>then</NBlue>(respuesta <NPurp> =></NPurp> console.<NBlue>log</NBlue>(respuesta)) <br>
+          .<NBlue>catch</NBlue>(error <NPurp> =></NPurp> console.<NBlue>error</NBlue>(error)); <br>
+        </div>
+        <div class="cod wAuto">
+          <details>
+            <summary>Varios promise...</summary>
+            <NPurp>let</NPurp> promesa1 = <NAqua>new</NAqua> <NObj>Promise</NObj>( (<NBlue>resolve, reject</NBlue>) => { <br>
+              &nbsp; <NBlue>setTimeout</NBlue>(<NBlue>resolve</NBlue>, <NOrg>5000</NOrg>, "<NGreen>Saludos a todos</NGreen>"); <br>
+            }); <br>
+            <NPurp>let</NPurp> promesa2 = <NAqua>new</NAqua> <NObj>Promise</NObj>( (<NBlue>resolve, reject</NBlue>) => { <br>
+              &nbsp; <NBlue>setTimeout</NBlue>(<NBlue>resolve</NBlue>, <NOrg>7000</NOrg>, "<NGreen>Otro saludo</NGreen>."); <br>
+            }); <br>
+            <NObj>Promise</NObj>.<NBlue>all</NBlue>([promesa1, promesa2]) <br>
+            .<NBlue>then</NBlue>(valores <NPurp> =></NPurp> console.<NBlue>log</NBlue>(valores[<NOrg>0</NOrg>],"-", valores[<NOrg>1</NOrg>]) ) <br>
+          </details>
+        </div>
+      </fieldset>
 
-        <NGray>// Manejo de Error</NGray> <br>
-        <NPurp>function</NPurp> <NBlue>sumar</NBlue>(num1, num2){ <br>
-          &nbsp; <NAqua>return new</NAqua> <NObj>Promise</NObj>(<NPurp>function</NPurp>(<NBlue>resolve, reject</NBlue>){ <br>
-          <NTab></NTab> <NBlue>setTimeout</NBlue>(<NPurp>function</NPurp>(){ <br>
-              <NTab></NTab> <NAqua>if</NAqua>(<NAqua>typeof</NAqua> num1 != "<NGreen>number</NGreen>" || <br>
-              <NTab2></NTab2> <NAqua>typeof</NAqua> num2 != "<NGreen>number</NGreen>"){ <br>
-                <NTab2></NTab2> &nbsp; <NBlue>reject</NBlue>( <NAqua>new</NAqua> <NBlue>Error</NBlue> ("<NGreen>Argumento no válido</NGreen>")); <br>
-                <NTab></NTab> &nbsp; }<NAqua>else</NAqua>{  <br>
-                <NTab2></NTab2> <NBlue>resolve</NBlue>(num1+num2) <br>
-              &nbsp; <NTab></NTab> } <br>
-            <NTab></NTab> }, <NOrg>1000</NOrg>); <br>
-          &nbsp; }) <br>
-        } <br><br>
-        <NBlue>sumar</NBlue>("<NGreen>p</NGreen>", <NOrg>50</NOrg>) <br>
-        .<NBlue>then</NBlue>(respuesta <NPurp> =></NPurp> console.<NBlue>log</NBlue>(respuesta)) <br>
-        .<NBlue>catch</NBlue>(error <NPurp> =></NPurp> console.<NBlue>error</NBlue>(error)); <br>
-      </div>
-    </fieldset>
+      <fieldset> <!-- Async - Await -->
+        <legend> Async - Await (ahora) </legend>
+        <div class="cod wAuto">
+          <NGray>// Async - Await</NGray> <br>
+          <NPurp>async function</NPurp> <NBlue>obtenerDatos</NBlue>(){ <br>
+            <NTab></NTab> <NPurp>let</NPurp> respuesta <NAqua> = await</NAqua> <NBlue>fetch</NBlue>("<NGreen>https://api.datos...</NGreen>") <br> <br>
+            <NTab></NTab> <NPurp>let</NPurp> datos <NAqua> = await </NAqua> respuesta.<NBlue>json</NBlue>(); <br> <br>
+            <NTab></NTab> console.<NBlue>log</NBlue>(datos); <br>
+          } <br>
+          <NBlue>obtenerDatos</NBlue>(); <br>
+          <hr>
 
-    <fieldset> <!-- Async - Await -->
-      <legend> Async - Await </legend>
-      <div class="cod wAuto">
-        <NGray>// Async - Await</NGray> <br>
-        <NPurp>async function</NPurp> <NBlue>obtenerDatos</NBlue>(){ <br>
-          <NTab></NTab> <NPurp>let</NPurp> respuesta <NAqua> = await</NAqua> <NBlue>fetch</NBlue>("<NGreen>https://api.datos...</NGreen>") <br> <br>
-          <NTab></NTab> <NPurp>let</NPurp> datos <NAqua> = await </NAqua> respuesta.<NBlue>json</NBlue>(); <br> <br>
-          <NTab></NTab> console.<NBlue>log</NBlue>(datos); <br>
-        } <br>
-        <NBlue>obtenerDatos</NBlue>(); <br>
-        <hr>
-
-        <NGray>// Manejo de Error</NGray> <br>
-        <NPurp>async function</NPurp> <NBlue>sumar</NBlue>(num1, num2){ <br>
-          &nbsp; <NAqua>if</NAqua>(<NAqua>typeof</NAqua> num1 != "<NGreen>number</NGreen>" || typeof num2 != "<NGreen>number</NGreen>"){ <br>
-            <NTab></NTab> <NAqua>throw new</NAqua> <NBlue>Error</NBlue>("<NGreen>Argumento no válido</NGreen>"); <br>
-          &nbsp; } <br>
-          &nbsp; <NAqua>return</NAqua> num1+num2; <br>
-        } <br>
-        <NPurp>async function</NPurp> <NBlue>manejoErrores</NBlue>(){ <br>
-          &nbsp; <NAqua>try</NAqua>{ <br>
-          <NTab></NTab> <NPurp>let</NPurp> resultado = <NAqua>await</NAqua> <NBlue>sumar</NBlue>("p", 50); <br>
-          <NTab></NTab> console.<NBlue>log</NBlue>(resultado); <br>
-          &nbsp; } <br>
-          &nbsp; <NAqua>catch</NAqua>(error){ <br>
-          <NTab></NTab> console.<NBlue>error</NBlue>(error.message); <br>
-          &nbsp; } <br>
-        } <br>
-        <NBlue>manejoErrores</NBlue>(); <br>
-      </div>
-    </fieldset>
-  </div>
+          <NGray>// Manejo de Error</NGray> <br>
+          <NPurp>async function</NPurp> <NBlue>sumar</NBlue>(num1, num2){ <br>
+            &nbsp; <NAqua>if</NAqua>(<NAqua>typeof</NAqua> num1 != "<NGreen>number</NGreen>" || typeof num2 != "<NGreen>number</NGreen>"){ <br>
+              <NTab></NTab> <NAqua>throw new</NAqua> <NBlue>Error</NBlue>("<NGreen>Argumento no válido</NGreen>"); <br>
+            &nbsp; } <br>
+            &nbsp; <NAqua>return</NAqua> num1+num2; <br>
+          } <br>
+          <NPurp>async function</NPurp> <NBlue>manejoErrores</NBlue>(){ <br>
+            &nbsp; <NAqua>try</NAqua>{ <br>
+            <NTab></NTab> <NPurp>let</NPurp> resultado = <NAqua>await</NAqua> <NBlue>sumar</NBlue>("p", 50); <br>
+            <NTab></NTab> console.<NBlue>log</NBlue>(resultado); <br>
+            &nbsp; } <br>
+            &nbsp; <NAqua>catch</NAqua>(error){ <br>
+            <NTab></NTab> console.<NBlue>error</NBlue>(error.message); <br>
+            &nbsp; } <br>
+          } <br>
+          <NBlue>manejoErrores</NBlue>(); <br>
+        </div>
+      </fieldset>
+    </div>
 
   </section>
+
+  <script>
+    async function obtenerDatos(){
+      let respuesta = await fetch("https://api.datos...")
+
+      let datos = await respuesta.json();
+
+      console.log(datos);
+    }
+    obtenerDatos();
+  </script>
 
   
   <p id="textoFix"></p>

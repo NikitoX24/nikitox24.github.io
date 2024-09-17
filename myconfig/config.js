@@ -1,9 +1,12 @@
 // User Settings
 let tema = "claro";
 
+//  /   (raiz)
+//  ../ (atras) 
+
 // Dir / Carpetas
-const server_dir = "../"; // _SERVER["HTTP_HOST"]."/";
-const index = server_dir + "index.html";
+const server_dir = "http://myserver/"; 
+const index =  server_dir;
 const imgs_dir = server_dir + "imgs/";
 const cheat_dir = server_dir + "machetes/";
 const otros_dir = server_dir + "otros/";
@@ -39,11 +42,13 @@ function loadBS()   { window.location.href = bs_dir }
 
 // OnClick de Index
 function loadTest()   { window.location.href = "test.html" }
-function loadCuentas(){ window.location.href = otros_dir + "CuentasEJ/index.php" }
+function loadTestJson()   { window.location.href = otros_dir + "testJson/test.html" }
+function loadCuentasPHP(){ window.location.href = otros_dir + "CuentasPHP/index.php" }
+function loadCuentas(){ window.location.href = otros_dir + "CuentasJS/index.html" }
 function loadConvert(){ window.location.href = otros_dir + "ConvertirTexto.html" }
-function loadMC()     { window.location.href = otros_dir + "MC.html" }
 function loadVText()  { window.location.href = otros_dir + "VideoText.html" }
-function loadSocial() { window.location.href = otros_dir + "social.html" }
+function loadMC()     { window.location.href = otros_dir + "MC.html" }
+// function loadSocial() { window.location.href = otros_dir + "social.html" }
 
 function loadAhorcado() { window.location.href = otros_dir + "Ejercicios/Ahorcado.html" }
 function loadTateti()   { window.location.href = otros_dir + "Ejercicios/TaTeTi.html" }
