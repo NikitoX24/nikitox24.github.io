@@ -77,7 +77,21 @@
 
 
 
-    
+
+
+    // peticion NODE JS ?
+    async function obtenerDatosPHP(){
+      let respuesta = await fetch("../jsbackend/index.js");
+      let datos = await respuesta.json();
+
+      nombre_P.innerText = "php: " + datos;
+    }
+
+
+
+
+
+
 
     
 
