@@ -34,14 +34,14 @@
           This is a paragraph in italic style.
         </p>
         <div class="cod">
-          <b>font-style:</b> italic; <font class="gray">/* normal, italic, oblique */</font>
+          <b>font-style:</b> italic; <NGray>/* normal, italic, oblique */</NGray>
         </div>
       </div>
 
       <!-- Font-Weight -->
       <div class="flex">
         <p class="ej" id="fontWeight"> Ejemplso de font-weight. </p>
-        <div class="cod"> <b>font-weight:</b> 900; <font class="gray">/* 100-900 */</font> </div>
+        <div class="cod"> <b>font-weight:</b> 900; <NGray>/* 100-900 */</NGray> </div>
         <style>
           #fontWeight { animation: fontWeight 1s infinite linear; }
           @keyframes fontWeight {
@@ -54,13 +54,13 @@
       <!-- Font-Variant -->
       <div class="flex">
         <p class="ej" style="font-variant: small-caps;"> This is a paragraph in small-caps. </p>
-        <div class="cod"> <b>font-variant:</b> small-caps; <font class="gray">/* normal */</font> </div>
+        <div class="cod"> <b>font-variant:</b> small-caps; <NGray>/* normal */</NGray> </div>
       </div>
 
       <!-- Text-Transorm -->
       <div class="flex">
         <p class="ej" style="text-transform: capitalize;"> transformar la primera letra de cada palabra en mayúsc.</p>
-        <div class="cod"> <b>text-transform:</b> capitalize; <font class="gray"> uppercase, lowercase.</font></div>
+        <div class="cod"> <b>text-transform:</b> capitalize; <NGray> uppercase, lowercase.</NGray></div>
       </div>
     </fieldset>
 
@@ -148,7 +148,7 @@
         </div>
         <div class="cod">
           <b> text-shadow:</b> rgba(0, 0, 255, 1) -1px -1px 0.3em; <br>
-          <font class="gray">/* text-shadow: (x, y, blur radius, color) */ <br> (Más sombras usando "Coma"). </font>
+          <NGray>/* text-shadow: (x, y, blur radius, color) */ <br> (Más sombras usando "Coma"). </NGray>
         </div>
       </div>
 
@@ -194,8 +194,8 @@
         </style>
         <div class="cod wAuto">
           <b>white-space:</b> nowrap;
-          <font class="gray">(normal, nowrap, pre, pre-line, <br>
-            pre-wrap, break-spaces).</font>
+          <NGray>(normal, nowrap, pre, pre-line, <br>
+            pre-wrap, break-spaces).</NGray>
         </div>
       </div>
 
@@ -282,12 +282,12 @@
         </div>
         <div class="cod flex"> <br>
           <div class="width100">
-            <font class="gray">Pares:</font> <br>
-            tr:<font class="purp">nth-child</font>(even) { <br>
+            <NGray>Pares:</NGray> <br>
+            tr:<NPurp>nth-child</NPurp>(even) { <br>
               &nbsp; <b>background-color:</b> gray; <br> }<br>
           </div>
           <div class="width100"><NGray>// Impares</NGray> <br>
-            tr:<font class="purp">nth-child</font>(odd) { <br>
+            tr:<NPurp>nth-child</NPurp>(odd) { <br>
               &nbsp; <b>background-color:</b> black; <br> }
           </div>
         </div>
@@ -314,11 +314,11 @@
           }
         </style>
         <div class="cod">
-          #<font class="orange">parent</font>:<font class="purp"><ins>first-child</ins></font> { <br>
+          #<NOrg>parent</NOrg>:<NPurp><ins>first-child</ins></NPurp> { <br>
             &nbsp; <b>color:</b> green; <br> }
         </div>
         <div class="cod">
-          #<font class="orange">parent</font>:<font class="purp"><ins>last-child</ins></font> { <br>
+          #<NOrg>parent</NOrg>:<NPurp><ins>last-child</ins></NPurp> { <br>
             &nbsp; <b>color:</b> red; <br> }
         </div>
       </div>
@@ -339,11 +339,11 @@
           }
         </style>
         <div class="cod">
-          #<font class="orange">parent</font>:<font class="purp"><ins>first-child</ins></font> { <br>
+          #<NOrg>parent</NOrg>:<NPurp><ins>first-child</ins></NPurp> { <br>
             &nbsp; <b>color:</b> green; <br> }
         </div>
         <div class="cod">
-          #<font class="orange">parent</font>:<font class="purp"><ins>last-child</ins></font> { <br>
+          #<NOrg>parent</NOrg>:<NPurp><ins>last-child</ins></NPurp> { <br>
             &nbsp; <b>color:</b> red; <br> }
         </div>
       </div>
@@ -361,7 +361,7 @@
           </p>
         </div>
         <div class="cod">
-          .<font class="yellow">texto</font>::<font class="purp">first-line</font> { <br>
+          .<NObj>texto</NObj>::<NPurp>first-line</NPurp> { <br>
             &nbsp; <b>color:</b> green; <br>
           }
           <style>.textfirstline::first-line { color: green; }</style>
@@ -373,7 +373,7 @@
           <p class="firstletter"> La primera letra es de otro color</p>
         </div>
         <div class="cod">
-          .<font class="yellow">texto</font>::<font class="purp">first-letter</font> { <br>
+          .<NObj>texto</NObj>::<NPurp>first-letter</NPurp> { <br>
             &nbsp; <b>background-color:</b> green; <br> }
           <style> .firstletter::first-letter { background-color: green; } </style>
         </div>
@@ -384,7 +384,7 @@
           <p class="seleccioname">Selecciona una parte del texto para marcarlo de otro color</p>
         </div>
         <div class="cod">
-          .<font class="yellow">texto</font>::<font class="purp">selection</font> { <br>
+          .<NObj>texto</NObj>::<NPurp>selection</NPurp> { <br>
             &nbsp; <b>background-color:</b> green; <br> }
           <style>.seleccioname::selection { background-color: #589432; color: #FF6347; }</style>
         </div>
@@ -395,8 +395,8 @@
           <p id="insertImageBeforeText">Insertar Imagen antes del Texto. </p>
         </div>
         <div class="cod">
-          .<font class="yellow">texto</font>::<font class="purp">before</font> { <br>
-            &nbsp; <b>content:</b> url("<font class="green">../Imgs/loguito.png</font>"); <NGray>//content: "texto";</NGray> <br> }
+          .<NObj>texto</NObj>::<NPurp>before</NPurp> { <br>
+            &nbsp; <b>content:</b> url("<NGreen>../Imgs/loguito.png</NGreen>"); <NGray>//content: "texto";</NGray> <br> }
           <style> #insertImageBeforeText:before { content: url("../Imgs/loguito.png"); } </style>
         </div>
       </div>
@@ -407,7 +407,7 @@
           <input type="text" class="focusme"></input>
         </div>
         <div class="cod">
-          .<font class="yellow">input</font>:<font class="purp">focus</font> { <br>
+          .<NObj>input</NObj>:<NPurp>focus</NPurp> { <br>
             &nbsp; <b>background-color:</b> green; <br> }
           <style>.focusme:focus { background-color: #589432; color: #FF6347; }</style>
         </div>
@@ -524,7 +524,7 @@
           <b>display:</b> flex; <br>
           <b>align-items:</b> center; <br>
           <b>justify-content:</b> space-evenly; <br>
-          <u><b>flex-wrap:</b> wrap; <font class="gray">(acomodar)</font></u>
+          <u><b>flex-wrap:</b> wrap; <NGray>(acomodar)</NGray></u>
         </div>
       </div><hr>
 
@@ -602,12 +602,12 @@
       <legend> Visibility </legend>
       <div class="flex">
         <div class="ej"> <font class="dispnone">Este texto desaparecerá cuando lo apuntes.</font> </div>
-        <div class="cod"> <b>display:</b> none/inline; <font class="gray">// No ocupa lugar</font> </div>
+        <div class="cod"> <b>display:</b> none/inline; <NGray>// No ocupa lugar</NGray> </div>
         <style> .dispnone:hover{ display: none; } </style>
       </div>
       <div class="flex">
         <div class="ej"> <font class="vishidden">Este texto se ocultará cuando lo apuntes.</font> </div>
-        <div class="cod"> <b>visibility:</b> hidden/visible; <font class="gray">// Ocupa lugar</font> </div>
+        <div class="cod"> <b>visibility:</b> hidden/visible; <NGray>// Ocupa lugar</NGray> </div>
         <style> .vishidden:hover{ visibility: hidden; } </style>
       </div>
     </fieldset>
@@ -638,7 +638,7 @@
         </div>
         <button onclick="setClearBoth();"> Poner Clear-both </button> <br>      
         <div class="codigo">
-          .clearing{ <br> &nbsp; <b>clear:</b> both; <font class="gray">/* both, right, left */</font> <br> }
+          .clearing{ <br> &nbsp; <b>clear:</b> both; <NGray>/* both, right, left */</NGray> <br> }
         </div></div>
       </div>
 
@@ -714,7 +714,7 @@
               &nbsp; <b>width:</b> 150px; <br>
               &nbsp; <b>height:</b> 150px; <br>
               &nbsp; <b>overflow:</b> auto; <br>
-              <font class="gray"> visible, scroll, hidden</font> <br> }
+              <NGray> visible, scroll, hidden</NGray> <br> }
           </div>
         </div>
 
@@ -913,7 +913,7 @@
         <div class="flex">
           <div class="ej wAuto"><div class="second deg"></div></div>
           <div class="cod"> 
-            <b>background:</b> linear-gradient <br>(<u>45deg</u>, black, red, green); <br> <font class="gray">(<u>bottom left</u>, black, red, green)</font> 
+            <b>background:</b> linear-gradient <br>(<u>45deg</u>, black, red, green); <br> <NGray>(<u>bottom left</u>, black, red, green)</NGray> 
           </div>
           <style> div.second { background: -webkit-linear-gradient(45deg, black, red, green); } </style>
         </div> <div class="hr"></div>
@@ -989,7 +989,7 @@
       <div class="flex">
         <div class="ej wAuto"><div class="multbg"></div></div>
         <div class="cod">
-          div.multbg { <font class="gray">Multiple-background</font> <br>
+          div.multbg { <NGray>Multiple-background</NGray> <br>
             &nbsp; <b>background-image:</b> url("css_logo.png"), url("fondo.jpg"); <br>
             &nbsp; <b>background-position:</b> right bottom, left top; <br>
             &nbsp; <b>background-size:</b> 50px, 150px; <br>
@@ -1046,9 +1046,9 @@
           &nbsp; <b>animation:</b> widthChange 2s infinite; <br> }
       </div>
       <div class="cod">
-        <font class="aqua">@keyframes</font> widthChange { <br>
-          &nbsp; <font class="yellow">from</font> { width: 0px; } <font class="gray">0%</font> <br>
-          &nbsp; <font class="yellow">to</font> { width: 250px; } <font class="gray">100%</font>  }
+        <NAqua>@keyframes</NAqua> widthChange { <br>
+          &nbsp; <NObj>from</NObj> { width: 0px; } <NGray>0%</NGray> <br>
+          &nbsp; <NObj>to</NObj> { width: 250px; } <NGray>100%</NGray>  }
       </div>
       <style>
         div.animdurat {
@@ -1073,7 +1073,7 @@
         .div { <br> &nbsp; <b>transition:</b> 2s;<br> } 
       </div>
       <div class="cod">
-        .div:<font class="purp">hover</font> { <br> &nbsp; <b>width:</b> 350px; <br> }
+        .div:<NPurp>hover</NPurp> { <br> &nbsp; <b>width:</b> 350px; <br> }
       </div>
       <style>
         .transit { transition: 2s; }
@@ -1085,7 +1085,7 @@
     <div class="flex">
       <div class="flex">
         <div class="ej wAuto"> <div class="box3d scalerot"></div> </div>
-        <div class="cod"> .div { <br> &nbsp; <b>transform:</b> scale(0.5, 0.5); <br> } <font class="gray">transform: none; (Desactivar)</font> </div>
+        <div class="cod"> .div { <br> &nbsp; <b>transform:</b> scale(0.5, 0.5); <br> } <NGray>transform: none; (Desactivar)</NGray> </div>
         <style>
           .scalerot { animation: scaleAnim 2s infinite; }
           @keyframes scaleAnim {
@@ -1156,7 +1156,7 @@
         <div class="box3d rot3d2">Texto</div>
         <div class="box3d rot3d3">Texto</div>
       </div>
-      <div class="cod"> .div{ <br> &nbsp; <b>transform:</b> rotateX(180deg); <font class="gray">rotateY(180deg); rotateZ(180deg);</font> <br> } </div>
+      <div class="cod"> .div{ <br> &nbsp; <b>transform:</b> rotateX(180deg); <NGray>rotateY(180deg); rotateZ(180deg);</NGray> <br> } </div>
       <style>
         .rot3d1{ animation: rot3d1 2s infinite; }
         .rot3d2{ animation: rot3d2 2s infinite; }
@@ -1184,7 +1184,7 @@
     <div class="flex">
       <div class="ej" style="width: auto;"> <div class="empty"> <div class="box3d translate3d"></div> </div> </div>
       <div class="cod" style="width: 30%;"> .fondoGris { <br> &nbsp; <b>perspective:</b> 60px; <br> } </div>
-      <div class="cod"> .div { <br> &nbsp; <b>transform:</b> <font class="blue">translateX</font>(10px) <font class="blue">translateY</font>(10px) <font class="blue">translateZ</font>(15px); <br> } </div>
+      <div class="cod"> .div { <br> &nbsp; <b>transform:</b> <NBlue>translateX</NBlue>(10px) <NBlue>translateY</NBlue>(10px) <NBlue>translateZ</NBlue>(15px); <br> } </div>
       <style>
         div.empty {
           width: 50px; height: 50px;

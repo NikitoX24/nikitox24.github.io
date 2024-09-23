@@ -1,5 +1,5 @@
 // User Settings
-let tema = "claro";
+let blackTeme = false;
 
 //  /   (raiz)
 //  ../ (atras) 
@@ -7,6 +7,7 @@ let tema = "claro";
 // Dir / Carpetas
 const server_dir = "http://myserver/"; 
 const index =  server_dir;
+const logo = server_dir + "logo.png";
 const imgs_dir = server_dir + "imgs/";
 const cheat_dir = server_dir + "machetes/";
 const otros_dir = server_dir + "otros/";
@@ -42,7 +43,7 @@ function loadBS()   { window.location.href = bs_dir }
 
 // OnClick de Index
 function loadTest()   { window.location.href = "test.html" }
-function loadTestJson()   { window.location.href = otros_dir + "testJson/test.html" }
+function loadTestJson()  { window.location.href = otros_dir + "testJson/test.html" }
 function loadCuentasPHP(){ window.location.href = otros_dir + "CuentasPHP/index.php" }
 function loadCuentas(){ window.location.href = otros_dir + "CuentasJS/index.html" }
 function loadConvert(){ window.location.href = otros_dir + "ConvertirTexto.html" }
@@ -52,3 +53,9 @@ function loadMC()     { window.location.href = otros_dir + "MC.html" }
 
 function loadAhorcado() { window.location.href = otros_dir + "Ejercicios/Ahorcado.html" }
 function loadTateti()   { window.location.href = otros_dir + "Ejercicios/TaTeTi.html" }
+
+
+
+
+// inhabilitar menu contextual
+// document.oncontextmenu = function(){return false};

@@ -19,10 +19,17 @@ if (titulo == t_css || titulo == t_php){
   linkColor = "#00F";
 }
 if (titulo == t_js){
-  back_color = "rgba(0, 255, 0, .07)";
-  shadow1 = "rgba(0, 159, 0, 0.4)";
-  shadow2 = "rgba(0, 255, 38, 0.1)";
-  linkColor = "#FFF";
+  if (blackTeme) {
+    back_color = "rgba(0, 255, 0, .02)";
+    shadow1 = "rgba(0, 159, 0, 0.7)";
+    shadow2 = "rgba(0, 255, 38, 0.1)";
+    linkColor = "#FFF";
+  }else{
+    back_color = "rgba(0, 255, 0, .07)";
+    shadow1 = "rgba(0, 159, 0, 0.4)";
+    shadow2 = "rgba(0, 255, 38, 0.1)";
+    linkColor = "#FFF";
+  }
 }
 
 
@@ -100,3 +107,34 @@ document.write(/*html*/`
     }
   </style>
 `);
+
+
+// Colores de Códigos
+if (blackTeme) {
+  document.write(/*html*/`
+    <style>
+      :root{
+        --varC: rgb(210, 210, 210);
+        --aquaC: ;
+      }
+      body{
+        background-color: black;
+        color: var(--varC);
+      }
+      .cod{
+        background-color: rgb(15, 15, 27);
+        text-shadow: none;
+        color: var(--varC);
+      }
+      NAqua { color: rgb(20, 212, 255); }
+      NBlue { color: rgb(107, 149, 234); }
+      NGreen{ color: rgb(209, 255, 139); }
+      NVar  { color: var(--varC); }
+      NPurp { color: rgb(194, 122, 194); }
+      NRed  { color: rgb(255, 85, 85); }
+      NOrg  { color: rgb(254, 146, 38);}
+      NGray { color: gray; }
+      NObj  { color: rgb(252, 222, 104); }
+    </style>
+  `);
+}

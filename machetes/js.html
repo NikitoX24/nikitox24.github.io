@@ -4,12 +4,11 @@
 <html lang="es-AR">
 <head>
   <meta charset="UTF-8">
+  <meta name="lang" content="es">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="x-ua-compatible" content="ie-edge">
-  <meta name="robots" content="no-follow">
+  <link rel="icon" href="${logo}">
+  <script>document.write(`<title>${t_js}</title>`)</script> 
   <link rel="stylesheet" href="../machetes/STYLE.css">
-  <link rel="icon" href="../logo.png">
-  <script>document.write(`<title>${t_js}</title>`)</script>
 </head>
 
 <script src="../myconfig/header.js"></script>
@@ -236,14 +235,14 @@
         <!-- JS Doc -->
         <div class="cod">
           <NGray>/** <br>
-            <NTab></NTab>* Devuelve x elevado a la potencia de n. <br>
+            <NTab></NTab>* Info de lo que hace la función. <br>
             <NTab></NTab>* <br>
-            <NTab></NTab>* @param {number} x El número a elevar. <br>
-            <NTab></NTab>* @param {number} n La potencia, debe ser un número natural. <br>
-            <NTab></NTab>* @return {number} x Devuelve x elevado a la potencia de n. <br>
+            <NTab></NTab>* @param {number} a Descripción del primer parámetro. <br>
+            <NTab></NTab>* @param {number} b Descripción del segundo parámetro. <br>
+            <NTab></NTab>* @return {number} x Descripción del return. <br>
             <NTab></NTab>*/ <br> 
             </NGray>
-            <NPurp>function</NPurp> <NBlue>pow</NBlue>(x, n) { <br> 
+            <NPurp>function</NPurp> <NBlue>funcName</NBlue>(a, b) { <br> 
               <NTab></NTab> <NGray>// Código...</NGray> <br> }
         </div>
       </div> <hr>
@@ -267,6 +266,40 @@
         </div>
       </div> <hr>
 
+      <!-- Anonima y inside -->
+      <div class="flex">
+        <div class="width100"> 
+          <b>Recibir una Funcion y Devolver otra Funcion.</b>
+          <div class="cod wAuto">
+            <NPurp>function</NPurp> <NBlue>returnFunction</NBlue>(nombre) { <br>
+              &nbsp; <NAqua>return</NAqua> <NBlue>nombre</NBlue>("<NGreen>Miguel</NGreen>"); <br>
+            } <br>
+            <NBlue>returnFunction</NBlue>(name <NPurp> => </NPurp> console.<NBlue>log</NBlue>(name)); <br><hr>
+            <details> <!-- Otro ej -->
+              <summary>otro ej...</summary>
+              
+              <NPurp>const</NPurp> sayHiFromFunction = (fn) <NPurp> =></NPurp> { <br>
+                &nbsp; <NAqua>return</NAqua> <NBlue>fn</NBlue>("<NGreen>Miguel</NGreen>") <br>
+              }; <br><br>
+              <NBlue>sayHiFromFunction</NBlue>(name <NPurp> => </NPurp>{ <br>
+                &nbsp; console.<NPurp>log</NPurp>(`<NGreen>Hola</NGreen> ${name}`) <br>
+              });
+            </details>
+          </div>
+        </div>
+        <div class="width100">
+          <b>Función Anónima</b>
+          <div class="cod wAuto">
+            <NPurp>const</NPurp> array = [2, 3, 5, 7]; <br>
+
+            array.<NBlue>foreach</NBlue>( <NPurp>function</NPurp>(x) { <br>
+              &nbsp; console.<NBlue>log</NBlue>(x *<NOrg>2</NOrg>) <br>
+            } ); <hr>
+            array.<NBlue>foreach</NBlue>(x <NPurp> =></NPurp> console.<NBlue>log</NBlue>(x *<NOrg>2</NOrg>)); <br>
+          </div>
+        </div>
+      </div> <hr>
+      
       <!-- Enviar-Devolver Array -->
       <b>REST y SPREAD</b>
       <div class="flex">
@@ -283,21 +316,6 @@
             <NPurp>var</NPurp> array = ["<NGreen>Juan</NGreen>", "<NGreen>David</NGreen>"];<br>
             <NBlue>myFunc</NBlue>(...array);
         </div>
-      </div> <hr>
-
-      <b>Recibir una Funcion y Devolver otra Funcion.</b>
-      <div class="cod">
-        <!-- 
-        <NPurp>const</NPurp> sayHiFromFunction = (fn) <NPurp> =></NPurp> { <br>
-          &nbsp; <NAqua>return</NAqua> <NBlue>fn</NBlue>("<NGreen>Miguel</NGreen>") <br>
-        }; <br><br>
-        <NBlue>sayHiFromFunction</NBlue>(name <NPurp> => </NPurp>{ <br>
-          &nbsp; console.<NPurp>log</NPurp>(`<NGreen>Hola</NGreen> ${name}`) <br>
-        }); -->
-        <NPurp>function</NPurp> <NBlue>returnFunction</NBlue>(nombre) { <br>
-          &nbsp; <NAqua>return</NAqua> <NBlue>nombre</NBlue>("<NGreen>Miguel</NGreen>"); <br>
-        } <br><br>
-        <NBlue>returnFunction</NBlue>(name <NPurp> => </NPurp> console.<NBlue>log</NBlue>(name));
       </div> <hr>
 
       <b>Callbacks</b>
@@ -371,20 +389,20 @@
       <legend> Condicionales </legend>
       <div class="flex">
         <div class="cod">
-          <font class="aqua">if</font> (condicion) { <br>
+          <NAqua>if</NAqua> (condicion) { <br>
             &nbsp; <NGray>// Declaraciones si es Verdadero.</NGray> <br>
-          } <font class="aqua">else</font> { <br>
+          } <NAqua>else</NAqua> { <br>
             &nbsp; <NGray>// Declaraciones si es Falso.</NGray> <br> } <br>
           Variable <NAqua>=</NAqua> (condicion) <NAqua>?</NAqua> True <NAqua>:</NAqua> False;
         </div>
         <div class="cod" style="font-size: smaller;">
-          <font class="aqua">switch</font> ( Expresion ) { <br>
-            &nbsp;<font class="aqua">case</font> 1: <br>
+          <NAqua>switch</NAqua> ( Expresion ) { <br>
+            &nbsp;<NAqua>case</NAqua> 1: <br>
               &nbsp; <NGray>// Bloque de Codigo</NGray> <br>
-            &nbsp; <font class="aqua">break;</font> <br>
-            &nbsp;<font class="aqua">default:</font> <br>
+            &nbsp; <NAqua>break;</NAqua> <br>
+            &nbsp;<NAqua>default:</NAqua> <br>
               &nbsp; <NGray>// Bloque de Codigo</NGray> <br>
-            &nbsp; <font class="aqua">break;</font> <br>
+            &nbsp; <NAqua>break;</NAqua> <br>
             }
         </div>
         <div class="cod">
@@ -403,13 +421,13 @@
         <div class="cod width100">
           <u><b>For In:</b></u> <NGray>//  (Objetos Literales) </NGray> <br>
           <NPurp>let</NPurp> obj <NPurp>=</NPurp> {a:<NOrg>1</NOrg>, b:<NOrg>2</NOrg>, c:<NOrg>3</NOrg>}; <br>
-          <font class="aqua">for</font> (<NPurp>let</NPurp> v <NPurp>in</NPurp> obj) { <br>
+          <NAqua>for</NAqua> (<NPurp>let</NPurp> v <NPurp>in</NPurp> obj) { <br>
             &nbsp; document.<NBlue>write</NBlue>(v); <br> }
         </div>
         <div class="cod width100">
           <u><b>For Of:</b></u> <NGray>// (Arrays o Strings) </NGray> <br>
           <NPurp>let</NPurp> obj <NPurp>=</NPurp> ["<NGreen>hola</NGreen>", "<NGreen>hi</NGreen>"]; <br>
-          <font class="aqua">for</font> (<NPurp>let</NPurp> v <NPurp>of</NPurp> obj) { <br>
+          <NAqua>for</NAqua> (<NPurp>let</NPurp> v <NPurp>of</NPurp> obj) { <br>
             &nbsp; document.<NBlue>write</NBlue>(v); <br> }
         </div>
       </div>
@@ -786,7 +804,7 @@
           <NPurp>const</NPurp> arr = document.<NBlue>querySelector</NBlue>("<NGreen>a[class="name"]</NGreen>");
         </div>
         <div class="cod">
-          <font class="aqua">for</font> (<NPurp>var</NPurp> x = <NOrg>0</NOrg>; x &lt;arr.length; x++) { <br>
+          <NAqua>for</NAqua> (<NPurp>var</NPurp> x = <NOrg>0</NOrg>; x &lt;arr.length; x++) { <br>
             &nbsp; arr[x].innerHTML = "<NGreen>Hi there!</NGreen>"; <br> }
         </div>
       </div>
@@ -812,7 +830,7 @@
           <NPurp>function</NPurp> <NBlue>setText</NBlue>() { <br>
             &nbsp;<NPurp>var</NPurp> a = document.getElementById("demo2"); <br>
             &nbsp;<NPurp>var</NPurp> arr = a.<u>childNodes</u>; <br>
-            &nbsp;<font class="aqua">for</font> (<NPurp>var</NPurp> x = 0; x < arr.length; x++) { <br>
+            &nbsp;<NAqua>for</NAqua> (<NPurp>var</NPurp> x = 0; x < arr.length; x++) { <br>
               &nbsp; arr[x].innerHTML = "<NGreen>new text</NGreen>"; <br>
             &nbsp;} <br> } <br><hr>
 
@@ -930,9 +948,9 @@
         </div>
         <div class="cod">
           <NPurp>function</NPurp> <NBlue>move</NBlue>() { <br>
-            &nbsp; <font class="aqua">if</font>(pos >= <NOrg>150</NOrg>) { <br>
+            &nbsp; <NAqua>if</NAqua>(pos >= <NOrg>150</NOrg>) { <br>
               &nbsp; &nbsp; pos = 0; <br>
-            &nbsp; } <font class="aqua">else</font> { <br>
+            &nbsp; } <NAqua>else</NAqua> { <br>
               &nbsp; &nbsp; pos += <NOrg>1</NOrg>; <br>
               &nbsp; &nbsp; box.style.left = pos+'<NGreen>px</NGreen>'; <br>
             &nbsp; } <br> }
@@ -1178,9 +1196,9 @@
         </div>
         <div class="width100">
           <u>BUBBLING</u>: <NGray>// primero &lt;p> y luego &lt;div>.</NGray> <br>
-          <div class="codigo"> elem.<NBlue>addEventListener</NBlue>("<NGreen>event</NGreen>", <NBlue>myFunc</NBlue>, <font class="red">false</font>); </div>
+          <div class="codigo"> elem.<NBlue>addEventListener</NBlue>("<NGreen>event</NGreen>", <NBlue>myFunc</NBlue>, <NRed>false</NRed>); </div>
           <u>CAPTURING</u>: <NGray>// primero &lt;div> y luego &lt;p>.</NGray> <br>
-          <div class="codigo"> elem.<NBlue>addEventListener</NBlue>("<NGreen>event</NGreen>", <NBlue>myFunc</NBlue>, <font class="red">true</font>); </div>
+          <div class="codigo"> elem.<NBlue>addEventListener</NBlue>("<NGreen>event</NGreen>", <NBlue>myFunc</NBlue>, <NRed>true</NRed>); </div>
         </div>
       </div>
     </fieldset>
@@ -1259,13 +1277,13 @@
           <NPurp>function</NPurp> <NBlue>validate</NBlue>() { <br>
            &nbsp; <NPurp>var</NPurp> n1 = document.<NBlue>getElementById</NBlue>('<NGreen>num1</NGreen>'); <br>
            &nbsp; <NPurp>var</NPurp> n2 = document.<NBlue>getElementById</NBlue>('<NGreen>num2</NGreen>'); <br>
-           &nbsp; <font class="aqua">if</font>(n1.value <NPurp>!=</NPurp> '' <NPurp>&&</NPurp> n2.value <NPurp>!=</NPurp> '') { <br>
-            &nbsp; &nbsp; <font class="aqua">if</font>(n1.value <NPurp>==</NPurp> n2.value) { <br>
-              &nbsp; &nbsp; &nbsp; <font class="aqua">return</font> <NOrg>true</NOrg>; <br>
+           &nbsp; <NAqua>if</NAqua>(n1.value <NPurp>!=</NPurp> '' <NPurp>&&</NPurp> n2.value <NPurp>!=</NPurp> '') { <br>
+            &nbsp; &nbsp; <NAqua>if</NAqua>(n1.value <NPurp>==</NPurp> n2.value) { <br>
+              &nbsp; &nbsp; &nbsp; <NAqua>return</NAqua> <NOrg>true</NOrg>; <br>
             &nbsp; &nbsp; } <br>
             &nbsp; } <br>
             &nbsp; <NBlue>alert</NBlue>("<NGreen>The values should be equal and not blank</NGreen>"); <br>
-            &nbsp; <font class="aqua">return</font> <NOrg>false</NOrg>; <br> }
+            &nbsp; <NAqua>return</NAqua> <NOrg>false</NOrg>; <br> }
         </div>
         <script>
         function validate() {
@@ -1677,10 +1695,10 @@
       <fieldset> <!-- Promise -->
         <legend> Promise (antes) </legend>
         <div class="cod wAuto">
-          <NPurp>new</NPurp> <font class="selector">Promise</font>( <NPurp>function</NPurp>(<NBlue>resolve</NBlue>, <NBlue>reject</NBlue>) { <br>
-            &nbsp; <font class="aqua">if</font> (true) <br>
+          <NPurp>new</NPurp> <NObj>Promise</NObj>( <NPurp>function</NPurp>(<NBlue>resolve</NBlue>, <NBlue>reject</NBlue>) { <br>
+            &nbsp; <NAqua>if</NAqua> (true) <br>
               &nbsp; &nbsp; <NBlue>resolve</NBlue>("<NGreen>Cumplido!</NGreen>"); <br>
-            &nbsp; <font class="aqua">else</font> <br>
+            &nbsp; <NAqua>else</NAqua> <br>
               &nbsp; &nbsp; <NBlue>reject</NBlue>("<NGreen>Error!</NGreen>"); <br>
           }) <br>
           .<NBlue>then</NBlue>(res <NPurp> =></NPurp> console.<NBlue>log</NBlue>(res)) <br>
