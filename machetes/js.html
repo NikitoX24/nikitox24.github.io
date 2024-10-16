@@ -23,7 +23,7 @@
       <div class="flex">
         <div class="cod">
           <NPurp>let</NPurp> a <NPurp>=</NPurp> <NOrg>true</NOrg>; <NGray> // privada.</NGray> <br>
-          <NPurp>var</NPurp> b <NPurp>=</NPurp> <NOrg>100</NOrg>; <NGray> // publica.</NGray> <br>
+          <NPurp>var</NPurp> b <NPurp>=</NPurp> <NOrg>100</NOrg>; <NGray> // publica (excepto en func).</NGray> <br>
           <NPurp>const</NPurp> c <NPurp>=</NPurp> '<NGreen>hello</NGreen>'; <NGray>// priv + no modif.</NGray> <br>
         </div>
         <div class="cod">
@@ -79,19 +79,6 @@
           <div> +(1.11).<NBlue>toFixed</NBlue>(<NOrg>5</NOrg>); <NGray>// 1.11000 (num) </NGray> </div>
         </div>
       </div> <br>
-    
-      <b>Map</b>
-      <div class="cod">
-        <NPurp>let</NPurp> map<NAqua> = new </NAqua> <NObj>Map( )</NObj>; <NGray>// Crear Mapa.</NGray> <br>
-        map.<NBlue>set</NBlue>("<NGreen>clave</NGreen>", "<NGreen>valor</NGreen>"); <NGray>// Agregar elemento.</NGray> <br>
-        map.<NBlue>get</NBlue>("<NGreen>clave</NGreen>"); <NGray>// Obtener elemento.</NGray> <br>
-        map.<NBlue>has</NBlue>("<NGreen>clave</NGreen>"); <NGray>// Bool si tiene.</NGray> <br>
-        map.<NBlue>delete</NBlue>("<NGreen>clave</NGreen>"); <NGray>// Eliminar elemento.</NGray> <br>
-        map.<NBlue>clear</NBlue>(); <NGray>// Vaciar Map.</NGray> <br>
-        map.<NBlue>size</NBlue>; <NGray>// devuelve la cantidad de elementos.</NGray> <br>
-        map.<NBlue>keys</NBlue>(); <NGray>// Claves.</NGray> <br>
-        map.<NBlue>values</NBlue>(); <NGray>// Valores.</NGray> <br>
-      </div>
     </fieldset>
     
     <fieldset> <!-- Metodos de Strings -->
@@ -213,6 +200,33 @@
         </div>
       </div>
     </fieldset>
+
+    <fieldset> <!-- Map y Set -->
+      <legend> Map y Set </legend>
+      <div class="flex">
+        <div class="cod">
+          <u><b>Map (claves de cualquier tipo)</b></u> <br>
+          <NPurp>let</NPurp> map<NAqua> = new </NAqua> <NObj>Map( )</NObj>; <NGray>// Crear Mapa.</NGray> <br>
+          map.<NBlue>set</NBlue>("<NGreen>clave</NGreen>", "<NGreen>valor</NGreen>"); <NGray>// Agregar elemento.</NGray> <br>
+          map.<NBlue>get</NBlue>("<NGreen>clave</NGreen>"); <NGray>// Obtener elemento.</NGray> <br>
+          map.<NBlue>has</NBlue>("<NGreen>clave</NGreen>"); <NGray>// Bool si tiene.</NGray> <br>
+          map.<NBlue>delete</NBlue>("<NGreen>clave</NGreen>"); <NGray>// Eliminar elemento.</NGray> <br>
+          map.<NBlue>clear</NBlue>(); <NGray>// Vaciar Map.</NGray> <br>
+          map.<NBlue>size</NBlue>; <NGray>// devuelve la cantidad de elementos.</NGray> <br>
+          map.<NBlue>keys</NBlue>(); <NGray>// Claves.</NGray> <br>
+          map.<NBlue>values</NBlue>(); <NGray>// Valores.</NGray> <br>
+        </div>
+        <div class="cod">
+          <u><b>Set (No se repiten, solo valores)</b></u> <br><br>
+          new <NObj>Set()</NObj>; <NGray>// Crea el set.</NGray> <br>
+          set.<NBlue>add</NBlue>(valor); <NGray>// agrega un valor, y devuelve el set en sí.</NGray> <br>
+          set.<NBlue>delete</NBlue>(valor); <NGray>// elimina el valor, devuelve true si existía.</NGray> <br>
+          set.<NBlue>has</NBlue>(valor); <NGray>// devuelve true si el valor existe</NGray> <br>
+          set.<NBlue>clear</NBlue>(); <NGray>// elimina todo el continido del set.</NGray> <br>
+          set.size; <NGray>// cantidad de elementos.</NGray> <br>
+        </div>
+      </div>
+    </fieldset>
   </section>
 
   <!-- Funciones -->
@@ -228,6 +242,7 @@
           <hr>
           <!-- Expresión de Función -->
           <NGray>// Expresión de Función </NGray> <br>
+          <NGray>// (Requiere de otra expresion) </NGray> <br>
           <NPurp>let</NPurp> <u>saludar</u>; <br>
           <u>saludar</u> = <NPurp>function</NPurp> () { <br>
           &nbsp; console.<NBlue>log</NBlue>("<NGreen>Hola!</NGreen>"); <br> };
@@ -235,7 +250,7 @@
         <!-- JS Doc -->
         <div class="cod">
           <NGray>/** <br>
-            <NTab></NTab>* Info de lo que hace la función. <br>
+            <NTab></NTab>* Documentacion de la función. <br>
             <NTab></NTab>* <br>
             <NTab></NTab>* @param {number} a Descripción del primer parámetro. <br>
             <NTab></NTab>* @param {number} b Descripción del segundo parámetro. <br>
@@ -376,103 +391,99 @@
       <div class="width100"> <!-- SetTimeOut -->
         <b> SetTimeout (1 vez) </b>
         <div class="cod wAuto">
-          <NBlue>setTimeout</NBlue>(<NBlue>MyFuncion</NBlue>, <NOrg>1000</NOrg>); <NGray>// 1seg</NGray> <br>
+          <NBlue>setTimeout</NBlue>(<NBlue>MyFuncion</NBlue>, <NOrg>1000</NOrg>); <NGray>// 1seg, 0= final del script. </NGray> <br>
           <NPurp>function</NPurp> <NBlue>MyFuncion</NBlue>() { <br> &nbsp; <NGray>// Codigo...</NGray> <br> }
         </div>
       </div>
     </fieldset>
-  </section>
 
-  <!-- Condic y Bucles -->
-  <section id="Condicionales y Bucles">
-    <fieldset> <!-- Condicionales IF/Switch -->
-      <legend> Condicionales </legend>
-      <div class="flex">
-        <div class="cod">
-          <NAqua>if</NAqua> (condicion) { <br>
-            &nbsp; <NGray>// Declaraciones si es Verdadero.</NGray> <br>
-          } <NAqua>else</NAqua> { <br>
-            &nbsp; <NGray>// Declaraciones si es Falso.</NGray> <br> } <br>
-          Variable <NAqua>=</NAqua> (condicion) <NAqua>?</NAqua> True <NAqua>:</NAqua> False;
-        </div>
-        <div class="cod" style="font-size: smaller;">
-          <NAqua>switch</NAqua> ( Expresion ) { <br>
-            &nbsp;<NAqua>case</NAqua> 1: <br>
-              &nbsp; <NGray>// Bloque de Codigo</NGray> <br>
-            &nbsp; <NAqua>break;</NAqua> <br>
-            &nbsp;<NAqua>default:</NAqua> <br>
-              &nbsp; <NGray>// Bloque de Codigo</NGray> <br>
-            &nbsp; <NAqua>break;</NAqua> <br>
-            }
-        </div>
-        <div class="cod">
-          <NPurp>let</NPurp> age = <NBlue>prompt</NBlue>("<NGreen>Edad?</NGreen>", 18); <br><br>
-          <NPurp>let</NPurp> mensaje = (age < <NOrg>18</NOrg>) <NAqua>?</NAqua> '<NGreen>Ilegalisimo</NGreen>' <NAqua>:</NAqua> <br>
-          (age < <NOrg>18</NOrg>) <NAqua>?</NAqua> '<NGreen>Payaso!</NGreen>' <NAqua>:</NAqua>  '<NGreen>¡Calvo!</NGreen>'; <br><br>
-          console.<NBlue>log</NBlue>(mensaje);
-        </div>
-      </div>
-    </fieldset>
-    
-    <fieldset> <!-- Bucles For -->
-      <legend> Bucles (ES6) </legend>
-      <!-- For -->
-      <div class="flex">
-        <div class="cod width100">
-          <u><b>For In:</b></u> <NGray>//  (Objetos Literales) </NGray> <br>
-          <NPurp>let</NPurp> obj <NPurp>=</NPurp> {a:<NOrg>1</NOrg>, b:<NOrg>2</NOrg>, c:<NOrg>3</NOrg>}; <br>
-          <NAqua>for</NAqua> (<NPurp>let</NPurp> v <NPurp>in</NPurp> obj) { <br>
-            &nbsp; document.<NBlue>write</NBlue>(v); <br> }
-        </div>
-        <div class="cod width100">
-          <u><b>For Of:</b></u> <NGray>// (Arrays o Strings) </NGray> <br>
-          <NPurp>let</NPurp> obj <NPurp>=</NPurp> ["<NGreen>hola</NGreen>", "<NGreen>hi</NGreen>"]; <br>
-          <NAqua>for</NAqua> (<NPurp>let</NPurp> v <NPurp>of</NPurp> obj) { <br>
-            &nbsp; document.<NBlue>write</NBlue>(v); <br> }
-        </div>
-      </div>
-      <!-- While -->
-      <div class="flex">
-        <div class="cod width100">
-          <u><b>While:</b></u> <br>
-          <NAqua>while</NAqua> (condición) { <br>
-            &nbsp; <NGray>// comandos...</NGray> <br> }
-        </div>
-        <div class="cod width100">
-          <u><b>While:</b></u> <br>
-          <NPurp>let</NPurp> a = <NOrg>1</NOrg>; <br>
-          <NAqua>while</NAqua> (a < 10) { <br>
-            &nbsp; a++; <br> }
-        </div>
+    <fieldset> <!-- IIFE -->
+      <legend> IIFE (Immediately Invoked Function Expression)</legend>
+      IIFE (Expresion de Funcion Invocado Inmediatamente) <br>
+      <div class="cod">
+        <NObj>(</NObj><NPurp>function</NPurp>() { console.<NBlue>log</NBlue>("<NGreen>Paréntesis (función)</NGreen>"); }<NObj>)</NObj>();  <br>
+        <NObj>(</NObj><NPurp>function</NPurp>() { console.<NBlue>log</NBlue>("<NGreen>Paréntesis (todo)</NGreen>"); }()<NObj>)</NObj>; <br>
+        <NObj>!</NObj><NPurp>function</NPurp>() { console.<NBlue>log</NBlue>("<NGreen>Operador ! 'Bitwise NOT'</NGreen>"); }(); <br>
+        <NObj>+</NObj><NPurp>function</NPurp>() { console.<NBlue>log</NBlue>("<NGreen>Operador + 'más unario'</NGreen>"); }(); <br>
       </div>
     </fieldset>
 
-    <fieldset> <!-- ForEach -->
-      <legend> ForEach (recorrer Arrays) </legend>
-      <div class="flex">
-        <div class="width100">
-          <u><b>ForEach:</b></u>
-          <div class="cod">
-            <NPurp>var</NPurp> array<NPurp>=</NPurp> [2,3,7,8]; <br><br>
-            array.<NBlue>forEach</NBlue>(<NPurp>function</NPurp>(<NRed>el</NRed>) { <br>
-              &nbsp; document.<NBlue>write</NBlue>(<NRed>el</NRed> * 2); <br>
-            }); <br>
-            <NGray>// 4 6 14 16</NGray>
-          </div>
-        </div>
-        <div class="flecha wAuto"></div>
-        <div class="width100">
-          <u><b>ForEach ES6:</b></u>
-          <div class="cod">
-            <NPurp>const</NPurp> array <NPurp>=</NPurp> [2,3,7,8];<br><p style="line-height: 10px;"> </p>
-            array.<NBlue>forEach</NBlue>(<NRed>v</NRed> <NPurp>=></NPurp> {<br>
-              &nbsp; document.<NBlue>write</NBlue>(<NRed>v</NRed> * 2);<br>
-            }); <br>
-            <NGray>// 4 6 14 16</NGray>
-          </div>
-        </div>
+    <fieldset> <!-- NFE -->
+      <legend> NFE (Named Function Expression)</legend>
+      <!-- https://es.javascript.info/function-object -->
+      Las funciones son Objetos, y contienen propiedades. <br>
+      <div class="cod">
+        <NGray>// <b>name</b> de la funcion.</NGray> <br>
+          <NPurp>function</NPurp> <NBlue>sayHi</NBlue>(){} <br>
+          <NBlue>alert</NBlue>(<NBlue>sayHi</NBlue>.name); <NGray>// sayHi</NGray> <hr>
+
+        <NGray>// <b>length</b> de los parámetros.</NGray> <br>
+          <NPurp>function</NPurp> <NBlue>myFunc</NBlue>(a, b) {} <br>
+          <NBlue>alert</NBlue>(<NBlue>myFunc</NBlue>.length); <NGray>// 2</NGray> <hr>
+
+        <NGray>// crear una propiedad</NGray> <br>
+          <NPurp>function</NPurp> <NBlue>sayHi</NBlue>() { <br>
+            &nbsp; <NBlue>sayHi</NBlue>.counter++; <br>
+          } <br>
+          <NBlue>sayHi</NBlue>.counter = <NOrg>0</NOrg>; <NGray>// valor inicial</NGray> <br>
+          <NBlue>sayHi</NBlue>(); <NBlue>sayHi</NBlue>(); <NGray>// (llamar 2 veces)</NGray> <br><br>
+          alert(sayHi.counter); <NGray>// 2</NGray> <hr>
+
+        <NGray>// Llamarse a sí mismo</NGray> <br>
+          <NPurp>let</NPurp> <NBlue>sayHi</NBlue> = <NPurp>function</NPurp> func(who) { <br>
+            &nbsp; <NAqua>if</NAqua> (who) <NGray>// si contiene algo...</NGray> <br>
+            <NTab></NTab> console.<NBlue>log</NBlue>(`<NGreen>Hello</NGreen>, ${who}`); <br>
+            &nbsp; <NAqua>else</NAqua>  <br>
+            <NTab></NTab> <NBlue>func</NBlue>("<NGreen>Guest</NGreen>"); // volver a llamarse a sí mismo <br>
+          }; <br><br>
+
+          <NBlue>sayHi</NBlue>(); // Hello, Guest. <br>
+          <NBlue>sayHi</NBlue>("<NGreen>nico</NGreen>"); // Hello, nico.
+      </div>      
+    </fieldset>
+
+    <fieldset> <!-- "Cache invisible" -->
+      <legend> "Cache invisible" </legend>
+      <div class="cod">
+        <NPurp>function</NPurp> <NBlue>slow</NBlue>(x) { <br>
+          &nbsp; <NGray>// Codigo muy pesado.</NGray> <br>
+          &nbsp; <NAqua>return</NAqua> x; <br>
+        } <br><br>
+        <NGray>// si el parámetro y el resultado de la funcion es el mismo, guardar en "caché"</NGray> <br>
+        <NPurp>function</NPurp> <NBlue>cachingDecorator</NBlue>(func) { <br>
+          &nbsp; let cache = <NAqua>new</NAqua> <NObj>Map()</NObj>; <br><br>
+          &nbsp; <NAqua>return</NAqua> <NPurp>function</NPurp>(x) { <br>
+          &nbsp;  <NAqua>if</NAqua> (cache.<NBlue>has</NBlue>(x)) { <NGray>// si hay tal propiedad en "caché"</NGray> <br>
+          &nbsp;   &nbsp;  <NAqua>return</NAqua> cache.<NBlue>get</NBlue>(x); <NGray>// lee el resultado</NGray> <br>
+          &nbsp;  } <br><br>
+          &nbsp;  <NPurp>let</NPurp> result = <NBlue>func</NBlue>(x); <NGray>// de lo contrario llamar a func</NGray> <br><br>
+          &nbsp;  cache.<NBlue>set</NBlue>(x, result); <NGray>// almacenamos en "caché" el resultado</NGray> <br>
+          &nbsp;  <NAqua>return</NAqua> result; <br>
+          &nbsp;}; <br>
+        }
       </div>
     </fieldset>
+    <script>
+      function slow(x) {
+        alert(`Called with ${x}`);
+        return x;
+      }
+
+      function cachingDecorator(func) {
+        let cache = new Map();
+
+        return function(x) {
+        if (cache.has(x)) { // si hay tal propiedad en caché
+        return cache.get(x); // lee el resultado
+        }
+
+        let result = func(x); // de lo contrario llame a func
+
+        cache.set(x, result); // y almacenamos en caché (recordamos) el resultado
+        return result;
+      };
+      }
+    </script>
   </section>
 
   <!-- Objetos -->
@@ -522,7 +533,7 @@
       
       <!-- Clase -->
       <fieldset class="wAuto">
-        <legend>Clase</legend>
+        <legend>Clase (son funciones)</legend>
         <div class="cod wAuto">
           <NPurp>class <NObj>Person{</NObj> <br>
           &nbsp; constructor(<NVar>name, age</NVar>){</NPurp> <br>
@@ -755,6 +766,72 @@
         </div>
       </fieldset>
     </div>
+  </section>
+
+  <!-- Condic y Bucles -->
+  <section id="Condicionales y Bucles">
+    <fieldset> <!-- Condicionales IF/Switch -->
+      <legend> Condicionales </legend>
+      <div class="flex">
+        <div class="cod">
+          <NAqua>if</NAqua> (condicion) { <br>
+            &nbsp; <NGray>// Declaraciones si es Verdadero.</NGray> <br>
+          } <NAqua>else</NAqua> { <br>
+            &nbsp; <NGray>// Declaraciones si es Falso.</NGray> <br> } <br>
+          Variable <NAqua>=</NAqua> (condicion) <NAqua>?</NAqua> True <NAqua>:</NAqua> False;
+        </div>
+        <div class="cod" style="font-size: smaller;">
+          <NAqua>switch</NAqua> ( Expresion ) { <br>
+            &nbsp;<NAqua>case</NAqua> 1: <br>
+              &nbsp; <NGray>// Bloque de Codigo</NGray> <br>
+            &nbsp; <NAqua>break;</NAqua> <br>
+            &nbsp;<NAqua>default:</NAqua> <br>
+              &nbsp; <NGray>// Bloque de Codigo</NGray> <br>
+            &nbsp; <NAqua>break;</NAqua> <br>
+            }
+        </div>
+        <div class="cod">
+          <NPurp>let</NPurp> age = <NBlue>prompt</NBlue>("<NGreen>Edad?</NGreen>", 18); <br><br>
+          <NPurp>let</NPurp> mensaje = (age < <NOrg>18</NOrg>) <NAqua>?</NAqua> '<NGreen>Ilegalisimo</NGreen>' <NAqua>:</NAqua> <br>
+          (age < <NOrg>18</NOrg>) <NAqua>?</NAqua> '<NGreen>Payaso!</NGreen>' <NAqua>:</NAqua>  '<NGreen>¡Calvo!</NGreen>'; <br><br>
+          console.<NBlue>log</NBlue>(mensaje);
+        </div>
+      </div>
+    </fieldset>
+    
+    <fieldset> <!-- Bucles -->
+      <legend> Bucles </legend>
+      <div class="flex">
+        <div class="width100"> <!-- For -->
+          <div class="cod wAuto">
+            <u><b>For In:</b></u> <NGray>//  (Objetos Literales) </NGray> <br>
+            <NPurp>let</NPurp> obj <NPurp>=</NPurp> {a:<NOrg>1</NOrg>, b:<NOrg>2</NOrg>, c:<NOrg>3</NOrg>}; <br>
+            <NAqua>for</NAqua> (<NPurp>let</NPurp> v <NPurp>in</NPurp> obj) { <br>
+              &nbsp; document.<NBlue>write</NBlue>(v); <br> }
+            <hr>
+            <u><b>For Of:</b></u> <NGray>// (Arrays o Strings) </NGray> <br>
+            <NPurp>let</NPurp> obj <NPurp>=</NPurp> ["<NGreen>hola</NGreen>", "<NGreen>hi</NGreen>"]; <br>
+            <NAqua>for</NAqua> (<NPurp>let</NPurp> v <NPurp>of</NPurp> obj) { <br>
+              &nbsp; document.<NBlue>write</NBlue>(v); <br> }
+          </div>
+        </div>
+        <div class="width100"> <!-- While - ForEach-->
+          <div class="cod wAuto">
+            <u><b>While:</b></u> <br>
+            <NAqua>while</NAqua> (condición) { <br>
+              &nbsp; <NGray>// comandos...</NGray> <br> }
+          </div>
+          <!-- ForEach -->
+          <div class="cod wAuto">
+            <u><b>ForEach:</b></u> <br>
+            <NPurp>const</NPurp> array <NPurp>=</NPurp> [2, 3, 7, 8];<br><p style="line-height: 10px;"> </p>
+            array.<NBlue>forEach</NBlue>(<NRed>i</NRed> <NPurp>=></NPurp> {<br>
+              &nbsp; document.<NBlue>write</NBlue>(<NRed>i</NRed> * 2);<br>
+            });
+          </div>
+        </div>
+      </div>
+    </fieldset>
   </section>
 
   <!-- DOM -->
@@ -992,7 +1069,8 @@
   <section id="BOM">
     <fieldset> <!-- Window -->
     <legend> Browser Object Model </legend>
-      <div class="cod">        
+      <div class="cod">       
+        window.usuario = { name: "nico" }; <NGray>// Crear variable Global (para todos los scripts)</NGray> <br>
         window.name = "<NGreen>Ventana</NGreen>"; <NGray>// Nombre de la ventana</NGray> <br>
         window.location = "<NGreen>https://www.google.com</NGreen>"; <NGray>// ir a otra pag</NGray> <br><br>
 
@@ -1479,6 +1557,32 @@
             }
         </pre>
       </details>
+    </fieldset>
+
+    <fieldset> <!-- ES Modules -->
+      <legend> ES Modules </legend>
+      Import y Export <br>
+      <div class="codigo">
+        &lt;<NRed>script</NRed> <NPurp>src</NPurp>="<NGreen>index.js</NGreen>" <u>
+          <NPurp>type</NPurp>="<NGreen>module</NGreen>"
+        </u> > &lt;/<NRed>script</NRed>> <br>
+      </div>
+
+      <div class="cod">
+        <NGray>// exportar default + variables, funciones, clases, etc</NGray> <br>
+        <NAqua>export</NAqua> <NPurp>const</NPurp> variable = <NOrg>25</NOrg>; <br><br>
+        
+        <NGray>// exportar por defecto</NGray> <br>
+        <NAqua>export default</NAqua> { <br>
+          &nbsp; booleano: <NRed>true</NRed>, <br>
+          &nbsp; name <NGray>// exportar funciones / variables.</NGray> <br>
+        } <br>
+      </div>
+
+      <div class="cod">
+        <NGray>// importar default + variables.</NGray> <br>
+        <NAqua>import</NAqua> defaultVar, <NObj>{</NObj> myFunc <NAqua>as</NAqua> nuevoNombre, variable<NObj>}</NObj> <NAqua>from</NAqua> "<NGreen>./export.js</NGreen>"; 
+      </div>
     </fieldset>
   </section>
 
