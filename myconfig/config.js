@@ -9,7 +9,7 @@ const server_dir = "/";
 // const server_dir = "http://myserver/"; 
 const index =  server_dir;
 const logo = server_dir + "logo.png";
-const imgs_dir = server_dir + "imgs/";
+const imgs_dir = server_dir + "Imgs/";
 const cheat_dir = server_dir + "machetes/";
 const otros_dir = server_dir + "otros/";
 
