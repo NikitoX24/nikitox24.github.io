@@ -132,7 +132,7 @@ document.write(/*html*/`
       bottom: 40px;
       right: 40px;
       text-decoration: none;
-      filter: drop-shadow(1px 1px 2px gray);
+      filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.4));
       transition: all 200ms;
     }
     #up:hover{

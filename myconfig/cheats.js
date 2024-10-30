@@ -3,16 +3,16 @@ titulo = document.title;
 document.write(/*html*/`
   <div class="iconosFlex"> 
     <table class="ch-${t_html}" onclick="loadHTML()"> <caption> HTML </caption> 
-      <td><img src="${imgs_dir}HTML2.png"></td> </table>
+      <td><img src="${imgs_dir}html2.png"></td> </table>
 
     <table class="ch-${t_css}" onclick="loadCSS()">   <caption> CSS </caption> 
-      <td><img src="${imgs_dir}CSS2.png"></td> </table>
+      <td><img src="${imgs_dir}css2.png"></td> </table>
 
     <table class="ch-${t_js}" onclick="loadJS()">     <caption> JS </caption> 
-      <td><img src="${imgs_dir}JS2.png"></td> </table>
+      <td><img src="${imgs_dir}js2.png"></td> </table>
 
     <table class="ch-${t_php}" onclick="loadPHP()">   <caption> PHP </caption> 
-      <td><img src="${imgs_dir}PHP2.png"></td> </table>
+      <td><img src="${imgs_dir}php2.png"></td> </table>
   </div>
   
   <style>

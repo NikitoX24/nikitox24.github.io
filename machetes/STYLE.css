@@ -20,15 +20,15 @@
   fieldset{ padding: 5px !important; }
 }
 body {
-  /* background-color: beige; */
-  /* background-image: url("../Imgs/TileW.jpg"); */
-  background-repeat: repeat; /*repeat-x, repeat-y, no-repeat, inheri */
-  background-attachment: scroll; /* fixel, scroll, inherit */
-  font-family: 'Brush Script MT';
+  /*background-color: beige;
+  *//*background-image: url("../Imgs/TileW.jpg");
+  */background-repeat: repeat;
+  /*repeat-x,repeat-y,no-repeat,inheri*/background-attachment: scroll;
+  /*fixel,scroll,inherit*/font-family: 'Brush Script MT';
   text-shadow: 3px 3px 7px grey;
-  font-size: small; 
+  font-size: small;
   max-width: 720px;
-  margin: auto
+  margin: auto;
 }
 
 /* HTML, CSS, JS */

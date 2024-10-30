@@ -5,11 +5,10 @@ let blackTeme = true;
 //  ../ (atras) 
 
 // Dir / Carpetas
-const server_dir = "/";
-// const server_dir = "http://myserver/"; 
+const server_dir = "/"; // "http://myserver/"; 
 const index =  server_dir;
 const logo = server_dir + "logo.png";
-const imgs_dir = server_dir + "imgs/";
+const imgs_dir = server_dir + "Imgs/";
 const cheat_dir = server_dir + "machetes/";
 const otros_dir = server_dir + "otros/";
 
@@ -27,9 +26,9 @@ const t_php =   "PHP";
 
 
 // CheatSheets
-const html_dir = cheat_dir + "HTML.html";
-const css_dir =  cheat_dir + "CSS.html";
-const js_dir =   cheat_dir + "JS.html";
+const html_dir = cheat_dir + "html.html";
+const css_dir =  cheat_dir + "css.html";
+const js_dir =   cheat_dir + "js.html";
 const php_dir =  cheat_dir + "php.html";
 const bs_dir =   cheat_dir + "Bootstrap.html";
 
