@@ -27,8 +27,6 @@ export default Card;
 
 export function FragmentName() {
   return (
-    <>
       <h1>Esto es un Fragmento</h1>
-    </>
   );
 }

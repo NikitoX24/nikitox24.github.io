@@ -1,6 +1,6 @@
-// import "Style.css";
+// import "./Style.css";
 
-function Style() {
+export default function Style() {
   const color = "red"; // variable
 
   // Opcional (varias propiedades)
@@ -15,5 +15,3 @@ function Style() {
     </div>
   );
 }
-
-export default Style;

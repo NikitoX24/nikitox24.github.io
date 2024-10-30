@@ -2,10 +2,15 @@
 import styles from "./Button/Button.module.css";
 
 function Style() {
+  const v = true;
+  
   return ( 
     <div>
-      <p className={ styles.unaClase }> una sola clase </p>             {/* una sola clase */}
-      <p className={ [styles.button, styles.otraClase].join(" ") }>varias clases</p> {/* Varias Clases */}
+      {/* una sola clase */}
+      <p className={ styles.unaClase }> una sola clase </p>             
+      
+      {/* Varias Clases + RenderCond*/}
+      <p className={ [styles.button, `${v && styles.otraClase}`].join(" ") }>varias clases</p> 
     </div>
    )
 }

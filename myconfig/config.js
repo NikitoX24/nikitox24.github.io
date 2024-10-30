@@ -1,11 +1,12 @@
 // User Settings
-let blackTeme = false;
+let blackTeme = true;
 
 //  /   (raiz)
 //  ../ (atras) 
 
 // Dir / Carpetas
-const server_dir = "http://myserver/"; 
+const server_dir = "/";
+// const server_dir = "http://myserver/"; 
 const index =  server_dir;
 const logo = server_dir + "logo.png";
 const imgs_dir = server_dir + "imgs/";
@@ -42,17 +43,16 @@ function loadPHP()  { window.location.href = php_dir }
 function loadBS()   { window.location.href = bs_dir }
 
 // OnClick de Index
-function loadTest()   { window.location.href = "test.html" }
-function loadTestJson()  { window.location.href = otros_dir + "testJson/test.html" }
-function loadCuentasPHP(){ window.location.href = otros_dir + "CuentasPHP/index.php" }
-function loadCuentas(){ window.location.href = otros_dir + "CuentasJS/index.html" }
-function loadConvert(){ window.location.href = otros_dir + "ConvertirTexto.html" }
-function loadVText()  { window.location.href = otros_dir + "VideoText.html" }
-function loadMC()     { window.location.href = otros_dir + "MC.html" }
-// function loadSocial() { window.location.href = otros_dir + "social.html" }
+function loadTest()       { window.location.href = "test.html" }
+function loadTestJson()   { window.location.href = otros_dir + "testJson/test.html" }
+function loadCuentasPHP() { window.location.href = otros_dir + "CuentasPHP/index.php" }
+function loadCuentas()    { window.location.href = otros_dir + "CuentasJS/index.html" }
+function loadConvert()    { window.location.href = otros_dir + "ConvertirTexto.html" }
+function loadVText()      { window.location.href = otros_dir + "VideoText.html" }
+function loadMC()         { window.location.href = otros_dir + "MC.html" }
 
-function loadAhorcado() { window.location.href = otros_dir + "Ejercicios/Ahorcado.html" }
-function loadTateti()   { window.location.href = otros_dir + "Ejercicios/TaTeTi.html" }
+function loadAhorcado()   { window.location.href = otros_dir + "Ejercicios/Ahorcado.html" }
+function loadTateti()     { window.location.href = otros_dir + "Ejercicios/TaTeTi.html" }
 
 
 

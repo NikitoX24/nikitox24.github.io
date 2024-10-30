@@ -1,49 +1,45 @@
-
 // @ts-check
 
-
-
-// midudev
-
-//? En typescript se asignan automaticamente los tipos
+// ?En typescript se asignan automaticamente los tipos
 //? Evitar escribir tipos (anotacion - tipar)
 
-//* Inferencia de datos - se auto-tipea (ya no se puede cambiar de tipo)
-let persona = 'miguel'
-  // persona = 2 //! da error, por q no se puede convertir en otro tipo.
+//* Tipos y anotaciones
+  // Inferencia de datos - se auto-tipea (ya no se puede cambiar de tipo)
+  let persona = 'miguel';
 
-//* Anotacion de tipos - tipar
-let numero: number = 2
+  // Anotacion de tipos - tipar
+  let numero: number;
 
-  // any (ya no se va a convertir en otro tipo, ignora el tipo, pierde el autocomplete)
-  let any: any = "hola"
+    // any (ya no se va a convertir en otro tipo, ignora el tipo, pierde el autocomplete)
+    let any: any = "hola";
 
-  // unknow (no se sabe q tipo es)
-  let unknow: unknown = "hola" //! puede ser peligroso)
+    // unknow (no se sabe q tipo es)
+    let unknow: unknown = "hola"; //! puede ser peligroso)
 
 /* -------------------------------------------------------------------------------- */
 
-//*   Funciones 
+//*   Tipar Funciones 
   // Opcion 1
   function saludar({name, age}: {name: string, age: number}) {
     console.log(`Hola ${name}, tienes ${age} años`)
   }
-  saludar({name: "nico",age: 25})
 
   // Opcion 2
   function saludar2(persona: {name: string, age: number}) {
-    const {name, age} = persona
+    const {name, age} = persona // destructurar las props
     console.log(`Hola ${name}, tienes ${age} años`)
   }
-  saludar2({name: "nico",age: 25})
 
-//*   Funcion Return   
-  // Funcion //?                                            _______/ tipar el return (opcional)
+  // Arrow Function
+  const suma = (a: number, b: number) => { return a+b };
+
+//*   Tipar el Return   
+  // en una funcion //?                                      _______/ tipar el return (opcional)
   function suma2({num1, num2}: {num1: number, num2: number}):number {
     return num1 + num2  // devuelve number
   }
 
-  // Arrow Function //?                 ______/ tipar return
+  // en un arrow function //?           ______/ tipar return
   const sumar = (a: number, b: number): number => {
     return a+b
   }
@@ -65,33 +61,39 @@ type HexadecimalColor = `#${string}`; // este tipo solo permite variables con un
 // Union Types
 type HeroPowerScale = "low" | "medium" | "Higth";
 type numOrText = number | string;
+const enableAnimDur: boolean | number = true; // por defecto true
 
 // Type Alias (Crear nuestro propio Type)
 type Hero = {
-  readonly id?: number; //! (solo lectura para TypeScript)
+  readonly id?: number; // (solo lectura para TypeScript)
   name: string;
   age: number;
-  isActive?: boolean; //? ( ? -> parametro opcional )
+  isActive?: boolean; // ( ? -> parametro opcional )
   powerScale?: HeroPowerScale; // usar Union Types
 }
 
+// usar un Type Alias
 let Hero: Hero = {
   name: "thor",
   age: 1500
 };
 
+// Funcion con typeAlias (opcion 1)
 function createHero(name:string, age:number): Hero {
-  return { name, age, isActive : true};
+  return { name, age };
+}
+// Funcion con typeAlias (opcion 2)
+function createHero2(hero: Hero): Hero {
+  const { name, age } = hero;
+  return { name, age };
 }
 
-const thor = createHero("Thor", 1500);
-
-const ironman = Object.freeze(createHero("Tony", 40)); // Solo lectura, no se puede modificar
+const thor = createHero("Thor", 1500); // crear un Hero
 
 
-thor.id?.toString(); //? si tiene un id(por q es opcional) ajecutar, sino no
+thor.id?.toString(); //? si tiene un id... Ejecutar, sino NO ejecutar...
 
-thor.id ?? 1; // var por defecto
+thor.id ?? 1; // valor por defecto
 
 // ------------------------------------------------------------------------
 
@@ -138,9 +140,9 @@ thor.id ?? 1; // var por defecto
 
 
 // Arrays
-const languages: string[] = [];
-
-const languages3: (string | number)[] = [];
+const languages1: string[] = [];            // Opcion 1
+const languages2: Array<string> = [];       // Opcion 2
+const languages3: (string | number)[] = []; // Opcion 3
 
 
 
@@ -170,8 +172,14 @@ const languages3: (string | number)[] = [];
 
 
 
+
+
+
+
+// https://youtu.be/L1ZSk-vPVKI?si=5FMw6Pc_Gzjys8qX
 // ---------------------------------------------
-// Video 2 MiDu
+//              Video 2 MiDu
+// ---------------------------------------------
 
 
 // Enums

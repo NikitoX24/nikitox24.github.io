@@ -14,7 +14,8 @@
 // import ModuloCSS from "./components/02_1_ModuloCSS";
 // import CSSJS from "./components/02_2_CSS_JavaScript";
 
-import TaTeTi from "./components/Ejercicios/TaTeTi";
+// import TaTeTi from "./components/Ejercicios/TaTeTi";
+import ListaStock from "./components/Ejercicios/ListaStock";
 
 
 export default function App() {
@@ -42,6 +43,6 @@ export default function App() {
   // return <CSSJS />;
 
 
-  return <TaTeTi />
-
+  // return <TaTeTi />
+  return <ListaStock />
 }

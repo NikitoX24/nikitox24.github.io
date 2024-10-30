@@ -15,7 +15,7 @@ type Props = {
 };
 
 function List({ data, onSelect }: Props) {
-  const [index, setIndex] = useState(1); // hook
+  const [index, setIndex] = useState(0); // hook
 
   // funcion para cambiar el seleccionado
   const handleClick = (i: number, elemento: string) => { 
@@ -35,4 +35,4 @@ function List({ data, onSelect }: Props) {
   );
 }
 
-export default List; 
+export default List;

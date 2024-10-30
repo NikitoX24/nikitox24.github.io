@@ -1,3 +1,5 @@
+# Ignorar archivos, carpetas, tipos
+
 # nombre de archivo
 comandos.txt
 
@@ -6,4 +8,3 @@ comandos.txt
 
 # carpetas
 carpeta/
-

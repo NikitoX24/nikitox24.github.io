@@ -135,9 +135,9 @@
         array.length = <NOrg>0</NOrg>; <NGray>// (borrar array) </NGray> <br>
         <NAqua>delete</NAqua>(array[<NOrg>2</NOrg>]); <NGray>// ["A", "B", undefined, "C"]  (borra valor, pero no el elemento)</NGray> <br>
         <NObj>Array</NObj>.<NBlue>isArray</NBlue>(<u>array</u>); <NGray>// true</NGray> <br>
-        <NObj>Array</NObj>.<NBlue>from</NBlue>("<NGreen>ABC</NGreen>"); <NGray>// ["A", "B", "C"];</NGray> <br>
         <NPurp>let</NPurp> [one, , three, four, ...rest] = array; <NGray>// (Desestructuracion: variables a los index) </NGray> <br>
         <NGray>string =</NGray> array.<NBlue>join</NBlue>(" "); <NGray>// (convertir en string y separar por " ")</NGray> <br>
+        <NGray>array =</NGray> <NObj>Array</NObj>.<NBlue>from</NBlue>("<NGreen>ABC</NGreen>"); <NGray>// ["A", "B", "C"];</NGray> <br>
         <NGray>array =</NGray> array.<NBlue>flat</NBlue>(); <NGray>// (unir todos los sub-arrays)</NGray> <br>
         <!-- ------------------------------------- --> <hr> <!-- ------------------------------------- -->
         
@@ -170,14 +170,15 @@
 
         <b>Recorrer</b>: <br> <!-- ["A", "B", "C"]; -->
         <NPurp>let</NPurp> array = ["<NGreen>A</NGreen>", "<NGreen>B</NGreen>", "<NGreen>C</NGreen>"]; <br>
-        array.<NBlue>map</NBlue>(elem <NPurp>=></NPurp> elem + "<NGreen>#</NGreen>"); <NGray>// ["A#", "B#", "C#"] (recorrer arrays) </NGray> <br>
-        array.<NBlue>forEach</NBlue>((elem, i) <NPurp>=></NPurp> {elem + i}); <NGray>// ["A0", "B1", "C2"] ? (recorrer arrays) </NGray> <hr>
+        array.<NBlue>map</NBlue>((elem, i) <NPurp>=></NPurp> i + elem); <NGray>// ["0A", "1B", "2C"] <b>(recorrer arrays + return)</b> </NGray> <br>
+        array.<NBlue>forEach</NBlue>((elem, i) <NPurp>=></NPurp> elem + i); <NGray>// ["A0", "B1", "C2"] <b>(recorrer arrays)</b> </NGray> <hr>
         <!-- [1, 2, 3, 4] -->
         <NPurp>let</NPurp> array = [<NOrg>1</NOrg>, <NOrg>2</NOrg>, <NOrg>3</NOrg>, <NOrg>4</NOrg>]; <br>
         <NGray>bool =</NGray> array.<NBlue>some</NBlue>(elem => elem < <NOrg>2</NOrg>); <NGray>// true (alguno es menor q?)</NGray> <br>
         <NGray>bool =</NGray> array.<NBlue>every</NBlue>(elem => elem < <NOrg>2</NOrg>); <NGray>// false (todos son menor q?)</NGray> <br>
         <NGray>int =</NGray> array.<NBlue>reduce</NBlue>((acumulado, actual) <NPurp>=></NPurp> acumulado + actual); <NGray>// 10 (unir anterior(acumulados) con el siguiente) </NGray> <br>
       </div><br>
+
 
       <div class="flex">
         <!-- Extraer de DOM y ponerlos en un Array -->
@@ -189,23 +190,27 @@
             console.<NBlue>log</NBlue>(array); <NGray>// ["L", "M", "M" ...] </NGray>
           </div>
         </div>
-        <!-- Destructurar Arrays: -->
-        <div class="w40">
-          Destructurar Arrays:
-          <div class="cod">
-            <NPurp>let</NPurp> arrDes <NAqua>=</NAqua> ['<NGreen>1</NGreen>', '<NGreen>2</NGreen>', '<NGreen>3</NGreen>']; <br>
-            <NPurp>let</NPurp> [one, two, three] <NAqua>=</NAqua> arrDes; <br>
-            console.<NBlue>log</NBlue>(one); <NGray>// 1</NGray>
-          </div>
-        </div>
       </div>
     </fieldset>
 
+    <!-- TODO: -->
+    <!-- TODO: -->
+    <!-- TODO: -->
+    <!-- TODO: -->
+    <!-- TODO: -->
+    <!-- TODO: -->
+    <!-- TODO: -->
+    <!-- TODO: -->
+    <!-- TODO: -->
+    <!-- TODO: -->
+    <!-- TODO: -->
+    <!-- TODO: -->
+     
     <fieldset> <!-- Map y Set -->
       <legend> Map y Set </legend>
       <div class="flex">
         <div class="cod">
-          <u><b>Map (claves de cualquier tipo)</b></u> <br>
+          <u><b>Map (iterar arrays, y aplicarles una funcion)</b></u> <br>
           <NPurp>let</NPurp> map<NAqua> = new </NAqua> <NObj>Map( )</NObj>; <NGray>// Crear Mapa.</NGray> <br>
           map.<NBlue>set</NBlue>("<NGreen>clave</NGreen>", "<NGreen>valor</NGreen>"); <NGray>// Agregar elemento.</NGray> <br>
           map.<NBlue>get</NBlue>("<NGreen>clave</NGreen>"); <NGray>// Obtener elemento.</NGray> <br>
@@ -218,12 +223,14 @@
         </div>
         <div class="cod">
           <u><b>Set (No se repiten, solo valores)</b></u> <br><br>
-          new <NObj>Set()</NObj>; <NGray>// Crea el set.</NGray> <br>
+          <NPurp>const</NPurp> set <NAqua> = new</NAqua> <NObj>Set()</NObj>; <NGray>// Crea el set.</NGray> <br>
           set.<NBlue>add</NBlue>(valor); <NGray>// agrega un valor, y devuelve el set en sí.</NGray> <br>
           set.<NBlue>delete</NBlue>(valor); <NGray>// elimina el valor, devuelve true si existía.</NGray> <br>
           set.<NBlue>has</NBlue>(valor); <NGray>// devuelve true si el valor existe</NGray> <br>
           set.<NBlue>clear</NBlue>(); <NGray>// elimina todo el continido del set.</NGray> <br>
-          set.size; <NGray>// cantidad de elementos.</NGray> <br>
+          set.size; <NGray>// cantidad de elementos.</NGray> <br><br>
+
+          <NPurp>const</NPurp> directions <NAqua> = new</NAqua> <NObj>Set</NObj><<NObj>string</NObj>>(); <NGray>// TypeSript</NGray>
         </div>
       </div>
     </fieldset>
@@ -463,27 +470,6 @@
         }
       </div>
     </fieldset>
-    <script>
-      function slow(x) {
-        alert(`Called with ${x}`);
-        return x;
-      }
-
-      function cachingDecorator(func) {
-        let cache = new Map();
-
-        return function(x) {
-        if (cache.has(x)) { // si hay tal propiedad en caché
-        return cache.get(x); // lee el resultado
-        }
-
-        let result = func(x); // de lo contrario llame a func
-
-        cache.set(x, result); // y almacenamos en caché (recordamos) el resultado
-        return result;
-      };
-      }
-    </script>
   </section>
 
   <!-- Objetos -->
@@ -766,6 +752,18 @@
         </div>
       </fieldset>
     </div>
+
+    <fieldset> <!-- Propiedades -->
+      <legend> Indicadores de Propiedad </legend>
+      <u><b>writable</b></u>: si es true, puede ser editado. <br>
+      <u><b>enumerable</b></u>: si es true, puede ser listado en bucles. <br>
+      <u><b>configurable</b></u>: si es true, la propiedad puede ser borrada y estos atributos pueden ser modificados. <br>
+
+      <div class="cod">
+        <NPurp>let</NPurp> user = { name: "<NGreen>Juan</NGreen>"}; <br>
+        <NPurp>let</NPurp> descriptor = <NObj>Object</NObj>.<NBlue>getOwnPropertyDescriptor</NBlue>(user, "<NGreen>name</NGreen>"); <br>
+      </div>
+    </fieldset>
   </section>
 
   <!-- Condic y Bucles -->
@@ -1583,6 +1581,7 @@
         <NGray>// importar default + variables.</NGray> <br>
         <NAqua>import</NAqua> defaultVar, <NObj>{</NObj> myFunc <NAqua>as</NAqua> nuevoNombre, variable<NObj>}</NObj> <NAqua>from</NAqua> "<NGreen>./export.js</NGreen>"; 
       </div>
+      <a href="https://www.youtube.com/watch?v=0t-Le4kdaMg&ab_channel=FaztCode">link video...</a>
     </fieldset>
   </section>
 

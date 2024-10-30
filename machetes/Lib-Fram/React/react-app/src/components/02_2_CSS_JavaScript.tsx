@@ -1,8 +1,13 @@
-// recomendado instalar libreria (styled-components)
+//! recomendado instalar libreria (styled-components)
 // npm install styled-components
 // en caso de error... (npm install @types/styled-components)
 
 import styled from "styled-components";
+
+export default function Main() {
+  return <Btn isLoading={false}> Botón </Btn>
+}
+
 
 // Crear un atributo css
 type BtnProps = {
@@ -13,8 +18,3 @@ const Btn = styled.button<BtnProps>`
   background-color: ${props => props.isLoading ? "gray" : "red"};
   padding: 15px 30px;
 `;
-
-function Main() {
-  return <Btn isLoading={false}> Botón </Btn>
-}
-export default Main;

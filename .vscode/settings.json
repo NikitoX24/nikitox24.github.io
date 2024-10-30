@@ -4,5 +4,6 @@
   "files.exclude": {
     "**/.vs": true,
     "**/.vscode": true
-  }
+  },
+  "editor.glyphMargin": false
 }

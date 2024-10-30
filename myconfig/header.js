@@ -1,6 +1,7 @@
 titulo = document.title;
 
 
+let background_black_color = "rgb(24, 57, 43)";
 let back_color = "rgba(255, 255, 255, 0.5)";
 let shadow1 = "rgba(255, 255, 255, 0.8)";
 let shadow2 = "rgba(255, 255, 255, 0.3)";
@@ -21,16 +22,50 @@ if (titulo == t_css || titulo == t_php){
 if (titulo == t_js){
   if (blackTeme) {
     back_color = "rgba(0, 255, 0, .02)";
-    shadow1 = "rgba(0, 159, 0, 0.7)";
+    shadow1 = "rgba(27, 125, 79, 1)";
     shadow2 = "rgba(0, 255, 38, 0.1)";
     linkColor = "#FFF";
   }else{
-    back_color = "rgba(0, 255, 0, .07)";
+    back_color = "rgba(0, 255, 0, 0)";
     shadow1 = "rgba(0, 159, 0, 0.4)";
     shadow2 = "rgba(0, 255, 38, 0.1)";
     linkColor = "#FFF";
+    // RGB: (0, 99, 18)
   }
 }
+
+
+// Colores de Códigos
+if (blackTeme) {
+  document.write(/*html*/`
+    <style>
+      :root{
+        --varC: rgb(210, 210, 210);
+        --aquaC: ;
+      }
+      body{
+        background-color: ${background_black_color};
+        color: var(--varC);
+      }
+      .cod{
+        background-color: rgb(15, 15, 27);
+        text-shadow: none;
+        color: var(--varC);
+      }
+      NAqua { color: rgb(20, 212, 255); }
+      NBlue { color: rgb(107, 149, 234); }
+      NGreen{ color: rgb(209, 255, 139); }
+      NVar  { color: var(--varC); }
+      NPurp { color: rgb(194, 122, 194); }
+      NRed  { color: rgb(255, 85, 85); }
+      NOrg  { color: rgb(254, 146, 38);}
+      NGray { color: gray; }
+      NObj  { color: rgb(252, 222, 104); }
+    </style>
+  `);
+}
+
+
 
 
 // Nav-Bar 
@@ -38,7 +73,7 @@ document.write(/*html*/`
   <div id="navbar">
     <nav><ul>
       <li><a href="${index}">${logo_25px}</a></li>
-      <li><a href="https://nikitox24.github.io/MyServerOLD/">${git_logo} OLD SV GitHub </a></li>
+      <li><a href="https://nikitox24.github.io">${git_logo} server.io </a></li>
       <li><a href="https://github.com/NikitoX24/Main">${git_logo} This Repo. </a></li>
       <li><a href="https://github.com/NikitoX24">${git_logo} My GitHub </a></li>
     </ul></nav>
@@ -67,8 +102,7 @@ document.write(/*html*/`
         var(--color1) 25%,
         var(--color1) 75%,
         var(--color2) 100%);
-      box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
-      inset 0 0 1px rgba(255, 255, 255, 0.6);
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -107,34 +141,3 @@ document.write(/*html*/`
     }
   </style>
 `);
-
-
-// Colores de Códigos
-if (blackTeme) {
-  document.write(/*html*/`
-    <style>
-      :root{
-        --varC: rgb(210, 210, 210);
-        --aquaC: ;
-      }
-      body{
-        background-color: black;
-        color: var(--varC);
-      }
-      .cod{
-        background-color: rgb(15, 15, 27);
-        text-shadow: none;
-        color: var(--varC);
-      }
-      NAqua { color: rgb(20, 212, 255); }
-      NBlue { color: rgb(107, 149, 234); }
-      NGreen{ color: rgb(209, 255, 139); }
-      NVar  { color: var(--varC); }
-      NPurp { color: rgb(194, 122, 194); }
-      NRed  { color: rgb(255, 85, 85); }
-      NOrg  { color: rgb(254, 146, 38);}
-      NGray { color: gray; }
-      NObj  { color: rgb(252, 222, 104); }
-    </style>
-  `);
-}
