@@ -1,46 +1,52 @@
 titulo = document.title;
 
-document.write(/*html*/`
-  <div class="iconosFlex"> 
-    <table class="ch-${t_html}" onclick="loadHTML()"> <caption> HTML </caption> 
-      <td><img src="${imgs_dir}html2.png"></td> </table>
+export default function cheats(){
 
-    <table class="ch-${t_css}" onclick="loadCSS()">   <caption> CSS </caption> 
-      <td><img src="${imgs_dir}css2.png"></td> </table>
-
-    <table class="ch-${t_js}" onclick="loadJS()">     <caption> JS </caption> 
-      <td><img src="${imgs_dir}js2.png"></td> </table>
-
-    <table class="ch-${t_php}" onclick="loadPHP()">   <caption> PHP </caption> 
-      <td><img src="${imgs_dir}php2.png"></td> </table>
-  </div>
-  
-  <style>
-    /* section color */
-    section {
-      background-color: ${back_color};
-      box-shadow: inset 0 40px 0 0 ${shadow1}, 4px 4px 15px 5px ${shadow2};
+  // Frameworks & Librerias de INDEX
+  function frameLibs(){
+    if (titulo == t_index) {
+      return( /*html*/`
+        <div class="iconosFlex">
+          <table class="ch-BS" onclick="loadBS()"> <caption> BtSp </caption> 
+            <td><img src="${imgs_dir}bootstrap-icon.png"></td>
+          </table>
+        </div>
+      `);
     }
-    @media screen and (max-width: 767px){
-      section { box-shadow: inset 0 27px 0 0 ${shadow1} !important; }
-    }
+    else return ""
+  }
+  return /*html*/`
+    <div class="iconosFlex"> 
+      <table class="ch-${t_html}" onclick="loadHTML()"> <caption> HTML </caption> 
+        <td><img src="${imgs_dir}html2.png"></td> </table>
 
-    /* icon actual */
-    .ch-${titulo}{
-      filter: blur(0) grayscale(0) drop-shadow(0 0 10px black) !important;
-      transform: scale(1.1);
-    }
-    
-  </style>
-`);
+      <table class="ch-${t_css}" onclick="loadCSS()">   <caption> CSS </caption> 
+        <td><img src="${imgs_dir}css2.png"></td> </table>
 
-// Frameworks & Librerias de INDEX
-if (titulo == "Index") {
-  document.write(/*html*/`
-    <div class="iconosFlex">
-      <table class="ch-BS" onclick="loadBS()"> <caption> BtSp </caption> 
-        <td><img src="${imgs_dir}bootstrap-icon.png"></td>
-      </table>
+      <table class="ch-${t_js}" onclick="loadJS()">     <caption> JS </caption> 
+        <td><img src="${imgs_dir}js2.png"></td> </table>
+
+      <table class="ch-${t_php}" onclick="loadPHP()">   <caption> PHP </caption> 
+        <td><img src="${imgs_dir}php2.png"></td> </table>
     </div>
-  `);
+    
+    ${frameLibs()}
+
+    <style>
+      /* section color */
+      section {
+        background-color: ${back_color};
+        box-shadow: inset 0 40px 0 0 ${shadow1}, 4px 4px 15px 5px ${shadow2};
+      }
+      @media screen and (max-width: 767px){
+        section { box-shadow: inset 0 27px 0 0 ${shadow1} !important; }
+      }
+
+      /* icon actual */
+      .ch-${titulo}{
+        filter: blur(0) grayscale(0) drop-shadow(0 0 10px black) !important;
+        transform: scale(1.1);
+      }
+    </style>
+  `
 }

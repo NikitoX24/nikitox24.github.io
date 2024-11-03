@@ -277,12 +277,12 @@ Flecha::before{ content: "➜"; font-size: 1.5em; }
 }
 
 /* copyright */
-.copyright {
+#copyright {
   font-size: 8pt;
   text-align: right;
   padding-bottom: 10px;
   color: grey;
-  position: fixed;
+  /* position: fixed; */
   top: 98%;
   right: 10px;
 }

@@ -1,5 +1,3 @@
-<script src="myconfig/config.js"></script>
-
 <!DOCTYPE html>
 <html lang="es-AR">
 <head>
@@ -7,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="x-ua-compatible" content="ie-edge">
   <meta name="robots" content="no-follow">
-  <link rel="icon" href="logo.png">
   <link rel="stylesheet" href="machetes/STYLE.css">
-  <script>document.write(`<title>${t_index}</title>`)</script>
+  <title>Titulo</title>
 </head>
 
-<script src="myconfig/header.js"></script>
+<script src="/myconfig/config.js"></script>
+<div class="navBar"></div>
 
 <div class="round-index">
   <h1><script>document.write(`${logo_25px}Machetes${logo_25px}`)</script></h1> <hr>
 
   <!-- Cheats -->
-  <script src="myconfig/cheats.js"></script> <hr>
+  <div class="cheats"></div> <hr>
 
   <!-- Links Nuevos -->
   <div class="links">
@@ -29,10 +27,12 @@
     <button onclick="loadMC()">         MC          </button>
     <button onclick="loadVText()">      Video Text  </button>
 
-    <h3><u>Juegos</u></h3>
+    <h2><u>Juegos</u></h2>
     <button onclick="loadAhorcado()"> Ahorcado </button>
     <button onclick="loadTateti()">   Tateti   </button>
   </div>
 </div>
 
-<script src="myconfig/footer.js"></script>
+
+<div class="footer"></div>
+<script src="myconfig/modules.js" type="module"></script>

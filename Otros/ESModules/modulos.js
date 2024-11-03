@@ -15,3 +15,12 @@ console.log(math.double(4)); // funcion de una clase.
 
 // importal default
 console.log(Default.restar(10, 9));
+
+
+
+
+
+let asas = document.querySelectorAll(".mitabla")
+asas.forEach(elem => {
+  elem.innerHTML = "asd"
+});
