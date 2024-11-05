@@ -24,6 +24,7 @@ const t_html =  "HTML";
 const t_css =   "CSS";
 const t_js =    "JavaScript";
 const t_php =   "PHP";
+const t_bs =   "BootStrap";
 
 // nombre de archivos
 const index_fname = "index.html";
@@ -93,16 +94,15 @@ function getFileName() {
    }
 }
 // Cambiar el icono de la pag
-function changeFavicon(logoURL) {
++function changeFavicon() {
   let link = document.querySelector("link[rel~='icon']");
   if (!link) {
     link = document.createElement('link');
     link.rel = 'icon';
     document.head.appendChild(link);
   }
-  link.href = logoURL; // url logo.png
-}
-changeFavicon(logo);
+  link.href = logo; // url logo.png
+}();
 
 titulo = getFileName();
 document.title = titulo; // (Cambiar Titulo pag)
@@ -115,36 +115,49 @@ document.title = titulo; // (Cambiar Titulo pag)
 
 
 // COLORES
-let background_black_color = "rgb(24, 57, 43)";
-let back_color = "rgba(255, 255, 255, 0.5)";
-let shadow1 = "rgba(255, 255, 255, 0.8)";
-let shadow2 = "rgba(255, 255, 255, 0.3)";
+let background_color = "rgb(24, 57, 43)";
+let back_color = "rgba(255, 255, 255, 0.5)"; // div
+let shadow1 = "rgba(255, 255, 255, 0.8)"; // legend
+let shadow2 = "rgba(255, 255, 255, 0.3)"; // sombra
 let linkColor = "#FFF";
 
 if (titulo == t_html){
-  back_color = "rgba(255, 123, 0, 0.1)";
-  shadow1 = "rgba(141, 0, 0, 0.161)";
-  shadow2 = "rgba(255, 119, 0, 0.1)";
-  linkColor = "#F00";
+  if (blackTeme) {
+    background_color = "rgb(57, 33, 24)";
+    back_color = "rgba(200, 50, 50, 0.1)";
+    shadow1 = "rgb(185, 60, 20)";
+    shadow2 = "rgba(120, 60, 0, 0.2)";
+    linkColor = "#F00";
+  }
+  else{
+    back_color = "rgba(255, 123, 0, 0.1)";
+    shadow1 = "rgba(141, 0, 0, 0.161)";
+    shadow2 = "rgba(255, 119, 0, 0.1)";
+    linkColor = "#F00";
+  }
 }
 if (titulo == t_css || titulo == t_php){
-  back_color = "rgba(0, 0, 255, .05)";
-  shadow1 = "rgba(0, 119, 255, 0.164)";
-  shadow2 = "rgba(0, 0, 255, 0.1)";
-  linkColor = "#00F";
-
-  let a = "#021024"
-  let b = "#052659"
-  let c = "#5483B3"
-  let d = "#7da0ca"
-  let e = "#c1e8ff"
-}
-if (titulo == t_js){
   if (blackTeme) {
+    background_color = "rgb(24, 30, 57)";
+    back_color = "rgba(0, 0, 255, .05)";
+    shadow1 = "rgb(27, 70, 125)";
+    shadow2 = "rgba(20, 20, 255, 0.1)";
+    linkColor = "#00F";
+  }
+  else{
+    back_color = "rgba(0, 0, 255, .05)";
+    shadow1 = "rgba(0, 119, 255, 0.164)";
+    shadow2 = "rgba(0, 0, 255, 0.1)";
+    linkColor = "#00F";
+  }
+}
+if (titulo == t_js || titulo == t_index){
+  if (blackTeme) {
+    background_color = "rgb(24, 57, 43)";
     back_color = "rgba(0, 255, 0, .02)";
-    shadow1 = "rgba(27, 125, 79, 1)";
+    shadow1 = "rgba(27, 125, 80, 1)";
     shadow2 = "rgba(0, 255, 38, 0.1)";
-    linkColor = "#FFF";
+    linkColor = "#0F0";
   }else{
     back_color = "rgba(0, 255, 0, 0)";
     shadow1 = "rgba(0, 159, 0, 0.4)";
@@ -162,7 +175,7 @@ if (blackTeme) {
         --aquaC: ;
       }
       body{
-        background-color: ${background_black_color};
+        background-color: ${background_color};
         color: var(--varC);
       }
       .cod{

@@ -1,6 +1,5 @@
 // @ts-check
 
-// ?En typescript se asignan automaticamente los tipos
 //? Evitar escribir tipos (anotacion - tipar)
 
 //* Tipos y anotaciones

@@ -1,6 +1,7 @@
 // Nav-Bar 
 export default function navbar() {
   return /*html*/`
+    <div style="height: 50px"></div>
     <div id="navbar">
       <nav><ul>
         <li><a href="${index}">${logo_25px}</a></li>
@@ -20,12 +21,12 @@ export default function navbar() {
         --link: ${linkColor};
       }
       #navbar {
-        /* padding: 7px 0;
+        padding-block: 10px;
         min-width: 100%;
         position: fixed;
         top: -23px;
-        left: 0; */
-        z-index: 1;
+        left: 0; 
+        z-index: 1;       
       }
       #navbar nav ul {
         background: linear-gradient(90deg,

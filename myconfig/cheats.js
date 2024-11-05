@@ -4,10 +4,10 @@ export default function cheats(){
 
   // Frameworks & Librerias de INDEX
   function frameLibs(){
-    if (titulo == t_index) {
+    if (titulo == t_index || titulo == t_css) {
       return( /*html*/`
-        <div class="iconosFlex">
-          <table class="ch-BS" onclick="loadBS()"> <caption> BtSp </caption> 
+        <div class="iconosFlex icoFramLibs">
+          <table class="ch-${t_bs}" onclick="loadBS()"> <caption> BtSp </caption>
             <td><img src="${imgs_dir}bootstrap-icon.png"></td>
           </table>
         </div>
@@ -28,6 +28,7 @@ export default function cheats(){
 
       <table class="ch-${t_php}" onclick="loadPHP()">   <caption> PHP </caption> 
         <td><img src="${imgs_dir}php2.png"></td> </table>
+
     </div>
     
     ${frameLibs()}
@@ -44,8 +45,14 @@ export default function cheats(){
 
       /* icon actual */
       .ch-${titulo}{
+        cursor: default !important;
         filter: blur(0) grayscale(0) drop-shadow(0 0 10px black) !important;
-        transform: scale(1.1);
+        animation: iconAnim 2s infinite linear;
+      }
+      @keyframes iconAnim {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }  
       }
     </style>
   `

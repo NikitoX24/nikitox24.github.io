@@ -1,0 +1,1 @@
+let textoIcon = /*html*/`<hr> <h1>${logo_25px}Machetes${logo_25px}</h1> <hr>`
