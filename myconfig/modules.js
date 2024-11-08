@@ -1,15 +1,28 @@
-// import index_module from "./index.js";
 import navbar_module from "./navbar.js";
 import cheats_module from "./cheats.js";
-import otros_module, {textoFix} from "./otros.js";
-import footer_module, {footer} from "./footer.js";
+import otros_module, {textoFix, footer, horaPS} from "./otros.js";
+import index_module from "./index.js";
 
-// document.querySelector(".TituloIcon").innerHTML = styles_module();
-document.querySelector(".navBar").innerHTML += navbar_module();
-document.querySelector(".cheats").innerHTML += cheats_module();
 
-let footerDiv = document.querySelector(".footer").innerHTML += footer;
-if (footerDiv) footer_module();
 
-let otrosDiv = document.querySelector(".otros").innerHTML += textoFix;
-if (otrosDiv) otros_module();
+const navDiv = document.querySelector(".navBar");
+if (navDiv) navDiv.innerHTML += navbar_module;
+
+const cheatDiv = document.querySelector(".cheats");
+if (cheatDiv) cheatDiv.innerHTML += cheats_module();
+
+const footerDiv = document.querySelector(".footer");
+if (footerDiv){
+  footerDiv.innerHTML += footer;
+  horaPS();
+}
+
+let otrosDiv = document.querySelector(".otros");
+if (otrosDiv){
+  otrosDiv.innerHTML += textoFix;
+  otros_module();
+}
+
+
+const tituloIcon = document.querySelectorAll(".TituloIcon");
+if (tituloIcon) index_module();

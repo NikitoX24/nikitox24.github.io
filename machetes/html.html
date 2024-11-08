@@ -15,36 +15,21 @@
   <section id="HTML">
     <fieldset> <!-- Metadatos -->
       <legend> Metadatos </legend>  
-        <div class="cod">
-          &lt;<NRed>meta</NRed> <NPurp>name</NPurp>="lang" content="es"> <br>
-          &lt;<NRed>meta</NRed> <NPurp>name</NPurp>="description" content="P&aacute;gina principal"> <br>
-          &lt;<NRed>meta</NRed> <NPurp>name</NPurp>="keywords" content="html, css, sitio web"> <br>
-          &lt;<NRed>meta</NRed> <NPurp>name</NPurp>="theme-color" content="#1bb566"> <br>
-          &lt;<NRed>meta</NRed> <NPurp>name</NPurp>="robots" content="no-follow"> <br>
-          &lt;<NRed>meta</NRed> <NPurp>name</NPurp>="author" content="Nicolas"> <br>
-          &lt;<NRed>meta</NRed> <NPurp>name</NPurp>="organization" content="CheatsSheets-Org"> <br>
-          &lt;<NRed>meta</NRed> <NPurp>name</NPurp>="locality" content="Córdoba, Arg"> <br>
+        <div class="cod columnas">
+          &lt;<NRed>meta</NRed> <NPurp>name</NPurp> = "<NGreen>lang</NGreen>"        <NPurp>content</NPurp>="<NGreen>es</NGreen>"> <br>
+          &lt;<NRed>meta</NRed> <NPurp>name</NPurp> = "<NGreen>description</NGreen>" <NPurp>content</NPurp>="<NGreen>Pag principal</NGreen>"> <br>
+          &lt;<NRed>meta</NRed> <NPurp>name</NPurp> = "<NGreen>keywords</NGreen>"    <NPurp>content</NPurp>="<NGreen>html, css, js</NGreen>"> <br>
+          &lt;<NRed>meta</NRed> <NPurp>name</NPurp> = "<NGreen>theme-color</NGreen>" <NPurp>content</NPurp>="<NGreen>#1bb566</NGreen>"> <br>
+          &lt;<NRed>meta</NRed> <NPurp>name</NPurp> = "<NGreen>robots</NGreen>"      <NPurp>content</NPurp>="<NGreen>no-follow</NGreen>"> <br>
+          &lt;<NRed>meta</NRed> <NPurp>name</NPurp> = "<NGreen>author</NGreen>"      <NPurp>content</NPurp>="<NGreen>Nicolas</NGreen>"> <br>
+          &lt;<NRed>meta</NRed> <NPurp>name</NPurp> = "<NGreen>organization</NGreen>"<NPurp>content</NPurp>="<NGreen>CheatsOrg</NGreen>"> <br>
+          &lt;<NRed>meta</NRed> <NPurp>name</NPurp> = "<NGreen>locality</NGreen>"    <NPurp>content</NPurp>="<NGreen>Córdoba, Arg</NGreen>"> <br>
         </div>
     </fieldset>
 
     <!-- Tipos de textos -->
     <fieldset>
       <legend> Tipos de textos </legend>
-
-      <div class="flex"> <!-- PREformado -->
-        <div class="ej"> <pre>            Texto   con       espacio. </pre> </div>
-        <div class="cod"> <p><NRed>&lt;pre></NRed> PREformado <NRed>&lt;/pre></p> </div>
-      </div>
-
-      <div class="flex"> <!-- Texto Editable -->
-        <div class="ej"> <p contenteditable="true"> Este texto es editable.</p> </div>
-        <div class="cod"> <p><NRed>&lt;p <NPurp>contenteditable=</NPurp>"<NGreen>true</NGreen>"></NRed> Texto <NRed>&lt;/p></NRed></p> </div>
-      </div>
-
-      <div class="flex"> <!-- Marquee -->
-        <div class="ej"> <marquee> Texto que se desplaza de un lado al otro. </marquee> </div>
-        <div class="cod"> <NRed>&lt;marquee></NRed> Marquee <NRed>&lt;/marquee></NRed> </div>
-      </div>
       
       <div class="flex"> <!-- Span - Reforzado -->
         <div class="flex"> <!-- Span -->
@@ -122,6 +107,21 @@
           <div class="cod">Pal<NRed>&lt;wbr></NRed>abra </div>
         </div>
       </div>
+
+      <div class="flex"> <!-- PREformado -->
+        <div class="ej"> <span>Texto <NTab2></NTab2> con <NTab2></NTab2><NTab2></NTab2> espacio. </span> </div>
+        <div class="cod"> <span><NRed>&lt;pre></NRed> PREformado <NRed>&lt;/pre></span> </div>
+      </div>
+
+      <div class="flex"> <!-- Texto Editable -->
+        <div class="ej"> <span contenteditable="true"> Este texto es editable.</span> </div>
+        <div class="cod"> <span><NRed>&lt;p <NPurp>contenteditable=</NPurp>"<NGreen>true</NGreen>"></NRed> Texto <NRed>&lt;/p></NRed></span> </div>
+      </div>
+
+      <div class="flex"> <!-- Marquee -->
+        <div class="ej"> <marquee> Texto que se desplaza de un lado al otro. </marquee> </div>
+        <div class="cod"> <NRed>&lt;marquee></NRed> Marquee <NRed>&lt;/marquee></NRed> </div>
+      </div>
     </fieldset>
 
     <!-- Imagen -->
@@ -134,49 +134,46 @@
           <a href="../Imgs/Apple.png" target="_blank"> <img src="../Imgs/Apple.png" alt="Apple" height="50px" title="Apple"> </a>
         </div>
         <div class="cod">
-          <NRed>&lt;a</NRed> <font color="purple">href</font> ="<font color="green">../Apple.png</font>"<NRed>></NRed> <br>
-          &nbsp; <NRed>&lt;img</NRed> <font color="purple">src=</font> "<font color="green">../Imagen.png</font>" <font color="purple">alt=</font>"Texto alternativo" <font color="purple">title=</font>"descripción"<NRed>> <br> &lt;/a></NRed> <NGray> target="_blank" (abrir en nueva pestaña) </NGray>
+          <NRed>&lt;a</NRed> <NPurp>href</NPurp> ="<NGreen>Apple.png</NGreen>"<NRed> <NGray>target="_blank"</NGray>></NRed> <br>
+          &nbsp; <NRed>&lt;img</NRed> <NPurp>src=</NPurp> "<NGreen>Apple.png</NGreen>" <NPurp>alt=</NPurp>"<NGreen>Texto alternativo</NGreen>" <NPurp>title=</NPurp>"<NGreen>descripción</NGreen>"<NRed>> <br> &lt;/a></NRed>
         </div>
       </div> <hr>
 
       <!-- Mapa -->
       Imagen con Mapa: <u>(Usar DreamWeaver CC)</u>
-      <div class="flex fWrap">
-        <div class="ej wAuto">
+      <div class="flex" style="align-items: center; justify-content: center;">
+        <div class="w40" style="transform: scale(0.8) translate(-30px);">
           <img src="../Imgs/imgMap.png" usemap="machetes.html#ejemplo_mapa" height="163px">
-          <map name="ejemplo_mapa">
+          <map name="ejemplo_mapa" >
             <area shape="rect" coords="18,16,171,73" href="../Imgs/Apple.png" alt="rectangulo">
             <area shape="circle" coords="263,55,36" href="../Imgs/css_logo.png" alt="circulo">
             <area shape="poly" coords="163,91,213,141,127,141" href="../Imgs/Orange.png" alt="poligono">
           </map>
         </div>
         
-        <div class="cod wAuto" style="font-size: 0.9em;">
-          <NRed>&lt;img</NRed> <NPurp>src</NPurp>="imgMap.png"  <NPurp>usemap</NPurp>="HTML.html#ejemplo_mapa""<NRed>></NRed> <br><br>
-          <NRed>&lt;map</NRed> <NPurp>name</NPurp>="ejemplo_mapa"<NRed>></NRed> <br>
-            &nbsp; <NRed>&lt;area</NRed> <NPurp>shape</NPurp>="rect" <NPurp>coords</NPurp>="18,16,171,73" <NPurp>href</NPurp>="Apple.png"> <br>
-              <!-- <NGray>coorlds(izq, sup, der, inf)</NGray> <br> -->
-            &nbsp; <NRed>&lt;area</NRed> <NPurp>shape</NPurp>="circle" <NPurp>coords</NPurp>="263,55,36" <NPurp>href</NPurp>="css_logo.png"> <br>
-              <!-- <NGray>(centro-x, centro-y, redia)</NGray> <br> -->
-            &nbsp; <NRed>&lt;area</NRed> <NPurp>shape</NPurp>="poly" <NPurp>coords</NPurp>="163,91,213,141,127,141" <br> <NPurp>href</NPurp>="Orange.png"> <br>
-              <!-- <NGray>(x1, y1, x2, y2, ..., xN, yN)</NGray> <br> -->
-            <NRed>&lt;/map></NRed> <br>
-          <NGray> nohref=""(indica q este area no tiene enlace) </NGray>
+        <div class="cod w60" style="height: 100%;">
+          &lt;<NRed>img</NRed> <NPurp> src</NPurp>="<NGreen>imgMap.png</NGreen>" <NPurp>usemap</NPurp>="<NGreen>HTML.html#ejemplo_mapa</NGreen>"> <br>
+          <br>
+          &lt;<NRed>map</NRed> <NPurp> name</NPurp>="<NGreen>ejemplo_mapa</NGreen>"> <br>
+          <NTab></NTab>&lt;<NRed>area</NRed> <NPurp> shape</NPurp>="<NGreen>rect</NGreen>" <NPurp>coords</NPurp>="<NGreen title="(izq, sup, der, inf)">18,16,171,73</NGreen>" <NPurp>href</NPurp>="<NGreen>Apple.png</NGreen>"> <br>
+          <NTab></NTab>&lt;<NRed>area</NRed> <NPurp> shape</NPurp>="<NGreen>circle</NGreen>" <NPurp>coords</NPurp>="<NGreen title="(centro-x, centro-y, redia)">263,55,36</NGreen>" <NPurp>href</NPurp>="<NGreen>css_logo.png</NGreen>"> <br>
+          <NTab></NTab>&lt;<NRed>area</NRed> <NPurp> shape</NPurp>="<NGreen>poly</NGreen>" <NPurp>coords</NPurp>="<NGreen title="(x1, y1, x2, y2, ..., xN, yN)">163,91,213,141,127,141</NGreen>" <NPurp>href</NPurp>="<NGreen>orang.png</NGreen>"> <br>
+          &lt;<NRed>/map</NRed>> <br> <NGray> nohref=""(indica q este area no tiene enlace) </NGray>
         </div>
       </div>
     </fieldset>
 
     <!-- Audio, Video, Progress, Iframe -->
     <fieldset>
-      <legend> Audio, Video, Progreso, Iframe </legend>
+      <legend> Audio, Video, Progress, Iframe </legend>
       <!-- Audio -->
-      <div class="flex fWrap">
+      <div class="flex">
         <div class="wAuto">
-          <audio src="audio.mp3" controls style="height: 50px; width: 240px;"> Texto por si el navegador no soporta audio. </audio>
+          <audio src="audio.mp3" controls style="height: 22px; width: 240px;"> Texto por si el navegador no soporta audio. </audio>
           <div class="cod">&lt;<NRed>audio<NPurp> src="<NGreen>aud.mp3</NGreen>" controls autoplay loop</NPurp>> &lt; /audio</NRed>></div>
         </div>
-        <div class="wAuto"> <br>
-          <progress min="0" max="100" value="75" style="height: 24px; width: 240px;"></progress> <br>
+        <div class="wAuto">
+          <progress min="0" max="100" value="75" style="height: 25px; width: 240px;"></progress> <br>
           <div class="cod">
             &lt;<NRed>progress <NPurp> min="<NGreen>0</NGreen>" max="<NGreen>100</NGreen>"value="<NGreen>75</NGreen>>  </NPurp> /progress</NRed>>
           </div>
@@ -187,7 +184,7 @@
       <div class="flex fWrap" style="font-size: 0.9em;">
         <div class="wAuto">
           <iframe id="myFrame" width="300" height="150" src="https://www.youtube.com/embed/o8kT5c_4PAc" frameborder="0" allowfullscreen>Loading...</iframe>
-          <div class="cod"> &lt;<NRed>iframe</NRed> <NPurp>src</NPurp>="<NGreen>link</NGreen>" <NPurp>frameborder</NPurp>="0" <NPurp>allowfullscreen</NPurp>> &lt;/<NRed>iframe</NRed>> </div>
+          <div class="cod"> &lt;<NRed>iframe</NRed> <NPurp>src</NPurp>="<NGreen>link</NGreen>" <NPurp>frameborder</NPurp>="<NGreen>0</NGreen>" <NPurp>allowfullscreen</NPurp>> &lt;/<NRed>iframe</NRed>> </div>
         </div>
         <div class="wAuto">
           <video controls autoplay loop> <source src="video.mp4" type="video/mp4">Este navegador no soporta audio. </video>
@@ -201,46 +198,46 @@
       <legend> Listas </legend>
 
       <!-- Lista desordenada -->
-      <div>
+      <div class="w30">
         <h3>Desordenada &lt;ul&gt;</h3>
         <ul>
           <li type="disc">Disc</li>
           <li type="circle">Circle</li>
           <li type="square">Square</li>
         </ul>
-        <div class="codigo"> <NRed>
+        <div class="cod"> <NRed>
           &lt;ul> <br> 
             &nbsp; &lt;li <NPurp>type</NPurp>="<NGreen>disc</NGreen>"> &lt;/li> <br>
             &nbsp; &lt;li <NPurp>type</NPurp>="<NGreen>circle</NGreen>"> &lt;/li> <br>
             &nbsp; &lt;li <NPurp>type</NPurp>="<NGreen>square</NGreen>"> &lt;/li> <br>
           &lt;/ul> </NRed>
         </div>
-      </div> <hr>
+      </div> 
         
       <!-- Lista  Ordenada -->
-      <div>
+      <div class="w30">
         <h3>Ordenada &lt;ol&gt;</h3>
         <ol>
           <li type="1">Numeros (1).</li>
           <li type="a">Letras (a-A).</li>
-          <li type="I">Num romanos (i-I).</li>
+          <li type="I">N. romanos (i-I).</li>
         </ol>
-        <div class="codigo"> <NRed>
+        <div class="cod"> <NRed>
           &lt;ol> <br>
             &nbsp; &lt;li <NPurp>type</NPurp>="<NGreen>1</NGreen>"> &lt;/li> <br>
             &nbsp; &lt;li <NPurp>type</NPurp>="<NGreen>a</NGreen>"> &lt;/li> <br>
             &nbsp; &lt;li <NPurp>type</NPurp>="<NGreen>I</NGreen>"> &lt;/li> <br>
           &lt;/ol> </NRed>
         </div> 
-      </div> <hr>
+      </div> 
       
       <!-- Lista descriptiva -->
-      <div>
+      <div class="w30">
         <h3>Descriptiva &lt;dl&gt;</h3>
         <dl> <dt>Texto a detallar.
           <dd> Texto descriptivo...</dd> </dt>
         </dl> <br>
-        <div class="codigo"> <NRed>
+        <div class="cod"> <NRed>
           &#60;dl> <br> &nbsp; &#60;dt> <NVar>Texto a detallar.</NVar> <br>
           &nbsp; &nbsp; &#60dd> <NVar>Texto descriptivo...</NVar> &#60;/dd></dd> <br>
           &nbsp; &#60;/dt> <br> &#60;/dl> </NRed>
@@ -252,7 +249,7 @@
     <fieldset class="flex">
       <legend>  Tabla </legend>
       <div><br>
-        <table border="2" style="width: 100%; height: 100px; background-color: white;">
+        <table border="2" style="width: 100%; height: 100px; background-color: white; color: black;">
           <caption> Título </caption>
           <tr><th colspan="4">Colores</th></tr>
           <tr>
@@ -267,25 +264,25 @@
           </tr>
         </table>
 
-        <p>
+        <div class="textoSuelto">
           Atributos: BORDER, CELLPADDING, CELLSPACING. <br>
             VALING = alinear verticalmente. (top, bottom, middle) <br>
             ALING = alinear horizontalmente. (right, left, center) <br>
-        </p>
+        </div>
       </div>
 
-      <div class="codigo">
-        <NRed>&lt;table <NPurp>border</NPurp>="2"></NRed>  <br>
+      <div class="cod w40">
+        <NRed>&lt;table <NPurp>border=</NPurp><NGreen>"2"</NGreen>></NRed>  <br>
           &nbsp; <NRed>&lt;caption></NRed> Título <NRed>&lt;/caption></NRed> <br>
-          &nbsp; <NRed>&lt;tr>&lt;th <NPurp>colspan</NPurp>="4"></NRed> Colores <NRed>&lt;/th>&lt;/tr></NRed><br>
+          &nbsp; <NRed>&lt;tr>&lt;th <NPurp>colspan=</NPurp><NGreen>"4"</NGreen>></NRed> Colores <NRed>&lt;/th>&lt;/tr></NRed><br>
           &nbsp; <NRed>&lt;tr></NRed> <br>
-            &nbsp; &nbsp; &lt;td <NPurp>bgcolor</NPurp>="red">Rojo &lt;/td> <br>
-            &nbsp; &nbsp; &lt;td> Azul &lt;/td> <br>
-            &nbsp; &nbsp; &lt;td> Verde &lt;/td> <br>
-            &nbsp; &nbsp; &lt;td <NPurp>rowspan</NPurp>="2"> Violeta &lt;/td> <br>
+            &nbsp; &nbsp; <NRed>&lt;td <NPurp>bgcolor=</NPurp><NGreen>"red"</NGreen>></NRed> Rojo <NRed>&lt;/td></NRed> <br>
+            &nbsp; &nbsp; <NRed>&lt;td></NRed> Azul <NRed>&lt;/td></NRed> <br>
+            &nbsp; &nbsp; <NRed>&lt;td></NRed> Verde <NRed>&lt;/td></NRed> <br>
+            &nbsp; &nbsp; <NRed>&lt;td <NPurp>rowspan=</NPurp><NGreen>"2"</NGreen>></NRed> Violeta <NRed>&lt;/td></NRed> <br>
           &nbsp; <NRed>&lt;/tr> &lt;tr></NRed> <br>
-            &nbsp; &nbsp; &lt;td> Amarillo &lt;/td> <br>
-            &nbsp; &nbsp; &lt;td <NPurp>colspan</NPurp>="2"> Naranja &lt;/td> <br>
+            &nbsp; &nbsp; <NRed>&lt;td></NRed> Amarillo <NRed>&lt;/td></NRed> <br>
+            &nbsp; &nbsp; <NRed>&lt;td <NPurp>colspan=</NPurp><NGreen>"2"</NGreen>></NRed> Naranja <NRed>&lt;/td></NRed> <br>
           <NRed>&nbsp; &lt;/tr> &lt;/table></NRed>
       </div>
     </fieldset>
@@ -293,242 +290,182 @@
     <!-- Links -->
     <fieldset>
       <legend>  Links  </legend>
-
       <!-- Link Externo: -->
       <div class="flex">
-        <div class="ejemplo"><a href="#" target="_blank"> Link Externo: </a></div>
+        <div class="ej w50"><a href="#" target="_blank"> Link Externo: </a></div>
         <div class="cod">
-          <NRed>&lt;a</NRed> <font color="purple">href=</font>"<u>https://ejemplo.com</u>" <font color="purple">target=</font>"_blank"<NRed>></NRed>
+          <NRed>&lt;a</NRed> <NPurp>href=</NPurp>"<u><NGreen>https://ejemplo.com</NGreen></u>" <NPurp>target=</NPurp>"<NGreen>_blank</NGreen>"<NRed>></NRed>
           Texto del link <NRed>&lt;/a></NRed>
         </div>
       </div>
-
       <!-- Link Interno: -->
       <div class="flex">
-        <div class="ejemplo"><a href="../index.html">Link Interno:</a></div>
+        <div class="ej w100"><a href="../index.html">Link Interno:</a></div>
         <div class="cod">
-          <NRed>&lt;a</NRed> <font color="purple">name=</font>"principio"<NRed>>&lt;/a></NRed>  <br>
+          <NRed>&lt;a</NRed> <NPurp>name=</NPurp>"<NGreen>principio</NGreen>"<NRed>>&lt;/a></NRed>  <br>
         </div>
         <div class="cod">
-        <NRed>&lt;a</NRed> <font color="purple">href=</font>"<u>#principio</u>"<NRed>></NRed> ir a index <NRed>&lt;/a></NRed> 
+        <NRed>&lt;a</NRed> <NPurp>href=</NPurp>"<u><NGreen>#principio</NGreen></u>"<NRed>></NRed> ir a index <NRed>&lt;/a></NRed> 
         </div>
       </div>
     </fieldset>
 
     <!-- Form - Tipos de Entradas -->
     <fieldset>
-      <legend>  Formularios (usar en &lt;form> y PHP)  </legend>
+      <legend> Formularios (usar en &lt;form> y PHP) </legend>
 
-      <!-- Text / number -->
-      <div class="div">
-        <div class="box boxder">
-          &lt; input type="<NRed>text</NRed> / <NRed>number</NRed>">
+      <style>
+        .cod .flex{ justify-content: space-between; }
+        .chico {width: 80px;}
+        .medio {width: 260px;}
+      </style>
+  
+      <div class="cod">
+        <!-- Text / number -->
+        <div class="flex">
+          <div> &lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>text / number / tel</NGreen>"> </div>
+          <div>
+            <input type="text" placeholder="Texto" class="chico">
+            <input type="number" placeholder="123" class="chico">
+            <input type="tel" placeholder="123-456-789" class="chico">
+          </div>
         </div>
-        <div class="box boxizq">
-          <input type="text" placeholder="Texto">
-          <input type="number" name="" id="" placeholder="123">
-        </div>
-      </div>
 
-      <!-- Radio / Checkbox -->
-      <div class="div">
-        <div class="box boxder">
-          &lt; input type="<NRed>radio</NRed> / <NRed>checkbox</NRed>">
+        <!-- Email / Password -->
+        <div class="flex">
+          <div> &lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>email / password</NGreen>"> </div>
+          <div>
+            <input type="email" placeholder="name@hotmail.com" class="chico" >
+            <input type="password" placeholder="********" class="chico" >
+          </div>
         </div>
-        <div class="boxizq">
-          <div class="box boxder">
+
+        <!-- Url / Search -->
+        <div class="flex">
+          <div> &lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>url / search</NGreen>"> </div>
+          <div> 
+            <input type="url" placeholder="https://www.ej.com" class="chico">
+            <input type="search" placeholder="Buscar..." class="chico">
+          </div>
+        </div>
+
+        <!-- Time / Date / Datetime-local -->
+        <div class="flex">
+          <div>
+            &lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>time / date / datetime-local</NGreen>">
+          </div>
+          <div>
+            <input type="time" class="chico">
+            <input type="date" class="chico">
+            <input type="datetime-local" class="chico">
+          </div>
+        </div>
+
+        <!-- Week / Month -->
+        <div class="flex">
+          <div> &lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>week / month</NGreen>"> </div>
+          <div> <input type="week" class="chico"> <input type="month" class="chico"> </div>
+        </div>
+
+        <!-- File -->
+        <div class="flex">
+          <div> &lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>file</NGreen>"> </div>
+          <div> <input type="file" class="medio" /> </div>
+        </div>
+
+        <!-- Submit / Reset -->
+        <div class="flex">
+          <div> &lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>submit / reset</NGreen>"> </div>
+          <div> <input type="submit"> <input type="reset"> </div>
+        </div>
+
+        <!-- Button / Color -->
+        <div class="flex">
+          <div> &lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>button / image / color</NGreen>"> </div>
+          <div>
+            <input type="button" value="Botón">
+            <input type="color" value="#00fff0" style="height: 20px; padding: 0px;">
+            <input type="image" src="../Imgs/login-button.png" alt="Login" width="50px">
+          </div>
+        </div>
+
+        <!-- Radio / Checkbox / range -->
+        <div class="flex">
+          <div> &lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>radio / checkbox / range</NGreen>">  </div>
+          <div>
             <input type="checkbox" />
             <input type="checkbox" checked />
-            <input type="checkbox" />
+            <input type="checkbox" /> 
+            &nbsp; &nbsp;
+            <input type="radio" name="siono" value="no" />no
+            <input type="radio" name="siono" value="yes" checked />si
+            <input type="range">
           </div>
-          <div class="box boxder">
-            <input type="radio" name="siono" value="no" />NO
-            <input type="radio" name="siono" value="yes" checked />YES
+        </div>
+
+
+        <hr>
+
+
+        <!-- datalist -->
+        <div class="flex">
+          <div>
+            <input placeholder="Seleccionar o Escribir:" list="Lista">
+            <datalist id="Lista">
+              <option value="uno"></option>
+              <option value="dos"></option>
+              <option value="tres"></option>
+            </datalist>
+          </div>
+          <div>
+            <NRed>&lt;input</NRed> <NPurp>List=</NPurp>"<NGreen>Lista</NGreen>"<NRed>>
+            &lt;datalist <NPurp>id=</NPurp>"<NGreen>Lista</NGreen>">
+            &lt;option <NPurp>value=</NPurp>"<NGreen>uno</NGreen>"></NRed>
+          </div>
+        </div>
+        <!-- select / option -->
+        <div class="flex">
+          <div>
+            <label> Escojer Pais: </label>
+            <select name="escojerUno">
+              <optgroup label="Latinoamerica">
+                <option value="Arg">Argentina</option>
+                <option value="Col">Colombia</option>
+              </optgroup>
+              <optgroup label="Norteamerica">
+                <option value="EEUU">Estados Unidos</option>
+                <option value="Can">Canada</option>
+              </optgroup>
+            </select>
+          </div>
+          <div>
+            <NRed>&lt;select <NPurp>name=</NPurp>"<NGreen>Lista2</NGreen>">
+            &lt;optgroup <NPurp>label=</NPurp>"<NGreen>Lat</NGreen>">
+            &lt;option <NPurp>value=</NPurp>"<NGreen>Arg</NGreen>"></NRed>
+          </div>
+        </div>
+        <!-- TextArea -->
+        <div class="flex">
+          <div>
+            <label>Comentarios:</label>
+            <textarea name="comentario" id="" value="" style="height: 10px;"></textarea>
+          </div>
+          <div>
+            <NRed>&lt;label></NRed>Comentarios:<NRed>&lt;label></NRed>
+            <NRed>&lt;textarea</NRed> <NPurp>rows</NPurp>="<NGreen>6</NGreen>" <NPurp>cols</NPurp>="<NGreen>40</NGreen>"<NRed>> &lt;/textarea></NRed>
           </div>
         </div>
       </div>
 
-      <!-- Button / Color -->
-      <div class="div">
-        <div class="box boxder">
-          &lt; input type="<NRed>button</NRed> / <NRed>image</NRed> / <NRed>color</NRed>">
-        </div>
-        <div class="boxizq">
-          <div class="box boxder">
-            <input type="button" value="Botón">
-          </div>
-          <div class="box boxder">
-            <input type="color" name="" id="" value="#00fff0">
-          </div>
-            <input type="image" src="../Imgs/login-button.png" alt="Login" width="50px">
-        </div>
-      </div>
-
-      <!-- Email / Password -->
-      <div class="div">
-        <div class="box boxder">
-          &lt; input type="<NRed>email</NRed> / <NRed>password</NRed>">
-        </div>
-        <div class="box boxizq">
-          <input type="email" name="" id="" placeholder="ejemplo@hotmail.com">
-          <input type="password" placeholder="********">
-        </div>
-      </div>
-
-      <!-- File -->
-      <div class="div">
-        <div class="box boxder">
-          &lt; input type="<NRed>file</NRed>">
-        </div>
-        <div class="box boxizq">
-          <input type="file" name="" id="">
-        </div>
-      </div>
-
-      <!-- Range -->
-      <div class="div">
-        <div class="box boxder">
-          &lt; input type="<NRed>range</NRed>">
-        </div>
-        <div class="box boxizq">
-          <input type="range" name="" id="">
-        </div>
-      </div>
-
-      <!-- Search -->
-      <div class="div">
-        <div class="box boxder">
-          &lt; input type="<NRed>search</NRed>">
-        </div>
-        <div class="box boxizq">
-          <input type="search" name="" id="" placeholder="Buscar">
-        </div>
-      </div>
-
-      <!-- Tel -->
-      <div class="div">
-        <div class="box boxder">
-          &lt; input type="<NRed>tel</NRed>">
-        </div>
-        <div class="box boxizq">
-          <input type="tel" name="" id="" placeholder="123-456-789">
-        </div>
-      </div>
-
-      <!-- Time / Date / Datetime-local -->
-      <div class="div">
-        <div class="box boxder">
-          &lt;input type="<NRed>time</NRed>/<NRed>date</NRed>/<NRed>datetime-local</NRed>">
-        </div>
-        <div class="box boxizq">
-          <input type="time" name="" id="" style="width: 100px;">
-          <input type="date" name="" id="" style="width: 100px;">
-          <input type="datetime-local" name="" id="" style="width: 200px;">
-        </div>
-      </div>
-
-      <!-- Week / Month -->
-      <div class="div">
-        <div class="box boxder">
-          &lt; input type="<NRed>week</NRed> / <NRed>month</NRed>">
-        </div>
-        <div class="box boxizq">
-          <input type="week" name="" id="">
-          <input type="month" name="" id="">
-        </div>
-      </div>
-
-      <!-- Url -->
-      <div class="div">
-        <div class="box boxder">
-          &lt; input type="<NRed>url</NRed>">
-        </div>
-        <div class="box boxizq">
-          <input type="url" name="" id="" placeholder="https://www.google.com">
-        </div>
-      </div>
-
-      <!-- Submit / Reset -->
-      <div class="div">
-        <div class="box boxder">
-          &lt; input type="<NRed>submit</NRed> / <NRed>reset</NRed>">
-        </div>
-        <div class="box boxizq">
-          <input type="submit" name="" id="">
-          <input type="reset" name="" id="">
-        </div>
-      </div>
-
-      <hr>
-
-      <!-- TextArea -->
-      <div class="div">
-        <div class="boxizq">
-          <label>Comentarios:</label> <br>
-          <textarea name="comentario" id="" value=""></textarea>
-        </div><br>
-        <div class="box boxder" style="height: auto;">
-          <NRed>&lt;label></NRed>Comentarios:<NRed>&lt;label></NRed> <br>
-          <NRed>&lt;textarea</NRed> <NPurp>rows</NPurp>="<NGreen>6</NGreen>" <NPurp>cols</NPurp>="<NGreen>40</NGreen>"<NRed>> &lt;/textarea></NRed>
-        </div>
-      </div> <br><br>
-
-      <!-- datalist -->
-      <div class="div">
-        <div class="boxizq">
-          <input placeholder="Seleccionar o Escribir:" list="Lista">
-          <datalist id="Lista">
-            <option value="uno"></option>
-            <option value="dos"></option>
-            <option value="tres"></option>
-          </datalist>
-        </div>
-        <div class="box boxder">
-          <NRed>&lt;input</NRed> <NPurp>List=</NPurp>"<NGreen>Lista</NGreen>"<NRed>>
-          &lt;datalist <NPurp>id=</NPurp>"<NGreen>Lista</NGreen>">
-          &lt;option <NPurp>value=</NPurp>"<NGreen>uno</NGreen>"></NRed>
-        </div>
-      </div> <br>
-
-      <!-- select / option -->
-      <div class="div">
-        <div class="box boxizq">
-          <label> Escojer Pais: </label>
-          <select name="escojerUno">
-            <optgroup label="Latinoamerica">
-              <option value="Arg">Argentina</option>
-              <option value="Col">Colombia</option>
-            </optgroup>
-            <optgroup label="Norteamerica">
-              <option value="EEUU">Estados Unidos</option>
-              <option value="Can">Canada</option>
-            </optgroup>
-          </select>
-        </div>
-        <div class="box boxder">
-          <NRed>&lt;select <NPurp>name=</NPurp>"<NGreen>Lista2</NGreen>">
-          &lt;optgroup <NPurp>label=</NPurp>"<NGreen>Lat</NGreen>">
-          &lt;option <NPurp>value=</NPurp>"<NGreen>Arg</NGreen>"></NRed>
-        </div>
-      </div>
-      <hr>
 
       <!-- Formulario POST -->
-      <form action="">
-        <label for="POST-name">Nombre:</label>
-        <input id="POST-name" type="text" name="name" />
-        <input type="submit" value="Save" />
-      </form>
       <div class="cod">
         &lt;<NRed>form</NRed> <NPurp> action</NPurp>="<NGreen>file.php</NGreen>" <NPurp>method</NPurp>="<NGreen>POST / GET</NGreen>"> <br>
-        <NTab></NTab>&lt;<NRed>label</NRed> <NPurp> for</NPurp>="<NGreen>POST-name</NGreen>"> Nombre: &lt;<NRed>/label</NRed>> <br>
-        <NTab></NTab>&lt;<NRed>input</NRed> <NPurp> id</NPurp>="<NGreen>POST-name</NGreen>" <NPurp>type</NPurp>="<NGreen>text</NGreen>" <NPurp>name</NPurp>="<NGreen>name</NGreen>" /> <br>
-        <NTab></NTab>&lt;<NRed>input</NRed> <NPurp> type</NPurp>="<NGreen>submit</NGreen>" <NPurp>value</NPurp>="<NGreen>Save</NGreen>" /> <br>
+          <NTab></NTab>&lt;<NRed>label</NRed> <NPurp> for</NPurp>="<NGreen>POST-name</NGreen>"> Nombre: &lt;<NRed>/label</NRed>> <br>
+          <NTab></NTab>&lt;<NRed>input</NRed> <NPurp> id</NPurp>="<NGreen>POST-name</NGreen>" <NPurp>type</NPurp>="<NGreen>text</NGreen>" <NPurp>name</NPurp>="<NGreen>name</NGreen>" /> <br>
+          <NTab></NTab>&lt;<NRed>input</NRed> <NPurp> type</NPurp>="<NGreen>submit</NGreen>" <NPurp>value</NPurp>="<NGreen>Save</NGreen>" /> <br>
         &lt;<NRed>/form</NRed>>
       </div>
-
-
-
     </fieldset>
   </section>
 
@@ -651,20 +588,18 @@
       <!-- Gradient... -->
       <details>
         <summary>Gradient y Img</summary>
-          <pre>
-            // Create gradient
-            var grd = ctx2.createRadialGradient(75, 50, 5, 90, 60, 100);
-            grd.addColorStop(0, "red");
-            grd.addColorStop(1, "white");
+          // Create gradient <br>
+          var grd = ctx2.createRadialGradient(75, 50, 5, 90, 60, 100); <br>
+          grd.addColorStop(0, "red"); <br>
+          grd.addColorStop(1, "white"); <br><br>
 
-            // Fill with gradient
-            ctx2.fillStyle = grd;
-            ctx2.fillRect(0, 0, 10, 80);
+          // Fill with gradient <br>
+          ctx2.fillStyle = grd; <br>
+          ctx2.fillRect(0, 0, 10, 80); <br><br>
 
-            // IMG
-            var img = document.getElementById("scream");
-            ctx.drawImage(img, 10, 10);
-          </pre>
+          // IMG <br>
+          var img = document.getElementById("scream"); <br>
+          ctx.drawImage(img, 10, 10); <br>
       </details>
 
     </fieldset>
@@ -705,32 +640,28 @@
         <svg width="50" height="50"> <path d="M0 0 L0 25 L25 25 L25 0 Z" style="stroke:#000;  fill:none;" /> </svg>
       </div>
       <div class="cod">
-        <NRed>&lt;svg</NRed> <NPurp>width</NPurp>="100" <NPurp>height</NPurp>="100"<NRed>>&lt;/svg></NRed> <br>
-          &nbsp; <NRed>&lt;circle</NRed> cx="30" cy="30" r="20" fill="green" <NRed>/></NRed> <br>
-          &nbsp; <NRed>&lt;rect</NRed> width="40" height="40" x="10" y="10" fill="red"<NRed> /></NRed> <br><br>
-
-          <!-- Linea y Poly-->
-          &nbsp; <NRed>&lt;line</NRed> x1="10" y1="10" x2="50" y2="40" style="stroke:#000; stroke-linecap:round; stroke-width:7"<NRed>></NRed> <br>
-          &nbsp; <NRed>&lt;polyline</NRed> style="stroke-linejoin: miter; stroke: black; stroke-width: 5; fill: none;" points="0 0, 40 30, 80 0" <NRed>> &lt;/polyline></NRed> <br><br>
-
-          <!-- Elipse y Poly -->
-          &nbsp; <NRed>&lt;ellipse</NRed> cx="30" cy="30" rx="30" ry="10" style="fill:green" <NRed>/></NRed> <br>
-          &nbsp; <NRed>&lt;polygon</NRed> points="10 10, 60 40, 50 0" style="fill: green; stroke:black;" <NRed>/></NRed> <br> <br>
-
-          <!-- triangulo hipot -->
-          &nbsp; <NRed>&lt;path</NRed> d="M 0 0 L50 50 L50 0 Z" style="stroke:#000;  fill:none;" <NRed>/></NRed> <br>
-          &nbsp; <NRed>&lt;path</NRed> d="M0 0 L0 25 L25 25 L25 0 Z" style="stroke:#000;  fill:none;" <NRed>/></NRed> <br>
-          <details>
-            <div class="codigo">
-              (Usar letras Mayusculas para valores absolutos, y minusculas para pos relativa) <br>
-              M: mover hacia. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; L: linea hacia. <br>
-              H: linea horiz. hacia. &nbsp; &nbsp; V: linea vert. hacia. <br>
-              C: curva hacia. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; S: curva suave hacia. <br>
-              Q: curv Bézir cuadráti. &nbsp; T: curva Bézier cuadrática suave. <br>
-              A: arco elíptico. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Z: cerrar trazado.
-            </div>
-          </details>
-        <NRed>&lt;/svg></NRed>
+        &lt;<NRed>svg</NRed> <NPurp> width</NPurp>="<NGreen>100</NGreen>" <NPurp>height</NPurp>="<NGreen>100</NGreen>">&lt;<NRed>/svg</NRed>> <br>
+        <NTab></NTab>&lt;<NRed>circle</NRed> <NPurp> cx</NPurp>="<NGreen>30</NGreen>" <NPurp>cy</NPurp>="<NGreen>30</NGreen>" <NPurp>r</NPurp>="<NGreen>20</NGreen>" <NPurp>fill</NPurp>="<NGreen>green</NGreen>" /> <br>
+        <NTab></NTab>&lt;<NRed>rect</NRed> <NPurp> width</NPurp>="<NGreen>40</NGreen>" <NPurp>height</NPurp>="<NGreen>40</NGreen>" <NPurp>x</NPurp>="<NGreen>10</NGreen>" <NPurp>y</NPurp>="<NGreen>10</NGreen>" <NPurp>fill</NPurp>="<NGreen>red</NGreen>" /> <br>
+         <br>
+        <NTab></NTab>&lt;<NRed>line</NRed> <NPurp> x1</NPurp>="<NGreen>10</NGreen>" <NPurp>y1</NPurp>="<NGreen>10</NGreen>" <NPurp>x2</NPurp>="<NGreen>50</NGreen>" <NPurp>y2</NPurp>="<NGreen>40</NGreen>" <NPurp>style</NPurp>="<NGreen>stroke:#000; stroke-linecap:round; stroke-width:7</NGreen>"> <br>
+        <NTab></NTab>&lt;<NRed>polyline</NRed> <NPurp> style</NPurp>="<NGreen>stroke-linejoin: miter; stroke: black; stroke-width: 5; fill: none;</NGreen>" <NPurp>points</NPurp>="<NGreen>0 0, 40 30, 80 0</NGreen>"> &lt;<NRed>/polyline</NRed>> <br>
+         <br>
+        <NTab></NTab>&lt;<NRed>ellipse</NRed> <NPurp> cx</NPurp>="<NGreen>30</NGreen>" <NPurp>cy</NPurp>="<NGreen>30</NGreen>" <NPurp>rx</NPurp>="<NGreen>30</NGreen>" <NPurp>ry</NPurp>="<NGreen>10</NGreen>" <NPurp>style</NPurp>="<NGreen>fill:green</NGreen>" /> <br>
+        <NTab></NTab>&lt;<NRed>polygon</NRed> <NPurp> points</NPurp>="<NGreen>10 10, 60 40, 50 0</NGreen>" <NPurp>style</NPurp>="<NGreen>fill: green; stroke:black;</NGreen>" /> <br>
+         <br>
+        <NTab></NTab>&lt;<NRed>path</NRed> <NPurp> d</NPurp>="<NGreen>M 0 0 L50 50 L50 0 Z</NGreen>" <NPurp>style</NPurp>="<NGreen>stroke:#000; fill:none;</NGreen>" /> <br>
+        <NTab></NTab>&lt;<NRed>path</NRed> <NPurp> d</NPurp>="<NGreen>M0 0 L0 25 L25 25 L25 0 Z</NGreen>" <NPurp>style</NPurp>="<NGreen>stroke:#000; fill:none;</NGreen>" /> <br>
+        &lt;<NRed>/svg</NRed>>
+        <details>
+          <summary>Info...</summary>
+          (Usar letras Mayusculas para valores absolutos, y minusculas para pos relativa) <br>
+          M: mover hacia. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; L: linea hacia. <br>
+          H: linea horiz. hacia. &nbsp; &nbsp; V: linea vert. hacia. <br>
+          C: curva hacia. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; S: curva suave hacia. <br>
+          Q: curv Bézir cuadráti. &nbsp; T: curva Bézier cuadrática suave. <br>
+          A: arco elíptico. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Z: cerrar trazado.
+        </details>
       </div>
     </div>
 
@@ -744,9 +675,9 @@
         </svg>
       </div>
       <div class="cod">
-          &nbsp; <NRed>&lt;rect</NRed> width="20" height="20" fill="orange"> <br>
-          &nbsp; <NRed>&nbsp; &lt;animate</NRed> attributeName="x" from="0" to="100" dur="1s" fill="freeze" repeatCount="indefinite"/>  <br>
-          &nbsp; <NRed>&lt;/rect></NRed><NGray>fill= valor al finalzar (remove(resetea valor), freeze(conserva el valor "to")).</NGray>
+        &lt;<NRed>rect</NRed> <NPurp> width</NPurp>="<NGreen>20</NGreen>" <NPurp>height</NPurp>="<NGreen>20</NGreen>" <NPurp>fill</NPurp>="<NGreen>orange</NGreen>"> <br>
+          <NTab></NTab>&lt;<NRed>animate</NRed> <NPurp> attributeName</NPurp>="<NGreen>x</NGreen>" <NPurp>from</NPurp>="<NGreen>0</NGreen>" <NPurp>to</NPurp>="<NGreen>100</NGreen>" <NPurp>dur</NPurp>="<NGreen>1s</NGreen>" <NPurp>fill</NPurp>="<NGreen>freeze</NGreen>" <NPurp>repeatCount</NPurp>="<NGreen>indefinite"/></NGreen>" <br>
+        &lt;<NRed>/rect</NRed>>
       </div>
     </div>
 

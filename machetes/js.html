@@ -74,6 +74,7 @@
           <div> 1.23456..<NBlue>toFixed</NBlue>(<NOrg>2</NOrg>); <NGray>// "1.23" (string) </NGray> </div>
           <div> +(1.11).<NBlue>toFixed</NBlue>(<NOrg>5</NOrg>); <NGray>// 1.11000 (num) </NGray> </div>
         </div>
+        <style>.separados{justify-content: space-between}</style>
       </div> <br>
     </fieldset>
     
@@ -178,19 +179,14 @@
 
       <div class="flex">
         <!-- Extraer de DOM y ponerlos en un Array -->
-        <div class="w60">
-          Extraer de DOM y ponerlos en un Array
-          <div class="cod">
-            <NPurp>let</NPurp> elementos = <NObj>Array</NObj>.<NBlue>from</NBlue>(document.<NBlue>querySelectorAll</NBlue>("<NGreen>.dias p</NGreen>"));<br>
-            <NPurp>var</NPurp> array = elementos.<NBlue>map</NBlue>(dia <NPurp>=></NPurp> dia.textContent); <br>
-            console.<NBlue>log</NBlue>(array); <NGray>// ["L", "M", "M" ...] </NGray>
-          </div>
+        <div class="cod">
+          <NGray>// Extraer de DOM y ponerlos en un Array</NGray> <br>
+          <NPurp>const</NPurp> elementos = <NObj>Array</NObj>.<NBlue>from</NBlue>(document.<NBlue>querySelectorAll</NBlue>("<NGreen>.dias p</NGreen>"));<br>
+          <NPurp>let</NPurp> array = elementos.<NBlue>map</NBlue>(dia <NPurp>=></NPurp> dia.textContent); <br>
+          console.<NBlue>log</NBlue>(array); <NGray>// ["L", "M", "M" ...] </NGray>
         </div>
       </div>
     </fieldset>
-
-    <!-- TODO: -->
-    <!-- TODO: -->
      
     <fieldset> <!-- Map y Set -->
       <legend> Map y Set </legend>
@@ -675,6 +671,7 @@
           </div>
         </div>
       </div>
+      <style> .markBlock{ background-color: rgba(124, 124, 124, 0.6); } </style>
     </fieldset>
     
     <!-- Herencias y Assign -->
@@ -741,9 +738,11 @@
 
     <fieldset> <!-- Propiedades -->
       <legend> Indicadores de Propiedad </legend>
-      <u><b>writable</b></u>: si es true, puede ser editado. <br>
-      <u><b>enumerable</b></u>: si es true, puede ser listado en bucles. <br>
-      <u><b>configurable</b></u>: si es true, la propiedad puede ser borrada y estos atributos pueden ser modificados. <br>
+      <div class="textoSuelto">
+        <u><b>writable</b></u>: si es true, puede ser editado. <br>
+        <u><b>enumerable</b></u>: si es true, puede ser listado en bucles. <br>
+        <u><b>configurable</b></u>: si es true, la propiedad puede ser borrada y estos atributos pueden ser modificados. <br>
+      </div>
 
       <div class="cod">
         <NPurp>let</NPurp> user = { name: "<NGreen>Juan</NGreen>"}; <br>
@@ -877,14 +876,11 @@
 
       <!-- TODO: -->
       <!-- TODO: -->
-      <div class="cod">
-        <NGray>// metodos de document...</NGray>
-        <a href="https://www.w3schools.com/jsref/dom_obj_document.asp">copiar</a>
-      </div>
-
-      Cambiar valores <u>(Usando CHILDNODES)</u>
+      
       <div class="flex">
-        <div class="codigo marg0">
+        <div class="textoSuelto">
+          metodos de document...
+          <a href="https://www.w3schools.com/jsref/dom_obj_document.asp">copiar</a> <hr>
           element.childNodes: <br>
           element.firstChild: <br>
           element.lastChild: <br>
@@ -894,13 +890,14 @@
           element.parentNode: <br><hr>
           element.className:
         </div>
-        <div class="cod">
+        <div class="cod w60">
+          <NGray>// Cambiar valores <u>(Usando CHILDNODES)</u></NGray> <br>
           <NPurp>function</NPurp> <NBlue>setText</NBlue>() { <br>
             &nbsp;<NPurp>var</NPurp> a = document.getElementById("demo2"); <br>
             &nbsp;<NPurp>var</NPurp> arr = a.<u>childNodes</u>; <br>
             &nbsp;<NAqua>for</NAqua> (<NPurp>var</NPurp> x = 0; x < arr.length; x++) { <br>
               &nbsp; arr[x].innerHTML = "<NGreen>new text</NGreen>"; <br>
-            &nbsp;} <br> } <br><hr>
+            &nbsp;} <br> } <br><br><hr>
 
             element.className = element.className.<NBlue>replace</NBlue>("<NGreen>viejo</NGreen>", "<NGreen>nuevo</NGreen>"); 
         </div>
@@ -956,18 +953,18 @@
       <div class="flex">
         <div>
            Crear y borrar Elementos 
-          <div class="ejemplo" id="divElement"> Texto. </div>
+          <div class="ej w40" id="divElement"> Texto. </div>
           <button onclick="createELEMENT()">Crear</button>
           <button onclick="delElem()">Borrar</button>
 
-          <div class="codigo">
+          <div class="textoSuelto">
             elem.cloneNode(); <NGray>// Clonear.</NGray><br>
-            a.replaceChild(esteElem, porEsteElem); <NGray>// Reemplazar</NGray> <br>
-            padre.insertBefore(elem, padre.firstChild); <NGray>// Add first</NGray>
+            a.replaceChild(este, porEste); <NGray>// Reemplazar</NGray> <br>
+            padre.insertBefore(elem, padre.firstChild); <NGray>add first</NGray>
           </div>
         </div>
         <div>
-          <div class="codigo">
+          <div class="cod">
             <NPurp>let</NPurp> p = document.<NBlue>createElement</NBlue>("<NGreen>p</NGreen>");
             <NGray>// Crear un parrafo.</NGray> <br>
             <NPurp>let</NPurp> text = document.<NBlue>createTextNode</NBlue>("<NGreen>Nuevo Texto</NGreen>"); <NGray>// Crear un Texto</NGray> <br>
@@ -1125,7 +1122,7 @@
       <!-- Evento desde HTML -->
       <fieldset class="width100"> 
       <legend> Evento desde HTML </legend>
-        <div class="codigo">
+        <div class="cod html">
           &lt;<NRed>button</NRed> <b><u><NPurp>event</NPurp></u></b>="<NBlue>myFunc</NBlue>()"> Button &lt;/<NRed>button</NRed>>
         </div>
         <div class="cod">
@@ -1225,27 +1222,27 @@
         <details>
           <summary>Código...</summary>
           <div class="cod">
-            <pre>
-                let socket = new WebSocket("ws://http://myserver/machetes/JS.php");
-                  let mensajeingresado = document.getElementById("mensajeIngresado");
-                  let botonenviar = document.getElementById("botonenviar");
+            <pre style="margin-left: -70px;">
+              let socket = new WebSocket("ws://http://myserver/machetes/JS.php");
+              let mensajeingresado = document.getElementById("mensajeIngresado");
+              let botonenviar = document.getElementById("botonenviar");
 
-                  function mostrarMensajes(contenido) {
-                    let contenedorMensajes = document.getElementById("contenedorMensajes");
-                    let elementoMensaje = document.createElement("p");
-                    elementoMensaje.innerText = contenido;
-                    contenedorMensajes.appendChild(elementoMensaje);
-                  }
-                  botonenviar.onclick = function(){
-                    let mensaje = mensajeingresado.value;
-                    mostrarMensajes(mensaje);
-                    socket.send(mensaje);
-                  };
-                  socket.onmessage = function(event){
-                    let mensaje = event.data;
-                    mostrarMensajes(mensaje);
-                  }
-              </pre>
+              function mostrarMensajes(contenido) {
+                let contenedorMensajes = document.getElementById("contenedorMensajes");
+                let elementoMensaje = document.createElement("p");
+                elementoMensaje.innerText = contenido;
+                contenedorMensajes.appendChild(elementoMensaje);
+              }
+              botonenviar.onclick = function(){
+                let mensaje = mensajeingresado.value;
+                mostrarMensajes(mensaje);
+                socket.send(mensaje);
+              };
+              socket.onmessage = function(event){
+                let mensaje = event.data;
+                mostrarMensajes(mensaje);
+              }
+            </pre>
           </div>
         </details>
        </div>
@@ -1255,19 +1252,19 @@
     <fieldset>
       <legend>  Propagacion de eventos - bubbling & capturing </legend>
       <div class="flex">
-        <div class="width100">
+        <div class="w40">
           Orden en la que se ejecutan las funciones.<br><br>
-          <div class="codigo">
+          <div class="cod w40 html">
             &lt;<NRed>div</NRed>> <br>
             &nbsp; &nbsp;&lt;<NRed>p</NRed>>&lt;/<NRed>p</NRed>> <br>
             &lt;/<NRed>div</NRed>>
           </div>
         </div>
-        <div class="width100">
+        <div class="w60">
           <u>BUBBLING</u>: <NGray>// primero &lt;p> y luego &lt;div>.</NGray> <br>
-          <div class="codigo"> elem.<NBlue>addEventListener</NBlue>("<NGreen>event</NGreen>", <NBlue>myFunc</NBlue>, <NRed>false</NRed>); </div>
+          <div class="cod"> elem.<NBlue>addEventListener</NBlue>("<NGreen>event</NGreen>", <NBlue>myFunc</NBlue>, <NRed>false</NRed>); </div>
           <u>CAPTURING</u>: <NGray>// primero &lt;div> y luego &lt;p>.</NGray> <br>
-          <div class="codigo"> elem.<NBlue>addEventListener</NBlue>("<NGreen>event</NGreen>", <NBlue>myFunc</NBlue>, <NRed>true</NRed>); </div>
+          <div class="cod"> elem.<NBlue>addEventListener</NBlue>("<NGreen>event</NGreen>", <NBlue>myFunc</NBlue>, <NRed>true</NRed>); </div>
         </div>
       </div>
     </fieldset>
@@ -1327,13 +1324,15 @@
       <!-- Repetir -->
       <div class="flex">
         <div style="width: 100%;">
-          <b><u>Repetir Numero.</u></b>
-          <form onsubmit="return validate()" method="post">
-            Numero: <input type="text" name="num1" id="num1" /> <br>
-            Repetir: <input type="text" name="num2" id="num2" /> <br>
-            <input type="submit" value="Enviar" />
-          </form>
-          <div class="codigo">
+          <div class="textoSuelto">
+            <b><u>Repetir Numero.</u></b>
+            <form onsubmit="return validate()" method="post">
+              Numero: <input type="text" name="num1" id="num1" /> <br>
+              Repetir: <input type="text" name="num2" id="num2" /> <br>
+              <input type="submit" value="Enviar" />
+            </form>
+          </div>
+          <div class="cod html">
             &lt;<NRed>form</NRed> <NPurp>onsubmit</NPurp>="<b><NAqua>return</NAqua> <NBlue>validate</NBlue>()</b>" <NPurp>method</NPurp>="post"> <br>
               &nbsp; Numero: &lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>text</NGreen>" <NPurp>name</NPurp>="<NGreen>num1</NGreen>" <NPurp>id</NPurp>="<NGreen>num1</NGreen>" /> <br>
               &nbsp; Repetir: &lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>text</NGreen>" <NPurp>name</NPurp>="<NGreen>num2</NGreen>" <NPurp>id</NPurp>="<NGreen>num2</NGreen>" /> <br>
@@ -1376,44 +1375,47 @@
     <!-- Math -->
     <fieldset>
       <legend> Math: </legend>
-      <div class="cod">
-        function randomNumber(min, max) { <br>
-          &nbsp; return Math.floor(Math.random() * (max - min)) + min; <br> }
+      <div class="flex">
+        <div class="cod w50">
+          <NPurp>function</NPurp> <NBlue>randomNumber</NBlue>(min, max) { <br>
+            &nbsp; <NAqua>return</NAqua> Math.<NBlue>floor</NBlue>(Math.<NBlue>random</NBlue>() * (max - min)) + min; <br> }
+        </div>
+        <div class="w50">
+          <div class="cod">
+            Math.<NBlue>round</NBlue>(Math.<NBlue>random</NBlue>()*<NOrg>5</NOrg>)
+          </div><br>
+          <details>
+            <summary>Metodos de Math...</summary>
+            abs(x)----Returns the absolute value of x <br>
+            acos(x)---Returns the arccosine of x, in radians <br>
+            acosh(x)--Returns the hyperbolic arccosine of x <br>
+            asin(x)---Returns the arcsine of x, in radians <br>
+            asinh(x)--Returns the hyperbolic arcsine of x <br>
+            atan(x)---Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians <br>
+            atan2(y, x) Returns the arctangent of the quotient of its arguments <br>
+            atanh(x)--Returns the hyperbolic arctangent of x <br>
+            cbrt(x)---Returns the cubic root of x <br>
+            ceil(x)---Returns x, rounded upwards to the nearest integer <br>
+            cos(x)----Returns the cosine of x (x is in radians) <br>
+            cosh(x)---Returns the hyperbolic cosine of x <br>
+            exp(x)----Returns the value of Ex <br>
+            floor(x)--Returns x, rounded downwards to the nearest integer <br>
+            log(x)----Returns the natural logarithm (base E) of x <br>
+            max(x, y, z, ..., n) Returns the number with the highest value <br>
+            min(x, y, z, ..., n) Returns the number with the lowest value <br>
+            pow(x, y)-Returns the value of x to the power of y <br>
+            random()--Returns a random number between 0 and 1 <br>
+            round(x)--Rounds x to the nearest integer <br>
+            sign(x)---Returns if x is negative, null or positive (-1, 0, 1) <br>
+            sin(x)----Returns the sine of x (x is in radians) <br>
+            sinh(x)---Returns the hyperbolic sine of x <br>
+            sqrt(x)---Returns the square root of x <br>
+            tan(x)----Returns the tangent of an angle <br>
+            tanh(x)---Returns the hyperbolic tangent of a number <br>
+            trunc(x)--Returns the integer part of a number (x) <br>
+          </details>
+        </div>
       </div>
-      
-      <div class="cod">
-        Math.round(Math.random()*5)
-      </div>
-      <details>
-        <summary>Metodos de Math</summary>
-        abs(x) Returns the absolute value of x <br>
-        acos(x) Returns the arccosine of x, in radians <br>
-        acosh(x) Returns the hyperbolic arccosine of x <br>
-        asin(x) Returns the arcsine of x, in radians <br>
-        asinh(x) Returns the hyperbolic arcsine of x <br>
-        atan(x) Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians <br>
-        atan2(y, x) Returns the arctangent of the quotient of its arguments <br>
-        atanh(x) Returns the hyperbolic arctangent of x <br>
-        cbrt(x) Returns the cubic root of x <br>
-        ceil(x) Returns x, rounded upwards to the nearest integer <br>
-        cos(x) Returns the cosine of x (x is in radians) <br>
-        cosh(x) Returns the hyperbolic cosine of x <br>
-        exp(x) Returns the value of Ex <br>
-        floor(x) Returns x, rounded downwards to the nearest integer <br>
-        log(x) Returns the natural logarithm (base E) of x <br>
-        max(x, y, z, ..., n) Returns the number with the highest value <br>
-        min(x, y, z, ..., n) Returns the number with the lowest value <br>
-        pow(x, y) Returns the value of x to the power of y <br>
-        random() Returns a random number between 0 and 1 <br>
-        round(x) Rounds x to the nearest integer <br>
-        sign(x) Returns if x is negative, null or positive (-1, 0, 1) <br>
-        sin(x) Returns the sine of x (x is in radians) <br>
-        sinh(x) Returns the hyperbolic sine of x <br>
-        sqrt(x) Returns the square root of x <br>
-        tan(x) Returns the tangent of an angle <br>
-        tanh(x) Returns the hyperbolic tangent of a number <br>
-        trunc(x) Returns the integer part of a number (x) <br>
-      </details>
     </fieldset>
 
     <!-- Date -->
@@ -1422,7 +1424,7 @@
 
       Metodos de Date:
       <div class="flex">
-        <div class="codigo columnas width100">
+        <div class="textoSuelto columnas width100">
           getFullYer()      <NGray>// 1999.</NGray> <br>
           getMonth()        <NGray>// 06.</NGray> <br>
           getDate()         <NGray>// 24.</NGray> <br>
@@ -1445,10 +1447,10 @@
     <fieldset>
       <legend>  Almacenamiento (API)  </legend>
       <div class="flex">
-        <div class="codigo marg0">
+        <div class="textoSuelto w50">
           sessionStorage(); <NGray> //Temporal.</NGray> <br>
           localStorage(); <NGray> //Permanente.</NGray> <br>
-          localStorage.<NBlue>clear</NBlue>(); <NGray>(Limpiar)</NGray>
+          localStorage.<NBlue>clear</NBlue>(); <NGray>// Vaciar</NGray>
         </div>
         <div class="cod">
           localStorage.<NBlue>setItem</NBlue>("<NGreen>name</NGreen>", "<NGreen>Val</NGreen>"); <NGray>(Guardar)</NGray><br>
@@ -1484,7 +1486,7 @@
           }
         </div>
       </div>
-      <div class="cod">
+      <div class="cod html">
         <NRed>&lt;div</NRed> <NPurp>id</NPurp>="box" <NPurp>ondrop</NPurp>="drop(event)"  <NPurp>ondragover</NPurp>="allowDrop(event)" <NRed>&lt;/div></NRed> <br>
         <NRed>&lt;img</NRed> <NPurp>id</NPurp>="image" <NPurp>src</NPurp>="cat1.png" <NPurp>draggable</NPurp>="true" <NPurp>ondragstart</NPurp>="drag(event)" <NPurp>style</NPurp>="cursor: move;"<NRed>/></NRed>
       </div>
@@ -1523,7 +1525,7 @@
         function copiarContenido() { navigator.clipboard.writeText(texto) }
       </script>
       <div class="flex">
-        <div class="codigo w75">
+        <div class="cod w75 html">
           <<NRed>p</NRed> <NPurp>id</NPurp>="<NGreen>miTexto</NGreen>"> <<NRed>p</NRed>> <br>
           <<NRed>button</NRed> <NPurp>onclick</NPurp>="<NBlue>copiar</NBlue>()"> Copiar <<NRed>/button</NRed>>
         </div>
@@ -1533,10 +1535,12 @@
         </div>
       </div>
       <details>
-        <pre>
-          < p id="miTexto">Hola Mundo< /p>
-          < button class="btn" onclick=" copiarContenido ()">¡Copiar!< /button>
+        <summary>codigo...</summary>
+        <pre class="cod">
+          &lt;p id="miTexto">Hola Mundo &lt;/p>
+          &lt;button class="btn" onclick=" copiarContenido ()">¡Copiar! &lt;/button>
           
+          &lt;script>
             let texto = document.getElementById('miTexto').innerHTML;
             const copiarContenido = async () => {
               try {
@@ -1546,6 +1550,7 @@
                 console.error('Error al copiar: ', err);
               }
             }
+          &lt;/script>
         </pre>
       </details>
     </fieldset>
@@ -1553,7 +1558,7 @@
     <fieldset> <!-- ES Modules -->
       <legend> ES Modules </legend>
       Import y Export <br>
-      <div class="codigo">
+      <div class="cod html">
         &lt;<NRed>script</NRed> <NPurp>src</NPurp>="<NGreen>index.js</NGreen>" <u>
           <NPurp>type</NPurp>="<NGreen>module</NGreen>"
         </u> > &lt;/<NRed>script</NRed>> <br>
@@ -1740,7 +1745,7 @@
           .<NBlue>catch</NBlue>(error <NPurp> => </NPurp> console.<NBlue>log</NBlue>(error)) <hr>
           <details>
             <summary>Axios simultáneos + interceptores [...]</summary>
-            <pre>
+            <pre style="margin-left: -80px;">
                 <NGray>// Axios simultáneos + interceptores</NGray>
                 let token = "MiToken";
   

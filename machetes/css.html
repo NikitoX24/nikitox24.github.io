@@ -58,7 +58,7 @@
     <fieldset>
       <legend>Alineación de Texto</legend>
       <!-- Text-Align (Horizontal) -->
-      <div class="boxizq" style="width: 50%;">
+      <div style="width: 50%;">
         <div class="flex">
           <div class="ej marg0" style="text-align: left;">Aligned to <b>Left</b></div>
           <div class="cod"> <b>text-align:</b> left; </div>
@@ -240,7 +240,7 @@
     <fieldset>
       <legend> Table </legend>
       <div class="flex">
-        <div class="ejemplo" style="min-width: 130px;"><!-- Table-Style -->
+        <div class="ej w25"><!-- Table-Style -->
           <table class="styled" border="1">
             <caption>"Caption-Side Text"</caption>
             <tr>
@@ -263,14 +263,14 @@
           </style>
         </div>
 
-        <div class="codigo wAuto" style="min-width: auto;">
+        <div class="cod w25" style="min-width: auto;">
           table.styled { <br>
             &nbsp; <b>caption-side:</b> top; <br>
             &nbsp; <b>border-spacing:</b> 20px 5px; <br>
             &nbsp; <b>empty-cells:</b> hide; <br>
           } <br>
         </div>
-        <div class="cod flex"> <br>
+        <div class="cod flex w70"> <br>
           <div class="width100">
             <NGray>Pares:</NGray> <br>
             tr:<NPurp>nth-child</NPurp>(even) { <br>
@@ -481,8 +481,8 @@
         </div>
         <div class="cod">
           &nbsp; <b>display:</b> flex; <br>
-          &nbsp; <b>align-items:</b> center; <br>
-          &nbsp; <b>justify-content:</b> center;
+          &nbsp; <b>align-items:</b> center; <NGray>// Vertical</NGray> <br>
+          &nbsp; <b>justify-content:</b> center; <NGray>// Horizontal</NGray> 
         </div>
         <div class="cod">
           &nbsp; <b>display:</b> grid; <br>
@@ -617,17 +617,17 @@
       <legend> Floating </legend>
 
       <div class="flex">
-        <div class="ejemplo" style="text-align: justify;">
+        <div class="ej w60" style="text-align: justify;">
           Este texto está antes del elemento img (imagen) y no se ve afectado.<br><br>
           <img src="../Imgs/cat1.png" height="85px" style="float: right; margin-left: 4px;" />
           Este párrafo viene después del elemento div y se ve afectado por la propiedad float right.<br><br>
           <p id="setCB">Este párrafo también viene después del elemento div y también se ve afectado.</p>
         </div>
-        <div><div class="codigo">
+        <div><div class="cod">
           img{ <b>float:</b> right; }
         </div>
         <button onclick="setClearBoth();"> Poner Clear-both </button> <br>      
-        <div class="codigo">
+        <div class="cod">
           .clearing{ <br> &nbsp; <b>clear:</b> both; <NGray>/* both, right, left */</NGray> <br> }
         </div></div>
       </div>
@@ -831,7 +831,7 @@
         <!-- Shadow -->
         <div class="backgw boxsh" style="box-shadow: 10px 10px 10px 5px grey; color: black;">
           <b>box-shadow:</b> 10px 10px 10px 5px #888; <br>
-          <font color="grey">box-shadow: Hriz, Vert, blur, spread, color</font>
+          <NGray>box-shadow: Hriz, Vert, blur, spread, color</NGray>
         </div>
 
         <!-- Shadow Inside -->
@@ -1232,6 +1232,13 @@
       <b>alternate:</b> normal, reversa, normal. <br>
       <b>alternate-reverse:</b> reversa, normal, reversa. <br>
     </div>
+
+    <style>
+      .box3d {
+        width: 50px; height: 50px;
+        background-color: #32CD32;
+      }
+    </style>
   </section>
 
   <!-- Filtros -->

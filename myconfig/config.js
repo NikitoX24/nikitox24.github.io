@@ -14,8 +14,8 @@ const cheat_dir = server_dir + "machetes/";
 const otros_dir = server_dir + "otros/";
 
 // Logos
-const logo_25px = '<img src="' + server_dir + 'logo.png" height="25px">';
-const git_logo  = '<img src="' + imgs_dir   + 'github-logo.png" height="25px">';
+const logo_25px = '<img src="' + server_dir + 'logo.png" height="20px">';
+const git_logo  = '<img src="' + imgs_dir   + 'github-logo.png" height="15px">';
 
 // Titulos
 let titulo;
@@ -112,14 +112,19 @@ document.title = titulo; // (Cambiar Titulo pag)
 
 
 
+// blackTeme = false;
+
 
 
 // COLORES
-let background_color = "rgb(24, 57, 43)";
+let background_color;
 let back_color = "rgba(255, 255, 255, 0.5)"; // div
 let shadow1 = "rgba(255, 255, 255, 0.8)"; // legend
 let shadow2 = "rgba(255, 255, 255, 0.3)"; // sombra
 let linkColor = "#FFF";
+let fontColor;
+
+background_color ? blackTeme = "rgb(24, 57, 43)" : "beige";
 
 if (titulo == t_html){
   if (blackTeme) {
@@ -127,7 +132,7 @@ if (titulo == t_html){
     back_color = "rgba(200, 50, 50, 0.1)";
     shadow1 = "rgb(185, 60, 20)";
     shadow2 = "rgba(120, 60, 0, 0.2)";
-    linkColor = "#F00";
+    linkColor = "#AAF";
   }
   else{
     back_color = "rgba(255, 123, 0, 0.1)";
@@ -165,33 +170,101 @@ if (titulo == t_js || titulo == t_index){
     linkColor = "#FFF";
   }
 }
+if (titulo == "Título") {
+  // background_color = "rgb(24, 57, 43)";
+  // background_color = "rgb(24, 30, 57)";
+  background_color = "rgb(57, 33, 24)";
+}
+
+
+
+
+
+document.write(/*html*/`
+  <style>
+    :root{
+    }
+
+
+
+    /* section color */
+    section {
+      background-color: ${back_color};
+      box-shadow: inset 0 40px 0 0 ${shadow1}, 4px 4px 15px 5px ${shadow2};
+    }
+    @media screen and (max-width: 767px){
+      section { box-shadow: inset 0 27px 0 0 ${shadow1} !important; }
+    }
+  </style>
+  
+`);
+
+
+
 
 // Colores de Códigos
 if (blackTeme) {
+  fontColor = "rgb(210, 210, 210)";
+  const codBackground = "rgb(15, 15, 27)";
+  
   document.write(/*html*/`
     <style>
-      :root{
-        --varC: rgb(210, 210, 210);
-        --aquaC: ;
-      }
       body{
         background-color: ${background_color};
-        color: var(--varC);
+        color: ${fontColor};
       }
       .cod{
-        background-color: rgb(15, 15, 27);
+        background-color: ${codBackground};
         text-shadow: none;
-        color: var(--varC);
+        color: ${fontColor};
       }
-      NAqua { color: rgb(20, 212, 255); }
+      summary { color: ${linkColor}; }
+      .boxder{ 
+        background-color: ${codBackground};
+        color: ${fontColor};
+      }
+      
+      NVar  { color: ${fontColor}; }
       NBlue { color: rgb(107, 149, 234); }
       NGreen{ color: rgb(209, 255, 139); }
-      NVar  { color: var(--varC); }
       NPurp { color: rgb(194, 122, 194); }
-      NRed  { color: rgb(255, 85, 85); }
-      NOrg  { color: rgb(254, 146, 38);}
       NGray { color: gray; }
+      NRed  { color: rgb(255, 85, 85); }
+      NAqua { color: rgb(20, 212, 255); }
+      NOrg  { color: rgb(254, 146, 38);}
       NObj  { color: rgb(252, 222, 104); }
+
+      
     </style>
   `);
 }
+
+// TEMA BLANCO
+else { 
+  fontColor = "#000";
+  document.write(/*html*/`
+
+    <style>
+      body{ background-color: ${background_color}; }
+      .cod{ color: ${fontColor}; }
+      
+      NVar{  color: ${fontColor}; }
+      NBlue{ color: rgb(0, 62, 219); }
+      NGreen{ color: green; }
+      NPurp{ color: rgb(142, 0, 142) }
+      NGray{ color: rgba(98, 98, 98, 0.678); }
+      NRed{  color: rgb(212, 0, 0);    text-shadow: .2px .2px black; }
+      NAqua{ color: rgb(20, 212, 255);      text-shadow: 0 0 5px rgb(0, 13, 110); }
+      NOrg{  color: rgb(180, 133, 44); text-shadow: .3px .3px rgb(255, 0, 0);}
+      NObj{  color: rgb(255, 217, 0);  text-shadow: 0 0 10px rgba(0, 0, 0, 0.461);}
+      b{     text-shadow: .5px .5px 12px black; }
+    </style>
+  `);
+}
+
+
+
+
+
+
+
