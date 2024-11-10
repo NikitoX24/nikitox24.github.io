@@ -43,7 +43,7 @@
       <b>Metodos de Numeros</b>
       <div class="cod">
         <div class="flex separados">
-          <div> <NPurp>let</NPurp> a = <NOrg>1_300_000_000</NOrg>; <NGray>// 1.3m</NGray> </div>
+          <div> <NPurp>let</NPurp> a = <NOrg>1_300_000</NOrg>; <NGray>// 1.3m</NGray> </div>
           <div> <NPurp>let</NPurp> a = <NOrg>1.3e9</NOrg>; <NGray>// 1.3m </NGray> </div>
           <div> <NPurp>let</NPurp> b = <NOrg>1.e-4</NOrg>; <NGray>// 0.0001 </NGray> </div>
           <div> <NPurp>let</NPurp> c = <NOrg>0xFF</NOrg>; <NGray>// 255 </NGray> </div>
@@ -118,9 +118,9 @@
       <legend> Arrays </legend>
       Crear:
       <div class="flex">
-        <div class="cod"> <NPurp>var</NPurp> myArray <NAqua>= new</NAqua> <NObj>Array</NObj>("<NGreen>a</NGreen>", "<NGreen>b</NGreen>"); </div>
-        <div class="cod"> <NPurp>var</NPurp> myArray = <NAqua>new</NAqua> <NObj>Array</NObj>(<NOrg>3</NOrg>); </div>
-        <div class="cod"> <NPurp>var</NPurp> myArray = [<NOrg>1</NOrg>, "<NGreen>b</NGreen>", <NRed>true</NRed>]; </div>
+        <div class="cod"> <NPurp>let</NPurp> myArr <NAqua>= new</NAqua> <NObj>Array</NObj>("<NGreen>a</NGreen>"); </div>
+        <div class="cod"> <NPurp>let</NPurp> myArray = <NAqua>new</NAqua> <NObj>Array</NObj>(<NOrg>3</NOrg>); </div>
+        <div class="cod"> <NPurp>let</NPurp> myArray = [<NOrg>1</NOrg>, "<NGreen>b</NGreen>", <NRed>true</NRed>]; </div>
       </div><br>
 
       Metodos de array: (se modifican) <br>
@@ -817,9 +817,51 @@
     </fieldset>
   </section>
 
-  <!-- DOM -->
-  <section id="DOM">
+  <!-- BOM -->
+  <section id="BOM (Window)">
+    <fieldset> <!-- Window -->
+    <legend> Browser Object Model </legend>
+      <div class="cod">       
+        window.usuario = { name: "nico" }; <NGray>// Crear variable Global (para todos los scripts)</NGray> <br>
+        window.name = "<NGreen>Ventana</NGreen>"; <NGray>// Nombre de la ventana</NGray> <br>
+        window.location = "<NGreen>https://www.google.com</NGreen>"; <NGray>// ir a otra pag</NGray> <br><br>
 
+        window.outerWidth; <NGray>// incluye scroll</NGray> <br>
+        window.outerHeight; <NGray>// incluye pestañas y todo</NGray> <br>
+        window.innerWidth; <NGray>// sin scroll</NGray> <br>
+        window.innerHeight; <NGray>// solo interior</NGray> <br>
+        window.scrollX; <NGray>// Scroll</NGray> <br>
+        window.scrollY; <NGray>// Scroll</NGray> <br>
+        window.screenX; <NGray>// izq pantalla, hasta la ventana</NGray> <br>
+        screen.availHeight; <NGray>// Tamaño Alto pantalla</NGray> <br>
+        screen.availWidth; <NGray>// Tamaño Ancho pantalla</NGray><br>
+        screen.colorDepth; <NGray>// Profundidad de color pantalla</NGray> <hr>
+
+        navigator.appName / appVersion; <NGray>// Navegador + SO / version</NGray> <br>
+        navigator.cookieEnabled; <NGray>// Cookies</NGray> <br>
+      </div>
+      <div class="cod">
+        ventana = window.<NBlue>open</NBlue>(); <NGray>// Abrir Pestaña nueva</NGray> <br>
+        ventana = window.<NBlue>open</NBlue>("<NGreen>name.html</NGreen>", "<NGreen>_blank</NGreen>", "<NGreen>width=500 height=300</NGreen>"); <NGray>// Abrir Ventana nueva</NGray> <br> <br>
+      
+        ventana.<NBlue>resizeBy</NBlue>(100,100); <NGray>// +100</NGray> <br>
+        ventana.<NBlue>resizeTo</NBlue>(100,100); <NGray>// =100</NGray> <br> <br>
+      
+        ventana.<NBlue>moveBy</NBlue>(500,500); <NGray>// +500</NGray> <br>
+        ventana.<NBlue>moveTo</NBlue>(500,500); <NGray>// pos 500, 500</NGray> <br> <br>
+      
+        ventana.<NBlue>print</NBlue>(); <NGray>// Imprimir</NGray> <br>
+        ventana.<NBlue>close</NBlue>(); <NGray>// Cerrar</NGray>
+      </div>
+      <div class="cod">
+        console.log(window.frame().length) <br>
+        console.log(window.history) <br>
+      </div>
+    </fieldset>
+  </section>
+
+  <!-- DOM -->
+  <section id="DOM (Document)">
     <!-- Escribir en el Doc -->
     <fieldset>
       <legend> Escribir en el Doc </legend>
@@ -840,17 +882,17 @@
 
       Buscar y usar <b>ID</b>:
       <div class="flex">
-        <div class="cod"> <NPurp>const</NPurp> elem = document.<NBlue>getElementById</NBlue>("<NGreen>id</NGreen>"); </div>
-        <div class="cod"> elem.innerHTML = "<NGreen>Hello World!</NGreen>"; </div>
+        <div class="cod w60"> <NPurp>const</NPurp> elem = document.<NBlue>getElementById</NBlue>("<NGreen>id</NGreen>"); </div>
+        <div class="cod w40"> elem.innerHTML = "<NGreen>Hello World!</NGreen>"; </div>
       </div> <br>
 
       Buscar y usar <b>Class</b>:
       <div class="flex">
-        <div class="cod"> 
+        <div class="cod w60">
           <NPurp>const</NPurp> arr = document.<NBlue>getElementsByClassName</NBlue>("<NGreen>className</NGreen>"); <br>
-          <NPurp>const</NPurp> arr = document.<NBlue>querySelector</NBlue>("<NGreen>.className</NGreen>");
+          <NPurp>const</NPurp> arr = document.<NBlue>querySelectorAll</NBlue>("<NGreen>.className</NGreen>");
         </div>
-        <div class="cod"> 
+        <div class="cod w40">
           arr[<NOrg>0</NOrg>].innerHTML = "<NGreen>Hiii</NGreen>"; <br>
           arr[<NOrg>1</NOrg>].innerHTML = "<NGreen>Hello</NGreen>";
         </div>
@@ -858,47 +900,60 @@
 
       Buscar y usar <b>Tag</b>:
       <div class="flex">
-        <div class="cod"> 
+        <div class="cod w60"> 
           <NPurp>const</NPurp> arr = document.<NBlue>getElementsByTagName</NBlue>("<NGreen>tag</NGreen>"); <br>
           <NPurp>const</NPurp> arr = document.<NBlue>querySelectorAll</NBlue>("<NGreen>tag</NGreen>"); <br>
-          <NPurp>const</NPurp> arr = document.<NBlue>querySelector</NBlue>("<NGreen>a[class="name"]</NGreen>");
+          <NPurp>const</NPurp> arr = document.<NBlue>querySelectorAll</NBlue>("<NGreen>a[class="name"]</NGreen>");
         </div>
-        <div class="cod">
-          <NAqua>for</NAqua> (<NPurp>var</NPurp> x = <NOrg>0</NOrg>; x &lt;arr.length; x++) { <br>
-            &nbsp; arr[x].innerHTML = "<NGreen>Hi there!</NGreen>"; <br> }
+        <div class="cod w40">
+          arr.<NBlue>forEach</NBlue>( i <NPurp> =></NPurp> { <br>
+            &nbsp; i.innerHTML = "<NGreen>Hola</NGreen>"; <br>
+          });
         </div>
       </div>
     </fieldset>
 
-    <!-- Propiedades y metodos -->
-    <fieldset>
-      <legend>  Propiedades y metodos  </legend>
+    <hr><hr><hr><hr><hr><hr>
 
-      <!-- TODO: -->
-      <!-- TODO: -->
+    <!-- Metodos DOM -->
+    <fieldset>
+      <legend> Metodos DOM </legend>
+      <div class="textoSuelto">
+        document.cookie; <a href="https://www.w3schools.com/js/js_cookies.asp">info...</a> <br>
+        document.documentURI; <br>
+        document.domain; <br>
+        <!-- document.forms -->
+      </div>
+    </fieldset>
+    <script>
+
+    </script>
+
+    <!-- Child-Parent Nodes -->
+    <fieldset>
+      <legend> Child-Parent Nodes </legend>
       
       <div class="flex">
         <div class="textoSuelto">
-          metodos de document...
-          <a href="https://www.w3schools.com/jsref/dom_obj_document.asp">copiar</a> <hr>
           element.childNodes: <br>
           element.firstChild: <br>
           element.lastChild: <br>
           element.hasChildNodes: <br>
           element.nextSibling: <br>
           element.previousSibling: <br>
-          element.parentNode: <br><hr>
-          element.className:
+          element.parentNode: <br>
+          <hr>
+          element.className: 
         </div>
         <div class="cod w60">
           <NGray>// Cambiar valores <u>(Usando CHILDNODES)</u></NGray> <br>
-          <NPurp>function</NPurp> <NBlue>setText</NBlue>() { <br>
-            &nbsp;<NPurp>var</NPurp> a = document.getElementById("demo2"); <br>
-            &nbsp;<NPurp>var</NPurp> arr = a.<u>childNodes</u>; <br>
-            &nbsp;<NAqua>for</NAqua> (<NPurp>var</NPurp> x = 0; x < arr.length; x++) { <br>
-              &nbsp; arr[x].innerHTML = "<NGreen>new text</NGreen>"; <br>
-            &nbsp;} <br> } <br><br><hr>
+            <NPurp>let</NPurp> mydiv = document.<NBlue>getElementById</NBlue>("<NGreen>myDiv</NGreen>"); <br>
+            <NPurp>let</NPurp> arr = mydiv.<u>childNodes</u>; <br>
+            arr.<NBlue>forEach</NBlue>( i <NPurp> =></NPurp> { <br>
+            <NTab></NTab> i.innerHTML = "<NGreen>Nuevo Texto</NGreen>"; <br>
+            }); <br><hr>
 
+            <NGray>// cambiar el ClassName</NGray> <br>
             element.className = element.className.<NBlue>replace</NBlue>("<NGreen>viejo</NGreen>", "<NGreen>nuevo</NGreen>"); 
         </div>
       </div>
@@ -906,44 +961,58 @@
 
     <!-- Modificar Atributos -->
     <fieldset>
-      <legend>  Modificar Atributos  </legend>
+      <legend> Crear-Modificar Atributos  </legend>
       <div class="flex">
-        <div> 
-          <div class="ej wAuto" id="style" style="color: orange;"> 
-            <a href="../Imgs/Orange.png" target="_blank"><img id="myimg" src="../Imgs/Orange.png" alt="orange.png" title="Orange" height="60" /></a> <br>
-            Cambiar estilo
+        <!-- Modificar atributo -->
+        <div class="flex">
+          <div>
+            <div class="ej wAuto" id="style" style="color: orange;">
+              <a href="../Imgs/Orange.png" target="_blank"><img id="myimg" src="../Imgs/Orange.png" alt="orange.png" title="Orange" height="60" /></a> <br>
+              Cambiar estilo
+            </div>
+          </div>
+          <div class="cod">
+            <NPurp>let</NPurp> _img = document.<NBlue>getElementById</NBlue>("<NGreen>img</NGreen>"); <br>
+            _img.src = "<NGreen>../Imgs/Apple.png</NGreen>"; <br>
+            _img.href= '<NGreen>../Imgs/Apple.png</NGreen>'; <br><br>
+            <NPurp>let</NPurp> _text = document.<NBlue>getElementById</NBlue>("<NGreen>mytext</NGreen>"); <br>
+            _text.style.color = '<NGreen>#0F0</NGreen>';
+          </div>
+          <script>
+            let _styleText = document.getElementById("style");
+            let srcimg = document.getElementById("myimg");
+            let _changeSRC = true;
+            function changeSRC(){
+              if(_changeSRC) {
+                srcimg.src = "../Imgs/Apple.png";
+                srcimg.href= '../Imgs/Apple.png';
+                srcimg.title= 'Apple';
+                _styleText.style.color = '#F00 ';
+                _changeSRC = false;
+              }
+              else {
+                srcimg.src = "../Imgs/Orange.png";
+                srcimg.href= '../Imgs/Orange.png';
+                srcimg.title= 'Orange';
+                _styleText.style.color = 'orange';
+                _changeSRC = true;
+              }
+            }
+            setInterval(changeSRC, 1000);
+          </script>
+        </div>
+        <!-- Crear atributo -->
+        <div class="w50">
+          <div class="cod">
+            <NGray>// Crear atributo:</NGray> <br>
+            <NPurp>const</NPurp> att = document.<NBlue>createAttribute</NBlue>("<NGreen>style</NGreen>"); <br>
+            att.value = "<NGreen>color:red</NGreen>"; <br><br>
+
+            <NGray>// Agregar el atributo a un elemento:</NGray> <br>
+            <NPurp>const</NPurp> element = document.<NBlue>getElementById</NBlue>("<NGreen>myId</NGreen>"); <br>
+            element.<NBlue>setAttributeNode</NBlue>(att); <br>
           </div>
         </div>
-        <div class="cod">
-          <NPurp>var</NPurp> _img = document.<NBlue>getElementById</NBlue>("<NGreen>myimg</NGreen>"); <br>
-          _img.src = "<NGreen>../Imgs/Apple.png</NGreen>"; <br>
-          _img.href= '<NGreen>../Imgs/Apple.png</NGreen>'; <br><br>
-          <NPurp>var</NPurp> _text = document.<NBlue>getElementById</NBlue>("<NGreen>mytext</NGreen>"); <br>
-          _text.style.color = '<NGreen>#0F0</NGreen>';
-        </div>
-        <script>
-          var _styleText = document.getElementById("style");
-          var srcimg = document.getElementById("myimg");
-          var _changeSRC = true;
-
-          function changeSRC(){
-            if(_changeSRC) {
-              srcimg.src = "../Imgs/Apple.png";
-              srcimg.href= '../Imgs/Apple.png';
-              srcimg.title= 'Apple';
-              _styleText.style.color = '#F00 ';
-              _changeSRC = false;
-            }
-            else {
-              srcimg.src = "../Imgs/Orange.png";
-              srcimg.href= '../Imgs/Orange.png';
-              srcimg.title= 'Orange';
-              _styleText.style.color = 'orange';
-              _changeSRC = true;
-            }
-          }
-          setInterval(changeSRC, 1000);
-        </script>
       </div>
     </fieldset>
 
@@ -953,7 +1022,7 @@
       <div class="flex">
         <div>
            Crear y borrar Elementos 
-          <div class="ej w40" id="divElement"> Texto. </div>
+          <div class="ej w60" id="divElement"> Texto. </div>
           <button onclick="createELEMENT()">Crear</button>
           <button onclick="delElem()">Borrar</button>
 
@@ -1006,9 +1075,9 @@
         <div class="width100">
           <div id="container1"> <div id="box1"> </div> </div> <br>
           <div class="cod marg0 wAuto">
-            <NPurp>var</NPurp> pos = <NOrg>0</NOrg>; <br>
-            <NPurp>var</NPurp> box = document.<NBlue>getElementById</NBlue>('<NGreen>box1</NGreen>'); <br>
-            <NPurp>var</NPurp> t = <NBlue>setInterval</NBlue>(move, <NOrg>10</NOrg>);
+            <NPurp>let</NPurp> pos = <NOrg>0</NOrg>; <br>
+            <NPurp>let</NPurp> box = document.<NBlue>getElementById</NBlue>('<NGreen>box1</NGreen>'); <br>
+            <NPurp>let</NPurp> t = <NBlue>setInterval</NBlue>(move, <NOrg>10</NOrg>);
           </div>
         </div>
         <div class="cod">
@@ -1053,49 +1122,6 @@
     </fieldset>
   </section>
 
-  <!-- BOM -->
-  <section id="BOM">
-    <fieldset> <!-- Window -->
-    <legend> Browser Object Model </legend>
-      <div class="cod">       
-        window.usuario = { name: "nico" }; <NGray>// Crear variable Global (para todos los scripts)</NGray> <br>
-        window.name = "<NGreen>Ventana</NGreen>"; <NGray>// Nombre de la ventana</NGray> <br>
-        window.location = "<NGreen>https://www.google.com</NGreen>"; <NGray>// ir a otra pag</NGray> <br><br>
-
-        window.outerWidth; <NGray>// incluye scroll</NGray> <br>
-        window.outerHeight; <NGray>// incluye pestañas y todo</NGray> <br>
-        window.innerWidth; <NGray>// sin scroll</NGray> <br>
-        window.innerHeight; <NGray>// solo interior</NGray> <br>
-        window.scrollX; <NGray>// Scroll</NGray> <br>
-        window.scrollY; <NGray>// Scroll</NGray> <br>
-        window.screenX; <NGray>// izq pantalla, hasta la ventana</NGray> <br>
-        screen.availHeight; <NGray>// Tamaño Alto pantalla</NGray> <br>
-        screen.availWidth; <NGray>// Tamaño Ancho pantalla</NGray><br>
-        screen.colorDepth; <NGray>// Profundidad de color pantalla</NGray> <hr>
-
-        navigator.appName / appVersion; <NGray>// Navegador + SO / version</NGray> <br>
-        navigator.cookieEnabled; <NGray>// Cookies</NGray> <br>
-      </div>
-      <div class="cod">
-        ventana = window.<NBlue>open</NBlue>(); <NGray>// Abrir Pestaña nueva</NGray> <br>
-        ventana = window.<NBlue>open</NBlue>("<NGreen>name.html</NGreen>", "<NGreen>_blank</NGreen>", "<NGreen>width=500 height=300</NGreen>"); <NGray>// Abrir Ventana nueva</NGray> <br> <br>
-      
-        ventana.<NBlue>resizeBy</NBlue>(100,100); <NGray>// +100</NGray> <br>
-        ventana.<NBlue>resizeTo</NBlue>(100,100); <NGray>// =100</NGray> <br> <br>
-      
-        ventana.<NBlue>moveBy</NBlue>(500,500); <NGray>// +500</NGray> <br>
-        ventana.<NBlue>moveTo</NBlue>(500,500); <NGray>// pos 500, 500</NGray> <br> <br>
-      
-        ventana.<NBlue>print</NBlue>(); <NGray>// Imprimir</NGray> <br>
-        ventana.<NBlue>close</NBlue>(); <NGray>// Cerrar</NGray>
-      </div>
-      <div class="cod">
-        console.log(window.frame().length) <br>
-        console.log(window.history) <br>
-      </div>
-    </fieldset>
-  </section>
-
   <!-- Eventos -->
   <section id="Eventos">
     <!-- Tipos - Onload -->
@@ -1135,7 +1161,7 @@
       <legend> Evento desde JS </legend>
         <div class="cod">
           <NPurp>let</NPurp> <u>elemento</u> = document.<NBlue>getElementById</NBlue>('<NGreen>demo7</NGreen>'); <br><br>
-          <u>elemento</u>.<b><NBlue>evento</NBlue></b> = <NPurp>function</NPurp>(){ <br> &nbsp; <NGray>// Codigo...</NGray> <br> }
+          <u>elemento</u>.<b><NBlue>event</NBlue></b> = <NPurp>function</NPurp>(){ <br> &nbsp; <NGray>// Codigo...</NGray> <br> }
         </div>
       </fieldset>
     </div>
