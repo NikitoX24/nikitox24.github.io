@@ -57,37 +57,38 @@
     <!-- Alineacion de Texto -->
     <fieldset>
       <legend>Alineación de Texto</legend>
-      <!-- Text-Align (Horizontal) -->
-      <div style="width: 50%;">
-        <div class="flex">
-          <div class="ej marg0" style="text-align: left;">Aligned to <b>Left</b></div>
-          <div class="cod"> <b>text-align:</b> left; </div>
+      <div class="flex">
+            <!-- Text-Align (Horizontal) -->
+        <div class="w100">
+          <div class="flex w100i">
+            <div class="ej" style="text-align: left;"><b>Left</b></div>
+            <div class="cod"> <b>text-align:</b> left; </div>
+          </div>
+          <div class="flex w100i">
+            <div class="ej" style="text-align: center;"><b>Center</b></div>
+            <div class="cod"> <b>text-align:</b> center; </div>
+          </div>
+          <div class="flex w100i">
+            <div class="ej" style="text-align: right;"><b>Right</b></div>
+            <div class="cod"> <b>text-align:</b> right; </div>
+          </div>
         </div>
-        <div class="flex">
-          <div class="ej marg0" style="text-align: center;">Aligned to <b>Center</b></div>
-          <div class="cod"> <b>text-align:</b> center; </div>
-        </div>
-        <div class="flex">
-          <div class="ej marg0" style="text-align: right;">Aligned to <b>Right</b></div>
-          <div class="cod"> <b>text-align:</b> right; </div>
-        </div>
-      </div>
 
-      <!-- Text-Align (Vertical) -->
-      <div class="boxder" style="width: 50%;">
-        <div class="flex">
-          <div class="flex">
+        <!-- Text-Align (Vertical) -->
+        <div class="flex w100i">
+          <div class="flex w100">
             <div class="ej marg0" style="display: inline-table; vertical-align: top;"><div style="vertical-align: top; display: table-cell;">Top</div></div>
             <div class="ej marg0" style="display: inline-table;"><div style="vertical-align: middle; display: table-cell;">Midd.</div></div>
             <div class="ej marg0" style="display: inline-table; vertical-align: bottom;"><div style="vertical-align: bottom; display: table-cell;">Bott.</div></div>
           </div>
-          <div>
-            <div class="cod"> <b>vertical-align:</b> top; </div>
-            <div class="cod"> <b>vertical-align:</b> middle; </div>
-            <div class="cod"> <b>vertical-align:</b> bottom; </div>
+          <div class="w100i">
+            <div class="cod wAuto"> <b>vertical-align:</b> top; </div>
+            <div class="cod wAuto"> <b>vertical-align:</b> middle; </div>
+            <div class="cod wAuto"> <b>vertical-align:</b> bottom; </div>
           </div>
         </div>
-      </div><hr>
+      </div>
+      <hr>
 
       <!-- Text-Align Property (Vertical) -->
       <div>
@@ -514,7 +515,7 @@
           <b>display:</b> flex; <br>
           <b>align-items:</b> center; <br>
           <b>justify-content:</b> space-evenly; <br>
-          <u><b>flex-wrap:</b> wrap; <NGray>(acomodar)</NGray></u>
+          <u><b>flex-wrap:</b> wrap;</u> <NGray>// acomodar</NGray>
         </div>
       </div><hr>
 
@@ -604,11 +605,22 @@
 
     <!-- Posicionamiento -->
     <fieldset>
-      <legend>  Posicionamiento  </legend>
-      <img id="imgPos" src="../Imgs/css-position-all.png" alt="">
+      <legend> Posicionamiento </legend>
+      <div class="divPOS">
+        <img class="imgPos" src="../Imgs/position-static.jpg" alt="pos-Static.">
+        <img class="imgPos" src="../Imgs/position-relative.jpg" alt="pos-Relat.">
+        <img class="imgPos" src="../Imgs/position-absolute.jpg" alt="pos-Absol.">
+        <img class="imgPos" src="../Imgs/position-fixed.jpg" alt="pos-Fixed.">
+      </div>
       <style>
-        #imgPos{ height: 100%; }
-        @media screen and (max-width: 700px){ #imgPos{ height: 290px;} }
+        .divPOS{
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          flex-wrap: wrap;
+        }
+        .imgPos{ height: 150px; margin: 5px;}
+        @media screen and (max-width: 700px){ .imgPos{ height: 140px;} }
       </style>
     </fieldset>
 
@@ -689,7 +701,7 @@
     <fieldset>
       <legend> OverFlow </legend>
       <div class="flex fWrap">
-        <div class="flex" style="width: 300px;">
+        <div class="flex">
           <div class="overflow">
             This text is inside the div element, which has a blue
             background color and is floated to the left. We set a specific
@@ -708,19 +720,21 @@
           </div>
         </div>
 
-        <div class="overflow2">
-          This text is inside the div element, which has a blue
-          background color and is floated to the left. We set a specific
-          height and width for the div element, and as you can see. <br>
-          the content cannot fit.This text is inside the div element, which has a blue
-          background color and is floated to the left. We set a specific
-          height and width for the div element, and as you can see,
-          the content cannot fit.
-        </div>
-        <div class="cod" style="width: 140px;">
-          .overflow { <br>
-            &nbsp; <b>overflow:</b> auto; <br>
-            &nbsp; <b>white-space:</b> nowrap; <br> }
+        <div class="flex">
+          <div class="overflow2">
+            This text is inside the div element, which has a blue
+            background color and is floated to the left. We set a specific
+            height and width for the div element, and as you can see. <br>
+            the content cannot fit.This text is inside the div element, which has a blue
+            background color and is floated to the left. We set a specific
+            height and width for the div element, and as you can see,
+            the content cannot fit.
+          </div>
+          <div class="cod" style="width: 140px;">
+            .overflow { <br>
+              &nbsp; <b>overflow:</b> auto; <br>
+              &nbsp; <b>white-space:</b> nowrap; <br> }
+          </div>
         </div>
       </div> <hr>
 
@@ -738,8 +752,8 @@
 
       <style>
         div.overflow , div.overflow2{
+          height: 80px;
           width: 140px;
-          height: 100px;
           background-color: lightblue;
           overflow: auto;
           padding: 3px;
@@ -829,13 +843,13 @@
       <legend>  Box-Shadow  </legend>
       <div class="flex fWrap" style="margin-top: 15px;">
         <!-- Shadow -->
-        <div class="backgw boxsh" style="box-shadow: 10px 10px 10px 5px grey; color: black;">
+        <div class="backgw boxsh" style="box-shadow: 10px -10px 10px 5px rgba(0, 0, 0, 0.609); color: black;">
           <b>box-shadow:</b> 10px 10px 10px 5px #888; <br>
           <NGray>box-shadow: Hriz, Vert, blur, spread, color</NGray>
         </div>
 
         <!-- Shadow Inside -->
-        <div class="backgw boxsh" style="box-shadow: inset 5px 5px 15px grey, inset -5px -5px 15px grey; color: black">
+        <div class="backgw boxsh" style="box-shadow: inset 5px 5px 15px grey, inset -5px -5px 15px grey; color: black; margin: 5px;">
           <b>box-shadow:</b> inset 5px 5px 15px grey, <br> inset -5px -5px 15px black ;
         </div>
       </div>
@@ -860,7 +874,7 @@
           vertical-align: middle;
           width: 220px;
           height: 50px;
-          margin: 50px 0 50px 20px;
+          margin: 30px 0 20px 20px;
           background-color: #fff;
           box-shadow: 0 0 5px 5px #ff6347, 0 0 8px 20px rgba(255, 191, 136, 0.742), 15px 15px 10px 15px #004048;
           color: black;
@@ -869,7 +883,7 @@
           width: 50%;
           height: 60px;
           padding: 15px;          
-          margin: 35px 0 0 20px;
+          margin: 10px 0 10px 20px;
           background-color: #9ACD32;
           background: linear-gradient(90deg,
             rgba(38, 23, 179, 0.515) 0%,

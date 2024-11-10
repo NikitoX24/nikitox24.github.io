@@ -340,31 +340,6 @@
         console.<NBlue>log</NBlue>("<NGreen>Te vas a comprar café</NGreen>");
       </div>
     </fieldset>
-
-    <fieldset> <!-- Alert, Prompt, Confirm. -->
-      <legend> Alert, Prompt, Confirm. </legend>
-      <div class="flex">
-        <div class="width100">
-          <button onclick="botonalerta1();"> Alert </button>
-            <NBlue>Alert</NBlue>("<NGreen>Alerta</NGreen>")
-            <script> function botonalerta1() { alert("Esto es una Alerta!"); } </script> <br>
-          <button onclick="botonalerta2();"> Prompt </button>
-            <NBlue>Prompt</NBlue>("<NGreen>Solicitud</NGreen>")
-            <script> function botonalerta2() { alert("Esto es una Solicitud!"); } </script> <br>
-          <button onclick="botonalerta3();"> Confirm </button>
-            <NBlue>Confirm</NBlue>("<NGreen>Confirm</NGreen>")
-            <script> function botonalerta3() { alert("Esto es una Confirmacion!"); } </script> <br>
-        </div>
-        <div class="cod">
-          <NGray>//Prompt</NGray> <br>
-            <NPurp>var</NPurp> soli = <NBlue>prompt</NBlue>("<NGreen>Nombre</NGreen>", "<NGreen>Placeholder</NGreen>"); <br>
-            document.<NBlue>write</NBlue>("<NGreen>hola</NGreen> "+ soli); <br>
-          <NGray>//Confirm</NGray> <br>
-            <NPurp>var</NPurp> a = <NBlue>confirm</NBlue>("<NGreen>Necesitas ayuda?</NGreen>") ? "<NGreen>Si</NGreen>" : "<NGreen>No</NGreen>"; <br>
-            document.<NBlue>write</NBlue>(a);
-        </div>
-      </div>
-    </fieldset>
     
     <fieldset class="flex"> <!-- SetInterval - SetTimeout  -->
       <legend>SetInterval - SetTimeout (Async)</legend>
@@ -857,6 +832,31 @@
         console.log(window.frame().length) <br>
         console.log(window.history) <br>
       </div>
+
+      <fieldset> <!-- Alert, Prompt, Confirm. -->
+        <legend> Alert, Prompt, Confirm. </legend>
+        <div class="flex">
+          <div class="width100">
+            <button onclick="botonalerta1();"> Alert </button>
+              <NBlue>Alert</NBlue>("<NGreen>Alerta</NGreen>")
+              <script> function botonalerta1() { alert("Esto es una Alerta!"); } </script> <br>
+            <button onclick="botonalerta2();"> Prompt </button>
+              <NBlue>Prompt</NBlue>("<NGreen>Solicitud</NGreen>")
+              <script> function botonalerta2() { alert("Esto es una Solicitud!"); } </script> <br>
+            <button onclick="botonalerta3();"> Confirm </button>
+              <NBlue>Confirm</NBlue>("<NGreen>Confirm</NGreen>")
+              <script> function botonalerta3() { alert("Esto es una Confirmacion!"); } </script> <br>
+          </div>
+          <div class="cod">
+            <NGray>//Prompt</NGray> <br>
+              <NPurp>var</NPurp> soli = <NBlue>prompt</NBlue>("<NGreen>Nombre</NGreen>", "<NGreen>Placeholder</NGreen>"); <br>
+              document.<NBlue>write</NBlue>("<NGreen>hola</NGreen> "+ soli); <br>
+            <NGray>//Confirm</NGray> <br>
+              <NPurp>var</NPurp> a = <NBlue>confirm</NBlue>("<NGreen>Necesitas ayuda?</NGreen>") ? "<NGreen>Si</NGreen>" : "<NGreen>No</NGreen>"; <br>
+              document.<NBlue>write</NBlue>(a);
+          </div>
+        </div>
+      </fieldset>
     </fieldset>
   </section>
 

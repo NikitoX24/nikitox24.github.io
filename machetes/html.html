@@ -49,7 +49,7 @@
         </div> <div class="hr"></div>
         <div class="flex"> <!-- Pequeño -->
           <div class="ej"> <small> Pequeño </small> </div>
-          <div class="cod"> <NRed>&lt;small></NRed> S <NRed>&lt;/small></NRed> </div>
+          <div class="cod"> <NRed>&lt;small></NRed> S <NRed>&lt;/></NRed> </div>
         </div>
       </div>
 
@@ -82,14 +82,14 @@
         </div> <div class="hr"></div>
         <div class="flex"> <!-- Remarcado -->
           <div class="ej"> <mark> Remarcado</mark> </div>
-          <div class="cod"> <NRed>&lt;mark></NRed> Ma <NRed>&lt;/mark></NRed> </div>
+          <div class="cod"> <NRed>&lt;mark></NRed> Mark <NRed>&lt;/></NRed> </div>
         </div>
       </div>
 
       <div class="flex"> <!-- Abr - Acr -->
         <div class="flex"> <!-- Abreviacion -->
           <div class="ej"> <abbr title="Abreviación"> Abr. </abbr> </div>
-          <div class="cod"> <NRed>&lt;abbr></NRed> Abr. <NRed>&lt;/abbr></NRed> </div>
+          <div class="cod"> <NRed>&lt;abbr></NRed> Abr. <NRed>&lt;/></NRed> </div>
         </div> <div class="hr"></div>
         <div class="flex"> <!-- Acronimo -->
           <div class="ej"> <acronym title="Organizacion de las Naciones Unidas"> ONU </acronym> </div>
@@ -141,7 +141,7 @@
 
       <!-- Mapa -->
       Imagen con Mapa: <u>(Usar DreamWeaver CC)</u>
-      <div class="flex" style="align-items: center; justify-content: center;">
+      <div class="flex ifmovil" style="align-items: center; justify-content: center;">
         <div class="w40" style="transform: scale(0.8) translate(-30px);">
           <img src="../Imgs/imgMap.png" usemap="machetes.html#ejemplo_mapa" height="163px">
           <map name="ejemplo_mapa" >
@@ -167,7 +167,7 @@
     <fieldset>
       <legend> Audio, Video, Progress, Iframe </legend>
       <!-- Audio -->
-      <div class="flex">
+      <div class="flex ifmovil">
         <div class="wAuto">
           <audio src="audio.mp3" controls style="height: 22px; width: 240px;"> Texto por si el navegador no soporta audio. </audio>
           <div class="cod">&lt;<NRed>audio<NPurp> src="<NGreen>aud.mp3</NGreen>" controls autoplay loop</NPurp>> &lt; /audio</NRed>></div>
@@ -495,10 +495,9 @@
         <div class="ej wAuto">
           <canvas id="canvas" width="80" height="80" style="margin: auto;"> </canvas>
         </div>
-        <div class="cod">
+        <div class="cod html">
           <NRed> &lt;canvas</NRed> <NPurp>id=</NPurp>"<NGreen>canvas1</NGreen>" 
-            <NPurp>width=</NPurp>"<NGreen>200</NGreen>" <NPurp>height=</NPurp>"<NGreen>100</NGreen>"<NRed>></NRed><br>
-          <NGray>(El Id es necesario para identificarlo en JS).</NGray>
+            <NPurp>width=</NPurp>"<NGreen>200</NGreen>" <NPurp>height=</NPurp>"<NGreen>100</NGreen>"<NRed>></NRed>
         </div>
         <div class="cod">
           <NPurp>var</NPurp> c = document.<NBlue>getElementById</NBlue> ("<NGreen>canvas1</NGreen>"); <br>

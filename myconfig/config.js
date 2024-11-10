@@ -18,13 +18,13 @@ const logo_25px = '<img src="' + server_dir + 'logo.png" height="20px">';
 const git_logo  = '<img src="' + imgs_dir   + 'github-logo.png" height="15px">';
 
 // Titulos
-let titulo;
+var titulo;
 const t_index = "Index";
 const t_html =  "HTML";
 const t_css =   "CSS";
 const t_js =    "JavaScript";
 const t_php =   "PHP";
-const t_bs =   "BootStrap";
+const t_bs =    "BootStrap";
 
 // nombre de archivos
 const index_fname = "index.html";
@@ -141,7 +141,7 @@ if (titulo == t_html){
     linkColor = "#F00";
   }
 }
-if (titulo == t_css || titulo == t_php){
+else if (titulo == t_css || titulo == t_php){
   if (blackTeme) {
     background_color = "rgb(24, 30, 57)";
     back_color = "rgba(0, 0, 255, .05)";
@@ -156,7 +156,7 @@ if (titulo == t_css || titulo == t_php){
     linkColor = "#00F";
   }
 }
-if (titulo == t_js || titulo == t_index){
+else{ // (titulo == t_js || titulo == t_index)
   if (blackTeme) {
     background_color = "rgb(24, 57, 43)";
     back_color = "rgba(0, 255, 0, .02)";
@@ -170,11 +170,6 @@ if (titulo == t_js || titulo == t_index){
     linkColor = "#FFF";
   }
 }
-if (titulo == "Título") {
-  // background_color = "rgb(24, 57, 43)";
-  // background_color = "rgb(24, 30, 57)";
-  background_color = "rgb(57, 33, 24)";
-}
 
 
 
@@ -182,12 +177,6 @@ if (titulo == "Título") {
 
 document.write(/*html*/`
   <style>
-    :root{
-    }
-
-
-
-    /* section color */
     section {
       background-color: ${back_color};
       box-shadow: inset 0 40px 0 0 ${shadow1}, 4px 4px 15px 5px ${shadow2};
@@ -196,13 +185,9 @@ document.write(/*html*/`
       section { box-shadow: inset 0 27px 0 0 ${shadow1} !important; }
     }
   </style>
-  
 `);
 
-
-
-
-// Colores de Códigos
+// TEMA OSCURO
 if (blackTeme) {
   fontColor = "rgb(210, 210, 210)";
   const codBackground = "rgb(15, 15, 27)";
@@ -233,21 +218,18 @@ if (blackTeme) {
       NAqua { color: rgb(20, 212, 255); }
       NOrg  { color: rgb(254, 146, 38);}
       NObj  { color: rgb(252, 222, 104); }
-
-      
     </style>
   `);
 }
 
-// TEMA BLANCO
+// TEMA CLARO
 else { 
   fontColor = "#000";
   document.write(/*html*/`
-
     <style>
       body{ background-color: ${background_color}; }
       .cod{ color: ${fontColor}; }
-      
+    
       NVar{  color: ${fontColor}; }
       NBlue{ color: rgb(0, 62, 219); }
       NGreen{ color: green; }
