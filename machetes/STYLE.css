@@ -88,6 +88,8 @@ h1{
 .fWrap{ flex-wrap: wrap; } /* acomodar */
 
 .columnas{ column-count: 2; }
+.columnas3{ column-count: 3; }
+.separados{ justify-content: space-between }
 
 .marg0{ margin: 0; }
 .wAuto { width: auto; /* padding: 7px; */ }
@@ -121,7 +123,17 @@ button{
   border: 1px solid black;
   padding: 5px 10px;
 }
-
+span[title]{ cursor: help; }
+span[onmousedown]{
+  cursor: pointer;
+  animation: underLineAnim 2s infinite;
+  -webkit-animation: underLineAnim 2s infinite;
+}
+@keyframes underLineAnim {
+  0% { border-bottom: 1px solid rgba(0, 89, 255, 0.472); }
+  50% { border-bottom: 1px solid rgba(255, 255, 255, 0.496); }
+  100% { border-bottom: 1px solid rgba(0, 89, 255, 0.472); }
+}
 
 
 

@@ -64,6 +64,17 @@
         </div>
       </div>
 
+      <div class="flex"> <!-- Comillas / Samp -->
+        <div class="flex">
+          <div class="ej"> <q>Comillas</q> </div>
+          <div class="cod"> <NRed>&lt;q></NRed> Comillas <NRed>&lt;/q></NRed> </div>
+        </div> <div class="hr"></div>
+        <div class="flex"> 
+          <div class="ej"> <samp>Texto Samp</samp> </div>
+          <div class="cod"> <NRed>&lt;samp></NRed> Samp <NRed>&lt;/samp></NRed> </div>
+        </div>
+      </div>
+
       <div class="flex"> <!-- Subrayado - Borrado -->
         <div class="flex"> <!-- Subrayado -->
           <div class="ej"> <ins>Subrayado</ins> </div>
@@ -137,7 +148,25 @@
           <NRed>&lt;a</NRed> <NPurp>href</NPurp> ="<NGreen>Apple.png</NGreen>"<NRed> <NGray>target="_blank"</NGray>></NRed> <br>
           &nbsp; <NRed>&lt;img</NRed> <NPurp>src=</NPurp> "<NGreen>Apple.png</NGreen>" <NPurp>alt=</NPurp>"<NGreen>Texto alternativo</NGreen>" <NPurp>title=</NPurp>"<NGreen>descripción</NGreen>"<NRed>> <br> &lt;/a></NRed>
         </div>
-      </div> <hr>
+      </div> 
+
+      <!-- FigCaption -->
+      <div class="flex">
+        <div class="ej wAuto">
+          <figure class="marg0">
+            <img src="../Imgs/Apple.png" alt="Apple" height="50px" title="Apple">
+            <figcaption>FigCaption</figcaption>
+          </figure>
+        </div>
+        <div class="cod">
+          <NRed>&lt;figure></NRed> <br>
+            &nbsp; <NRed>&lt;img</NRed> <NPurp>src=</NPurp> "<NGreen>Apple.png</NGreen>" <NPurp>alt=</NPurp>"<NGreen>Texto alternativo</NGreen>"<NRed>></NRed> <br>
+            &nbsp; <NRed>&lt;figcaption></NRed> Texto <NRed>&lt;/figcaption></NRed> <br>
+          <NRed>&lt;/figure></NRed> <br>
+        </div>
+      </div>      
+      
+      <hr>
 
       <!-- Mapa -->
       Imagen con Mapa: <u>(Usar DreamWeaver CC)</u>
@@ -199,7 +228,7 @@
 
       <!-- Lista desordenada -->
       <div class="w30">
-        <h3>Desordenada &lt;ul&gt;</h3>
+        <h3>Desordenada &lt;ul> &lt;menu></h3>
         <ul>
           <li type="disc">Disc</li>
           <li type="circle">Circle</li>
@@ -686,3 +715,4 @@
   <script src="/myconfig/modules.js" type="module"></script>
 </body>
 </html>
+

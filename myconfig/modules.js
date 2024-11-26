@@ -26,3 +26,5 @@ if (otrosDiv){
 
 const tituloIcon = document.querySelectorAll(".TituloIcon");
 if (tituloIcon) index_module();
+
+var minombree= "nico"

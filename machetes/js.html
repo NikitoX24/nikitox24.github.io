@@ -31,101 +31,190 @@
 
       <b>Metodos de variables</b>
       <div class="cod">
-        <NGray>str / int =</NGray> user <NAqua>??</NAqua> "<NGreen>Anonymous</NGreen>"; <NGray>// (si no tiene valor, poner uno)</NGray> <br>
-        <NGray>string =</NGray> <NObj>String</NObj>(<NOrg>true</NOrg>); <NGray>// (convertir algun valor a String).</NGray> <br>
-        <NGray>int =</NGray> <NObj>Number</NObj>("<NGreen>123</NGreen>"); <NGray>// (convertir algun valor a Number).</NGray> <br>
-        <NGray>int =</NGray> +("<NGreen>123</NGreen>"); <NGray>// (convertir algun valor a Number).</NGray> <br>
+        user = user <NAqua>??</NAqua> "<NGreen>Anonymous</NGreen>"; <NGray>// (si está sin definir, poner uno)</NGray> <br>
+        <NBlue>Boolean</NBlue>("<NGreen>asd</NGreen>"); <NGray>// true (si contiene), false (no)</NGray> <br>
         <hr>
-        <NGray>bool =</NGray> <NBlue>Boolean</NBlue>("<NGreen>asd</NGreen>"); <NGray>// true (si contiene), false (no)</NGray> <br>
-        <NGray>bool =</NGray> <NBlue>!!</NBlue>"<NGreen>asd</NGreen>"; <NGray>// true (si contiene), false (no)</NGray> <br>
+        
+        <div class="columnas">
+          <NGray>// Convertir a otro tipo.</NGray> <br>
+          <NObj>String</NObj>(<NOrg>true</NOrg>); <NGray>// (convertir a String).</NGray> <br>
+          <NObj>Boolean</NObj>("<NGreen>true</NGreen>"); <NGray>// (convertir a Boolean).</NGray> <br>
+          <NObj>Number</NObj>("<NGreen>123</NGreen>"); <NGray>// (convertir a Number).</NGray> <br>
+          <span id="_parseInt"> <NBlue>parseInt</NBlue></span> <NGray> (convertir a Number).</NGray> <br>
+          +("<NGreen>123</NGreen>"); <NGray>// (convertir a Number).</NGray> <br>
+        </div>
       </div> <br>
 
       <b>Metodos de Numeros</b>
       <div class="cod">
-        <div class="flex separados">
-          <div> <NPurp>let</NPurp> a = <NOrg>1_300_000</NOrg>; <NGray>// 1.3m</NGray> </div>
-          <div> <NPurp>let</NPurp> a = <NOrg>1.3e9</NOrg>; <NGray>// 1.3m </NGray> </div>
-          <div> <NPurp>let</NPurp> b = <NOrg>1.e-4</NOrg>; <NGray>// 0.0001 </NGray> </div>
-          <div> <NPurp>let</NPurp> c = <NOrg>0xFF</NOrg>; <NGray>// 255 </NGray> </div>
+        <div class="columnas">
+          <span> <NPurp>let</NPurp> a = <NOrg>1_000_000</NOrg> ó <NOrg>1e6</NOrg>; <NGray>// 1000000</NGray> </span> <br>
+          <span id="_toFixed"><NOrg>1.1234</NOrg>.<NBlue>toFixed</NBlue></span> <NGray>(num decimales)</NGray> <br>
+          <span> <NOrg>1.1234</NOrg>.<NBlue>toPrecision</NBlue>(<NOrg>3</NOrg>) </span> <NGray>// 1.12 (num de digitos)</NGray> <br>
+          <span id="_floor"> Math.<NBlue>floor</NBlue></span> <NTab></NTab><NGray>(Redondear abajo)</NGray> <br>
+          <span id="_round"> Math.<NBlue>round</NBlue></span> <NTab></NTab><NGray>(Redondear cerca)</NGray> <br>
+          <span id="_ceil"> Math.<NBlue>ceil</NBlue></span>   <NTab></NTab><NGray>(Redondear arriba)</NGray> <br>
         </div> <hr>
-        <div class="flex separados">
-          <div> (255).<NBlue>toString</NBlue>(<NOrg>2</NOrg>) <NGray>// 11111111 </NGray> </div>
-          <div> 255..<NBlue>toString</NBlue>(<NOrg>16</NOrg>) <NGray>// ff </NGray> </div>
-          <div> (123456).<NBlue>toString</NBlue>(<NOrg>32</NOrg>) <NGray>// 2n9c </NGray> </div>
-        </div> <hr>
-        <div class="flex separados">
-          <div> <NBlue>parseInt</NBlue>("<NGreen>100px</NGreen>"); <NGray>// 100 </NGray> </div>
-          <div> <NBlue>parseFloat</NBlue>("<NGreen>12.5em</NGreen>"); <NGray>// 12.5 </NGray> </div>
-          <div> <NBlue>parseInt</NBlue>("<NGreen>a123</NGreen>"); <NGray>// NaN </NGray> </div>
-        </div> <hr>
-        <div class="flex separados">
-          <div> Math.<NBlue>floor</NBlue>(<NOrg> 3.1 </NOrg>); <NGray>// 3 </NGray> </div>
-          <div> Math.<NBlue>floor</NBlue>(<NOrg> -1.1 </NOrg>); <NGray>// -2</NGray> </div>
+        <div class="columnas">
+          <div><span> <NOrg>1000</NOrg>.<NBlue>myMetodo</NBlue>() <NGray>// ARG 1.000,00 </NGray></span></div>
+          <NGray>// (crear un metodo q devuelve en formato moneda)</NGray>
         </div>
-        <div class="flex separados">
-          <div> Math.<NBlue>ceil</NBlue>(<NOrg> 3.1 </NOrg>); <NGray>// 4 </NGray> </div>
-          <div> Math.<NBlue>ceil</NBlue>(<NOrg> -1.1 </NOrg>); <NGray>// -1 </NGray> </div>
-        </div>
-        <div class="flex separados">
-          <div> Math.<NBlue>round</NBlue>(<NOrg> 3.1 </NOrg>); <NGray>// 3 </NGray> </div>
-          <div> Math.<NBlue>round</NBlue>(<NOrg> 3.5 </NOrg>); <NGray>// 4 </NGray> </div>
-        </div>
-        <div class="flex separados">
-          <div> 1.23456..<NBlue>toFixed</NBlue>(<NOrg>2</NOrg>); <NGray>// "1.23" (string) </NGray> </div>
-          <div> +(1.11).<NBlue>toFixed</NBlue>(<NOrg>5</NOrg>); <NGray>// 1.11000 (num) </NGray> </div>
-        </div>
-        <style>.separados{justify-content: space-between}</style>
+        <NObj>Number</NObj>.prototype.<NBlue>myMetodo</NBlue> = <NPurp>function</NPurp>() { 
+           <NAqua>return this</NAqua>.<NBlue>toLocaleString</NBlue>("<NGreen>es-AR</NGreen>", {style:"<NGreen>currency</NGreen>", currency:"<NGreen>ARG</NGreen>"}) }; <br>
       </div> <br>
     </fieldset>
     
     <fieldset> <!-- Metodos de Strings -->
       <legend> Metodos de Strings (no se modifican) </legend>
       <div class="cod">
-        <NPurp>let</NPurp> texto = "<NGreen>Hola a todos mis amigos, a mis Videos</NGreen>";
+        <div class="flex separados">
+          <div> <NPurp>let</NPurp> texto = "<NGreen>Hola a todos mis amigos, a mis Videos</NGreen>"; </div> <br>
+          <div> texto.length; <NGray>// 37</NGray> </div> <br>
+        </div>
         <!-- ------------------------------------- --> <hr> <!-- ------------------------------------- -->
-        <NGray>int =</NGray> texto.length; <NGray>// 37</NGray> <br> 
         <NGray>int =</NGray> texto.<NBlue>indexOf</NBlue>("<NGreen>la</NGreen>", <NOrg>1</NOrg>); <NGray>// 2 </NGray> <br>
         <NGray>int =</NGray> texto.<NBlue>lastIndexOf</NBlue>("<NGreen>mis</NGreen>"); <NGray>// 27</NGray> <br>
-        <NGray>int =</NGray> texto.<NBlue>search</NBlue>("<NGreen>a</NGreen>"); <NGray>// 3</NGray> <br>
         <!-- ------------------------------------- --> <hr> <!-- ------------------------------------- -->
-        <NGray>array =</NGray> texto.<NBlue>match</NBlue>("<NGreen>todos</NGreen>"); <NGray>// [todos] (array-obj)</NGray> <br>
-        <NGray>array =</NGray> texto.<NBlue>match</NBlue>(/<NGreen>mis</NGreen>/<NOrg>gi</NOrg>); <NGray>// [mis, mis] </NGray> <br>
         <NGray>array =</NGray> texto.<NBlue>split</NBlue>(" ", <NOrg>2</NOrg>); <NGray>// (Array separados por " ", cantidad)</NGray> <br> 
-        <NGray>array =</NGray> <NPurp>let</NPurp> [nombre, apellido] = "<NGreen>Will Smith</NGreen>".<NBlue>split</NBlue>(' '); <NGray>// (desestructuracion)</NGray>
+        <NPurp>let</NPurp> [name, surn] = "<NGreen>Will Smith</NGreen>".<NBlue>split</NBlue>(" "); <NGray>// (desestructuracion)</NGray>
         <!-- ------------------------------------- --> <hr> <!-- ------------------------------------- -->
         <NGray>string =</NGray> texto.<NBlue>at</NBlue>(<NOrg>-3</NOrg>); <NGray>// e</NGray> <br>
-        <NGray>string =</NGray> texto.<NBlue>charAt</NBlue>(<NOrg>3</NOrg>); <NGray>// a</NGray> <br>
-        <NGray>string =</NGray> texto.<NBlue>slice</NBlue>(<NOrg>0, 5</NOrg>) ; <NGray>// Leer (start, stop(opcional))</NGray> <br>
-        <NGray>string =</NGray> texto.<NBlue>substr</NBlue>(<NOrg>5, 11</NOrg>); <NGray>// "a todos mis" (start, cantidad)</NGray> <br>
-        <NGray>string =</NGray> texto.<NBlue>substring</NBlue>(<NOrg>5, 11</NOrg>); <NGray>// "a todo" (start, index)</NGray> <br>
+        <NGray>string =</NGray> <span id="_slice">texto.</span> <NGray>Leer (start, end)</NGray> <br>
         <!-- ------------------------------------- --> <hr> <!-- ------------------------------------- -->
-        <NGray>string =</NGray> texto.<NBlue>replace</NBlue>("<NGreen>mundo", "amigos</NGreen>"); <NGray>// (reemplazar) </NGray> <br>
-        <NGray>string =</NGray> texto.<NBlue>trim</NBlue>(); <NGray>// (quitar espacios antes y dps)</NGray> <br>
-        <NGray>string =</NGray> texto.<NBlue>trimStart</NBlue>(); <NGray>// (quitar espacios antes)</NGray> <br>
-        <NGray>string =</NGray> texto.<NBlue>trimEnd</NBlue>(); <NGray>// (quitar espacios dps)</NGray> <br>
-        <NGray>string =</NGray> texto.<NBlue>toUpperCase / toLowerCase</NBlue>(); <NGray>// (transform)</NGray> <br>
-        <NGray>string =</NGray> texto.<NBlue>concat</NBlue>("<NGreen>_</NGreen>", var); <NGray>// (unir strings)</NGray> <br>
+        <NGray>string =</NGray> <span id="_replace">texto.</span> <NGray>(reemplazar)</NGray><br>
+        <NGray>string =</NGray> <span id="_trimStart">texto.</span> <NGray> (quitar espacios)</NGray> <br>
+        <NGray>string =</NGray> <span id="_toUpperCase">texto.</span> <NGray> (transform)</NGray> <br>
         <NGray>string =</NGray> texto.<NBlue>repeat</NBlue>(<NOrg>2</NOrg>); <NGray>// (repetir)</NGray> <br>
+        <NGray>string =</NGray> <span id="_padStart">texto.</span> <NGray> (llenar con "-")</NGray> <br>
         <!-- ------------------------------------- --> <hr> <!-- ------------------------------------- -->
         <NGray>bool =</NGray> texto.<NBlue>includes</NBlue>("<NGreen>amig</NGreen>", <NOrg>25</NOrg>); <NGray>// false</NGray> <br>
-        <NGray>bool =</NGray> texto.<NBlue>includes</NBlue>("<NGreen>amig</NGreen>"); <NGray>// true</NGray> <br>
-        <NGray>bool =</NGray> texto.<NBlue>startsWith</NBlue>("<NGreen>Si</NGreen>"); <NGray>// false</NGray> <br>
-        <NGray>bool =</NGray> texto.<NBlue>endsWith</NBlue>("<NGreen>Videos</NGreen>"); <NGray>// true</NGray> <br>
+        <NGray>bool =</NGray> <span id="_starstWith">texto.</span> <br>
+        <!-- ------------------------------------- --> <hr> <!-- ------------------------------------- -->
+        <NGray>string =</NGray> texto.<NBlue>search</NBlue>(/<NGreen>mis</NGreen>/<NOrg>i</NOrg>); <NGray>// 13 (Regular Expresion)</NGray> <br>
+        <NGray>array =</NGray> texto.<NBlue>match</NBlue>(/<NGreen>mis</NGreen>/<NOrg>gi</NOrg>); <NGray>// [mis, mis] </NGray> <br>
+        <span onmousedown="onclick_ShowCode(__valorString, '_stringsDiv')">texto.<NBlue>match</NBlue>();<NGray> // (Regular Expresion)</NGray></span> <NBlue>*</NBlue><br>
       </div>
+      <div class="cod">
+        <NGray>// Crear Metodo (Prototype)</NGray> <br>
+        <NObj>String</NObj>.prototype.<NBlue>Span</NBlue> = <NPurp>function</NPurp>() {<NAqua>return</NAqua> `<NGreen>&lt;span><NAqua>${this}</NAqua>&lt;/span></NGreen>`}; <br>
+        "<NGreen>texto</NGreen>".<NBlue>Span</NBlue>(); <NGray>//  &lt;span>hola&lt;/span></NGray>
+      </div>
+      <script>
+        const __valorString = `
+        <div class="textoSuelto">
+          <NGray>// Patterns:</NGray> <br>
+            <NAqua>/[^<NGreen>abc</NGreen>]/</NAqua>----------(cada letra q NO esté dentro del corchete) <br>
+            <NAqua>/[<NGreen>abc</NGreen>]/</NAqua>----------(cada letra q esté dentro del corchete) <br>
+            <NAqua>/[<NGreen>0-9</NGreen>]/</NAqua>----------(cada num q esté dentro del corchete) <br>
+            <NAqua>/(<NGreen>hi</NGreen>|<NGreen>bye</NGreen>)/</NAqua> -----(cada palabra q se esté dentro del parentesis) <br>
+            <NAqua>/\\X/</NAqua>-------------(buscar los q NO son... (Patron En Mayusc)) <br>
+            <NAqua>/\\s/</NAqua>-------------(buscar espacio en blanco) <br>
+            <NAqua>/\\d/</NAqua>-------------(buscar digitos/numeros) <br>
+            <NAqua>/\\d{3,4}/</NAqua>--------(buscar secuencia de 3 o 4 digitos) <br>
+            <NAqua>/\\w/</NAqua>-------------(buscar letras) <br>
+            <NAqua>/\\n/</NAqua>-------------(buscar new line) <br>
+            <NAqua>/\\t/</NAqua>-------------(buscar tab) <br>
+            <NAqua>/\\<NGreen>o</NGreen>+/</NAqua>-----------(buscar palabras q tengan al menos una "o") <br>
+            <NAqua>/\\<NGreen>lo</NGreen>?/</NAqua>----------(buscar palabras q tengan o no una "O" despues de la "L") <br>
+            <NAqua>/\\<NGreen>lo</NGreen>*/</NAqua>----------(buscar palabras q tengan o no una o mas "O" despues de la "L") <br>
+            <NAqua>/\\b<NGreen>lo</NGreen>/ <NVar>-</NVar> /<NGreen>lo</NGreen>\\b/</NAqua> -(empiezan o terminan con "LO") <br> <br />
+          <NGray>// Modifiers:</NGray> <br>
+            <NOrg>g</NOrg> (global - array) <br>
+            <NOrg>i</NOrg> (case insensitive) <br>
+            <NOrg>d</NOrg> (start o ends with) <br>
+        </div>
+        <div class="cod">
+          <NGray>// Metodos:</NGray> <br>
+          "<NGreen>texto hola</NGreen>".<NBlue>search</NBlue>(<NAqua>/<NGreen>hola</NGreen>/</NAqua><NOrg>i</NOrg>);<NGray>// 6 (index)</NGray> <br>
+          "<NGreen>texto hola</NGreen>".<NBlue>match</NBlue>(<NAqua>/<NGreen>hola</NGreen>/</NAqua><NOrg>gi</NOrg>);<NGray>// [hola] (array)</NGray> <br>
+          <NAqua>/<NGreen>e</NGreen>/</NAqua>.<NBlue>test</NBlue>("<NGreen>texto hola</NGreen>"); <NGray>// true</NGray> <br>
+          <NAqua>/<NGreen>e</NGreen>/</NAqua>.<NBlue>exec</NBlue>("<NGreen>texto hola</NGreen>"); <NGray>// (object)</NGray> <br>
+        </div>
+      `;   
+      </script>
+      <div class="_stringsDiv"></div>
     </fieldset>
 
     <fieldset> <!-- Arrays --> 
       <legend> Arrays </legend>
       Crear:
-      <div class="flex">
+      <div class="columnas">
         <div class="cod"> <NPurp>let</NPurp> myArr <NAqua>= new</NAqua> <NObj>Array</NObj>("<NGreen>a</NGreen>"); </div>
+        <div class="cod"> <span onmousedown="onclick_ShowCode(__valorArray, '_arrayDiv')"> <NPurp>let</NPurp> myArr <NAqua>= new</NAqua> <NObj>Int8Array</NObj>(<NOrg>a</NOrg>); <NGray>// Typed Array</NGray> <NBlue>*</NBlue> </span> </div>
         <div class="cod"> <NPurp>let</NPurp> myArray = <NAqua>new</NAqua> <NObj>Array</NObj>(<NOrg>3</NOrg>); </div>
         <div class="cod"> <NPurp>let</NPurp> myArray = [<NOrg>1</NOrg>, "<NGreen>b</NGreen>", <NRed>true</NRed>]; </div>
       </div><br>
+      <script>
+        const __valorArray = `
+          <table class="textoSuelto">
+            <tbody><tr>
+              <th>Object</th>
+              <th>Data Type</th>
+              <th style="text-align:right">Range</th>
+            </tr>
+            <tr>
+              <td>Int8Array</td>
+              <td>Signed integer (byte)</td>
+              <td style="text-align:right">-128/127</td>
+            </tr>
+            <tr>
+              <td>Uint8Array</td>
+              <td>Unsigned integer (octet)</td>
+              <td style="text-align:right">0/255</td>
+            </tr>
+            <tr>
+              <td>Uint8ClampedArray</td>
+              <td>Unsigned integer (octet)</td>
+              <td style="text-align:right">0/255</td>
+            </tr>
+            <tr>
+              <td>Int16Array</td>
+              <td>Short integer</td>
+              <td style="text-align:right">-32768/32767</td>
+            </tr>
+            <tr>
+              <td>Uint16Array</td>
+              <td>Unsigned short integer</td>
+              <td style="text-align:right">0/65535</td>
+            </tr>
+            <tr>
+              <td>Int32Array</td>
+              <td>Signed long integer</td>
+              <td style="text-align:right">-2<sup>31</sup>/2<sup>31</sup>-1</td>
+            </tr>
+            <tr>
+              <td>Uint32Array</td>
+              <td>Unsigned long integer</td>
+              <td style="text-align:right">0/2<sup>32</sup></td>
+            </tr>
+            <tr>
+              <td>Float32Array</td>
+              <td>Float - 7 digits</td>
+              <td style="text-align:right">1.2x10<sup>-38</sup>/3.4x10<sup>38</sup></td>
+            </tr>
+            <tr>
+              <td>Float64Array</td>
+              <td>Double - 16 digits</td>
+              <td style="text-align:right">5.0x10<sup>-324</sup>/1.8x10<sup>308</sup></td>
+            </tr>
+            <tr>
+              <td>BigInt64Array</td>
+              <td>Big signed integer</td>
+              <td style="text-align:right">-2<sup>63</sup>/2<sup>63</sup>-1</td>
+            </tr>
+            <tr>
+              <td>BigUint64Array</td>
+              <td>Big unsigned integer</td>
+              <td style="text-align:right">0/2<sup>64</sup></td>
+            </tr>
+            </tbody>
+          </table>
+        `;
+      </script>
+      <div class="_arrayDiv"></div>
 
       Metodos de array: (se modifican) <br>
       <div class="cod">
-        <!-- ["A", "B", "C", "C"] -->
         <NPurp>let</NPurp> array = ["<NGreen>A</NGreen>", "<NGreen>B</NGreen>", "<NGreen>C</NGreen>", "<NGreen>C</NGreen>"]; <br>
         <!-- ------------------------------------- --> <hr> <!-- ------------------------------------- -->
         array.length; <NGray>// 4</NGray> <br>
@@ -163,28 +252,37 @@
         array.<NBlue>fill</NBlue>("<NGreen>x</NGreen>", <NOrg>0</NOrg>, <NOrg>3</NOrg>); <NGray>// x, x, x, C (a partir de , cantidad) </NGray> <br>
         <NGray>[←]</NGray> array.<NBlue>reverse</NBlue>(); <NGray>// (1ro es último, y viceversa)</NGray>  <br>
         <NGray>A-Z</NGray> array.<NBlue>sort</NBlue>(); <NGray>// (odenar asc A-Z) <a href="../Imgs/arraySort.png">Leer más...</a></NGray> <br>
-        <!-- ------------------------------------- --> <hr> <!-- ------------------------------------- -->
-
-        <b>Recorrer</b>: <br> <!-- ["A", "B", "C"]; -->
-        <NPurp>let</NPurp> array = ["<NGreen>A</NGreen>", "<NGreen>B</NGreen>", "<NGreen>C</NGreen>"]; <br>
-        array.<NBlue>map</NBlue>((elem, i) <NPurp>=></NPurp> i + elem); <NGray>// ["0A", "1B", "2C"] <b>(recorrer arrays + return)</b> </NGray> <br>
-        array.<NBlue>forEach</NBlue>((elem, i) <NPurp>=></NPurp> elem + i); <NGray>// ["A0", "B1", "C2"] <b>(recorrer arrays)</b> </NGray> <hr>
-        <!-- [1, 2, 3, 4] -->
-        <NPurp>let</NPurp> array = [<NOrg>1</NOrg>, <NOrg>2</NOrg>, <NOrg>3</NOrg>, <NOrg>4</NOrg>]; <br>
-        <NGray>bool =</NGray> array.<NBlue>some</NBlue>(elem => elem < <NOrg>2</NOrg>); <NGray>// true (alguno es menor q?)</NGray> <br>
-        <NGray>bool =</NGray> array.<NBlue>every</NBlue>(elem => elem < <NOrg>2</NOrg>); <NGray>// false (todos son menor q?)</NGray> <br>
-        <NGray>int =</NGray> array.<NBlue>reduce</NBlue>((acumulado, actual) <NPurp>=></NPurp> acumulado + actual); <NGray>// 10 (unir anterior(acumulados) con el siguiente) </NGray> <br>
       </div><br>
 
-
-      <div class="flex">
+      
+      <b>Recorrer</b>: <br>
+      <div class="cod">
+        <!-- ["A", "B", "C"]; -->
+        <NPurp>let</NPurp> array = ["<NGreen>A</NGreen>", "<NGreen>B</NGreen>", "<NGreen>C</NGreen>"]; <br>
+        array.<NBlue>map</NBlue>((elem, i) <NPurp>=></NPurp> i + elem); <NGray>// ["0A", "1B", "2C"] <b>(recorrer arrays + return)</b> </NGray> <br>
+        array.<NBlue>forEach</NBlue>((elem, i) <NPurp>=></NPurp> elem + i); <NGray>// ["A0", "B1", "C2"] <b>(recorrer arrays)</b> </NGray> 
+        <hr>
+        <!-- [1, 2, 3, 4] -->
+        <NPurp>let</NPurp> array = [<NOrg>1</NOrg>, <NOrg>2</NOrg>, <NOrg>3</NOrg>, <NOrg>4</NOrg>]; <br>
+        <NGray>bool =</NGray> array.<NBlue>some</NBlue>(elem => elem < <NOrg>2</NOrg>); <NGray>// true (check si alguno cumple la condición)</NGray> <br>
+        <NGray>bool =</NGray> array.<NBlue>every</NBlue>(elem => elem < <NOrg>2</NOrg>); <NGray>// false (check si todos cumplen la condición)</NGray> <br>
+        <NGray>int =</NGray> array.<NBlue>reduce</NBlue>((acumulado, actual) <NPurp>=></NPurp> acumulado + actual); <NGray>// 10 (unir anterior(acumulados) con el siguiente) </NGray> <br>
+        <hr> 
         <!-- Extraer de DOM y ponerlos en un Array -->
-        <div class="cod">
-          <NGray>// Extraer de DOM y ponerlos en un Array</NGray> <br>
-          <NPurp>const</NPurp> elementos = <NObj>Array</NObj>.<NBlue>from</NBlue>(document.<NBlue>querySelectorAll</NBlue>("<NGreen>.dias p</NGreen>"));<br>
-          <NPurp>let</NPurp> array = elementos.<NBlue>map</NBlue>(dia <NPurp>=></NPurp> dia.textContent); <br>
-          console.<NBlue>log</NBlue>(array); <NGray>// ["L", "M", "M" ...] </NGray>
-        </div>
+        <NGray>// Extraer de DOM y ponerlos en un Array</NGray> <br>
+        <NPurp>const</NPurp> elementos = <NObj>Array</NObj>.<NBlue>from</NBlue>(document.<NBlue>querySelectorAll</NBlue>("<NGreen>.dias p</NGreen>"));<br>
+        <NPurp>let</NPurp> array = elementos.<NBlue>map</NBlue>(dia <NPurp>=></NPurp> dia.textContent); <br>
+        console.<NBlue>log</NBlue>(array); <NGray>// ["L", "M", "M" ...] </NGray>
+      </div> <br>
+
+      <b>Crear un metodo (prototype)</b>:
+      <div class="cod columnas">
+        <NObj>Array</NObj>.prototype.<NBlue>myUcase</NBlue> = <NPurp>function</NPurp>() { <br>
+          <NTab></NTab> <NAqua>this</NAqua>.forEach(x => x.<NBlue>toUpperCase</NBlue>()); <br>
+        }; <br>
+
+        <NPurp>let</NPurp> fruits = ["<NGreen>Banana</NGreen>", "<NGreen>Orange</NGreen>", "<NGreen>Apple</NGreen>"]; <br>
+        fruits.<NBlue>myUcase</NBlue>(); <br>
       </div>
     </fieldset>
      
@@ -192,29 +290,54 @@
       <legend> Map y Set </legend>
       <div class="flex">
         <div class="cod">
-          <u><b>Map (iterar arrays, y aplicarles una funcion)</b></u> <br>
+          <u><b>Map (iterar arrays con alguna funcion)</b></u> <br>
           <NPurp>let</NPurp> map<NAqua> = new </NAqua> <NObj>Map( )</NObj>; <NGray>// Crear Mapa.</NGray> <br>
-          map.<NBlue>set</NBlue>("<NGreen>clave</NGreen>", "<NGreen>valor</NGreen>"); <NGray>// Agregar elemento.</NGray> <br>
+          map.<NBlue>set</NBlue>("<NGreen>clave</NGreen>", "<NGreen>valor</NGreen>"); <NGray>// Agregar elem.</NGray> <br>
           map.<NBlue>get</NBlue>("<NGreen>clave</NGreen>"); <NGray>// Obtener elemento.</NGray> <br>
           map.<NBlue>has</NBlue>("<NGreen>clave</NGreen>"); <NGray>// Bool si tiene.</NGray> <br>
           map.<NBlue>delete</NBlue>("<NGreen>clave</NGreen>"); <NGray>// Eliminar elemento.</NGray> <br>
           map.<NBlue>clear</NBlue>(); <NGray>// Vaciar Map.</NGray> <br>
-          map.<NBlue>size</NBlue>; <NGray>// devuelve la cantidad de elementos.</NGray> <br>
+          map.size; <NGray>// Cantidad de elementos.</NGray> <br>
           map.<NBlue>keys</NBlue>(); <NGray>// Claves.</NGray> <br>
           map.<NBlue>values</NBlue>(); <NGray>// Valores.</NGray> <br>
+          <span onmousedown="onclick_ShowCode(__valorGroupBy, '_MapSetDiv')">map.<NBlue>groupBy</NBlue>(); <NGray> // Agrupar por...</NGray></span><NBlue>*</NBlue><br>
+
         </div>
         <div class="cod">
-          <u><b>Set (No se repiten, solo valores)</b></u> <br><br>
-          <NPurp>const</NPurp> set <NAqua> = new</NAqua> <NObj>Set()</NObj>; <NGray>// Crea el set.</NGray> <br>
-          set.<NBlue>add</NBlue>(valor); <NGray>// agrega un valor, y devuelve el set en sí.</NGray> <br>
-          set.<NBlue>delete</NBlue>(valor); <NGray>// elimina el valor, devuelve true si existía.</NGray> <br>
-          set.<NBlue>has</NBlue>(valor); <NGray>// devuelve true si el valor existe</NGray> <br>
+          <u><b>Set (No se repiten, solo valores)</b></u> <br>
+          <NPurp>const</NPurp> set <NAqua> = new</NAqua> <NObj>Set([<NGreen>"a", "b", "c"</NGreen>])</NObj>; <NGray>// Crea el set.</NGray> <br>
+          set.<NBlue>add</NBlue>(valor); <NGray>// agrega un valor, (return set).</NGray> <br>
+          set.<NBlue>delete</NBlue>(valor); <NGray>// eliminar valor, (return bool).</NGray> <br>
+          set.<NBlue>has</NBlue>(valor); <NGray>// return true si el valor existe</NGray> <br>
           set.<NBlue>clear</NBlue>(); <NGray>// elimina todo el continido del set.</NGray> <br>
-          set.size; <NGray>// cantidad de elementos.</NGray> <br><br>
-
-          <NPurp>const</NPurp> directions <NAqua> = new</NAqua> <NObj>Set</NObj><<NObj>string</NObj>>(); <NGray>// TypeSript</NGray>
+          set.size; <NGray>// cantidad de elementos.</NGray> <br>
+          set.<NBlue>keys</NBlue>(); <NGray>// Claves.</NGray> <br>
+          set.<NBlue>values</NBlue>(); <NGray>// Valores.</NGray> <br><br>
+          <NPurp>const</NPurp> set <NAqua> = new</NAqua> <NObj>Set</NObj><<NObj>string</NObj>>(); <NGray>// TypeSript</NGray>
         </div>
       </div>
+      <div class="_MapSetDiv"></div>
+      <script>
+        const __valorGroupBy = `
+          <div class="cod">
+            <NGray>// Agrupar elementos según los valores devueltos por un callback. </NGray> <br>
+            const fruits = [  <br>
+              &nbsp; {name:"apples", quantity:300},  <br>
+              &nbsp; {name:"bananas", quantity:500},  <br>
+              &nbsp; {name:"oranges", quantity:200}  <br>
+            ];  <br><br>
+
+            <NGray>// Callback function.</NGray>  <br>
+            function myCallback({ quantity }) {  <br>
+              &nbsp; return quantity > 200 ? "ok" : "low";  <br>
+            }  <br><br>
+            
+            <NGray>// Agrupar por Cantidad.</NGray>  <br>
+            const result = Map.groupBy(fruits, myCallback);  <br>
+            <NGray>// (return 2 arrays separados: ok, low)</NGray>  <br>
+          </div>
+        `;   
+      </script>
     </fieldset>
   </section>
 
@@ -310,8 +433,8 @@
         <div class="cod">
           <NGray>// REST (convertir en array)</NGray> <br>
           <NPurp>function</NPurp> <NBlue>MyFunc</NBlue>(...array) { <br>
-            &nbsp; console.<NBlue>log</NBlue>(array); <br> } <br><br>
-          <NBlue>MyFunc</NBlue>("Ene", "Feb" ...);
+            &nbsp; array.<NBlue>forEach</NBlue>(elem <NPurp>=></NPurp> console.<NBlue>log</NBlue>(elem)); <br> } <br><br>
+          <NBlue>MyFunc</NBlue>("<NGreen>Ene</NGreen>", "<NGreen>Feb</NGreen>", "<NGreen>Mar</NGreen>");
         </div>
         <div class="cod">
           <NGray>// SPREAD (recibir un array)</NGray> <br>
@@ -363,12 +486,11 @@
 
     <fieldset> <!-- IIFE -->
       <legend> IIFE (Immediately Invoked Function Expression)</legend>
-      IIFE (Expresion de Funcion Invocado Inmediatamente) <br>
-      <div class="cod">
-        <NObj>(</NObj><NPurp>function</NPurp>() { console.<NBlue>log</NBlue>("<NGreen>Paréntesis (función)</NGreen>"); }<NObj>)</NObj>();  <br>
-        <NObj>(</NObj><NPurp>function</NPurp>() { console.<NBlue>log</NBlue>("<NGreen>Paréntesis (todo)</NGreen>"); }()<NObj>)</NObj>; <br>
-        <NObj>!</NObj><NPurp>function</NPurp>() { console.<NBlue>log</NBlue>("<NGreen>Operador ! 'Bitwise NOT'</NGreen>"); }(); <br>
-        <NObj>+</NObj><NPurp>function</NPurp>() { console.<NBlue>log</NBlue>("<NGreen>Operador + 'más unario'</NGreen>"); }(); <br>
+      <div class="cod columnas">
+        <NObj>(</NObj><NPurp>function</NPurp>() { console.<NBlue>log</NBlue>("<NGreen>Hola</NGreen>"); }<NObj>)</NObj>();  <br>
+        <NObj>(</NObj><NPurp>function</NPurp>() { console.<NBlue>log</NBlue>("<NGreen>Hola</NGreen>"); }()<NObj>)</NObj>; <br>
+        <NObj>!</NObj><NPurp>function</NPurp>() { console.<NBlue>log</NBlue>("<NGreen>Hola</NGreen>"); }(); <br>
+        <NObj>+</NObj><NPurp>function</NPurp>() { console.<NBlue>log</NBlue>("<NGreen>Hola</NGreen>"); }(); <br>
       </div>
     </fieldset>
 
@@ -376,55 +498,62 @@
       <legend> NFE (Named Function Expression)</legend>
       <!-- https://es.javascript.info/function-object -->
       Las funciones son Objetos, y contienen propiedades. <br>
-      <div class="cod">
-        <NGray>// <b>name</b> de la funcion.</NGray> <br>
-          <NPurp>function</NPurp> <NBlue>sayHi</NBlue>(){} <br>
-          <NBlue>alert</NBlue>(<NBlue>sayHi</NBlue>.name); <NGray>// sayHi</NGray> <hr>
-
-        <NGray>// <b>length</b> de los parámetros.</NGray> <br>
-          <NPurp>function</NPurp> <NBlue>myFunc</NBlue>(a, b) {} <br>
-          <NBlue>alert</NBlue>(<NBlue>myFunc</NBlue>.length); <NGray>// 2</NGray> <hr>
-
-        <NGray>// crear una propiedad</NGray> <br>
+      <div class="flex">
+        <div class="cod">
+          <NGray>// Metodos de las func.</NGray> <br>
+          <NPurp>function</NPurp> <NBlue>myFunc</NBlue>(a, b){} <br>
+          <NBlue>myFunc</NBlue>.name; <NGray>// myFunc (func name)</NGray> <br>
+          <NBlue>myFunc</NBlue>.length; <NGray>// 2 (cant. param.)</NGray> <hr>
+        
+          <NGray>// Crear una propiedad</NGray> <br>
           <NPurp>function</NPurp> <NBlue>sayHi</NBlue>() { <br>
             &nbsp; <NBlue>sayHi</NBlue>.counter++; <br>
           } <br>
           <NBlue>sayHi</NBlue>.counter = <NOrg>0</NOrg>; <NGray>// valor inicial</NGray> <br>
-          <NBlue>sayHi</NBlue>(); <NBlue>sayHi</NBlue>(); <NGray>// (llamar 2 veces)</NGray> <br><br>
-          alert(sayHi.counter); <NGray>// 2</NGray> <hr>
+          <NBlue>sayHi</NBlue>(); <NBlue>sayHi</NBlue>(); <NGray>// (llamar 2 veces)</NGray> <br>
+          alert(sayHi.counter); <NGray>// 2</NGray>
+        </div>
 
-        <NGray>// Llamarse a sí mismo</NGray> <br>
+        <div class="cod">
+          <NGray>// Llamarse a sí mismo</NGray> <br><br>
           <NPurp>let</NPurp> <NBlue>sayHi</NBlue> = <NPurp>function</NPurp> func(who) { <br>
             &nbsp; <NAqua>if</NAqua> (who) <NGray>// si contiene algo...</NGray> <br>
             <NTab></NTab> console.<NBlue>log</NBlue>(`<NGreen>Hello</NGreen>, ${who}`); <br>
             &nbsp; <NAqua>else</NAqua>  <br>
             <NTab></NTab> <NBlue>func</NBlue>("<NGreen>Guest</NGreen>"); // volver a llamarse a sí mismo <br>
           }; <br><br>
-
           <NBlue>sayHi</NBlue>(); // Hello, Guest. <br>
           <NBlue>sayHi</NBlue>("<NGreen>nico</NGreen>"); // Hello, nico.
+        </div>
       </div>      
     </fieldset>
 
     <fieldset> <!-- "Cache invisible" -->
       <legend> "Cache invisible" </legend>
-      <div class="cod">
-        <NPurp>function</NPurp> <NBlue>slow</NBlue>(x) { <br>
-          &nbsp; <NGray>// Codigo muy pesado.</NGray> <br>
-          &nbsp; <NAqua>return</NAqua> x; <br>
-        } <br><br>
-        <NGray>// si el parámetro y el resultado de la funcion es el mismo, guardar en "caché"</NGray> <br>
-        <NPurp>function</NPurp> <NBlue>cachingDecorator</NBlue>(func) { <br>
-          &nbsp; let cache = <NAqua>new</NAqua> <NObj>Map()</NObj>; <br><br>
-          &nbsp; <NAqua>return</NAqua> <NPurp>function</NPurp>(x) { <br>
-          &nbsp;  <NAqua>if</NAqua> (cache.<NBlue>has</NBlue>(x)) { <NGray>// si hay tal propiedad en "caché"</NGray> <br>
-          &nbsp;   &nbsp;  <NAqua>return</NAqua> cache.<NBlue>get</NBlue>(x); <NGray>// lee el resultado</NGray> <br>
-          &nbsp;  } <br><br>
-          &nbsp;  <NPurp>let</NPurp> result = <NBlue>func</NBlue>(x); <NGray>// de lo contrario llamar a func</NGray> <br><br>
-          &nbsp;  cache.<NBlue>set</NBlue>(x, result); <NGray>// almacenamos en "caché" el resultado</NGray> <br>
-          &nbsp;  <NAqua>return</NAqua> result; <br>
-          &nbsp;}; <br>
-        }
+      <div class="cod flex separados">
+        <div>
+          <NPurp>function</NPurp> <NBlue>slow</NBlue>(x) { <br>
+            &nbsp; <NGray>// Codigo muy pesado.</NGray> <br>
+            &nbsp; <NAqua>return</NAqua> x; <br>
+          } <br>
+        </div>
+        <div>
+          <NGray>// si el param y el resultado es el mismo, guardar en "caché". <NTab></NTab> </NGray> <br>
+          <NPurp>function</NPurp> <NBlue>cachingDecorator</NBlue>(func) { <br>
+            <details>
+              <summary>Codigo...</summary>
+              &nbsp; let cache = <NAqua>new</NAqua> <NObj>Map()</NObj>; <br><br>
+              &nbsp; <NAqua>return</NAqua> <NPurp>function</NPurp>(x) { <br>
+              <NTab></NTab>   <NAqua>if</NAqua> (cache.<NBlue>has</NBlue>(x)) { <NGray>// si hay tal propiedad en "caché"</NGray> <br>
+              <NTab></NTab>    &nbsp;  <NAqua>return</NAqua> cache.<NBlue>get</NBlue>(x); <NGray>// lee el resultado</NGray> <br>
+              <NTab></NTab>   } <br><br>
+              <NTab></NTab>   <NPurp>let</NPurp> result = <NBlue>func</NBlue>(x); <NGray>// de lo contrario llamar a func</NGray> <br><br>
+              <NTab></NTab>   cache.<NBlue>set</NBlue>(x, result); <NGray>// almacenamos en "caché" el resultado</NGray> <br>
+              <NTab></NTab>   <NAqua>return</NAqua> result; <br>
+              &nbsp; }; <br>
+            </details>
+          }
+        </div>
       </div>
     </fieldset>
   </section>
@@ -797,66 +926,249 @@
     <fieldset> <!-- Window -->
     <legend> Browser Object Model </legend>
       <div class="cod">       
-        window.usuario = { name: "nico" }; <NGray>// Crear variable Global (para todos los scripts)</NGray> <br>
-        window.name = "<NGreen>Ventana</NGreen>"; <NGray>// Nombre de la ventana</NGray> <br>
-        window.location = "<NGreen>https://www.google.com</NGreen>"; <NGray>// ir a otra pag</NGray> <br><br>
-
-        window.outerWidth; <NGray>// incluye scroll</NGray> <br>
-        window.outerHeight; <NGray>// incluye pestañas y todo</NGray> <br>
-        window.innerWidth; <NGray>// sin scroll</NGray> <br>
-        window.innerHeight; <NGray>// solo interior</NGray> <br>
-        window.scrollX; <NGray>// Scroll</NGray> <br>
-        window.scrollY; <NGray>// Scroll</NGray> <br>
-        window.screenX; <NGray>// izq pantalla, hasta la ventana</NGray> <br>
-        screen.availHeight; <NGray>// Tamaño Alto pantalla</NGray> <br>
-        screen.availWidth; <NGray>// Tamaño Ancho pantalla</NGray><br>
-        screen.colorDepth; <NGray>// Profundidad de color pantalla</NGray> <hr>
-
-        navigator.appName / appVersion; <NGray>// Navegador + SO / version</NGray> <br>
-        navigator.cookieEnabled; <NGray>// Cookies</NGray> <br>
-      </div>
-      <div class="cod">
-        ventana = window.<NBlue>open</NBlue>(); <NGray>// Abrir Pestaña nueva</NGray> <br>
-        ventana = window.<NBlue>open</NBlue>("<NGreen>name.html</NGreen>", "<NGreen>_blank</NGreen>", "<NGreen>width=500 height=300</NGreen>"); <NGray>// Abrir Ventana nueva</NGray> <br> <br>
-      
-        ventana.<NBlue>resizeBy</NBlue>(100,100); <NGray>// +100</NGray> <br>
-        ventana.<NBlue>resizeTo</NBlue>(100,100); <NGray>// =100</NGray> <br> <br>
-      
-        ventana.<NBlue>moveBy</NBlue>(500,500); <NGray>// +500</NGray> <br>
-        ventana.<NBlue>moveTo</NBlue>(500,500); <NGray>// pos 500, 500</NGray> <br> <br>
-      
-        ventana.<NBlue>print</NBlue>(); <NGray>// Imprimir</NGray> <br>
-        ventana.<NBlue>close</NBlue>(); <NGray>// Cerrar</NGray>
-      </div>
-      <div class="cod">
-        console.log(window.frame().length) <br>
-        console.log(window.history) <br>
-      </div>
-
-      <fieldset> <!-- Alert, Prompt, Confirm. -->
-        <legend> Alert, Prompt, Confirm. </legend>
-        <div class="flex">
-          <div class="width100">
-            <button onclick="botonalerta1();"> Alert </button>
-              <NBlue>Alert</NBlue>("<NGreen>Alerta</NGreen>")
-              <script> function botonalerta1() { alert("Esto es una Alerta!"); } </script> <br>
-            <button onclick="botonalerta2();"> Prompt </button>
-              <NBlue>Prompt</NBlue>("<NGreen>Solicitud</NGreen>")
-              <script> function botonalerta2() { alert("Esto es una Solicitud!"); } </script> <br>
-            <button onclick="botonalerta3();"> Confirm </button>
-              <NBlue>Confirm</NBlue>("<NGreen>Confirm</NGreen>")
-              <script> function botonalerta3() { alert("Esto es una Confirmacion!"); } </script> <br>
-          </div>
-          <div class="cod">
-            <NGray>//Prompt</NGray> <br>
-              <NPurp>var</NPurp> soli = <NBlue>prompt</NBlue>("<NGreen>Nombre</NGreen>", "<NGreen>Placeholder</NGreen>"); <br>
-              document.<NBlue>write</NBlue>("<NGreen>hola</NGreen> "+ soli); <br>
-            <NGray>//Confirm</NGray> <br>
-              <NPurp>var</NPurp> a = <NBlue>confirm</NBlue>("<NGreen>Necesitas ayuda?</NGreen>") ? "<NGreen>Si</NGreen>" : "<NGreen>No</NGreen>"; <br>
-              document.<NBlue>write</NBlue>(a);
-          </div>
+        window.usuario = { name: "nico" }; <NGray>// Crear variable Global (para todos los scripts)</NGray> <br><br>
+        
+        <div class="columnas">
+          window.name = "<NGreen>Ventana</NGreen>"; <NGray>// Nombre ventana.</NGray> <br>
+          window.outerWidth; <NGray> // Ancho (incluye scroll).</NGray> <br>
+          window.outerHeight; <NGray>// Alto (incluye pestañas+).</NGray> <br>
+          window.innerWidth; <NGray> // Ancho (sin scroll).</NGray> <br>
+          window.innerHeight; <NGray>// Alto (solo interior).</NGray> <br>
+          window.screenX; <NGray>// izq pantalla, hasta la ventana.</NGray> <br>
+          
+          window.location = "<NGreen>www.ej.com</NGreen>"; <NGray>// ir a otra pag.</NGray> <br>
+          window.scrollX; <NGray>// Scroll Ancho (actual).</NGray> <br>
+          window.scrollY; <NGray>// Scroll Alto (actual).</NGray> <br>
+          window.scroTo(<NOrg>0, 100</NOrg>); <NGray>// Scroll pos 100px.</NGray> <br>
+          window.scroBy(<NOrg>0, 100</NOrg>); <NGray>// Scroll +100px.</NGray> <br>
+          <span onmousedown="onclick_ShowCode(__valorConsole, '_windowDiv')">window.console; <NBlue>*</NBlue></span> <NGray>// props y metodos de console</NGray> <br>
+          <span onmousedown="onclick_ShowCode(__valorHistory, '_windowDiv')">window.history; <NBlue>*</NBlue></span> <NGray>// props y metodos de history</NGray> <br>
+          <span onmousedown="onclick_ShowCode(__valorLocation, '_windowDiv')">window.location; <NBlue>*</NBlue></span> <NGray>// props y metodos de location</NGray> <br>
         </div>
-      </fieldset>
+      </div>
+      <div class="cod columnas">
+        navigator.appName / appVersion; <NGray>// Naveg. + SO / version.</NGray> <br>
+        navigator.cookieEnabled; <NGray>// Cookies.</NGray> <br>
+        window.frame().length; <NGray>// cant de iframes.</NGray> <br>
+        screen.colorDepth; <NGray> // Profund. color.</NGray> <br>
+        screen.availWidth; <NGray> // Ancho pantalla.</NGray> <br>
+        screen.availHeight; <NGray>// Alto pantalla (sin taskbar).</NGray> <br>
+        screen.Width; <NGray> // Ancho pantalla.</NGray> <br>
+        screen.Height; <NGray>// Alto pantalla.</NGray> <br>
+      </div>
+      <div class="_windowDiv"></div>
+      <script>
+        const __valorConsole = `
+          <table class="textoSuelto">
+            <tr>
+              <th>Method</th>     <th>Description</th>
+            </tr>
+            <tr>
+              <td>assert()</td>
+              <td>Writes an error message to the console if a assertion is false</td>
+              </tr>
+            <tr>
+              <td>clear()</td>
+              <td>Clears the console</td>
+              </tr>
+            <tr>
+              <td>count()</td>
+              <td>Logs the number of times that this particular call to count() has been 
+              called</td>
+              </tr>
+            <tr>
+              <td>error()</td>
+              <td>Outputs an error message to the console</td>
+              </tr>
+            <tr>
+              <td>group()</td>
+              <td>Creates a new inline group in the console. This indents following 
+              console messages by an additional level, until console.groupEnd() is called</td>
+              </tr>
+            <tr>
+              <td>groupCollapsed()</td>
+              <td>Creates a new inline group in the console. However, the new group is 
+              created collapsed. The user will need to use the disclosure button to expand 
+              it</td>
+              </tr>
+            <tr>
+              <td>groupEnd()</td>
+              <td>Exits the current inline group in the console</td>
+              </tr>
+            <tr>
+              <td>info()</td>
+              <td>Outputs an informational message to the console</td>
+              </tr>
+            <tr>
+              <td>log()</td>
+              <td>Outputs a message to the console</td>
+              </tr>
+            <tr>
+              <td>table()</td>
+              <td>Displays tabular data as a table</td>
+              </tr>
+            <tr>
+              <td>time()</td>
+              <td>Starts a timer (can track how long an operation takes)</td>
+              </tr>
+            <tr>
+              <td>timeEnd()</td>
+              <td>Stops a timer that was previously started by console.time()</td>
+              </tr>
+            <tr>
+              <td>trace()</td>
+              <td>Outputs a stack trace to the console</td>
+              </tr>
+            <tr>
+              <td>warn()</td>
+              <td>Outputs a warning message to the console</td>
+            </tr>
+          </table>
+        `;
+        const __valorHistory = `
+          <tbody><tr>
+            <th>Property/Method</th>
+            <th>Description</th>
+          </tr><tr>
+            <td>back()</td>
+            <td>Loads the previous URL (page) in the history list</td>
+          </tr><tr>
+            <td>forward()</td>
+            <td>Loads the next URL (page) in the history list</td>
+          </tr><tr>
+            <td>go()</td>
+            <td>Loads a specific URL (page) from the history list</td>
+            </tr>
+          <tr><td>
+            length</td>
+            <td>Returns the number of URLs (pages) in the history list</td>
+          </tr></tbody>
+        `;
+        const __valorLocation = `
+          <table>
+          <tbody><tr>
+            <th style="width:20%">Property</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>hash</td>
+            <td>Sets or returns the anchor part (#) of a URL</td>
+          </tr>
+          <tr>
+            <td>host</td>
+            <td>Sets or returns the hostname and port number of a URL</td>
+          </tr>
+          <tr>
+            <td>hostname</td>
+            <td>Sets or returns the hostname of a URL</td>
+          </tr>
+          <tr>
+            <td>href</td>
+            <td>Sets or returns the entire URL</td>
+          </tr>
+          <tr>
+            <td>origin</td>
+            <td>Returns the protocol, hostname and port number of a URL</td>
+          </tr>
+          <tr>
+            <td>pathname</td>
+            <td>Sets or returns the path name of a URL</td>
+          </tr>
+          <tr>
+            <td>port</td>
+            <td>Sets or returns the port number of a URL</td>
+          </tr>
+          <tr>
+            <td>protocol</td>
+            <td>Sets or returns the protocol of a URL</td>
+          </tr>
+          <tr>
+            <td>search</td>
+            <td>Sets or returns the querystring part of a URL</td>
+          </tr> 
+          </tbody></table>
+          <br />
+          
+          <table>
+            <tbody><tr>
+              <th style="width:20%">Method</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>assign()</td>
+              <td>Loads a new document</td>
+            </tr>
+            <tr>
+              <td>reload()</td>
+              <td>Reloads the current document</td>
+              </tr>
+            <tr>
+              <td>replace()</td>
+              <td>Replaces the current document with a new one</td>
+              </tr>
+          </tbody></table>
+        `;
+      </script>
+    </fieldset>
+
+    <fieldset> <!-- Nueva ventana -->
+      <legend> Nueva ventana </legend>
+      <div class="cod">
+        ventana = window.<NBlue>open</NBlue>("<NGreen>name.html</NGreen>", "<NGreen>_blank</NGreen>", "<NGreen>width=500 height=300</NGreen>"); <NGray>// Abrir Ventana nueva.</NGray> <br>
+        ventana = window.<NBlue>open</NBlue>(); <NGray>// Abrir Pestaña nueva.</NGray> <br><br>
+      
+        <div class="columnas">
+          ventana.<NBlue>print</NBlue>(); <NGray>// Imprimir algo.</NGray> <br>
+          ventana.<NBlue>resizeBy</NBlue>(100,100); <NGray>// +100.</NGray> <br>
+          ventana.<NBlue>resizeTo</NBlue>(100,100); <NGray>// =100.</NGray> <br>
+          ventana.<NBlue>close</NBlue>(); <NGray>// Cerrar.</NGray> <br>
+          ventana.<NBlue>moveBy</NBlue>(500,500); <NGray>// +500.</NGray> <br>
+          ventana.<NBlue>moveTo</NBlue>(500,500); <NGray>// pos 500, 500.</NGray> <br>
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- Alert, Prompt, Confirm. -->
+    <fieldset> 
+      <legend> Alert, Prompt, Confirm. </legend>
+      <div class="flex">
+        <div class="w50">
+          <button onclick="botonalerta1();"> Alert </button>
+            <NBlue>Alert</NBlue>("<NGreen>Alerta</NGreen>")
+            <script> function botonalerta1() { alert("Esto es una Alerta!"); } </script> <br>
+          <button onclick="botonalerta2();"> Prompt </button>
+            <NBlue>Prompt</NBlue>("<NGreen>Solicitud</NGreen>")
+            <script> function botonalerta2() { alert("Esto es una Solicitud!"); } </script> <br>
+          <button onclick="botonalerta3();"> Confirm </button>
+            <NBlue>Confirm</NBlue>("<NGreen>Confirm</NGreen>")
+            <script> function botonalerta3() { alert("Esto es una Confirmacion!"); } </script> <br>
+        </div>
+        <div class="cod w100">
+          <NGray>//Prompt</NGray> <br>
+            <NPurp>let</NPurp> soli = <NBlue>prompt</NBlue>("<NGreen>Nombre</NGreen>", "<NGreen>Placeholder</NGreen>"); <br>
+            document.<NBlue>write</NBlue>("<NGreen>hola</NGreen> "+ soli); <br>
+          <NGray>//Confirm</NGray> <br>
+            <NPurp>let</NPurp> a = <NBlue>confirm</NBlue>("<NGreen>Necesitas ayuda?</NGreen>") ? "<NGreen>Si</NGreen>" : "<NGreen>No</NGreen>"; <br>
+            document.<NBlue>write</NBlue>(a);
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- Almacenamiento -->
+    <fieldset>
+      <legend> Almacenamiento </legend>
+      <div class="flex">
+        <div class="textoSuelto w50">
+          sessionStorage(); <NGray> //Temporal.</NGray> <br>
+          localStorage(); <NGray> //Permanente.</NGray> <br>
+          localStorage.<NBlue>clear</NBlue>(); <NGray>// Vaciar</NGray>
+        </div>
+        <div class="cod">
+          localStorage.<NBlue>setItem</NBlue>("<NGreen>name</NGreen>", "<NGreen>Val</NGreen>"); <NGray>(Guardar)</NGray><br>
+          localStorage.<NBlue>getItem</NBlue>("<NGreen>name</NGreen>"); <NGray>(Cargar)</NGray> <br>
+          localStorage.<NBlue>removeItem</NBlue>("<NGreen>name</NGreen>"); <NGray>(Borrar)</NGray>
+        </div>
+      </div>
     </fieldset>
   </section>
 
@@ -878,7 +1190,7 @@
 
     <!-- Seleccionar Elementos -->
     <fieldset>
-      <legend> Seleccionar/Buscar Elementos </legend>
+      <legend title="HTMLCollection"> Seleccionar/Buscar Elementos </legend>
 
       Buscar y usar <b>ID</b>:
       <div class="flex">
@@ -912,22 +1224,22 @@
         </div>
       </div>
     </fieldset>
-
-    <hr><hr><hr><hr><hr><hr>
+    <br><br><br>
 
     <!-- Metodos DOM -->
     <fieldset>
       <legend> Metodos DOM </legend>
-      <div class="textoSuelto">
-        document.cookie; <a href="https://www.w3schools.com/js/js_cookies.asp">info...</a> <br>
+      <div class="columnas">
+        document.cookie = <NGray>"user=Nico; expires=fecha".</NGray> <br>
+        document.hasFocus(); <NGray>// bool si esta en pantalla.</NGray> <br>
+        document.readyState; <NGray>// load status pag.</NGray> <br>
+        document.forms/images/links/scripts; <NGray>// return.</NGray> <br>
         document.documentURI; <br>
+        document.URL; <br>
         document.domain; <br>
-        <!-- document.forms -->
+        document.title; <br>
       </div>
     </fieldset>
-    <script>
-
-    </script>
 
     <!-- Child-Parent Nodes -->
     <fieldset>
@@ -960,6 +1272,8 @@
     </fieldset>
 
     <!-- Modificar Atributos -->
+     <!-- https://www.w3schools.com/jsref/dom_obj_attributes.asp TODO: -->
+     <!-- https://www.w3schools.com/jsref/dom_obj_style.asp TODO: -->
     <fieldset>
       <legend> Crear-Modificar Atributos  </legend>
       <div class="flex">
@@ -1016,7 +1330,8 @@
       </div>
     </fieldset>
 
-    <!-- Elementos -->
+    <!-- Elementos TODO: -->
+    <!-- https://www.w3schools.com/jsref/dom_obj_all.asp  TODO:-->
     <fieldset>
       <legend> Crear Elementos: </legend>
       <div class="flex">
@@ -1029,7 +1344,8 @@
           <div class="textoSuelto">
             elem.cloneNode(); <NGray>// Clonear.</NGray><br>
             a.replaceChild(este, porEste); <NGray>// Reemplazar</NGray> <br>
-            padre.insertBefore(elem, padre.firstChild); <NGray>add first</NGray>
+            padre.insertBefore(elem, padre.firstChild); <NGray>add first</NGray> <br>
+            element.remove(); <NGray>// Eliminar</NGray>
           </div>
         </div>
         <div>
@@ -1067,70 +1383,23 @@
         </div>
       </div>
     </fieldset>
-
-    <!-- Crear Animaciones -->
-    <fieldset>
-      <legend>  Crear Animaciones  </legend>
-      <div class="flex">
-        <div class="width100">
-          <div id="container1"> <div id="box1"> </div> </div> <br>
-          <div class="cod marg0 wAuto">
-            <NPurp>let</NPurp> pos = <NOrg>0</NOrg>; <br>
-            <NPurp>let</NPurp> box = document.<NBlue>getElementById</NBlue>('<NGreen>box1</NGreen>'); <br>
-            <NPurp>let</NPurp> t = <NBlue>setInterval</NBlue>(move, <NOrg>10</NOrg>);
-          </div>
-        </div>
-        <div class="cod">
-          <NPurp>function</NPurp> <NBlue>move</NBlue>() { <br>
-            &nbsp; <NAqua>if</NAqua>(pos >= <NOrg>150</NOrg>) { <br>
-              &nbsp; &nbsp; pos = 0; <br>
-            &nbsp; } <NAqua>else</NAqua> { <br>
-              &nbsp; &nbsp; pos += <NOrg>1</NOrg>; <br>
-              &nbsp; &nbsp; box.style.left = pos+'<NGreen>px</NGreen>'; <br>
-            &nbsp; } <br> }
-        </div>
-      </div>
-      <style>
-        #container1 {
-          width: 200px; height: 50px;
-          background: green;
-          position: relative;
-          margin: 5px;
-        }
-        #box1 {
-          width: 40px; height: 40px;
-          margin: 5px;
-          background: red;
-          position: absolute;
-        }
-      </style>
-      <script>
-        var pos = 0;
-        var box = document.getElementById('box1');
-        var t = setInterval(move, 10);
-
-        function move() {
-          if (pos >= 150) {
-            pos = 0;
-          }
-          else {
-            pos += 1;
-            box.style.left = pos + 'px';
-          }
-        }
-      </script>
-    </fieldset>
   </section>
 
   <!-- Eventos -->
+  <!-- https://www.w3schools.com/jsref/dom_obj_event.asp TODO: -->
+  <!-- https://www.w3schools.com/jsref/obj_events.asp -->
+  <!-- https://www.w3schools.com/jsref/dom_obj_event_prop.asp -->
+  <!-- https://www.w3schools.com/jsref/dom_obj_event_methods.asp -->
+   
   <section id="Eventos">
+    <!-- TODO:  https://www.w3schools.com/tags/ref_eventattributes.asp -->
     <!-- Tipos - Onload -->
     <div class="flex">
       <!-- tipos -->
       <fieldset class="width100" style="column-count: 2;"> 
       <legend> Tipos de Eventos - <a href="../Otros/eventos.html">(Ejemplos)</a></legend>
         onfocus - onblur <br>
-        onload - onunload <br>
+        <span title="Solo en (Body, imgs, iframe, scripts)">onload - onunload <NBlue>*</NBlue></span> <br>
         onclick - onchange <br>
         onkey down-up-press<br>
         onmouse down-up-move <br>
@@ -1149,10 +1418,10 @@
       <fieldset class="width100"> 
       <legend> Evento desde HTML </legend>
         <div class="cod html">
-          &lt;<NRed>button</NRed> <b><u><NPurp>event</NPurp></u></b>="<NBlue>myFunc</NBlue>()"> Button &lt;/<NRed>button</NRed>>
+          &lt;<NRed>button</NRed> <b><u><NPurp>eventName</NPurp></u></b>="<NBlue>myFunc</NBlue>(event)"> Button &lt;/<NRed>button</NRed>>
         </div>
         <div class="cod">
-          <NPurp>function</NPurp> <NBlue>myFunc</NBlue>() { <br> &nbsp; <NGray>// Codigo...</NGray> <br> }
+          <NPurp>function</NPurp> <NBlue>myFunc</NBlue>(event) { <br> &nbsp; console.<NBlue>log</NBlue>(event.target.nameTag); <NGray>// obtener tag</NGray> <br> }
         </div>
       </fieldset>
 
@@ -1393,12 +1662,41 @@
         }
         </script>
       </div>
+      
+      <hr><br>
+
+      <div class="flex">
+        <div class="ej w40">
+          <p>Colocar un numero entre 100 y 300:</p>
+          <input id="id1" type="number" min="100" max="300" required>
+          <button onclick="myFunction()">OK</button>
+          <p id="demo"></p>
+          <script>
+          function myFunction() {
+            const inpObj = document.getElementById("id1");
+            document.getElementById("demo").innerHTML = !inpObj.checkValidity() ? inpObj.validationMessage : "Input OK";
+          }
+          </script>
+        </div>
+        <!-- https://www.w3schools.com/jsref/api_validation.asp -->
+        <div class="cod">
+          <NRed>&lt;input</NRed> <NPurp> id</NPurp>="<NGreen>id1</NGreen>" <NPurp>type</NPurp>="<NGreen>number</NGreen>" <NPurp>min</NPurp>="<NGreen>100</NGreen>" <NPurp>max</NPurp>="<NGreen>300</NGreen>" <NPurp>required</NPurp>> <br>
+          <NRed>&lt;button</NRed> <NPurp> onclick</NPurp>="<NGreen>myFunction()</NGreen>">OK<NRed>&lt;/button></NRed> <br>
+          <NRed>&lt;p</NRed> <NPurp> id</NPurp>="<NGreen>demo</NGreen>"<NRed>>&lt;/p></NRed> <br>
+        
+          <NPurp>function</NPurp> <NBlue>myFunction</NBlue>() { <br>
+            &nbsp; <NPurp>const</NPurp> inpObj = document.<NBlue>getElementById</NBlue>("id1"); <br>
+            &nbsp; <NPurp>let</NPurp> res <NAqua>=</NAqua> inpObj.<NBlue>checkValidity</NBlue>() <NAqua>?</NAqua> "<NGreen>Input OK</NGreen>" <NAqua>:</NAqua> inpObj.validationMessage; <br>
+          } <br>
+        </div>
+      </div>
     </fieldset>
   </section>
 
   <!-- Otros -->
   <section id="Otros">
     <!-- Math -->
+     <!-- https://www.w3schools.com/jsref/jsref_obj_math.asp -->
     <fieldset>
       <legend> Math: </legend>
       <div class="flex">
@@ -1451,37 +1749,25 @@
       Metodos de Date:
       <div class="flex">
         <div class="textoSuelto columnas width100">
-          getFullYer()      <NGray>// 1999.</NGray> <br>
-          getMonth()        <NGray>// 06.</NGray> <br>
-          getDate()         <NGray>// 24.</NGray> <br>
-          getDay()          <NGray>// Lun.</NGray> <br>
-          getHours()        <br>
-          getMinutes()      <br>
-          getSeconds()      <br>
-            getMilliseconds()
+          <script>
+            const date = new Date();
+            const datesArr = [];
+            datesArr[0] = `getFullYear() <NGray>//${date.getFullYear()}</NGray> <br>`;
+            datesArr[1] = `getMonth() <NGray>//${date.getMonth()}</NGray> <br>`;
+            datesArr[2] = `getDate() <NGray>//${date.getDate()}</NGray> <br>`;
+            datesArr[3] = `getDay() <NGray>//${date.getDay()}</NGray> <br>`;
+            datesArr[4] = `getHours() <NGray>//${date.getHours()}</NGray> <br>`;
+            datesArr[5] = `getMinutes() <NGray>//${date.getMinutes()}</NGray> <br>`;
+            datesArr[6] = `getSeconds() <NGray>//${date.getSeconds()}</NGray> <br>`;
+            datesArr[7] = `getMilliseconds() <NGray>//${date.getMilliseconds()}</NGray> <br>`;
+            datesArr.forEach( x => document.write(x))
+          </script>
         </div>
         <div class="cod">
           <NPurp>var</NPurp> date1 = <NPurp>new</NPurp> <NBlue>Date</NBlue>(); <NGray> // Crear</NGray> <br>
           <NPurp>var</NPurp> hours = date1.<NBlue>getHours</NBlue>(); <br>
           document.<NBlue>write</NBlue>(<u>hours</u>); <br>
           <NGray>// Muestra solo la hora(sin min/seg).</NGray>
-        </div>
-      </div>
-    </fieldset>
-
-    <!-- Almacenamiento -->
-    <fieldset>
-      <legend>  Almacenamiento (API)  </legend>
-      <div class="flex">
-        <div class="textoSuelto w50">
-          sessionStorage(); <NGray> //Temporal.</NGray> <br>
-          localStorage(); <NGray> //Permanente.</NGray> <br>
-          localStorage.<NBlue>clear</NBlue>(); <NGray>// Vaciar</NGray>
-        </div>
-        <div class="cod">
-          localStorage.<NBlue>setItem</NBlue>("<NGreen>name</NGreen>", "<NGreen>Val</NGreen>"); <NGray>(Guardar)</NGray><br>
-          localStorage.<NBlue>getItem</NBlue>("<NGreen>name</NGreen>"); <NGray>(Cargar)</NGray> <br>
-          localStorage.<NBlue>removeItem</NBlue>("<NGreen>name</NGreen>"); <NGray>(Borrar)</NGray>
         </div>
       </div>
     </fieldset>
@@ -1513,8 +1799,8 @@
         </div>
       </div>
       <div class="cod html">
-        <NRed>&lt;div</NRed> <NPurp>id</NPurp>="box" <NPurp>ondrop</NPurp>="drop(event)"  <NPurp>ondragover</NPurp>="allowDrop(event)" <NRed>&lt;/div></NRed> <br>
-        <NRed>&lt;img</NRed> <NPurp>id</NPurp>="image" <NPurp>src</NPurp>="cat1.png" <NPurp>draggable</NPurp>="true" <NPurp>ondragstart</NPurp>="drag(event)" <NPurp>style</NPurp>="cursor: move;"<NRed>/></NRed>
+        <NRed>&lt;div</NRed> <NPurp>id</NPurp>="box" <NPurp>ondrop</NPurp>="drop(event)"  <NPurp>ondragover</NPurp>="allowDrop(event)"<NRed>> &lt;/div></NRed> <br>
+        <NRed>&lt;img</NRed> <NPurp>id</NPurp>="image" <NPurp>src</NPurp>="cat1.png" <NPurp>draggable</NPurp>="true" <NPurp>ondragstart</NPurp>="drag(event)" <NPurp>style</NPurp>="cursor: move"<NRed>></NRed>
       </div>
 
       <script>
@@ -1898,6 +2184,64 @@
       </fieldset>
     </div>
   </section>
+
+  <script>
+    // Mostrar codigo al hacer click (en Map&Set > Map.groupBy)
+    function onclick_ShowCode(valor, idCodDiv){
+      const CodDiv = document.querySelector('.'+idCodDiv); // div donde mostrar
+      CodDiv.innerHTML = (CodDiv.innerHTML ? "" : valor); // mostrar/ocultar
+    }
+
+
+
+
+
+
+    
+    function funcCont(valor) {
+      switch (typeof valor) {
+        case (typeof 123): return `<NOrg>${valor}</NOrg>`;
+        case (typeof "a"): return `"<NGreen>${valor}</NGreen>"`;
+        default: return "Error: funcCont()";
+      }
+    }
+    // Cambiar valores de un id
+    function autoChangeVal(id, valores, resultados, param="") {
+      const idDiv = document.querySelector(`#${id}`);
+      const idContent = idDiv.innerHTML;
+
+
+      let i = 0;
+      (function TextoInterval(){
+        const esMetodo = (valor) => Array.isArray(valor) ? `<NBlue>${valor[0]}</NBlue>(${param})` : `(${funcCont(valor)})`;
+        idDiv.innerHTML = idContent + `${esMetodo(valores[i])}; <NGray>// ${resultados[i]} </NGray>`;
+        i++; if (i >= valores.length) {i = 0};
+        setTimeout(TextoInterval, 2000);
+      })();
+    }
+
+    
+    function params(...param){
+      let res = [];
+      param.forEach(elem => res.push(funcCont(elem)))
+      return res.join(", ");
+    } 
+    // Numeros
+    autoChangeVal("_parseInt", ["100px", "xx100"], [100, "NaN"] );
+    autoChangeVal("_floor",    [3.1, 3.6],         [3, 3]);
+    autoChangeVal("_round",    [3.1, 3.6],         [3, 4]);
+    autoChangeVal("_ceil",     [3.1, 3.6],         [4, 4]);
+    autoChangeVal("_toFixed",  [2, 5],             ["1.12", "1.12340"]);
+
+    // strings
+    autoChangeVal("_slice",       [["slice"], ["substring"]],             ["",""],           params(5));
+    autoChangeVal("_replace",     [["replace"], ["replaceAll"]],          ["","",""],        params("mis", "Mis"));
+    autoChangeVal("_trimStart",   [["trim"], ["trimStart"], ["trimEnd"]], ["","",""]);
+    autoChangeVal("_toUpperCase", [["toUpperCase"], ["toLowerCase"]],     ["ABC", "abc"]);
+    autoChangeVal("_padStart",    [["padStart"], ["padEnd"]],             ["",""],           params(2, "-"));
+    autoChangeVal("_starstWith",  [["starstWith"], ["endsWith"]],         ["false", "true"], params("Videos"));
+
+  </script>
 
   
   <div class="footer otros"></div>
