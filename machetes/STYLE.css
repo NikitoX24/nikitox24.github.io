@@ -1,11 +1,11 @@
 /* RESPONSIVE */
 
-@media (max-width:480px){ /* celular */ 
+@media (max-width:500px){ /* celular */ 
   .footer{display: none; }
   .ifmovil{ flex-wrap: wrap !important;}
   .ej{ margin: 1px !important;} 
 }
-@media (min-width:481px) and (max-width:980px){ /* tablet */ }
+@media (min-width:501px) and (max-width:980px){ /* tablet */ }
 @media (min-width:981px) { /* pc */ }
 
 /* ------------------------------------------------- */
@@ -123,6 +123,7 @@ button{
   border: 1px solid black;
   padding: 5px 10px;
 }
+.markBlock{ background-color: rgba(168, 168, 168, 0.179); }
 span[title]{ cursor: help; }
 span[onmousedown]{
   cursor: pointer;
