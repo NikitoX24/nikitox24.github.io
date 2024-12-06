@@ -18,10 +18,8 @@ export default function otros(){
   })
 
   // <NTab> (espacio) cambiar los nbsp
-  const tabs = document.querySelectorAll("NTab");
-  tabs.forEach ( elem => elem.innerHTML = "&nbsp; &nbsp;")
-  const tabs2 = document.querySelectorAll("NTab2");
-  tabs2.forEach (elem => elem.innerHTML = "&nbsp; &nbsp; &nbsp; &nbsp;")
+  document.querySelectorAll("NTab").forEach  (elem => elem.innerHTML = "&nbsp; ".repeat(2));
+  document.querySelectorAll("NTab2").forEach (elem => elem.innerHTML = "&nbsp; ".repeat(4));
 }
 
 // HoraPS

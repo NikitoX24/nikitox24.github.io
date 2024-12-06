@@ -164,7 +164,25 @@
             &nbsp; <NRed>&lt;figcaption></NRed> Texto <NRed>&lt;/figcaption></NRed> <br>
           <NRed>&lt;/figure></NRed> <br>
         </div>
-      </div>      
+      </div>
+
+      <div class="flex">
+        <div class="ej w40">
+          <picture>
+            <source media="(min-width:150px)" srcset="/Imgs/1.jpg">
+            <source media="(min-width:200px)" srcset="/Imgs/2.jpg">
+            <img src="img_orange_flowers.jpg" alt="Flowers" style="width:200px;">
+          </picture>
+        </div>
+        <div class="cod">
+          <NGray>// Cambiar según tamaño</NGray> <br>
+          &lt;<NRed>picture</NRed>> <br>
+          <NTab></NTab>&lt;<NRed>source</NRed> <NPurp> media</NPurp>="<NGreen>(min-width:650px)</NGreen>" <NPurp>srcset</NPurp>="<NGreen>img_pink_flowers.jpg</NGreen>"> <br>
+            <NTab></NTab>&lt;<NRed>source</NRed> <NPurp> media</NPurp>="<NGreen>(min-width:465px)</NGreen>" <NPurp>srcset</NPurp>="<NGreen>img_white_flower.jpg</NGreen>"> <br>
+            <NTab></NTab>&lt;<NRed>img</NRed> <NPurp> src</NPurp>="<NGreen>img_orange_flowers.jpg</NGreen>" <NPurp>alt</NPurp>="<NGreen>Flowers</NGreen>" <NPurp>style</NPurp>="<NGreen>width:auto;</NGreen>"> <br>
+          &lt;<NRed>/picture</NRed>>
+        </div>
+      </div>
       
       <hr>
 
@@ -194,7 +212,7 @@
 
     <!-- Audio, Video, Progress, Iframe -->
     <fieldset>
-      <legend> Audio, Video, Progress, Iframe </legend>
+      <legend> Audio, Video, Progress, Meter, Iframe </legend>
       <!-- Audio -->
       <div class="flex ifmovil">
         <div class="wAuto">
@@ -207,7 +225,21 @@
             &lt;<NRed>progress <NPurp> min="<NGreen>0</NGreen>" max="<NGreen>100</NGreen>"value="<NGreen>75</NGreen>>  </NPurp> /progress</NRed>>
           </div>
         </div>
-      </div> <hr><br>
+      </div> <hr>
+      <div class="flex">
+        <p><label for="anna">Anna's score:</label>
+        <meter id="anna" min="0" low="40" high="90" max="100" value="95"></meter></p>
+        
+        <p><label for="peter">Peter's score:</label>
+        <meter id="peter" min="0" low="40" high="90" max="100" value="65"></meter></p>
+        
+        <p><label for="linda">Linda's score:</label>
+        <meter id="linda" min="0" low="40" high="90" max="100" value="35"></meter></p>
+      </div>
+      <div class="cod">
+        &lt;<NRed>meter</NRed> <NPurp> id</NPurp>="<NGreen>anna</NGreen>" <NPurp>min</NPurp>="<NGreen>0</NGreen>" <NPurp>low</NPurp>="<NGreen>40</NGreen>" <NPurp>high</NPurp>="<NGreen>90</NGreen>" <NPurp>max</NPurp>="<NGreen>100</NGreen>" <NPurp>value</NPurp>="<NGreen>95</NGreen>">&lt;<NRed>/meter</NRed>>
+      </div>
+      <hr><br>
 
       <!-- Video - IFrame -->
       <div class="flex fWrap" style="font-size: 0.9em;">
@@ -489,12 +521,37 @@
 
       <!-- Formulario POST -->
       <div class="cod">
-        &lt;<NRed>form</NRed> <NPurp> action</NPurp>="<NGreen>file.php</NGreen>" <NPurp>method</NPurp>="<NGreen>POST / GET</NGreen>"> <br>
+        &lt;<NRed>form</NRed> <NPurp> action</NPurp>="<NGreen>file.php</NGreen>" <NPurp>method</NPurp>="<NGreen>POST / GET</NGreen>" 
+            <span onclick="onclick_ShowCode(__enctype, '_formDiv')"> <NPurp>enctype</NPurp>="<NGreen>multipart/form-data</NGreen>" <NBlue>*</NBlue> </span> > <br>
           <NTab></NTab>&lt;<NRed>label</NRed> <NPurp> for</NPurp>="<NGreen>POST-name</NGreen>"> Nombre: &lt;<NRed>/label</NRed>> <br>
           <NTab></NTab>&lt;<NRed>input</NRed> <NPurp> id</NPurp>="<NGreen>POST-name</NGreen>" <NPurp>type</NPurp>="<NGreen>text</NGreen>" <NPurp>name</NPurp>="<NGreen>name</NGreen>" /> <br>
           <NTab></NTab>&lt;<NRed>input</NRed> <NPurp> type</NPurp>="<NGreen>submit</NGreen>" <NPurp>value</NPurp>="<NGreen>Save</NGreen>" /> <br>
         &lt;<NRed>/form</NRed>>
       </div>
+      <script>
+        const __enctype = `
+          <table>
+          <tbody><tr>
+            <th style="width:40%">Value</th>
+            <th style="width:60%">Description</th>
+          </tr>  
+          <tr>
+            <td>application/x-www-form-urlencoded</td>
+            <td>Default. All characters are encoded before sent (spaces are converted to "+" symbols, and special characters are converted to ASCII HEX values)</td>
+          </tr>
+          <tr>
+            <td>multipart/form-data</td>
+            <td>&nbsp;This value is necessary if the user will upload a file through the 
+            form</td>
+          </tr>
+          <tr>
+            <td>text/plain</td>
+            <td>Sends data without any encoding at all. Not recommended</td>
+          </tr>
+          </tbody></table>
+        `;
+      </script>
+      <div class="_formDiv textoSuelto"></div>
     </fieldset>
   </section>
 

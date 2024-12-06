@@ -213,7 +213,7 @@ if (blackTeme) {
       NBlue { color: rgb(107, 149, 234); }
       NGreen{ color: rgb(209, 255, 139); }
       NPurp { color: rgb(194, 122, 194); }
-      NGray { color: gray; }
+      NGray { color: rgba(150, 150, 150, 0.5); }
       NRed  { color: rgb(255, 85, 85); }
       NAqua { color: rgb(20, 212, 255); }
       NOrg  { color: rgb(254, 146, 38);}
@@ -234,7 +234,7 @@ else {
       NBlue{ color: rgb(0, 62, 219); }
       NGreen{ color: green; }
       NPurp{ color: rgb(142, 0, 142) }
-      NGray{ color: rgba(98, 98, 98, 0.678); }
+      NGray{ color: rgba(98, 98, 98, 0.6); }
       NRed{  color: rgb(212, 0, 0);    text-shadow: .2px .2px black; }
       NAqua{ color: rgb(20, 212, 255);      text-shadow: 0 0 5px rgb(0, 13, 110); }
       NOrg{  color: rgb(180, 133, 44); text-shadow: .3px .3px rgb(255, 0, 0);}
@@ -250,3 +250,15 @@ else {
 
 
 
+
+// Mostrar codigo al hacer click
+function onclick_ShowCode(valor, idCodDiv){
+  const CodDiv = document.querySelector('.'+idCodDiv); // div donde mostrar
+  CodDiv.innerHTML = (CodDiv.innerHTML ? "" : valor); // mostrar/ocultar
+} // onclick="onclick_ShowCode(__scriptConCodigo, '_classDiv')"
+
+// Mostrar codigo al hacer click (legends)
+function onclick_ShowCont(idCodDiv){
+  const CodDiv = document.querySelector('#'+idCodDiv); // id contenido
+  CodDiv.style.display = (CodDiv.style.display=="none" ? "block" : "none"); // mostrar/ocultar
+} // onclick="onclick_ShowCont('_IDDiv')"
