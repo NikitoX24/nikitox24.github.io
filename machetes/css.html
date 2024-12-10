@@ -287,7 +287,7 @@
 
     <!-- Pseudo-Clases -->
     <fieldset>
-      <legend> Pseudo-Clases </legend>
+      <legend> Pseudo-Clases <a href="https://www.w3schools.com/cssref/css_ref_pseudo_classes.php">(ver más...)</a> </legend>
       <div class="flex"> <!-- Parent -->
         <div id="parent" class="ej">
           <font>Primer Hijo</font> <br>
@@ -313,30 +313,16 @@
             &nbsp; <b>color:</b> red; <br> }
         </div>
       </div>
-      <div class="flex"> <!-- Parent -->
-        <div id="parent" class="ej">
-          <font>Primer Hijo</font> <br>
-          <font>Segundo Hijo</font> <br>
-          <font>Ultimo Hijo</font>
+      <div class="flex"> <!-- hover -->
+        <div id="parent2" class="ej">
+          Señalar para mostrar texto...
+          <p style="display: none;">Texto al hacer hover.</p>
         </div>
-        <style>
-          #parent font:first-child {
-            color: green;
-            text-decoration: underline;
-          }
-          #parent font:last-child {
-            color: red;
-            text-decoration: underline;
-          }
+        <style> 
+          #parent2:hover p{ display: block !important;}
         </style>
         <div class="cod">
-          #<NOrg>parent</NOrg>:<NPurp><ins>first-child</ins></NPurp> { <br>
-            &nbsp; <b>color:</b> green; <br> }
-        </div>
-        <div class="cod">
-          #<NOrg>parent</NOrg>:<NPurp><ins>last-child</ins></NPurp> { <br>
-            &nbsp; <b>color:</b> red; <br> }
-        </div>
+          #<NOrg>div</NOrg>:<NPurp><ins>hover</ins></NPurp> <NObj>p</NObj>{ <b>display:</b> block; } </div>
       </div>
     </fieldset>
 
@@ -388,7 +374,30 @@
         <div class="cod">
           .<NObj>texto</NObj>::<NPurp>before</NPurp> { <br>
             &nbsp; <b>content:</b> url("<NGreen>../Imgs/loguito.png</NGreen>"); <NGray>//content: "texto";</NGray> <br> }
-          <style> #insertImageBeforeText:before { content: url("../Imgs/loguito.png"); } </style>
+          <style> #insertImageBeforeText::before { content: url("../Imgs/loguito.png"); } </style>
+        </div>
+      </div>
+
+      <div class="flex"> <!-- After -->
+        <div class="ej">
+          <p id="insertImageAfterText">Insertar Imagen antes del Texto. </p>
+        </div>
+        <div class="cod">
+          .<NObj>texto</NObj>::<NPurp>after</NPurp> { <br>
+            &nbsp; <b>content:</b> url("<NGreen>../Imgs/loguito.png</NGreen>"); <NGray>//content: "texto";</NGray> <br> }
+          <style> #insertImageAfterText::after { content: url("../Imgs/loguito.png"); } </style>
+        </div>
+      </div>
+
+      <div class="flex"> <!-- Marker -->
+        <div class="ej flex w50">
+          <ol id="uli"> <li>Coffee</li> </ol>
+          <ul id="uli"> <li>Coffee</li> </ul>
+        </div>
+        <div class="cod w50">
+          ::<NPurp>marker</NPurp> { <br>
+            &nbsp; <b>color:</b> red; <NTab></NTab> <b>font-size:</b> 1.5em;<br> }
+          <style> ::marker { color: red; font-size: 1.5em; } </style>
         </div>
       </div>
 
@@ -398,20 +407,33 @@
           <input type="text" class="focusme"></input>
         </div>
         <div class="cod">
-          .<NObj>input</NObj>:<NPurp>focus</NPurp> { <br>
+          .<NObj>input</NObj>::<NPurp>focus</NPurp> { <br>
             &nbsp; <b>background-color:</b> green; <br> }
           <style>.focusme:focus { background-color: #589432; color: #FF6347; }</style>
         </div>
       </div>
-    </fieldset>
 
-    <!-- Pseudo-Attr TODO:? -->
-     <!-- https://www.w3schools.com/css/css_attribute_selectors.asp -->
-     <!-- 
-        a[target="_blank"] {
-          background-color: yellow;
-        } 
-      -->
+      <div class="flex"> <!-- Placeholder -->
+        <div class="ej">
+          <input type="text" class="placeh" placeholder="Texto placeholder"></input>
+        </div>
+        <div class="cod">
+          <NObj>input</NObj>::<NPurp>placeholder</NPurp> { <b>color:</b> red; <NTab></NTab> <b>opacity</b>: 0.5; }
+          <style>.placeh::placeholder { color: red; opacity: 0.5; }</style>
+        </div>
+      </div> <hr>
+
+      <div class="flex"> <!-- Atributos -->
+        <div class="ej">
+          <a href="#" target="_blank">Link(_blank)</a> <NTab></NTab>
+          <a href="#">Link(solo)</a>
+        </div>
+        <div class="cod">
+          <NObj>a[<NPurp>target<NAqua>="<NGreen>_blank</NGreen>"</NAqua></NPurp>]</NObj> { <b>background-color:</b> yellow; }
+          <style> a[target="_blank"] { background-color: yellow; } </style> 
+        </div>
+      </div>
+    </fieldset>
 
     <!-- Mouse-Cursor -->
     <fieldset>
@@ -907,6 +929,8 @@
 
   <!-- Backgroud -->
   <section id="Backgroud">
+    <!-- COLORES -->
+    <!-- https://www.w3schools.com/tags/ref_colornames.asp -->
     <style> .deg { width: 50px; height: 50px; } </style>
 
     <!-- Dergadados Lineales -->
