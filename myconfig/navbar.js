@@ -4,9 +4,10 @@ export default /*html*/`
   <div id="navbar">
     <nav><ul>
       <li><a href="${index}">${logo_25px} </a></li>
-      <li><a href="https://nikitox24.github.io">${git_logo} server.io </a></li>
-      <li><a href="https://github.com/NikitoX24/Main">${git_logo} This Repo. </a></li>
+      <li><a href="https://nikitox24.github.io"> nikitox24.github.io </a></li>
+      <li><a href="https://github.com/NikitoX24/Main">${git_logo} Repositorio </a></li>
       <li><a href="https://github.com/NikitoX24">${git_logo} My GitHub </a></li>
+      <li><a href="/Test.html"> Testing </a></li>
     </ul></nav>
   </div>
 

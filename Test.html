@@ -8,22 +8,48 @@
 </head>
 <body style="border:1px solid black;padding:4px">
 <!-- ---------------------------------------------------------------- -->
-
 <script src="/myconfig/config.js"></script>
 
+<!-- <div style="height: 500px;"></div> -->
 
-<div style="height: 500px;"></div>
+
+
+
 
 <script>
-// - @ts-check
-  // document.write('_________________________ <br><br>');  
   
   
+
+
+  // console.log(globalThis);
+  // console.log(window);
+
+
+
+  // funcion generadora
+  function* funcGeneradora() {
+    yield 1;
+    yield 2;
+    yield 3;
+  }
+
+  let generadora = funcGeneradora();
+  console.log(generadora.next().value); // 1
+  console.log(generadora.next().value); // 2
+
+  
+  for(let value of generator) {
+    alert(value); // 1, luego 2, luego 3
+  }
+
   
 </script>
 
 
-<a href="Imgs/Apple.png" download> asd</a>
+
+
+
+
 
 <script src="/myconfig/modules.js" type="module"></script>
 <!-- ---------------------------------------------------------------- -->

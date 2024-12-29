@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel="stylesheet" href="../machetes/STYLE.css">
+  <title>Test</title>
+</head>
+<body style="border:1px solid black;padding:4px">
+<!-- ---------------------------------------------------------------- -->
+<script src="/myconfig/config.js"></script>
+
+<!-- <div style="height: 500px;"></div> -->
+
+
+
+
+
+<script>
+  
+  
+
+
+
+
+
+    //  es.javascript.info
+
+  // CallBack (onLoad es asincrono)
+  function loadScript(src, callback) {
+    let imagen = document.createElement('img');
+    imagen.src = src;
+
+    imagen.onload  = () => callback(null, imagen); // si está bien => Return imagen
+    imagen.onerror = () => callback(new Error(`Error al cargar: "${src}"`)); // si falló => Return "error"
+  }
+  loadScript('./Imgs/1.jpg', function(error, imagen) {
+    if (error) document.body.innerHTML += error;
+    else document.body.append(imagen);
+  });
+
+
+  // Promesa
+  let promise = new Promise( function(resolve, reject) {
+    let imagen = document.createElement('img');
+    imagen.src = './Imgs/1.jpg';
+
+    imagen.onload  = () => resolve(imagen); // si está bien => Return imagen
+    imagen.onerror = () => reject(new Error(`Error al cargar: "${src}"`)); // si falló => Return "error"
+  });
+  promise.then( 
+    result => document.body.append(result), // en caso de exito se ejecuta esta funcion.
+    error => document.body.innerHTML += error // sinó se ejecuta esta.
+  )
+  
+
+
+
+
+
+// ---------------------------------------------------- //
+// ---------------------------------------------------- //
+// ---------------------------------------------------- //
+// ---------------------------------------------------- //
+// ---------------------------------------------------- //
+// ---------------------------------------------------- //
+// ---------------------------------------------------- //
+// ---------------------------------------------------- //
+// ---------------------------------------------------- //
+
+
+
+
+
+
+
+
+
+
+
+
+//        diferencias
+
+  // CallBack
+  function funcionCallback( callback ) {
+    const resultado = true;
+    if (resultado)
+      return callback(null, "Hecho (Callback)"); // si está bien => Return "Hecho"
+    return callback(new Error("Error")); // si falló => Return "Error"
+  }
+  funcionCallback( function(error, resultado) {
+    if (error) console.log(error)
+    else console.log(resultado)
+  });
+
+
+
+  // Promesa
+  let myPromesa = new Promise( function(resolve, reject) {
+    const resultado = true;
+    if (resultado)
+      return resolve("Hecho (Promesa)"); // si está bien => Return "Hecho"
+    return reject(new Error("Error")); // si falló => Return "Error"
+  })
+  .then(resultado => console.log(resultado))
+  .catch(error => console.log(error));
+
+
+
+  // Async/Await
+  async function myAsyncFunction() {
+    try {
+      const resultado = await new Promise((resolve, reject) => {
+        const resultado = true;
+        if (resultado)
+          return resolve("Hecho (Promesa)");
+        return reject(new Error("Error"));
+      });
+      console.log(resultado);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  myAsyncFunction();
+
+
+  // Promisificación de fakePromesa
+  function funcionCallbackPromisificada() {
+    return new Promise((resolve, reject) => {
+      funcionCallback((error, resultado) => {
+        if (error) return reject(error);
+        resolve(resultado);
+      });
+    });
+  }
+  funcionCallbackPromisificada()
+    .then(resultado => console.log(resultado))
+    .catch(error => console.log(error));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</script>
+
+
+
+
+
+
+
+<script src="/myconfig/modules.js" type="module"></script>
+<!-- ---------------------------------------------------------------- -->
+</body>
+</html>

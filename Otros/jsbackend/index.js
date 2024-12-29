@@ -1,15 +1,13 @@
-// configurar con expressJS el servidor de la app
+// configurar un servidor con expressJS y conectar con la DB
 const express = require("express");
 const app = express();
+const mysql = require("mysql");
 
 app.set("port", 3000);
 app.listen(3000);
 
-// Llamar al componente de MySql
-var mysql = require("mysql");
-
 // establecer los parametros de la conexión
-var conexion = mysql.createConnection({
+const conexion = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "",
@@ -34,7 +32,5 @@ conexion.query("select * from usuarios", function(error, filas) {
 
 
 
-
-
-// Cerrar conexion (para no consumir)
+// Cerrar conexion con DB (para no consumir)
 conexion.end();

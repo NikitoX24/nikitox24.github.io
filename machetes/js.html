@@ -31,7 +31,7 @@
 
       <b>Metodos de variables</b>
       <div class="cod">
-        <span>user = user <NAqua>??</NAqua> "<NGreen>Anonym</NGreen>"; <NGray>// (undefined? define).</NGray></span> <br>
+        <span>user = user <NAqua>??</NAqua> "<NGreen>Anonym</NGreen>"; <NGray>// (Nullish Coalescing Operator)</NGray></span> <br>
         <span>elem.<NBlue>metodo</NBlue>?.(); <NGray>// (si existe el metodo... ejecutar).</NGray></span>
         <hr>
         <div class="columnas">
@@ -452,10 +452,10 @@
       <div class="flex">
         <div class="cod">
           <!-- Función Anónima -->
-          <NGray>// Función Anónima</NGray> <br>
-          array.<NBlue>foreach</NBlue>( <NPurp>function</NPurp>(x) { <br>
-            &nbsp; console.<NBlue>log</NBlue>(x *<NOrg>2</NOrg>) <br>
-          } ); <br> 
+          <NGray>// Función Anónima (varias líneas)</NGray> <br>
+          array.<NBlue>foreach</NBlue>( <NPurp>function</NPurp>(x) { console.<NBlue>log</NBlue>(x *<NOrg>2</NOrg>) } ); <br> 
+          <NGray>// Función Anónima de Flecha</NGray> <br>
+          array.<NBlue>foreach</NBlue>( x <NPurp>=></NPurp> console.<NBlue>log</NBlue>(x *<NOrg>2</NOrg>) ); <br>
         </div>
         <div class="cod">
           <NGray>// Funciones de Flechas (Expresion)</NGray> <br>
@@ -465,10 +465,11 @@
         </div>
       </div> <br>
       
-      <fieldset> <!-- Recibir param. -->
+      <!-- Recibir param. -->
+      <fieldset> 
         <legend> <span onclick="onclick_ShowCont('_FuncRecibir')">Recibir param de tipo... </span> </legend>
         
-        <div id="_FuncRecibir" style="display: none;">
+        <div id="_FuncRecibir" style="display: block;">
           <!-- Recibir Array -->
           <b>Recibir un Array o convertir una.</b>
           <div class="flex">
@@ -482,50 +483,54 @@
               <NGray>// SPREAD (recibir un array)</NGray> <br>
               <NPurp>function</NPurp> <NBlue>myFunc</NBlue>( uno, dos ) { <br>
                 &nbsp; document<NBlue>.write</NBlue>(uno + dos); <br> } <br>
-                <NPurp>var</NPurp> array = ["<NGreen>Juan</NGreen>", "<NGreen>David</NGreen>"];<br>
-                <NBlue>myFunc</NBlue>(...array);
+              <NPurp>var</NPurp> array = ["<NGreen>Juan</NGreen>", "<NGreen>David</NGreen>"];<br>
+              <NBlue>myFunc</NBlue>(...array);
             </div>
           </div> <hr>
           <!-- Recibir function name -->
-          <b>Recibir un nombre como Funcion.</b>
-          <div class="cod columnas">
-            <NGray>// Callback (parametro como nombre de funcion)</NGray> <br>
-            <NPurp>function</NPurp> <NBlue>avanzaFila</NBlue>(callback){ <br>
-              &nbsp; <NBlue>setTimeout</NBlue>(<NPurp>function</NPurp>(){ <br>
-                <NTab></NTab> console.<NBlue>log</NBlue>("<NGreen>Tu turno ha llegado</NGreen>"); <br>
-                <NTab></NTab> <NBlue>callback</NBlue>(); <br>
-              &nbsp; }, <NOrg>5000</NOrg>); <br>
+          <b>Recibir nombre de una Funcion (callback).</b>
+          <div class="cod">
+            <NPurp>function</NPurp> <NBlue>myFuncion</NBlue>(a, b, <u>callback</u>){ <br>
+              &nbsp; <NBlue><u>callback</u></NBlue>(a + b); <br> 
             } <br>
-            <NPurp>function</NPurp> <NBlue>llamada</NBlue>(){ <br>
-              &nbsp; console.<NBlue>log</NBlue>("<NGreen>Te presentas a tu turno</NGreen>"); <br>
-            } <br><br>
-            console.<NBlue>log</NBlue>("<NGreen>Llegas a la fila</NGreen>"); <br>
-            <NBlue>avanzaFila</NBlue>(llamada); <br>
-            console.<NBlue>log</NBlue>("<NGreen>Te vas a comprar café</NGreen>");
-          </div> <hr>
+            <NBlue>myFuncion</NBlue>(<NOrg>5, 5</NOrg>, <NBlue><u>alert</u></NBlue>);
+          </div>
           <!-- Recibir func -->
-          <b>Recibir una Funcion y devolver otra.</b>
-          <div class="flex">
+          <div>
+            <b>Recibir una funcion (callback)</b>
             <div class="cod">
-              <NGray>// Ej 1</NGray> <br>
-              <NPurp>function</NPurp> <NBlue>returnFunction</NBlue>(nombre) { <br>
-                &nbsp; <NAqua>return</NAqua> <NBlue>nombre</NBlue>("<NGreen>Miguel</NGreen>"); <br> } <br><br>
-              <NBlue>returnFunction</NBlue>(name <NPurp> => </NPurp> console.<NBlue>log</NBlue>(name));
+              <NPurp>function</NPurp> <NBlue>returnFunction</NBlue>(callback) { <br>
+                &nbsp; <NBlue>callback</NBlue>("<NGreen>Miguel</NGreen>"); <NGray>// ejecutar aqui la funcion. </NGray> <br> } <br>
+              <NBlue>returnFunction</NBlue>(x <NPurp> => </NPurp> <NBlue>alert</NBlue>(x) ); <NGray>// enviar funcion.</NGray>
             </div>
             <div class="cod">
-              <NGray>// Ej 2</NGray> <br>
-              <NPurp>const</NPurp> <NBlue>sayHiFromFunction</NBlue> = (fn) <NPurp> =></NPurp>
-                <NBlue>fn</NBlue>("<NGreen>Miguel</NGreen>"); <br><br>
-              <NBlue>sayHiFromFunction</NBlue>(name <NPurp> => </NPurp>{ <br>
-                &nbsp; console.<NPurp>log</NPurp>(`<NGreen>Hola</NGreen> ${name}`) <br>
-              });
+              <details>
+                <summary>Ej. 2...</summary>
+                <NPurp>function</NPurp> <NBlue>myFunc</NBlue>(num1, num2, <u>callback</u>) { <br>
+                  &nbsp; console.<NBlue>log</NBlue>(<NBlue>callback</NBlue>(num1, num2)); <br>
+                } <br>
+                <NBlue>myFunc</NBlue>( 1, 2, <u>(a, b) <NPurp> =></NPurp> a + b</u> );
+              </details>
+            </div>
+            <div class="cod">
+              <details>
+                <summary>Ej. 3...</summary>
+                <NPurp>let</NPurp> myNumbers = [<NOrg>4, 1, -20, -7, 5, 9, -6</NOrg>]; <br>
+                myNumbers = <NBlue>removeNeg</NBlue>(myNumbers, <NPurp>(<NVar>x</NVar>) =></NPurp> x <NAqua>></NAqua> <NOrg>0</NOrg>); <br><br>
+                <NPurp>function</NPurp> <NBlue>removeNeg</NBlue>(nums, callback) { <br>
+                  &nbsp; <NPurp>let</NPurp> array = <NObj>[]</NObj>; <br>
+                  &nbsp; nums.<NBlue>forEach</NBlue>(x <NPurp>=> {</NPurp> if (<NBlue>callback</NBlue>(x)) array.<NBlue>push</NBlue>(x)<NPurp>}</NPurp>) <br>
+                  &nbsp; <NAqua>return</NAqua> array; <br>
+                } <br>
+              </details>
             </div>
           </div>
         </div>
       </fieldset>
     </fieldset>
     
-    <fieldset class="flex"> <!-- SetInterval - SetTimeout  -->
+    <!-- SetInterval - SetTimeout  -->
+    <fieldset class="flex"> 
       <legend>SetInterval - SetTimeout (Async)</legend>
       <div class="width100"> <!-- SetInterval -->
         <b>SetInterval (Infinito)</b>
@@ -545,7 +550,7 @@
       </div>
     </fieldset>
 
-    <!-- Propiedades de Funciones -->
+    <!-- Avanzado -->
     <div class="flex">
       <fieldset class="w40"> <!-- NFE -->
         <legend> <span onclick="onclick_ShowCont('_NFE')">Propiedades (Avanzado) </span> </legend>
@@ -590,6 +595,28 @@
         </div>
       </fieldset>
     </div>
+
+    <fieldset> <!-- Func Generadora -->
+      <legend> <span onclick="onclick_ShowCont('_generadora')">Func Generadora</span> </legend>
+      la funcion generadora puede devolver varios valores.
+      <div class="cod" id="_generadora" style="display: block;">
+        <NPurp>function</NPurp><NAqua>*</NAqua> <NBlue>funcGeneradora</NBlue><NObj>() {</NObj> <br>
+          &nbsp; <NAqua>yield</NAqua> <NOrg>1</NOrg>; <br>
+          &nbsp; <NAqua>yield</NAqua> <NOrg>2</NOrg>; <br>
+          &nbsp; <NAqua>yield</NAqua> <NOrg>3</NOrg>; <br>
+        <NObj>}</NObj> <br><br>
+        <NPurp>let</NPurp> generadora = <NBlue>funcGeneradora</NBlue><NObj>()</NObj>; <br>
+        console.<NBlue>log</NBlue><NObj>(</NObj>generadora.<NBlue>next</NBlue><NPurp>()</NPurp>.value<NObj>)</NObj>; <NGray>// 1</NGray> <br>
+        console.<NBlue>log</NBlue><NObj>(</NObj>generadora.<NBlue>next</NBlue><NPurp>()</NPurp>.value<NObj>)</NObj>; <NGray>// 2</NGray> <br><br>
+        
+        <NAqua>for</NAqua>(<NPurp>let</NPurp> value <NAqua>of</NAqua> generator) { <br>
+          &nbsp; <NBlue>alert</NBlue>(value); <NGray>// 1, 2, 3</NGray> <br>
+        } <br><br>
+
+        <NPurp>let</NPurp> sequence <NAqua> = </NAqua> [<NOrg>0</NOrg>, <NAqua>...</NAqua>generateSequence()]; <br>
+      </div>
+      <a href="https://es.javascript.info/generators">generators: más info...</a>
+    </fieldset>
   </section>
 
   <!-- Objetos -->
@@ -749,7 +776,7 @@
             document.<NBlue>write</NBlue>(user.sex); <NGray>// male (padre)</NGray> <br>
             document.<NBlue>write</NBlue>(user.xp); <NGray>// 2</NGray>
           </div>
-          <div class="cod">
+          <div class="cod wAuto">
             student.__proto__ <NAqua> = </NAqua> person; <NGray>// (person es el padre)</NGray>
           </div>
       </fieldset>
@@ -811,24 +838,25 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
     <fieldset> <!-- Window -->
     <legend> Browser Object Model </legend>
       <div class="cod">
+        window/globalthis: <NGray>// es el objeto global del navegador.</NGray> <br>
         window.usuario = { name: "nico" }; <NGray>// Crear variable Global (para todos los scripts)</NGray> <br><br>
         
         <div class="columnas">
           window.name="<NGreen>Ventana</NGreen>";<NGray> //nombre ventana.</NGray> <br>
-          window.outerWidth; <NGray> // Ancho (con scroll).</NGray> <br>
-          window.outerHeight; <NGray>// Alto (con pestañas+).</NGray> <br>
-          window.innerWidth; <NGray> // Ancho (sin scroll).</NGray> <br>
-          window.innerHeight; <NGray>// Alto (solo interior).</NGray> <br>
-          window.screenX; <NGray>// izq pantalla a ventana.</NGray> <br>
+          <span class="opcional">window.</span>outerWidth; <NGray> // Ancho (con scroll).</NGray> <br>
+          <span class="opcional">window.</span>outerHeight; <NGray>// Alto (con pestañas+).</NGray> <br>
+          <span class="opcional">window.</span>innerWidth; <NGray> // Ancho (sin scroll).</NGray> <br>
+          <span class="opcional">window.</span>innerHeight; <NGray>// Alto (solo interior).</NGray> <br>
+          <span class="opcional">window.</span>screenX; <NGray>// izq pantalla a ventana.</NGray> <br>
           
-          window.location = "<NGreen>URL</NGreen>"; <NGray>// redirigir pag.</NGray> <br>
-          window.scrollX; <NGray>// Scroll Ancho (actual).</NGray> <br>
-          window.scrollY; <NGray>// Scroll Alto (actual).</NGray> <br>
-          window.scroTo(<NOrg>0, 100</NOrg>); <NGray>// Scroll pos 100px.</NGray> <br>
-          window.scroBy(<NOrg>0, 100</NOrg>); <NGray>// Scroll +100px.</NGray> <br>
-          <span onclick="onclick_ShowCode(__valorConsole, '_windowDiv')">window.console; </span> <NGray>// prop y metdos console.</NGray> <br>
-          <span onclick="onclick_ShowCode(__valorHistory, '_windowDiv')">window.history; </span> <NGray>// prop y metodos history.</NGray> <br>
-          <span onclick="onclick_ShowCode(__valorLocation, '_windowDiv')">window.location; </span> <NGray>// prop y metds location.</NGray> <br>
+          <span class="opcional">window.</span>location = "<NGreen>URL</NGreen>"; <NGray>// redirigir pag.</NGray> <br>
+          <span class="opcional">window.</span>scrollX; <NGray>// Scroll Ancho (actual).</NGray> <br>
+          <span class="opcional">window.</span>scrollY; <NGray>// Scroll Alto (actual).</NGray> <br>
+          <span class="opcional">window.</span>scroTo(<NOrg>0, 100</NOrg>); <NGray>// Scroll pos 100px.</NGray> <br>
+          <span class="opcional">window.</span>scroBy(<NOrg>0, 100</NOrg>); <NGray>// Scroll +100px.</NGray> <br>
+          <span onclick="onclick_ShowCode(__valorConsole, '_windowDiv')"><span class="opcional">window.</span>console; </span> <NGray>// prop y metdos console.</NGray> <br>
+          <span onclick="onclick_ShowCode(__valorHistory, '_windowDiv')"><span class="opcional">window.</span>history; </span> <NGray>// prop y metodos history.</NGray> <br>
+          <span onclick="onclick_ShowCode(__valorLocation, '_windowDiv')"><span class="opcional">window.</span>location; </span> <NGray>// prop y metds location.</NGray> <br>
         </div>
       </div>
       <div class="cod columnas">
@@ -1278,10 +1306,10 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
     <!-- Tipos - Onload -->
     <div class="flex">
       <!-- tipos -->
-      <fieldset class="width100" style="column-count: 2;"> 
+      <fieldset class="w50" style="column-count: 2;"> 
       <legend> Tipos de Eventos </legend>
         onfocus - onblur <br>
-        <span title="Solo en (Body, imgs, iframe, scripts)">onload - onunload </span> <br>
+        <span title="Solo en archivos externos (Body, scripts, imgs, iframes)">onload - onunload - onerror<NBlue>¿?</NBlue> </span> <br>
         onclick - onchange <br>
         onkey down-up-press<br>
         onmouse down-up-move <br>
@@ -1289,9 +1317,29 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
         <a href="https://www.w3schools.com/tags/ref_eventattributes.asp">(Event Attributes)</a>
       </fieldset>
       <!-- Onload -->
-      <fieldset class="width100">
-        <legend> OnLoad (Al cargar la pag.) </legend>
-        <div class="cod"> window.<NBlue>onload</NBlue> = <NPurp>function</NPurp>(){ <br> &nbsp; <NGray>// Codigo...</NGray> <br> } </div>
+      <fieldset class="w50">
+        <legend> OnLoad. </legend>
+        <div class="cod"> window.<NBlue>onload</NBlue> = <NPurp>()</NPurp> =>  console.<NBlue>log</NBlue>("<NGreen>listo.</NGreen>"); </div>
+        <div class="cod"> 
+          <details>
+            <summary>Ej. onLoad (Imagen)</summary>
+            <NPurp>function</NPurp> <NBlue>loadScript</NBlue>(src, callback) { <br>
+              &nbsp; let img = document.<NBlue>createElement</NBlue>('<NGreen>img</NGreen>'); <br>
+              &nbsp; img.src = src; <br><br>
+
+              &nbsp; img.<NBlue>onload</NBlue> = () <NPurp>=></NPurp> <NBlue>callback</NBlue>(<NRed>null</NRed>, img); <br>
+              &nbsp; img.<NBlue>onerror</NBlue> = () <NPurp>=></NPurp> <NBlue>callback</NBlue>(<NAqua>new</NAqua> <NObj>Error</NObj>("<NGreen>Error...</NGreen>")); <br>
+            } <br><br>
+
+            <NBlue>loadScript</NBlue>('<NGreen>./Imgs/1.jpg</NGreen>', <NPurp>function</NPurp>(<NRed>error</NRed>, imagen) { <br>
+              &nbsp; <NAqua>if</NAqua> (<NRed>error</NRed>) { <br>
+              &nbsp;   <NTab></NTab> document.body.innerHTML <NAqua>+=</NAqua> <NRed>error</NRed>; <br>
+              &nbsp; } <NAqua>else</NAqua> { <br>
+              &nbsp;   <NTab></NTab> document.body.<NBlue>append</NBlue>(imagen); <br>
+              &nbsp; } <br>
+            }); <br>
+          </details>
+        </div>
       </fieldset>
     </div>
 
@@ -1700,79 +1748,231 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
       </style>
     </fieldset>
 
-    <fieldset> <!-- ES Modules -->
-      <legend> ES Modules </legend>
-      Import y Export <br>
-      <div class="cod html">
-        &lt;<NRed>script</NRed> <NPurp>src</NPurp>="<NGreen>index.js</NGreen>" <u>
-          <NPurp>type</NPurp>="<NGreen>module</NGreen>"
-        </u> > &lt;/<NRed>script</NRed>> <br>
-      </div>
+    <!-- ES Modules -->
+    <div class="flex">
+      <fieldset class="w50">
+        <legend> ES Modules </legend>
+        Import y Export <br>
+        <div class="cod html">
+          &lt;<NRed>script</NRed> <NPurp>src</NPurp>="<NGreen>index.js</NGreen>" <u>
+            <NPurp>type</NPurp>="<NGreen>module</NGreen>"
+          </u> > &lt;/<NRed>script</NRed>> <br>
+        </div>
+        <div class="cod">
+          <NGray>// exportar default + variables, funciones, clases, etc</NGray> <br>
+          <NAqua>export</NAqua> <NPurp>const</NPurp> variable = <NOrg>25</NOrg>; <br><br>
+      
+          <NGray>// exportar por defecto</NGray> <br>
+          <NAqua>export default</NAqua> { <br>
+            &nbsp; booleano: <NRed>true</NRed>, <br>
+            &nbsp; name <NGray>// exportar funciones / variables.</NGray> <br>
+          } <br>
+        </div>
+        <div class="cod">
+          <NGray>// importar default + variables.</NGray> <br>
+          <NAqua>import</NAqua> defaultVar, <NObj>{</NObj> myFunc <NAqua>as</NAqua> nuevoNombre, <br> variable<NObj>}</NObj> <NAqua>from</NAqua> "<NGreen>./export.js</NGreen>";
+        </div>
+        <a href="https://www.youtube.com/watch?v=0t-Le4kdaMg&ab_channel=FaztCode">link video...</a>
+        <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/export">link pag...</a>
+      </fieldset>
 
+      <!-- CommonJS Module -->
+      <fieldset class="w50"> 
+        <legend> CommonJS Module </legend>
+        <div class="cod">
+          <NPurp>function</NPurp> <NBlue>suma</NBlue>(a, b) { <br> 
+            <NTab></NTab> <NAqua>return</NAqua> a + b <br> } <br><br>
+          <NBlue>module.exports <NAqua> =</NAqua> suma</NBlue>; <NGray>// (Export opcion1)</NGray> <br>
+          <NBlue>module.exports</NBlue> <NAqua> =</NAqua> {suma}; <NGray>// (Export opcion2)</NGray> <br>
+        </div>
+        <div class="cod">
+          <NPurp>const</NPurp> suma <NAqua> =</NAqua> <NBlue>require</NBlue>(<NGreen>"./suma.js"</NGreen>); <NGray>// (Import opcion1)</NGray> <br>
+          <NPurp>const</NPurp> {suma} <NAqua> =</NAqua> <NBlue>require</NBlue>(<NGreen>"./suma.js"</NGreen>); <NGray>// (Import opcion2)</NGray> <br> <br>
+
+          console.<NBlue>log</NBlue>( <u> <NBlue>suma</NBlue>(1, 2) </u> ); <NGray>// (usar)</NGray>
+
+        </div>
+      </fieldset>
+    </div>
+  </section>
+
+  <!-- Asincronía + Errores -->
+  <section id="Asincronía + Errores"> 
+    <!-- CODIGO DE ERRORES: https://www.w3schools.com/tags/ref_httpmessages.asp -->
+    <fieldset class="flex"> <!-- Try-Catch -->
+      <legend> Try-Catch (Manejo de errores) </legend>
       <div class="cod">
-        <NGray>// exportar default + variables, funciones, clases, etc</NGray> <br>
-        <NAqua>export</NAqua> <NPurp>const</NPurp> variable = <NOrg>25</NOrg>; <br><br>
-        
-        <NGray>// exportar por defecto</NGray> <br>
-        <NAqua>export default</NAqua> { <br>
-          &nbsp; booleano: <NRed>true</NRed>, <br>
-          &nbsp; name <NGray>// exportar funciones / variables.</NGray> <br>
+        <NGray>// Try-Catch</NGray> <br>
+        <NPurp>const</NPurp> json = '<NGreen>{"age": 30}</NGreen>'; <br>
+        <NAqua>try</NAqua> { <br>
+          &nbsp; <NPurp>let</NPurp> user = JSON.<NBlue>parse</NBlue>(json); <br>
+          &nbsp; <NAqua>if</NAqua> (!user.name)  <br>
+            <NTab></NTab>&nbsp; <NAqua>throw new</NAqua> <NObj>SyntaxError</NObj>("<NGreen>falta nombre</NGreen>"); <NGray>// (error)</NGray> <br>
+          &nbsp; console.<NBlue>log</NBlue>(user.name); <NGray>// (se ejecuta si no hay error)</NGray> <br>
+          } <NAqua>catch</NAqua> (<NRed>error</NRed>) {  <br>
+          <NTab></NTab>&nbsp; console.<NBlue>log</NBlue>(<NRed>error</NRed>.message); <NGray>// falta nombre</NGray> <br>
+          } <NAqua>finally</NAqua> { <br>
+          <NTab></NTab>&nbsp; console.<NBlue>log</NBlue>("<NGreen>finally</NGreen>"); <NGray>// (siempre se ejecuta)</NGray> <br>
         } <br>
       </div>
 
       <div class="cod">
-        <NGray>// importar default + variables.</NGray> <br>
-        <NAqua>import</NAqua> defaultVar, <NObj>{</NObj> myFunc <NAqua>as</NAqua> nuevoNombre, variable<NObj>}</NObj> <NAqua>from</NAqua> "<NGreen>./export.js</NGreen>"; 
+        <NGray>// Errores personalizados</NGray> <br>
+        <NPurp>class</NPurp> <NObj>validationError</NObj> <NPurp>extends</NPurp> <NObj>Error</NObj>{ <br>
+          &nbsp; <NPurp>constructor</NPurp>(message){ <br>
+            <NTab></NTab> super(message); <br>
+            <NTab></NTab> <NAqua>this</NAqua>.name = "<NGreen>ValidationError</NGreen>"; <br>
+            <sub>}</sub> <sup>}</sup> <br><br>
+        <NAqua>try</NAqua> { <br>
+          &nbsp; <NAqua>if</NAqua>(!user.age) <NoCopy>=></NoCopy>
+            <NAqua>throw new</NAqua> <NObj>validationError</NObj>("<NGreen>falta age</NGreen>"); <br>
+        }<NAqua>catch</NAqua> (error) { <br>
+          &nbsp; <NAqua>if</NAqua>(err <NAqua>instanceof</NAqua> <NObj>validationError</NObj>) <NoCopy>=></NoCopy>
+            <NBlue>alert</NBlue>(err.message); <br>
+        } <br>
       </div>
-      <a href="https://www.youtube.com/watch?v=0t-Le4kdaMg&ab_channel=FaztCode">link video...</a>
-      <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/export">link pag...</a>
     </fieldset>
+
+    <fieldset> <!-- CallBack -->
+      <legend> Callback &nbsp; Asincrono (casi no se usa)</legend>
+      <div class="cod">
+        <NPurp>function</NPurp> <NBlue>loadScript</NBlue>(src, <u>callback</u>) { <br>
+          <div class="smaller">
+            &nbsp; <NPurp>let</NPurp> img = document.<NBlue>createElement</NBlue>('<NGreen>img</NGreen>'); <br>
+            &nbsp; img.src = "<NGreen>./Imgs/</NGreen>" + src; <br>
+          </div><br>
+          &nbsp; <NGray class="smaller"><sub>// El callback se ejecuta aquí</sub></NGray> <br>
+          &nbsp; img.<NBlue>onload</NBlue> = () <NPurp>=></NPurp> <NBlue><u>callback</u></NBlue>(<NRed>null</NRed>, img); <br>
+          &nbsp; img.<NBlue>onerror</NBlue> = () <NPurp>=></NPurp> <NBlue><u>callback</u></NBlue>(<NAqua>new</NAqua> <NObj>Error</NObj>("<NGreen>Error...</NGreen>")); <br>
+        } <br><br>
+        <NBlue>loadScript</NBlue>('<NGreen>img1.jpg</NGreen>', <NPurp><u>function</u></NPurp>(<NRed>error</NRed>, imagen) { <br>
+          &nbsp; <NAqua>if</NAqua> (<NRed>error</NRed>)  document.body.innerHTML <NAqua>+=</NAqua> <NRed>error</NRed>; <br>
+          &nbsp; <NAqua>else</NAqua> document.body.<NBlue>append</NBlue>(imagen); <br>
+        }); <br>
+      </div>
+    </fieldset>
+    
+    <div class="flex"> <!-- Promise + Async -->
+      <fieldset class="w50"> <!-- Promise -->
+        <legend> Promise (antes) </legend>
+        <div class="cod wAuto">
+          <NGray>// Se puede llamar en cualquier momento y varias veces. </NGray> <br>
+          <NPurp>let</NPurp> myPromise = <NPurp>new</NPurp> <NObj>Promise</NObj>( <NPurp>function</NPurp>(<NBlue><dfn title="Resuelto">resolve</dfn></NBlue>, <NBlue><dfn title="Rechazado">reject</dfn></NBlue>) { <br>
+            &nbsp; <NPurp>let</NPurp> condicion = true; <NGray>// (alguna comprobacion externa)</NGray> <br>
+            &nbsp; <NAqua>if</NAqua> (condicion) <NBlue>resolve</NBlue>("<NGreen>Cumplido!</NGreen>"); <br>
+            &nbsp; <NAqua>else</NAqua> <NBlue>reject</NBlue>("<NGreen>Error!</NGreen>"); <br>
+          }) <br>
+          .<NBlue>finally</NBlue>( console.<NBlue>log</NBlue>("<NGreen>promise done</NGreen>") )
+          <NGray>(se ejecuta siempre)</NGray> <br>
+          .<NBlue>then</NBlue>(res <NPurp> =></NPurp> console.<NBlue>log</NBlue>(res)) <br>
+          .<NBlue>catch</NBlue>(<NRed>error</NRed> <NPurp> =></NPurp> console.<NBlue>log</NBlue>(<NRed>error</NRed>));
+        </div>
+        <!-- Varios Promise -->
+        <div class="cod wAuto">
+          <details>
+            <summary>Varios promise (paralelo)...</summary>
+            <NGray>// (lee todo al mismo timepo)</NGray><br>
+            <NPurp>let</NPurp> promesa1 = <NAqua>new</NAqua> <NObj>Promise</NObj>( (<NBlue>resolve, reject</NBlue>) => { <br>
+              &nbsp; <NBlue>setTimeout</NBlue>(<NBlue>resolve</NBlue>, <NOrg>5000</NOrg>, "<NGreen>Saludos a todos</NGreen>"); <br>
+            }); <br>
+            <NPurp>let</NPurp> promesa2 = <NAqua>new</NAqua> <NObj>Promise</NObj>( (<NBlue>resolve, reject</NBlue>) => { <br>
+              &nbsp; <NBlue>setTimeout</NBlue>(<NBlue>resolve</NBlue>, <NOrg>7000</NOrg>, "<NGreen>Otro saludo</NGreen>."); <br>
+            }); <br>
+            <NObj>Promise</NObj>.<NBlue>all</NBlue>([promesa1, promesa2]) <br>
+            .<NBlue>then</NBlue>(valores <NPurp> =></NPurp> console.<NBlue>log</NBlue>(valores[<NOrg>0</NOrg>],"-", valores[<NOrg>1</NOrg>]) ) <br>
+          </details>
+        </div>
+        <!-- Propiedades -->
+        <div class="cod wAuto">
+          <details>
+            <summary>Propiedades...</summary>
+            <div class="columnas">
+              myPromesa.<b><u>state</u></b>: <br>
+               &nbsp; - &nbsp; pending. <br>
+               &nbsp; - &nbsp; fulfilled. <br>
+               &nbsp; - &nbsp; rejected. <br>
+              myPromesa.<b><u>result</u></b>: <br>
+               &nbsp; - &nbsp; undefined. <br>
+               &nbsp; - &nbsp; valor. <br>
+               &nbsp; - &nbsp; error. <br>
+            </div><hr>
+            Promise.x (API) &nbsp; <a href="https://es.javascript.info/promise-api">es.javascript.info/promise-api</a>
+          </details>
+        </div>
+      </fieldset>
+
+      <fieldset class="w50"> <!-- Async - Await -->
+        <legend> Async - Await (ahora) </legend>
+        <div class="cod">
+          <div class="smaller">
+            <NPurp>async function</NPurp> <NBlue>sumar</NBlue>(num1, num2){ <br>
+              &nbsp; <NAqua>if</NAqua>(!<NBlue>isNaN</NBlue>(num1) || !<NBlue>isNaN</NBlue>(num2)) <br>
+                <NTab></NTab> <NAqua>throw new</NAqua> <NBlue>Error</NBlue>("<NGreen>Argumento no válido</NGreen>"); <br>
+              &nbsp; <NAqua>return</NAqua> num1+num2; <br>}
+          </div> <NGray>// async: siempre va devolver una promesa</NGray> <br>
+          <NPurp><u>async</u> function</NPurp> <NBlue>manejoErrores</NBlue>(){ <br>
+            &nbsp; <NAqua>try</NAqua>{ <br>
+            <NTab></NTab> <NPurp>let</NPurp> resultado = <NAqua><u>await</u></NAqua> <NBlue>sumar</NBlue>("<NGreen>p</NGreen>", <NOrg>50</NOrg>); <NGray>// (esperar)</NGray> <br>
+            <NTab></NTab> console.<NBlue>log</NBlue>(resultado); <br>
+            <NTab></NTab> <span class="smaller">
+              <NAqua>await new</NAqua> <NObj>Promise</NObj>((resolve, reject) <NPurp>=></NPurp> <NBlue>setTimeout</NBlue>(resolve, <NOrg>3000</NOrg>)); <br>
+              <NTab></NTab> <NGray>// (espera 3 seg)...</NGray>
+            </span> <br>
+            <NTab></NTab> <NAqua>return</NAqua> resultado; <br>
+            &nbsp; } <br>
+            &nbsp; <NAqua>catch</NAqua>(<NRed>error</NRed>) { console.<NBlue>error</NBlue>(<NRed>error</NRed>.message) }; <br>
+          } <br>
+          <NBlue>manejoErrores</NBlue>().<NBlue>then</NBlue>(alert); <br>
+        </div>
+      </fieldset>
+    </div>
   </section>
 
   <!-- Json -->
-  <section id="JSON">
+  <section id="FETCH">
     
-    <!-- PHP y SON EJ -->
+    <!-- Fetch (simple) -->
     <fieldset> 
-      <legend> Fetch simple con PHP/JSON </legend>
-        <div class="flex">
-          <div class="cod">
-            <NGray>// GET</NGray> <br>
-            <NPurp>let</NPurp> div = document.<NBlue>querySelector</NBlue>("<NGreen>div</NGreen>"); <br><br>
-            <NPurp>async function</NPurp> <NBlue>obtenerDatos</NBlue>(){ <br>
-              &nbsp; <NPurp>let</NPurp> respuesta <NAqua> = await </NAqua> <NBlue>fetch</NBlue>("<NGreen>archivo.php</NGreen>"); <NGray>// archivo.json</NGray> <br>
-              &nbsp; <NPurp>let</NPurp> datos <NAqua> = await </NAqua> respuesta.<NBlue>json</NBlue>(); <br><br>
-              &nbsp; div.innerText = datos; <NGray>// datos.nombre</NGray> <br>
-            } <br>
-            <NBlue>obtenerDatos</NBlue>(); <br><hr>
-            <NGray>// PHP</NGray> <br>
-            <NBlue>echo json_encode</NBlue>("<NGreen>Hola mundo!</NGreen>"); <br> <hr>
+      <legend> Fetch (simple) </legend>
+      <div class="flex">
+        <div class="cod">
+          <NGray>// GET</NGray> <br>
+          <NPurp>let</NPurp> div = document.<NBlue>querySelector</NBlue>("<NGreen>div</NGreen>"); <br><br>
+          <NPurp>async function</NPurp> <NBlue>obtenerDatos</NBlue>(){ <br>
+            &nbsp; <NPurp>let</NPurp> respuesta <NAqua> = await </NAqua> <NBlue>fetch</NBlue>(<span id="_fetch"></span>); <br>
+            &nbsp; <NPurp>let</NPurp> datos <NAqua> = await </NAqua> respuesta.<NBlue>json</NBlue>(); <br><br>
+            &nbsp; div.innerText = datos; <NGray>// datos.nombre</NGray> <br>
+          } <br>
+          <NBlue>obtenerDatos</NBlue>(); <br><hr>
+          <NGray>// PHP</NGray> <br>
+          <NBlue>echo json_encode</NBlue>("<NGreen>Hola mundo!</NGreen>"); <br> <hr>
 
-            <NGray>// JSON</NGray> <br>
-            { <br>
-              &nbsp; "nombre" : "nico", <br>
-              &nbsp; "apellido" : "Pasino" <br>
-            }
-          </div>
-          <div class="cod">
-            <NGray>// POST</NGray> <br>
-            <NPurp>const</NPurp> data <NAqua> = new </NAqua> <NObj>FormData()</NObj>; <br>
-            data.<NBlue>append</NBlue>("<NGreen>nombre</NGreen>", "<NGreen>Nico</NGreen>"); <br><br>
-            <NPurp>async function</NPurp> <NBlue>obtenerDatos</NBlue>(){ <br>
-              &nbsp; <NPurp>let</NPurp> respuesta <NAqua> = await </NAqua> <NBlue>fetch</NBlue>("<NGreen>archivo.php</NGreen>" , { <br>
-                <NTab></NTab> method: "<NGreen>POST</NGreen>", <br>
-                <NTab></NTab> body: data <br>
-              &nbsp; }) <br>
-              &nbsp; <NPurp>let</NPurp> datos <NAqua> = await </NAqua> respuesta.<NBlue>json</NBlue>(); <br><br>
-              &nbsp; div.innerText = datos; <br>
-            } <br>
-            <NBlue>obtenerDatos</NBlue>(); <br><hr>
-            <NGray>// PHP</NGray> <br>
-            <NAqua>if</NAqua> (<NAqua>$</NAqua>_POST['<NGreen>nombre</NGreen>'] == "<NGreen>Nico</NGreen>") { <br>
-              &nbsp; <NBlue>echo json_encode</NBlue>("<NGreen>Bienvenido!</NGreen>"); <br>
-            }
-          </div>
+          <NGray>// JSON</NGray> <br>
+          { <br>
+            &nbsp; "nombre" : "nico", <br>
+            &nbsp; "apellido" : "Pasino" <br>
+          }
         </div>
+        <div class="cod">
+          <NGray>// POST</NGray> <br>
+          <NPurp>const</NPurp> data <NAqua> = new </NAqua> <NObj>FormData()</NObj>; <br>
+          data.<NBlue>append</NBlue>("<NGreen>nombre</NGreen>", "<NGreen>Nico</NGreen>"); <br><br>
+          <NPurp>async function</NPurp> <NBlue>obtenerDatos</NBlue>(){ <br>
+            &nbsp; <NPurp>let</NPurp> respuesta <NAqua> = await </NAqua> <NBlue>fetch</NBlue>("<NGreen>archivo.php</NGreen>" , { <br>
+              <NTab></NTab> method: "<NGreen>POST</NGreen>", <br>
+              <NTab></NTab> body: data <br>
+            &nbsp; }) <br>
+            &nbsp; <NPurp>let</NPurp> datos <NAqua> = await </NAqua> respuesta.<NBlue>json</NBlue>(); <br><br>
+            &nbsp; div.innerText = datos; <br>
+          } <br>
+          <NBlue>obtenerDatos</NBlue>(); <br><hr>
+          <NGray>// PHP</NGray> <br>
+          <NAqua>if</NAqua> (<NAqua>$</NAqua>_POST['<NGreen>nombre</NGreen>'] == "<NGreen>Nico</NGreen>") { <br>
+            &nbsp; <NBlue>echo json_encode</NBlue>("<NGreen>Bienvenido!</NGreen>"); <br>
+          }
+        </div>
+      </div>
+      <a href="https://es.javascript.info/fetch">https://es.javascript.info/fetch...</a>
     </fieldset>
 
     <!-- Fetch (metodos) -->
@@ -1937,127 +2137,16 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
     </fieldset>
   </section>
 
-  <!-- Asincronía + Errores -->
-  <section id="Asincronía + Errores">
-    <!-- CODIGO DE ERRORES: https://www.w3schools.com/tags/ref_httpmessages.asp -->
-    <fieldset class="flex"> <!-- Try-Catch -->
-      <legend> Manejo de errores </legend>
-      <div class="cod">
-        <NGray>// Try-Catch</NGray> <br>
-        <NPurp>const</NPurp> json = '<NGreen>{"age": 30}</NGreen>'; <br>
-        <NAqua>try</NAqua> { <br>
-          &nbsp; <NPurp>let</NPurp> user = JSON.<NBlue>parse</NBlue>(json); <br>
-          &nbsp; <NAqua>if</NAqua> (!user.name)  <br>
-            <NTab></NTab>&nbsp; <NAqua>throw new</NAqua> <NObj>SyntaxError</NObj>("<NGreen>falta nombre</NGreen>"); <NGray>// (crear)</NGray> <br>
-          &nbsp; console.<NBlue>log</NBlue>(user.name); <NGray>// (no se ejecuta x el error)</NGray> <br>
-          } <NAqua>catch</NAqua> (error) {  <br>
-          <NTab></NTab>&nbsp; console.<NBlue>log</NBlue>(error.message); <NGray>// falta nombre</NGray> <br>
-          } <NAqua>finally</NAqua> { <br>
-          <NTab></NTab>&nbsp; console.<NBlue>log</NBlue>("<NGreen>finally</NGreen>"); <NGray>// (siempre se ejecuta)</NGray> <br>
-        } <br>
-      </div>
-      <div class="cod">
-        <NGray>// Errores personalizados</NGray> <br>
-        <NPurp>class</NPurp> <NObj>validationError</NObj> <NPurp>extends</NPurp> <NObj>Error</NObj>{ <br>
-          &nbsp; <NPurp>constructor</NPurp>(message){ <br>
-            <NTab></NTab> super(message); <br>
-            <NTab></NTab> <NAqua>this</NAqua>.name = "<NGreen>ValidationError</NGreen>"; <br>
-            <sub>}</sub> <sup>}</sup> <br><br>
-        <NAqua>try</NAqua> { <br>
-          &nbsp; <NAqua>if</NAqua>(!user.age) <NoCopy>=></NoCopy>
-            <NAqua>throw new</NAqua> <NObj>validationError</NObj>("<NGreen>falta age</NGreen>"); <br>
-        }<NAqua>catch</NAqua> (error) { <br>
-          &nbsp; <NAqua>if</NAqua>(err <NAqua>instanceof</NAqua> <NObj>validationError</NObj>) <NoCopy>=></NoCopy>
-            <NBlue>alert</NBlue>(err.message); <br>
-        } <br>
-      </div>
-    </fieldset>
-    
-    <div class="flex"> <!-- Promise + Async -->
-      <fieldset class="w50"> <!-- Promise -->
-        <legend> Promise (antes) </legend>
-        <div class="cod wAuto">
-          <NPurp>new</NPurp> <NObj>Promise</NObj>( <NPurp>function</NPurp>(<NBlue>resolve</NBlue>, <NBlue>reject</NBlue>) { <br>
-            &nbsp; <NAqua>if</NAqua> (true) <br>
-              &nbsp; &nbsp; <NBlue>resolve</NBlue>("<NGreen>Cumplido!</NGreen>"); <br>
-            &nbsp; <NAqua>else</NAqua> <br>
-              &nbsp; &nbsp; <NBlue>reject</NBlue>("<NGreen>Error!</NGreen>"); <br>
-          }) <br>
-          .<NBlue>then</NBlue>(res <NPurp> =></NPurp> console.<NBlue>log</NBlue>(res)) <br>
-          .<NBlue>catch</NBlue>(error <NPurp> =></NPurp> console.<NBlue>log</NBlue>(error));
-        </div>
-        <div class="cod wAuto">
-          <details>
-            <summary>Manejo de Error...</summary>
-            <NPurp>function</NPurp> <NBlue>sumar</NBlue>(num1, num2){ <br>
-              &nbsp; <NAqua>return new</NAqua> <NObj>Promise</NObj>( <NPurp>function</NPurp>(<NBlue>resolve, reject</NBlue>){ <br>
-              <NTab></NTab> <NBlue>setTimeout</NBlue>(<NPurp>function</NPurp>(){ <br>
-                  <NTab></NTab> <NAqua>if</NAqua>(<NAqua>typeof</NAqua> num1 != "<NGreen>number</NGreen>" || <br>
-                  <NTab2></NTab2> <NAqua>typeof</NAqua> num2 != "<NGreen>number</NGreen>"){ <br>
-                    <NTab2></NTab2> &nbsp; <NBlue>reject</NBlue>( <NAqua>new</NAqua> <NBlue>Error</NBlue> ("<NGreen>Argumento no válido</NGreen>")); <br>
-                    <NTab></NTab> &nbsp; }<NAqua>else</NAqua>{  <br>
-                    <NTab2></NTab2> <NBlue>resolve</NBlue>(num1+num2) <br>
-                  &nbsp; <NTab></NTab> } <br>
-                <NTab></NTab> }, <NOrg>1000</NOrg>); <br>
-              &nbsp; }) <br>
-            } <br><br>
-            <NBlue>sumar</NBlue>("<NGreen>p</NGreen>", <NOrg>50</NOrg>) <br>
-            .<NBlue>then</NBlue>(respuesta <NPurp> =></NPurp> console.<NBlue>log</NBlue>(respuesta)) <br>
-            .<NBlue>catch</NBlue>(error <NPurp> =></NPurp> console.<NBlue>error</NBlue>(error)); <br>
-          </details>
-        </div>
-        <div class="cod wAuto">
-          <details>
-            <summary>Varios promise...</summary>
-            <NPurp>let</NPurp> promesa1 = <NAqua>new</NAqua> <NObj>Promise</NObj>( (<NBlue>resolve, reject</NBlue>) => { <br>
-              &nbsp; <NBlue>setTimeout</NBlue>(<NBlue>resolve</NBlue>, <NOrg>5000</NOrg>, "<NGreen>Saludos a todos</NGreen>"); <br>
-            }); <br>
-            <NPurp>let</NPurp> promesa2 = <NAqua>new</NAqua> <NObj>Promise</NObj>( (<NBlue>resolve, reject</NBlue>) => { <br>
-              &nbsp; <NBlue>setTimeout</NBlue>(<NBlue>resolve</NBlue>, <NOrg>7000</NOrg>, "<NGreen>Otro saludo</NGreen>."); <br>
-            }); <br>
-            <NObj>Promise</NObj>.<NBlue>all</NBlue>([promesa1, promesa2]) <br>
-            .<NBlue>then</NBlue>(valores <NPurp> =></NPurp> console.<NBlue>log</NBlue>(valores[<NOrg>0</NOrg>],"-", valores[<NOrg>1</NOrg>]) ) <br>
-          </details>
-        </div>
-      </fieldset>
-
-      <fieldset class="w50"> <!-- Async - Await -->
-        <legend> Async - Await (ahora) </legend>
-        <div class="cod wAuto">
-          <NGray>// Async - Await</NGray> <br>
-          <NPurp>async function</NPurp> <NBlue>obtenerDatos</NBlue>(){ <br>
-            <NTab></NTab> <NPurp>let</NPurp> respuesta <NAqua> = await</NAqua> <NBlue>fetch</NBlue>("<NGreen>https://api.datos...</NGreen>") <br> <br>
-            <NTab></NTab> <NPurp>let</NPurp> datos <NAqua> = await </NAqua> respuesta.<NBlue>json</NBlue>(); <br> <br>
-            <NTab></NTab> console.<NBlue>log</NBlue>(datos); <br>
-          } <br>
-          <NBlue>obtenerDatos</NBlue>(); <br>
-        </div>
-        <div class="cod wAuto">
-          <details>
-            <summary>Manejo de Error...</summary>
-            <NPurp>async function</NPurp> <NBlue>sumar</NBlue>(num1, num2){ <br>
-              &nbsp; <NAqua>if</NAqua>(<NAqua>typeof</NAqua> num1 != "<NGreen>number</NGreen>" || typeof num2 != "<NGreen>number</NGreen>"){ <br>
-                <NTab></NTab> <NAqua>throw new</NAqua> <NBlue>Error</NBlue>("<NGreen>Argumento no válido</NGreen>"); <br>
-              &nbsp; } <br>
-              &nbsp; <NAqua>return</NAqua> num1+num2; <br>
-            } <br>
-            <NPurp>async function</NPurp> <NBlue>manejoErrores</NBlue>(){ <br>
-              &nbsp; <NAqua>try</NAqua>{ <br>
-              <NTab></NTab> <NPurp>let</NPurp> resultado = <NAqua>await</NAqua> <NBlue>sumar</NBlue>("p", 50); <br>
-              <NTab></NTab> console.<NBlue>log</NBlue>(resultado); <br>
-              &nbsp; } <br>
-              &nbsp; <NAqua>catch</NAqua>(error){ <br>
-              <NTab></NTab> console.<NBlue>error</NBlue>(error.message); <br>
-              &nbsp; } <br>
-            } <br>
-            <NBlue>manejoErrores</NBlue>(); <br>
-          </details>
-        </div>
-      </fieldset>
-    </div>
-  </section>
 
 
+<!-- TODO: BORRAR -->
+<script>
+
+</script>
+
+
+
+  <div style="height: 500px;"></div>
 
   <script>
     function funcCont(valor) {
@@ -2067,11 +2156,10 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
         default: return "Error: funcCont()";
       }
     }
-    // Cambiar valores de un id
+    // Cambiar valores de un id (metodos)
     function autoChangeVal(id, valores, resultados, param="") {
       const idDiv = document.querySelector(`#${id}`);
       const idContent = idDiv.innerHTML;
-
 
       let i = 0;
       (function TextoInterval(){
@@ -2079,6 +2167,19 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
         idDiv.innerHTML = idContent + `${esMetodo(valores[i])}; <NGray>// ${resultados[i]} </NGray>`;
         i++; if (i >= valores.length) {i = 0};
         setTimeout(TextoInterval, 2000);
+      })();
+    }
+
+    // Cambiar valores de un id (simple)
+    function autoChangeSimpleVal(id, valores) {
+      const idDiv = document.querySelector(`#${id}`);
+      const idContent = idDiv.innerHTML;
+
+      let i = 0;
+      (function TextoInterval(){
+        idDiv.innerHTML = params(valores[i]);
+        i++; if (i >= valores.length) {i = 0};
+        setTimeout(TextoInterval, 1500);
       })();
     }
 
@@ -2102,6 +2203,9 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
     autoChangeVal("_toUpperCase", [["toUpperCase"], ["toLowerCase"]],     ["ABC", "abc"]);
     autoChangeVal("_padStart",    [["padStart"], ["padEnd"]],             ["",""],           params(2, "-"));
     autoChangeVal("_starstWith",  [["starstWith"], ["endsWith"]],         ["false", "true"], params("Videos"));
+    
+
+    autoChangeSimpleVal("_fetch", ["archivo.php", "archivo.json"]);
 
 
     // Manejo de error de script.

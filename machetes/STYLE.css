@@ -95,13 +95,21 @@ h1{
 .wAuto { width: auto; /* padding: 7px; */ }
 .width100, .w100{ width: 100%; }
 .w100i{ width: 100% !important; }
-.w80{ width: 80%;}
-.w75{ width: 75%;}
-.w60{ width: 60%;}
-.w50{ width: 50%;}
-.w40{ width: 38%;}
-.w30{ width: 28%;}
-.w25{ width: 25%;}
+.w80{ width: 80%; }
+.w75{ width: 75%; }
+.w60{ width: 60%; }
+.w50{ width: 50%; }
+.w45{ width: 45%; }
+.w40{ width: 38%; }
+.w30{ width: 28%; }
+.w25{ width: 25%; }
+
+.hAuto{
+  max-height: 130px;
+  overflow: auto;
+  border-radius: 7px 7px 0 0;
+  box-shadow: inset 3px 3px 3px rgba(128, 128, 128, 0.558), inset 0px 0px 0px rgba(128, 128, 128, 0.706);
+}
 
 
 .hr{ width: 30px; }
@@ -135,6 +143,7 @@ span[onclick]{
 span[onclick]::after{ content: "*"; color: rgb(107, 149, 234);}
 
 NoCopy, NGray{ user-select: none; color: rgba(128, 128, 128, 0.4); }
+.opcional{color: rgb(131, 131, 131); }
 @keyframes underLineAnim {
   0% { border-bottom: 1px solid rgba(0, 89, 255, 0.472); }
   50% { border-bottom: 1px solid rgb(34, 0, 255); }
