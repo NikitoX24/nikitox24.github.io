@@ -32,7 +32,8 @@
       <b>Metodos de variables</b>
       <div class="cod">
         <span>user = user <NAqua>??</NAqua> "<NGreen>Anonym</NGreen>"; <NGray>// (Nullish Coalescing Operator)</NGray></span> <br>
-        <span>elem.<NBlue>metodo</NBlue>?.(); <NGray>// (si existe el metodo... ejecutar).</NGray></span>
+        <span>elem.<NBlue>metodo</NBlue>?.(); <NGray>// (si existe el metodo... ejecutar).</NGray></span> <br>
+        crypto.<NBlue>randomUUID</NBlue>(); <NGray> // <script>document.write(crypto.randomUUID())</script> </NGray>
         <hr>
         <div class="columnas">
           <NGray>// Convertir a otro tipo.</NGray> <br>
@@ -219,21 +220,10 @@
         array.length = <NOrg>0</NOrg>; <NGray>// (borrar array) </NGray> <br>
         <NAqua>delete</NAqua>(array[<NOrg>2</NOrg>]); <NGray>// ["A", "B", undefined, "C"]  (borra valor, pero no el elemento)</NGray> <br>
         <NObj>Array</NObj>.<NBlue>isArray</NBlue>(<u>array</u>); <NGray>// true</NGray> <br>
-        <NPurp>let</NPurp> [one, , three, four, ...rest] = array; <NGray>// (Desestructuracion: variables a los index) </NGray> <br>
+        <NPurp>let</NPurp> [one, , three, four, <NAqua>...</NAqua>rest] = array; <NGray>// (Desestructuracion: convertir a variables) </NGray> <br>
         <NGray>string =</NGray> array.<NBlue>join</NBlue>(" "); <NGray>// (convertir en string y separar por " ")</NGray> <br>
         <NGray>array =</NGray> <NObj>Array</NObj>.<NBlue>from</NBlue>("<NGreen>ABC</NGreen>"); <NGray>// ["A", "B", "C"];</NGray> <br>
         <NGray>array =</NGray> array.<NBlue>flat</NBlue>(); <NGray>// (unir todos los sub-arrays)</NGray> <br>
-        <!-- ------------------------------------- --> <hr> <!-- ------------------------------------- -->
-        
-        <b>Buscar</b>: <br>
-        <NGray>int =</NGray> array.<NBlue>findIndex</NBlue>(elem => elem == "<NGreen>B</NGreen>"); <NGray>// 1 (buscar 1ro)</NGray> <br>
-        <NGray>int =</NGray> array.<NBlue>indexOf</NBlue>("<NGreen>X</NGreen>"); <NGray>// -1 (buscar 1ro)</NGray> <br>
-        <NGray>string =</NGray> array.<NBlue>at</NBlue>(-<NOrg>2</NOrg>); <NGray>// (extraer por index)</NGray> <br>
-        <NGray>string =</NGray> array.<NBlue>pop</NBlue>(); <NGray>// (extrae/elimina último)</NGray> <br>
-        <NGray>string =</NGray> array.<NBlue>push</NBlue>("<NGreen>C</NGreen>"); <NGray>// (agregar último y return length)</NGray> <br>
-        <NGray>string =</NGray> array.<NBlue>find</NBlue>(elem => elem == "<NGreen>A</NGreen>"); <NGray>// A (buscar 1ro)</NGray> <br>
-        <NGray>array =</NGray> array.<NBlue>slice</NBlue>(<NOrg>1, 3</NOrg>); <NGray>// [B, C]  (leer desde index(1-2 args) )</NGray> <br>
-        <NGray>array =</NGray> array.<NBlue>filter</NBlue>(elem => elem == "<NGreen>C</NGreen>"); <NGray>// [C, C] (buscar todos)</NGray> <br>
         <!-- ------------------------------------- --> <hr> <!-- ------------------------------------- -->
 
         <b>Modificar</b>: <br>
@@ -247,28 +237,35 @@
         array.<NBlue>fill</NBlue>("<NGreen>x</NGreen>", <NOrg>0</NOrg>, <NOrg>3</NOrg>); <NGray>// x, x, x, C... (llenar a partir de un index, cantidad) </NGray> <br>
         <NGray>[←]</NGray> array.<NBlue>reverse</NBlue>(); <NGray>// (1ro es último, y viceversa)</NGray>  <br>
         <NGray>A-Z</NGray> array.<NBlue>sort</NBlue>(); <NGray>// (odenar asc A-Z) <a href="../Imgs/arraySort.png">Leer más...</a></NGray> <br>
-      </div><br>
+      </div>
+      <!-- ------------------------------------- --> <br> <!-- ------------------------------------- -->
+      <div class="cod">        
+        <b>Buscar</b>: <br>
+        <NGray>int =</NGray> array.<NBlue>findIndex</NBlue>(elem => elem == "<NGreen>B</NGreen>"); <NGray>// 1 (buscar 1ro)</NGray> <br>
+        <NGray>int =</NGray> array.<NBlue>indexOf</NBlue>("<NGreen>X</NGreen>"); <NGray>// -1 (buscar 1ro)</NGray> <br>
+        <NGray>string =</NGray> array.<NBlue>at</NBlue>(-<NOrg>2</NOrg>); <NGray>// (extraer por index)</NGray> <br>
+        <NGray>string =</NGray> array.<NBlue>pop</NBlue>(); <NGray>// (extrae/elimina último)</NGray> <br>
+        <NGray>string =</NGray> array.<NBlue>push</NBlue>("<NGreen>C</NGreen>"); <NGray>// (agregar último y return length)</NGray> <br>
+        <NGray>string =</NGray> array.<NBlue>find</NBlue>(elem => elem == "<NGreen>A</NGreen>"); <NGray>// A (buscar 1ro)</NGray> <br>
+        <NGray>array =</NGray> array.<NBlue>slice</NBlue>(<NOrg>1, 3</NOrg>); <NGray>// [B, C]  (leer desde index(1-2 args) )</NGray> <br>
+        <NGray>array =</NGray> array.<NBlue>filter</NBlue>(elem => elem == "<NGreen>C</NGreen>"); <NGray>// [C, C] (buscar todos)</NGray> <br>
+        <!-- ------------------------------------- --> <hr> <!-- ------------------------------------- -->
 
-      
-      <b>Recorrer</b>: <br>
-      <div class="cod">
+        <b>Recorrer</b>: <br>
         <!-- ["A", "B", "C"]; -->
         <NPurp>let</NPurp> array = ["<NGreen>A</NGreen>", "<NGreen>B</NGreen>", "<NGreen>C</NGreen>"]; <br>
         array.<NBlue>map</NBlue>((elem, i) <NPurp>=></NPurp> i + elem); <NGray>// ["0A", "1B", "2C"] <b>(recorrer arrays + return)</b> </NGray> <br>
-        array.<NBlue>forEach</NBlue>((elem, i) <NPurp>=></NPurp> elem + i); <NGray>// ["A0", "B1", "C2"] <b>(recorrer arrays)</b> </NGray> 
-        <hr>
+        array.<NBlue>forEach</NBlue>((elem, i) <NPurp>=></NPurp> elem + i); <NGray>// ["A0", "B1", "C2"] <b>(recorrer arrays)</b> </NGray> <br>
+
         <!-- [1, 2, 3, 4] -->
         <NPurp>let</NPurp> array = [<NOrg>1</NOrg>, <NOrg>2</NOrg>, <NOrg>3</NOrg>, <NOrg>4</NOrg>]; <br>
-        <NGray>bool =</NGray> array.<NBlue>some</NBlue>(elem => elem < <NOrg>2</NOrg>); <NGray>// true (check si alguno cumple la condición)</NGray> <br>
-        <NGray>bool =</NGray> array.<NBlue>every</NBlue>(elem => elem < <NOrg>2</NOrg>); <NGray>// false (check si todos cumplen la condición)</NGray> <br>
-        <NGray>int =</NGray> array.<NBlue>reduce</NBlue>((acumulado, actual) <NPurp>=></NPurp> acumulado + actual); <NGray>// 10 (unir anterior(acumulados) con el siguiente) </NGray> <br>
-        <hr> 
+        <NGray>bool =</NGray> array.<NBlue>some</NBlue>(elem <NPurp>=></NPurp> elem < <NOrg>2</NOrg>); <NGray>// true (check si alguno cumple la condición)</NGray> <br>
+        <NGray>bool =</NGray> array.<NBlue>every</NBlue>(elem <NPurp>=></NPurp> elem < <NOrg>2</NOrg>); <NGray>// false (check si todos cumplen la condición)</NGray> <br>
+        <NGray>int =</NGray> array.<NBlue>reduce</NBlue>((total, this) <NPurp>=></NPurp> total <NAqua>+</NAqua> this); <NGray>// 10 (unir anterior(total) con el sig) </NGray> <br>
+
         <!-- Extraer de DOM y ponerlos en un Array -->
-        <NGray>// Extraer de DOM y ponerlos en un Array</NGray> <br>
-        <NPurp>const</NPurp> elementos = <NObj>Array</NObj>.<NBlue>from</NBlue>(document.<NBlue>querySelectorAll</NBlue>("<NGreen>.dias p</NGreen>"));<br>
-        <NPurp>let</NPurp> array = elementos.<NBlue>map</NBlue>(dia <NPurp>=></NPurp> dia.textContent); <br>
-        console.<NBlue>log</NBlue>(array); <NGray>// ["L", "M", "M" ...] </NGray>
-      </div> <br>
+        <NGray>array =</NGray> <NObj>Array</NObj>.<NBlue>from</NBlue>(document.<NBlue>querySelectorAll</NBlue>("<NGreen>.dias p</NGreen>")).<NBlue>map</NBlue>(dia <NPurp>=></NPurp> dia.textContent); <NGray>// de DOM a un ARRAY (contenido)</NGray> <br>
+      </div><br>
 
       <b>Crear un metodo (prototype)</b>:
       <div class="cod columnas">
@@ -599,7 +596,7 @@
     <fieldset> <!-- Func Generadora -->
       <legend> <span onclick="onclick_ShowCont('_generadora')">Func Generadora</span> </legend>
       la funcion generadora puede devolver varios valores.
-      <div class="cod" id="_generadora" style="display: block;">
+      <div class="cod" id="_generadora" style="display: none;">
         <NPurp>function</NPurp><NAqua>*</NAqua> <NBlue>funcGeneradora</NBlue><NObj>() {</NObj> <br>
           &nbsp; <NAqua>yield</NAqua> <NOrg>1</NOrg>; <br>
           &nbsp; <NAqua>yield</NAqua> <NOrg>2</NOrg>; <br>
@@ -750,6 +747,26 @@
           p.<u>setName</u> = "<NGreen>Nico</NGreen>"; <NGray>// (Ahora se llama Nico).</NGray> <br>
           console.<NBlue>log</NBlue>(p.getName); <NGray>// Nombre: Nico.</NGray> <br>
         </div>
+        <details> <!-- Static function -->
+          <summary>Static function</summary>
+          <div class="cod">
+            <NPurp>class</NPurp> <NObj>Article</NObj> { <br>
+              &nbsp; <NPurp>constructor</NPurp>(title, date) { <br>
+                <NTab></NTab>&nbsp; <NAqua>this</NAqua>.title = title; <br>
+                <NTab></NTab>&nbsp; <NAqua>this</NAqua>.date = date; <br>
+              &nbsp; } <br> <br>
+
+              &nbsp; <NGray>// usar una funcion sin crear una instancia</NGray> <br>
+              &nbsp; <NPurp>static</NPurp> <NBlue>createTodays</NBlue>() { <br>
+                <NTab></NTab>&nbsp; <NAqua>return new this</NAqua>("<NGreen>resumen</NGreen>", <NAqua>new</NAqua> <NObj>Date</NObj>()); <NGray>// this => Article</NGray> <br>
+              &nbsp; } <br>
+            } <br> <br>
+
+            <NPurp>let</NPurp> article = <NObj>Article</NObj>.<NBlue>createTodays</NBlue>(); <br> <br>
+
+            <NBlue>alert</NBlue>( article.title ); <NGray>// resumen</NGray> <br>
+          </div>
+        </details>
       </fieldset>
     </div>
     
@@ -1748,37 +1765,11 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
       </style>
     </fieldset>
 
-    <!-- ES Modules -->
+    <!-- Modulos js -->
     <div class="flex">
-      <fieldset class="w50">
-        <legend> ES Modules </legend>
-        Import y Export <br>
-        <div class="cod html">
-          &lt;<NRed>script</NRed> <NPurp>src</NPurp>="<NGreen>index.js</NGreen>" <u>
-            <NPurp>type</NPurp>="<NGreen>module</NGreen>"
-          </u> > &lt;/<NRed>script</NRed>> <br>
-        </div>
-        <div class="cod">
-          <NGray>// exportar default + variables, funciones, clases, etc</NGray> <br>
-          <NAqua>export</NAqua> <NPurp>const</NPurp> variable = <NOrg>25</NOrg>; <br><br>
-      
-          <NGray>// exportar por defecto</NGray> <br>
-          <NAqua>export default</NAqua> { <br>
-            &nbsp; booleano: <NRed>true</NRed>, <br>
-            &nbsp; name <NGray>// exportar funciones / variables.</NGray> <br>
-          } <br>
-        </div>
-        <div class="cod">
-          <NGray>// importar default + variables.</NGray> <br>
-          <NAqua>import</NAqua> defaultVar, <NObj>{</NObj> myFunc <NAqua>as</NAqua> nuevoNombre, <br> variable<NObj>}</NObj> <NAqua>from</NAqua> "<NGreen>./export.js</NGreen>";
-        </div>
-        <a href="https://www.youtube.com/watch?v=0t-Le4kdaMg&ab_channel=FaztCode">link video...</a>
-        <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/export">link pag...</a>
-      </fieldset>
-
       <!-- CommonJS Module -->
       <fieldset class="w50"> 
-        <legend> CommonJS Module </legend>
+        <legend> CommonJS Module (antes) </legend>
         <div class="cod">
           <NPurp>function</NPurp> <NBlue>suma</NBlue>(a, b) { <br> 
             <NTab></NTab> <NAqua>return</NAqua> a + b <br> } <br><br>
@@ -1792,6 +1783,29 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
           console.<NBlue>log</NBlue>( <u> <NBlue>suma</NBlue>(1, 2) </u> ); <NGray>// (usar)</NGray>
 
         </div>
+      </fieldset>
+
+      <!-- ES Modules -->
+      <fieldset class="w50">
+        <legend> ES Modules (ahora) </legend>
+        <div class="cod html">
+          &lt;<NRed>script</NRed> <NPurp>src</NPurp>="<NGreen>index.js</NGreen>" <u>
+            <NPurp>type</NPurp>="<NGreen>module</NGreen>"
+          </u> > &lt;/<NRed>script</NRed>> <br>
+        </div>
+        <div class="cod">
+          <NGray>// exportar variables, funciones, clases, etc...</NGray> <br>
+          <NAqua>export</NAqua> <NPurp>const</NPurp> variable = <NOrg>25</NOrg>; <br><br>
+      
+          <NGray>// exportar por defecto</NGray> <br>
+          <NAqua>export default</NAqua> { a: <NRed>true</NRed>, fname } <NGray>// exportar func, var, etc...</NGray> <br>
+        </div>
+        <div class="cod">
+          <NGray>// importar default + variables.</NGray> <br>
+          <NAqua>import</NAqua> defaultVar, <NObj>{</NObj> myFunc <NAqua>as</NAqua> newName, <br> variable<NObj>}</NObj> <NAqua>from</NAqua> "<NGreen>./export.js</NGreen>";
+        </div>
+        <a href="https://www.youtube.com/watch?v=0t-Le4kdaMg&ab_channel=FaztCode">link video...</a>
+        <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/export">link pag...</a>
       </fieldset>
     </div>
   </section>
@@ -2136,13 +2150,6 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
       </div>
     </fieldset>
   </section>
-
-
-
-<!-- TODO: BORRAR -->
-<script>
-
-</script>
 
 
 

@@ -11,7 +11,7 @@ const index = server_dir;
 const logo = server_dir + "logo.png";
 const imgs_dir = server_dir + "Imgs/";
 const cheat_dir = server_dir + "machetes/";
-const otros_dir = server_dir + "otros/";
+const otros_dir = server_dir + "Otros/";
 
 // Logos
 const logo_25px = '<img src="' + server_dir + 'logo.png" height="20px">';

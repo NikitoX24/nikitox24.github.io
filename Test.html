@@ -16,34 +16,100 @@
 
 
 
+
+
 <script>
-  
-  
 
 
-  // console.log(globalThis);
-  // console.log(window);
+  // Valores Nuevos
+  const valoresObjNuevo = { b:222, c:333, d:444 }
 
+  // Desestructurar los valores del objeto Nuevo
+  const { b, c, d } = valoresObjNuevo // ahora son variables
 
-
-  // funcion generadora
-  function* funcGeneradora() {
-    yield 1;
-    yield 2;
-    yield 3;
+  // Objeto Listo
+  const newObject = {
+    a: 111,
+    b,
+    c,
+    d
   }
 
-  let generadora = funcGeneradora();
-  console.log(generadora.next().value); // 1
-  console.log(generadora.next().value); // 2
+  // console.log("1", newObject);
 
-  
-  for(let value of generator) {
-    alert(value); // 1, luego 2, luego 3
+
+
+  // *********************************************** //
+  // *********************************************** //
+  // *********************************************** //
+
+
+
+  // Valores Nuevos
+  const valoresNuevos = { b:222, c:333, d:444 }
+
+  // Objeto Listo
+  const nuevoObjeto = {
+    a: 111,
+    ...valoresNuevos // convertir a valores sueltos
   }
 
-  
+  // console.log("2", nuevoObjeto)
+
+
+
 </script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+  const Frutas = [ "Manzana", "Naranja", "Pera" ]
+  const Verduras = [ "Tomate", "Lechuga" ]
+
+  class FrutasVerduras {
+    static agregar({ fruta, verdura }) { //? recomendado por si en un futuro queremos pasar parametros que no sean en ese orden
+      if(fruta) {
+        Frutas.push(fruta); // (agregar un item)
+        console.log("se agregó: ", fruta);
+        console.log(Frutas);
+      }
+      if(verdura) {
+        Verduras.push(verdura); // (agregar un item)
+        console.log("se agregó: ", verdura);
+        console.log(Verduras);
+      }
+    }
+
+    // static get({ id })
+  }
+
+  FrutasVerduras.agregar({ fruta:"Pomelo" })
+  console.log( "______________________________" );
+  
+  const fruta = "Mango"
+  FrutasVerduras.agregar({ verdura:"Zanahoria", fruta })
+  console.log( "______________________________" );
+  
+  FrutasVerduras.agregar({ verdura:"Pepino" })
+
+
+
+</script>
+
+
+
+
+
+
 
 
 
