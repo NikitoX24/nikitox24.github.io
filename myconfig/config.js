@@ -236,7 +236,7 @@ else {
       NPurp{ color: rgb(142, 0, 142) }
       NGray{ color: rgba(98, 98, 98, 0.6); }
       NRed{  color: rgb(212, 0, 0);    text-shadow: .2px .2px black; }
-      NAqua{ color: rgb(20, 212, 255);      text-shadow: 0 0 5px rgb(0, 13, 110); }
+      NAqua{ color: rgb(20, 212, 255); text-shadow: 0 0 5px rgb(0, 13, 110); }
       NOrg{  color: rgb(180, 133, 44); text-shadow: .3px .3px rgb(255, 0, 0);}
       NObj{  color: rgb(255, 217, 0);  text-shadow: 0 0 10px rgba(0, 0, 0, 0.461);}
       b{     text-shadow: .5px .5px 12px black; }

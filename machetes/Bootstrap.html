@@ -9,7 +9,7 @@
 </head>
   
 <script> let back_color, shadow1, shadow2; </script>
-<script src="/myconfig/config.js"></script>
+<script src="./myconfig/config.js"></script>
 <div class="navBar cheats"></div>
 
 
@@ -2028,40 +2028,41 @@
 
 
 
-  <p id="screenSize">Screen Size: </p>
-  <script>
-    // window.scrollTo(0, document.body.scrollHeight);
-    // sElem.scrollIntoView();
-
-    const XS = 575;
-    const SM = 576;
-    const MD = 768;
-    const LG = 992;
-    const XL = 1200;
-
-    let screenSize;
-    const sElem = document.querySelector("#screenSize");
-    setInterval(SSS, 1000);
-
-    function SSS() {
-      sElem.innerHTML = "Screen Size: " + screenSize;
-    }
-
-    // <NTab> (espacio)
-    const doubleSpace = "&nbsp &nbsp;";
-    const spaces = document.querySelectorAll("NTab");
-    spaces.forEach(element => {
-      element.innerHTML = doubleSpace;
-    });
-    const spaces2 = document.querySelectorAll("NTab2");
-    spaces2.forEach(element => {
-      element.innerHTML = doubleSpace.repeat();
-    });
-  </script>
-  <script src="Lib-Fram/Bootstrap/js/bootstrap.bundle.min.js"></script>
-  
-  <div class="footer otros"></div>
-  <script src="/myconfig/modules.js" type="module"></script>
 </body>
+
+<p id="screenSize">Screen Size: </p>
+<script>
+  // window.scrollTo(0, document.body.scrollHeight);
+  // sElem.scrollIntoView();
+
+  const XS = 575;
+  const SM = 576;
+  const MD = 768;
+  const LG = 992;
+  const XL = 1200;
+
+  let screenSize;
+  const sElem = document.querySelector("#screenSize");
+  setInterval(SSS, 1000);
+
+  function SSS() {
+    sElem.innerHTML = "Screen Size: " + screenSize;
+  }
+
+  // <NTab> (espacio)
+  const doubleSpace = "&nbsp &nbsp;";
+  const spaces = document.querySelectorAll("NTab");
+  spaces.forEach(element => {
+    element.innerHTML = doubleSpace;
+  });
+  const spaces2 = document.querySelectorAll("NTab2");
+  spaces2.forEach(element => {
+    element.innerHTML = doubleSpace.repeat();
+  });
+</script>
+<script src="Lib-Fram/Bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<div class="footer otros"></div>
+<script src="./myconfig/modules.js" type="module"></script>
 
 </html>
