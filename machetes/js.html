@@ -956,23 +956,25 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
           </table>
         `;
         const __valorHistory = `
-          <tbody><tr>
-            <th>Property/Method</th>
-            <th>Description</th>
-          </tr><tr>
-            <td>back()</td>
-            <td>Loads the previous URL (page) in the history list</td>
-          </tr><tr>
-            <td>forward()</td>
-            <td>Loads the next URL (page) in the history list</td>
-          </tr><tr>
-            <td>go()</td>
-            <td>Loads a specific URL (page) from the history list</td>
+          <table>
+            <tr> <th>Property/Method</th> <th>Description</th> </tr>
+            <tr>
+              <td>back()</td>
+              <td>Loads the previous URL (page) in the history list</td>
             </tr>
-          <tr><td>
-            length</td>
-            <td>Returns the number of URLs (pages) in the history list</td>
-          </tr></tbody>
+            <tr>
+              <td>forward()</td>
+              <td>Loads the next URL (page) in the history list</td>
+            </tr>
+            <tr>
+              <td>go()</td>
+              <td>Loads a specific URL (page) from the history list</td>
+              </tr>
+            <tr>
+              <td>length</td>
+              <td>Returns the number of URLs (pages) in the history list</td>
+            </tr>
+          </table>
         `;
         const __valorLocation = `
           <table>
@@ -1375,32 +1377,22 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
 
       <!-- Evento desde JS -->
       <fieldset class="width100"> 
-      <legend> Evento desde JS </legend>
-        <div class="cod">
-          <NPurp>let</NPurp> <u>elemento</u> = document.<NBlue>getElementById</NBlue>('<NGreen>demo7</NGreen>'); <br><br>
-          <u>elemento</u>.<b><NBlue>event</NBlue></b> = <NPurp>function</NPurp>(){ <br> &nbsp; <NGray>// Codigo...</NGray> <br> }
-        </div>
+      <legend> Evento desde JS </legend>        
+        <b>Crear Evento:</b> <br>
+        <div class="cod"> element.<NBlue>addEventListener</NBlue>("<NGreen><u>evento</u></NGreen>", <NPurp><u>function</u></NPurp>); </div>
+        <b>Borrar Evento:</b> <br>
+        <div class="cod"> element.<NBlue>removeEventListener</NBlue>("<NGreen><u>evento</u></NGreen>", <NPurp>function</NPurp>); </div>
       </fieldset>
     </div>
 
-    <!-- AddEventListener -->
+    <!-- Bubbling & Capturing -->
     <fieldset>
-      <legend> AddEventListener </legend>
-      <!-- Crear Borrar -->
-      <div class="flex">
-        <div>
-          <b>Crear Evento:</b> <br>
-          <div class="cod"> element.<NBlue>addEventListener</NBlue>("<NGreen><u>evento</u></NGreen>", <NPurp><u>function</u></NPurp>); </div>
-          <b>Borrar Evento:</b> <br>
-          <div class="cod"> element.<NBlue>removeEventListener</NBlue>("<NGreen>evento</NGreen>", <NPurp>function</NPurp>); </div>
-        </div>
-          
-        <div>
-          capturing: <NGray>// primero el padre.</NGray> <br>
-          <div class="cod"> elem.<NBlue>addEventListener</NBlue>("<NGreen>event</NGreen>", <NBlue>myFunc</NBlue>, <NRed>true</NRed>); </div>
-          bubbling: <NGray>// primero el hijo.</NGray> <br>
-          <div class="cod"> elem.<NBlue>addEventListener</NBlue>("<NGreen>event</NGreen>", <NBlue>myFunc</NBlue>, <NRed>false</NRed>); </div>
-        </div>
+      <legend><span onclick="onclick_ShowCont('_IDEventosBC')"> Bubbling & Capturing </span></legend>
+      <div style="display: none;" id="_IDEventosBC">
+        capturing: <NGray>// primero el padre.</NGray> <br>
+        <div class="cod"> elem.<NBlue>addEventListener</NBlue>("<NGreen>event</NGreen>", <NBlue>myFunc</NBlue>, <NRed>true</NRed>); </div>
+        bubbling: <NGray>// primero el hijo.</NGray> <br>
+        <div class="cod"> elem.<NBlue>addEventListener</NBlue>("<NGreen>event</NGreen>", <NBlue>myFunc</NBlue>, <NRed>false</NRed>); </div>
       </div>
     </fieldset>
       
@@ -1790,8 +1782,7 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
         <legend> ES Modules (ahora) </legend>
         <div class="cod html">
           &lt;<NRed>script</NRed> <NPurp>src</NPurp>="<NGreen>index.js</NGreen>" <u>
-            <NPurp>type</NPurp>="<NGreen>module</NGreen>"
-          </u> > &lt;/<NRed>script</NRed>> <br>
+            <NPurp>type</NPurp>="<NGreen>module</NGreen>"</u>> &lt;/<NRed>script</NRed>> <br>
         </div>
         <div class="cod">
           <NGray>// exportar variables, funciones, clases, etc...</NGray> <br>
@@ -1801,7 +1792,7 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
           <NAqua>export default</NAqua> { a: <NRed>true</NRed>, fname } <NGray>// exportar func, var, etc...</NGray> <br>
         </div>
         <div class="cod">
-          <NGray>// importar default + variables.</NGray> <br>
+          <NGray>// importar desde otro js.</NGray> <br>
           <NAqua>import</NAqua> defaultVar, <NObj>{</NObj> myFunc <NAqua>as</NAqua> newName, <br> variable<NObj>}</NObj> <NAqua>from</NAqua> "<NGreen>./export.js</NGreen>";
         </div>
         <a href="https://www.youtube.com/watch?v=0t-Le4kdaMg&ab_channel=FaztCode">link video...</a>
@@ -2209,7 +2200,7 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
     autoChangeVal("_trimStart",   [["trim"], ["trimStart"], ["trimEnd"]], ["","",""]);
     autoChangeVal("_toUpperCase", [["toUpperCase"], ["toLowerCase"]],     ["ABC", "abc"]);
     autoChangeVal("_padStart",    [["padStart"], ["padEnd"]],             ["",""],           params(2, "-"));
-    autoChangeVal("_starstWith",  [["starstWith"], ["endsWith"]],         ["false", "true"], params("Videos"));
+    autoChangeVal("_starstWith",  [["startsWith"], ["endsWith"]],         ["false", "true"], params("Videos"));
     
 
     autoChangeSimpleVal("_fetch", ["archivo.php", "archivo.json"]);

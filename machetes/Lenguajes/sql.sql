@@ -55,7 +55,7 @@ ALTER TABLE followers ADD CONSTRAINT check_follower_id CHECK (follower_id != fol
 
 
 ---------------------------------------------
--- DML (Lenguaje de Manipulacion de Datos) --
+-- DML (Lenguaje de Manipulación de Datos) --
 ---------------------------------------------
 
 -----------------------------------------------------------------------------
