@@ -33,17 +33,16 @@
 </style>
 
 <body>
-  <!-- Variables -->
-  <section id="Variables y Arrays">
+  <!-- Basic -->
+  <section id="Cosas Basicas">
     <fieldset> <!-- Variable -->
       <legend> Variables </legend>
-
       <div class="columnas">
         Variable
         <div class="cod">
           &lt;?php <br>
-          &nbsp; $<NVar>name</NVar> = "<NGreen>John</NGreen>" <br>
-          &nbsp; <NBlue>echo</NBlue> $<NVar>name</NVar>; <br>
+          &nbsp; $<NVar>name</NVar> = "<NGreen>John</NGreen>"; <br>
+          &nbsp; <NBlue>echo</NBlue> "<NGreen>Hola</NGreen> $<NVar>name</NVar>"; <br>
           ?>
         </div><br>
         Variable como Variable
@@ -57,14 +56,6 @@
         <div class="cod">
           <NBlue>define</NBlue>("<NGreen>Mensaje</NGreen>", "<NGreen>Hola Mundo!</NGreen>"); <br>
           <NBlue>echo</NBlue> <NVar>Mensaje</NVar>;
-        </div>
-        Variable en Funciones
-        <div class="cod">
-          $<NVar>name</NVar> = "<NGreen>David</NGreen>" <br>
-          <NGreen class="purp">function</NGreen> <NBlue>getName</NBlue>() { <br>
-            &nbsp; <NGreen class="purp">global</NGreen> $<NVar>name</NVar>; <br>
-            &nbsp; <NBlue>echo</NBlue> $<NVar>name</NVar>; <br> } <br>
-          <NBlue>getName</NBlue>(); <NGray> // "David"</NGray>
         </div>
       </div> <hr>
 
@@ -81,24 +72,60 @@
         <div class="width100">
           Convertir:
           <div class="cod wAuto">
-            $<NVar>a</NVar> = <NOrg>1.654</NOrg>; <br>
-            $<NVar>b</NVar> = (<NPurp>int</NPurp>)$<NVar>a</NVar>;
+            <NBlue>echo</NBlue> (<NPurp>int</NPurp>)<NOrg>1.654</NOrg>; <NGray>// 1</NGray> <br>
+            <NBlue>echo</NBlue> <NBlue>intval</NBlue>("<NGreen>1.654asd</NGreen>"); <NGray>// 1</NGray> <br>
+            <NBlue>echo</NBlue> <NBlue>floatval</NBlue>("<NGreen>1.654asd</NGreen>"); <NGray>// 1.654</NGray> <br>
           </div>
         </div>
+      </div>
+      
+      <hr>
+
+      Funciones de Control.
+      <div class="cod">
+        <NBlue>isset</NBlue>($<nvar>var</nvar>); <NGray>// verifica si la variable está declarada.</NGray> <br>
+        <NBlue>empty</NBlue>($<nvar>var</nvar>); <NGray>// verifica si la variable está vacia.</NGray> <br>
+        <NBlue>boolval</NBlue>($<nvar>var</nvar>); <NGray>// verifica si la variable está en true o false.</NGray> <br>
+        <NBlue>is_null/is_integer/is_double/is_string/is_array</NBlue>($<nvar>var</nvar>); <NGray>// verifica si la variable...</NGray> <br>
+      </div>
+      
+      Funciones String.
+      <div class="cod columnas">
+        <NBlue>strtoupper</NBlue>($<NVar>var</NVar>); <NGray>// MAYUSC.</NGray> <br>
+        <NBlue>strtolower</NBlue>($<NVar>var</NVar>); <NGray>// minusc.</NGray> <br>
+        <NBlue>ucfrirst</NBlue>($<NVar>var</NVar>); <NGray>// Capitalizar.</NGray> <br>
+        <NBlue>ucwords</NBlue>($<NVar>var</NVar>); <NGray>// Capitalizar Cada Palabra.</NGray> <br>
+        <NBlue>strlen</NBlue>($<NVar>var</NVar>); <NGray>// 15.</NGray> <br>
+        <NBlue>strrev</NBlue>($<NVar>var</NVar>); <NGray>// Reverse.</NGray> <br>
+        <NBlue>trim</NBlue>($<NVar>var</NVar>); <NGray>// Quitar espacios.</NGray> <br>
+        <NBlue>str_replace</NBlue>("<NGreen>antes</NGreen>", "<NGreen>despues</NGreen>", $<NVar>var</NVar>); <NGray>// Reemplazar.</NGray> <br>
+        <NBlue>strpos</NBlue>($<NVar>var</NVar>, "<NGreen>mundo</NGreen>"); <NGray>// 5. (indexOf)</NGray> <br>
+        <NBlue>substr</NBlue>($<NVar>var</NVar>, "<NGreen>mundo</NGreen>"); <NGray>// Recortar palabra.</NGray> <br>
+        <NBlue>explode</NBlue>("<NGreen>,</NGreen>", $<NVar>string</NVar>); <NGray>// String => Array.</NGray> <br>
+        <NBlue>implode</NBlue>(" ", $<NVar>array</NVar>); <NGray>// Array => String.</NGray> <br>
+        <NBlue>json_encode</NBlue>($<NVar>var</NVar>); <NGray>// Convertir en Json.</NGray> <br>
+        <NBlue>json_decode</NBlue>($<NVar>var</NVar>); <NGray>// Convertir en Objeto.</NGray> <br>
       </div>
     </fieldset>
   
     <fieldset> <!-- Arrays -->
       <legend> Arrays </legend>
-      Array
       <div class="flex">
-        <div class="cod">
-          $<NVar>Personas</NVar> = <NBlue>array</NBlue>("<NGreen>David</NGreen>" => "<NGreen>27</NGreen>"); <br>
-          $<NVar>Personas</NVar>["<NGreen>David</NGreen>"] = "<NGreen>28</NGreen>";
+        <div class="w100">
+          Array
+          <div class="cod wAuto">
+            $<NVar>dias</NVar> = <NBlue>array</NBlue>(); <NGray>// Crear</NGray> <br>
+            $<NVar>dias</NVar><NObj>[]</NObj> = "<NGreen>Martes</NGreen>"; <NGray>// Agregar</NGray> <br>
+            <NBlue>count</NBlue>($<NVar>dia</NVar>); <NGray>// Cantidad: 2</NGray> <br>
+          </div>
         </div>
-        <div class="cod">
-          $<NVar>dia</NVar><NObj>[]</NObj> = "<NGreen>Lunes</NGreen>"; <br>
-          $<NVar>dia</NVar><NObj>[]</NObj> = "<NGreen>Martes</NGreen>";
+        <div class="w100">
+          Objeto
+          <div class="cod wAuto">
+            $<NVar>Personas</NVar> = <NBlue>array</NBlue>("<NGreen>David</NGreen>" => "<NGreen>27</NGreen>"); <br>
+            $<NVar>Personas</NVar>["<NGreen>David</NGreen>"] = "<NGreen>28</NGreen>"; <br>
+            <NBlue>echo</NBlue> $<NVar>Personas</NVar>["<NGreen>David</NGreen>"]; <NGray>// 28</NGray> <br>
+          </div>
         </div>
       </div> <br>
 
@@ -122,6 +149,59 @@
         </div>
       </div>
     </fieldset>
+
+    <fieldset class="flex"> <!-- condicionales -->
+      <legend> Condicionales </legend>
+      <div class="cod">
+        if (<NVar>condition</NVar>) { <NGray>// código</NGray> <br>
+        } elseif (<NVar>condition</NVar>) { <NGray>// código</NGray> <br>
+        } else { <NGray>// código</NGray> } <br> <br>
+        $<NVar>var</NVar> = <NVar>cond</NVar> ? <NVar>expr1</NVar> : <NVar>expr2</NVar>;
+      </div>
+
+      <div class="cod">
+        switch ($<NVar>var</NVar>) { <br>
+          &nbsp; case <NOrg>1</NOrg>: <NGray>// código</NGray> <br>
+            <NTab></NTab> break; <br>
+          &nbsp; default: <NGray>// código</NGray> <br>
+        }
+      </div>
+    </fieldset>
+
+    <fieldset class="flex"> <!-- bucles -->
+      <legend> Bucles </legend>
+      <div class="cod">
+        for ($<NVar>i</NVar> = <NOrg>1</NOrg>; $<NVar>i</NVar> <= <NOrg>10</NOrg>; $<NVar>i</NVar>++) { <br>
+          &nbsp; <NBlue>echo</NBlue> $<NVar>i</NVar>; <br>
+        }
+      </div>
+
+      <div class="cod">
+        foreach ($<NVar>array</NVar> as $<NVar>value</NVar>) { <br>
+          <NGray>// cógido</NGray> <br>
+        } <br>
+      </div>
+    </fieldset>
+    
+    <fieldset> <!-- Funciones -->
+      <legend> Funciones </legend>
+      <div class="flex">
+        <div class="cod w25">
+          $<NVar>name</NVar> = "<NGreen>David</NGreen>"; <br>
+          <NPurp>function</NPurp> <NBlue>myFunc</NBlue><NObj>() { </NObj> <br>
+            &nbsp; <NPurp>global</NPurp> $<NVar>name</NVar>; <br>
+            &nbsp; <NBlue>echo</NBlue> "<NGreen>hola</NGreen> $<NVar>name</NVar>"; <br>
+          <NObj> } </NObj> <br>
+          <NBlue>myFunc</NBlue>();
+        </div>
+        <div class="cod w75">
+          <NGray>Funciones de fechas:</NGray> <br><br>
+          <NBlue>checkdate</NBlue>(_, _, _); <NGray>// verificar si es correcta la fecha.</NGray> <br>
+          <NBlue>date</NBlue>('y - m- d'); <NGray>// Devolver fecha/hora.(L: dia, h: hora ... etc.)</NGray> <br>
+          <NBlue>getdate</NBlue>('year'); <NGray>// Devolver fecha/hora.(seconds, minutes, hours, mday ... etc)</NGray>
+        </div>
+      </div>
+    </fieldset>
   </section>
 
   <!-- Variables Predefinidas -->
@@ -130,69 +210,26 @@
       <legend>$_Server</legend>
       <div class="flex">
         <div class="cod">
-          <NBlue>echo</NBlue> $<NVar>_SERVER</NVar>["<NGreen>SCRIPT_NAME</NGreen>"]; <br>
+          <NBlue>echo</NBlue> $<NVar>_SERVER</NVar>["<NGreen>HTTP_HOST</NGreen>"]; <NGray>// localhost</NGray> <br>
+          <NBlue>echo</NBlue> $<NVar>_SERVER</NVar>["<NGreen>SCRIPT_NAME</NGreen>"]; <NGray>// carpeta/name.php</NGray> <br>
         </div>
         <div class="cod">
-          <NBlue>echo</NBlue> $<NVar>_SERVER</NVar>["<NGreen>HTTP_HOST</NGreen>"]; <br>
+          <NBlue>echo</NBlue> $<NVar>_SERVER</NVar>["<NGreen>REQUEST_METHOD</NGreen>"]; <NGray>// GET / POST...</NGray> <br>
         </div>
       </div>
     </fieldset>
 
     <fieldset> <!-- $_POST $_GET -->
-      <legend>$_POST (Encriptado) - $_GET (URL)</legend>
+      <legend>$_GET - $_POST </legend>
       <!-- $_POST (Mostrar Encriptado) - $_GET (Mostrar en el URL) -->
-      <div class="fWrap">
-        <div class="flex">
-          <div class="ej width100">
-            <form action="Php/login.php" method="post">
-              Usuario: <input type="text" name="user" /> <br>
-              Contraseña: <input type="text" name="password" /> <br><br>
-              <input type="submit" name="submit" value="Submit" />
-            </form>
-          </div>
-          <div class="cod width100">
-            &lt;<NRed>form</NRed> <NPurp>action</NPurp>="<NGreen>php.php</NGreen>" <NPurp>method</NPurp>="<NGreen><u>post</u></NGreen>"> <br>
-              &nbsp; <NVar>Usuario</NVar>: &lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>text</NGreen>" <NPurp>name</NPurp>="<NGreen>user</NGreen>"/> <br>
-              &nbsp; <NVar>Contraseña</NVar>: &lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>password</NGreen>" <NPurp>name</NPurp>="<NGreen>password</NGreen>"/> <br>
-              &nbsp; &lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>submit</NGreen>" <NPurp>name</NPurp>="<NGreen>submit</NGreen>" <NPurp>value</NPurp>="<NGreen>Submit</NGreen>"/> <br>
-            &lt;/<NRed>form</NRed>> <hr>
-            &lt;<NRed>a</NRed> <NPurp>href=</NPurp>"<NGreen>php.php?myVariable='123'</NGreen>"><NVar>Ej GET</NVar>&lt;/<NRed>a</NRed>>
-          </div>
-        </div> <br>
-        (php.php) <br>
+      <div class="flex">
         <div class="cod">
-          $<NVar>myVar</NVar> = $<NVar>_GET</NVar>["<NGreen>myVariable</NGreen>"]; <NGray>//Ej GET</NGray> <hr>
-          $<NVar>user</NVar> = "<NGreen>Nico</NGreen>"; <NGray>// Usar MySQL</NGray> <br>
-          $<NVar>password</NVar> = "<NGreen>123</NGreen>"; <br><br>
-      
-          if($<NVar>_POST</NVar>['<NGreen>user</NGreen>']==$<NVar>user</NVar> && $<NVar>_POST</NVar>['<NGreen>password</NGreen>']==$<NVar>password</NVar>) { <br>
-            &nbsp; <NBlue>session_start</NBlue>(); <br>
-            &nbsp; $_<NVar>SESSION</NVar>['<NGreen>usuario</NGreen>'] = "<NGreen>Nico Pasino</NGreen>"; <br>
-            &nbsp; $_<NVar>SESSION</NVar>["<NGreen>pais</NGreen>"] = "<NGreen>Argentina</NGreen>"; <br>
-            &nbsp; <NBlue>header</NBlue>('<NGreen>location: cuenta.php</NGreen>'); <NGray>//Enviar a otra pag.</NGray> <br>
-          } <br>
-          else { <br>
-            &nbsp; <NBlue>echo</NBlue> "<NGreen>USUARIO o CONTRASEÑA incorrecta.</NGreen>"; <br>
-            &nbsp; <NBlue>echo</NBlue> "<NGreen>&lt;a href='index.php'> INTENTAR NUEVAMENTE &lt;/a></NGreen>"; <br>
-          }
-        </div> <br>
-        <div class="flex">
-          <div class="cod">
-            <NGray>(cuenta.php)</NGray> <br>
-            <NBlue>session_start</NBlue>(); <br>
-      
-            <NBlue>echo</NBlue> "<NGreen>Bienvenido</NGreen> ".$<NVar>_SESSION</NVar>["<NGreen>usuario</NGreen>"]; <br>
-            <NBlue>echo</NBlue> "<NGreen>Su pais es:</NGreen> ".$<NVar>_SESSION</NVar>["<NGreen>pais</NGreen>"]; <br>
-            <NBlue>echo</NBlue> "<NGreen>&lt;a href='cerrarSesion.php'> Cerrar Sesion &lt;/a></NGreen>";
-          </div> <br>
-          <div class="cod">
-            <NGray>(cerrarSesion.php)</NGray> <br>
-            <NBlue>session_start</NBlue>(); <br>
-            <NBlue>session_unset</NBlue>(); <br>
-            <NBlue>session_destroy</NBlue>(); <br>
-            <NBlue>header</NBlue>('<NGreen>location: index.php</NGreen>');
-          </div>
+          $<NVar>myVar</NVar> = $<NVar>_GET</NVar>["<NGreen>myVariable</NGreen>"]; <NGray>//Ej GET</NGray> <br>
+          $<NVar>name</NVar> = $<NVar>_POST</NVar>["<NGreen>name</NGreen>"]; <NGray>//Ej POST (form)</NGray> 
         </div>
+        <div class="cod">
+          $<NVar>datos</NVar> = <NBlue>json_decode</NBlue>(<NBlue>file_get_contents</NBlue><NVar>('<NGreen>php://input</NGreen>'),</NVar> true); <br>
+          $<NVar>name</NVar> = $<NVar>datos</NVar>['<NGreen>name</NGreen>']; <NGray>// Ej POST (json)</NGray> 
       </div>
     </fieldset>
 
@@ -245,24 +282,6 @@
       </div>
     </fieldset>
 
-    <fieldset class="flex"> <!-- Escribir desde form -->
-    <legend> Escribir desde form </legend>
-      <div class="cod width100"> <br>
-        &lt;<NRed>form</NRed> <NPurp>action</NPurp>="<NGreen>php.php</NGreen>" <NPurp>method</NPurp>="<NGreen>POST</NGreen>"> <br>
-          &nbsp; &lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>text</NGreen>" <NPurp>name</NPurp>="<NGreen>asunto</NGreen>"/> <br>
-          &nbsp; &lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>submit</NGreen>" <NPurp>name</NPurp>="<NGreen>submit</NGreen>"/> <br>
-        &lt;/<NRed>form</NRed>>
-      </div> <br>
-      <div class="cod width100">
-        if(<NBlue>isset</NBlue>($<NVar>_POST</NVar>["<NGreen>asunto</NGreen>"])) { <br>
-          &nbsp; $<NVar>text</NVar> = $<NVar>_POST</NVar>["<NGreen>asunto</NGreen>"] . "<NGreen>\r\n</NGreen>"; <br>
-          &nbsp; $<NVar>archivo</NVar> = <NBlue>fopen</NBlue>('<NGreen>texto.txt</NGreen>', '<NGreen>a</NGreen>'); <br>
-          &nbsp; <NBlue>fwrite</NBlue>($<NVar>archivo</NVar>, $<NVar>text</NVar>); <br>
-          &nbsp; <NBlue>fclose</NBlue>($<NVar>archivo</NVar>); <br>
-        }
-      </div>
-    </fieldset>
-
     <fieldset> <!-- Usar archivos php -->
     <legend> Usar archivos php como bloques de código </legend>
       <div class="flex">
@@ -279,40 +298,6 @@
           <<NRed>head</NRed>> <<NRed>title</NRed>><NVar>Título</NVar><<NRed>/title</NRed>> <<NRed>/head</NRed>> <br>
           <<NRed>body</NRed>>
         </div>
-      </div>
-    </fieldset>
-  </section>
-  
-  <!-- Funciones -->
-  <section id="Funciones">
-    <fieldset> <!-- Funcion -->
-      <legend> Funciones </legend>
-      <div class="cod">
-        <NPurp>function</NPurp> <NBlue>myFunc</NBlue><NObj>(){ <br>
-          &nbsp; <NBlue>echo</NBlue> "<NGreen>asd</NGreen>"; <br>
-        } </NObj>
-      </div>
-      Funciones String.
-      <div class="cod">
-        <NBlue>strtoupper</NBlue>($<NVar>var</NVar>); <NGray>// Mayuscula.</NGray> <br>
-        <NBlue>strtolower</NBlue>($<NVar>var</NVar>); <NGray>// Minuscula.</NGray> <br>
-        <NBlue>ucfrirst</NBlue>($<NVar>var</NVar>); <NGray>// Capitalizar.</NGray> <br>
-        <NBlue>ucwords</NBlue>($<NVar>var</NVar>); <NGray>// Capitalizar cada palabra.</NGray> <br>
-        <NBlue>strlen</NBlue>($<NVar>var</NVar>); <NGray>// cantidad de letras.</NGray> <br>
-        <NBlue>strrev</NBlue>($<NVar>var</NVar>); <NGray>// texto de atras para adelante.</NGray> <br>
-        <NBlue>json_encode</NBlue>($<NVar>var</NVar>); <NGray>// convertir en Json.</NGray> <br>
-      </div>
-      Funciones de Fechas.
-      <div class="cod">
-        <NBlue>checkdate</NBlue>(_, _, _); <NGray>// verificar si es correcta la fecha.</NGray> <br>
-        <NBlue>date</NBlue>('y - m- d'); <NGray>// Devolver fecha/hora.(L: dia, h: hora ... etc. investigar.)</NGray> <br>
-        <NBlue>getdate</NBlue>('year'); <NGray>// Devolver fecha/hora.(seconds, minutes, hours, mday ... etc)</NGray>
-      </div>
-      Funciones de Control.
-      <div class="cod">
-        <NBlue>isset</NBlue>(); <NGray>// verifica si la variable está declarada.</NGray> <br>
-        <NBlue>empty</NBlue>(); <NGray>// verifica si la variable está vacia.</NGray> <br>
-        <NBlue>is_null/is_integer/is_double/is_string</NBlue>(); <NGray>// verifica si la variable...</NGray> <br>
       </div>
     </fieldset>
   </section>
@@ -372,32 +357,27 @@
         </div>
       </div> <hr>
 
+      <!-- Interfaces y clases Abstractas -->
       <div class="flex">
         <div class="wAuto">
           Interface (Crear funciones para objetos).
           <div class="cod">
             <NPurp>interface</NPurp> <NObj>MyInterface {</NObj> <br>
-              &nbsp; <NPurp>public function <NBlue>hablar</NBlue>( )</NPurp>; <br> <NObj>}</NObj> <br><br>
-          
+              &nbsp; <NPurp>public function <NBlue>hablar</NBlue>( )</NPurp>; <br> <NObj>}</NObj> <br>
+
             <NPurp>class</NPurp> <NObj>Person</NObj> <NPurp>implements</NPurp> <NObj>MyInterface {</NObj> <br>
               &nbsp; <NPurp>public function <NBlue>hablar</NBlue>( ){</NPurp> <br>
                 &nbsp; &nbsp; <NBlue>echo</NBlue> "<NGreen>Hola!</NGreen>"; <br>
-              <NObj>}</NObj> <br><br>
-              $<NVar>p3</NVar> = <NOrg>new</NOrg> <NObj>Person( )</NObj>; <br>
-              $<NVar>p3</NVar>-><NBlue>hablar</NBlue><NObj>( )</NObj>; <NGray>// Hola!</NGray>
+              &nbsp; <NPurp>}</NPurp> <br> <NObj>}</NObj> <br><br>
+            $<NVar>p3</NVar> = <NOrg>new</NOrg> <NObj>Person( )</NObj>; <br>
+            $<NVar>p3</NVar>-><NBlue>hablar</NBlue><NObj>( )</NObj>; <NGray>// Hola!</NGray>
           </div>
         </div>
         <div class="wAuto">
-          Clases Abstractas (pueden ser heredadas pero no instanciadas). <br>
-          <div class="cod columnas">
+          Abstractas (se hereda pero no instancia). <br>
+          <div class="cod">
             <div><NPurp> abstract class <NObj>Fruit{</NObj> <br>
-              &nbsp; private <NAqua>$<NVar>color</NVar>;</NAqua> <br><br>
-          
-              &nbsp; abstract public function <NBlue>eat</NBlue>( ); <br> <br>
-          
-              &nbsp; public function <NBlue>setColor</NBlue>(<NAqua>$</NAqua><NVar>c</NVar>) { </NPurp><br>
-                &nbsp; &nbsp; $this-><NVar>color</NVar> = $<NVar>c</NVar>; <br>
-              &nbsp; <NPurp>}</NPurp> <br>
+              &nbsp; abstract public function <NBlue>eat</NBlue>( ); <br>
             <NObj>}</NObj></div>
             <div><NPurp>class</NPurp> <NObj>Apple</NObj> <NPurp>extends</NPurp> <NObj>Fruit {</NObj> <br>
               &nbsp; <NPurp>public function <NBlue>eat</NBlue>( ){</NPurp> <br>
@@ -407,37 +387,49 @@
               $<NVar>obj</NVar>-><NBlue>eat</NBlue><NObj>( )</NObj>; <NGray>// Omnomnom</NGray></div>
           </div>
         </div>
+        <div class="wAuto">
+          Static (propiedades y métodos estáticos).
+          <div class="cod">
+            <NPurp>class</NPurp> <NObj>myClass {</NObj> <br>
+              &nbsp; <NPurp>static</NPurp> $<NVar>myProperty</NVar> = <NOrg>42</NOrg>; <br>
+              &nbsp; <NPurp>static function</NPurp> myMethod<NPurp>() {</NPurp> <br>
+                &nbsp; &nbsp; <NBlue>echo</NBlue> <NPurp>self</NPurp>::$<NVar>myProperty</NVar>; <br>
+              &nbsp; <NPurp>}</NPurp> <br>
+            <NObj>}</NObj> <br><br>
+            
+            <NObj>myClass</NObj>::myMethod<NObj>()</NObj>;
+          </div>
+        </div>
       </div> 
 
-      Static (define propiedades estáticas y métodos estáticos).
-      <div class="cod">
-        <NPurp>class</NPurp> <NObj>myClass {</NObj> <br>
-          &nbsp; <NPurp>static</NPurp> $<NVar>myProperty</NVar> = <NOrg>42</NOrg>; <br>
-          &nbsp; <NPurp>static function</NPurp> myMethod<NPurp>() {</NPurp> <br>
-            &nbsp; &nbsp; <NBlue>echo</NBlue> <NPurp>self</NPurp>::$<NVar>myProperty</NVar>; <br>
-          &nbsp; <NPurp>}</NPurp> <br>
-        <NObj>}</NObj> <br><br>
-        
-        <NObj>myClass</NObj>::myMethod<NObj>()</NObj>;
-      </div> <hr>
+      
 
     </fieldset>
   </section>
 
-  <!-- Base de Datos SQL -->
-  <section id="Conexion con la Base de Datos (SQL)">
+  <!-- Conexion con SQL -->
+  <section id="Conexion con la Base de Datos (MySQL)">
     <fieldset> <!-- Conexion y Solicitud -->
       <legend>Conexion y Solicitud</legend>
       <div class="width100">
         <div class="cod wAuto">
-          $<NVar>conexion</NVar> = <NBlue>mysqli_connect</NBlue>("<NGreen>localhost</NGreen>", "<NGreen>root</NGreen>", "", "<NGreen>baseDatos</NGreen>"); <hr>
+          $<NVar>conexion</NVar> = <NBlue>mysqli_connect</NBlue>("<NGreen>localhost</NGreen>", "<NGreen>usuario</NGreen>", "<NGreen>password</NGreen>", "<NGreen>baseDatos</NGreen>"); <hr>
           <!-- mysqli_set_charset($conexion, "utf8"); // opcional ? -->
           $<NVar>solicitud</NVar> = ' <NGray>/* comandos qsl */</NGray> '; <br>
-          $<NVar>resultado</NVar> = <NBlue>mysqli_query</NBlue>($<NVar>conexion</NVar>, $<NVar>solicitud</NVar>);
+          $<NVar>resultado</NVar> = <NBlue>mysqli_query</NBlue>($<NVar>conexion</NVar>, $<NVar>solicitud</NVar>); <br>
+          <hr>
+          $<NVar>fila</NVar> = <NBlue>mysqli_fetch_row</NBlue>($<NVar>resultado</NVar>); <NGray>// $fila[0]</NGray> <br>
+          $<NVar>fila</NVar> = <NBlue>mysqli_fetch_assoc</NBlue>($<NVar>resultado</NVar>); <NGray>// $fila['columna']</NGray> <br>
+          $<NVar>array</NVar> = <NBlue>mysqli_fetch_array</NBlue>($<NVar>resultado</NVar>); <NGray>// $array[0]. $array['columna']</NGray> <br>
+          $<NVar>objeto</NVar> = <NBlue>mysqli_fetch_object</NBlue>($<NVar>resultado</NVar>); <NGray>// $objeto->columna</NGray> <br>
+          <hr>
+          <NGray>// Devolver datos modo seguro.</NGray> <br>
+          <NGray>HTML:</NGray> <NBlue>htmlspecialchars</NBlue>($<NVar>var</NVar>); <br>
+          <NGray>JavaScript:</NGray> <NBlue>json_encode</NBlue>($<NVar>var</NVar>); <br>
+          <NGray>URL:</NGray> <NBlue>urlencode</NBlue>($<NVar>var</NVar>); <br>
         </div>
       </div>
     </fieldset>
-
 
     <fieldset> <!-- Enviar Registro a una Tabla / Registrarse (DML) uno.php -->
     <legend> Enviar un Registro a una Tabla </legend>
@@ -486,7 +478,7 @@
         $<NVar>resultado</NVar> = <NBlue>mysqli_query</NBlue>($<NVar>conexion</NVar>, $<NVar>solicitud</NVar>); <NGray>// resultados de los datos en una variable.</NGray> <br><br>
 
         while($<NVar>fila</NVar> = <NBlue>mysqli_fetch_array</NBlue>($<NVar>resultado</NVar>)){ <br>
-          &nbsp; <NBlue>echo</NBlue> $<NVar>fila</NVar>["<NGreen>Nombre</NGreen>"].", "; <br>
+          &nbsp; <NBlue>echo</NBlue> "$<NVar>fila</NVar>['<NGreen>Nombre</NGreen>']<NGreen>,</NGreen> "; <br>
         }
         <hr>
         $<NVar>solicitud</NVar> = "<NGreen>
@@ -507,7 +499,41 @@
         $<NVar>resultado</NVar> = <NBlue>mysqli_query</NBlue>($<NVar>conexion</NVar>, $<NVar>solicitud</NVar>);
       </div>
     </fieldset>
+
+    <fieldset> <!-- Modo Serugo + Try-Cath -->
+      <legend> Modo Serugo + Try-Cath </legend>
+      <div class="cod">
+        include("<NGreen>Conexion.php</NGreen>"); <br><br>
+
+        try { <br>
+          &nbsp; <NGray>// Preparar la consulta</NGray> <br>
+          &nbsp; $<NVar>stmt</NVar> = $<NVar>conexion</NVar>-><NBlue>prepare</NBlue>("<NGreen>SELECT * FROM tabla WHERE name = ?;</NGreen>"); <br><br>
+
+          &nbsp; <NGray>// Vincular y Ejecutar (Modo seguro)</NGray> <br>
+          &nbsp; $<NVar>stmt</NVar>-><NBlue>bind_param</NBlue>("<NGreen>s</NGreen>", "<NGreen>nico</NGreen>"); <NGray>// string, int, bool, </NGray> <br>
+          &nbsp; $<NVar>stmt</NVar>-><NBlue>execute</NBlue>(); <br>
+          &nbsp; $<NVar>resultado</NVar> = $<NVar>stmt</NVar>-><NBlue>get_result</NBlue>(); <br>
+          &nbsp; $<NVar>stmt</NVar>-><NBlue>close</NBlue>(); <br>
+        } <br>
+        catch ( <NObj>Exception</NObj> $<NVar>e</NVar>) { <br>
+          &nbsp; <NBlue>http_response_code</NBlue>(<NOrg>400</NOrg>); <br>
+          &nbsp; <NBlue>echo json_encode</NBlue>(<NBlue>array</NBlue>("<NGreen>error</NGreen>" => $<NVar>e</NVar>)); <NGray>// (no enviar al usuario!) </NGray> <br>
+        }
+      </div>
+    </fieldset>
+
+    <fieldset> <!-- CORS -->
+      <legend> CORS </legend>
+      <div class="cod">
+        <NBlue>header</NBlue>('<NGreen>Access-Control-Allow-Origin: *</NGreen>'); <br>
+        <NBlue>header</NBlue>('<NGreen>Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept</NGreen>'); <br>
+        <NBlue>header</NBlue>('<NGreen>Access-Control-Allow-Methods: GET, POST, PUT, DELETE</NGreen>'); <br>
+        <NBlue>header</NBlue>('<NGreen>content-type: application/json; charset=utf-8</NGreen>'); <br>
+        <NBlue>header</NBlue>('<NGreen>X-Powered-By:</NGreen>'); <br>
+      </div>
+    </fieldset>
   </section>
+  
   
   <div class="footer otros"></div>
   <script src="/myconfig/modules.js" type="module"></script>
