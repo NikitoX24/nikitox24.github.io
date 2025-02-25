@@ -15,7 +15,7 @@ const otros_dir = server_dir + "Otros/";
 
 // Logos
 const logo_25px = '<img src="' + server_dir + 'logo.png" height="20px">';
-const git_logo  = '<img src="' + imgs_dir   + 'github-logo.png" height="15px">';
+const git_logo  = '<img src="' + imgs_dir   + 'github-logo.png" height="20px">';
 
 // Titulos
 var titulo;

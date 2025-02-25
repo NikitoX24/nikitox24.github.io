@@ -3,10 +3,10 @@ export default /*html*/`
   <div style="height: 50px"></div>
   <div id="navbar">
     <nav><ul>
-      <li><a href="${index}">${logo_25px} INICIO</a></li>
+      <li>${logo_25px}<a href="${index}"> INICIO </a></li>
       <!-- <li><a href="https://nikitox24.github.io"> nikitox24.github.io </a></li> -->
       <!-- <li><a href="https://github.com/NikitoX24/Main">${git_logo} Repositorio </a></li> -->
-      <li><a href="https://github.com/NikitoX24">${git_logo} My GitHub </a></li>
+      <li>${git_logo}<a href="https://github.com/NikitoX24"> My GitHub </a></li>
       <!-- <li><a href="/Test.html"> Testing </a></li> -->
     </ul></nav>
   </div>
@@ -36,21 +36,28 @@ export default /*html*/`
       align-items: center;
       justify-content: space-between;
       margin-top: 12px;
+      height: 40px;
     }
     #navbar nav ul li {
       display: inline-block;
+      display: flex;
+      align-items: center; 
+      justify-content: space-around;
+      width: auto;
+      <!-- background-color: red; -->
     }
     #navbar nav ul li a {
-      padding: 7px;
-      color: #000000;
-      font-size: 15px;
-      font-family: Arial;
+      padding-block: 0px;
+      padding-inline: 10px;
+      color: #FFF;
+      font-size: 16px;
+      font-family: Verdana;
       text-decoration: none;
-      display: block;
     }
-    #navbar li a:hover{
+    #navbar li:hover{
       color: var(--link);
-      transform: scale(1.1);
+      transform: scale(1.05);
+      filter: drop-shadow(2px 2px 5px black);
     }
   </style>
 `;

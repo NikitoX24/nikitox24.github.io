@@ -78,7 +78,7 @@ export let footer = (/*html*/`
       font-size: 1.5em;
       font-weight: 900;
       position: fixed;
-      top: 98%;
+      bottom: 0;
       left: 5px;
     }
     
