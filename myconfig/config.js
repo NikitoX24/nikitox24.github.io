@@ -44,11 +44,11 @@ const bs_dir =   cheat_dir + bootstrap_fname;
 
 
 // OnClick de Cheats.js (iconos cheats)
-function loadHTML() { window.location.href = html_dir }
+/* function loadHTML() { window.location.href = html_dir }
 function loadCSS()  { window.location.href = css_dir }
 function loadJS()   { window.location.href = js_dir }
 function loadPHP()  { window.location.href = php_dir }
-function loadBS()   { window.location.href = bs_dir }
+function loadBS()   { window.location.href = bs_dir } */
 
 // OnClick de Index
 function loadTest()       { window.location.href = "test.html" }
@@ -88,6 +88,8 @@ function getFileName() {
       return t_js;
     case php_fname:
       return t_php;
+    case bootstrap_fname:
+      return t_bs;
     
     default:
       return "Título";
@@ -141,19 +143,19 @@ if (titulo == t_html){
     linkColor = "#F00";
   }
 }
-else if (titulo == t_css || titulo == t_php){
+else if (titulo == t_css || titulo == t_php || titulo == t_bs){
   if (blackTeme) {
     background_color = "rgb(24, 30, 57)";
     back_color = "rgba(0, 0, 255, .05)";
     shadow1 = "rgb(27, 70, 125)";
     shadow2 = "rgba(20, 20, 255, 0.1)";
-    linkColor = "#00F";
+    linkColor = "#FFF";
   }
   else{
     back_color = "rgba(0, 0, 255, .05)";
     shadow1 = "rgba(0, 119, 255, 0.164)";
     shadow2 = "rgba(0, 0, 255, 0.1)";
-    linkColor = "#00F";
+    linkColor = "#FFF";
   }
 }
 else{ // (titulo == t_js || titulo == t_index)

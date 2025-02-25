@@ -3,11 +3,11 @@ export default /*html*/`
   <div style="height: 50px"></div>
   <div id="navbar">
     <nav><ul>
-      <li><a href="${index}">${logo_25px} </a></li>
-      <li><a href="https://nikitox24.github.io"> nikitox24.github.io </a></li>
-      <li><a href="https://github.com/NikitoX24/Main">${git_logo} Repositorio </a></li>
+      <li><a href="${index}">${logo_25px} INICIO</a></li>
+      <!-- <li><a href="https://nikitox24.github.io"> nikitox24.github.io </a></li> -->
+      <!-- <li><a href="https://github.com/NikitoX24/Main">${git_logo} Repositorio </a></li> -->
       <li><a href="https://github.com/NikitoX24">${git_logo} My GitHub </a></li>
-      <li><a href="/Test.html"> Testing </a></li>
+      <!-- <li><a href="/Test.html"> Testing </a></li> -->
     </ul></nav>
   </div>
 
@@ -23,7 +23,7 @@ export default /*html*/`
       position: fixed;
       top: -23px;
       left: 0; 
-      z-index: 1;       
+      z-index: 1;
     }
     #navbar nav ul {
       background: linear-gradient(90deg,
@@ -35,6 +35,7 @@ export default /*html*/`
       display: flex;
       align-items: center;
       justify-content: space-between;
+      margin-top: 12px;
     }
     #navbar nav ul li {
       display: inline-block;

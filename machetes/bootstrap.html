@@ -7,11 +7,10 @@
   <link rel="stylesheet" href="Lib-Fram/Bootstrap/css/bootstrap.min.css">
   <title>BS</title>
 </head>
-  
-<script> let back_color, shadow1, shadow2; </script>
-<script src="./myconfig/config.js"></script>
-<div class="navBar cheats"></div>
 
+<script src="/myconfig/config.js"></script>
+<div class="navBar cheats"></div>
+<br>
 
 <style>
   html {
@@ -21,11 +20,10 @@
   body {
     max-width: 90%;
     margin: auto;
+    /* color: rgb(210, 210, 210); */
   }
 
-  h1,
-  h3,
-  h4 {
+  h1, h3, h4 {
     text-align: center;
     text-decoration: underline;
   }
@@ -91,14 +89,17 @@
 
   .bordeBase {
     background-color: white;
+    color: gray;
   }
 
   .borde1 {
     background-color: aquamarine;
+    color: gray;
   }
 
   .borde2 {
     background-color: olivedrab;
+    color: white;
   }
 
   .borde3 {
@@ -110,7 +111,21 @@
   }
 </style>
 
+<br>
 <body>
+  <div class="section">
+    <h3> Instalación </h3>
+    <div class="cod">
+      <span>
+        &lt;<NRed>link</NRed> <NPurp> href</NPurp>="<NGreen>https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css</NGreen>" <NPurp>rel</NPurp>="<NGreen>stylesheet</NGreen>" <NPurp>integrity</NPurp>="<NGreen>sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH</NGreen>" <NPurp>crossorigin</NPurp>="<NGreen>anonymous</NGreen>">
+      </span> <br>
+
+      <span>
+        &lt;<NRed>script</NRed> <NPurp> src</NPurp>="<NGreen>https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js</NGreen>" <NPurp>integrity</NPurp>="<NGreen>sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz</NGreen>" <NPurp>crossorigin</NPurp>="<NGreen>anonymous</NGreen>">&lt;<NRed>/script</NRed>>
+      </span>
+    </div>
+
+  </div>
   <!-- Container -->
   <div class="section">
     <h3> Container </h3>
@@ -378,7 +393,7 @@
       <div class="container">
         Margin & Padding
         <div class="row bordeBase" style="height: 200px;">
-          <div class="m-5" style="background-color: olivedrab;">
+          <div class="m-5" style="background-color: olivedrab; color: white;">
             m-5 (margin: 5px) <br> mt, mr, ml, mb, (0-5); <br><br>
             p-5 (padding: 5px) <br> pt, pr, pl, pb, (0-5);
           </div>
@@ -388,10 +403,10 @@
 
     <hr>
 
-    <h3>Ratio</h3>
-    <div class="ratio ratio-21x9">
+    <h3>Ratio (Viedos)</h3>
+    <!-- <div class="ratio ratio-21x9">
       <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" allowfullscreen></iframe>
-    </div>
+    </div> -->
     <div class="cod">
       &lt;<NRed>div</NRed>
       <NPurp> class</NPurp>="<NGreen>ratio ratio-21x9</NGreen>"> <NGray>// 1x1, 4x3, 16x9, 21x9.</NGray>
@@ -513,56 +528,6 @@
     </div>
   </div>
 
-  <!-- Tablas -->
-  <div class="section">
-    <h3>Tabla</h3>
-    <table class="table table-striped table-bordered table-hover table-dark">
-      <tr>
-        <td>Lun</td>
-        <td>Mar</td>
-        <td>Mier</td>
-        <td>Jue</td>
-        <td>Vie</td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>5</td>
-        <td>5</td>
-        <td>5</td>
-        <td>5</td>
-      </tr>
-      <tr>
-        <td>12</td>
-        <td>12</td>
-        <td>12</td>
-        <td>12</td>
-        <td>12</td>
-      </tr>
-      <tr>
-        <td>25</td>
-        <td>25</td>
-        <td>25</td>
-        <td>25</td>
-        <td>25</td>
-      </tr>
-    </table>
-    <div class="cod">
-      <<NRed>table</NRed>
-        <NPurp>class</NPurp>="<NGreen>table table-striped table-bordered table-hover table-dark</NGreen>"> <<NRed>/table</NRed>>
-    </div>
-  </div>
-
-  <!-- Imagenes -->
-  <div class="section">
-    <h3> Imagen </h3>
-    <div class="flex">
-      <img src="/Imgs/cat1.png" style="width: 200px;" class="img-fluid img-thumbnail" title="img-thumbnail">
-      <img src="/Imgs/cat1.png" style="width: 200px;" class="img-fluid rounded" title="rounded">
-      <img src="/Imgs/cat1.png" style="width: 200px;" class="img-fluid rounded-circle" title="rounded-circle">
-      <img src="/Imgs/cat1.png" style="width: 200px;" class="img-fluid opacity-50" title="opacity-50">
-    </div>
-  </div>
-
   <!-- Alert -->
   <div class="section">
     <h3>Texto alert</h3>
@@ -609,36 +574,7 @@
     </div>
     <hr>
 
-    <!-- Botón Alerta -->
-    <div id="liveAlertPlaceholder"> </div>
-    <button type="button" class="btn btn-primary" id="liveAlertBtn">Botón Alerta</button>
-    <a href="https://getbootstrap.com/docs/5.3/components/alerts/#live-example">
-      https://getbootstrap.com/docs/5.3/components/alerts/#live-example
-    </a>
-    <script>
-      const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-      const appendAlert = (message, type) => {
-        const wrapper = document.createElement('div')
-        wrapper.innerHTML = [
-          `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-          `   <div>${message}</div>`,
-          '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-          '</div>'
-        ].join('')
-
-        alertPlaceholder.append(wrapper)
-      }
-
-      const alertTrigger = document.getElementById('liveAlertBtn')
-      if (alertTrigger) {
-        alertTrigger.addEventListener('click', () => {
-          appendAlert('Nice, you triggered this alert message!', 'success')
-        })
-      }
-    </script>
-    <hr>
-
-    <!-- Dismissible -->
+    <!-- Alerta -->
     <div class="alert alert-success alert-dismissible fade show" role="alert">
       <strong>Felicidades</strong> la operación concluyó satisfactoriamente.
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -650,31 +586,6 @@
         <<NRed>button</NRed>
           <NPurp>type</NPurp>="<NGreen>button</NGreen>" <NPurp>class</NPurp>="<NGreen>btn-close</NGreen>" <NPurp>data-bs-dismiss</NPurp>="<NGreen>alert</NGreen>" <NPurp>aria-label</NPurp>="<NGreen>Close</NGreen>"><<NRed>/button</NRed>> <br>
             <<Nred>/div</Nred>>
-    </div>
-    <hr>
-
-    <!-- Icons -->
-    <div>
-      <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-        <symbol id="check-circle-fill" viewBox="0 0 16 16">
-          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-        </symbol>
-        <symbol id="info-fill" viewBox="0 0 16 16">
-          <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
-        </symbol>
-        <symbol id="exclamation-triangle-fill" viewBox="0 0 16 16">
-          <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-        </symbol>
-      </svg>
-
-      <div class="alert alert-primary d-flex align-items-center" role="alert">
-        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
-        <div> An example alert with an icon </div>
-      </div>
-
-      <a href="https://getbootstrap.com/docs/5.3/components/alerts/#icons">
-        https://getbootstrap.com/docs/5.3/components/alerts/#icons
-      </a>
     </div>
   </div>
 
@@ -858,6 +769,49 @@
 
   </div>
 
+  <!-- Barra de Nav TODO: -->
+  <div class="section">
+    <h3> Barra de Nav </h3>
+    <ul class="nav justify-content-start">
+      <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">Active</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="#">Link</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="#">Link</a> </li>
+      <li class="nav-item"> <a class="nav-link disabled" aria-disabled="true">Disabled</a> </li>
+    </ul>
+    <div class="cod">
+      &lt;<NRed>ul</NRed>
+      <NPurp> class</NPurp>="<NGreen>nav justify-content-center</NGreen>">
+      <NGray>// start - center - end. </NGray>
+      <NTab></NTab>
+      <NGray>// flex-column (vertical)</NGray>
+      <NTab></NTab>
+      <NGray>// nav-justified</NGray>
+      <NTab></NTab>
+      <NGray>// fixed-top (mantener arriba)</NGray>
+      <br>
+      <NTab></NTab>&lt;<NRed>li</NRed>
+      <NPurp> class</NPurp>="<NGreen>nav-item</NGreen>">
+      &lt;<NRed>a</NRed>
+      <NPurp> class</NPurp>="<NGreen>nav-link active</NGreen>" <NPurp>aria-current</NPurp>="<NGreen>page</NGreen>" <NPurp>href</NPurp>="<NGreen>#</NGreen>" >Active&lt;<NRed>/a</NRed>> &lt;<NRed>/li</NRed>> <br>
+      <NTab></NTab>&lt;<NRed>li</NRed>
+      <NPurp> class</NPurp>="<NGreen>nav-item</NGreen>">
+      &lt;<NRed>a</NRed>
+      <NPurp> class</NPurp>="<NGreen>nav-link</NGreen>" <NPurp>href</NPurp>="<NGreen>#</NGreen>" >Link&lt;<NRed>/a</NRed>> &lt;<NRed>/li</NRed>> <br>
+      <NTab></NTab>&lt;<NRed>li</NRed>
+      <NPurp> class</NPurp>="<NGreen>nav-item</NGreen>">
+      &lt;<NRed>a</NRed>
+      <NPurp> class</NPurp>="<NGreen>nav-link</NGreen>" <NPurp>href</NPurp>="<NGreen>#</NGreen>" >Link&lt;<NRed>/a</NRed>> &lt;<NRed>/li</NRed>> <br>
+      <NTab></NTab>&lt;<NRed>li</NRed>
+      <NPurp> class</NPurp>="<NGreen>nav-item</NGreen>">
+      &lt;<NRed>a</NRed>
+      <NPurp> class</NPurp>="<NGreen>nav-link disabled</NGreen>" <NPurp>aria-disabled</NPurp>="<NGreen>true</NGreen>" >Disabled&lt;<NRed>/a</NRed>> &lt;<NRed>/li</NRed>> <br>
+      &lt;<NRed>/ul</NRed>>
+    </div>
+    <a href="https://getbootstrap.com/docs/5.3/components/navbar/">
+      https://getbootstrap.com/docs/5.3/components/navbar/
+    </a>
+  </div>
+
   <!-- Barra de progreso -->
   <div class="section">
     <h3>Barra de progreso</h3>
@@ -952,18 +906,15 @@
     </div>
   </div>
 
-  <!-- Listas -->
+  <!-- Imagenes -->
   <div class="section">
-    <h3>Listas</h3>
-    <ul class="list-group">
-      <li class="list-group-item">Lunes</li>
-      <li class="list-group-item active">Martes</li>
-      <li class="list-group-item">Miercoles</li>
-      <li class="list-group-item disabled">Jueves</li>
-    </ul>
-    <a href="https://getbootstrap.com/docs/5.3/components/list-group/">
-      https://getbootstrap.com/docs/5.3/components/list-group/
-    </a>
+    <h3> Imagen </h3>
+    <div class="flex">
+      <img src="/Imgs/cat1.png" style="width: 200px;" class="img-fluid img-thumbnail" title="img-thumbnail">
+      <img src="/Imgs/cat1.png" style="width: 200px;" class="img-fluid rounded" title="rounded">
+      <img src="/Imgs/cat1.png" style="width: 200px;" class="img-fluid rounded-circle" title="rounded-circle">
+      <img src="/Imgs/cat1.png" style="width: 200px;" class="img-fluid opacity-50" title="opacity-50">
+    </div>
   </div>
 
   <!-- Tarjetas -->
@@ -1025,6 +976,20 @@
         <a href="#" class="stretched-link">Go somewhere</a>
       </div>
     </div>
+  </div>
+
+  <!-- Listas -->
+  <div class="section">
+    <h3>Listas</h3>
+    <ul class="list-group">
+      <li class="list-group-item">Lunes</li>
+      <li class="list-group-item active">Martes</li>
+      <li class="list-group-item">Miercoles</li>
+      <li class="list-group-item disabled">Jueves</li>
+    </ul>
+    <a href="https://getbootstrap.com/docs/5.3/components/list-group/">
+      https://getbootstrap.com/docs/5.3/components/list-group/
+    </a>
   </div>
 
   <!-- plegables -->
@@ -1315,49 +1280,6 @@
   <a href="https://getbootstrap.com/docs/5.3/components/navs-tabs/">
     https://getbootstrap.com/docs/5.3/components/navs-tabs/
   </a>
-
-  <!-- Barra de Nav TODO: -->
-  <div class="section">
-    <h3> Barra de Nav </h3>
-    <ul class="nav justify-content-start">
-      <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">Active</a> </li>
-      <li class="nav-item"> <a class="nav-link" href="#">Link</a> </li>
-      <li class="nav-item"> <a class="nav-link" href="#">Link</a> </li>
-      <li class="nav-item"> <a class="nav-link disabled" aria-disabled="true">Disabled</a> </li>
-    </ul>
-    <div class="cod">
-      &lt;<NRed>ul</NRed>
-      <NPurp> class</NPurp>="<NGreen>nav justify-content-center</NGreen>">
-      <NGray>// start - center - end. </NGray>
-      <NTab></NTab>
-      <NGray>// flex-column (vertical)</NGray>
-      <NTab></NTab>
-      <NGray>// nav-justified</NGray>
-      <NTab></NTab>
-      <NGray>// fixed-top (mantener arriba)</NGray>
-      <br>
-      <NTab></NTab>&lt;<NRed>li</NRed>
-      <NPurp> class</NPurp>="<NGreen>nav-item</NGreen>">
-      &lt;<NRed>a</NRed>
-      <NPurp> class</NPurp>="<NGreen>nav-link active</NGreen>" <NPurp>aria-current</NPurp>="<NGreen>page</NGreen>" <NPurp>href</NPurp>="<NGreen>#</NGreen>" >Active&lt;<NRed>/a</NRed>> &lt;<NRed>/li</NRed>> <br>
-      <NTab></NTab>&lt;<NRed>li</NRed>
-      <NPurp> class</NPurp>="<NGreen>nav-item</NGreen>">
-      &lt;<NRed>a</NRed>
-      <NPurp> class</NPurp>="<NGreen>nav-link</NGreen>" <NPurp>href</NPurp>="<NGreen>#</NGreen>" >Link&lt;<NRed>/a</NRed>> &lt;<NRed>/li</NRed>> <br>
-      <NTab></NTab>&lt;<NRed>li</NRed>
-      <NPurp> class</NPurp>="<NGreen>nav-item</NGreen>">
-      &lt;<NRed>a</NRed>
-      <NPurp> class</NPurp>="<NGreen>nav-link</NGreen>" <NPurp>href</NPurp>="<NGreen>#</NGreen>" >Link&lt;<NRed>/a</NRed>> &lt;<NRed>/li</NRed>> <br>
-      <NTab></NTab>&lt;<NRed>li</NRed>
-      <NPurp> class</NPurp>="<NGreen>nav-item</NGreen>">
-      &lt;<NRed>a</NRed>
-      <NPurp> class</NPurp>="<NGreen>nav-link disabled</NGreen>" <NPurp>aria-disabled</NPurp>="<NGreen>true</NGreen>" >Disabled&lt;<NRed>/a</NRed>> &lt;<NRed>/li</NRed>> <br>
-      &lt;<NRed>/ul</NRed>>
-    </div>
-    <a href="https://getbootstrap.com/docs/5.3/components/navbar/">
-      https://getbootstrap.com/docs/5.3/components/navbar/
-    </a>
-  </div>
 
   <!-- from -->
   <div class="section">
@@ -1814,6 +1736,45 @@
     </div>
   </div>
 
+  <!-- Tablas -->
+  <div class="section">
+    <h3>Tabla</h3>
+    <table class="table table-striped table-bordered table-hover table-dark">
+      <tr>
+        <td>Lun</td>
+        <td>Mar</td>
+        <td>Mier</td>
+        <td>Jue</td>
+        <td>Vie</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>5</td>
+        <td>5</td>
+        <td>5</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>12</td>
+        <td>12</td>
+        <td>12</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <td>25</td>
+        <td>25</td>
+        <td>25</td>
+        <td>25</td>
+        <td>25</td>
+      </tr>
+    </table>
+    <div class="cod">
+      <<NRed>table</NRed>
+        <NPurp>class</NPurp>="<NGreen>table table-striped table-bordered table-hover table-dark</NGreen>"> <<NRed>/table</NRed>>
+    </div>
+  </div>
+
   <!-- Modal (alert) -->
   <div class="section">
     <h3> Modal (Alert) </h3>
@@ -1964,6 +1925,10 @@
 
   </div>
 
+
+
+
+
   <!--  -->
   <div class="section">
     <h3> </h3>
@@ -2020,7 +1985,6 @@
   <a href="https://getbootstrap.com/docs/5.3/utilities/api/">
     APIS: https://getbootstrap.com/docs/5.3/utilities/api/
   </a>
-  <!-- </div> -->
 
 
   <br><br><br><br><br><br><br><br><br><br>
@@ -2063,6 +2027,6 @@
 <script src="Lib-Fram/Bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <div class="footer otros"></div>
-<script src="./myconfig/modules.js" type="module"></script>
+<script src="/myconfig/modules.js" type="module"></script>
 
 </html>

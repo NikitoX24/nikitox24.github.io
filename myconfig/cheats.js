@@ -4,30 +4,41 @@ export default function cheats(){
 
   // Frameworks & Librerias de INDEX
   function frameLibs(){
-    if (titulo == t_index || titulo == t_css) {
+    if (titulo == t_index || titulo == t_css || titulo == t_bs) {
       return( /*html*/`
         <div class="iconosFlex icoFramLibs">
-          <table class="ch-${t_bs}" onclick="loadBS()"> <caption> BtSp </caption>
-            <td><img src="${imgs_dir}bootstrap-icon.png"></td>
-          </table>
+          <a href="${bs_dir}">
+            <table class="ch-${t_bs}" > <caption> BtSp </caption>
+              <td><img src="${imgs_dir}bootstrap-icon.png"></td> 
+            </table>
+          </a>
         </div>
       `);
     }
     else return ""
   }
   return /*html*/`
-    <div class="iconosFlex"> 
-      <table class="ch-${t_html}" onclick="loadHTML()"> <caption> HTML </caption> 
-        <td><img src="${imgs_dir}html2.png"></td> </table>
-
-      <table class="ch-${t_css}" onclick="loadCSS()">   <caption> CSS </caption> 
-        <td><img src="${imgs_dir}css2.png"></td> </table>
-
-      <table class="ch-${t_js}" onclick="loadJS()">     <caption> JS </caption> 
-        <td><img src="${imgs_dir}js2.png"></td> </table>
-
-      <table class="ch-${t_php}" onclick="loadPHP()">   <caption> PHP </caption> 
-        <td><img src="${imgs_dir}php2.png"></td> </table>
+    <div class="iconosFlex">
+      <a href="${html_dir}">
+        <table class="ch-${t_html}" > <caption> HTML </caption>
+            <td><img src="${imgs_dir}html2.png"></td> 
+        </table>
+      </a>
+      <a href="${css_dir}">
+        <table class="ch-${t_css}" > <caption> CSS </caption>
+            <td><img src="${imgs_dir}css2.png"></td> 
+        </table>
+      </a>
+      <a href="${js_dir}">
+        <table class="ch-${t_js}" > <caption> JS </caption>
+            <td><img src="${imgs_dir}js2.png"></td> 
+        </table>
+      </a>
+      <a href="${php_dir}">
+        <table class="ch-${t_php}" > <caption> PHP </caption>
+            <td><img src="${imgs_dir}php2.png"></td> 
+        </table>
+      </a>
 
     </div>
     
@@ -52,6 +63,10 @@ export default function cheats(){
         justify-content: center;
         align-items: center;
         height: 150px;
+      }
+      .iconosFlex a {
+        color: inherit;
+        text-decoration: none;
       }
       .iconosFlex table{
         transition: all 200ms;
@@ -84,6 +99,9 @@ export default function cheats(){
         -moz-transform: scale(0.7);
         -ms-transform: scale(0.7);
         -o-transform: scale(0.7);
+      }
+      caption {
+        color: inherit;
       }
     </style>
   `

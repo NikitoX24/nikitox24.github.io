@@ -38,20 +38,12 @@
     <fieldset> <!-- Variable -->
       <legend> Variables </legend>
       <div class="columnas">
-        Variable
         <div class="cod">
           &lt;?php <br>
           &nbsp; $<NVar>name</NVar> = "<NGreen>John</NGreen>"; <br>
           &nbsp; <NBlue>echo</NBlue> "<NGreen>Hola</NGreen> $<NVar>name</NVar>"; <br>
           ?>
-        </div><br>
-        Variable como Variable
-        <div class="cod">
-          $<NVar>a</NVar> = "<NGreen>variable</NGreen>" <br>
-          $<NVar>variable</NVar> = "<NGreen>hola mundo!</NGreen>" <br>
-          <NBlue>echo</NBlue> $$<NVar>a</NVar>; <NGray>// hola mundo!</NGray>
         </div>
-        
         Constante
         <div class="cod">
           <NBlue>define</NBlue>("<NGreen>Mensaje</NGreen>", "<NGreen>Hola Mundo!</NGreen>"); <br>
@@ -82,11 +74,15 @@
       <hr>
 
       Funciones de Control.
-      <div class="cod">
-        <NBlue>isset</NBlue>($<nvar>var</nvar>); <NGray>// verifica si la variable está declarada.</NGray> <br>
-        <NBlue>empty</NBlue>($<nvar>var</nvar>); <NGray>// verifica si la variable está vacia.</NGray> <br>
-        <NBlue>boolval</NBlue>($<nvar>var</nvar>); <NGray>// verifica si la variable está en true o false.</NGray> <br>
-        <NBlue>is_null/is_integer/is_double/is_string/is_array</NBlue>($<nvar>var</nvar>); <NGray>// verifica si la variable...</NGray> <br>
+      <div class="cod columnas">
+        <NBlue>isset</NBlue>($<nvar>var</nvar>); <NGray>// verifica si está declarada.</NGray> <br>
+        <NBlue>empty</NBlue>($<nvar>var</nvar>); <NGray>// verifica si está vacia.</NGray> <br>
+        <NBlue>boolval</NBlue>($<nvar>var</nvar>); <NGray>// verifica si está en true o false.</NGray> <br>
+        <NBlue>is_null</NBlue>($<nvar>var</nvar>); <NGray>// verificar si es null</NGray> <br>
+        <NBlue>is_integer</NBlue>($<nvar>var</nvar>); <NGray>// verficar si es int</NGray> <br>
+        <NBlue>is_double</NBlue>($<nvar>var</nvar>); <NGray>// verficar si es float</NGray> <br>
+        <NBlue>is_string</NBlue>($<nvar>var</nvar>); <NGray>// verficar si es string</NGray> <br>
+        <NBlue>is_array</NBlue>($<nvar>var</nvar>); <NGray>// verficar si es array</NGray> <br>
       </div>
       
       Funciones String.
@@ -112,7 +108,7 @@
       <legend> Arrays </legend>
       <div class="flex">
         <div class="w100">
-          Array
+          Arrays Indexados
           <div class="cod wAuto">
             $<NVar>dias</NVar> = <NBlue>array</NBlue>(); <NGray>// Crear</NGray> <br>
             $<NVar>dias</NVar><NObj>[]</NObj> = "<NGreen>Martes</NGreen>"; <NGray>// Agregar</NGray> <br>
@@ -120,11 +116,36 @@
           </div>
         </div>
         <div class="w100">
-          Objeto
+          Arrays Asociativos
           <div class="cod wAuto">
             $<NVar>Personas</NVar> = <NBlue>array</NBlue>("<NGreen>David</NGreen>" => "<NGreen>27</NGreen>"); <br>
             $<NVar>Personas</NVar>["<NGreen>David</NGreen>"] = "<NGreen>28</NGreen>"; <br>
             <NBlue>echo</NBlue> $<NVar>Personas</NVar>["<NGreen>David</NGreen>"]; <NGray>// 28</NGray> <br>
+          </div>
+        </div>
+      </div> <br>
+
+      <div class="flex">
+        <div class="w100">
+          Desestructurar Indexados<br>
+          <div class="cod wAuto">
+            $<NVar>frutas</NVar> = ["<NGreen>manzana</NGreen>", "<NGreen>banana</NGreen>", "<NGreen>cereza</NGreen>"]; <br>
+            <NBlue>list</NBlue>($<NVar>fruta1</NVar>, $<NVar>fruta2</NVar>, $<NVar>fruta3</NVar>) = $<NVar>frutas</NVar>; <br><br>
+            <NBlue>echo</NBlue> $<NVar>fruta1</NVar>; <NGray>// manzana</NGray> <br>
+            <NBlue>echo</NBlue> $<NVar>fruta2</NVar>; <NGray>// banana</NGray> <br>
+            <NBlue>echo</NBlue> $<NVar>fruta3</NVar>; <NGray>// cereza</NGray> <br>
+          </div>
+        </div>
+        <div class="w100">
+          Desestructurar Asociativos<br>
+          <div class="cod wAuto">
+            $<NVar>usuario</NVar> = [ <br>
+              &nbsp; "<NGreen>nombre</NGreen>" => "<NGreen>Nicolás</NGreen>", <br>
+              &nbsp; "<NGreen>edad</NGreen>" => <NOrg>25</NOrg> <br>
+            ]; <br>
+
+            <NBlue>extract</NBlue>($<NVar>usuario</NVar>); <br>
+            <NBlue>echo</NBlue> $<NVar>nombre</NVar>; <NGray>// nicolás</NGray> <br>
           </div>
         </div>
       </div> <br>
@@ -517,7 +538,7 @@
         } <br>
         catch ( <NObj>Exception</NObj> $<NVar>e</NVar>) { <br>
           &nbsp; <NBlue>http_response_code</NBlue>(<NOrg>400</NOrg>); <br>
-          &nbsp; <NBlue>echo json_encode</NBlue>(<NBlue>array</NBlue>("<NGreen>error</NGreen>" => $<NVar>e</NVar>)); <NGray>// (no enviar al usuario!) </NGray> <br>
+          &nbsp; <NBlue>echo json_encode</NBlue>(["<NGreen>error</NGreen>" => $<NVar>e</NVar>]); <NGray>// (no enviar al usuario!) </NGray> <br>
         }
       </div>
     </fieldset>

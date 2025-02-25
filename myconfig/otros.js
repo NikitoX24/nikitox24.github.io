@@ -37,8 +37,8 @@ export function horaPS() {
 }
 
 export let textoFix = /*html*/`
-  <p id="textoFix">${titulo}</p>
-  <a id="up" href=${document.URL}> &#9650; </a>
+<p id="textoFix">${titulo}</p>
+<a id="up" href=""> &#9650; </a>
 `;
 
 export let footer = (/*html*/`
