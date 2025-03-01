@@ -8,10 +8,11 @@
   <title>Titulo</title>
 </head>
 
-<script src="/myconfig/config.js"></script>
-<div class="navBar cheats"></div>
 
 <body>
+  <script src="/myconfig/config.js"></script>
+  <div class="navBar cheats"></div>
+  
   <!-- Variables -->
   <section id="Variables y Arrays">
     <fieldset> <!-- Variable -->
@@ -2142,6 +2143,32 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
     </fieldset>
   </section>
 
+  <!-- Node.js -->
+  <section id="Node.js">
+    <fieldset> <!-- Conexion DB -->
+      <legend> Conexion DB </legend>
+      <div class="cod">
+        <NAqua>import</NAqua> mysql <NAqua>from</NAqua> '<NGreen>mysql2/promise</NGreen>'; <NGray>// npm install mysql2</NGray> <br><br>
+
+        <NAqua>
+        <NPurp>const</NPurp> <NVar>config</NVar> = <NObj>{</NObj> <br>
+          &nbsp; <NVar>host</NVar>: '<NGreen>localhost</NGreen>', <br>
+          &nbsp; <NVar>database</NVar>: '<NGreen>nombreDB</NGreen>', <br>
+          &nbsp; <NVar>port</NVar>: '<NGreen>3312</NGreen>', <br>
+          &nbsp; <NVar>user</NVar>: '<NGreen>root</NGreen>', <br>
+          &nbsp; <NVar>password</NVar>: '' <br>
+          <NObj>}</NObj>
+        </NAqua> <br><br>
+
+        <NPurp>const</NPurp> connection = <NAqua>await</NAqua> mysql.<NBlue>createConnection</NBlue>(config); <br><br>
+
+        <NPurp>const</NPurp> <NObj>[<NVar>genres</NVar>]</NObj> <NAqua>= await</NAqua> connection.<NBlue>query</NBlue>( <NGray>// [movies, tableInfo] -> (desestructurar tupla).</NGray> <br>
+          &nbsp; '<NGreen>SELECT * FROM nombre WHERE LOWER(name) = ?;</NGreen>', <NGray>// "?" (evitar inyecciones)</NGray> <br>
+          &nbsp; <NObj>[<NVar>lowerCaseName</NVar>]</NObj> <br>
+        );
+      </div>
+    </fieldset>
+  </section>
 
 
   <div style="height: 500px;"></div>

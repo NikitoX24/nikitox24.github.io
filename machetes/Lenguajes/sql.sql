@@ -95,9 +95,9 @@ SELECT * FROM clientes WHERE nombre = "John" AND apellido= "Wick"; -- mostrar lo
 
 SELECT * FROM clientes WHERE id_cliente >, <, =, != 4; -- mostrar 
 SELECT * FROM clientes LIMIT 10; -- mostrar solo los 10 primeros registros
-SELECT * FROM clientes LIMIT 10 OFFSET 10; -- extrae los 10 registros ignorando los 10 prmeros(anteriores)
+SELECT * FROM clientes LIMIT 10 OFFSET 10; -- extrae los 10 registros ignorando los 10 primeros(anteriores)
 
-SELECT * FROM clientes WHERE nombre = "David", != "David"; -- Sensitive (rapido)
+SELECT * FROM clientes WHERE nombre = "David", != "David"; -- Sensitive (rápido)
 SELECT * FROM clientes WHERE nombre LIKE "DAVID"; -- InSensitive (lento)
 SELECT * FROM clientes WHERE nombre NOT LIKE "DAVID"; -- InSensitive (lento)
 
@@ -105,19 +105,19 @@ SELECT * FROM clientes WHERE nombre LIKE "d%", "%n", "%at%", "A_"; -- registros.
 
 SELECT * FROM clientes WHERE id_cliente IN (1,3,5,8); -- mostrar varios registros.
 SELECT * FROM clientes WHERE nombre NOT IN ("A", "B"); -- mostrar menos estos.
-SELECT * FROM clientes WHERE id BETWEEN 5 AND 10; -- mostrar ENTRE dos numeros.
-SELECT * FROM clientes WHERE id NOT BETWEEN 5 AND 10; -- mostrar los que no estan ENRTE dos numeros.
+SELECT * FROM clientes WHERE id BETWEEN 5 AND 10; -- mostrar ENTRE dos números.
+SELECT * FROM clientes WHERE id NOT BETWEEN 5 AND 10; -- mostrar los que no están ENTRE dos números.
 
 -- Ordenar --
-SELECT * FROM clientes WHERE id_cliente < 20  ORDER BY nombre ASC, DESC; -- ordenar alfab. ASCendentemente/DESCendentemente.
+SELECT * FROM clientes WHERE id_cliente < 20  ORDER BY nombre ASC, DESC; -- ordenar alfabéticamente.
 SELECT DISTINCT nombre FROM clientes ORDER BY nombre; -- no mostrar nombres duplicados
 
 -- Agregar --
 SELECT COUNT(*) AS nombre FROM clientes WHERE nombre="David"; -- Contar cuantas personas se llaman David.
 SELECT SUM(edad) AS edad FROM clientes WHERE nombre="John"; -- Sumar todas las edades de los q se llaman John.
-SELECT MAX(edad) AS edad FROM clientes; -- Mostrar entre todas las edades cual es el maximo. (MAX-MIN)
+SELECT MAX(edad) AS edad FROM clientes; -- Mostrar entre todas las edades cual es el máximo. (MAX-MIN)
 SELECT AVG(edad) AS edad FROM clientes; -- Mostrar entre todas las edades la edad promedio.
-SELECT precio+envio AS total FROM clientes; -- Mostrar una suma en una calumna nueva
+SELECT precio+envio AS total FROM clientes; -- Mostrar una suma en una columna nueva
 
 -- Agrupar --
 SELECT nombre, COUNT(*) FROM clientes GROUP BY nombre; -- Mostrar Lista con todos los nombres repetidos.
@@ -130,10 +130,10 @@ SELECT nombre, COUNT(*) FROM clientes GROUP BY nombre; -- Mostrar Lista con todo
 ----------------
 
   -- INNER JOIN
-SELECT * FROM clientes INNER JOIN pedidos ON clientes.id_cliente = pedidos.id_cliente; -- Lista completa de pers con sus pedidos.
-SELECT nombre, id_producto FROM clientes INNER JOIN pedidos ON clientes.id_cliente = pedidos.id_cliente; -- Lista nombres de las pers con sus productos.
+SELECT * FROM clientes INNER JOIN pedidos ON clientes.id_cliente = pedidos.id_cliente; -- Lista completa de personas con sus pedidos.
+SELECT nombre, id_producto FROM clientes INNER JOIN pedidos ON clientes.id_cliente = pedidos.id_cliente; -- Lista nombres de las personas con sus productos.
 
-SELECT nombre, id_producto FROM clientes INNER JOIN pedidos ON clientes.id_cliente = pedidos.id_cliente WHERE cantidad>4; -- Lista nombres de las pers con sus productos menor a 4.
+SELECT nombre, id_producto FROM clientes INNER JOIN pedidos ON clientes.id_cliente = pedidos.id_cliente WHERE cantidad>4; -- Lista nombres de las personas con sus productos menor a 4.
 
   -- LEFT JOIN
 SELECT * FROM clientes LEFT JOIN pedidos ON clientes.id_cliente = pedidos.id_pedido; -- CLIENTES -> PEDIDOS.
@@ -163,7 +163,7 @@ SELECT * FROM clientes RIGHT JOIN pedidos ON clientes.id_cliente = pedidos.id_pe
 --|--------------------|  |---------------------|
 
 SELECT * FROM movies
-INNER JOIN boxoffice ON id = movie_id;
+INNER JOIN boxOffice ON id = movie_id;
 
 ------------------------
 --   Movie   |  Sales  |

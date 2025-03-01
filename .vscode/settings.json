@@ -6,5 +6,8 @@
     "**/.vscode": true
   },
   "editor.glyphMargin": false,
-  "liveServer.settings.port": 5501
+  "liveServer.settings.port": 5501,
+  "cSpell.words": [
+    "telefono"
+  ]
 }

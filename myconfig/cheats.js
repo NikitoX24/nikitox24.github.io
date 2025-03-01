@@ -2,7 +2,7 @@ titulo = document.title;
 
 export default function cheats(){
 
-  // Frameworks & Librerias de INDEX
+  // Frameworks & Librerías de INDEX
   function frameLibs(){
     if (titulo == t_index || titulo == t_css || titulo == t_bs) {
       return( /*html*/`
@@ -10,6 +10,17 @@ export default function cheats(){
           <a href="${bs_dir}">
             <table class="ch-${t_bs}" > <caption> BtSp </caption>
               <td><img src="${imgs_dir}bootstrap-icon.png"></td> 
+            </table>
+          </a>
+        </div>
+      `);
+    }
+    if (titulo == t_index || titulo == t_js || titulo == t_php || titulo == t_sql) {
+      return( /*html*/`
+        <div class="iconosFlex icoFramLibs">
+          <a href="${sql_dir}">
+            <table class="ch-${t_sql}" > <caption> MySQL </caption>
+              <td><img src="${imgs_dir}sql.png"></td> 
             </table>
           </a>
         </div>

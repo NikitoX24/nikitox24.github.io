@@ -49,7 +49,7 @@ export default /*html*/`
     #navbar nav ul li a {
       padding-block: 0px;
       padding-inline: 10px;
-      color: #FFF;
+      color: rgba(255, 255, 255, 0.7);
       font-size: 16px;
       font-family: Verdana;
       text-decoration: none;

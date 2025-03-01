@@ -4,34 +4,164 @@
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <link rel="stylesheet" href="../machetes/STYLE.css">
-  <title>SQL</title>
+  <title>MySQL</title>
 </head>
+<style>
+  .cod {
+    font-family: monospace;
+  }
+</style>
+
 <body>
+  <script src="/myconfig/config.js"></script>
+  <div class="navBar cheats"></div>
 
-  <!-- <script src="../myconfig/config.js"></script>
-  <script src="../myconfig/header.js"></script>
-  <script src="../myconfig/cheats.js"></script> -->
+  <section id="DataBase - Tablas">
+    <fieldset> <!-- user - db -->
+      <legend> user - db </legend>
+      <div class="cod">
+        <NOrg>CREATE USER</NOrg> <NBlue>nico</NBlue> @localhost IDENTIFIED <NOrg>BY</NOrg> "<NGreen>123456</NGreen>"; <NGray>-- Crear Usuario:</NGray> <br>
+        <NOrg>CREATE DATABASE</NOrg> <NBlue>proyecto</NBlue>; <NGray>--  Crear Base de Datos.</NGray> <br>
+        <NOrg>DROP DATABASE IF EXISTS</NOrg> proyecto;  <NGray>-- borrar Base de Datos. -- IF EXISTS (opcional)</NGray> <br><br>
+        show databases; <NGray>-- Mostrar todas las Base de Datos.</NGray> <br>
+        <NOrg>USE</NOrg> proyecto; <NGray>Usar la DB</NGray> <br>
+      </div>
+    </fieldset>
+    <fieldset>      
+      <legend> Crear una tabla con Columnas/field </legend>
+      <div class="cod">
+        <NOrg>CREATE TABLE</NOrg> <NBlue>nombreTabla</NBlue> ( <NGray>-- Crear tabla.</NGray> <br>
+          &nbsp; ID <NPurp>INT</NPurp> <NOrg>NOT NULL</NOrg> AUTO_INCREMENT, <br>
+          &nbsp; Nombre <NPurp>VARCHAR</NPurp> (<NOrg>15</NOrg>), <br>
+          &nbsp; Apellido <NPurp>VARCHAR</NPurp> (<NOrg>15</NOrg>), <br>
+          &nbsp; Edad <NPurp>INT</NPurp>, <br>
+          &nbsp; Celular <NPurp>INT</NPurp>, <br>
+          &nbsp; <NPurp>PRIMARY KEY</NPurp>(ID) <br>
+        ) <br>
+      </div>
+      <div class="cod"> <NVar>
+        <NOrg>DROP TABLE</NOrg> <NBlue>nombreTabla</NBlue>; <NGray>-- Borrar Tabla.</NGray> <br>
+        <NOrg>ALTER TABLE</NOrg> tabla <NOrg>RENAME</NOrg> usuarios; <NGray>-- renombrar tabla.</NGray> <br>
+        <NOrg>ALTER TABLE</NOrg> usuarios <NOrg>CHANGE</NOrg> telefono celular <NPurp>INT</NPurp>(<NOrg>11</NOrg>); <NGray>-- cambiar el nombre a una columna.</NGray> <br>
+        <NOrg>ALTER TABLE</NOrg> usuarios <NOrg>ADD COLUMN</NOrg> (direccion <NPurp>VARCHAR</NPurp>(<NOrg>20</NOrg>)); <NGray>-- agregar nueva columna.</NGray> <br>
+        <NOrg>ALTER TABLE</NOrg> usuarios <NOrg>DROP COLUMN</NOrg> edad; <NGray>-- borrar columna</NGray></NVar>
+      </div>
+    </fieldset>
+  </section>
+
+  <section id="Registros">
+    <fieldset> <!-- Modificar un registro -->
+      <legend> Modificar un registro </legend>
+      <div class="cod">
+        <NGray>-- agregar un registro --</NGray> <br>
+        <NOrg>INSERT INTO</NOrg> clientes (nombre, apellido, edad, telefono) <NOrg>VALUES</NOrg> <br>
+        &nbsp; ("<NGreen>John</NGreen>", "<NGreen>Wick</NGreen>", "<NGreen>29</NGreen>", "<NGreen>1234567</NGreen>"), <br>
+        &nbsp; ("<NGreen>David</NGreen>", "<NGreen>Wolf</NGreen>", "<NGreen>22</NGreen>", "<NGreen>12121212</NGreen>"); <br> <br>
+
+        <NGray>-- Cambiar valor --</NGray> <br>
+        <NOrg>UPDATE</NOrg> clientes <NOrg>SET</NOrg> telefono= "<NGreen>5555555</NGreen>" <NOrg>WHERE</NOrg> id_cliente =  <NOrg>1</NOrg>; <br><br>
+
+        <NGray>-- Borrar --</NGray> <br>
+        <NOrg>DELETE FROM</NOrg> productos <NOrg>WHERE</NOrg> id_producto = <NOrg>3</NOrg>; <NGray>-- borrar solo uno.</NGray> <br>
+      </div>
+    </fieldset>
+
+    <fieldset> <!-- Mostrar registros -->
+      <legend> Mostrar registros </legend>
+      <div class="cod">
+        <NOrg>SELECT <NAqua>*</NAqua> FROM</NOrg> clientes; <NGray>-- Mostrar todo.</NGray> <br>
+        <NOrg>SELECT</NOrg> nombre <NOrg>FROM</NOrg> clientes; <NGray>-- Mostrar solo una columna (nombre).</NGray> <br>
+        <NOrg>SELECT</NOrg> nombre, apellido <NOrg>FROM</NOrg> clientes <NOrg>WHERE</NOrg> id_cliente = <NOrg>4</NOrg>; <NGray>-- mostrar nombre y apellido del id 4.</NGray> <br><br>
+
+        <NOrg>SELECT <NAqua>*</NAqua> FROM</NOrg> clientes <NOrg>WHERE</NOrg> nombre = "<NGreen>John</NGreen>"; <NGray>-- mostrar los usuarios con nombre John.</NGray> <br>
+        <NOrg>SELECT <NAqua>*</NAqua> FROM</NOrg> clientes <NOrg>WHERE</NOrg> nombre = "<NGreen>John</NGreen>" <NOrg>OR</NOrg> nombre= "<NGreen>David</NGreen>"; <NGray>-- varios usuarios.</NGray> <br>
+        <NOrg>SELECT <NAqua>*</NAqua> FROM</NOrg> clientes <NOrg>WHERE</NOrg> nombre = "<NGreen>John</NGreen>" <NOrg>AND</NOrg> apellido= "<NGreen>Wick</NGreen>"; <NGray>-- por nombre y apellido.</NGray> <br><br>
+
+        <NOrg>SELECT <NAqua>*</NAqua> FROM</NOrg> clientes <NOrg>WHERE</NOrg> nombre = "<NGreen>David</NGreen>", != "<NGreen>David</NGreen>"; <NGray>-- Sensitive (rápido)</NGray> <br>
+        <NOrg>SELECT <NAqua>*</NAqua> FROM</NOrg> clientes <NOrg>WHERE</NOrg> nombre <NOrg>LIKE</NOrg> "<NGreen>DAVID</NGreen>"; <NGray>-- InSensitive (lento)</NGray> <br>
+        <NOrg>SELECT <NAqua>*</NAqua> FROM</NOrg> clientes <NOrg>WHERE</NOrg> nombre <NOrg>NOT LIKE</NOrg> "<NGreen>DAVID</NGreen>"; <NGray>-- InSensitive (lento)</NGray> <br>
+        <NOrg>SELECT <NAqua>*</NAqua> FROM</NOrg> clientes <NOrg>WHERE</NOrg> nombre <NOrg>LIKE</NOrg> "%<NGreen>the</NGreen>%"; <NGray>-- registros que contengan "the". <br>
+        "d%" (comienza con d) -- "%n" (termina con n) -- "A_" (palabra con 2 letras).</NGray> <br><br>
+
+        <NOrg>SELECT <NAqua>*</NAqua> FROM</NOrg> clientes <NOrg>WHERE</NOrg> id_cliente <NAqua>></NAqua> <NOrg>4</NOrg>; <NGray>-- condiciones (>, <, =, !=).</NGray> <br>
+        <NOrg>SELECT <NAqua>*</NAqua> FROM</NOrg> clientes <NOrg>LIMIT 10</NOrg>; <NGray>-- mostrar solo los 10 primeros registros.</NGray> <br>
+        <NOrg>SELECT <NAqua>*</NAqua> FROM</NOrg> clientes <NOrg>LIMIT 10 OFFSET 10</NOrg>; <NGray>-- 10 registros ignorando los 10 anteriores.</NGray> <br><br>
+
+        <NOrg>SELECT <NAqua>*</NAqua> FROM</NOrg> clientes <NOrg>WHERE</NOrg> id_cliente IN (1,3,5,8); -- mostrar varios registros. <br>
+        <NOrg>SELECT <NAqua>*</NAqua> FROM</NOrg> clientes <NOrg>WHERE</NOrg> nombre NOT IN ("A", "B"); -- mostrar menos estos. <br>
+        <NOrg>SELECT <NAqua>*</NAqua> FROM</NOrg> clientes <NOrg>WHERE</NOrg> id BETWEEN 5 AND 10; -- mostrar ENTRE dos números. <br>
+        <NOrg>SELECT <NAqua>*</NAqua> FROM</NOrg> clientes <NOrg>WHERE</NOrg> id NOT BETWEEN 5 AND 10; -- mostrar los que no están ENTRE dos números. <br><br>
+
+        <NGray>-- Ordenar --</NGray> <br>
+        <NOrg>SELECT <NAqua>*</NAqua> FROM</NOrg> clientes <NOrg>WHERE</NOrg> id_cliente <NAqua><</NAqua> <NOrg>20  ORDER BY</NOrg> nombre <NOrg>ASC</NOrg>, <NOrg>DESC</NOrg>; <NGray>-- ordenar alfabéticamente.</NGray> <br>
+        <NOrg>SELECT DISTINCT</NOrg> nombre <NOrg>FROM</NOrg> clientes <NOrg>ORDER BY</NOrg> nombre; <NGray>-- no mostrar nombres duplicados.</NGray> <br><br>
+
+        <NGray>-- Agregar --</NGray> <br>
+        <NOrg>SELECT</NOrg> <NBlue>COUNT</NBlue>(<NAqua>*</NAqua>) <NOrg>AS <NVar>nombre</NVar> FROM</NOrg> clientes <NOrg>WHERE</NOrg> nombre="<NGreen>David</NGreen>"; <NGray>-- cuantas personas se llaman David.</NGray> <br>
+        <NOrg>SELECT</NOrg> <NBlue>SUM</NBlue>(edad) <NOrg>AS <NVar>edad</NVar> FROM</NOrg> clientes <NOrg>WHERE</NOrg> nombre="<NGreen>John</NGreen>"; <NGray>-- Sumar las edades de los Johns.</NGray> <br>
+        <NOrg>SELECT</NOrg> <NBlue>MAX</NBlue>(edad) <NOrg>AS <NVar>edad</NVar> FROM</NOrg> clientes; <NGray>-- Mostrar entre todas las edades cual es el máximo.</NGray> <br>
+        <NOrg>SELECT</NOrg> <NBlue>MIN</NBlue>(edad) <NOrg>AS <NVar>edad</NVar> FROM</NOrg> clientes; <NGray>-- Mostrar entre todas las edades cual es el mínimo.</NGray> <br>
+        <NOrg>SELECT</NOrg> <NBlue>AVG</NBlue>(edad) <NOrg>AS <NVar>edad</NVar> FROM</NOrg> clientes; <NGray>-- Mostrar entre todas las edades la edad promedio.</NGray> <br>
+        <NOrg>SELECT</NOrg> precio <NAqua>+</NAqua> envío <NOrg>AS <NVar>total</NVar> FROM</NOrg> clientes; <NGray>-- Mostrar una suma en una columna nueva.</NGray> <br><br>
+
+        <NGray>-- Agrupar --</NGray> <br>
+        <NOrg>SELECT</NOrg> nombre, <NBlue>COUNT</NBlue>(<NAqua>*</NAqua>) <NOrg>FROM <NVar>clientes</NVar> GROUP BY</NOrg> nombre; <NGray>-- Mostrar todos los nombres repetidos.</NGray> <br>
+      </div>
+    </fieldset>
+
+    <fieldset> <!-- Join -->
+      <legend> JOIN </legend>
+      <div class="cod">
+        <NGray>-- INNER JOIN</NGray> <br>
+        <NOrg>SELECT <NAqua>*</NAqua> FROM <NVar>clientes</NVar> INNER JOIN <NVar>pedidos</NVar> ON</NOrg> cl.id_cliente <NAqua>=</NAqua> ped.id_cliente; <NGray>-- personas + pedidos.</NGray> <br><br>
+
+        <NGray>-- LEFT JOIN</NGray> <br>
+        <NOrg>SELECT <NAqua>*</NAqua> FROM <NVar>clientes</NVar> LEFT JOIN <NVar>pedidos</NVar> ON</NOrg> clientes.id_cliente <NAqua>=</NAqua> pedidos.id_pedido; <NGray> C -> P.</NGray> <br><br>
+
+        <NGray>-- RIGHT JOIN</NGray> <br>
+        <NOrg>SELECT <NAqua>*</NAqua> FROM <NVar>clientes</NVar> RIGHT JOIN <NVar>pedidos</NVar> ON</NOrg> clientes.id_cliente <NAqua>=</NAqua> pedidos.id_pedido; <NGray> P -> C. (hide no pedidos)</NGray> <br>
+      </div>
+
+      <br><hr><br>
+      
+      <div class="flex">
+        <table border="2" width="200px">
+          <tr><th colspan="2"> Movies </th></tr>
+          <tr>
+            <th> id </th> <th> title </th>
+          </tr>
+          <tr> <td> 1 </td> <td> Toy Story </td> </tr>
+          <tr> <td> 2 </td> <td> Wall-E </td> </tr>
+        </table>
   
-  <legend> Crear una tabla con Columnas/field </legend>
-  <div class="cod">
-    <NGreen><NOrg>CREATE TABLE</NOrg> nombreTabla ( <NGray>-- Crear tabla.</NGray> <br>
-      &nbsp; ID <NPurp>int</NPurp> <NOrg>NOT NULL</NOrg> AUTO_INCREMENT, <br>
-      &nbsp; Nombre <NPurp>varchar</NPurp> (<NOrg>15</NOrg>), <br>
-      &nbsp; Apellido <NPurp>varchar</NPurp> (<NOrg>15</NOrg>), <br>
-      &nbsp; Edad <NPurp>int</NPurp>, <br>
-      &nbsp; Celular <NPurp>int</NPurp>, <br>
-      &nbsp; <NPurp>PRIMARY KEY</NPurp>(ID) <br>
-    ) </NGreen><br> 
-  </div>
-  <div class="cod"> <NVar>
-    <NOrg>DROP TABLE</NOrg> <NGreen>nombreTabla;</NGreen> <NGray>-- Borrar Tabla.</NGray> <br>
-    <NOrg>ALTER TABLE</NOrg> mytabla RENAME myusuarios; <NGray>-- renombrar tabla.</NGray> <br>
-    <NOrg>ALTER TABLE</NOrg> myusuarios CHANGE telefono celular <NPurp>INT</NPurp>(<NOrg>11</NOrg>); <NGray>-- cambiar el nombre a una columna.</NGray> <br>
-    <NOrg>ALTER TABLE</NOrg> myusuarios <NOrg>ADD</NOrg> COLUMN (direccion <NPurp>VARCHAR</NPurp>(<NOrg>20</NOrg>)); <NGray>-- agregar nueva columna.</NGray> <br>
-    <NOrg>ALTER TABLE</NOrg> myusuarios <NOrg>DROP</NOrg> COLUMN edad; <NGray>-- borrar columna</NGray></NVar>
-  </div>
-  <a href="">(Ver más en el archivo sql.sql).</a>
-</fieldset>
+        <table border="2" width="200px">
+          <tr><th colspan="2"> BoxOffice </th></tr>
+          <tr>
+            <th> Mov-id </th> <th> Sales </th>
+          </tr>
+          <tr> <td> 2 </td> <td> $300m </td> </tr>
+          <tr> <td> 1 </td> <td> $200m </td> </tr>
+        </table>
+      </div>
+      
+      <div class="cod">
+        <NOrg> SELECT <NAqua>*</NAqua> FROM <NVar>movies</NVar> INNER JOIN <NVar>boxOffice</NVar> ON </NOrg> id <NAqua>=</NAqua> movie_id;
+      </div>
+      <div class="flex">
+        <table border="2" width="200px">
+          <tr>
+            <th> Movie </th> <th> Sales </th>
+          </tr>
+          <tr> <td> Wall-e </td> <td> $300m </td> </tr>
+          <tr> <td> Toy Story </td> <td> $200m </td> </tr>
+        </table>
+      </div>
+    </fieldset>
+  </section>
 
+
+
+  <div class="footer otros"></div>
+  <script src="/myconfig/modules.js" type="module"></script>
 </body>
 </html>

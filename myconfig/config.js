@@ -1,7 +1,7 @@
 // User Settings
 let blackTeme = true;
 
-//  /   (raiz)
+//  /   (raíz)
 //  ./  (aqui) 
 //  ../ (atras) 
 
@@ -17,7 +17,7 @@ const otros_dir = server_dir + "Otros/";
 const logo_25px = '<img src="' + server_dir + 'logo.png" height="20px">';
 const git_logo  = '<img src="' + imgs_dir   + 'github-logo.png" height="20px">';
 
-// Titulos
+// Títulos
 var titulo;
 const t_index = "Index";
 const t_html =  "HTML";
@@ -25,6 +25,7 @@ const t_css =   "CSS";
 const t_js =    "JavaScript";
 const t_php =   "PHP";
 const t_bs =    "BootStrap";
+const t_sql =    "MySQL";
 
 // nombre de archivos
 const index_fname = "index.html";
@@ -33,6 +34,7 @@ const css_fname = "css.html";
 const js_fname = "js.html";
 const php_fname = "php.html";
 const bootstrap_fname = "bootstrap.html";
+const sql_fname = "sql.html";
 
 // CheatSheets
 const html_dir = cheat_dir + html_fname;
@@ -40,6 +42,7 @@ const css_dir =  cheat_dir + css_fname;
 const js_dir =   cheat_dir + js_fname;
 const php_dir =  cheat_dir + php_fname;
 const bs_dir =   cheat_dir + bootstrap_fname;
+const sql_dir =   cheat_dir + sql_fname;
 
 
 
@@ -90,6 +93,8 @@ function getFileName() {
       return t_php;
     case bootstrap_fname:
       return t_bs;
+    case sql_fname:
+      return t_sql;
     
     default:
       return "Título";
@@ -215,10 +220,10 @@ if (blackTeme) {
       NBlue { color: rgb(107, 149, 234); }
       NGreen{ color: rgb(209, 255, 139); }
       NPurp { color: rgb(194, 122, 194); }
-      NGray { color: rgba(150, 150, 150, 0.5); }
+      NGray { color: rgba(150, 150, 150, 0.5); font-style: italic;}
       NRed  { color: rgb(255, 85, 85); }
       NAqua { color: rgb(20, 212, 255); }
-      NOrg  { color: rgb(254, 146, 38);}
+      NOrg  { color: rgb(240, 144, 80);}
       NObj  { color: rgb(252, 222, 104); }
     </style>
   `);
@@ -253,13 +258,13 @@ else {
 
 
 
-// Mostrar codigo al hacer click
+// Mostrar código al hacer click
 function onclick_ShowCode(valor, idCodDiv){
   const CodDiv = document.querySelector('.'+idCodDiv); // div donde mostrar
   CodDiv.innerHTML = (CodDiv.innerHTML ? "" : valor); // mostrar/ocultar
 } // onclick="onclick_ShowCode(__scriptConCodigo, '_classDiv')"
 
-// Mostrar codigo al hacer click (legends)
+// Mostrar código al hacer click (legends)
 function onclick_ShowCont(idCodDiv){
   const CodDiv = document.querySelector('#'+idCodDiv); // id contenido
   CodDiv.style.display = (CodDiv.style.display=="none" ? "block" : "none"); // mostrar/ocultar
