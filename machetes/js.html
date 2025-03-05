@@ -2111,24 +2111,44 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
 
   <!-- Node.js -->
   <section id="Node.js">
-    <fieldset> <!-- Express -->
-      <legend> Express </legend>
-      <div class="cod">
-        <NAqua>import <NVar>express</NVar> from</NAqua> '<NGreen>express</NGreen>' <NGray>// npm i express</NGray> <br><br>
-        
-        <NPurp>const</NPurp> app = <NBlue>express</NBlue>() <br>
-        app.<NBlue>disable</NBlue>('<NGreen>x-powered-by</NGreen>') <br><br>
+    <div class="flex">
+      <fieldset class="w80"> <!-- Express -->
+        <legend> Express </legend>
+        <div class="cod wAuto">
+          <NAqua>import <NVar>express</NVar> from</NAqua> '<NGreen>express</NGreen>' <NGray>// npm i express</NGray> <br><br>
+      
+          <NPurp>const</NPurp> app = <NBlue>express</NBlue>() <br>
+          app.<NBlue>disable</NBlue>('<NGreen>x-powered-by</NGreen>') <br>
+          app.<NBlue>use</NBlue>(express.<NBlue>json</NBlue>()) <NGray>// (POST body)</NGray> <br><br>
+          app.<NBlue>get</NBlue>('<NGreen>/api</NGreen>', (req, res) <NPurp>=></NPurp> { <br>
+            &nbsp; <NPurp>const { <NVar>param</NVar> }</NPurp> = req.query <br>
+            <!-- &nbsp; <NGray>// código...</NGray> <br> -->
+            &nbsp; res.<NBlue>json</NBlue>(algo) <br>
+          }) <br><br>
+          <!-- <NPurp>const</NPurp> port <NAqua>=</NAqua>  <br> -->
+          app.<NBlue>listen</NBlue>(process.env.PORT <NAqua>??</NAqua> <NOrg>3000</NOrg>) <br>
+        </div>
+      </fieldset>
 
-        app.<NBlue>get</NBlue>('<NGreen>/api</NGreen>', (req, res) <NPurp>=></NPurp> { <br>
-          &nbsp; <NPurp>const { <NVar>param</NVar> }</NPurp> = req.query <br>
-          <!-- &nbsp; <NGray>// código...</NGray> <br> -->
-          &nbsp; res.<NBlue>json</NBlue>(algo) <br>
-        }) <br><br>
+      <fieldset class="w100"> <!-- Proyecto -->
+        <legend> Proyecto </legend>
+        consola <br>
+        <div class="cod wAuto">
+         <NGray> > </NGray> npm init -y <NGray>(iniciar proyecto) (-y sin preguntas)</NGray> <br>
+         <NGray> > </NGray> npm i standard -D <NGray>(estilo de código) (-D Desarrollo)</NGray> <br>
+         <!-- <NGray> > </NGray> npm <NGray>()</NGray> <br> -->
+        </div><br>
 
-        <!-- <NPurp>const</NPurp> port <NAqua>=</NAqua>  <br> -->
-        app.<NBlue>listen</NBlue>(process.env.PORT <NAqua>??</NAqua> <NOrg>3000</NOrg>) <br>
-      </div>
-    </fieldset>
+        package.json<br>
+        <div class="cod wAuto">
+          "<NPurp>type</NPurp>": "<NGreen>module</NGreen>", <NGray> (usar módulos) </NGray> <br>
+          "<NPurp>scripts</NPurp>": { "<NObj>start</NObj>": "<NGreen>node --watch ./index.js</NGreen>" } <NGray>>npm run start</NGray> <br>
+          "<NPurp>esLintConfig</NPurp>": { <br> 
+            &nbsp; "<NObj>extends</NObj>": "<NGreen>standard</NGreen>" <NGray> (mostrar errores) </NGray> <br>
+          }, <br>
+        </div>
+      </fieldset>
+    </div>
 
     <fieldset> <!-- Conexion DB -->
       <legend> Conexion DB </legend>
@@ -2136,15 +2156,13 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
         <NAqua>import</NAqua> mysql <NAqua>from</NAqua> '<NGreen>mysql2/promise</NGreen>'; <NGray>// npm install mysql2</NGray> <br><br>
 
         <NAqua>
-        <NPurp>const</NPurp> <NVar>config</NVar> = <NObj>{</NObj> <br>
-          &nbsp; <NVar>host</NVar>: '<NGreen>localhost</NGreen>', <br>
-          &nbsp; <NVar>database</NVar>: '<NGreen>nombreDB</NGreen>', <br>
-          &nbsp; <NVar>port</NVar>: '<NGreen>3312</NGreen>', <br>
-          &nbsp; <NVar>user</NVar>: '<NGreen>root</NGreen>', <br>
-          &nbsp; <NVar>password</NVar>: '' <br>
-          <NObj>}</NObj>
-        </NAqua> <br><br>
-
+        <NPurp>const</NPurp> <NVar>config</NVar> = <NObj>{</NObj>
+          <NVar>host</NVar>: '<NGreen>localhost</NGreen>',
+          <NVar>database</NVar>: '<NGreen>nombreDB</NGreen>',
+          <NVar>port</NVar>: '<NGreen>3312</NGreen>',
+          <NVar>user</NVar>: '<NGreen>root</NGreen>',
+          <NVar>password</NVar>: '' <NObj>}</NObj>
+        </NAqua> <br>
         <NPurp>const</NPurp> conexion = <NAqua>await</NAqua> mysql.<NBlue>createConnection</NBlue>(config); <br><br>
 
         <NPurp>const</NPurp> name = "<NGreen>Nico</NGreen>"; <br>

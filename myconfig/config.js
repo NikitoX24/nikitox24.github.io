@@ -220,11 +220,15 @@ if (blackTeme) {
       NBlue { color: rgb(107, 149, 234); }
       NGreen{ color: rgb(209, 255, 139); }
       NPurp { color: rgb(194, 122, 194); }
-      NGray { color: rgba(150, 150, 150, 0.5); font-style: italic;}
       NRed  { color: rgb(255, 85, 85); }
       NAqua { color: rgb(20, 212, 255); }
       NOrg  { color: rgb(240, 144, 80);}
       NObj  { color: rgb(252, 222, 104); }
+      NGray { 
+        color: rgba(150, 150, 150, 0.5); 
+        font-family: monospace;
+        font-style: italic;
+      }
     </style>
   `);
 }
