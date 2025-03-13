@@ -11,10 +11,10 @@ import { useState } from "react";
 
 type Props = {
   data: string[];
-  onSelect?: (elemento: string) => void; // especificar q es una funccion
+  onSelect?: (elemento: string) => void; // tipo función + opcional
 };
 
-function List({ data, onSelect }: Props) {
+export default function List({ data, onSelect }: Props) {
   const [index, setIndex] = useState(0); // hook
 
   // funcion para cambiar el seleccionado
@@ -34,5 +34,3 @@ function List({ data, onSelect }: Props) {
     </ul>
   );
 }
-
-export default List;

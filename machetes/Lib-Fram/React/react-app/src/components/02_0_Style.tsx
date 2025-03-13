@@ -1,5 +1,5 @@
-// import "./Style.css";
 
+// import "./Style.css";
 export default function Style() {
   const color = "red"; // variable
 

@@ -6,21 +6,43 @@
 // ---------------------------------------------------- //
 
 
-// import { MouseEvent } from "react";
 
-type Props = {
-  data: string[];
-};
-
-export default function List({ data }: Props) {
-  function handleClick(elem: string){
-    console.log(elem)
-  }
-
+// Evento inLine
+export function List3({ data }: {data: string[]}) {
   return (
     <ul>
       {data.map((elemento) => (
-        <li onClick={() => handleClick(elemento)} key={elemento}> {elemento} </li>
+        <li onClick={ /* Evento */ () => console.log("Click") /* Evento */} key={elemento}>
+          {elemento}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+// Evento por Función
+export function List4({ data }: {data: string[]}) {
+  function handleClick() { console.log("Click") } /* Evento */
+  return (
+    <ul>
+      {data.map((elemento) => (
+        <li onClick={/* Evento */handleClick/* Evento */} key={elemento}>
+          {elemento}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+// Evento por Función + pasando el elemento
+export function List5({ data }: {data: string[]}) {
+  function handleClick(texto: string) { console.log(texto); } /* Evento */
+  return (
+    <ul>
+      {data.map((elemento) => (
+        <li onClick={ /* Evento */() => handleClick(elemento)/* Evento */ } key={elemento}>
+          {elemento}
+        </li>
       ))}
     </ul>
   );

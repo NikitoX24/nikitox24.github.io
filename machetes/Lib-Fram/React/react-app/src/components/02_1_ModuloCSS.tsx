@@ -14,4 +14,4 @@ function Style() {
     </div>
    )
 }
-export default Style;
+export default Style; 

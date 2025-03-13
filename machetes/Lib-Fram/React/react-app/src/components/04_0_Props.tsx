@@ -1,21 +1,41 @@
-//  App.tsx //
 // return <Card body = {"Hola Mundo!"} />
 
 
-// Opcion 1 (varias props)
+
+// --------------------  Opcion 1  (interface / type) -------------------- //
 interface myProps {
-  body: string; // asignar un tipo
-  estado: boolean; // asignar un tipo
+  body: string;
+  text?: boolean; // opcional
 }
 export default function Card(props: myProps) {
-  const { body, estado } = props; // destructurar las props
-  return <h1> {body + estado} </h1>; // usar las props
+  const { body, text } = props; // desestructurar las props
+  return (
+    <>
+      <h5> {body} </h5>|
+      <p> {text} </p>
+    </>
+  );
 }
 
 
+// --------------------  Opcion 2 -------------------- //
+export function Card2(props: { body: string, text?: boolean }) { 
+  const { body, text } = props; // desestructurar las props
+  return (
+    <>
+      <h5> {body} </h5>
+      <p> {text} </p>
+    </>
+  );
+}
 
-// Opcion 2 (una sola prop)
-export function Card2(props: {body: string}) { 
-  const { body } = props; // destructurar las props
-  return <h1> {body} </h1>; // usar la prop
+
+// --------------------  Opcion 3 -------------------- //
+export function Card1({ body, text }: { body: string, text?: boolean }) {
+  return (
+    <>
+      <h5> {body} </h5>
+      <p> {text} </p>
+    </>
+  );
 }

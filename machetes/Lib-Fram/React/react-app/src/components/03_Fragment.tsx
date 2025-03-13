@@ -1,16 +1,8 @@
 export default function Fragment() {
   return (
-    <div>
-      <FragmentBody />
-    </div>
-  );
-}
-
-function FragmentBody() {
-  return (
     <>
-      <h1>Esto es un Fragmento</h1>
-      <p>dentro de un componente</p>
+      <h1>Esto es un Fragment</h1>
+      <p>Es lo que envuelve varios elementos</p>
     </>
   );
 }

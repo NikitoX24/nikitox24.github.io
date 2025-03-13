@@ -1,31 +1,31 @@
 // @ts-check
 
-//? Evitar escribir tipos (anotacion - tipar)
+//? Evitar escribir tipos (anotación - tipar)
 
 //* Tipos y anotaciones
   // Inferencia de datos - se auto-tipea (ya no se puede cambiar de tipo)
-  let persona = 'miguel';
+  let persona = 'Miguel';
 
-  // Anotacion de tipos - tipar
+  // Anotación de tipos - tipar
   let numero: number;
 
     // any (ya no se va a convertir en otro tipo, ignora el tipo, pierde el autocomplete)
     let any: any = "hola";
 
-    // unknow (no se sabe q tipo es)
-    let unknow: unknown = "hola"; //! puede ser peligroso)
+    // unknown (no se sabe q tipo es)
+    let unknown: unknown = "hola"; //! puede ser peligroso)
 
 /* -------------------------------------------------------------------------------- */
 
 //*   Tipar Funciones 
-  // Opcion 1
+  // Opción 1
   function saludar({name, age}: {name: string, age: number}) {
     console.log(`Hola ${name}, tienes ${age} años`)
   }
 
-  // Opcion 2
+  // Opción 2
   function saludar2(persona: {name: string, age: number}) {
-    const {name, age} = persona // destructurar las props
+    const {name, age} = persona // desestructurar las props
     console.log(`Hola ${name}, tienes ${age} años`)
   }
 
@@ -33,7 +33,7 @@
   const suma = (a: number, b: number) => { return a+b };
 
 //*   Tipar el Return   
-  // en una funcion //?                                      _______/ tipar el return (opcional)
+  // en una función //?                                      _______/ tipar el return (opcional)
   function suma2({num1, num2}: {num1: number, num2: number}):number {
     return num1 + num2  // devuelve number
   }
@@ -43,7 +43,7 @@
     return a+b
   }
 
-//*   Funcion como funcion
+//*   Función como función
   // tipar el return  //?         _____/ param   _______/ tipar return (opcional)
   const sayHiFromFunction2 = (fn: (name: string) => void) => {
     return fn("Miguel")
@@ -58,7 +58,7 @@
 type HexadecimalColor = `#${string}`; // este tipo solo permite variables con un # al principio //! solo typescript
 
 // Union Types
-type HeroPowerScale = "low" | "medium" | "Higth";
+type HeroPowerScale = "low" | "medium" | "Hight";
 type numOrText = number | string;
 const enableAnimDur: boolean | number = true; // por defecto true
 
@@ -67,32 +67,32 @@ type Hero = {
   readonly id?: number; // (solo lectura para TypeScript)
   name: string;
   age: number;
-  isActive?: boolean; // ( ? -> parametro opcional )
+  isActive?: boolean; // ( ? -> parámetro opcional )
   powerScale?: HeroPowerScale; // usar Union Types
 }
 
 // usar un Type Alias
 let Hero: Hero = {
-  name: "thor",
+  name: "Thor",
   age: 1500
 };
 
-// Funcion con typeAlias (opcion 1)
+// Función con typeAlias (opción 1)
 function createHero(name:string, age:number): Hero {
   return { name, age };
 }
-// Funcion con typeAlias (opcion 2)
+// Función con typeAlias (opción 2)
 function createHero2(hero: Hero): Hero {
   const { name, age } = hero;
   return { name, age };
 }
 
-const thor = createHero("Thor", 1500); // crear un Hero
+const Thor = createHero("Thor", 1500); // crear un Hero
 
 
-thor.id?.toString(); //? si tiene un id... Ejecutar, sino NO ejecutar...
+Thor.id?.toString(); //? si tiene un id... Ejecutar, sino NO ejecutar...
 
-thor.id ?? 1; // valor por defecto
+Thor.id ?? 1; // valor por defecto
 
 // ------------------------------------------------------------------------
 
@@ -132,22 +132,22 @@ thor.id ?? 1; // valor por defecto
 
   type Address = typeof address;
 
-  const addressTwich: Address = {
+  const addressTwitch: Address = {
     planet: "mars",
     city: "Twitch"
   }
 
 
 // Arrays
-const languages1: string[] = [];            // Opcion 1
-const languages2: Array<string> = [];       // Opcion 2
-const languages3: (string | number)[] = []; // Opcion 3
+const languages1: string[] = [];            // opción 1
+const languages2: Array<string> = [];       // opción 2
+const languages3: (string | number)[] = []; // opción 3
 
 
 
 
 
-// Matrices y tuplas
+// Matrices y tupas
   type CellValue = "X" | "O" | "";
   type GameBoard = [
     [CellValue, CellValue, CellValue], 
@@ -217,7 +217,7 @@ if (canvas instanceof HTMLCanvasElement) { // comprobar q es un canvas
 
 
 
-// Types (Opcion 1)
+// Types (opción 1)
 type Productos = {
   id: string
   name: string
@@ -230,7 +230,7 @@ const producto: Productos = {
   price: 30
 }
 
-// Interfaces (Opcion 2)
+// Interfaces (opción 2)
   interface Producto {
     id: number
     name: string

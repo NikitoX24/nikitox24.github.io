@@ -7,6 +7,10 @@
   <title>Titulo</title>
 </head>
 
+<style>
+  b { color: #79acb0; }
+</style>
+
 <body>
   <script src="/myconfig/config.js"></script>
   <div class="navBar cheats"></div>
@@ -47,14 +51,64 @@
         <div class="cod"> <b>font-variant:</b> small-caps; <NGray>/* normal */</NGray> </div>
       </div>
 
-      <!-- Text-Transorm -->
+      <!-- Text-Transform -->
       <div class="flex">
         <p class="ej" style="text-transform: capitalize;"> transformar la primera letra de cada palabra en mayúsc.</p>
         <div class="cod"> <b>text-transform:</b> capitalize; <NGray> uppercase, lowercase.</NGray></div>
       </div>
+      <!-- Font-Family -->
+       <div class="flex">
+        <div class="ej">
+          <details style="display: inline;">
+            <summary style="color: black;">mostrar...</summary>
+            <table class="ws-table-all notranslate" border="1">
+              <tbody><tr>
+              <th style="width:20%">Generic Font Family</th>
+              <th style="width:30%">Examples of Font Names</th>
+              </tr>
+              <tr>
+              <td>Serif</td>
+              <td><span style="font-size:150%; font-family:'Times New Roman',serif">Times New Roman</span><br>
+              <span style="font-size:150%;     font-family:Georgia,serif">Georgia</span><br>
+              <span style="font-size:150%;     font-family:Garamond,serif">Garamond</span><br>
+              </td>
+              </tr>
+              <tr>
+              <td>Sans-serif</td>
+              <td><span style="font-size:150%; font-family:Arial,sans-serif">Arial</span><br>
+              <span style="font-size:150%;     font-family:Verdana,sans-serif">Verdana</span><br>
+              <span style="font-size:150%;     font-family:Helvetica,sans-serif">Helvetica</span><br>
+              </td>
+              </tr>
+              <tr>
+              <td>Monospace</td>
+              <td><span style="font-size:150%; font-family:'Courier New',monospace">Courier New</span><br>
+              <span style="font-size:150%;     font-family:'Lucida Console',monospace">Lucida Console</span><br>
+              <span style="font-size:150%;     font-family:Monaco,monospace">Monaco</span>
+              </td>
+              </tr>
+              <tr>
+              <td>Cursive</td>
+              <td><span style="font-size:150%; font-family:'Brush Script MT',cursive">Brush Script MT</span><br>
+              <span style="font-size:150%;     font-family:'Lucida Handwriting',cursive">Lucida Handwriting</span><br>
+              </td>
+              </tr>
+              <tr>
+              <td>Fantasy</td>
+              <td><span style="font-size:150%; font-family:Copperplate,fantasy">Copperplate</span><br>
+              <span style="font-size:150%;     font-family:Papyrus,fantasy">Papyrus</span>
+              </td>
+              </tr>
+              </tbody></table>
+          </details>
+        </div>
+        <div class="cod">
+          <b>font-family:</b> system-ui;
+        </div>
+       </div>
     </fieldset>
 
-    <!-- Alineacion de Texto -->
+    <!-- Alineación de Texto -->
     <fieldset>
       <legend>Alineación de Texto</legend>
       <div class="flex">
@@ -129,7 +183,7 @@
       </div>
     </fieldset>
 
-    <!-- Text-Sadow -->
+    <!-- Text-Shadow -->
     <fieldset>
       <legend> Text-Sadow </legend>
 
@@ -214,7 +268,6 @@
 
   <!-- Propiedades -->
   <section id="Propiedades">
-
     <!-- List-Style-Type -->
     <fieldset>
       <legend>  List-Style-Type  </legend>
@@ -281,6 +334,23 @@
             tr:<NPurp>nth-child</NPurp>(odd) { <br>
               &nbsp; <b>background-color:</b> black; <br> }
           </div>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset> <!-- :root -->
+      <legend> :root </legend>
+      <div class="flex">
+        <div class="cod">
+          :<NPurp>root</NPurp> { <br>
+            &nbsp; <b>--nombre:</b> valor; <NGray>// crear una variable.</NGray> <br>
+            &nbsp; <b>atributo:</b> var(--name); <NGray>// usar variable.</NGray> <br>
+          } <br>
+        </div>
+        <div class="cod">
+          :<NPurp>root</NPurp> { <br>
+            &nbsp; <b>color-scheme:</b> light dark; <NGray>// tema oscuro.</NGray> <br>
+          } <br>
         </div>
       </div>
     </fieldset>
@@ -471,66 +541,71 @@
     <!-- Display -->
     <fieldset>
       <legend> Display </legend>
-      <!-- Display: Block -->
-      <div class="flex">
-        <div class="ej">
-          <NRed class="block">First paragraph.</NRed>
-          <NRed class="block">Second paragraph.</NRed>
-          <style> NRed.block { display: block; } </style>
+      <!-- Display: block - inline -->
+      <div>
+        <!-- Display: Block -->
+        <div class="flex">
+          <div class="ej">
+            <NRed class="block">First paragraph.</NRed>
+            <NRed class="block">Second paragraph.</NRed>
+            <style> NRed.block { display: block; } </style>
+          </div>
+          <div class="cod"> <b>display:</b> block; </div>
         </div>
-        <div class="cod"> <b>display:</b> block; </div>
+        <!-- Display: Inline -->
+        <div class="flex">
+          <div class="ej">
+            <p class="inline"> 1er Párrafo. </p> &nbsp;
+            <p class="inline"> 2do Párrafo. </p> &nbsp;
+            <p class="inline"> 3er Párrafo. </p>
+            <style> p.inline { display: inline; } </style>
+          </div>
+          <div class="cod"> <b>display:</b> inline; </div>
+        </div> <hr>
       </div>
-      <!-- Display: Inline -->
-      <div class="flex">
-        <div class="ej">
-          <p class="inline"> 1er Parrafo. </p> &nbsp;
-          <p class="inline"> 2do Parrafo. </p> &nbsp;
-          <p class="inline"> 3er Parrafo. </p>
-          <style> p.inline { display: inline; } </style> 
-        </div>
-        <div class="cod"> <b>display:</b> inline; </div>
-      </div> <hr>
       
-      <!-- Centering Div -->
-      <div class="flex">
-        <div class="ej">
-          <div class="main">
-            <div class="flxBoxs"></div>
-            <div class="flxBoxs"></div>
-            <div class="flxBoxs"></div>
-          </div>
-          <style>
-            .main {
-              background-color: rgba(128, 128, 128, 0.461);
-              height: 50px;
-
-              display: flex;
-              align-items: center;
-              justify-content: center;
-            }
-          </style>
-        </div>
-        <div class="cod">
-          &nbsp; <b>display:</b> flex; <br>
-          &nbsp; <b>align-items:</b> center; <NGray>// Vertical</NGray> <br>
-          &nbsp; <b>justify-content:</b> center; <NGray>// Horizontal</NGray> 
-        </div>
-        <div class="cod">
-          &nbsp; <b>display:</b> grid; <br>
-          &nbsp; <b>place-items:</b> center;
-        </div>
-      </div>
       <!-- Display: Flex -->
-      <div class="flex">
-        <div class="ej">
-          <div class="buxer">
-            <div class="flxBoxs"></div>
-            <div class="flxBoxs"></div>
-            <div class="flxBoxs"></div>
-            <div class="flxBoxs"></div>
+      <div>
+        <!-- Centering Div -->
+        <div class="flex">
+          <div class="ej">
+            <div class="main">
+              <div class="flxBoxs">1</div>
+              <div class="flxBoxs">2</div>
+              <div class="flxBoxs">3</div>
+            </div>
+            <style>
+              .main {
+                background-color: rgba(128, 128, 128, 0.461);
+                display: flex;
+                height: 100%;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                gap: 8px;                
+              }
+            </style>
+          </div>
+          <div class="cod">
+            <b>display:</b> flex; <br>
+            <b>align-items:</b> center; <NGray>(Vertical)</NGray> <br>
+            <b>justify-content:</b> center; <NGray>(Horizontal)</NGray> <br>
+            <b>gap:</b> 8px; <NGray>(separación)</NGray> <br>
+            <b>flex-direction:</b> column/row/-reverse; <br>
+          </div>
+        </div>
+        <!-- Display: Flex -->
+        <div class="flex">
+          <div class="ej flex">
+            <div class="box-flex">
+              <div class="flxBoxs">1</div>
+              <div class="flxBoxs">2</div>
+              <div class="flxBoxs">3</div>
+              <div class="flxBoxs">4</div>
+            </div>
           </div>
           <style>
-            .buxer{
+            .box-flex{
               background-color: rgba(128, 128, 128, 0.461);
               width: 60px; height: 60px;
               margin: auto;
@@ -539,15 +614,37 @@
               justify-content: space-evenly;
               align-items: center;
             }
+            
+            .grid {
+              background-color: rgba(128, 128, 128, 0.461);
+              height: 100%;
+              display: grid;
+              place-items: center;
+            }
+            .grid .flxBoxs { height: 15px; width: 15px; }
           </style>
-        </div>
-        <div class="cod">
-          <b>display:</b> flex; <br>
-          <b>align-items:</b> center; <br>
-          <b>justify-content:</b> space-evenly; <br>
-          <u><b>flex-wrap:</b> wrap;</u> <NGray>// acomodar</NGray>
-        </div>
-      </div><hr>
+          <div class="cod">
+            <b>display:</b> flex; <br>
+            <b>align-items:</b> center; <br>
+            <b>justify-content:</b> space-evenly; <br>
+            <u><b>flex-wrap:</b> wrap;</u> <NGray>// acomodar</NGray>
+          </div>
+
+          
+          <div class="cod">
+            <b>display:</b> grid; <br>
+            <b>place-items:</b> center; <br><br>
+            <!-- <b>min-height:</b> 100vh; <small><NGray>(tamaño pantalla)</NGray></small><br> -->
+          </div>
+          <div class="ej wAuto">
+            <div class="grid">
+              <div class="flxBoxs"></div>
+              <div class="flxBoxs"></div>
+              <div class="flxBoxs"></div>
+            </div>
+          </div>
+        </div><hr>
+      </div>
 
       <!-- justify-content -->
       <div class="flex" style="flex-wrap: wrap;">
@@ -927,8 +1024,8 @@
     </fieldset>
   </section>
 
-  <!-- Backgroud -->
-  <section id="Backgroud">
+  <!-- Background -->
+  <section id="Background">
     <!-- COLORES -->
     <!-- https://www.w3schools.com/tags/ref_colornames.asp -->
     <style> .deg { width: 50px; height: 50px; } </style>
@@ -1289,43 +1386,42 @@
 
   <!-- Filtros -->
   <section id="Filtros">
-
     <!-- Filter Functions -->
     <fieldset>
       <legend>  Filter:  </legend>
       <div class="flex fltAuto">
-        <div> Drop-Shadow() <br>
-          <img class="fltr" style="filter: drop-shadow(5px 5px 2px green);" src="../logo.png" />
+        <div> Drop-Shadow <br> (5px 5px 2px green) <br>
+          <img class="fltr" style="filter: drop-shadow(5px 5px 2px green); height: 80px;" src="../logo.png" />
         </div>
-        <div> Gray Scale() <br>
+        <div> Gray Scale(100%) <br>
           <img class="fltr" style="filter: grayscale(100%);" src="../Imgs/tree.jpg" />
         </div>
-        <div> Sepia() <br>
+        <div> Sepia(100%) <br>
           <img class="fltr" style="filter: sepia(100%);" src="../Imgs/tree.jpg" />
         </div>
-        <div> Saturate() <br>
+        <div> Saturate(300%) <br>
           <img class="fltr" style="filter: saturate(300%);" src="../Imgs/tree.jpg" />
         </div>
-        <div> Hue-Rotate() <br>
+        <div> Hue-Rotate(180deg) <br>
           <img class="fltr" style="filter: hue-rotate(180deg);" src="../Imgs/tree.jpg" />
         </div>
-        <div> Invert() <br>
+        <div> Invert(70%) <br>
           <img class="fltr" style="filter: invert(70%);" src="../Imgs/tree.jpg" />
         </div>
 
-        <div> Opacity 70%<br>
+        <div> Opacity(70%)<br>
           <img class="fltr" style="filter: opacity(70%);" src="../Imgs/tree.jpg" />
         </div>
-        <div> Brightness 70% <br>
+        <div> Brightness(70%) <br>
           <img class="fltr" style="filter: brightness(70%);" src="../Imgs/tree.jpg" />
         </div>
-        <div> Brightness 1.9 <br>
+        <div> Brightness(1.9) <br>
           <img class="fltr" style="filter: brightness(1.9);" src="../Imgs/tree.jpg" />
         </div>
-        <div> Contrast 140% <br>
+        <div> Contrast(140%) <br>
           <img class="fltr" style="filter: contrast(140%);" src="../Imgs/tree.jpg" />
         </div>
-        <div> blur 5px <br>
+        <div> blur(5px) <br>
           <img class="fltr" style="filter: blur(5px);" src="../Imgs/tree.jpg" />
         </div>
         <div style="position: relative;"> <b>backdrop-filter:</b> blur(5px) <br>
@@ -1351,12 +1447,8 @@
         align-items: center;
         text-align: center;
       }
-      .fltr {
-        height: 100px;
-      }
-      .fltr:hover{
-        filter: none !important;
-      }
+      .fltr { height: 100px; }
+      .fltr:hover{ filter: none !important; }
       .bkdrp{
         width: 90px;
         height: 90px;

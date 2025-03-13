@@ -8,7 +8,6 @@
   <title>Titulo</title>
 </head>
 
-
 <body>
   <script src="/myconfig/config.js"></script>
   <div class="navBar cheats"></div>
@@ -34,7 +33,7 @@
       <div class="cod">
         <span>user = user <NAqua>??</NAqua> "<NGreen>Anonym</NGreen>"; <NGray>// (Nullish Coalescing Operator)</NGray></span> <br>
         <span>elem.<NBlue>metodo</NBlue>?.(); <NGray>// (si existe el metodo... ejecutar).</NGray></span> <br>
-        crypto.<NBlue>randomUUID</NBlue>(); <NGray> // <script>document.write(crypto.randomUUID())</script> </NGray>
+        crypto.<NBlue>randomUUID</NBlue>(); // generar un UUID. <br>
         <hr>
         <div class="columnas">
           <NGray>// Convertir a otro tipo.</NGray> <br>
@@ -357,7 +356,7 @@
         
         <div class="w50">
           <div class="cod">
-            variable <NAqua> =</NAqua> (condicion) <NAqua>?</NAqua> (Expresion) <NAqua>:</NAqua> (Expresion);
+            variable <NAqua> =</NAqua> (condición) <NAqua>?</NAqua> (Expresión) <NAqua>:</NAqua> (Expresión); <NGray>// Ternario</NGray>
           </div>
           <div class="cod">
             <NPurp>let</NPurp> age = <NBlue>prompt</NBlue>("<NGreen>Edad?</NGreen>", <NOrg>18</NOrg>); <br>
@@ -421,7 +420,7 @@
         </div>
       </div> <hr>
 
-      <!-- Declaración/Expresion de Funcion -->
+      <!-- Declaración/Expresión de Función -->
       <div class="flex">
         <div class="cod">
           <!-- Declaración de Función -->
@@ -446,7 +445,7 @@
           </div> -->
         </div>
       </div>
-      <!-- Funcion Anonima y de flecha -->
+      <!-- Función Anónima y de flecha -->
       <div class="flex">
         <div class="cod">
           <!-- Función Anónima -->
@@ -467,7 +466,7 @@
       <fieldset> 
         <legend> <span onclick="onclick_ShowCont('_FuncRecibir')">Recibir param de tipo... </span> </legend>
         
-        <div id="_FuncRecibir" style="display: block;">
+        <div id="_FuncRecibir" style="display: none;">
           <!-- Recibir Array -->
           <b>Recibir un Array o convertir una.</b>
           <div class="flex">
@@ -486,7 +485,7 @@
             </div>
           </div> <hr>
           <!-- Recibir function name -->
-          <b>Recibir nombre de una Funcion (callback).</b>
+          <b>Recibir nombre de una Función (callback).</b>
           <div class="cod">
             <NPurp>function</NPurp> <NBlue>myFuncion</NBlue>(a, b, <u>callback</u>){ <br>
               &nbsp; <NBlue><u>callback</u></NBlue>(a + b); <br> 
@@ -596,7 +595,7 @@
 
     <fieldset> <!-- Func Generadora -->
       <legend> <span onclick="onclick_ShowCont('_generadora')">Func Generadora</span> </legend>
-      la funcion generadora puede devolver varios valores.
+      la función generadora puede devolver varios valores.
       <div class="cod" id="_generadora" style="display: none;">
         <NPurp>function</NPurp><NAqua>*</NAqua> <NBlue>funcGeneradora</NBlue><NObj>() {</NObj> <br>
           &nbsp; <NAqua>yield</NAqua> <NOrg>1</NOrg>; <br>
@@ -618,7 +617,8 @@
   </section>
 
   <!-- Objetos -->
-  <section id="Objetos y Clases"> 
+  <section id="Objetos y Clases">
+    <!-- Objetos - Clases -->
     <div class="flex">
       <!-- Crear un Objeto  -->
       <fieldset class="w50">
@@ -631,12 +631,22 @@
           person.<strong>age</strong> = "<NOrg>30</NOrg>"; <NGray>// (Agregar/Cambiar)</NGray> <br>
           <NAqua>delete</NAqua> person.<strong>age</strong>; <NGray>// (Borrar key)</NGray> <br>
           "<NGreen>name</NGreen>" <NAqua>in</NAqua> person; <NGray>// false (Existe key)</NGray> <br>
-        </div><br>
+        </div>
         <div class="cod wAuto">
           <NGray>// Propiedades Calculadas</NGray> <br>
           <NPurp>let</NPurp> <strong>keyName</strong> = "<NGreen>nombre</NGreen>"; <br>
           <NPurp>let</NPurp> person = { [<strong>keyName</strong> + "1"]: "<NGreen>David</NGreen>" }; <br>
         </div>
+        <details>
+          <summary>desestructurar...</summary>
+          <div class="cod">
+            <NPurp>const</NPurp> { var1, var2 } = objeto; <NGray>// desestructurar</NGray> <hr>
+
+            <!-- <NPurp>const</NPurp> newObj = {...otroObjeto}; <NGray>// rest operator</NGray> <hr> -->
+
+            <NPurp>const</NPurp> { var1: _, ...otrosKeys } = objeto; <NGray>// quitar un key</NGray><br>
+          </div>
+        </details>
       </fieldset>
       
       <!-- Clase -->
@@ -647,10 +657,10 @@
           &nbsp; constructor(<NVar>name, age</NVar>){</NPurp> <br>
             &nbsp; &nbsp; <NAqua>this</NAqua>.name = name; <br>
             &nbsp; &nbsp; <NAqua>this</NAqua>.age = age; <br>
-          &nbsp; <Npurp>}</Npurp> <br>
+          &nbsp; <NPurp>}</NPurp> <br>
           <NObj>}</NObj>
-        </div>
-        <div class="cod wAuto">
+          <br><br>
+
           <NPurp>let</NPurp> p1 = <NAqua>new</NAqua> <NBlue>Person</NBlue>("<NGreen>John</NGreen>", <NOrg>42</NOrg>) <br>
           document.<NBlue>write</NBlue>(p1.age) <NGray>//42</NGray>
         </div>
@@ -676,10 +686,10 @@
           </div>
         </details>
 
-        <details> <!-- Funcion Constructora -->
-          <summary>Funcion Constructora...</summary>
+        <details> <!-- Función Constructora -->
+          <summary>Función Constructora (old)...</summary>
           
-          <!-- Funcion Constructora -->
+          <!-- Función Constructora -->
           (para navegadores viejos)
           <div class="cod wAuto">
             <NPurp>function</NPurp> <NObj>Person</NObj>(name, age) { <br>
@@ -704,30 +714,30 @@
       </fieldset>
     </div>
 
-    <!-- Metodos -->
+    <!-- Métodos -->
     <div class="flex">
-      <!-- Metodo en Objeto -->
+      <!-- Método en Objeto -->
       <fieldset class="w50">
-        <legend> Metodos en Objetos </legend>
+        <legend> Métodos en Objetos </legend>
         <div class="cod wAuto">
           <NPurp>let</NPurp> person = { <br>
             &nbsp; name: "<NGreen>David</NGreen>", <br>
             &nbsp; age: <NOrg>20</NOrg>, <br>
             <div class="markBlock">
-              &nbsp; <NBlue>cumple</NBlue>() { <NGray>// (Metodo)</NGray> <br> <NTab></NTab> <NAqua>this</NAqua>.age++; <br> &nbsp; }, <br>
-              &nbsp; <NPurp>get</NPurp> <NBlue>getName</NBlue>(){ <NAqua>return "<NGreen>Name: </NGreen>" + this.</NAqua>name }, <NGray>// (Get)</NGray><br>
+              &nbsp; <NBlue>cumple</NBlue>() { <NGray>// (Método)</NGray> <br> <NTab></NTab> <NAqua>this</NAqua>.age++; <br> &nbsp; }, <br>
+              &nbsp; <NPurp>get</NPurp> <NBlue>getName</NBlue>(){ <NAqua>return</NAqua> "<NGreen>Name: </NGreen>" + <NAqua>this.</NAqua>name }, <NGray>// (Get)</NGray><br>
               &nbsp; <NPurp>set</NPurp> <NBlue>setName</NBlue>(name){ <NAqua>this.</NAqua>name = name } <NGray>// (Set)</NGray><br>
             </div>
           }; <br><br>
-          person.<NBlue>cumple</NBlue>?.(); <NGray>// (si existe ejecuta, sino ignora).</NGray> <br>
-          person.<u>setName</u> = "<NGreen>Nico</NGreen>"; <NGray>// (Ahora se llama Nico).</NGray> <br>
+          person.<NBlue>cumple</NBlue>?.(); <NGray> (si existe se ejecuta) (+1año).</NGray> <br>
+          person.<u>setName</u> = "<NGreen>Nico</NGreen>"; <NGray>&nbsp; (cambiar nombre).</NGray> <br>
           console.<NBlue>log</NBlue>(person.getName); <NGray>// Nombre: Nico.</NGray>
         </div>
       </fieldset>
       
-      <!-- Metodos en Clases -->
+      <!-- Métodos en Clases -->
       <fieldset class="w50">
-        <legend> Metodos en Clases </legend>
+        <legend> Métodos en Clases </legend>
         <div class="cod wAuto">
           <NPurp>class</NPurp> <NObj>person{</NObj> <br>
             &nbsp; <NPurp>constructor</NPurp>(name, age) <NPurp>{</NPurp> <br>
@@ -735,7 +745,7 @@
               <NTab></NTab> <NAqua>this</NAqua>.age = age; <br>
               <div class="markBlock">
                 <NTab></NTab> <NAqua>this</NAqua>.<NBlue><u>cumple</u></NBlue> = (age) <NPurp> =></NPurp> <NAqua>this</NAqua>.age++;
-                  <NGray>// (Metodo)</NGray> <br>
+                  <NGray>// (Método)</NGray> <br>
               </div> <NPurp> &nbsp; }</NPurp> <br>
 
               <div class="markBlock">
@@ -744,29 +754,50 @@
               </div>
             <NObj>}</NObj> <br><br>
           <NPurp>let</NPurp> p = <NAqua>new</NAqua> <NObj>person</NObj>("<NGreen>David</NGreen>", <NOrg>25</NOrg> ); <br>
-          p.<NBlue><u>cumple</u></NBlue>(); <NGray>// (Ahora tiene 26 años).</NGray> <br>
-          p.<u>setName</u> = "<NGreen>Nico</NGreen>"; <NGray>// (Ahora se llama Nico).</NGray> <br>
-          console.<NBlue>log</NBlue>(p.getName); <NGray>// Nombre: Nico.</NGray> <br>
+          p.<NBlue><u>cumple</u></NBlue>(); <NGray> &nbsp; (+1 año).</NGray> <br>
+          p.<u>setName</u> = "<NGreen>Nico</NGreen>"; <NGray>&nbsp; (cambiar nombre).</NGray> <br>
+          console.<NBlue>log</NBlue>(p.getName); <NGray> // Nombre: Nico.</NGray> <br>
         </div>
         <details> <!-- Static function -->
           <summary>Static function</summary>
           <div class="cod">
-            <NPurp>class</NPurp> <NObj>Article</NObj> { <br>
-              &nbsp; <NPurp>constructor</NPurp>(title, date) { <br>
-                <NTab></NTab>&nbsp; <NAqua>this</NAqua>.title = title; <br>
-                <NTab></NTab>&nbsp; <NAqua>this</NAqua>.date = date; <br>
-              &nbsp; } <br> <br>
-
-              &nbsp; <NGray>// usar una funcion sin crear una instancia</NGray> <br>
-              &nbsp; <NPurp>static</NPurp> <NBlue>createTodays</NBlue>() { <br>
-                <NTab></NTab>&nbsp; <NAqua>return new this</NAqua>("<NGreen>resumen</NGreen>", <NAqua>new</NAqua> <NObj>Date</NObj>()); <NGray>// this => Article</NGray> <br>
-              &nbsp; } <br>
+            <NPurp>class</NPurp> <NObj>Validaciones</NObj> { <br>
+              &nbsp; <NPurp>static</NPurp> <NBlue>username</NBlue> (username) { <br>
+                <NTab></NTab>&nbsp; <NAqua>if</NAqua>(<NAqua>typeof</NAqua> username !== "<NGreen>string</NGreen>")
+                <small><NAqua>throw new</NAqua> <NObj>Error(<NVar>"<NGreen>Error</NGreen>"</NVar>)</NObj></small>  <br>
+                <NTab></NTab>&nbsp; <NGray>// otras validaciones...</NGray> <br>
+                &nbsp; } <br>
+                &nbsp; <NPurp>static</NPurp> <NBlue>year</NBlue> (year) { <br>
+                  <NTab></NTab>&nbsp; <NAqua>if</NAqua>(<NAqua>typeof</NAqua> year !== "<NGreen>number</NGreen>")
+                  <small><NAqua>throw new</NAqua> <NObj>Error(<NVar>"<NGreen>Error</NGreen>"</NVar>)</NObj></small> <br>
+                  <NTab></NTab>&nbsp; <NGray>// otras validaciones...</NGray> <br>
+                &nbsp; } <br>
             } <br> <br>
 
-            <NPurp>let</NPurp> article = <NObj>Article</NObj>.<NBlue>createTodays</NBlue>(); <br> <br>
-
-            <NBlue>alert</NBlue>( article.title ); <NGray>// resumen</NGray> <br>
+            <NGray>// usar las funciones sin crear una instancia.</NGray> <br>
+            <NObj>Validaciones</NObj>.<NBlue>username</NBlue>(nombre); <br>
+            <NObj>Validaciones</NObj>.<NBlue>username</NBlue>(edad); <br>
           </div>
+          <!-- otro ej (crear una instancia)
+          
+            <div class="cod">
+              <NPurp>class</NPurp> <NObj>Article</NObj> { <br>
+                &nbsp; <NPurp>constructor</NPurp>(title, date) { <br>
+                  <NTab></NTab>&nbsp; <NAqua>this</NAqua>.title = title; <br>
+                  <NTab></NTab>&nbsp; <NAqua>this</NAqua>.date = date; <br>
+                &nbsp; } <br> <br>
+
+                &nbsp; <NGray>// usar una función sin crear una instancia</NGray> <br>
+                &nbsp; <NPurp>static</NPurp> <NBlue>createTodays</NBlue>() { <br>
+                  <NTab></NTab>&nbsp; <NAqua>return new this</NAqua>("<NGreen>resumen</NGreen>", <NAqua>new</NAqua> <NObj>Date</NObj>()); <NGray>// this => Article</NGray> <br>
+                &nbsp; } <br>
+              } <br> <br>
+
+              <NPurp>let</NPurp> article = <NObj>Article</NObj>.<NBlue>createTodays</NBlue>(); <br> <br>
+
+              <NBlue>alert</NBlue>( article.title ); <NGray>// resumen</NGray> <br>
+            </div>
+          -->
         </details>
       </fieldset>
     </div>
@@ -870,8 +901,8 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
           <span class="opcional">window.</span>location = "<NGreen>URL</NGreen>"; <NGray>// redirigir pag.</NGray> <br>
           <span class="opcional">window.</span>scrollX; <NGray>// Scroll Ancho (actual).</NGray> <br>
           <span class="opcional">window.</span>scrollY; <NGray>// Scroll Alto (actual).</NGray> <br>
-          <span class="opcional">window.</span>scroTo(<NOrg>0, 100</NOrg>); <NGray>// Scroll pos 100px.</NGray> <br>
-          <span class="opcional">window.</span>scroBy(<NOrg>0, 100</NOrg>); <NGray>// Scroll +100px.</NGray> <br>
+          <span class="opcional">window.</span>scrollTo(<NOrg>0, 100</NOrg>); <NGray>// Scroll pos 100px.</NGray> <br>
+          <span class="opcional">window.</span>scrollBy(<NOrg>0, 100</NOrg>); <NGray>// Scroll +100px.</NGray> <br>
           <span onclick="onclick_ShowCode(__valorConsole, '_windowDiv')"><span class="opcional">window.</span>console; </span> <NGray>// prop y metdos console.</NGray> <br>
           <span onclick="onclick_ShowCode(__valorHistory, '_windowDiv')"><span class="opcional">window.</span>history; </span> <NGray>// prop y metodos history.</NGray> <br>
           <span onclick="onclick_ShowCode(__valorLocation, '_windowDiv')"><span class="opcional">window.</span>location; </span> <NGray>// prop y metds location.</NGray> <br>
@@ -1135,7 +1166,7 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
 
   <!-- DOM -->
   <section id="DOM (Document)">
-    <!-- Escribir en el Doc -->
+    <!-- Metodos del Dom -->
     <fieldset>
       <legend> Metodos del Dom </legend>
 
@@ -1152,8 +1183,14 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
       <!-- Seleccionar Elementos -->
       Buscar y usar <b>ID</b>:
       <div class="flex">
-        <div class="cod w60"> <NPurp>let</NPurp> elem = document.<NBlue>getElementById</NBlue>("<NGreen>id</NGreen>"); </div>
-        <div class="cod w40"> elem.innerHTML = "<NGreen>Hello!</NGreen>"; </div>
+        <div class="cod w60"> 
+          <NPurp>let</NPurp> elem = document.<NBlue>getElementById</NBlue>("<NGreen>id</NGreen>"); <br>
+          <NPurp>const</NPurp> <NBlue>$</NBlue> = elem <NPurp>=></NPurp> document.<NBlue>querySelector</NBlue>(elem); <br>
+        </div>
+        <div class="cod w40"> 
+          elem.innerHTML = "<NGreen>Hello!</NGreen>"; <br>
+          <NPurp>const</NPurp> elemento = <NBlue>$</NBlue>('<NGreen>.className</NGreen>'); <br>
+        </div>
       </div>
 
       Buscar y usar <b>Class</b>:
@@ -1315,6 +1352,16 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
             <NGray>// Eliminar atributo:</NGray> <br>
             element.<NBlue>removeAttribute</NBlue>("<NGreen>href</NGreen>"); <br>
           </div>
+        </div>
+      </div><br>
+
+      Data
+      <div class="flex">
+        <div class="cod html">
+          &lt;<NRed>div</NRed> <NPurp>data-userId</NPurp>="<NGreen>123</NGreen>">&lt;/<NRed>div</NRed>>
+        </div>
+        <div class="cod">
+          <NPurp>const</NPurp> userId = element.<u>dataset.userId</u>;
         </div>
       </div>
     </fieldset>
@@ -1700,6 +1747,25 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
         </div>
       </div>
     </fieldset>
+
+    <fieldset> <!-- FormData -->
+      <legend> FormData </legend>
+      <div class="flex">
+        <div class="cod">
+          <!-- <NGray>// para pasar como body en un fetch.</NGray> <br> -->
+          <NPurp>const</NPurp> name = doc.<NBlue>querySelector</NBlue>("<NGreen>name</NGreen>").value; <br>
+          <NPurp>const</NPurp> pass = doc.<NBlue>querySelector</NBlue>("<NGreen>password</NGreen>").value; <br>
+          <NPurp>const</NPurp> datos = <NAqua>new</NAqua> <NObj>FormData</NObj>();<br>
+          datos.<NBlue>append</NBlue>("<NGreen>username</NGreen>", name); <br>
+          datos.<NBlue>append</NBlue>("<NGreen>password</NGreen>", pass); <br>
+        </div>
+        <div class="cod">
+          <NPurp>const</NPurp> name = doc.<NBlue>querySelector</NBlue>("<NGreen>name</NGreen>").value; <br>
+          <NPurp>const</NPurp> pass = doc.<NBlue>querySelector</NBlue>("<NGreen>password</NGreen>").value; <br><br>
+          JSON.<NBlue>stringify</NBlue>({ name, pass });
+        </div>
+      </div>
+    </fieldset>
     
     <!-- Dragg & Drop -->
     <fieldset>
@@ -1761,20 +1827,19 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
     <!-- Modulos js -->
     <div class="flex">
       <!-- CommonJS Module -->
-      <fieldset class="w50"> 
+      <fieldset class="w50">
         <legend> CommonJS Module (antes) </legend>
         <div class="cod">
-          <NPurp>function</NPurp> <NBlue>suma</NBlue>(a, b) { <br> 
-            <NTab></NTab> <NAqua>return</NAqua> a + b <br> } <br><br>
-          <NBlue>module.exports <NAqua> =</NAqua> suma</NBlue>; <NGray>// (Export opcion1)</NGray> <br>
-          <NBlue>module.exports</NBlue> <NAqua> =</NAqua> {suma}; <NGray>// (Export opcion2)</NGray> <br>
+          <NPurp>const</NPurp> suma <NAqua> =</NAqua> <NBlue>require</NBlue>(<NGreen>"./export.js"</NGreen>); <NGray> &nbsp; (Opcion 1)</NGray> <br>
+          <NPurp>const</NPurp> {suma, variable} <NAqua> =</NAqua> <NBlue>require</NBlue>(<NGreen>"./export.js"</NGreen>); <NGray>  (Opcion 2)</NGray> <br> <br>
+          console.<NBlue>log</NBlue>( <u> <NBlue>suma</NBlue>(<NOrg>1</NOrg>, variable) </u> ); <NGray>// (usar)</NGray>
         </div>
+        export.js
         <div class="cod">
-          <NPurp>const</NPurp> suma <NAqua> =</NAqua> <NBlue>require</NBlue>(<NGreen>"./suma.js"</NGreen>); <NGray>// (Import opcion1)</NGray> <br>
-          <NPurp>const</NPurp> {suma} <NAqua> =</NAqua> <NBlue>require</NBlue>(<NGreen>"./suma.js"</NGreen>); <NGray>// (Import opcion2)</NGray> <br> <br>
-
-          console.<NBlue>log</NBlue>( <u> <NBlue>suma</NBlue>(1, 2) </u> ); <NGray>// (usar)</NGray>
-
+          <NPurp>function</NPurp> <NBlue>suma</NBlue>(a, b) { <NAqua>return</NAqua> a + b } <br>
+          <NPurp>const</NPurp> variable = <NOrg>2</NOrg>; <br><br>
+          <NBlue>module.exports <NAqua> =</NAqua> suma</NBlue>; <NGray>// (Export opcion1)</NGray> <br>
+          <NBlue>module.exports</NBlue> <NAqua> =</NAqua> {suma, varable}; <NGray>// (Export opcion2)</NGray> <br>
         </div>
       </fieldset>
 
@@ -1782,22 +1847,24 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
       <fieldset class="w50">
         <legend> ES Modules (ahora) </legend>
         <div class="cod html">
+          <NGray>// usar script como módulo</NGray> <br>
+          &lt;<NRed>script</NRed> <u><NPurp>type</NPurp>="<NGreen>module</NGreen>"</u>> <br>
+          &nbsp; <NAqua>import</NAqua> default1, <NObj>{</NObj> func <NAqua>as</NAqua> func2, var3<NObj>}</NObj> <NAqua>from</NAqua> "<NGreen>./export.js</NGreen>";
+          &lt;/<NRed>script</NRed>> <br>
+        </div>
+        <div class="cod html">
+          <NGray>// importar script externo como módulo.</NGray> <br>
           &lt;<NRed>script</NRed> <NPurp>src</NPurp>="<NGreen>index.js</NGreen>" <u>
-            <NPurp>type</NPurp>="<NGreen>module</NGreen>"</u>> &lt;/<NRed>script</NRed>> <br>
+            <NPurp>type</NPurp>="<NGreen>module</NGreen>"</u>> &lt;/<NRed>script</NRed>> 
         </div>
+        export.js
         <div class="cod">
-          <NGray>// exportar variables, funciones, clases, etc...</NGray> <br>
-          <NAqua>export</NAqua> <NPurp>const</NPurp> variable = <NOrg>25</NOrg>; <br><br>
-      
-          <NGray>// exportar por defecto</NGray> <br>
-          <NAqua>export default</NAqua> { a: <NRed>true</NRed>, fname } <NGray>// exportar func, var, etc...</NGray> <br>
+          <NAqua>export</NAqua> <NPurp>const</NPurp> variable = <NOrg>25</NOrg>; <NGray>// exportar. </NGray> <br>
+          <NAqua>export default</NAqua> { key: "<NGreen>value</NGreen>" } <NGray>// export default.</NGray> <br>
         </div>
-        <div class="cod">
-          <NGray>// importar desde otro js.</NGray> <br>
-          <NAqua>import</NAqua> defaultVar, <NObj>{</NObj> myFunc <NAqua>as</NAqua> newName, <br> variable<NObj>}</NObj> <NAqua>from</NAqua> "<NGreen>./export.js</NGreen>";
-        </div>
-        <a href="https://www.youtube.com/watch?v=0t-Le4kdaMg&ab_channel=FaztCode">link video...</a>
-        <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/export">link pag...</a>
+
+        <!-- <a href="https://www.youtube.com/watch?v=0t-Le4kdaMg&ab_channel=FaztCode">link video...</a>
+        <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/export">link pag...</a> -->
       </fieldset>
     </div>
   </section>
@@ -1941,7 +2008,7 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
         <div class="width100"><!-- GET - DELETE -->
           <div class="cod wAuto"> <!-- GET -->
             <NGray>// GET (obtener)</NGray> <br>
-            <NBlue>fetch</NBlue>("<NGreen>ejemplo.com/api</NGreen>" <span onclick="onclick_ShowCont('_IDGetOpcs')"><NGray>, { opcional }</NGray> </span> )
+            <NBlue>fetch</NBlue>("<NGreen>/endpoint</NGreen>" <span onclick="onclick_ShowCont('_IDGetOpcs')"><NGray>, { opcional }</NGray> </span> )
             <div id="_IDGetOpcs" style="display: none;">
               , {
                 &nbsp;  <NRed>method</NRed>: "<NGreen>GET</NGreen>", <NGray>(Opcional)</NGray> <br>
@@ -1962,11 +2029,10 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
 
           <div class="cod wAuto"> <!-- DELETE -->
             <NGray>// DELETE (borrar)</NGray> <br>
-            <NBlue>fetch</NBlue>("<NGreen>ejemplo.com/posts/5</NGreen>", { <br>
+            <NBlue>fetch</NBlue>("<NGreen>/endpoint/5</NGreen>", { <br>
             &nbsp; <NRed>method</NRed>: "<NGreen>DELETE</NGreen>" <br>
             }) <br>
-            .<NBlue>then</NBlue>(respuesta <NPurp>=></NPurp> respuesta.<NBlue>json</NBlue>()) <br>
-            .<NBlue>then</NBlue>(data <NPurp>=></NPurp> console.<NBlue>log</NBlue>(data)) <br>
+            .<NBlue>then</NBlue>(res <NPurp>=></NPurp> <NAqua>if</NAqua>(!res.ok) console.<NBlue>log</NBlue>("<NGreen>Error</NGreen>") ) <br>
             .<NBlue>catch</NBlue>(error <NPurp>=></NPurp> console.<NBlue>error</NBlue>(error));
           </div>
         </div>
@@ -1974,12 +2040,11 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
           <NGray>// POST (crear)</NGray> <br>
           <NPurp>const</NPurp> datos = <NAqua>new</NAqua> <NObj>FormData(<NVar>formulario</NVar>)</NObj> <NGray>// datos del form</NGray> <br><br>
         
-          <NBlue>fetch</NBlue>("<NGreen>url</NGreen>", { <br>
+          <NBlue>fetch</NBlue>("<NGreen>/endpoint</NGreen>", { <br>
           &nbsp; <NRed>method</NRed>: "<NGreen>POST</NGreen>", <br>
           &nbsp; <NRed>headers</NRed>: { "<b>Content-Type</b>": "<NGreen>application/json</NGreen>" }, <br>
           &nbsp; <NRed>body</NRed>: datos <NGray> // JSON.stringify()</NGray> <br>
           }) <br>
-          .<NBlue>then</NBlue>(respuesta <NPurp>=></NPurp> respuesta.<NBlue>json</NBlue>()) <br>
           .<NBlue>then</NBlue>(res <NPurp>=></NPurp> { <br>
            &nbsp; <NAqua>if</NAqua>(!res.ok) <NAqua>throw new</NAqua> <NBlue>Error</NBlue>(respuesta.statusText) <br>          
           }) <br>
@@ -1990,7 +2055,7 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
       <div class="flex"> <!-- PUT - PATCH -->
         <div class="cod"> <!-- PUT -->
           <NGray>// PUT (reemplazar)</NGray> <br>
-          <NBlue>fetch</NBlue>("<NGreen>typicode.com/posts/5</NGreen>", { <br>
+          <NBlue>fetch</NBlue>("<NGreen>/endpoint/5</NGreen>", { <br>
           &nbsp; <NRed>method</NRed>: "<NGreen>PUT</NGreen>", <br>
           &nbsp; <NRed>headers</NRed>: { "<b>Content-Type</b>": "<NGreen>application/json</NGreen>" }, <br>
           &nbsp; <NRed>body</NRed>: JSON.<NBlue>stringify</NBlue>( objeto ), <NGray>(objeto -> json)</NGray> <br>
@@ -2001,7 +2066,7 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
         </div>
         <div class="cod"> <!-- PATCH -->
           <NGray>// PATCH (modificar)</NGray> <br>
-          <NBlue>fetch</NBlue>("<NGreen>typicode.com/posts/5</NGreen>", { <br>
+          <NBlue>fetch</NBlue>("<NGreen>/endpoint/5</NGreen>", { <br>
           &nbsp; <NRed>method</NRed>: "<NGreen>PATCH</NGreen>", <br>
           &nbsp; <NRed>headers</NRed>: { "<b>Content-Type</b>": "<NGreen>application/json</NGreen>" }, <br>
           &nbsp; <NRed>body</NRed>: JSON.<NBlue>stringify</NBlue>( objeto ), <NGray>(objeto -> json)</NGray> <br>

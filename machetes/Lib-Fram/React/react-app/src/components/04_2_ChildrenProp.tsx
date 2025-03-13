@@ -1,32 +1,14 @@
-//  App.tsx //
-/* import { CardBody } from "./components/04_2_ChildrenProp";
-function App() {
-  return <Card>
-    Hola Mundo!
-    <fragmentName />
-  </Card>;
-} */
+// return <Card> <h1>hola</h1> </Card>;
 
-import { ReactNode } from "react";
+import { ReactNode } from "react"; // para usar el tipo "componente/elemento" como parámetro.
 
-interface CardBodyProps {
-  children: ReactNode; // Fragment
-  // children: string; // texto
-}
-
-export function Card(props: CardBodyProps) {
+export function Card(props: {children: ReactNode}) { // <- asignar tipo
   const { children } = props;
   return (
-    <div>
+    <>
       {children}
-    </div>
+      {children}
+    </>
   );
 }
 export default Card;
-
-
-export function FragmentName() {
-  return (
-      <h1>Esto es un Fragmento</h1>
-  );
-}

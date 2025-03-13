@@ -1,19 +1,25 @@
 export default function otros(){
-  let textofix = document.querySelector("#textoFix");
+  let TextoFix = document.querySelector("#textoFix");
   let Section = document.querySelectorAll("section");
+  const GoUp = document.getElementById("up");
 
-  // section hover - textofix
-  Section.forEach(elem => {
-    elem.addEventListener("mouseenter", function() {
-      textofix.innerHTML = elem.id;
+  // Go Up
+  GoUp?.addEventListener("click", () => {
+    window.scrollTo(0, 0);
+  });
+
+  // section hover - textoFix
+  Section?.forEach(elem => {
+    elem.addEventListener("mouseenter", () => {
+      TextoFix.innerHTML = elem.id;
     });
   })
 
   // section name
-  Section.forEach ( elem => {
+  Section?.forEach ( elem => {
     let h1 = document.createElement("h1"); // Crear un h1.
     let text = document.createTextNode(elem.id); // Crear el Texto.
-    h1.appendChild(text); // Agregar el text al parrafo.
+    h1.appendChild(text); // Agregar el text al párrafo.
     elem.insertBefore(h1, elem.firstChild); // Agregar el h1 a Section.
   })
 
@@ -36,10 +42,11 @@ export function horaPS() {
   setInterval(printTime, 1000);
 }
 
-export let textoFix = /*html*/`
-<p id="textoFix">${titulo}</p>
-<a id="up" href=""> &#9650; </a>
+export const textoFix = /*html*/`
+  <p id="textoFix">${titulo}</p>
+  <a id="up"> &#9650; </a>
 `;
+
 
 export let footer = (/*html*/`
   <footer>
@@ -52,6 +59,7 @@ export let footer = (/*html*/`
       font-size: 3em;
       color: black;
       position: fixed;
+      cursor: pointer;
       bottom: 20px;
       right: 10px;
       text-decoration: none;
