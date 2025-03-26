@@ -1,5 +1,4 @@
 import Component from "./components/01_Component";
-// import Fragment from "./components/03_Fragment";
 // import Props from "./components/04_0_Props";
   // import Children, { ComponentName } from "./components/04_2_ChildrenProp";
 // import Lista from "./components/05_0_List";
@@ -25,8 +24,8 @@ export default function App() {
 
     
   // const lista = ["Bart", "Homero", "Lisa"];
-  // return <Lista />;
-  // return <Lista />;
+  // return <Lista />
+  // return <Lista />
   // return <Evento data={lista} />;
   // return <Estado data={lista} />;
   // return <RCond />;

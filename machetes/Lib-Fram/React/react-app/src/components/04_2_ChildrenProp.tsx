@@ -2,7 +2,7 @@
 
 import { ReactNode } from "react"; // para usar el tipo "componente/elemento" como parámetro.
 
-export function Card(props: {children: ReactNode}) { // <- asignar tipo
+export default function Card(props: {children: ReactNode}) { // <- asignar tipo
   const { children } = props;
   return (
     <>
@@ -11,4 +11,3 @@ export function Card(props: {children: ReactNode}) { // <- asignar tipo
     </>
   );
 }
-export default Card;

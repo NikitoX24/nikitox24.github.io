@@ -7,7 +7,7 @@ function Style() {
   return ( 
     <div>
       {/* una sola clase */}
-      <p className={ styles.unaClase }> una sola clase </p>             
+      <p className={ styles.unaClase }> una sola clase </p>
       
       {/* Varias Clases + RenderCond*/}
       <p className={ [styles.button, `${v && styles.otraClase}`].join(" ") }>varias clases</p> 

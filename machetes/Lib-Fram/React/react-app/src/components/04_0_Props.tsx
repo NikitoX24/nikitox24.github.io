@@ -13,6 +13,7 @@ export default function Card(props: myProps) {
     <>
       <h5> {body} </h5>|
       <p> {text} </p>
+      <Card2 body="Hola" text={true} />
     </>
   );
 }

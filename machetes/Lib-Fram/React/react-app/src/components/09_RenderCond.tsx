@@ -23,4 +23,4 @@ export default function RenderCond() {
 
 // let array = [];
 // {array.length && "Array Vacio"}      //! muestra 0.
-// {array.length == 0 && "Array Vacio"} //* muestra "Array Vacio".
+// {array.length == 0 && "Array Vacio"} //* muestra "Array Vacio". 

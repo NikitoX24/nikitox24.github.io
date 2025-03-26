@@ -181,11 +181,17 @@ const languages3: (string | number)[] = []; // opción 3
 // ---------------------------------------------
 
 
-// Enums
+// Enums (simple)
 const enum Weap_Type{
   sword,
   pickaxe,
   axe
+}
+// Enums (genera más código de fondo)
+enum Weap_Type2{
+  sword= "sword",
+  pickaxe= "pickaxe",
+  axe= "axe"
 }
 
 let player_weap = Weap_Type.sword;

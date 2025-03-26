@@ -1,12 +1,10 @@
 # tipo de archivo
-.vs/
-.vscode/
+.env
 
-# nombre de archivo
+# archivo especifico
 # comandos.txt
 
-# tipo de archivo
-# .env
-
 # carpetas
-# carpeta/
+.vs/
+.vscode/
+node_modules/

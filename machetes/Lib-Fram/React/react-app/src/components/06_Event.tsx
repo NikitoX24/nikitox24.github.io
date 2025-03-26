@@ -22,7 +22,11 @@ export function List3({ data }: {data: string[]}) {
 
 // Evento por Función
 export function List4({ data }: {data: string[]}) {
-  function handleClick() { console.log("Click") } /* Evento */
+  
+  function handleClick() { 
+    console.log("Click")
+  }
+
   return (
     <ul>
       {data.map((elemento) => (
@@ -34,9 +38,13 @@ export function List4({ data }: {data: string[]}) {
   );
 }
 
-// Evento por Función + pasando el elemento
+// Evento por Función + parámetros
 export function List5({ data }: {data: string[]}) {
-  function handleClick(texto: string) { console.log(texto); } /* Evento */
+  
+  function handleClick(texto: string) { 
+    console.log(texto); 
+  }
+  
   return (
     <ul>
       {data.map((elemento) => (
