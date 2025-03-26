@@ -540,42 +540,19 @@
 
     <!-- Display -->
     <fieldset>
-      <legend> Display </legend>
-      <!-- Display: block - inline -->
-      <div>
-        <!-- Display: Block -->
-        <div class="flex">
-          <div class="ej">
-            <NRed class="block">First paragraph.</NRed>
-            <NRed class="block">Second paragraph.</NRed>
-            <style> NRed.block { display: block; } </style>
-          </div>
-          <div class="cod"> <b>display:</b> block; </div>
-        </div>
-        <!-- Display: Inline -->
-        <div class="flex">
-          <div class="ej">
-            <p class="inline"> 1er Párrafo. </p> &nbsp;
-            <p class="inline"> 2do Párrafo. </p> &nbsp;
-            <p class="inline"> 3er Párrafo. </p>
-            <style> p.inline { display: inline; } </style>
-          </div>
-          <div class="cod"> <b>display:</b> inline; </div>
-        </div> <hr>
-      </div>
-      
-      <!-- Display: Flex -->
+      <legend> Display </legend>      
+      <!-- Display: flex - grid -->
       <div>
         <!-- Centering Div -->
         <div class="flex">
           <div class="ej">
-            <div class="main">
+            <div class="displayFlex">
               <div class="flxBoxs">1</div>
               <div class="flxBoxs">2</div>
               <div class="flxBoxs">3</div>
             </div>
             <style>
-              .main {
+              .displayFlex {
                 background-color: rgba(128, 128, 128, 0.461);
                 display: flex;
                 height: 100%;
@@ -586,62 +563,62 @@
               }
             </style>
           </div>
-          <div class="cod">
+          <div class="cod w100">
             <b>display:</b> flex; <br>
             <b>align-items:</b> center; <NGray>(Vertical)</NGray> <br>
-            <b>justify-content:</b> center; <NGray>(Horizontal)</NGray> <br>
+            <b>justify-content:</b> center; <NGray>(Horiz.)</NGray> <br>
             <b>gap:</b> 8px; <NGray>(separación)</NGray> <br>
             <b>flex-direction:</b> column/row/-reverse; <br>
           </div>
-        </div>
-        <!-- Display: Flex -->
-        <div class="flex">
-          <div class="ej flex">
-            <div class="box-flex">
-              <div class="flxBoxs">1</div>
-              <div class="flxBoxs">2</div>
-              <div class="flxBoxs">3</div>
-              <div class="flxBoxs">4</div>
-            </div>
-          </div>
-          <style>
-            .box-flex{
-              background-color: rgba(128, 128, 128, 0.461);
-              width: 60px; height: 60px;
-              margin: auto;
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: space-evenly;
-              align-items: center;
-            }
-            
-            .grid {
-              background-color: rgba(128, 128, 128, 0.461);
-              height: 100%;
-              display: grid;
-              place-items: center;
-            }
-            .grid .flxBoxs { height: 15px; width: 15px; }
-          </style>
-          <div class="cod">
-            <b>display:</b> flex; <br>
-            <b>align-items:</b> center; <br>
-            <b>justify-content:</b> space-evenly; <br>
-            <u><b>flex-wrap:</b> wrap;</u> <NGray>// acomodar</NGray>
-          </div>
-
           
           <div class="cod">
             <b>display:</b> grid; <br>
             <b>place-items:</b> center; <br><br>
-            <!-- <b>min-height:</b> 100vh; <small><NGray>(tamaño pantalla)</NGray></small><br> -->
           </div>
-          <div class="ej wAuto">
-            <div class="grid">
-              <div class="flxBoxs"></div>
-              <div class="flxBoxs"></div>
-              <div class="flxBoxs"></div>
+        </div>
+        <!-- Display: Flex -->
+        <div class="flex">
+          <div class="flex w50">
+            <div class="ej flex">
+              <div class="box-flex">
+                <div class="flxBoxs">1</div>
+                <div class="flxBoxs">2</div>
+                <div class="flxBoxs">3</div>
+                <div class="flxBoxs">4</div>
+              </div>
             </div>
+            <style>
+              .box-flex{
+                background-color: rgba(128, 128, 128, 0.461);
+                width: 60px; height: 60px;
+                margin: auto;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                align-items: center;
+              }
+            
+              .grid {
+                background-color: rgba(128, 128, 128, 0.461);
+                height: 100%;
+                display: grid;
+                place-items: center;
+                gap: 4px;
+              }
+            </style>
+            <div class="cod">
+              <b>display:</b> flex; <br>
+              <b>align-items:</b> center; <br>
+              <b>justify-content:</b> space-evenly; <br>
+              <u><b>flex-wrap:</b> wrap;</u> <NGray>// acomodar</NGray> <br>
+            </div>
+          </div>
+
+          <div class="cod w50">
+            <b>display:</b> grid; <br>
+            <b>grid-template-columns:</b> <NBlue>repeat</NBlue>(auto-fit, <NBlue>minmax</NBlue>(<NOrg>200px, 1fr</NOrg>)); <br>
+            <b>width:</b> <NOrg>100%</NOrg>; <br>
+            <b>gap:</b> <NOrg>32px</NOrg>; <br>
           </div>
         </div><hr>
       </div>

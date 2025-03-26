@@ -33,17 +33,22 @@
       <div class="cod">
         <span>user = user <NAqua>??</NAqua> "<NGreen>Anonym</NGreen>"; <NGray>// (Nullish Coalescing Operator)</NGray></span> <br>
         <span>elem.<NBlue>metodo</NBlue>?.(); <NGray>// (si existe el metodo... ejecutar).</NGray></span> <br>
-        crypto.<NBlue>randomUUID</NBlue>(); // generar un UUID. <br>
-        <hr>
-        <div class="columnas">
-          <NGray>// Convertir a otro tipo.</NGray> <br>
-          <NObj>String</NObj>(<NOrg>true</NOrg>); <NGray>// (convertir a String).</NGray> <br>
-          <NObj>Boolean</NObj>("<NGreen>true</NGreen>"); <NGray>// (convertir a Boolean).</NGray> <br>
-          <NObj>Number</NObj>("<NGreen>123</NGreen>"); <NGray>// (convertir a Number).</NGray> <br>
-          <span id="_parseInt"> <NBlue>parseInt</NBlue></span> <NGray> (convertir a Number).</NGray> <br>
-          +("<NGreen>123</NGreen>"); <NGray>// (convertir a Number).</NGray> <br>
-        </div>
+        crypto.<NBlue>randomUUID</NBlue>(); <NGray>// generar un UUID.</NGray> <br>
+      </div>
+      
+      <b>Convertir a otro tipo.</b>
+      <div class="cod columnas">
+        <NObj>String</NObj>(<NOrg>true</NOrg>); <NGray>// (convertir a String).</NGray> <br>
+        <NObj>Boolean</NObj>("<NGreen>true</NGreen>"); <NGray>// (convertir a Boolean).</NGray> <br>
+        <NObj>Number</NObj>("<NGreen>123</NGreen>"); <NGray>// (convertir a Number).</NGray> <br>
+        <span id="_parseInt"> <NBlue>parseInt</NBlue></span> <NGray> (convertir a Number).</NGray> <br>
+        +("<NGreen>123</NGreen>"); <NGray>// (convertir a Number).</NGray> <br>
+        JSON.<NBlue>stringify</NBlue>({ name: "<NGreen>nico</NGreen>", pass:"<NGreen>123</NGreen>" }); <NGray>obj => json</NGray> <br>
       </div> <br>
+
+      <script>
+        JSON.stringify({ name: "nico", pass:"123" });
+      </script>
 
       <b>Metodos de Numeros</b>
       <div class="cod">
@@ -1609,6 +1614,7 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
               </div>
             </div>
         
+            <!-- código -->
             <div class="cod">
               <NPurp>function</NPurp> <NBlue>validate</NBlue>() { <br>
                &nbsp; <NPurp>var</NPurp> n1 = document.<NBlue>getElementById</NBlue>('<NGreen>num1</NGreen>'); <br>
@@ -1748,23 +1754,40 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
       </div>
     </fieldset>
 
-    <fieldset> <!-- FormData -->
+    <!-- FormData -->
+    <fieldset> 
       <legend> FormData </legend>
+      
+      <!-- HTML -->
       <div class="flex">
-        <div class="cod">
-          <!-- <NGray>// para pasar como body en un fetch.</NGray> <br> -->
-          <NPurp>const</NPurp> name = doc.<NBlue>querySelector</NBlue>("<NGreen>name</NGreen>").value; <br>
-          <NPurp>const</NPurp> pass = doc.<NBlue>querySelector</NBlue>("<NGreen>password</NGreen>").value; <br>
-          <NPurp>const</NPurp> datos = <NAqua>new</NAqua> <NObj>FormData</NObj>();<br>
-          datos.<NBlue>append</NBlue>("<NGreen>username</NGreen>", name); <br>
-          datos.<NBlue>append</NBlue>("<NGreen>password</NGreen>", pass); <br>
+        <div class="cod html w45">
+          &lt;<NRed>form</NRed> <NPurp>onsubmit</NPurp>="<NBlue>myFunction</NBlue>()"> <br>
+            &nbsp; Nombre: &lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>text</NGreen>" <NPurp>name</NPurp>="<NGreen>name</NGreen>"> <br>
+            &nbsp; Apellido: &lt;<NRed>input</NRed> <NPurp>type</NPurp>="<NGreen>text</NGreen>" <NPurp>name</NPurp>="<NGreen>surname</NGreen>"> <br>
+            &nbsp; &lt;<NRed>button</NRed> <NPurp>type</NPurp>="<NGreen>submit</NGreen>"> Enviar &lt;/<NRed>button</NRed>> <br>
+          &lt;/<NRed>form</NRed>>
         </div>
-        <div class="cod">
-          <NPurp>const</NPurp> name = doc.<NBlue>querySelector</NBlue>("<NGreen>name</NGreen>").value; <br>
-          <NPurp>const</NPurp> pass = doc.<NBlue>querySelector</NBlue>("<NGreen>password</NGreen>").value; <br><br>
-          JSON.<NBlue>stringify</NBlue>({ name, pass });
+        <div class="cod wAuto">
+          <NPurp>function</NPurp> <NBlue>myFunction</NBlue>(event) { <br>
+            &nbsp; event.<NBlue>preventDefault</NBlue>(); <NGray>// No enviar.</NGray> <br>
+            &nbsp; <NPurp>const</NPurp> fields = <NAqua>new</NAqua> <NObj>FormData</NObj>(event.target); <br>
+            &nbsp; <NPurp>const</NPurp> name = fields.<NBlue>get</NBlue>('<NGreen>name</NGreen>'); <NGray> (objener para modificar)</NGray> <br>
+            &nbsp; fields.<NBlue>append</NBlue>('<NGreen>age</NGreen>', <NOrg>18</NOrg> ); <NGray>(agregar nuevo)</NGray> <br>
+            <details>
+              <summary>opcion 2...</summary>
+              &nbsp; <NPurp>const</NPurp> { name, surname } = <NObj>Object</NObj>.<NBlue>fromEntries</NBlue>( <br>
+              <NTab></NTab> <NAqua>new</NAqua> <NObj>FormData</NObj>(event.target); <br>
+              &nbsp; ) <br>
+            </details>
+          }
         </div>
       </div>
+      <script>
+        // objeto
+        const fields = Object.fromEntries(
+          new FormData(event.target)
+        )
+      </script>
     </fieldset>
     
     <!-- Dragg & Drop -->
@@ -2201,7 +2224,7 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
         <div class="cod wAuto">
          <NGray> > </NGray> npm init -y <NGray>(iniciar proyecto) (-y sin preguntas)</NGray> <br>
          <NGray> > </NGray> npm i standard -D <NGray>(estilo de código) (-D Desarrollo)</NGray> <br>
-         <!-- <NGray> > </NGray> npm <NGray>()</NGray> <br> -->
+         <NGray> > </NGray> npm i dotenv -D <br>
         </div><br>
 
         package.json<br>
@@ -2218,19 +2241,21 @@ let descriptor = Object.getOwnPropertyDescriptor(user, "name");
     <fieldset> <!-- Conexion DB -->
       <legend> Conexion DB </legend>
       <div class="cod">
-        <NAqua>import</NAqua> mysql <NAqua>from</NAqua> '<NGreen>mysql2/promise</NGreen>'; <NGray>// npm install mysql2</NGray> <br><br>
+        <NAqua>import</NAqua> mysql <NAqua>from</NAqua> '<NGreen>mysql2/promise</NGreen>'; <NGray>// npm install </NGray><br>
+        <NAqua>import</NAqua> '<NGreen>dotenv/config</NGreen>' <NGray>// npm i dotenv</NGray><br><br>
 
         <NAqua>
-        <NPurp>const</NPurp> <NVar>config</NVar> = <NObj>{</NObj>
+        <NPurp>const</NPurp> <NVar>DEFAULT_CONFIG</NVar> = <NObj>{</NObj>
           <NVar>host</NVar>: '<NGreen>localhost</NGreen>',
           <NVar>database</NVar>: '<NGreen>nombreDB</NGreen>',
           <NVar>port</NVar>: '<NGreen>3312</NGreen>',
           <NVar>user</NVar>: '<NGreen>root</NGreen>',
           <NVar>password</NVar>: '' <NObj>}</NObj>
         </NAqua> <br>
+        <small><NGray>// DATABASE_URL='mysql://root:passw@localhost:3312/nombreDB'  (.env)</NGray></small> <br>
+        <NPurp>const</NPurp> config = process.env.DATABASE_URL <NAqua>??</NAqua> DEFAULT_CONFIG; <br>
         <NPurp>const</NPurp> conexion = <NAqua>await</NAqua> mysql.<NBlue>createConnection</NBlue>(config); <br><br>
 
-        <NPurp>const</NPurp> name = "<NGreen>Nico</NGreen>"; <br>
         <NPurp>const</NPurp> <NObj>[<NVar>resultado</NVar>]</NObj> <NAqua>= await</NAqua> conexion.<NBlue>query</NBlue>( <NGray>// [resultado] -> (desestructurar tupla).</NGray> <br>
         &nbsp; '<NGreen>INSERT INTO user (name) VALUES (?);</NGreen>', <NObj>[<NVar>name</NVar>]</NObj> <NGray>// "?" (evitar inyecciones)</NGray> <br> ) <br>
         console.<NBlue>log</NBlue>(resultado.insertId); <NGray>// id </NGray> <br><br>

@@ -4,29 +4,34 @@ export default function cheats(){
 
   // Frameworks & Librerías de INDEX
   function frameLibs(){
+    let elementos = [];
+
     if (titulo == t_index || titulo == t_css || titulo == t_bs) {
-      return( /*html*/`
-        <div class="iconosFlex icoFramLibs">
-          <a href="${bs_dir}">
-            <table class="ch-${t_bs}" > <caption> BtSp </caption>
-              <td><img src="${imgs_dir}bootstrap-icon.png"></td> 
-            </table>
-          </a>
-        </div>
+      elementos.push( /*html*/`
+        <a href="${bs_dir}">
+          <table class="ch-${t_bs}" > <caption> BtSp </caption>
+            <td><img src="${imgs_dir}bootstrap-icon.png"></td> 
+          </table>
+        </a>
       `);
     }
     if (titulo == t_index || titulo == t_js || titulo == t_php || titulo == t_sql) {
-      return( /*html*/`
-        <div class="iconosFlex icoFramLibs">
-          <a href="${sql_dir}">
-            <table class="ch-${t_sql}" > <caption> MySQL </caption>
-              <td><img src="${imgs_dir}sql.png"></td> 
-            </table>
-          </a>
-        </div>
+      elementos.push( /*html*/`
+        <a href="${sql_dir}">
+          <table class="ch-${t_sql}" > <caption> MySQL </caption>
+            <td><img src="${imgs_dir}sql.png"></td> 
+          </table>
+        </a>
       `);
     }
-    else return ""
+    
+    const div = /*html*/`
+      <div class="iconosFlex icoFramLibs">
+        ${elementos.join(" ")}
+      </div>
+    `;
+
+    return elementos.length > 0 ? div : "";
   }
   return /*html*/`
     <div class="iconosFlex">
